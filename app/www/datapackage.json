@@ -2,7 +2,7 @@
   "name": "graphambicardio-graphambicardio",
   "title": "GraphAmbiCardio — grafo de conhecimento e dados derivados",
   "description": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas, com dados locais de Campos dos Goytacazes (RJ) e proveniência por evidência.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "created": "2026-10-31",
   "licenses": [
     {
@@ -776,6 +776,250 @@
           {
             "name": "fdr_significant",
             "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "modelos_exploratorios",
+      "path": "outputs/tables/exploratory_models.csv",
+      "description": "Modelos logísticos, Firth, cluster-robusto, contagem mensal e ajuste mútuo, com p e q (BH-FDR)",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 4701,
+      "hash": "sha256:49eed86ffca54352c89eb273abcca6b4e28eda40204ea37528ff3908d031df83",
+      "schema": {
+        "fields": [
+          {
+            "name": "adjustment",
+            "type": "object"
+          },
+          {
+            "name": "converged",
+            "type": "bool"
+          },
+          {
+            "name": "exposure",
+            "type": "object"
+          },
+          {
+            "name": "exposure_1",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_1_ci95",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_1_or_per_sd",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_1_p",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_1_q",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_2",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_2_ci95",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_2_or_per_sd",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_2_p",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_2_q",
+            "type": "float64"
+          },
+          {
+            "name": "family",
+            "type": "float64"
+          },
+          {
+            "name": "iqr",
+            "type": "float64"
+          },
+          {
+            "name": "method",
+            "type": "float64"
+          },
+          {
+            "name": "model",
+            "type": "object"
+          },
+          {
+            "name": "n",
+            "type": "int64"
+          },
+          {
+            "name": "n_clusters",
+            "type": "float64"
+          },
+          {
+            "name": "n_events",
+            "type": "int64"
+          },
+          {
+            "name": "n_months",
+            "type": "float64"
+          },
+          {
+            "name": "or_per_iqr",
+            "type": "float64"
+          },
+          {
+            "name": "or_per_iqr_ci95",
+            "type": "object"
+          },
+          {
+            "name": "or_per_sd",
+            "type": "float64"
+          },
+          {
+            "name": "or_per_sd_ci95",
+            "type": "object"
+          },
+          {
+            "name": "p_value",
+            "type": "float64"
+          },
+          {
+            "name": "poisson_dispersion",
+            "type": "float64"
+          },
+          {
+            "name": "q_value",
+            "type": "float64"
+          },
+          {
+            "name": "results",
+            "type": "float64"
+          },
+          {
+            "name": "rr_per_iqr",
+            "type": "float64"
+          },
+          {
+            "name": "rr_per_sd",
+            "type": "float64"
+          },
+          {
+            "name": "rr_per_sd_ci95",
+            "type": "float64"
+          },
+          {
+            "name": "total_cases",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sensibilidade_loo",
+      "path": "outputs/tables/sensitivity_leave_one_year_out.csv",
+      "description": "Sensibilidade leave-one-year-out com p e q",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 642,
+      "hash": "sha256:1906c2ae1efc5277c77f2d3bc1ab875c37c45c7f925434f77caaa28c421f65ce",
+      "schema": {
+        "fields": [
+          {
+            "name": "excluded_year",
+            "type": "int64"
+          },
+          {
+            "name": "or_per_sd",
+            "type": "float64"
+          },
+          {
+            "name": "ci_low",
+            "type": "float64"
+          },
+          {
+            "name": "ci_high",
+            "type": "float64"
+          },
+          {
+            "name": "p_value",
+            "type": "float64"
+          },
+          {
+            "name": "n_events",
+            "type": "int64"
+          },
+          {
+            "name": "q_value",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "correlacao_exposicoes",
+      "path": "outputs/tables/exposure_correlation.csv",
+      "description": "Matriz de correlação das exposições de janela",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 421,
+      "hash": "sha256:c8ac52e9c7eda5a3dc81e96f5955c03ae592cd2e2453dd06b2034df0a7162e2b",
+      "schema": {
+        "fields": [
+          {
+            "name": "exposure",
+            "type": "object"
+          },
+          {
+            "name": "win_temperature_2m_max_mean",
+            "type": "float64"
+          },
+          {
+            "name": "win_temperature_2m_min_mean",
+            "type": "float64"
+          },
+          {
+            "name": "win_heat_days_35_pct",
+            "type": "float64"
+          },
+          {
+            "name": "win_relative_humidity_2m_mean_mean",
+            "type": "float64"
+          },
+          {
+            "name": "win_pm25_mean",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "vif_exposicoes",
+      "path": "outputs/tables/exposure_vif.csv",
+      "description": "Fatores de inflação de variância das exposições de janela",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 176,
+      "hash": "sha256:9a9d0a085128ca2ed58c3aa7aaa78969c45c66a15957545864877b9284cef3f0",
+      "schema": {
+        "fields": [
+          {
+            "name": "exposure",
+            "type": "object"
+          },
+          {
+            "name": "vif",
+            "type": "float64"
           }
         ]
       }

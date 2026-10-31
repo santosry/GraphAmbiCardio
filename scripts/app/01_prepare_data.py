@@ -98,7 +98,7 @@ pd.DataFrame(hierarchy).to_csv(APP / "hierarchy.csv", index=False)
 meta = {
     "titulo": "GraphAmbiCardio",
     "subtitulo": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas",
-    "versao": "0.2.0",
+    "versao": "0.3.0",
     "data": "2026-10-31",
     "municipio": "Campos dos Goytacazes, RJ, Brasil (IBGE 330100)",
     "periodo": "2010-2025",

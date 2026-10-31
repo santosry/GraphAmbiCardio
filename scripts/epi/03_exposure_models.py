@@ -13,15 +13,21 @@ from graphambicardio.io_utils import get_logger, utc_now  # noqa: E402
 def main() -> None:
     log = get_logger("run_exposure_models")
     log.info("start %s", utc_now())
-    births = pd.read_csv("data_processed/sinasc_campos_births.csv")
+    births = pd.read_csv("data_processed/sinasc_campos_births.csv", low_memory=False)
     daily = pd.read_csv("data_processed/climate_daily_campos.csv")
     pm = pd.read_csv("data_processed/pm25_campos_mensal.csv")
+    if len(pm) != 192 or pm.duplicated(["ano", "mes"]).any():
+        raise ValueError(f"PM2.5 monthly series incomplete or duplicated: {len(pm)} rows")
+    if not pm["pm25_ug_m3"].between(0, 500).all():
+        raise ValueError("PM2.5 outside the accepted range (0-500 µg/m3)")
     daily["year"] = pd.to_datetime(daily["date"]).dt.year
     daily["month"] = pd.to_datetime(daily["date"]).dt.month
     daily = daily.merge(
         pm.rename(columns={"ano": "year", "mes": "month", "pm25_ug_m3": "pm25"}),
         on=["year", "month"], how="left"
     )
+    if daily["pm25"].isna().any():
+        raise ValueError("PM2.5 merge left missing days")
     pm.to_csv("outputs/tables/pm25_monthly_campos.csv", index=False)
     pd.read_csv("data_processed/pm25_campos_anual.csv").to_csv("outputs/tables/pm25_annual_campos.csv", index=False)
     with_exp = exposure_link.attach(daily, births)

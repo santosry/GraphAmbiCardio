@@ -1,5 +1,6 @@
 ui <- bslib::page_navbar(
   id = "main_nav",
+  lang = "pt-BR",
   title = div(
     class = "brand",
     span(class = "brand-mark", "GAC"),
@@ -30,7 +31,7 @@ ui <- bslib::page_navbar(
   footer = div(
     class = "graphambicardio-footer",
     div(class = "container",
-        HTML("GraphAmbiCardio v0.2.0 · Dados de 2026-10-31 · Código MIT · Dados de terceiros mantêm suas licenças · "),
+        HTML("GraphAmbiCardio v0.3.0 · Dados de 2026-10-31 · Código MIT · Dados de terceiros mantêm suas licenças · "),
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "Repositório"),
         " · ",
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio/tree/main/docs", target = "_blank", "Documentação"),
@@ -52,6 +53,7 @@ ui <- bslib::page_navbar(
 
 # Overlay de carregamento (some automaticamente)
 ui <- tagList(
+  tags$a(class = "visually-hidden-focusable skip-link", href = "#main_nav", "Pular para a navegação"),
   div(id = "graphambicardio-loading", div(class = "loader-box",
     div(class = "loader-title", "Carregando GraphAmbiCardio…"),
     div(class = "loader-bar", div(class = "loader-fill"))

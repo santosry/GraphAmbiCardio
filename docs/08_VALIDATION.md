@@ -82,7 +82,7 @@ The qualitative conclusion “few direct human links, many mechanism-level gaps�
 
 ### Local model
 
-Leave-one-year-out OR per SD: 1.47–1.66; p ranged 0.010–0.056. The direction is stable but statistical significance is not. The monthly model was null. The local heat finding is therefore **not robust enough for a causal claim**.
+The main birth-level model had OR 1.30 per SD (p = 0.048, q = 0.153). Firth regression gave OR 1.31 (p = 0.047, q = 0.153), cluster-robust SE by month of conception gave OR 1.30 (0.98–1.72; p = 0.065), and the socio-economic Firth model gave OR 1.33 (1.02–1.73; p = 0.033, q = 0.153). Leave-one-year-out OR per SD was 1.47–1.86; p ranged 0.002–0.057 and q 0.019–0.057. The direction is stable but no model survives FDR in the primary family. The monthly model was null (p = 0.14, q = 0.23). The local heat finding is therefore **not robust enough for a causal claim**.
 
 ---
 

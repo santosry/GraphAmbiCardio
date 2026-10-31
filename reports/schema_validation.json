@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-10-31T18:36:00Z",
+  "passed": true,
+  "checks": [
+    {
+      "check": "columns:outputs/graph/nodes.csv",
+      "ok": true,
+      "detail": "2238 rows"
+    },
+    {
+      "check": "columns:outputs/graph/relations.csv",
+      "ok": true,
+      "detail": "4117 rows"
+    },
+    {
+      "check": "columns:outputs/graph/evidence.csv",
+      "ok": true,
+      "detail": "4613 rows"
+    },
+    {
+      "check": "columns:outputs/tables/exploratory_models.csv",
+      "ok": true,
+      "detail": "13 rows"
+    },
+    {
+      "check": "columns:outputs/tables/hypothesis_candidates.csv",
+      "ok": true,
+      "detail": "5 rows"
+    },
+    {
+      "check": "columns:data_processed/pm25_campos_anual.csv",
+      "ok": true,
+      "detail": "16 rows"
+    },
+    {
+      "check": "columns:data_processed/pm25_campos_mensal.csv",
+      "ok": true,
+      "detail": "192 rows"
+    },
+    {
+      "check": "columns:app/data/models.csv",
+      "ok": true,
+      "detail": "13 rows"
+    },
+    {
+      "check": "columns:outputs/tables/sensitivity_leave_one_year_out.csv",
+      "ok": true,
+      "detail": "14 rows"
+    },
+    {
+      "check": "columns:outputs/tables/exposure_correlation.csv",
+      "ok": true,
+      "detail": "5 rows"
+    },
+    {
+      "check": "columns:outputs/tables/exposure_vif.csv",
+      "ok": true,
+      "detail": "5 rows"
+    },
+    {
+      "check": "fdr:outputs/tables/exploratory_models.csv",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "check": "fdr:outputs/tables/hypothesis_candidates.csv",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "check": "pm25:monthly_rows",
+      "ok": true,
+      "detail": "192 rows"
+    },
+    {
+      "check": "pm25:monthly_unique",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "check": "pm25:monthly_range",
+      "ok": true,
+      "detail": "0-500 µg/m3"
+    },
+    {
+      "check": "pm25:monthly_complete",
+      "ok": true,
+      "detail": "0 missing"
+    },
+    {
+      "check": "pm25:annual_years",
+      "ok": true,
+      "detail": "16 rows"
+    },
+    {
+      "check": "app:no_individual_data",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "check": "metadata:version_consistent",
+      "ok": true,
+      "detail": "{'fair/metadata.json': '0.3.0', 'fair/datapackage.json': '0.3.0', 'app/data/metadata.json': '0.3.0', 'codemeta.json': '0.3.0'}"
+    },
+    {
+      "check": "lockfiles:present",
+      "ok": true,
+      "detail": "uv.lock + renv.lock"
+    },
+    {
+      "check": "release:changelog",
+      "ok": true,
+      "detail": "CHANGELOG has 0.3.0"
+    }
+  ]
+}

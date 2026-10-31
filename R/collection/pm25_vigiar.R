@@ -22,6 +22,16 @@ suppressPackageStartupMessages({
 MUNI <- "330100"
 MUNI_LABEL <- "Campos dos Goytacazes"
 
+# The script relies on internals of vigiar 0.7.2. Fail loudly if the contract moves.
+if (utils::packageVersion("vigiar") != "0.7.2") {
+  warning("vigiar version is ", utils::packageVersion("vigiar"), "; tested with 0.7.2")
+}
+required_internals <- c(".vigiar_env", ".vigiar_construir_query", ".vigiar_executar_query", ".vigiar_parse_dados")
+missing_internals <- required_internals[!vapply(required_internals, function(f) exists(f, envir = asNamespace("vigiar")), logical(1))]
+if (length(missing_internals) > 0) {
+  stop("vigiar internals missing: ", paste(missing_internals, collapse = ", "))
+}
+
 `%||%` <- function(a, b) if (is.null(a) || length(a) == 0) b else a
 
 vigiar_query_muni <- function(tabela, colunas, limite = 1000) {

@@ -27,7 +27,13 @@ mod_graph_ui <- function(id) {
     ),
     card(
       card_header(textOutput(ns("caption"))),
-      card_body(class = "graph-body", visNetworkOutput(ns("network"), height = "68vh"))
+      card_body(
+        class = "graph-body",
+        div(role = "img", `aria-label` = "Grafo interativo de exposições, mecanismos, processos e fenótipos; use os filtros acima e a aba Evidências para uma tabela equivalente.",
+            visNetworkOutput(ns("network"), height = "68vh")),
+        div(class = "small-muted", style = "padding:.4rem .6rem 0;",
+            "Visualização interativa. Se o grafo não carregar ou para leitura por teclado, consulte a aba Evidências.")
+      )
     ),
     card(
       card_header("Detalhes do nó selecionado"),

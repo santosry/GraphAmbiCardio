@@ -1,0 +1,33 @@
+{
+  "title": "GraphAmbiCardio: a provenance-first knowledge graph of environmental exposures, molecular mechanisms, cardiogenesis and congenital heart defects",
+  "description": "Computational study integrating structured literature searches, curated biological databases, SINASC/SIH data from Campos dos Goytacazes (RJ, Brazil) and ERA5-Land climate into a provenance-first knowledge graph of congenital heart defects. Individual-level health records are not redistributed; the repository contains code, aggregates, graph exports, metadata and a Shiny application.",
+  "creators": [
+    {
+      "name": "GraphAmbiCardio study team"
+    }
+  ],
+  "upload_type": "software",
+  "publication_date": "2026-10-31",
+  "version": "0.3.0",
+  "language": "por",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "congenital heart defects",
+    "environmental exposure",
+    "knowledge graph",
+    "cardiogenesis",
+    "evidence grading",
+    "FAIR",
+    "Brazil"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/santosry/GraphAmbiCardio",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "communities": [],
+  "notes": "The version corresponds to the Git tag v0.3.0. A persistent DOI will be minted by Zenodo when this release is published; update CITATION.cff, codemeta.json and fair/metadata.json afterwards."
+}

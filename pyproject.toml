@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "graphambicardio"
-version = "0.2.0"
+version = "0.3.0"
 description = "Knowledge graph of environmental exposures, molecular mechanisms, cardiogenesis and congenital heart defects"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "GraphAmbiCardio study team" }]
 dependencies = [
@@ -21,7 +21,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-datasus = ["pysus>=2.0", "dbfread>=2.0", "pyreaddbc>=2.0"]
+datasus = ["pysus>=2.11,<3", "dbfread>=2.0", "pyreaddbc>=2.0"]
 dev = ["pytest>=8.0"]
 
 [tool.setuptools.packages.find]

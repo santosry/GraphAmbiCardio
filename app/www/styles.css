@@ -128,3 +128,16 @@ div.vis-tooltip {
 @keyframes load { from { transform: translateX(-60%); } to { transform: translateX(180%); } }
 
 .shiny-notification { border-radius: 12px; }
+
+.skip-link:focus {
+  position: fixed; top: .5rem; left: .5rem; z-index: 10000;
+  background: #FFFFFF; color: var(--v0); padding: .5rem 1rem;
+  border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #31688E; outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .loader-fill { animation: none; }
+}

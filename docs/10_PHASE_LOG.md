@@ -128,6 +128,16 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 ---
 
+## Phase K — Privacy, FDR and reproducibility hardening (v0.3.0)
+
+**Done.** Individual-level SINASC/SIH records removed from Git and from history; compliance now blocks their versioning. Benjamini–Hochberg FDR applied to all models and gene-overlap hypotheses. Firth, cluster-robust and socio-economic sensitivity models; exposure correlation/VIF diagnostics. CI (GitHub Actions), `uv.lock`, `renv.lock`, schema validation, extra tests, CodeMeta, changelog and release checklist. App accessibility improvements (lang, skip link, focus styles, graph alternative text).
+
+**Problems.** No model survives FDR; CHD under-ascertainment remains the dominant limitation; DOI not yet issued.
+
+**Decision.** Release v0.3.0 as a privacy-hardened, reproducible and statistically more conservative version. **Apt to advance: yes, to internal review with explicit limitations.**
+
+---
+
 ## Deviations and blockers (summary)
 
 | Item | Status | Consequence |

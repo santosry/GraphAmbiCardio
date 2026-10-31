@@ -50,8 +50,8 @@ for _p in (
 # Study scope
 # --------------------------------------------------------------------------
 STUDY_ID = "GraphAmbiCardio"
-STUDY_VERSION = "0.2.0"
-ONTOLOGY_VERSION = "0.2.0"
+STUDY_VERSION = "0.3.0"
+ONTOLOGY_VERSION = "0.3.0"
 
 PERIOD_START = 2010
 PERIOD_END = 2025

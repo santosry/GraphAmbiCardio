@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T18:05:41Z",
+  "generated_at": "2026-10-31T18:35:57Z",
   "passed": true,
   "issues": [],
   "checks": {
@@ -13,16 +13,20 @@
     },
     "required_files": {
       "missing": [],
-      "n_required": 18
+      "n_required": 27
     },
     "fair_checksums": {
-      "n_resources": 12,
+      "n_resources": 16,
       "bad": []
     },
     "git": {
-      "tracked_files": 372,
+      "tracked_files": 371,
       "data_raw_tracked": [],
       "venv_tracked": []
+    },
+    "individual_data": {
+      "tracked": [],
+      "n_tracked": 0
     },
     "non_systematic_label": true,
     "ai_declaration": true,

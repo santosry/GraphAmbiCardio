@@ -3,7 +3,7 @@ ifeq ($(OS),)
 PY := .venv/bin/python
 endif
 
-.PHONY: setup literature databases epi env graph analysis validate test all clean
+.PHONY: setup literature databases epi env graph analysis validate schema test all clean lock
 
 setup:
 	uv venv .venv --python 3.12
@@ -47,6 +47,13 @@ app:
 
 validate:
 	$(PY) scripts/validation/01_validate.py
+	$(PY) scripts/validation/02_schema.py
+
+schema:
+	$(PY) scripts/validation/02_schema.py
+
+lock:
+	uv lock
 
 test:
 	$(PY) -m pytest -q

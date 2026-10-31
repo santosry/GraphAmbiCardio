@@ -1,7 +1,7 @@
 services:
   graphambicardio:
     build: .
-    image: graphambicardio:0.2.0
+    image: graphambicardio:0.3.0
     ports:
       - "3838:3838"
     restart: unless-stopped

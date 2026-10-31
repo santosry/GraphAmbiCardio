@@ -32,7 +32,16 @@ REQUIRED = [
     "docs/14_APP.md", "fair/metadata.json", "fair/datapackage.json",
     "app/global.R", "app/ui.R", "app/server.R", "app/data/nodes.csv",
     "outputs/graph/relations.csv", "data_processed/pm25_campos_mensal.csv",
-    "reports/pysus_sinasc_audit.json",
+    "reports/pysus_sinasc_audit.json", "docs/15_DATA_GOVERNANCE.md",
+    "codemeta.json", "CHANGELOG.md", "RELEASE.md", "uv.lock", "renv.lock", ".zenodo.json",
+    ".github/workflows/ci.yml", "scripts/validation/02_schema.py",
+]
+
+# Individual-level health records must never be redistributed through Git.
+INDIVIDUAL_DATA = [
+    "data_processed/sinasc_campos_births.csv",
+    "data_processed/sinasc_campos_with_exposure.csv",
+    "data_processed/sih_campos_chd_admissions.csv",
 ]
 
 
@@ -127,6 +136,11 @@ def main() -> None:
     if raw_tracked or venv_tracked:
         issues.append("dados brutos ou ambiente virtual versionados")
 
+    individual_tracked = [f for f in tracked if f in INDIVIDUAL_DATA]
+    checks["individual_data"] = {"tracked": individual_tracked, "n_tracked": len(individual_tracked)}
+    if individual_tracked:
+        issues.append("dados individuais de saúde versionados: " + ", ".join(individual_tracked))
+
     # 6. scientific label and AI declaration
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     checks["non_systematic_label"] = "não é uma revisão sistemática" in readme.lower()
@@ -164,6 +178,7 @@ def main() -> None:
               f"- Recursos FAIR com checksum inválido: {len(checks['fair_checksums']['bad'])}",
               f"- Arquivos versionados: {checks['git']['tracked_files']}",
               f"- `data_raw/` versionado: {len(checks['git']['data_raw_tracked'])}",
+              f"- Dados individuais versionados: {checks['individual_data']['n_tracked']}",
               f"- Rótulo de não revisão sistemática: {checks['non_systematic_label']}",
               f"- Declaração de IA (Portaria 2.664/2026): {checks['ai_declaration']}",
               f"- Série PM2,5 local: {checks['pm25_series']}",

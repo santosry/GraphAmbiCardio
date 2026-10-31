@@ -1,0 +1,34 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "https://github.com/santosry/GraphAmbiCardio",
+  "name": "GraphAmbiCardio",
+  "version": "0.3.0",
+  "description": "Provenance-first knowledge graph of environmental exposures, molecular mechanisms, cardiogenesis and congenital heart defects, with a reproducible epidemiological pipeline for Campos dos Goytacazes (RJ, Brazil) and an interactive Shiny application.",
+  "codeRepository": "https://github.com/santosry/GraphAmbiCardio",
+  "issueTracker": "https://github.com/santosry/GraphAmbiCardio/issues",
+  "readme": "https://github.com/santosry/GraphAmbiCardio/blob/main/README.md",
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": ["Python", "R"],
+  "runtimePlatform": ["Python 3.10+", "R 4.6"],
+  "developmentStatus": "active",
+  "dateCreated": "2026-10-31",
+  "dateModified": "2026-10-31",
+  "keywords": [
+    "congenital heart defects",
+    "environmental exposure",
+    "knowledge graph",
+    "cardiogenesis",
+    "evidence grading",
+    "FAIR",
+    "Brazil"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "GraphAmbiCardio study team"
+    }
+  ],
+  "contIntegration": "https://github.com/santosry/GraphAmbiCardio/actions",
+  "referencePublication": "https://github.com/santosry/GraphAmbiCardio/tree/main/docs"
+}

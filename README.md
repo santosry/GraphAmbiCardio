@@ -3,9 +3,10 @@
 **GraphAmbiCardio** — grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas.
 **Campos dos Goytacazes, RJ, 2010–2025.**
 
-[![status](https://img.shields.io/badge/status-v0.2.0-blue)]()
+[![status](https://img.shields.io/badge/status-v0.3.0-blue)]()
 [![Python](https://img.shields.io/badge/python-3.12-blue)]()
 [![R](https://img.shields.io/badge/R-%E2%89%A54.4-276DC3)]()
+[![CI](https://github.com/santosry/GraphAmbiCardio/actions/workflows/ci.yml/badge.svg)](https://github.com/santosry/GraphAmbiCardio/actions/workflows/ci.yml)
 
 > **Este estudo não é uma revisão sistemática.** É uma busca estruturada com curadoria dirigida, bases biológicas curadas e análise ecológica de dados secundários. Não estima efeitos causais.
 
@@ -28,7 +29,7 @@ Há duas camadas integradas e **nunca misturadas**:
 
 ---
 
-## 2. Resultados principais (v0.2.0)
+## 2. Resultados principais (v0.3.0)
 
 ### Base de evidências
 
@@ -58,7 +59,7 @@ Há duas camadas integradas e **nunca misturadas**:
 - SINASC: **98.598 nascimentos** (microdados 2010–2022 e 2025; **2023–2024 apenas agregados do TabNet**). **59 casos** nos microdados (5,98/10.000) — subnotificação grave. TabNet: 5 casos em 2023 e 5 em 2024; 2025 = 9 casos, compatível com os microdados.
 - SIH/SUS: **549 internações** por diagnóstico principal Q20–Q28 (**561 no total**, 12 apenas secundárias), **33 óbitos**, **55% fora do município**, 18 hospitais.
 - Clima: **5.844 dias** ERA5-Land; limiar de onda de calor 34,2 °C; **73 ondas / 363 dias**.
-- Modelo exploratório (56–59 eventos): temperatura OR **1,30/SD** (1,00–1,69; p = 0,049, q = 0,214); ajustado por estação **1,65** (1,13–2,42; p = 0,010, q = 0,087); modelo mensal **nulo** (RR 1,22; 0,94–1,60). PM2,5 municipal do VIGIAR foi **nulo** (OR 0,91/SD; 0,70–1,18) e permaneceu nulo no ajuste mútuo com temperatura (OR 1,01; 0,77–1,32). **Nenhum modelo sobrevive ao FDR (q < 0,05); não é achado causal.**
+- Modelo exploratório (56–59 eventos): temperatura OR **1,30/SD** (1,00–1,69; p = 0,048, q = 0,153); Firth **1,31** (1,00–1,69; p = 0,047); modelo com erros clusterizados por mês **1,30** (0,98–1,72; p = 0,065); ajuste socioeconômico Firth **1,33** (1,02–1,73; p = 0,033, q = 0,153); ajustado por estação **1,65** (1,13–2,42; p = 0,009, q = 0,122); modelo mensal **nulo** (RR 1,22; 0,94–1,60). PM2,5 municipal do VIGIAR foi **nulo** (OR 0,91/SD; 0,70–1,18) e permaneceu nulo no ajuste mútuo com temperatura (OR 1,01; 0,77–1,32). **Nenhum modelo sobrevive ao FDR (q < 0,05); não é achado causal.**
 
 ### Hierarquia de exposições
 
@@ -104,12 +105,14 @@ Detalhes: `docs/14_APP.md`.
 ### Requisitos
 
 - Python **3.12** (decodificador DBC do DATASUS).
-- R **≥ 4.4** com `shiny`, `bslib`, `DT`, `visNetwork`, `plotly`, `dplyr`, `readr`, `jsonlite`, `stringr`, `scales`, `htmltools`, `igraph`, `commonmark`.
+- R **≥ 4.4** com `shiny`, `bslib`, `DT`, `visNetwork`, `plotly`, `dplyr`, `readr`, `jsonlite`, `stringr`, `scales`, `htmltools`, `igraph`, `commonmark`, `viridisLite`, `vigiar` e `rsconnect`. As versões exatas estão em `renv.lock`.
 - Internet para NCBI, Europe PMC, Crossref, HPO, Reactome, Enrichr, Open-Meteo e DATASUS.
 
 ```bash
 uv venv .venv --python 3.12
-uv pip install --python .venv -e ".[dev,datasus]"
+uv sync --extra dev --extra datasus   # usa uv.lock
+# ou: uv pip install --python .venv -e ".[dev,datasus]"
+# R: renv::restore()   # usa renv.lock
 
 # pipeline Python
 .venv/Scripts/python.exe scripts/collection/01_literature.py
@@ -136,7 +139,7 @@ Rscript R/collection/scielo.R
 Rscript R/collection/capes.R
 ```
 
-Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pelo git); toda resposta usada no grafo é rastreável.
+Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pelo git); toda resposta usada no grafo é rastreável. **Dados individuais de SINASC/SIH não são versionados** — ver `docs/15_DATA_GOVERNANCE.md`.
 
 ---
 
@@ -144,12 +147,13 @@ Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pel
 
 ```bash
 .venv/Scripts/python.exe scripts/validation/01_validate.py   # integridade + citações
+.venv/Scripts/python.exe scripts/validation/02_schema.py     # schema, FDR, PM2,5, versão
 .venv/Scripts/python.exe scripts/benchmark/01_benchmark.py   # tempo/memória
 .venv/Scripts/python.exe scripts/compliance/01_check.py      # higiene, segredos, FAIR, nomes
 .venv/Scripts/python.exe -m pytest -q
 ```
 
-Resultados em `reports/validation_report.md`, `reports/benchmark.md` e `reports/compliance_report.md`. A conformidade verifica termos proibidos, segredos, checksums FAIR, ausência de `data_raw/` no git, declaração de IA e bundle do app.
+Resultados em `reports/validation_report.md`, `reports/schema_validation.md`, `reports/benchmark.md` e `reports/compliance_report.md`. A conformidade verifica termos proibidos, segredos, checksums FAIR, ausência de `data_raw/` e de dados individuais no git, declaração de IA e bundle do app.
 
 ## 6. Docker
 
@@ -167,13 +171,15 @@ docker compose up --build
 | `src/graphambicardio/` | pacote Python (coleta, limpeza, integração, grafo, análise, validação) |
 | `R/collection/` | coletores R para SciELO (Crossref) e CAPES |
 | `app/` | aplicativo Shiny GraphAmbiCardio (PT-BR) e bundle de dados |
-| `docs/` | protocolo, viabilidade, busca, catálogo, ontologia, dicionário, gradação, métodos, validação, limitações, fases, manuscrito, FAIR, IA e app |
+| `docs/` | protocolo, viabilidade, busca, catálogo, ontologia, dicionário, gradação, métodos, validação, limitações, fases, manuscrito, FAIR, IA, app e governança de dados |
 | `fair/` | metadados DCAT e Frictionless Data Package com checksums |
-| `reports/` | matrizes de viabilidade, PRISMA, validação, auditoria, resumos |
+| `reports/` | matrizes de viabilidade, PRISMA, validação, conformidade, schema e resumos |
 | `literature/` | buscas (JSON), triagem, estudos-âncora |
 | `data_processed/` | dados harmonizados |
 | `outputs/` | grafo, tabelas e figuras |
 | `tests/` | testes unitários e de integridade |
+| `codemeta.json`, `CITATION.cff`, `.zenodo.json` | metadados de citação, software e arquivamento |
+| `CHANGELOG.md`, `RELEASE.md` | histórico e checklist de release |
 
 ---
 

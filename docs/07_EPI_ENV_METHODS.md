@@ -192,17 +192,25 @@ Outcome: CHD (0/1). Exposure: area-level mean Tmax during the organogenesis wind
 
 | Exposure | OR per SD | 95% CI | p | q (FDR) | OR per IQR |
 |---|---:|---|---:|---:|---:|
-| Tmax window mean | **1.30** | 1.00–1.69 | 0.049 | 0.214 | 1.50 |
-| Tmin window mean | 1.19 | 0.91–1.56 | 0.21 | 0.310 | 1.35 |
-| Heat-day proportion | 1.10 | 0.89–1.36 | 0.37 | 0.471 | 1.06 |
-| Relative humidity | 0.82 | 0.63–1.07 | 0.14 | 0.252 | 0.75 |
-| PM2.5 (VIGIAR) | 0.91 | 0.70–1.18 | 0.47 | 0.530 | 0.89 |
+| Tmax window mean | **1.30** | 1.00–1.69 | 0.048 | 0.153 | 1.50 |
+| Tmin window mean | 1.19 | 0.91–1.56 | 0.20 | 0.295 | 1.35 |
+| Heat-day proportion | 1.10 | 0.89–1.36 | 0.36 | 0.473 | 1.06 |
+| Relative humidity | 0.82 | 0.63–1.07 | 0.13 | 0.228 | 0.75 |
+| PM2.5 (VIGIAR) | 0.91 | 0.70–1.18 | 0.47 | 0.509 | 0.89 |
 
-Season-adjusted sensitivity (quarter of conception fixed effects): **OR 1.65 per SD (1.13–2.42), p = 0.010, q = 0.087**.
+**Small-sample sensitivity.** Firth penalised logistic regression gave Tmax **OR 1.31 (1.00–1.69), p = 0.047, q = 0.153** and PM2.5 **OR 0.91 (0.70–1.18), p = 0.47, q = 0.509**.
 
-Mutual-adjustment model (PM2.5 + Tmax, year, age, sex): PM2.5 **OR 1.01 per SD (0.77–1.32), p = 0.97, q = 0.97**; Tmax **OR 1.30 (0.98–1.74), p = 0.07, q = 0.21**. The PM2.5 association is null in this municipality and does not explain the heat signal.
+**Clustering.** Cluster-robust standard errors by month of conception (170 clusters) gave Tmax **OR 1.30 (0.98–1.72), p = 0.065, q = 0.153** — the confidence interval now includes 1.
 
-Leave-one-year-out: OR per SD ranged **1.47–1.66**; excluding 2010 moved p to 0.056; no single year changed the direction.
+**Socio-economic sensitivity.** Firth model additionally adjusted for education (≥8 years), race (white vs non-white), number of prenatal visits and multiple gestation: Tmax **OR 1.33 (1.02–1.73), p = 0.033, q = 0.153**, n = 86,090 and 55 events.
+
+Season-adjusted sensitivity (quarter of conception fixed effects): **OR 1.65 per SD (1.13–2.42), p = 0.009, q = 0.122**.
+
+Mutual-adjustment model (PM2.5 + Tmax, year, age, sex): PM2.5 **OR 1.01 per SD (0.77–1.32), p = 0.97, q = 0.97**; Tmax **OR 1.30 (0.98–1.74), p = 0.071, q = 0.153**. The PM2.5 association is null in this municipality and does not explain the heat signal.
+
+Leave-one-year-out: OR per SD ranged **1.47–1.86**; p ranged 0.002–0.057 and q (within the LOO family) 0.019–0.057; no single year changed the direction.
+
+**Colinearity.** Tmax and Tmin are strongly correlated (r = 0.88) and heat-day proportion is correlated with Tmax (r = 0.75). In a model containing all five exposures the VIF for Tmax is 10.4, so the study does **not** fit a five-exposure model; each exposure is modelled separately and the only mutual-adjustment model is PM2.5 + Tmax, whose correlation is low (r = −0.26). Correlations and VIF are in `outputs/tables/exposure_correlation.csv` and `exposure_vif.csv`.
 
 ### 4.2 Monthly count model
 
@@ -211,7 +219,7 @@ CHD counts by month of conception (163 months with ≥30 births; 56 cases), Pois
 ### 4.3 Interpretation (enforced)
 
 - The birth-level and monthly models **disagree** (positive borderline vs null). This is expected with 56–59 events and an area-level exposure.
-- The nominal p-values (0.049 and 0.010) do **not** survive FDR correction across the model family (q = 0.214 and 0.087), so the heat signal remains hypothesis-generating.
+- The nominal p-values (0.049 and 0.010) do **not** survive FDR correction across the model family (q = 0.153 and 0.122), so the heat signal remains hypothesis-generating.
 - The exposure is **ecological**: every birth in the same window receives the same value.
 - Gestational age is measured at birth and may be misclassified; conception dates are estimates.
 - CHD ascertainment in SINASC is severely incomplete and may be differential by year/season (e.g. diagnosis at birth vs later).

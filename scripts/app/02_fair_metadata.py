@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import shutil
 from pathlib import Path
 
 import pandas as pd
@@ -24,6 +25,10 @@ RESOURCES = [
     ("caminhos", "outputs/tables/paths_exposure_phenotype.csv", "Caminhos exposição-fenótipo com confiança mínima"),
     ("lacunas", "outputs/tables/gap_analysis.csv", "Lacunas explícitas por exposição, mecanismo e processo"),
     ("candidatos_hipoteses", "outputs/tables/hypothesis_candidates.csv", "Hipóteses por sobreposição gênica (não evidenciais)"),
+    ("modelos_exploratorios", "outputs/tables/exploratory_models.csv", "Modelos logísticos, Firth, cluster-robusto, contagem mensal e ajuste mútuo, com p e q (BH-FDR)"),
+    ("sensibilidade_loo", "outputs/tables/sensitivity_leave_one_year_out.csv", "Sensibilidade leave-one-year-out com p e q"),
+    ("correlacao_exposicoes", "outputs/tables/exposure_correlation.csv", "Matriz de correlação das exposições de janela"),
+    ("vif_exposicoes", "outputs/tables/exposure_vif.csv", "Fatores de inflação de variância das exposições de janela"),
 ]
 
 
@@ -59,7 +64,7 @@ datapackage = {
     "name": "graphambicardio-graphambicardio",
     "title": "GraphAmbiCardio — grafo de conhecimento e dados derivados",
     "description": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas, com dados locais de Campos dos Goytacazes (RJ) e proveniência por evidência.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "created": "2026-10-31",
     "licenses": [{"name": "MIT", "path": "https://opensource.org/licenses/MIT", "title": "Código sob MIT; dados de terceiros mantêm suas licenças"}],
     "contributors": [{"title": "GraphAmbiCardio study team", "role": "author"}],
@@ -82,10 +87,10 @@ datapackage = {
 dcat = {
     "@context": "https://www.w3.org/ns/dcat#",
     "@type": "Dataset",
-    "identifier": "https://github.com/santosry/GraphAmbiCardio#v0.2.0",
+    "identifier": "https://github.com/santosry/GraphAmbiCardio#v0.3.0",
     "name": "GraphAmbiCardio",
     "description": "Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e fenótipos de cardiopatias congênitas, integrando literatura, bases biológicas curadas e dados ecológicos de Campos dos Goytacazes (2010-2025).",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "issued": "2026-10-31",
     "modified": "2026-10-31",
     "creator": {"@type": "Organization", "name": "GraphAmbiCardio study team"},
@@ -106,4 +111,8 @@ dcat = {
     "note": "Busca estruturada não sistemática. Hipóteses são explicitamente separadas das evidências.",
 }
 (FAIR / "metadata.json").write_text(json.dumps(dcat, ensure_ascii=False, indent=2), encoding="utf-8")
+# Keep the self-contained app bundle in sync with the FAIR layer.
+(ROOT / "app" / "www").mkdir(parents=True, exist_ok=True)
+shutil.copy2(FAIR / "datapackage.json", ROOT / "app" / "www" / "datapackage.json")
+shutil.copy2(FAIR / "metadata.json", ROOT / "app" / "www" / "metadata.json")
 print(f"FAIR metadata: {len(resources)} resources")

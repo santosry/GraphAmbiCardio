@@ -46,8 +46,8 @@ Nenhum modelo foi usado como autor ou coautor. A responsabilidade científica pe
 
 ## 5. Como citar esta declaração
 
-> GraphAmbiCardio study team. *Declaração de uso de inteligência artificial*. In: GraphAmbiCardio, v0.2.0, 2026. Em conformidade com a Portaria CNPq nº 2.664/2026.
+> GraphAmbiCardio study team. *Declaração de uso de inteligência artificial*. In: GraphAmbiCardio, v0.3.0, 2026. Em conformidade com a Portaria CNPq nº 2.664/2026.
 
 **Data:** 2026-10-31
-**Versão:** 0.2.0
+**Versão:** 0.3.0
 **Contato:** ryan.paulo@gsuite.iff.edu.br

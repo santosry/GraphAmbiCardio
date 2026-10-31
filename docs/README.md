@@ -17,3 +17,4 @@
 | `12_FAIR.md` | FAIR implementation and remaining gaps |
 | `13_DECLARACAO_IA.md` | AI use declaration (Portaria CNPq 2.664/2026) |
 | `14_APP.md` | Shiny application, deployment and public URL |
+| `15_DATA_GOVERNANCE.md` | Data governance, privacy and reproduction of individual-level data |

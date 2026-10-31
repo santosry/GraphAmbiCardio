@@ -9,14 +9,14 @@ O GraphAmbiCardio foi desenhado para ser **Findable, Accessible, Interoperable a
 - **Identificadores persistentes por entidade:** PMID e DOI para estudos; HPO IDs para fenótipos; CID-10 para a camada epidemiológica; ClinVar VCV para variantes; Reactome stable IDs (`R-HSA-…`) para vias; NCBI Gene IDs para genes.
 - **Metadados descritivos:** `fair/metadata.json` (perfil DCAT) e `fair/datapackage.json` (Frictionless Data Package), com título, descrição, palavras-chave, cobertura espacial (IBGE 330100) e temporal (2010–2025), fontes e licenças.
 - **Aplicativo de descoberta:** o GraphAmbiCardio (Shiny, PT-BR; https://ryansantospaulo.shinyapps.io/graphambicardio/) permite busca por exposição, fenótipo, gene, via e termo livre, com recuperação das referências; inclui painel epidemiológico, camada de hipóteses e downloads em CSV.
-- **Identificador do conjunto:** URL do repositório + versão (`https://github.com/santosry/GraphAmbiCardio#v0.2.0`).
+- **Identificador do conjunto:** URL do repositório + versão (`https://github.com/santosry/GraphAmbiCardio#v0.3.0`). Um DOI persistente via Zenodo está planejado no checklist `RELEASE.md`.
 
 ## A — Accessible (acessível)
 
 - Código, dados derivados, metadados e documentação estão em repositório público, sem autenticação.
 - O aplicativo Shiny é executável localmente e pode ser publicado em `shinyapps.io`.
 - Formatos abertos: CSV, JSON, GraphML, Markdown.
-- **Dados de terceiros:** os microdados brutos do DATASUS não são redistribuídos; scripts de download são fornecidos. PubMed/Europe PMC, HPO, ClinVar, Reactome, Open-Meteo/ERA5-Land e Crossref mantêm suas próprias licenças e termos.
+- **Dados de terceiros:** os microdados brutos do DATASUS não são redistribuídos; scripts de download são fornecidos. **Registros individuais de SINASC/SIH não são versionados** (ver `docs/15_DATA_GOVERNANCE.md`); o app usa apenas agregados. PubMed/Europe PMC, HPO, ClinVar, Reactome, Open-Meteo/ERA5-Land e Crossref mantêm suas próprias licenças e termos.
 - Credenciais e tokens não são armazenados no repositório.
 
 ## I — Interoperable (interoperável)
@@ -39,8 +39,9 @@ O GraphAmbiCardio foi desenhado para ser **Findable, Accessible, Interoperable a
 
 ## O que ainda falta para FAIR pleno
 
-1. **Hashes de release** para HPO, ClinVar e Reactome (atualmente registra-se a data de extração, não o release exato).
-2. **Metadados por campo** no datapackage (o esquema atual traz nome e tipo, não descrição semântica completa).
-3. **Publicação do aplicativo** em servidor institucional com URL persistente.
+1. **DOI persistente** via Zenodo para o conjunto de dados e o código (checklist em `RELEASE.md`).
+2. **Hashes de release** para HPO, ClinVar e Reactome (atualmente registra-se a data de extração, não o release exato).
+3. **Metadados por campo** no datapackage (o esquema atual traz nome e tipo, não descrição semântica completa).
+4. **Publicação do aplicativo** em servidor institucional com URL persistente.
 
 Essas lacunas estão registradas em `docs/09_LIMITATIONS_AND_GAPS.md` e não são apresentadas como resolvidas.

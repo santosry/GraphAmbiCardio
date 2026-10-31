@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Unit and integrity tests
+        run: pytest -q
+      - name: Output validation
+        run: python scripts/validation/01_validate.py
+      - name: Schema validation
+        run: python scripts/validation/02_schema.py
+      - name: Compliance and privacy checks
+        run: python scripts/compliance/01_check.py
+
+  r-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "4.6.1"
+      - name: Parse all R sources
+        run: |
+          Rscript -e 'files <- c(list.files("app", pattern="[.]R$", recursive=TRUE, full.names=TRUE), list.files("R", pattern="[.]R$", recursive=TRUE, full.names=TRUE)); for (f in files) { parse(f); cat("OK", f, "\n") }'
+
+  app-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "4.6.1"
+      - name: Install app packages
+        run: |
+          Rscript -e 'install.packages(c("shiny","bslib","DT","visNetwork","plotly","dplyr","readr","jsonlite","stringr","scales","htmltools","igraph","commonmark","viridisLite"), repos = "https://packagemanager.posit.co/cran/2026-10-01", Ncpus = 2)' 
+      - name: Load app sources
+        run: |
+          cd app
+          Rscript -e 'source("global.R"); source("ui.R"); source("server.R"); cat("app sources OK\n")'

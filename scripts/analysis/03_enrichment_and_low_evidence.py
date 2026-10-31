@@ -12,12 +12,12 @@ from graphambicardio.io_utils import get_logger, write_csv  # noqa: E402
 def main() -> None:
     log = get_logger("enrichment")
     e = pd.read_csv(config.DATA_PROCESSED / "enrichr_GO_Biological_Process_2023.csv")
-    e = e.sort_values("adjusted_p_value").head(30)
+    e = e.sort_values(["adjusted_p_value", "term"]).head(30)
     e.to_csv(config.TABLES / "enrichr_top30.csv", index=False)
 
     r = pd.read_csv(config.DATA_PROCESSED / "reactome_gene_pathway_edges.csv")
     top = (r.groupby(["st_id", "pathway_name"]).size().reset_index(name="n_genes")
-             .sort_values("n_genes", ascending=False).head(30))
+             .sort_values(["n_genes", "st_id"], ascending=[False, True]).head(30))
     top.to_csv(config.TABLES / "reactome_top_pathways.csv", index=False)
 
     rel = pd.read_csv(config.GRAPH_OUT / "relations.csv")

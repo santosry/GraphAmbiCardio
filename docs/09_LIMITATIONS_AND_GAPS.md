@@ -37,7 +37,7 @@ This document lists limitations that materially affect interpretation. They are 
 6. **Costs are nominal.** No deflation or purchasing-power adjustment was applied.
 7. **Denominators.** Birth-level models use SINASC live births; SIH indicators lack age-specific population denominators.
 8. **Residence at birth ≠ residence at conception.** Migration during pregnancy is not captured.
-9. **Small numbers.** 56–59 events make all models imprecise; the season-adjusted estimate is fragile under leave-one-year-out.
+9. **Small numbers.** 56–59 events make all models imprecise; the season-adjusted estimate is fragile under leave-one-year-out. Firth and cluster-robust models reduce, but do not remove, this instability, and no model survives BH-FDR in the primary family.
 
 ---
 
@@ -58,7 +58,7 @@ This document lists limitations that materially affect interpretation. They are 
 2. **Centrality is structural.** VSD/ASD/PDA have the highest degree because HPO annotates many genes to them, not because they are “more important”.
 3. **Confidence is not probability.** The formula is a transparent heuristic; grades are not calibrated against external truth.
 4. **Threshold dependence.** Direct links fall from 17 to 12 between confidence 0.40 and 0.85.
-5. **Hypothesis layer is small (7 edges) and excluded from all path analyses.**
+5. **Hypothesis layer is small (14 edges: 9 composed and 5 gene-overlap) and excluded from all path analyses.**
 6. **No Neo4j.** The graph is small enough for NetworkX/GraphML; a database would add complexity without a current query need.
 7. **Version drift.** HPO/ClinVar/Reactome change continuously; the retrieval date is stored, but exact release hashes are not pinned for ClinVar/Reactome.
 

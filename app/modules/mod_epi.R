@@ -146,8 +146,9 @@ mod_epi_server <- function(id) {
       ic <- if ("or_per_sd_ci95" %in% names(d)) d$or_per_sd_ci95 else rep("", nrow(d))
       if ("rr_per_sd_ci95" %in% names(d)) ic <- ifelse(is.na(ic) | ic == "", d$rr_per_sd_ci95, ic)
       out <- data.frame(Modelo = d$model, Exposição = d$exposure, n = d$n, Eventos = d$n_events,
-                        OR_RR = est, IC95 = ic, p = d$p_value, check.names = FALSE)
-      datatable(out, rownames = FALSE, options = list(dom = "t"))
+                        OR_RR = est, IC95 = ic, p = d$p_value, q_FDR = d$q_value, check.names = FALSE)
+      datatable(out, rownames = FALSE, options = list(dom = "t", autoWidth = TRUE)) %>%
+        formatSignif(columns = c("p", "q_FDR"), digits = 3)
     }, server = FALSE)
 
     output$models_two <- renderDT({

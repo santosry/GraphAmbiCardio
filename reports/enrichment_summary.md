@@ -26,15 +26,15 @@ Total enriched GO terms: 1631
 
 | Pathway | Genes |
 |---|---:|
-| Chromatin organization | 14 |
 | Developmental Biology | 14 |
+| Chromatin organization | 14 |
 | Diseases of signal transduction by growth factor receptors and second messengers | 12 |
 | Chromatin modifying enzymes | 10 |
-| ATP-dependent chromatin remodelers | 10 |
-| Cardiogenesis | 10 |
 | Oncogenic MAPK signaling | 10 |
-| TGF-beta receptor signaling activates SMADs | 9 |
+| Cardiogenesis | 10 |
+| ATP-dependent chromatin remodelers | 10 |
 | Epigenetic regulation of gene expression | 9 |
-| Gastrulation | 8 |
+| TGF-beta receptor signaling activates SMADs | 9 |
+| Signaling by NOTCH | 8 |
 
 Low-evidence edges (grade D/E): **37** of 4117 relations. See `outputs/tables/low_evidence_edges.csv`.

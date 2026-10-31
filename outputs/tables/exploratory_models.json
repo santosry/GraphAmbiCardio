@@ -4,42 +4,42 @@
     "exposure": "win_temperature_2m_max_mean",
     "n": 90008,
     "n_events": 56,
-    "or_per_sd": 1.301,
+    "or_per_sd": 1.302,
     "or_per_sd_ci95": [
-      1.002,
+      1.003,
       1.691
     ],
-    "p_value": 0.0485,
+    "p_value": 0.0478,
     "iqr": 3.731,
-    "or_per_iqr": 1.499,
+    "or_per_iqr": 1.5,
     "or_per_iqr_ci95": [
-      1.003,
-      2.24
+      1.004,
+      2.242
     ],
     "converged": true,
     "adjustment": "year (linear) + maternal age (linear) + infant sex",
-    "q_value": 0.2142
+    "q_value": 0.15275
   },
   {
     "model": "logistic_birth_level",
     "exposure": "win_temperature_2m_min_mean",
     "n": 90008,
     "n_events": 56,
-    "or_per_sd": 1.192,
+    "or_per_sd": 1.193,
     "or_per_sd_ci95": [
-      0.908,
-      1.564
+      0.909,
+      1.566
     ],
-    "p_value": 0.2066,
+    "p_value": 0.2039,
     "iqr": 3.892,
-    "or_per_iqr": 1.35,
+    "or_per_iqr": 1.352,
     "or_per_iqr_ci95": [
-      0.848,
-      2.149
+      0.849,
+      2.152
     ],
     "converged": true,
     "adjustment": "year (linear) + maternal age (linear) + infant sex",
-    "q_value": 0.3099
+    "q_value": 0.29452
   },
   {
     "model": "logistic_birth_level",
@@ -51,7 +51,7 @@
       0.894,
       1.356
     ],
-    "p_value": 0.3663,
+    "p_value": 0.3638,
     "iqr": 0.062,
     "or_per_iqr": 1.055,
     "or_per_iqr_ci95": [
@@ -60,49 +60,122 @@
     ],
     "converged": true,
     "adjustment": "year (linear) + maternal age (linear) + infant sex",
-    "q_value": 0.47096
+    "q_value": 0.47294
   },
   {
     "model": "logistic_birth_level",
     "exposure": "win_relative_humidity_2m_mean_mean",
     "n": 90008,
     "n_events": 56,
-    "or_per_sd": 0.818,
+    "or_per_sd": 0.815,
     "or_per_sd_ci95": [
-      0.626,
-      1.068
+      0.625,
+      1.063
     ],
-    "p_value": 0.1394,
+    "p_value": 0.1312,
     "iqr": 5.611,
-    "or_per_iqr": 0.749,
+    "or_per_iqr": 0.746,
     "or_per_iqr_ci95": [
-      0.511,
-      1.099
+      0.51,
+      1.091
     ],
     "converged": true,
     "adjustment": "year (linear) + maternal age (linear) + infant sex",
-    "q_value": 0.25236
+    "q_value": 0.22782
   },
   {
     "model": "logistic_birth_level",
     "exposure": "win_pm25_mean",
     "n": 90008,
     "n_events": 56,
-    "or_per_sd": 0.908,
+    "or_per_sd": 0.907,
     "or_per_sd_ci95": [
-      0.698,
+      0.697,
       1.181
     ],
-    "p_value": 0.4709,
+    "p_value": 0.4702,
     "iqr": 1.8,
-    "or_per_iqr": 0.887,
+    "or_per_iqr": 0.886,
     "or_per_iqr_ci95": [
-      0.64,
-      1.229
+      0.639,
+      1.23
     ],
     "converged": true,
     "adjustment": "year (linear) + maternal age (linear) + infant sex",
-    "q_value": 0.52976
+    "q_value": 0.50938
+  },
+  {
+    "model": "logistic_firth",
+    "exposure": "win_temperature_2m_max_mean",
+    "n": 90008,
+    "n_events": 56,
+    "or_per_sd": 1.306,
+    "or_per_sd_ci95": [
+      1.003,
+      1.69
+    ],
+    "p_value": 0.0471,
+    "iqr": 3.731,
+    "or_per_iqr": 1.508,
+    "method": "Firth penalised logistic regression",
+    "adjustment": "year (linear) + maternal age (linear) + infant sex",
+    "converged": true,
+    "q_value": 0.15275
+  },
+  {
+    "model": "logistic_firth",
+    "exposure": "win_pm25_mean",
+    "n": 90008,
+    "n_events": 56,
+    "or_per_sd": 0.909,
+    "or_per_sd_ci95": [
+      0.696,
+      1.18
+    ],
+    "p_value": 0.4657,
+    "iqr": 1.8,
+    "or_per_iqr": 0.888,
+    "method": "Firth penalised logistic regression",
+    "adjustment": "year (linear) + maternal age (linear) + infant sex",
+    "converged": true,
+    "q_value": 0.50938
+  },
+  {
+    "model": "logistic_firth_confounders",
+    "exposure": "win_temperature_2m_max_mean",
+    "n": 86090,
+    "n_events": 55,
+    "or_per_sd": 1.334,
+    "or_per_sd_ci95": [
+      1.023,
+      1.729
+    ],
+    "p_value": 0.0333,
+    "iqr": 3.731,
+    "or_per_iqr": 1.561,
+    "method": "Firth penalised logistic regression",
+    "adjustment": "year + age + sex + education + race + prenatal visits + multiple gestation",
+    "converged": true,
+    "q_value": 0.15275
+  },
+  {
+    "model": "logistic_cluster_month",
+    "exposure": "win_temperature_2m_max_mean",
+    "n": 90008,
+    "n_events": 56,
+    "n_clusters": 170,
+    "or_per_sd": 1.302,
+    "or_per_sd_ci95": [
+      0.984,
+      1.723
+    ],
+    "p_value": 0.0648,
+    "iqr": 3.731,
+    "or_per_iqr": 1.5,
+    "method": "logistic with cluster-robust SE by month of conception",
+    "adjustment": "year (linear) + maternal age (linear) + infant sex",
+    "converged": true,
+    "q_value": 0.15275
   },
   {
     "model": "logistic_two_exposures",
@@ -113,35 +186,35 @@
     "adjustment": "mutual + year + age + sex",
     "exposure_1_or_per_sd": 1.005,
     "exposure_1_ci95": [
-      0.767,
+      0.766,
       1.318
     ],
-    "exposure_1_p": 0.9714,
-    "exposure_2_or_per_sd": 1.304,
+    "exposure_1_p": 0.9726,
+    "exposure_2_or_per_sd": 1.305,
     "exposure_2_ci95": [
-      0.977,
+      0.978,
       1.741
     ],
-    "exposure_2_p": 0.0714,
+    "exposure_2_p": 0.0705,
     "converged": true,
-    "exposure_1_q": 0.9714,
-    "exposure_2_q": 0.2142
+    "exposure_1_q": 0.9726,
+    "exposure_2_q": 0.15275
   },
   {
     "model": "logistic_season_adjusted",
     "exposure": "win_temperature_2m_max_mean",
     "n": 90008,
     "n_events": 56,
-    "or_per_sd": 1.652,
+    "or_per_sd": 1.653,
     "or_per_sd_ci95": [
-      1.129,
-      2.416
+      1.131,
+      2.417
     ],
-    "p_value": 0.0097,
-    "or_per_iqr": 2.162,
+    "p_value": 0.0094,
+    "or_per_iqr": 2.165,
     "adjustment": "year + maternal age + sex + quarter of conception",
     "converged": true,
-    "q_value": 0.0873
+    "q_value": 0.1222
   },
   {
     "model": "monthly_count_conception_month",
@@ -158,7 +231,7 @@
     "p_value": 0.1402,
     "iqr": 3.715,
     "rr_per_iqr": 1.376,
-    "q_value": 0.25236
+    "q_value": 0.22782
   },
   {
     "model": "leave_one_year_out",
@@ -166,35 +239,39 @@
     "results": [
       {
         "excluded_year": 2010,
-        "or_per_sd": 1.473,
-        "ci_low": 0.991,
-        "ci_high": 2.19,
-        "p_value": 0.0557,
-        "n_events": 52
+        "or_per_sd": 1.469,
+        "ci_low": 0.989,
+        "ci_high": 2.183,
+        "p_value": 0.057,
+        "n_events": 52,
+        "q_value": 0.057
       },
       {
         "excluded_year": 2011,
         "or_per_sd": 1.611,
-        "ci_low": 1.106,
+        "ci_low": 1.107,
         "ci_high": 2.346,
-        "p_value": 0.013,
-        "n_events": 56
+        "p_value": 0.0128,
+        "n_events": 56,
+        "q_value": 0.02498
       },
       {
         "excluded_year": 2012,
-        "or_per_sd": 1.633,
-        "ci_low": 1.114,
-        "ci_high": 2.394,
-        "p_value": 0.0119,
-        "n_events": 54
+        "or_per_sd": 1.631,
+        "ci_low": 1.113,
+        "ci_high": 2.39,
+        "p_value": 0.0121,
+        "n_events": 54,
+        "q_value": 0.02498
       },
       {
         "excluded_year": 2013,
         "or_per_sd": 1.656,
         "ci_low": 1.131,
-        "ci_high": 2.426,
-        "p_value": 0.0096,
-        "n_events": 55
+        "ci_high": 2.425,
+        "p_value": 0.0095,
+        "n_events": 55,
+        "q_value": 0.02498
       },
       {
         "excluded_year": 2014,
@@ -202,79 +279,89 @@
         "ci_low": 1.143,
         "ci_high": 2.457,
         "p_value": 0.0082,
-        "n_events": 55
+        "n_events": 55,
+        "q_value": 0.02498
       },
       {
         "excluded_year": 2015,
-        "or_per_sd": 1.845,
-        "ci_low": 1.242,
-        "ci_high": 2.741,
-        "p_value": 0.0024,
-        "n_events": 52
+        "or_per_sd": 1.85,
+        "ci_low": 1.246,
+        "ci_high": 2.745,
+        "p_value": 0.0023,
+        "n_events": 52,
+        "q_value": 0.0189
       },
       {
         "excluded_year": 2016,
-        "or_per_sd": 1.834,
-        "ci_low": 1.232,
-        "ci_high": 2.729,
-        "p_value": 0.0028,
-        "n_events": 52
+        "or_per_sd": 1.838,
+        "ci_low": 1.235,
+        "ci_high": 2.734,
+        "p_value": 0.0027,
+        "n_events": 52,
+        "q_value": 0.0189
       },
       {
         "excluded_year": 2017,
-        "or_per_sd": 1.603,
-        "ci_low": 1.067,
-        "ci_high": 2.408,
-        "p_value": 0.0231,
-        "n_events": 48
+        "or_per_sd": 1.604,
+        "ci_low": 1.069,
+        "ci_high": 2.409,
+        "p_value": 0.0226,
+        "n_events": 48,
+        "q_value": 0.02498
       },
       {
         "excluded_year": 2018,
-        "or_per_sd": 1.57,
-        "ci_low": 1.063,
-        "ci_high": 2.318,
-        "p_value": 0.0233,
-        "n_events": 54
+        "or_per_sd": 1.579,
+        "ci_low": 1.071,
+        "ci_high": 2.33,
+        "p_value": 0.0212,
+        "n_events": 54,
+        "q_value": 0.02498
       },
       {
         "excluded_year": 2019,
-        "or_per_sd": 1.61,
-        "ci_low": 1.066,
-        "ci_high": 2.432,
-        "p_value": 0.0235,
-        "n_events": 49
+        "or_per_sd": 1.619,
+        "ci_low": 1.074,
+        "ci_high": 2.442,
+        "p_value": 0.0215,
+        "n_events": 49,
+        "q_value": 0.02498
       },
       {
         "excluded_year": 2020,
-        "or_per_sd": 1.861,
-        "ci_low": 1.213,
-        "ci_high": 2.854,
-        "p_value": 0.0044,
-        "n_events": 52
+        "or_per_sd": 1.858,
+        "ci_low": 1.212,
+        "ci_high": 2.848,
+        "p_value": 0.0045,
+        "n_events": 52,
+        "q_value": 0.021
       },
       {
         "excluded_year": 2021,
-        "or_per_sd": 1.571,
-        "ci_low": 1.064,
-        "ci_high": 2.318,
-        "p_value": 0.023,
-        "n_events": 52
+        "or_per_sd": 1.568,
+        "ci_low": 1.063,
+        "ci_high": 2.312,
+        "p_value": 0.0232,
+        "n_events": 52,
+        "q_value": 0.02498
       },
       {
         "excluded_year": 2022,
-        "or_per_sd": 1.583,
-        "ci_low": 1.065,
+        "or_per_sd": 1.585,
+        "ci_low": 1.066,
         "ci_high": 2.355,
-        "p_value": 0.0232,
-        "n_events": 50
+        "p_value": 0.0228,
+        "n_events": 50,
+        "q_value": 0.02498
       },
       {
         "excluded_year": 2025,
-        "or_per_sd": 1.644,
-        "ci_low": 1.094,
-        "ci_high": 2.471,
-        "p_value": 0.0167,
-        "n_events": 47
+        "or_per_sd": 1.65,
+        "ci_low": 1.098,
+        "ci_high": 2.479,
+        "p_value": 0.0161,
+        "n_events": 47,
+        "q_value": 0.02498
       }
     ]
   }

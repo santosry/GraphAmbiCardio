@@ -28,4 +28,5 @@ $PY scripts/app/02_fair_metadata.py
 $PY scripts/benchmark/01_benchmark.py
 $PY scripts/compliance/01_check.py
 $PY scripts/validation/01_validate.py
+$PY scripts/validation/02_schema.py
 $PY -m pytest -q

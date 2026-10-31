@@ -1,10 +1,10 @@
 {
   "@context": "https://www.w3.org/ns/dcat#",
   "@type": "Dataset",
-  "identifier": "https://github.com/santosry/GraphAmbiCardio#v0.2.0",
+  "identifier": "https://github.com/santosry/GraphAmbiCardio#v0.3.0",
   "name": "GraphAmbiCardio",
   "description": "Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e fenótipos de cardiopatias congênitas, integrando literatura, bases biológicas curadas e dados ecológicos de Campos dos Goytacazes (2010-2025).",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "issued": "2026-10-31",
   "modified": "2026-10-31",
   "creator": {
@@ -140,6 +140,38 @@
       "format": "csv",
       "byteSize": 1434,
       "checksum": "sha256:06952c306ddaeff85e30de04059c89704b0fbecad48c4d5443f48b00808371f7"
+    },
+    {
+      "@type": "Distribution",
+      "name": "modelos_exploratorios",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/exploratory_models.csv",
+      "format": "csv",
+      "byteSize": 4701,
+      "checksum": "sha256:49eed86ffca54352c89eb273abcca6b4e28eda40204ea37528ff3908d031df83"
+    },
+    {
+      "@type": "Distribution",
+      "name": "sensibilidade_loo",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sensitivity_leave_one_year_out.csv",
+      "format": "csv",
+      "byteSize": 642,
+      "checksum": "sha256:1906c2ae1efc5277c77f2d3bc1ab875c37c45c7f925434f77caaa28c421f65ce"
+    },
+    {
+      "@type": "Distribution",
+      "name": "correlacao_exposicoes",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/exposure_correlation.csv",
+      "format": "csv",
+      "byteSize": 421,
+      "checksum": "sha256:c8ac52e9c7eda5a3dc81e96f5955c03ae592cd2e2453dd06b2034df0a7162e2b"
+    },
+    {
+      "@type": "Distribution",
+      "name": "vif_exposicoes",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/exposure_vif.csv",
+      "format": "csv",
+      "byteSize": 176,
+      "checksum": "sha256:9a9d0a085128ca2ed58c3aa7aaa78969c45c66a15957545864877b9284cef3f0"
     }
   ],
   "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed.",

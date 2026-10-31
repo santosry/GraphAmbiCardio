@@ -1,6 +1,7 @@
 # environments
 .venv/
 venv/
+renv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -10,6 +11,11 @@ __pycache__/
 data_raw/
 logs/
 *.log
+
+# individual-level health data (never redistributed; generated locally)
+data_processed/sinasc_campos_births.csv
+data_processed/sinasc_campos_with_exposure.csv
+data_processed/sih_campos_chd_admissions.csv
 
 # OS
 .DS_Store

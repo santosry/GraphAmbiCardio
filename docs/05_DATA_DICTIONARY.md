@@ -90,7 +90,10 @@ Hipóteses (`HYPOTHESIS_LINK` e `HYPOTHESIS_CANDIDATE`) no mesmo esquema de evid
 Bundle autocontido do aplicativo Shiny (33 arquivos, ~4 MB), gerado por `scripts/app/01_prepare_data.py`.
 
 ### `outputs/tables/exploratory_models.csv` / `.json`
-Modelos exploratórios ao nível do nascimento, de contagem mensal, de ajuste mútuo e de sensibilidade. Colunas `p_value`, `exposure_1_p` e `exposure_2_p` trazem o p nominal; `q_value`, `exposure_1_q` e `exposure_2_q` trazem o valor ajustado por Benjamini–Hochberg.
+Modelos exploratórios ao nível do nascimento (logístico, Firth, cluster-robusto, ajuste socioeconômico), de contagem mensal, de ajuste mútuo e de sensibilidade. Colunas `p_value`, `exposure_1_p` e `exposure_2_p` trazem o p nominal; `q_value`, `exposure_1_q` e `exposure_2_q` trazem o valor ajustado por Benjamini–Hochberg. `sensitivity_leave_one_year_out.csv` contém p e q por ano excluído.
+
+### `outputs/tables/exposure_correlation.csv` e `exposure_vif.csv`
+Correlações de Pearson e fatores de inflação de variância (VIF) entre as exposições de janela. Usados para justificar por que as exposições são modeladas separadamente (Tmax e Tmin têm r = 0,88).
 
 ### `reports/feasibility_pair_matrix.csv`
 196 rows: exposure × phenotype, PubMed count, volume class, triage counts, mechanistic terms, provisional class and the exact query.
