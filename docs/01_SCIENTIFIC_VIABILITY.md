@@ -168,7 +168,7 @@ A revisão do protocolo acrescentou três variáveis e fortaleceu o eixo princip
 | 7 | Bibliometric volume ≠ evidence strength | Pair matrix used only for feasibility; grades from manual curation |
 | 8 | Reviews are not primary evidence | Graded “indirect” with design `narrative_review` |
 | 9 | CTD/DisGeNET/OMIM not programmatically accessible | Structured layer restricted to HPO, ClinVar, NCBI Gene, Reactome, Enrichr |
-| 10 | SciELO/BVS/CAPES blocked automated access | Documented; Portuguese-language literature not systematically covered |
+| 10 | SciELO search interface and CAPES Portal blocked automated access | SciELO metadata via Crossref and CAPES thesis catalogue were used; Portuguese-language coverage remains partial |
 
 ---
 

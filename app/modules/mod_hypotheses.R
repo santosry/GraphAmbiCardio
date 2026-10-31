@@ -72,11 +72,11 @@ mod_hypotheses_server <- function(id) {
     }, server = FALSE)
 
     output$dl_paths <- downloadHandler(
-      filename = function() paste0("cekp_caminhos_candidatos_", Sys.Date(), ".csv"),
+      filename = function() paste0("graphambicardio_caminhos_candidatos_", Sys.Date(), ".csv"),
       content = function(file) readr::write_csv(candidate_paths, file)
     )
     output$dl_cands <- downloadHandler(
-      filename = function() paste0("cekp_hipoteses_", Sys.Date(), ".csv"),
+      filename = function() paste0("graphambicardio_hipoteses_", Sys.Date(), ".csv"),
       content = function(file) readr::write_csv(hyp_candidates, file)
     )
   })

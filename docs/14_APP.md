@@ -1,14 +1,14 @@
-# 14 — CEKP: aplicativo Shiny
+# 14 — GraphAmbiCardio: aplicativo Shiny
 
-O **CardioEnvironment Knowledge Platform (CEKP)** é a interface interativa do estudo. Ele não substitui a documentação metodológica; é uma ferramenta de exploração, auditoria e geração de perguntas.
+O **GraphAmbiCardio** é a interface interativa do estudo. Ele não substitui a documentação metodológica; é uma ferramenta de exploração, auditoria e geração de perguntas.
 
 ---
 
 ## 0. Site publicado
 
-**https://arbovirosescamposiff.shinyapps.io/cekp/**
+**https://ryansantospaulo.shinyapps.io/graphambicardio/**
 
-Hospedado no shinyapps.io (conta `arbovirosescamposiff`). O plano gratuito suspende a instância após inatividade; a primeira requisição pode levar ~30 s.
+Hospedado no shinyapps.io (conta `ryansantospaulo`). O plano gratuito suspende a instância após inatividade; a primeira requisição pode levar ~30 s.
 
 ## 1. Como executar
 
@@ -58,7 +58,7 @@ python scripts/app/02_fair_metadata.py
 O app é autocontido e pode ser publicado em `shinyapps.io`, Shiny Server ou Posit Connect. Para publicar:
 
 ```r
-rsconnect::deployApp("app", appName = "cekp", account = "arbovirosescamposiff", server = "shinyapps.io")
+rsconnect::deployApp("app", appName = "graphambicardio", account = "ryansantospaulo", server = "shinyapps.io")
 ```
 
 ou `Rscript scripts/deploy/deploy_shinyapps.R`.
@@ -74,5 +74,4 @@ Antes de publicar, verifique:
 - Não é um sistema de apoio à decisão clínica.
 - Não faz inferência causal.
 - Não atualiza automaticamente as bases; a atualização exige rodar o pipeline.
-- A auditoria de dois revisores ainda não foi concluída.
 - O grafo é uma fotografia de 2026-10-31; HPO/ClinVar/Reactome mudam continuamente.

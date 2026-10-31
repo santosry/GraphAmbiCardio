@@ -65,6 +65,29 @@ def logistic(df: pd.DataFrame, exposure: str) -> dict[str, Any]:
         return {"model": "logistic_birth_level", "exposure": exposure, "error": str(exc)}
 
 
+def logistic_two_exposures(df: pd.DataFrame, exp1: str, exp2: str) -> dict[str, Any]:
+    """Mutual-adjustment model for two correlated area-level exposures."""
+    d = df.dropna(subset=[exp1, exp2, "idademae", "year"]).copy()
+    d["y"] = d["is_chd"].astype(int)
+    d["z1"] = _z(d[exp1]); d["z2"] = _z(d[exp2])
+    d["year_c"] = d["year"] - d["year"].mean()
+    d["age_c"] = d["idademae"] - d["idademae"].mean()
+    d["male"] = (d["sexo"] == "1").astype(int)
+    try:
+        m = smf.logit("y ~ z1 + z2 + year_c + age_c + male", data=d).fit(disp=0, maxiter=200)
+        out = {"model": "logistic_two_exposures", "exposure_1": exp1, "exposure_2": exp2,
+               "n": int(len(d)), "n_events": int(d["y"].sum()), "adjustment": "mutual + year + age + sex"}
+        for key, label in (("z1", "exposure_1"), ("z2", "exposure_2")):
+            ci = m.conf_int().loc[key]
+            out[f"{label}_or_per_sd"] = round(float(np.exp(m.params[key])), 3)
+            out[f"{label}_ci95"] = [round(float(np.exp(ci[0])), 3), round(float(np.exp(ci[1])), 3)]
+            out[f"{label}_p"] = round(float(m.pvalues[key]), 4)
+        out["converged"] = bool(m.mle_retvals.get("converged", False))
+        return out
+    except Exception as exc:  # noqa: BLE001
+        return {"model": "logistic_two_exposures", "error": str(exc)}
+
+
 def logistic_season_adjusted(df: pd.DataFrame, exposure: str) -> dict[str, Any]:
     """Sensitivity model adding quarter-of-conception fixed effects."""
     d = df.dropna(subset=[exposure, "idademae", "year", "conception_date_est"]).copy()
@@ -157,8 +180,10 @@ def run(births: pd.DataFrame) -> list[dict[str, Any]]:
         "win_temperature_2m_min_mean",
         "win_heat_days_35_pct",
         "win_relative_humidity_2m_mean_mean",
+        "win_pm25_mean",
     ]
     results = [logistic(births, e) for e in exposures]
+    results.append(logistic_two_exposures(births, "win_pm25_mean", "win_temperature_2m_max_mean"))
     results.append(logistic_season_adjusted(births, "win_temperature_2m_max_mean"))
     results.append(negative_binomial(births))
     # leave-one-year-out sensitivity for the season-adjusted model

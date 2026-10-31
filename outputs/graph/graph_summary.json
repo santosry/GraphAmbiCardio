@@ -1,11 +1,11 @@
 {
   "generated_at": "2026-10-31",
-  "n_nodes": 2237,
-  "n_edges": 4115,
+  "n_nodes": 2238,
+  "n_edges": 4117,
   "nodes_by_type": {
     "Exposure": 17,
     "Gene": 984,
-    "Indicator": 3,
+    "Indicator": 4,
     "Mechanism": 16,
     "Pathway": 248,
     "Period": 1,
@@ -15,7 +15,7 @@
     "Variant": 940
   },
   "edges_by_layer": {
-    "ecological": 3,
+    "ecological": 5,
     "hypothesis": 14,
     "inferred": 4,
     "observed": 54,
@@ -23,7 +23,7 @@
   },
   "edges_by_relation": {
     "ALTERATION_ASSOCIATED_WITH_PHENOTYPE": 150,
-    "ECOLOGICAL_CONTEXT_FOR": 1,
+    "ECOLOGICAL_CONTEXT_FOR": 3,
     "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE": 17,
     "EXPOSURE_MODULATES_MECHANISM": 10,
     "GENE_ASSOCIATED_WITH_PHENOTYPE": 2314,

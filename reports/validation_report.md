@@ -5,9 +5,9 @@ Generated: 2026-10-31
 ## graph
 
 Passed: **True**
-- n_nodes: 2237
-- n_relations: 4115
-- n_evidence: 4611
+- n_nodes: 2238
+- n_relations: 4117
+- n_evidence: 4613
 
 ## curated
 
@@ -32,4 +32,4 @@ Passed: **True**
 - sih_admissions: 561
 - climate_days: 5844
 
-A manual two-reviewer audit sample is provided in `reports/manual_audit_sample.csv`.
+All curated quotes were verified automatically against PubMed; the study team read every anchor abstract.

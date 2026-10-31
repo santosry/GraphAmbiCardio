@@ -1,4 +1,4 @@
-group,n,tmax_window_mean,tmax_window_sd,tmin_window_mean,rh_window_mean,heat_days_35_pct_window,window_coverage_mean
-all,98598,29.045,2.428,20.5,75.986,0.0601,1.0
-chd,59,29.906,2.499,20.876,75.167,0.0848,1.0
-non_chd,98539,29.044,2.428,20.5,75.987,0.06,1.0
+group,n,tmax_window_mean,tmax_window_sd,tmin_window_mean,rh_window_mean,heat_days_35_pct_window,pm25_window_mean,window_coverage_mean
+all,98598,29.045,2.428,20.5,75.986,0.0601,7.732,1.0
+chd,59,29.906,2.499,20.876,75.167,0.0848,7.729,1.0
+non_chd,98539,29.044,2.428,20.5,75.987,0.06,7.732,1.0

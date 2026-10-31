@@ -19,6 +19,8 @@ RESOURCES = [
     ("sinasc_anual", "outputs/tables/sinasc_annual_complete.csv", "Série anual SINASC (microdados + agregados TabNet 2023-2024)"),
     ("sih_anual", "outputs/tables/sih_annual.csv", "Internações SIH/SUS por ano (Q20-Q28, diagnóstico principal)"),
     ("clima_diario", "data_processed/climate_daily_campos.csv", "Série diária ERA5-Land para Campos dos Goytacazes"),
+    ("pm25_anual", "data_processed/pm25_campos_anual.csv", "PM2,5 anual municipal (VIGIAR/MS via pacote vigiar), 2010-2025"),
+    ("pm25_mensal", "data_processed/pm25_campos_mensal.csv", "PM2,5 mensal municipal (VIGIAR/MS via pacote vigiar), 2010-2025"),
     ("caminhos", "outputs/tables/paths_exposure_phenotype.csv", "Caminhos exposição-fenótipo com confiança mínima"),
     ("lacunas", "outputs/tables/gap_analysis.csv", "Lacunas explícitas por exposição, mecanismo e processo"),
     ("candidatos_hipoteses", "outputs/tables/hypothesis_candidates.csv", "Hipóteses por sobreposição gênica (não evidenciais)"),
@@ -54,8 +56,8 @@ for name, rel, desc in RESOURCES:
     })
 
 datapackage = {
-    "name": "graphambicardio-cekp",
-    "title": "CardioEnvironment Knowledge Platform — grafo de conhecimento e dados derivados",
+    "name": "graphambicardio-graphambicardio",
+    "title": "GraphAmbiCardio — grafo de conhecimento e dados derivados",
     "description": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas, com dados locais de Campos dos Goytacazes (RJ) e proveniência por evidência.",
     "version": "0.2.0",
     "created": "2026-10-31",
@@ -81,7 +83,7 @@ dcat = {
     "@context": "https://www.w3.org/ns/dcat#",
     "@type": "Dataset",
     "identifier": "https://github.com/santosry/GraphAmbiCardio#v0.2.0",
-    "name": "CardioEnvironment Knowledge Platform (CEKP)",
+    "name": "GraphAmbiCardio",
     "description": "Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e fenótipos de cardiopatias congênitas, integrando literatura, bases biológicas curadas e dados ecológicos de Campos dos Goytacazes (2010-2025).",
     "version": "0.2.0",
     "issued": "2026-10-31",

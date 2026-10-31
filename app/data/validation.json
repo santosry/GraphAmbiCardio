@@ -1,9 +1,9 @@
 {
   "generated_at": "2026-10-31",
   "graph": {
-    "n_nodes": 2237,
-    "n_relations": 4115,
-    "n_evidence": 4611,
+    "n_nodes": 2238,
+    "n_relations": 4117,
+    "n_evidence": 4613,
     "issues": [],
     "passed": true
   },

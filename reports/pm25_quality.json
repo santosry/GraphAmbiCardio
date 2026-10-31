@@ -1,0 +1,28 @@
+{
+  "source": "VIGIAR / Ministério da Saúde (dashboard público, Power BI)",
+  "package": "vigiar",
+  "package_version": "0.7.2",
+  "filter": "muni == '330100' (Campos dos Goytacazes)",
+  "retrieved_at": "2026-10-31T17:25:21Z",
+  "annual": {
+    "n": 16,
+    "years": [2010, 2025],
+    "min": 6.503,
+    "max": 9.036,
+    "mean": 7.719,
+    "missing_years": []
+  },
+  "monthly": {
+    "n": 192,
+    "years": [2010, 2025],
+    "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "min": 3.829,
+    "max": 13.84,
+    "mean": 7.714
+  },
+  "checksums": {
+    "annual_md5": "e4e8d47c344fe1a0b92dbff656bb2f36",
+    "monthly_md5": "9edbfabd1b5762409f0ba2855e2b4ddd"
+  },
+  "note": "PM2.5 anual/mensal por município; não é monitoramento de estação local. Série de área."
+}

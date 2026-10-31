@@ -4804,6 +4804,16 @@
       "id": "IND:SIH_CHD"
     },
     {
+      "node_id": "IND:PM25_VIGIAR",
+      "label": "PM2.5 anual (VIGIAR/MS)",
+      "type": "Indicator",
+      "subtype": "area_level_air_quality",
+      "identifiers": "",
+      "description": "Série anual de PM2.5 para Campos dos Goytacazes obtida do VIGIAR (Ministério da Saúde) via pacote vigiar; 2010-2025.",
+      "source": "VIGIAR / vigiar",
+      "id": "IND:PM25_VIGIAR"
+    },
+    {
       "node_id": "IND:ERA5_TMAX",
       "label": "ERA5-Land daily maximum temperature (Campos)",
       "type": "Indicator",
@@ -22375,6 +22385,18 @@
     }
   ],
   "edges": [
+    {
+      "relation": "ECOLOGICAL_CONTEXT_FOR",
+      "layer": "ecological",
+      "confidence": 0.575,
+      "grade": "C",
+      "n_evidence": 1,
+      "evidence_tier": "contextual",
+      "references": "VIGIAR",
+      "source": "EXP:PM25",
+      "target": "IND:PM25_VIGIAR",
+      "key": "EDGE:71a9452b046d"
+    },
     {
       "relation": "HYPOTHESIS_CANDIDATE",
       "layer": "hypothesis",
@@ -40530,6 +40552,18 @@
       "source": "IND:SIH_CHD",
       "target": "CHD:ALL",
       "key": "EDGE:510fd86567aa"
+    },
+    {
+      "relation": "ECOLOGICAL_CONTEXT_FOR",
+      "layer": "ecological",
+      "confidence": 0.575,
+      "grade": "C",
+      "n_evidence": 1,
+      "evidence_tier": "contextual",
+      "references": "VIGIAR",
+      "source": "IND:PM25_VIGIAR",
+      "target": "POP:CAMPOS",
+      "key": "EDGE:b114f0f99fee"
     },
     {
       "relation": "ECOLOGICAL_CONTEXT_FOR",

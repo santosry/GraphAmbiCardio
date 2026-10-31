@@ -327,6 +327,15 @@ def local_indicators(evidence: list[dict[str, Any]]) -> list[dict[str, Any]]:
             "source": "SIH/SUS",
         },
         {
+            "node_id": "IND:PM25_VIGIAR",
+            "label": "PM2.5 anual (VIGIAR/MS)",
+            "type": "Indicator",
+            "subtype": "area_level_air_quality",
+            "identifiers": "",
+            "description": "Série anual de PM2.5 para Campos dos Goytacazes obtida do VIGIAR (Ministério da Saúde) via pacote vigiar; 2010-2025.",
+            "source": "VIGIAR / vigiar",
+        },
+        {
             "node_id": "IND:ERA5_TMAX",
             "label": "ERA5-Land daily maximum temperature (Campos)",
             "type": "Indicator",
@@ -354,6 +363,38 @@ def local_indicators(evidence: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 notes="Ecological indicator; see reports for coverage and under-ascertainment.",
             )
         )
+    evidence.append(
+        build.make_evidence(
+            "IND:PM25_VIGIAR", "Indicator", "POP:CAMPOS", "Population",
+            "ECOLOGICAL_CONTEXT_FOR",
+            layer="ecological",
+            evidence_type="structured_database",
+            study_design="ecological",
+            species="human",
+            population_or_model="Campos dos Goytacazes, RJ",
+            context="Série anual de PM2.5 de área (VIGIAR/MS), 2010-2025",
+            reference="VIGIAR",
+            reference_type="Brazilian health information system",
+            source_database="VIGIAR / vigiar",
+            notes="Exposição de área, não individual; usada no painel e nos modelos exploratórios.",
+        )
+    )
+    evidence.append(
+        build.make_evidence(
+            "EXP:PM25", "Exposure", "IND:PM25_VIGIAR", "Indicator",
+            "ECOLOGICAL_CONTEXT_FOR",
+            layer="ecological",
+            evidence_type="structured_database",
+            study_design="ecological",
+            species="human",
+            population_or_model="Campos dos Goytacazes, RJ",
+            context="Ligação entre o nó conceitual PM2.5 e a série local do VIGIAR",
+            reference="VIGIAR",
+            reference_type="Brazilian health information system",
+            source_database="VIGIAR / vigiar",
+            notes="Contexto ecológico; não é uma aresta de efeito.",
+        )
+    )
     evidence.append(
         build.make_evidence(
             "IND:ERA5_TMAX", "Indicator", "POP:CAMPOS", "Population",

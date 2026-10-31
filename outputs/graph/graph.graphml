@@ -4335,6 +4335,15 @@
       <data key="d5">AIHs of residents with primary diagnosis Q20-Q28; not incidence and not unique individuals.</data>
       <data key="d6">SIH/SUS</data>
     </node>
+    <node id="IND:PM25_VIGIAR">
+      <data key="d0">IND:PM25_VIGIAR</data>
+      <data key="d1">PM2.5 anual (VIGIAR/MS)</data>
+      <data key="d2">Indicator</data>
+      <data key="d3">area_level_air_quality</data>
+      <data key="d4" />
+      <data key="d5">Série anual de PM2.5 para Campos dos Goytacazes obtida do VIGIAR (Ministério da Saúde) via pacote vigiar; 2010-2025.</data>
+      <data key="d6">VIGIAR / vigiar</data>
+    </node>
     <node id="IND:ERA5_TMAX">
       <data key="d0">IND:ERA5_TMAX</data>
       <data key="d1">ERA5-Land daily maximum temperature (Campos)</data>
@@ -20148,6 +20157,15 @@
       <data key="d5" />
       <data key="d6">GraphAmbiCardio rule-based mapping</data>
     </node>
+    <edge source="EXP:PM25" target="IND:PM25_VIGIAR" id="EDGE:71a9452b046d">
+      <data key="d7">ECOLOGICAL_CONTEXT_FOR</data>
+      <data key="d8">ecological</data>
+      <data key="d9">0.575</data>
+      <data key="d10">C</data>
+      <data key="d11">1</data>
+      <data key="d12">contextual</data>
+      <data key="d13">VIGIAR</data>
+    </edge>
     <edge source="EXP:PM25" target="CHD:ASD" id="EDGE:b623fe5f79ac">
       <data key="d7">HYPOTHESIS_CANDIDATE</data>
       <data key="d8">hypothesis</data>
@@ -33764,6 +33782,15 @@
       <data key="d11">1</data>
       <data key="d12">contextual</data>
       <data key="d13">SIH/SUS</data>
+    </edge>
+    <edge source="IND:PM25_VIGIAR" target="POP:CAMPOS" id="EDGE:b114f0f99fee">
+      <data key="d7">ECOLOGICAL_CONTEXT_FOR</data>
+      <data key="d8">ecological</data>
+      <data key="d9">0.575</data>
+      <data key="d10">C</data>
+      <data key="d11">1</data>
+      <data key="d12">contextual</data>
+      <data key="d13">VIGIAR</data>
     </edge>
     <edge source="IND:ERA5_TMAX" target="POP:CAMPOS" id="EDGE:bb164b8afaaa">
       <data key="d7">ECOLOGICAL_CONTEXT_FOR</data>

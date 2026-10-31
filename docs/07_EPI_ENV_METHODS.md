@@ -166,7 +166,7 @@ Costs are nominal (no deflation); 2025 is a complete year of processing files at
 | Heat waves (≥3 consecutive days > P90) | **73** |
 | Heat-wave days | **363** |
 
-PM2.5: **no local series**. No monitoring station exists in the municipality, the Open-Meteo air-quality endpoint was unreachable, and satellite/CAMS products require credentials. No proxy was created.
+PM2.5: **municipal series from VIGIAR** (Ministry of Health), obtained with the R package `vigiar` 0.7.2 (annual 2010–2025 and monthly 2010–2025). The series is area-level: annual values ranged 6.50–9.04 µg/m³ (mean 7.72) and monthly values 3.83–13.84 µg/m³. It is not a local monitoring station and cannot represent personal exposure.
 
 ### 3.2 Exposure window
 
@@ -174,11 +174,11 @@ Cardiac organogenesis was defined as **days 21–56 after conception** (weeks 3�
 
 Conception date was estimated as birth date minus gestational age (`SEMAGESTAC`, weeks; categorical midpoint when missing). A complete window was available for **90,008/98,598 births (91.3%)**; where a window existed, climate coverage was **100%**.
 
-| Group | n | Mean Tmax in window | SD | Mean Tmin | RH | Heat days ≥35 °C (proportion) |
+| Group | n | Mean Tmax in window | SD | Mean Tmin | RH | Heat days ≥35 °C (proportion) | PM2.5 window mean |
 |---|---:|---:|---:|---:|---:|---:|
-| All | 98,598 | 29.05 | 2.43 | 20.50 | 76.0 | 6.0% |
-| CHD | 59 | 29.91 | 2.50 | 20.88 | 75.2 | 8.5% |
-| Non-CHD | 98,539 | 29.04 | 2.43 | 20.50 | 76.0 | 6.0% |
+| All | 98,598 | 29.05 | 2.43 | 20.50 | 76.0 | 6.0% | 7.73 |
+| CHD | 59 | 29.91 | 2.50 | 20.88 | 75.2 | 8.5% | 7.73 |
+| Non-CHD | 98,539 | 29.04 | 2.43 | 20.50 | 76.0 | 6.0% | 7.73 |
 
 ---
 
@@ -194,8 +194,11 @@ Outcome: CHD (0/1). Exposure: area-level mean Tmax during the organogenesis wind
 | Tmin window mean | 1.19 | 0.91–1.56 | 0.21 | 1.35 |
 | Heat-day proportion | 1.10 | 0.89–1.36 | 0.37 | 1.06 |
 | Relative humidity | 0.82 | 0.63–1.07 | 0.14 | 0.75 |
+| PM2.5 (VIGIAR) | 0.91 | 0.70–1.18 | 0.47 | 0.89 |
 
 Season-adjusted sensitivity (quarter of conception fixed effects): **OR 1.65 per SD (1.13–2.42), p = 0.010**.
+
+Mutual-adjustment model (PM2.5 + Tmax, year, age, sex): PM2.5 **OR 1.01 per SD (0.77–1.32), p = 0.97**; Tmax **OR 1.30 (0.98–1.74), p = 0.07**. The PM2.5 association is null in this municipality and does not explain the heat signal.
 
 Leave-one-year-out: OR per SD ranged **1.47–1.66**; excluding 2010 moved p to 0.056; no single year changed the direction.
 

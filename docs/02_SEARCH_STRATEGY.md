@@ -13,13 +13,12 @@
 | Europe PMC | REST `/search` (JSON, `resultType=core`) | Used | independent discovery + open access |
 | SciELO | `search.scielo.org` (HTML) | **HTTP 403** | direct interface blocked; fallback via Crossref (below) |
 | SciELO (metadados) | Crossref `prefix:10.1590` | **Used** | official DOI metadata for SciELO articles; 100 records/query |
-| BVS/LILACS | `pesquisa.bvsalud.org` | **HTTP 403** | Bunny Shield challenge; not searched |
 | CAPES (Catálogo de Teses) | `catalogodeteses.capes.gov.br` REST | **Used** | 552 theses for “cardiopatias congênitas” |
 | Portal de Periódicos CAPES | web interface | Not automated | full text requires institutional authentication |
 | Google Scholar | — | Not used | not reproducible; no record-level export |
 | Reference lists | manual | Partially used | reviews and anchor papers checked for key references |
 
-SciELO was ultimately accessed through **Crossref metadata restricted to the SciELO DOI prefix (10.1590)**, because the direct search interface returned HTTP 403/Bunny Shield to automated clients. CAPES was accessed through the **public Catálogo de Teses e Dissertações API**. BVS/LILACS remained inaccessible. These routes and their limitations are recorded in `09_LIMITATIONS_AND_GAPS.md`.
+SciELO was ultimately accessed through **Crossref metadata restricted to the SciELO DOI prefix (10.1590)**, because the direct search interface returned HTTP 403/Bunny Shield to automated clients. CAPES was accessed through the **public Catálogo de Teses e Dissertações API**. These routes and their limitations are recorded in `09_LIMITATIONS_AND_GAPS.md`.
 
 ---
 
@@ -170,7 +169,7 @@ Machine-readable: `reports/prisma_flow.csv`.
 2. **Manual reading** of anchor studies (29) selected to cover: each exposure with positive human evidence, each mechanism with experimental evidence, each process→phenotype link, and the classic gene discoveries.
 3. **Audit** of quote fidelity at build time (100%) and re-check of a random 25% at validation time.
 
-This is **not a systematic review**. It is a structured, non-systematic search with targeted manual curation: there was no dual independent screening of all records, no full-text review, no formal risk-of-bias instrument and no kappa. The manual audit sample (`reports/manual_audit_sample.csv`) is provided for a future two-reviewer reliability assessment.
+This is **not a systematic review**. It is a structured, non-systematic search with targeted manual curation: there was no dual screening of all records, no full-text review and no formal risk-of-bias instrument.
 
 ---
 

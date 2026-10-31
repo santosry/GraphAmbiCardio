@@ -479,6 +479,7 @@ POP:CAMPOS,"Resident population, Campos dos Goytacazes",Population,,IBGE:330100,
 PERIOD:2010-2025,2010-2025,Period,,,Epidemiological study period.,study
 IND:SINASC_CHD,"SINASC CHD cases / 10,000 live births",Indicator,prevalence_at_birth,,Annual CHD cases reported in SINASC for resident live births; severe under-ascertainment documented.,SINASC
 IND:SIH_CHD,SIH CHD admissions (primary diagnosis),Indicator,hospital_admissions,,AIHs of residents with primary diagnosis Q20-Q28; not incidence and not unique individuals.,SIH/SUS
+IND:PM25_VIGIAR,PM2.5 anual (VIGIAR/MS),Indicator,area_level_air_quality,,Série anual de PM2.5 para Campos dos Goytacazes obtida do VIGIAR (Ministério da Saúde) via pacote vigiar; 2010-2025.,VIGIAR / vigiar
 IND:ERA5_TMAX,ERA5-Land daily maximum temperature (Campos),Indicator,area_level_climate,,"Gridded reanalysis for the municipality, 2010-2025.",Open-Meteo / ERA5-Land
 GENE:-,-,Gene,,NCBI:7467,,HPO genes_to_phenotype.txt
 GENE:AARS1,AARS1,Gene,,NCBI:16,,HPO genes_to_phenotype.txt

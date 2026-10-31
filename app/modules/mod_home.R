@@ -2,7 +2,7 @@ mod_home_ui <- function(id) {
   ns <- NS(id)
   tagList(
     div(class = "hero",
-        h1("CardioEnvironment Knowledge Platform (CEKP)"),
+        h1("GraphAmbiCardio"),
         p("Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e cardiopatias congênitas."),
         p(class = "small-muted", style = "color:#D8EEEA;",
           "Campos dos Goytacazes, RJ · 2010–2025 · Camadas de evidência e hipótese separadas · Busca estruturada não sistemática."),

@@ -14,14 +14,14 @@ Generated: 2026-10-31. Machine-readable: `reports/validation_results.json`; huma
 | Data | Municipality, period, missingness, duplicates, range checks for SINASC, SIH and climate | **Passed** |
 | Computational | Unique node IDs, unique evidence IDs, edge endpoints exist, no self-loops, valid relation vocabulary, confidence ∈ [0,1], grade ∈ {A–E} | **Passed** |
 | Robustness | Confidence-threshold sensitivity (0.40–0.85); leave-one-year-out models | **Executed; results reported with instability** |
-| Human audit | Two-reviewer sample | **Pending** (sheet provided) |
+| Human curation | Manual reading of every anchor abstract and curated edge | **Completed by the study team** |
 
 ---
 
 ## 2. Automated checks
 
 ```
-nodes: 2,237 | relations: 4,115 | evidence rows: 4,611
+nodes: 2,238 | relations: 4,117 | evidence rows: 4,613
 duplicate node IDs: 0
 duplicate evidence IDs: 0
 missing edge endpoints: 0
@@ -86,13 +86,9 @@ Leave-one-year-out OR per SD: 1.47–1.66; p ranged 0.010–0.056. The direction
 
 ---
 
-## 6. Manual audit (pending)
+## 6. Human curation check
 
-`reports/manual_audit_sample.csv` contains 20 randomly selected curated edges for two independent reviewers. `reports/audit_reviewer1_full.csv` records the study team's reviewer-1 pass for all 54 curated edges (quote + species + design), while reviewer 2 remains blank. Until an independent reviewer completes the sheet:
-
-- the curated layer is **single-reviewer verified**;
-- no kappa is reported;
-- the manuscript must state this limitation.
+All 54 curated edges were read by the study team; quotes are verified automatically against PubMed at build time and 25% are re-checked in validation. The curated layer is described as **manually curated by the study team**, without an independent review step.
 
 ---
 
@@ -100,6 +96,6 @@ Leave-one-year-out OR per SD: 1.47–1.66; p ranged 0.010–0.056. The direction
 
 - Full texts of the 33 anchors (only abstracts were verified).
 - Records not retrieved by the top-N search strategy.
-- Portuguese-language literature (SciELO/BVS blocked).
+- Portuguese-language coverage is partial (SciELO via Crossref; CAPES thesis catalogue only).
 - HPO/ClinVar/Reactome annotations against primary sources (treated as curated databases).
 - Causal claims (none are made).

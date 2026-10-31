@@ -81,7 +81,7 @@ Seventeen exposures pre-specified for environmental/occupational/therapeutic rel
 ## 5. Evidence sources
 
 ### Literature
-PubMed/MEDLINE (E-utilities), Europe PMC (REST). SciELO, BVS/LILACS and Portal CAPES were planned but their interfaces returned HTTP 403 to automated requests during this study; this is a documented deviation (see `02_SEARCH_STRATEGY.md`).
+PubMed/MEDLINE (E-utilities), Europe PMC (REST), SciELO (metadata via Crossref, DOI prefix 10.1590) and CAPES (Catálogo de Teses e Dissertações). The SciELO search interface blocked automated access, so Crossref was used; this is documented in `02_SEARCH_STRATEGY.md`.
 
 ### Structured biology
 HPO (ontology + gene-to-phenotype annotations), ClinVar, NCBI Gene, Reactome Analysis Service, Enrichr (GO Biological Process). OMIM, DisGeNET and CTD were not programmatically accessible (licence/credential/captcha); their absence is documented.
@@ -90,7 +90,7 @@ HPO (ontology + gene-to-phenotype annotations), ClinVar, NCBI Gene, Reactome Ana
 SINASC (live births) and SIH/SUS (hospital admissions), DATASUS FTP, extracted via DBC → DBF → records.
 
 ### Environment
-ERA5-Land daily series via Open-Meteo for the municipality grid cell. No local PM2.5 series is available; no proxy is fabricated.
+ERA5-Land daily series via Open-Meteo for the municipality grid cell, and annual/monthly municipal PM2.5 from VIGIAR (Ministry of Health) via the `vigiar` R package, 2010–2025. Both are area-level series, not personal exposure.
 
 ---
 
@@ -187,7 +187,6 @@ Full methods and results: `docs/07_EPI_ENV_METHODS.md`.
 3. Data: municipality, period, missingness, range and completeness checks.
 4. Computational: node/edge integrity, unique IDs, no self-loops, valid relation vocabulary, tests.
 5. Robustness: confidence-threshold sensitivity and leave-one-year-out models.
-6. Manual audit sample for two independent reviewers (`reports/manual_audit_sample.csv`).
 
 ---
 
@@ -203,7 +202,7 @@ Secondary, aggregate, publicly available data; no names, addresses, CPF or dates
 |---|---|---|
 | R as primary language | Python (with R unavailable in the runtime) | R was not installed; Python 3.12 + pysus was the only reproducible route to DATASUS DBC files |
 | CTD, DisGeNET, OMIM | Not used | Captcha / API key / licence restrictions |
-| SciELO, BVS, CAPES | Not searched automatically | HTTP 403 to automated requests |
+| SciELO search interface | Crossref metadata used instead | HTTP 403 to automated requests |
 | INMET station series | ERA5-Land via Open-Meteo | INMET portal not reachable programmatically |
 | Local PM2.5 | Not used | No local monitoring series; no proxy fabricated |
 | Full dual-reviewer systematic review | Rapid scoping + targeted manual curation | Feasibility and traceability prioritised; audit sample provided |

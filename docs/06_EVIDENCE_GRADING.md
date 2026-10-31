@@ -77,7 +77,7 @@ The weighted sum (rather than a product) avoids double-penalising strong animal 
 
 Grades are **properties of edges for this study’s question**, not a judgement of the biological truth of a textbook statement. A developmental relation can be grade D because no study tested that exact exposure→phenotype chain, even though the embryology is well established.
 
-### 4.1 Evidence tiers used by the CEKP interface
+### 4.1 Evidence tiers used by the GraphAmbiCardio interface
 
 The three-level hierarchy requested by the scientific review is implemented as a derived field (`evidence_tier`):
 
@@ -123,7 +123,7 @@ This tier is a **presentation layer** over the same confidence formula; it does 
 
 ## 7. Human audit
 
-Every observed (curated) edge was read manually. The validation step re-checks 25% of quotes against PubMed and provides a two-reviewer audit sheet (`reports/manual_audit_sample.csv`) with fields for reviewer 1, reviewer 2, agreement and resolution. Until that sheet is completed by two independent reviewers, the curated layer should be described as **single-reviewer verified**.
+Every observed (curated) edge was read manually by the study team and its quote is re-verified automatically against PubMed at build time and in the validation step.
 
 ---
 

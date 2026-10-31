@@ -1,0 +1,33 @@
+{
+  "retrieved_at": "2026-10-31",
+  "years": [
+    {
+      "year": 2020,
+      "source": "pysus.ftp.sinasc (origin FTP)",
+      "n_files": 0,
+      "files": [],
+      "available": false
+    },
+    {
+      "year": 2023,
+      "source": "pysus.ftp.sinasc (origin FTP)",
+      "n_files": 0,
+      "files": [],
+      "available": false
+    },
+    {
+      "year": 2024,
+      "source": "pysus.ftp.sinasc (origin FTP)",
+      "n_files": 0,
+      "files": [],
+      "available": false
+    },
+    {
+      "year": 2025,
+      "source": "pysus.ftp.sinasc (origin FTP)",
+      "n_files": 0,
+      "files": [],
+      "available": false
+    }
+  ]
+}

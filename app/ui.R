@@ -2,10 +2,10 @@ ui <- bslib::page_navbar(
   id = "main_nav",
   title = div(
     class = "brand",
-    span(class = "brand-mark", "CEKP"),
-    span(class = "brand-text", "CardioEnvironment Knowledge Platform")
+    span(class = "brand-mark", "GAC"),
+    span(class = "brand-text", "GraphAmbiCardio")
   ),
-  window_title = "CEKP — CardioEnvironment Knowledge Platform",
+  window_title = "GraphAmbiCardio — exposições, mecanismos e cardiopatias congênitas",
   theme = bslib::bs_theme(
     version = 5,
     primary = "#0B3C5D",
@@ -22,15 +22,15 @@ ui <- bslib::page_navbar(
     tags$link(rel = "stylesheet", href = "styles.css"),
     tags$script(HTML("
       setTimeout(function(){
-        var el = document.getElementById('cekp-loading');
+        var el = document.getElementById('graphambicardio-loading');
         if (el) el.style.display = 'none';
       }, 2500);
     "))
   ),
   footer = div(
-    class = "cekp-footer",
+    class = "graphambicardio-footer",
     div(class = "container",
-        HTML("CEKP v0.2.0 · Dados de 2026-10-31 · Código MIT · Dados de terceiros mantêm suas licenças · "),
+        HTML("GraphAmbiCardio v0.2.0 · Dados de 2026-10-31 · Código MIT · Dados de terceiros mantêm suas licenças · "),
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "Repositório"),
         " · ",
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio/tree/main/docs", target = "_blank", "Documentação"),
@@ -50,8 +50,8 @@ ui <- bslib::page_navbar(
 
 # Overlay de carregamento (some automaticamente)
 ui <- tagList(
-  div(id = "cekp-loading", div(class = "loader-box",
-    div(class = "loader-title", "Carregando CEKP…"),
+  div(id = "graphambicardio-loading", div(class = "loader-box",
+    div(class = "loader-title", "Carregando GraphAmbiCardio…"),
     div(class = "loader-bar", div(class = "loader-fill"))
   )),
   ui

@@ -3,6 +3,8 @@ logistic_birth_level,win_temperature_2m_max_mean,90008,56,1.301,1.002;1.691,0.04
 logistic_birth_level,win_temperature_2m_min_mean,90008,56,1.192,0.908;1.564,0.2066,3.892,1.35,0.848;2.149,True,year (linear) + maternal age (linear) + infant sex
 logistic_birth_level,win_heat_days_35_pct,90008,56,1.101,0.894;1.356,0.3663,0.062,1.055,0.94;1.184,True,year (linear) + maternal age (linear) + infant sex
 logistic_birth_level,win_relative_humidity_2m_mean_mean,90008,56,0.818,0.626;1.068,0.1394,5.611,0.749,0.511;1.099,True,year (linear) + maternal age (linear) + infant sex
+logistic_birth_level,win_pm25_mean,90008,56,0.908,0.698;1.181,0.4709,1.8,0.887,0.64;1.229,True,year (linear) + maternal age (linear) + infant sex
+logistic_two_exposures,,90008,56,,,,,,,True,mutual + year + age + sex
 logistic_season_adjusted,win_temperature_2m_max_mean,90008,56,1.652,1.129;2.416,0.0097,,2.162,,True,year + maternal age + sex + quarter of conception
 monthly_count_conception_month,area-level mean Tmax during the organogenesis window (monthly mean),,,,,0.1402,3.715,,,,
 leave_one_year_out,win_temperature_2m_max_mean,,,,,,,,,,

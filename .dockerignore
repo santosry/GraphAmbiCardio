@@ -1,0 +1,16 @@
+.git
+.venv
+data_raw
+logs
+__pycache__
+*.log
+tests
+src
+scripts
+R
+docs
+fair
+outputs
+data_processed
+literature
+reports

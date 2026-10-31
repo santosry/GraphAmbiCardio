@@ -8,7 +8,7 @@ This document lists limitations that materially affect interpretation. They are 
 
 1. **Structured non-systematic search, not a systematic review.** 1,449 unique records were triaged automatically; 33 anchor studies were read manually. There was no dual independent screening of all records, no full-text review and no formal risk-of-bias instrument (ROBINS-I, SYRCLE, Cochrane) applied study-by-study. The evidence grades reflect directness and design, not a full risk-of-bias assessment.
 2. **Top-N retrieval.** Domain searches retrieved the top 100 by relevance; pair searches retrieved the top 15. Counts are total hits, but screening was not exhaustive.
-3. **Language and regional bias.** PubMed/Europe PMC over-represent English-language, high-income-country research. SciELO, BVS/LILACS and Portal CAPES returned HTTP 403 or required interactive access; Latin American evidence is missing.
+3. **Language and regional bias.** PubMed/Europe PMC over-represent English-language, high-income-country research. SciELO was accessed through Crossref metadata (the direct search interface returned HTTP 403) and CAPES through its thesis catalogue; Latin American journal coverage remains partial.
 4. **Query contamination.** Automated triage over-detects “human” studies (any mention of children/patients) and mechanism terms. The pair matrix is therefore a **feasibility screen**, not an evidence map.
 5. **Publication and reporting bias.** Positive associations are more likely published; phenotype-specific subgroup findings are often reported without correction for multiple comparisons (e.g. alcohol → d-TGA in a meta-analysis with a null overall effect).
 6. **Healthcare-access confounding in human studies.** Associations may reflect diagnosis/access rather than aetiology, especially for mild phenotypes (small VSD, ASD).
@@ -43,7 +43,7 @@ This document lists limitations that materially affect interpretation. They are 
 
 ## 4. Environmental exposure
 
-1. **No local PM2.5 series.** Air-pollution edges are literature-only; no local air-pollution analysis was possible. No proxy was fabricated.
+1. **PM2.5 is an area-level series, not a local monitor.** The VIGIAR annual/monthly series (via `vigiar`) is available for 2010–2025, but it is a municipal estimate and cannot represent street-level, indoor or personal exposure.
 2. **Reanalysis ≠ station.** ERA5-Land is a ~9 km grid cell; it does not represent street-level or indoor exposure, urban heat islands, or the full municipality.
 3. **Ecological exposure.** All births in the same window receive the same exposure value; this is not personal exposure and cannot support individual risk statements.
 4. **Gestational age misclassification.** Conception dates are estimated from gestational age at birth (and from category midpoints when missing), producing window misclassification.

@@ -44,6 +44,6 @@ Not admitted as established: PM2.5→VSD, pesticides→CHD, solvents→CHD, any 
 5. Birth month ≠ exposure month → gestational-window estimation.
 6. Area-level climate ≠ personal exposure → ecological design label.
 7. Bibliometric volume ≠ evidence strength → manual curation for grades.
-8. CTD/DisGeNET/OMIM/SciELO/BVS inaccessible → documented exclusions.
+8. CTD/DisGeNET/OMIM inaccessible; SciELO search interface blocked (Crossref used) → documented.
 
 **Apt to advance:** yes, as a provenance and gap-mapping instrument; not as a causal model or as a local aetiological study.

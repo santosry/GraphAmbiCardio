@@ -8,7 +8,7 @@ mod_about_ui <- function(id) {
     layout_columns(
       col_widths = c(6,6),
       card(
-        card_header("Princípios FAIR no CEKP"),
+        card_header("Princípios FAIR no GraphAmbiCardio"),
         card_body(
           tags$dl(
             tags$dt("Findable"), tags$dd("Identificadores persistentes por entidade (PMID, DOI, HPO, CID-10, ClinVar, Reactome, NCBI Gene) e metadados DCAT/Data Package."),
@@ -21,7 +21,7 @@ mod_about_ui <- function(id) {
             tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "datapackage.json", target = "_blank", "Data Package (JSON)"),
             tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "Repositório")
           ),
-          note_box("Lacunas FAIR declaradas: DOI de arquivamento ainda não emitido; releases exatos de HPO/ClinVar/Reactome não pinados; auditoria independente pendente.", "info")
+          note_box("Lacunas FAIR declaradas: releases exatos de HPO/ClinVar/Reactome não estão pinados; o grafo é uma fotografia de 2026-10-31.", "info")
         )
       ),
       card(
@@ -29,7 +29,7 @@ mod_about_ui <- function(id) {
         card_body(
           p(tags$b("Software e dados:")),
           tags$blockquote(style = "font-size:.88rem;",
-            "GraphAmbiCardio study team. CardioEnvironment Knowledge Platform (CEKP), v0.2.0. 2026. ",
+            "GraphAmbiCardio study team. GraphAmbiCardio, v0.2.0. 2026. ",
             tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "https://github.com/santosry/GraphAmbiCardio")
           ),
           p(tags$b("Estudos-âncora:")),

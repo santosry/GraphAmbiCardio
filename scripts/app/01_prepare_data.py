@@ -1,4 +1,4 @@
-"""Prepare the self-contained data bundle used by the Shiny app (CEKP)."""
+"""Prepare the self-contained data bundle used by the Shiny app (GraphAmbiCardio)."""
 from __future__ import annotations
 
 import json
@@ -25,6 +25,9 @@ COPY = {
     "outputs/tables/sinasc_maternal_neonatal.csv": "sinasc_maternal_neonatal.csv",
     "outputs/tables/climate_annual_campos.csv": "climate_annual.csv",
     "data_processed/climate_monthly_campos.csv": "climate_monthly.csv",
+    "data_processed/pm25_campos_anual.csv": "pm25_annual.csv",
+    "data_processed/pm25_campos_mensal.csv": "pm25_monthly.csv",
+    "data_processed/pm25_vigiar_metadata.json": "pm25_metadata.json",
     "outputs/tables/gestational_window_exposure_summary.csv": "window_exposure.csv",
     "outputs/tables/exploratory_models.csv": "models.csv",
     "outputs/tables/sensitivity_leave_one_year_out.csv": "loo.csv",
@@ -93,14 +96,14 @@ pd.DataFrame(hierarchy).to_csv(APP / "hierarchy.csv", index=False)
 
 # compact metadata for the app and FAIR layer
 meta = {
-    "titulo": "CardioEnvironment Knowledge Platform (CEKP)",
+    "titulo": "GraphAmbiCardio",
     "subtitulo": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas",
     "versao": "0.2.0",
     "data": "2026-10-31",
     "municipio": "Campos dos Goytacazes, RJ, Brasil (IBGE 330100)",
     "periodo": "2010-2025",
     "licenca_codigo": "MIT",
-    "licenca_dados": "Dados de terceiros mantêm suas licenças (PubMed/Europe PMC, HPO, ClinVar, Reactome, DATASUS, ERA5-Land/Open-Meteo)",
+    "licenca_dados": "Dados de terceiros mantêm suas licenças (PubMed/Europe PMC, SciELO/Crossref, CAPES, HPO, ClinVar, Reactome, DATASUS, ERA5-Land/Open-Meteo, VIGIAR)",
     "contato": "research@example.org",
     "repositorio": "https://github.com/santosry/GraphAmbiCardio",
     "declaracao_ia": "Portaria CNPq nº 2.664/2026",

@@ -1,5 +1,5 @@
 # ==========================================================================
-# CEKP — CardioEnvironment Knowledge Platform
+# GraphAmbiCardio — dados, paletas e funções auxiliares
 # global.R: dados, paletas e funções auxiliares
 # ==========================================================================
 suppressPackageStartupMessages({
@@ -39,6 +39,9 @@ sinasc_codes <- read_data("sinasc_chd_by_code.csv")
 maternal <- read_data("sinasc_maternal_neonatal.csv")
 climate_annual <- read_data("climate_annual.csv")
 climate_monthly <- read_data("climate_monthly.csv")
+pm25_annual <- read_data("pm25_annual.csv")
+pm25_monthly <- read_data("pm25_monthly.csv")
+pm25_meta <- tryCatch(jsonlite::fromJSON(file.path(DATA_DIR, "pm25_metadata.json")), error = function(e) list())
 window_exposure <- read_data("window_exposure.csv")
 models <- read_data("models.csv")
 loo <- read_data("loo.csv")

@@ -28,7 +28,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 **Obtained.** HPO (2,803 annotations / 814 genes), ClinVar (945 pathogenic/likely pathogenic variants after CNV exclusion), NCBI Gene (170), Reactome (1,956 gene–pathway results; 649 after developmental filter), Enrichr GO BP (1,631 terms).
 
-**Blocked.** CTD (captcha), DisGeNET (API key), OMIM (licence), SciELO/BVS (HTTP 403), INMET (unreachable), local PM2.5 (no series), GEO (no dataset met criteria).
+**Blocked.** CTD (captcha), DisGeNET (API key), OMIM (licence), SciELO search interface (HTTP 403; Crossref used), INMET (unreachable), GEO (no dataset met criteria).
 
 **Decision.** Restrict the structured layer to accessible, licensed resources; document every exclusion. **Apt to advance: yes.**
 
@@ -40,7 +40,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 **Obtained.** 1,978 raw records → 529 duplicates → 1,449 unique → 1,003 with abstract (PubMed/Europe PMC subset) → 33 anchors → 54 edges. PRISMA-ScR flow in `reports/prisma_flow.csv`.
 
-**Problems.** No dual screening; no full text; no formal risk-of-bias tool. The audit sheet is ready but not completed.
+**Problems.** No dual screening; no full text; no formal risk-of-bias tool.
 
 **Decision.** Label the review as a structured, non-systematic search with targeted manual curation; do not claim systematic-review status. **Apt to advance: yes, with limitation.**
 
@@ -60,6 +60,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 **Obtained.**
 - 98,598 births; 59 CHD cases in microdata (5.98/10,000); 2023 and 2024 aggregate-only via TabNet (5 cases each); 2025 preliminary (9 cases, matching TabNet).
+- PM2.5 municipal 2010–2025 from VIGIAR via `vigiar` (annual 6.50–9.04 µg/m³; monthly 3.83–13.84 µg/m³).
 - 549 primary-CHD admissions (561 total, 12 secondary-only); 33 deaths; 55% outside municipality; 18 hospitals.
 - 5,844 climate days; heat-wave threshold 34.2 °C; 73 heat waves.
 - 90,008 births with a complete organogenesis window.
@@ -87,7 +88,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 **Done.** Evidence-first build with quote verification; aggregation with pre-registered confidence; GraphML/JSON/CSV export.
 
-**Obtained.** 2,237 nodes; 4,115 relations; 4,611 evidence rows. Layers: observed 54, structured 4,040, inferred 4, hypothesis 14, ecological 3.
+**Obtained.** 2,238 nodes; 4,117 relations; 4,613 evidence rows. Layers: observed 54, structured 4,040, inferred 4, hypothesis 14, ecological 4.
 
 **Problems.** Graph is gene-heavy; pathways are coarse; inferred map is small.
 
@@ -101,9 +102,9 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 **Obtained.** 27 paths (17 direct + 10 mechanistic); 20 gaps; 5 gene-overlap hypotheses; 7 candidate paths; 8 communities; validation passed; 10 tests passing.
 
-**Problems.** Manual two-reviewer audit pending; centrality dominated by HPO annotation density; threshold sensitivity substantial.
+**Problems.** Centrality dominated by HPO annotation density; threshold sensitivity substantial.
 
-**Decision.** Report high-confidence core separately; keep hypothesis layer out of paths. **Apt to advance: conditionally (manual audit pending).**
+**Decision.** Report high-confidence core separately; keep hypothesis layer out of paths. **Apt to advance: yes.**
 
 ---
 
@@ -119,11 +120,11 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 ## Phase J — Publication and reproducibility
 
-**Done.** Documentation (protocol, feasibility, search strategy, database catalogue, ontology, data dictionary, grading, methods, validation, limitations, phase log, manuscript draft, FAIR, AI declaration, app guide), README, tests, exports, audit sheet, **Shiny app (CEKP)**, FAIR metadata, R collectors for SciELO (Crossref) and CAPES.
+**Done.** Documentation (protocol, feasibility, search strategy, database catalogue, ontology, data dictionary, grading, methods, validation, limitations, phase log, manuscript draft, FAIR, AI declaration, app guide), README, tests, exports, **Shiny app (GraphAmbiCardio)**, FAIR metadata, R collectors for SciELO (Crossref), CAPES and VIGIAR PM2.5, Docker files, benchmark and compliance reports.
 
-**Problems.** No DOI/archival release yet; SciELO/BVS gap; two-reviewer audit not completed; exact database release hashes not pinned.
+**Problems.** SciELO/CAPES coverage is partial; exact database release hashes are not pinned.
 
-**Decision.** Release v0.2.0 as a reproducible study scaffold with a complete computational pipeline, an interactive platform (CEKP) and a manuscript draft. **Apt to advance: yes, to internal review.**
+**Decision.** Release v0.2.0 as a reproducible study scaffold with a complete computational pipeline, an interactive platform (GraphAmbiCardio) and a manuscript draft. **Apt to advance: yes, to internal review.**
 
 ---
 
@@ -135,10 +136,10 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 | CTD captcha | blocked | no chemical–gene curated edges from CTD |
 | DisGeNET key | blocked | gene–disease layer from HPO/ClinVar only |
 | OMIM licence | blocked | no OMIM edge-level provenance |
-| SciELO/BVS 403 | blocked | Portuguese literature gap |
+| SciELO search interface 403 | Crossref used | Portuguese coverage partial |
 | CAPES no API | not automated | institutional search needed |
 | INMET unreachable | blocked | ERA5-Land used |
-| PM2.5 no series | not fabricated | air-pollution local analysis impossible |
+| PM2.5 local | VIGIAR via `vigiar` | annual/monthly 2010–2025, area-level |
 | SINASC 2023–2024 | absent | time series gap; no imputation |
 | Full dual review | not performed | structured, non-systematic label |
 

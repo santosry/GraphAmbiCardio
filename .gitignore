@@ -23,3 +23,8 @@ tmp/
 *.egg-info/
 build/
 dist/
+
+# local credentials (never commit)
+.Renviron
+.env
+rsconnect/

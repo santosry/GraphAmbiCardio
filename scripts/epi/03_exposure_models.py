@@ -15,6 +15,15 @@ def main() -> None:
     log.info("start %s", utc_now())
     births = pd.read_csv("data_processed/sinasc_campos_births.csv")
     daily = pd.read_csv("data_processed/climate_daily_campos.csv")
+    pm = pd.read_csv("data_processed/pm25_campos_mensal.csv")
+    daily["year"] = pd.to_datetime(daily["date"]).dt.year
+    daily["month"] = pd.to_datetime(daily["date"]).dt.month
+    daily = daily.merge(
+        pm.rename(columns={"ano": "year", "mes": "month", "pm25_ug_m3": "pm25"}),
+        on=["year", "month"], how="left"
+    )
+    pm.to_csv("outputs/tables/pm25_monthly_campos.csv", index=False)
+    pd.read_csv("data_processed/pm25_campos_anual.csv").to_csv("outputs/tables/pm25_annual_campos.csv", index=False)
     with_exp = exposure_link.attach(daily, births)
     with_exp.to_csv("data_processed/sinasc_campos_with_exposure.csv", index=False)
     exposure_link.summarise(with_exp)

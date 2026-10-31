@@ -21,7 +21,7 @@ from ..io_utils import get_logger, write_csv, write_json
 
 log = get_logger("exposure_link")
 
-COLS = ["temperature_2m_max", "temperature_2m_mean", "temperature_2m_min", "relative_humidity_2m_mean"]
+COLS = ["temperature_2m_max", "temperature_2m_mean", "temperature_2m_min", "relative_humidity_2m_mean", "pm25"]
 
 
 def _cum(arr: np.ndarray) -> np.ndarray:
@@ -82,6 +82,7 @@ def summarise(births: pd.DataFrame) -> dict[str, Any]:
                 "tmin_window_mean": round(sub["win_temperature_2m_min_mean"].mean(), 3),
                 "rh_window_mean": round(sub["win_relative_humidity_2m_mean_mean"].mean(), 3),
                 "heat_days_35_pct_window": round(sub["win_heat_days_35_pct"].mean(), 4),
+                "pm25_window_mean": round(sub["win_pm25_mean"].mean(), 3),
                 "window_coverage_mean": round(sub["win_covariate_completeness"].mean(), 3),
             }
         )

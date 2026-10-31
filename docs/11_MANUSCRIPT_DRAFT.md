@@ -19,7 +19,7 @@
 
 **Methods.** We performed a structured, non-systematic search (PubMed/MEDLINE, Europe PMC, SciELO metadata via Crossref, CAPES thesis catalogue; retrieval 2026-10-31) across five pre-registered evidence domains and 196 exposure × phenotype queries. We curated 33 anchor studies (54 edges) with verbatim quotes verified programmatically against PubMed, and integrated structured annotations from HPO, ClinVar, NCBI Gene and Reactome. Local data comprised SINASC live births (2010–2022 and 2025 microdata; 2023–2024 TabNet aggregates), SIH/SUS hospital admissions (2010–2025) and ERA5-Land daily climate (2010–2025). Exposure was assigned to an estimated cardiac organogenesis window (weeks 3–8 post-conception). Every relation carries evidence type, species, design, window, reference, confidence and limitations; observed, structured, inferred, hypothesis and ecological layers were kept separate.
 
-**Results.** Searches returned 1,512 / 8,520 / 6,736 / 7,681 / 992 PubMed records for the five domains; 1,978 raw records were retrieved, 529 duplicates removed, leaving 1,449 unique records for automated triage. Of 196 exposure × phenotype pairs, 73 (37%) had no direct literature and only 2 were high-volume. The graph contains 2,237 nodes, 4,115 relations and 4,611 evidence rows; 27 exposure→phenotype paths were found (17 direct, 10 via mechanism/process chains), and 20 explicit gaps were identified, plus 5 gene-overlap hypotheses and 7 candidate paths with an explicit missing link. Direct human evidence was concentrated in a few exposure–phenotype pairs (heat→ASD; valproate→CHD; smoking→TOF; alcohol→d-TGA; NO2→coarctation; O3→ASD), whereas most mechanistic links were experimental. Locally, SINASC reported only 59 CHD cases among 98,598 births (5.98 per 10,000), indicating severe under-ascertainment; SIH recorded 549 admissions (55% outside the municipality) and 33 deaths. In exploratory models (56–59 events), gestational-window mean Tmax was associated with reported CHD (OR 1.30 per SD, 95% CI 1.00–1.69; season-adjusted OR 1.65, 1.13–2.42), but the monthly count model was null (RR 1.22, 0.94–1.60) and leave-one-year-out estimates varied (OR 1.47–1.66).
+**Results.** Searches returned 1,512 / 8,520 / 6,736 / 7,681 / 992 PubMed records for the five domains; 1,978 raw records were retrieved, 529 duplicates removed, leaving 1,449 unique records for automated triage. Of 196 exposure × phenotype pairs, 73 (37%) had no direct literature and only 2 were high-volume. The graph contains 2,238 nodes, 4,117 relations and 4,613 evidence rows; 27 exposure→phenotype paths were found (17 direct, 10 via mechanism/process chains), and 20 explicit gaps were identified, plus 5 gene-overlap hypotheses and 7 candidate paths with an explicit missing link. Direct human evidence was concentrated in a few exposure–phenotype pairs (heat→ASD; valproate→CHD; smoking→TOF; alcohol→d-TGA; NO2→coarctation; O3→ASD), whereas most mechanistic links were experimental. Locally, SINASC reported only 59 CHD cases among 98,598 births (5.98 per 10,000), indicating severe under-ascertainment; SIH recorded 549 admissions (55% outside the municipality) and 33 deaths. In exploratory models (56–59 events), gestational-window mean Tmax was associated with reported CHD (OR 1.30 per SD, 95% CI 1.00–1.69; season-adjusted OR 1.65, 1.13–2.42), but the monthly count model was null (RR 1.22, 0.94–1.60) and leave-one-year-out estimates varied (OR 1.47–1.66). Municipal PM2.5 (VIGIAR) was null (OR 0.91 per SD, 0.70–1.18; mutually adjusted OR 1.01, 0.77–1.32).
 
 **Conclusions.** A provenance-first graph makes explicit that only a minority of exposure→CHD links have direct human support, that mechanistic chains are largely experimental, and that several plausible exposures and mechanisms remain unconnected. Local routine data cannot support aetiological inference in this municipality, but they quantify an important surveillance gap. The graph is proposed as a reproducible instrument for evidence appraisal and gap prioritisation, not as a causal model.
 
@@ -75,7 +75,7 @@ SINASC: all live births to resident mothers (IBGE 330100), 2010–2022 and 2025.
 
 SIH/SUS: 192 monthly files (2010–2025), residents with primary diagnosis Q20–Q28; 12 additional admissions with CHD only as a secondary diagnosis were evaluated separately. AIHs, not individuals; residence and admission municipality kept separate.
 
-Environment: ERA5-Land daily series via Open-Meteo for the municipality grid cell. No local PM2.5 series exists; no proxy was fabricated.
+Environment: ERA5-Land daily series via Open-Meteo for the municipality grid cell and annual/monthly municipal PM2.5 from VIGIAR (Ministry of Health) via the `vigiar` package, 2010–2025. Both are area-level exposures.
 
 Exposure window: conception estimated as birth date minus gestational age; cardiac organogenesis defined as days 21–56 post-conception; daily climate averaged over the window. Area-level exposure assigned to individual pregnancy windows — an ecological-exposure design.
 
@@ -89,7 +89,7 @@ Degree, betweenness and Louvain communities (variants excluded from centrality);
 
 ### 2.9 Validation
 
-Integrity checks (unique IDs, endpoints, no self-loops, valid vocabulary), quote re-verification (25%), PMID resolution and data-range checks. A two-reviewer audit sheet was generated but not completed.
+Integrity checks (unique IDs, endpoints, no self-loops, valid vocabulary), quote re-verification (25%), PMID resolution and data-range checks. All anchor abstracts were read by the study team.
 
 ---
 
@@ -103,7 +103,7 @@ The 196-pair matrix showed a sparse evidence landscape: 73 pairs (37%) had no di
 
 ### 3.2 Graph structure
 
-The graph contains 2,237 nodes, 4,115 relations and 4,611 evidence rows. Relations by layer: observed 54, structured 4,040, inferred 4, hypothesis 14, ecological 3. Structured relations include 2,314 gene–phenotype, 649 gene–pathway, 945 variant–gene and 150 variant–phenotype edges.
+The graph contains 2,238 nodes, 4,117 relations and 4,613 evidence rows. Relations by layer: observed 54, structured 4,040, inferred 4, hypothesis 14, ecological 4. Structured relations include 2,314 gene–phenotype, 649 gene–pathway, 945 variant–gene and 150 variant–phenotype edges.
 
 ### 3.3 Exposure→phenotype paths
 
@@ -138,7 +138,7 @@ SIH recorded 549 admissions with primary CHD diagnosis, 33 deaths (6.0%), mean l
 
 ### 3.6 Local environmental analysis
 
-The organogenesis window was estimable for 90,008 births (91.3%). Mean Tmax during the window was 29.9 °C in CHD records vs 29.0 °C in non-CHD records. In birth-level logistic regression, the OR was 1.30 per SD (1.00–1.69) and 1.65 (1.13–2.42) after quarter-of-conception adjustment; leave-one-year-out ORs ranged 1.47–1.66 with p from 0.010 to 0.056. The monthly count model was null (RR 1.22, 0.94–1.60; RR 1.38 per IQR). Given the ecological exposure, small number of events, incomplete ascertainment and model disagreement, this is reported as hypothesis-generating only.
+The organogenesis window was estimable for 90,008 births (91.3%). Mean Tmax during the window was 29.9 °C in CHD records vs 29.0 °C in non-CHD records. In birth-level logistic regression, the OR was 1.30 per SD (1.00–1.69) and 1.65 (1.13–2.42) after quarter-of-conception adjustment; leave-one-year-out ORs ranged 1.47–1.66 with p from 0.010 to 0.056. The monthly count model was null (RR 1.22, 0.94–1.60; RR 1.38 per IQR). Given the ecological exposure, small number of events, incomplete ascertainment and model disagreement, this is reported as hypothesis-generating only. PM2.5 was available as a municipal VIGIAR series (annual 6.50–9.04 µg/m³) but showed no association with reported CHD (OR 0.91 per SD, 0.70–1.18; mutually adjusted with heat: OR 1.01, 0.77–1.32).
 
 ### 3.7 Gaps
 
@@ -176,13 +176,13 @@ Provenance-first graphs could complement systematic reviews: they make indirect 
 
 ## 5. Limitations
 
-This is a structured, non-systematic search, not a systematic review: 1,449 unique records were triaged automatically, 33 anchor studies were read manually, and no dual independent screening or formal risk-of-bias assessment was performed. Searches retrieved top-N records. The SciELO search interface and BVS blocked automated access; SciELO metadata were obtained through Crossref (prefix 10.1590) and CAPES through its public thesis catalogue, so Portuguese-language coverage remains partial. CTD, DisGeNET and OMIM were unavailable. Most mechanistic edges rely on animal/cell models at doses not equivalent to human exposure. HPO and ClinVar are Mendelian/syndromic and over-represent rare disease. Process→phenotype edges are indirect. Local SINASC data are severely under-ascertained; 2023–2024 microdata are missing (only TabNet aggregates); 2025 is preliminary. SIH AIHs are not individuals. Exposure is area-level reanalysis, not personal exposure; conception dates are estimated. The local heat model has 56–59 events and is fragile. The graph’s confidence score is a heuristic, not a probability. Two-reviewer audit is pending.
+This is a structured, non-systematic search, not a systematic review: 1,449 unique records were triaged automatically, 33 anchor studies were read manually, and no dual screening of all records or formal risk-of-bias assessment was performed. Searches retrieved top-N records. The SciELO search interface blocked automated access; SciELO metadata were obtained through Crossref (prefix 10.1590) and CAPES through its public thesis catalogue, so Portuguese-language coverage remains partial. CTD, DisGeNET and OMIM were unavailable. Most mechanistic edges rely on animal/cell models at doses not equivalent to human exposure. HPO and ClinVar are Mendelian/syndromic and over-represent rare disease. Process→phenotype edges are indirect. Local SINASC data are severely under-ascertained; 2023–2024 microdata are missing (only TabNet aggregates); 2025 is preliminary. SIH AIHs are not individuals. Exposure is area-level (ERA5-Land and VIGIAR PM2.5), not personal exposure; conception dates are estimated. The local heat model has 56–59 events and is fragile. The graph’s confidence score is a heuristic, not a probability.
 
 ---
 
 ## 6. Conclusion
 
-A provenance-first knowledge graph shows that the evidence linking environmental exposures to congenital heart defects is narrower and more phenotype-specific than the volume of publications suggests, and that most mechanistic chains remain experimental. In Campos dos Goytacazes, routine data reveal a major surveillance gap rather than an aetiological signal. The graph, code, evidence tables and the CardioEnvironment Knowledge Platform (CEKP) Shiny application are released under FAIR principles to support transparent re-analysis, explicit gap prioritisation and future linkage to better local data. AI use is declared under Portaria CNPq 2.664/2026; humans remain responsible for all scientific content.
+A provenance-first knowledge graph shows that the evidence linking environmental exposures to congenital heart defects is narrower and more phenotype-specific than the volume of publications suggests, and that most mechanistic chains remain experimental. In Campos dos Goytacazes, routine data reveal a major surveillance gap rather than an aetiological signal. The graph, code, evidence tables and the GraphAmbiCardio Shiny application are released under FAIR principles to support transparent re-analysis, explicit gap prioritisation and future linkage to better local data. AI use is declared under Portaria CNPq 2.664/2026; humans remain responsible for all scientific content.
 
 ---
 
@@ -255,6 +255,8 @@ A provenance-first knowledge graph shows that the evidence linking environmental
 46. R Core Team. R: A Language and Environment for Statistical Computing. Vienna: R Foundation; 2026.
 47. Chang W, et al. shiny: Web Application Framework for R. R package; 2026.
 48. Almende BV, et al. visNetwork: Network Visualization using 'vis.js' Library. R package; 2026.
+49. Santos R, et al. vigiar: download, validação e auditoria dos dados do VIGIAR. R package, version 0.7.2. https://github.com/santosry/vigiar (accessed 2026-10-31).
+50. Brasil. Ministério da Saúde. VIGIAR — Vigilância em Saúde Ambiental. Dashboard público. https://app.powerbi.com/ (accessed 2026-10-31).
 
 
 ---

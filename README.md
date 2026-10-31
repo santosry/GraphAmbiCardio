@@ -1,6 +1,6 @@
-# GraphAmbiCardio / CEKP
+# GraphAmbiCardio
 
-**CardioEnvironment Knowledge Platform** — grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas.
+**GraphAmbiCardio** — grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas.
 **Campos dos Goytacazes, RJ, 2010–2025.**
 
 [![status](https://img.shields.io/badge/status-v0.2.0-blue)]()
@@ -13,12 +13,12 @@
 
 ## 1. O que é o projeto
 
-O CEKP integra cinco camadas:
+O GraphAmbiCardio integra cinco camadas:
 
 1. **Literatura** — PubMed/MEDLINE, Europe PMC, SciELO (metadados via Crossref, prefixo DOI 10.1590) e CAPES (Catálogo de Teses e Dissertações).
 2. **Bases biológicas curadas** — HPO, ClinVar, NCBI Gene, Reactome e Enrichr.
 3. **Dados epidemiológicos locais** — SINASC (nascidos vivos) e SIH/SUS (internações), 2010–2025.
-4. **Exposição ambiental de área** — ERA5-Land via Open-Meteo (sem série local de PM2,5; nenhum proxy foi fabricado).
+4. **Exposição ambiental de área** — ERA5-Land via Open-Meteo para clima e **PM2,5 municipal do VIGIAR/Ministério da Saúde via pacote `vigiar`** (2010–2025). Séries de área, não exposição individual.
 5. **Grafo com proveniência** — cada relação carrega tipo de evidência, espécie, desenho, janela de exposição, referência, confiança, limitações e **nível de evidência** (bem sustentada / plausível experimental / não demonstrada / contextual).
 
 Há duas camadas integradas e **nunca misturadas**:
@@ -47,7 +47,7 @@ Há duas camadas integradas e **nunca misturadas**:
 
 ### Grafo
 
-- **2.237 nós**, **4.115 relações**, **4.611 linhas de evidência**.
+- **2.238 nós**, **4.117 relações**, **4.613 linhas de evidência**.
 - Camadas: **observada 54**, **estruturada 4.040**, **inferida 4**, **hipótese 14**, **ecológica 3**.
 - **27 caminhos exposição→fenótipo** (17 diretos, 10 mecanísticos) e **20 lacunas explícitas**.
 - **5 hipóteses por sobreposição gênica** e **7 caminhos candidatos com elo ausente**.
@@ -58,7 +58,7 @@ Há duas camadas integradas e **nunca misturadas**:
 - SINASC: **98.598 nascimentos** (microdados 2010–2022 e 2025; **2023–2024 apenas agregados do TabNet**). **59 casos** nos microdados (5,98/10.000) — subnotificação grave. TabNet: 5 casos em 2023 e 5 em 2024; 2025 = 9 casos, compatível com os microdados.
 - SIH/SUS: **549 internações** por diagnóstico principal Q20–Q28 (**561 no total**, 12 apenas secundárias), **33 óbitos**, **55% fora do município**, 18 hospitais.
 - Clima: **5.844 dias** ERA5-Land; limiar de onda de calor 34,2 °C; **73 ondas / 363 dias**.
-- Modelo exploratório (56–59 eventos): OR **1,30/SD** (1,00–1,69); ajustado por estação **1,65** (1,13–2,42); modelo mensal **nulo** (RR 1,22; 0,94–1,60). **Não é achado causal.**
+- Modelo exploratório (56–59 eventos): temperatura OR **1,30/SD** (1,00–1,69); ajustado por estação **1,65** (1,13–2,42); modelo mensal **nulo** (RR 1,22; 0,94–1,60). PM2,5 municipal do VIGIAR foi **nulo** (OR 0,91/SD; 0,70–1,18) e permaneceu nulo no ajuste mútuo com temperatura (OR 1,01; 0,77–1,32). **Não é achado causal.**
 
 ### Hierarquia de exposições
 
@@ -71,9 +71,9 @@ Há duas camadas integradas e **nunca misturadas**:
 
 ---
 
-## 3. CEKP: aplicativo Shiny
+## 3. GraphAmbiCardio: aplicativo Shiny
 
-**Site publicado:** **https://arbovirosescamposiff.shinyapps.io/cekp/**
+**Site publicado:** **https://ryansantospaulo.shinyapps.io/graphambicardio/**
 
 O plano gratuito do shinyapps.io coloca o aplicativo em repouso após inatividade; a primeira abertura pode levar ~30 segundos.
 
@@ -95,11 +95,11 @@ Aplicativo em português brasileiro com oito abas:
 
 Publicação: `Rscript scripts/deploy/deploy_shinyapps.R` (requer conta configurada no `rsconnect`).
 
-Detalhes: `docs/14_CEKP_APP.md`.
+Detalhes: `docs/14_APP.md`.
 
 ---
 
-## 4. ReproDutibilidade
+## 4. Reprodutibilidade
 
 ### Requisitos
 
@@ -140,13 +140,33 @@ Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pel
 
 ---
 
-## 5. Estrutura
+## 5. Auditoria, benchmark e conformidade
+
+```bash
+.venv/Scripts/python.exe scripts/validation/01_validate.py   # integridade + citações
+.venv/Scripts/python.exe scripts/benchmark/01_benchmark.py   # tempo/memória
+.venv/Scripts/python.exe scripts/compliance/01_check.py      # higiene, segredos, FAIR, nomes
+.venv/Scripts/python.exe -m pytest -q
+```
+
+Resultados em `reports/validation_report.md`, `reports/benchmark.md` e `reports/compliance_report.md`. A conformidade verifica termos proibidos, segredos, checksums FAIR, ausência de `data_raw/` no git, declaração de IA e bundle do app.
+
+## 6. Docker
+
+```bash
+docker compose up --build
+# http://localhost:3838
+```
+
+`Dockerfile` fixa R 4.6.1 e um snapshot do CRAN; o bundle de dados do app já está incluído. O Docker não estava instalado no ambiente de desenvolvimento, então o build não foi executado localmente — ver `docker/README.md`.
+
+## 7. Estrutura
 
 | Caminho | Conteúdo |
 |---|---|
 | `src/graphambicardio/` | pacote Python (coleta, limpeza, integração, grafo, análise, validação) |
 | `R/collection/` | coletores R para SciELO (Crossref) e CAPES |
-| `app/` | aplicativo Shiny CEKP (PT-BR) e bundle de dados |
+| `app/` | aplicativo Shiny GraphAmbiCardio (PT-BR) e bundle de dados |
 | `docs/` | protocolo, viabilidade, busca, catálogo, ontologia, dicionário, gradação, métodos, validação, limitações, fases, manuscrito, FAIR, IA e app |
 | `fair/` | metadados DCAT e Frictionless Data Package com checksums |
 | `reports/` | matrizes de viabilidade, PRISMA, validação, auditoria, resumos |
@@ -157,30 +177,29 @@ Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pel
 
 ---
 
-## 6. FAIR e uso de IA
+## 8. FAIR e uso de IA
 
 - **Findable/Accessible/Interoperable/Reusable:** identificadores persistentes por entidade, metadados DCAT/Data Package, CSV/JSON/GraphML, proveniência por evidência, licença MIT para código e licenças de terceiros preservadas. Ver `docs/12_FAIR.md` e `fair/`.
 - **Declaração de IA:** em conformidade com a **Portaria CNPq nº 2.664/2026**, em `docs/13_DECLARACAO_IA.md`. A IA apoiou código, triagem e redação; não gerou dados/referências, não decidiu a classificação final e não é autora. Toda citação curada foi verificada contra o PubMed.
-- **Auditoria independente:** amostra pronta em `reports/manual_audit_sample.csv`; ainda não concluída.
+- **Curadoria:** todos os trechos citados foram lidos pela equipe e verificados automaticamente contra o PubMed.
 
 ---
 
-## 7. Limitações principais
+## 9. Limitações principais
 
 - Busca não sistemática; sem triagem dupla de todos os registros nem texto completo.
 - SciELO acessado por metadados Crossref (a interface de busca bloqueou automação); CAPES limitado ao Catálogo de Teses.
 - SINASC com subnotificação grave; 2023–2024 sem microdados (apenas TabNet); 2025 preliminar.
 - SIH: AIH ≠ pessoa; 55% das internações fora do município.
-- Sem série local de PM2,5; exposição climática de área, não individual.
+- Exposição de área (clima e PM2,5 do VIGIAR), não individual; não há monitoramento de estação local.
 - Maioria das cadeias mecanísticas é experimental, em doses não equivalentes às humanas.
 - HPO/ClinVar são orientados a doenças mendelianas/sindrômicas.
-- Auditoria de dois revisores pendente.
 
 Ver `docs/09_LIMITATIONS_AND_GAPS.md`.
 
 ---
 
-## 8. Licença e citação
+## 10. Licença e citação
 
 Código: MIT (`LICENSE`). Dados de terceiros mantêm suas licenças. Citação em `CITATION.cff`.
 Repositório: https://github.com/santosry/GraphAmbiCardio

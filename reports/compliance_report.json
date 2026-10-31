@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-10-31T17:43:33Z",
+  "passed": true,
+  "issues": [],
+  "checks": {
+    "forbidden_strings": {
+      "n_hits": 0,
+      "hits": []
+    },
+    "secrets": {
+      "n_hits": 0,
+      "files": []
+    },
+    "required_files": {
+      "missing": [],
+      "n_required": 18
+    },
+    "fair_checksums": {
+      "n_resources": 12,
+      "bad": []
+    },
+    "git": {
+      "tracked_files": 353,
+      "data_raw_tracked": [],
+      "venv_tracked": []
+    },
+    "non_systematic_label": true,
+    "ai_declaration": true,
+    "pm25_series": true,
+    "pysus_audit": true,
+    "app_bundle": {
+      "missing": []
+    }
+  }
+}

@@ -36,8 +36,6 @@ Legend: **Used** = records in the graph; **Probed** = accessed but not used; **B
 - **Results:** 552 theses/dissertations for “cardiopatias congênitas” (20 retrieved on the first page); 1 for agrotóxicos; 7 for temperatura; 0 for poluição do ar + cardiopatia.
 - **Limitation:** this is the thesis catalogue, **not** the paywalled Portal de Periódicos full-text collection. The Portal requires institutional authentication and was not used.
 
-### 1.5 BVS/LILACS
-- **Status: Blocked.** `pesquisa.bvsalud.org` returned HTTP 403 (Bunny Shield challenge) to automated requests on 2026-10-31. Manual searching is required before publication.
 
 ---
 
@@ -138,10 +136,12 @@ Not fetched in v0.1.0. The birth-level models use SINASC live births as the deno
 - **Licence/terms:** Open-Meteo terms; underlying ERA5 data © Copernicus.
 - **Limitation:** reanalysis grid cell, not a station; ~9 km resolution; no personal exposure.
 
-### 6.3 PM2.5 — **No local series; not fabricated.**
-- No municipal monitoring station; the Open-Meteo air-quality endpoint was unreachable.
-- Candidate future sources: CAMS EAC4 (Copernicus ADS, requires credentials), ACAG V5.GL (NASA Earthdata, requires credentials), satellite AOD.
-- Consequence: local analyses use only meteorological exposures; air-pollution edges remain literature-only.
+### 6.3 PM2.5 — **Used: VIGIAR via `vigiar`.**
+- **Source:** VIGIAR (Vigilância em Saúde Ambiental, Ministério da Saúde), dashboard público Power BI, accessed with the R package `vigiar` 0.7.2 (`R/collection/pm25_vigiar.R`).
+- **Coverage:** annual 2010–2025 (16 values) and monthly 2010–2025 (192 values) for municipality 330100.
+- **Values:** annual 6.50–9.04 µg/m³ (mean 7.72); monthly 3.83–13.84 µg/m³.
+- **Access note:** the Power BI endpoint caps responses at ~30,000 rows; the collector filters server-side by municipality code instead of downloading all of Brazil.
+- **Limitations:** municipal area-level estimate, not a local monitoring station; cannot represent street-level, indoor or personal exposure. The VIGIAR series is used in exploratory ecological models, never as individual exposure.
 
 ---
 
@@ -162,7 +162,7 @@ Not fetched in v0.1.0. The birth-level models use SINASC live births as the deno
 
 ## 8. What was deliberately not used, and why
 
-- **CTD** (captcha), **DisGeNET** (key), **OMIM** (licence), **SciELO/BVS** (403), **INMET** (unreachable), **PM2.5** (no series): access barriers, all documented.
+- **CTD** (captcha), **DisGeNET** (key), **OMIM** (licence), **SciELO search interface** (403), **INMET** (unreachable): access barriers, all documented.
 - **GEO**: no dataset met the stage/species/tissue criteria.
 - **KEGG**: Reactome covered the pathway layer.
 - **ToxCast/PubChem**: exposure classes, not individual chemicals, were the unit of analysis.

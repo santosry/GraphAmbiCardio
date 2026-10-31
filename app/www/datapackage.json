@@ -1,6 +1,6 @@
 {
-  "name": "graphambicardio-cekp",
-  "title": "CardioEnvironment Knowledge Platform — grafo de conhecimento e dados derivados",
+  "name": "graphambicardio-graphambicardio",
+  "title": "GraphAmbiCardio — grafo de conhecimento e dados derivados",
   "description": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas, com dados locais de Campos dos Goytacazes (RJ) e proveniência por evidência.",
   "version": "0.2.0",
   "created": "2026-10-31",
@@ -70,8 +70,8 @@
       "description": "Nós do grafo (exposições, mecanismos, genes, vias, processos, fenótipos)",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 155948,
-      "hash": "sha256:2ffd43009d8419c37235854e8854a502be93c558e04bd8460d585dc36657235b",
+      "bytes": 156159,
+      "hash": "sha256:9bc38af4dc3efb67c08069c01fbe399173178dbc34704b71d1328ac625db37b6",
       "schema": {
         "fields": [
           {
@@ -111,8 +111,8 @@
       "description": "Relações agregadas com camada, confiança, grau e nível de evidência",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 1987840,
-      "hash": "sha256:2c0214b6d0eaf50c10e380c431311e346d252438197a9b3e3e9cee16c57c2108",
+      "bytes": 1988772,
+      "hash": "sha256:42f23b64fae415e229352bc652e82aa35ac22404f6a2756a5c2d082fccb56e1a",
       "schema": {
         "fields": [
           {
@@ -208,8 +208,8 @@
       "description": "Uma linha por evidência, com referência, espécie, desenho, citação e limitações",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 1595394,
-      "hash": "sha256:953d44e34b9211a423a4b114ae74f0bc499e5d821a8dc416fb3b0f68a8da58db",
+      "bytes": 1596230,
+      "hash": "sha256:89f41d50113580f693335e76e40982c269a29b51b2735931bbc55f82a4e42457",
       "schema": {
         "fields": [
           {
@@ -558,6 +558,68 @@
           },
           {
             "name": "diurnal_range",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pm25_anual",
+      "path": "data_processed/pm25_campos_anual.csv",
+      "description": "PM2,5 anual municipal (VIGIAR/MS via pacote vigiar), 2010-2025",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 424,
+      "hash": "sha256:126317ed6ea55a5a31019beb221e890ef86ca4ff2742877f588c82093d0e5fd9",
+      "schema": {
+        "fields": [
+          {
+            "name": "cod_municipio",
+            "type": "int64"
+          },
+          {
+            "name": "uf",
+            "type": "object"
+          },
+          {
+            "name": "ano",
+            "type": "int64"
+          },
+          {
+            "name": "pm25_ug_m3",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pm25_mensal",
+      "path": "data_processed/pm25_campos_mensal.csv",
+      "description": "PM2,5 mensal municipal (VIGIAR/MS via pacote vigiar), 2010-2025",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 5078,
+      "hash": "sha256:1139796c6ec9a9205ad285d89af62797f766c46beafa1cdbd272e061d0a9147d",
+      "schema": {
+        "fields": [
+          {
+            "name": "cod_municipio",
+            "type": "int64"
+          },
+          {
+            "name": "uf",
+            "type": "object"
+          },
+          {
+            "name": "ano",
+            "type": "int64"
+          },
+          {
+            "name": "mes",
+            "type": "int64"
+          },
+          {
+            "name": "pm25_ug_m3",
             "type": "float64"
           }
         ]

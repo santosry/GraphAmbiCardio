@@ -26,6 +26,14 @@ mod_epi_ui <- function(id) {
            card_body(plotlyOutput(ns("heat_plot"), height = "340px")))
     ),
     br(),
+    card(
+      card_header("PM2,5 — série municipal do VIGIAR (Ministério da Saúde)"),
+      card_body(
+        plotlyOutput(ns("pm25_plot"), height = "340px"),
+        htmlOutput(ns("pm25_note"))
+      )
+    ),
+    br(),
     layout_columns(
       col_widths = c(6,6),
       card(card_header("Cobertura e status dos dados SINASC"),
@@ -95,6 +103,28 @@ mod_epi_server <- function(id) {
                   line = list(color = "#B2182B")) %>%
         layout(yaxis = list(title = "Dias"), xaxis = list(title = "Ano", dtick = 1),
                legend = list(orientation = "h"), margin = list(l = 50, r = 20, t = 10, b = 40))
+    })
+
+    output$pm25_plot <- renderPlotly({
+      m <- pm25_monthly %>%
+        mutate(periodo = as.Date(sprintf("%d-%02d-01", ano, mes)))
+      a <- pm25_annual
+      plot_ly() %>%
+        add_trace(data = m, x = ~periodo, y = ~pm25_ug_m3, type = "scatter", mode = "lines",
+                  name = "Mensal", line = list(color = "#9ECAE1", width = 1), opacity = 0.8) %>%
+        add_trace(data = a, x = ~as.Date(sprintf("%d-01-01", ano)), y = ~pm25_ug_m3,
+                  type = "scatter", mode = "lines+markers", name = "Anual",
+                  line = list(color = "#08519C", width = 2.5)) %>%
+        layout(xaxis = list(title = ""), yaxis = list(title = "µg/m³"),
+               legend = list(orientation = "h"), margin = list(l = 50, r = 20, t = 10, b = 40))
+    })
+
+    output$pm25_note <- renderUI({
+      if (length(pm25_meta) == 0) return(div(class = "small-muted", "Metadados de PM2,5 não encontrados."))
+      HTML(sprintf(
+        "<span class='small-muted'>Fonte: %s (pacote vigiar %s), filtro municipal 330100, extração %s. Série de área; não é estação local nem exposição individual.</span>",
+        pm25_meta$source, pm25_meta$package_version, pm25_meta$retrieved_at
+      ))
     })
 
     output$coverage <- renderDT({

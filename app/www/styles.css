@@ -1,39 +1,39 @@
 :root {
-  --cekp-navy: #0B3C5D;
-  --cekp-teal: #1D7874;
-  --cekp-ink: #1F2A36;
-  --cekp-muted: #5C6B7A;
-  --cekp-bg: #F7F9FB;
+  --graphambicardio-navy: #0B3C5D;
+  --graphambicardio-teal: #1D7874;
+  --graphambicardio-ink: #1F2A36;
+  --graphambicardio-muted: #5C6B7A;
+  --graphambicardio-bg: #F7F9FB;
 }
-body { background: var(--cekp-bg); color: var(--cekp-ink); }
+body { background: var(--graphambicardio-bg); color: var(--graphambicardio-ink); }
 .navbar { background: linear-gradient(90deg, #0B3C5D 0%, #123E5C 55%, #1D7874 100%) !important; }
 .navbar .navbar-brand, .navbar .nav-link { color: #FFFFFF !important; }
 .navbar .nav-link.active { background: rgba(255,255,255,.14) !important; border-radius: 6px; }
 .brand { display: flex; align-items: center; gap: .6rem; }
 .brand-mark { background: #FFFFFF; color: #0B3C5D; font-weight: 800; padding: .15rem .5rem; border-radius: 6px; letter-spacing: .5px; }
 .brand-text { font-weight: 600; font-size: 1.02rem; }
-.cekp-footer { background: #0B3C5D; color: #DCE7F0; padding: 1rem 0; margin-top: 2rem; font-size: .85rem; }
-.cekp-footer a { color: #FFFFFF; text-decoration: underline; }
+.graphambicardio-footer { background: #0B3C5D; color: #DCE7F0; padding: 1rem 0; margin-top: 2rem; font-size: .85rem; }
+.graphambicardio-footer a { color: #FFFFFF; text-decoration: underline; }
 .hero { background: linear-gradient(135deg, #0B3C5D 0%, #1D7874 100%); color: #FFFFFF; border-radius: 14px; padding: 2.2rem; margin-bottom: 1.2rem; }
 .hero h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: .4rem; }
 .hero p { color: #E6F2F0; max-width: 900px; margin-bottom: .4rem; }
 .kpi-card { border: 1px solid #E3E9EF; border-radius: 12px; box-shadow: 0 2px 8px rgba(11,60,93,.05); height: 100%; }
-.kpi-title { color: var(--cekp-muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
+.kpi-title { color: var(--graphambicardio-muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
 .kpi-value { font-size: 1.8rem; font-weight: 700; line-height: 1.15; margin: .2rem 0; }
-.kpi-sub { color: var(--cekp-muted); font-size: .8rem; }
+.kpi-sub { color: var(--graphambicardio-muted); font-size: .8rem; }
 .badge-tier { color: #fff; padding: .18rem .55rem; border-radius: 999px; font-size: .74rem; font-weight: 600; white-space: nowrap; }
 .note-info, .note-warning, .note-danger, .note-success { border-radius: 10px; padding: .8rem 1rem; margin: .7rem 0; font-size: .9rem; }
 .note-info { background: #EAF3FA; border-left: 4px solid #2C7FB8; }
 .note-warning { background: #FFF6E5; border-left: 4px solid #E6A100; }
 .note-danger { background: #FDECEA; border-left: 4px solid #B2182B; }
 .note-success { background: #EAF5EA; border-left: 4px solid #1B7837; }
-.card-header { font-weight: 600; color: var(--cekp-navy); }
-.section-title { font-weight: 700; color: var(--cekp-navy); margin-top: 1rem; }
-.small-muted { color: var(--cekp-muted); font-size: .82rem; }
+.card-header { font-weight: 600; color: var(--graphambicardio-navy); }
+.section-title { font-weight: 700; color: var(--graphambicardio-navy); margin-top: 1rem; }
+.small-muted { color: var(--graphambicardio-muted); font-size: .82rem; }
 .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: .35rem; }
-#cekp-loading { position: fixed; inset: 0; background: #F7F9FB; z-index: 9999; display: flex; align-items: center; justify-content: center; }
+#graphambicardio-loading { position: fixed; inset: 0; background: #F7F9FB; z-index: 9999; display: flex; align-items: center; justify-content: center; }
 .loader-box { text-align: center; width: 320px; }
-.loader-title { color: var(--cekp-navy); font-weight: 600; margin-bottom: .8rem; }
+.loader-title { color: var(--graphambicardio-navy); font-weight: 600; margin-bottom: .8rem; }
 .loader-bar { height: 8px; background: #DDE6EE; border-radius: 99px; overflow: hidden; }
 .loader-fill { height: 100%; width: 40%; background: linear-gradient(90deg, #0B3C5D, #1D7874); animation: load 1.2s ease-in-out infinite alternate; }
 @keyframes load { from { transform: translateX(-60%); } to { transform: translateX(180%); } }

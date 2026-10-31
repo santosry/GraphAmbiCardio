@@ -53,7 +53,7 @@ mod_evidence_server <- function(id) {
     }, server = FALSE)
 
     output$download <- downloadHandler(
-      filename = function() paste0("cekp_relacoes_", Sys.Date(), ".csv"),
+      filename = function() paste0("graphambicardio_relacoes_", Sys.Date(), ".csv"),
       content = function(file) readr::write_csv(filtered(), file)
     )
 

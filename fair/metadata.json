@@ -2,7 +2,7 @@
   "@context": "https://www.w3.org/ns/dcat#",
   "@type": "Dataset",
   "identifier": "https://github.com/santosry/GraphAmbiCardio#v0.2.0",
-  "name": "CardioEnvironment Knowledge Platform (CEKP)",
+  "name": "GraphAmbiCardio",
   "description": "Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e fenótipos de cardiopatias congênitas, integrando literatura, bases biológicas curadas e dados ecológicos de Campos dos Goytacazes (2010-2025).",
   "version": "0.2.0",
   "issued": "2026-10-31",
@@ -50,24 +50,24 @@
       "name": "nos_grafo",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/nodes.csv",
       "format": "csv",
-      "byteSize": 155948,
-      "checksum": "sha256:2ffd43009d8419c37235854e8854a502be93c558e04bd8460d585dc36657235b"
+      "byteSize": 156159,
+      "checksum": "sha256:9bc38af4dc3efb67c08069c01fbe399173178dbc34704b71d1328ac625db37b6"
     },
     {
       "@type": "Distribution",
       "name": "relacoes",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/relations.csv",
       "format": "csv",
-      "byteSize": 1987840,
-      "checksum": "sha256:2c0214b6d0eaf50c10e380c431311e346d252438197a9b3e3e9cee16c57c2108"
+      "byteSize": 1988772,
+      "checksum": "sha256:42f23b64fae415e229352bc652e82aa35ac22404f6a2756a5c2d082fccb56e1a"
     },
     {
       "@type": "Distribution",
       "name": "evidencias",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/evidence.csv",
       "format": "csv",
-      "byteSize": 1595394,
-      "checksum": "sha256:953d44e34b9211a423a4b114ae74f0bc499e5d821a8dc416fb3b0f68a8da58db"
+      "byteSize": 1596230,
+      "checksum": "sha256:89f41d50113580f693335e76e40982c269a29b51b2735931bbc55f82a4e42457"
     },
     {
       "@type": "Distribution",
@@ -100,6 +100,22 @@
       "format": "csv",
       "byteSize": 415466,
       "checksum": "sha256:b92e4ecd44eafc2007354ba662c1475aee24a75019c39db64da9a30470130f74"
+    },
+    {
+      "@type": "Distribution",
+      "name": "pm25_anual",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_processed/pm25_campos_anual.csv",
+      "format": "csv",
+      "byteSize": 424,
+      "checksum": "sha256:126317ed6ea55a5a31019beb221e890ef86ca4ff2742877f588c82093d0e5fd9"
+    },
+    {
+      "@type": "Distribution",
+      "name": "pm25_mensal",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_processed/pm25_campos_mensal.csv",
+      "format": "csv",
+      "byteSize": 5078,
+      "checksum": "sha256:1139796c6ec9a9205ad285d89af62797f766c46beafa1cdbd272e061d0a9147d"
     },
     {
       "@type": "Distribution",

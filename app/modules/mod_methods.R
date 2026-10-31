@@ -66,10 +66,9 @@ mod_methods_ui <- function(id) {
             tags$li("Subnotificação grave no SINASC: 59 casos em 98.598 nascimentos (0,6/1.000)."),
             tags$li("2023–2024 sem microdados; usados apenas agregados do TabNet."),
             tags$li("SIH: AIH ≠ pessoa; 55% das internações fora do município."),
-            tags$li("Exposição de área (ERA5-Land), não individual; sem série local de PM2,5."),
+            tags$li("Exposição de área (ERA5-Land para clima; PM2,5 do VIGIAR), não individual."),
             tags$li("Maioria das cadeias mecanísticas é experimental e em doses não equivalentes às humanas."),
             tags$li("Dados de HPO/ClinVar são orientados a doenças mendelianas/sindrômicas."),
-            tags$li("Auditoria independente de dois revisores ainda pendente.")
           )
         )
       )
