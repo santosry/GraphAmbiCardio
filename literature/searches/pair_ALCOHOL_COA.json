@@ -1,0 +1,85 @@
+{
+  "search_id": "pair_ALCOHOL_COA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ethanol\"[MeSH] OR \"alcohol drinking\"[MeSH] OR \"alcohol\"[tiab] OR \"ethanol\"[tiab] OR \"fetal alcohol\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"coarctation of the aorta\"[tiab] OR \"aortic coarctation\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ethanol\"[MeSH Terms] OR \"alcohol drinking\"[MeSH Terms] OR \"alcohol\"[Title/Abstract] OR \"ethanol\"[Title/Abstract] OR \"fetal alcohol\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"coarctation of the aorta\"[Title/Abstract] OR \"aortic coarctation\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 6,
+  "retrieved_n": 6,
+  "studies": [
+    {
+      "pmid": "1574882",
+      "title": "Clues in diagnosing congenital heart disease.",
+      "journal": "The Western journal of medicine",
+      "year": "1992",
+      "first_author": "Moss AJ",
+      "doi": "",
+      "abstract": "A number of practical office and bedside clues to cardiac disease in infants and children have been passed on through the years. They relate to the history, to the inspection and palpation components of the physical examination, and to knowledge of the specific cardiac defects that are likely to be associated with certain clinical syndromes. With the possible exception of coarctation of the aorta, the clues are not diagnostically specific. In many instances, however, they serve to narrow a broad array of diagnostic possibilities to 2 or 3 and, with the aid of other clues and auscultation, they can often be distinguished from one another. When a primary care physician is confronted with a child who has an incidental murmur that is \"probably\" innocent but could be organic, useful clues favoring an organic murmur are a history of congenital heart disease in a first-degree relative; a history of maternal rubella syndrome, alcohol use, or teratogenic drug use during pregnancy; a history of inappropriate sweating; a history of syncope, chest pain, or squatting; maternal diabetes mellitus; premature birth; birth at a high altitude; cyanosis; abnormal pulsations; recurrent bronchiolitis or pneumonia; chronic unexplained hoarseness; asymmetric facies with crying; and a physical appearance suggestive of a clinical syndrome.",
+      "pubtypes": "Journal Article;Review",
+      "mesh_terms": "Child;Child, Preschool;Heart Defects, Congenital;Humans;Infant;Infant, Newborn;Medical History Taking;Physical Examination",
+      "language": "eng"
+    },
+    {
+      "pmid": "8367829",
+      "title": "Risk factors for coarctation of the aorta.",
+      "journal": "Teratology",
+      "year": "1993",
+      "first_author": "Tikkanen J",
+      "doi": "10.1002/tera.1420470608",
+      "abstract": "To test the hypothesis that environmental factors during early pregnancy may cause coarctation of the aorta (CoA), 50 cases of CoA and 756 controls were studied. The cases represented all verified CoAs in Finland during 1982-1983 and controls were randomly selected from all babies born during the same period. Both case and control mothers were interviewed by midwives approximately 3 months after delivery. In these data 18 patients had pure CoA only and the remaining 32 at least one other cardiac anomaly. Three CoA patients had a chromosomal anomaly. The relatives of CoA babies had more congenital anomalies than those of the control babies. Maternal overall exposure to chemicals at work was slightly more prevalent among the CoA group (32.0%) than the control group (26.2%). Maternal exposure to mineral oil products at work during early pregnancy was more common among CoA cases (8.0%) than controls (1.4%) [odds ratio (OR) = 5.9, 95% confidence interval (CI95) = 1.8-19.2]. The risk of CoA was also associated with previous miscarriages (OR = 2.3, CI95 = 1.2-4.4) and twin birth (OR = 16.3, CI95 = 4.0-67) of the child. The risk of CoA was not associated with seasonal variation, maternal smoking, alcohol consumption, or use of deodorants. It is concluded that genetic factors explain only a small fraction of the causes of CoA and that many common environmental exposures during early pregnancy are unlikely to be real risk factors for CoA. However, the power of this study was weak for testing the teratogenicity of specific chemicals.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adult;Aortic Coarctation;Case-Control Studies;Environment;Female;Finland;Humans;Infant;Infant, Newborn;Male;Occupational Exposure;Pregnancy;Risk Factors;Surveys and Questionnaires;Teratogens",
+      "language": "eng"
+    },
+    {
+      "pmid": "6512489",
+      "title": "Investigation of a temporal cluster of left sided congenital heart disease.",
+      "journal": "Journal of epidemiology and community health",
+      "year": "1984",
+      "first_author": "Paneth N",
+      "doi": "10.1136/jech.38.4.340",
+      "abstract": "During October and November 1977, eight newborns with critical congenital heart disease, six of these with left sided lesions, were admitted to a New Jersey newborn unit serving two predominantly rural counties with 9700 annual live births. The six left heart lesions (three cases of hypoplastic left heart, two of interrupted aortic arch, and one of aortic coarctation) represented 30% of all neonatal left sided lesions seen at the unit in the three year period 1976-8. The scan statistic for temporal clustering was significant (p less than 0.05). A case-control study was performed in which an average of four controls were matched to each case. A questionnaire was administered to the mothers of cases and controls concerning occupation, periconceptional and prenatal nutrition, radiation and chemical exposure, use of alcohol and tobacco, medications, immunisations, infections, and other exposures. No statistically significant differences between cases and controls were found on any of these items. Although no aetiology for this cluster of congenital heart anomalies could be found, it is of interest that three temporal clusters of fetuses or newborns with chromosomal trisomies have been reported in the medical literature whose conceptions were roughly contemporaneous with those of the infants in our series. These occurred in Rhode Island/Massachusetts, Maryland, and New York City. A speculative possibility is that these four point epidemics represented exposure to a common teratogenic agent, perhaps influenza B, in the winter of 1976/77 in the northeastern United States.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Aorta, Thoracic;Aortic Coarctation;Female;Heart Defects, Congenital;Heart Ventricles;Humans;Infant, Newborn;Male;New Jersey;Space-Time Clustering",
+      "language": "eng"
+    },
+    {
+      "pmid": "24185815",
+      "title": "Prenatal unilateral cerebellar hypoplasia in a series of 26 cases: significance and implications for prenatal diagnosis.",
+      "journal": "Ultrasound in obstetrics & gynecology : the official journal of the International Society of Ultrasound in Obstetrics and Gynecology",
+      "year": "2014",
+      "first_author": "Massoud M",
+      "doi": "10.1002/uog.13217",
+      "abstract": "OBJECTIVE: To define imaging patterns of unilateral cerebellar hypoplasia (UCH), discuss possible pathophysiological mechanisms and underline the etiology and prognosis associated with these lesions. METHODS: In this retrospective study we reviewed the charts of 26 fetuses diagnosed between 2003 and 2011 with UCH, defined by asymmetrical cerebellar hemispheres with or without decreased transverse cerebellar diameter. The review included analysis of the anatomy of the cerebellar hemispheres, including foliation, borders and parenchymal echogenicity, and of the severity of the hypoplasia. Data from clinical and biological work-up and follow-up were obtained. RESULTS: Our series could be divided into two groups according to whether imaging features changed progressively or remained constant during follow-up. In Group 1 (n = 8), the progression of imaging features, echogenic cerebellar changes and/or hyposignal in T2*-weighted MR images were highly suggestive of ischemic/hemorrhagic insult. In Group 2 (n = 18), imaging features remained constant during follow-up; UCH was associated with abnormal foliation in three proven cases of clastic lesions, a cystic lesion was noted in three cases of PHACE (posterior fossa anomalies, hemangioma, arterial anomalies, cardiac abnormalities/aortic coarctation, eye abnormalities) syndrome and, in the remaining cases, UCH remained unchanged, with no imaging pattern typical of hemorrhage. In 24 cases the infant was liveborn and follow-up was continued in 23, for a mean period of 3 years. Among these, neurological complications were identified in seven (in one of seven (at a mean of 46 months) in Group 1 and in six of 16 (at a mean of 35 months) in Group 2). The surface loss of cerebellar hemisphere was > 50% in 19/24 fetuses and the vermis was clearly normal in appearance in 19/24. Predisposing factors for fetal vascular insult were identified in eight cases: these included maternal alcohol addiction, diabetes mellitus, congenital cytomegalovirus infection and pathological placenta with thrombotic vasculopathy and infarctions. CONCLUSION: UCH is defined as a focal lesion of the cerebellum that may be secondary to hemorrhage and/or ischemic insult, suggesting a clastic origin, particularly when imaging follow-up reveals changes over time. UCH may also be a clue for the prenatal diagnosis of PHACE syndrome. The amount of surface loss of cerebellar hemisphere does not correlate with poor prognosis. UCH with normal vermis is often associated with normal outcome.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Aortic Coarctation;Cerebellum;Child, Preschool;Cranial Fossa, Posterior;Developmental Disabilities;Eye Abnormalities;Female;Fetal Diseases;Gestational Age;Humans;Infant;Magnetic Resonance Imaging;Male;Nervous System Malformations;Pregnancy;Prenatal Diagnosis;Prognosis;Retrospective Studies;Ultrasonography, Prenatal",
+      "language": "eng"
+    },
+    {
+      "pmid": "24727555",
+      "title": "Maternal exposure to criteria air pollutants and congenital heart defects in offspring: results from the national birth defects prevention study.",
+      "journal": "Environmental health perspectives",
+      "year": "2014",
+      "first_author": "Stingone JA",
+      "doi": "10.1289/ehp.1307289",
+      "abstract": "BACKGROUND: Epidemiologic literature suggests that exposure to air pollutants is associated with fetal development. OBJECTIVES: We investigated maternal exposures to air pollutants during weeks 2-8 of pregnancy and their associations with congenital heart defects. METHODS: Mothers from the National Birth Defects Prevention Study, a nine-state case-control study, were assigned 1-week and 7-week averages of daily maximum concentrations of carbon monoxide, nitrogen dioxide, ozone, and sulfur dioxide and 24-hr measurements of fine and coarse particulate matter using the closest air monitor within 50 km to their residence during early pregnancy. Depending on the pollutant, a maximum of 4,632 live-birth controls and 3,328 live-birth, fetal-death, or electively terminated cases had exposure data. Hierarchical regression models, adjusted for maternal demographics and tobacco and alcohol use, were constructed. Principal component analysis was used to assess these relationships in a multipollutant context. RESULTS: Positive associations were observed between exposure to nitrogen dioxide and coarctation of the aorta and pulmonary valve stenosis. Exposure to fine particulate matter was positively associated with hypoplastic left heart syndrome but inversely associated with atrial septal defects. Examining individual exposure-weeks suggested associations between pollutants and defects that were not observed using the 7-week average. Associations between left ventricular outflow tract obstructions and nitrogen dioxide and between hypoplastic left heart syndrome and particulate matter were supported by findings from the multipollutant analyses, although estimates were attenuated at the highest exposure levels. CONCLUSIONS: Using daily maximum pollutant levels and exploring individual exposure-weeks revealed some positive associations between certain pollutants and defects and suggested potential windows of susceptibility during pregnancy.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Air Pollutants;Female;Heart Defects, Congenital;Humans;Maternal Exposure;Nitrogen Dioxide;Ozone;Particulate Matter;Pregnancy;Sulfur Dioxide",
+      "language": "eng"
+    },
+    {
+      "pmid": "42110157",
+      "title": "DNA Methylation and Fetal Programming of Cardiovascular Disease: From Congenital Heart Diseases to Adult Cardiovascular Dysfunction.",
+      "journal": "Reviews in cardiovascular medicine",
+      "year": "2026",
+      "first_author": "Chen Z",
+      "doi": "10.31083/RCM46174",
+      "abstract": "DNA methylation, the most extensively studied epigenetic mechanism, acts as a critical interface between maternal environmental influences and fetal cardiovascular development. During embryogenesis, tightly orchestrated methylation remodeling regulates the transcriptional networks required for cardiogenesis, including chamber septation, valve formation, and myocardial maturation. Disruption of these methylation patterns contributes to congenital heart disease (CHD), with distinct methylation signatures identified in tetralogy of Fallot, double-outlet right ventricle, bicuspid aortic valve, and coarctation of the aorta. Maternal exposures, including smoking, alcohol intake, folic acid status, hypertension, diabetes, and hyperlipidemia, modify fetal DNA methylation in placental, myocardial, and cord blood tissues. These alterations affect key developmental pathways, including Wnt, Notch, and mitogen-activated protein kinase signaling, as well as genes that regulate oxidative stress, thereby increasing the risk of structural defects and predisposing offspring to long-term cardiovascular vulnerability. Epigenetic reprogramming in adverse intrauterine environments has been linked to hypertension, pulmonary vascular disease, atherosclerosis, and ischemia-sensitive phenotypes in later life, supporting a continuum from fetal life to adult cardiovascular dysfunction. Unlike genetic mutations, DNA methylation is dynamic and reversible, highlighting the potential of this modification as a biomarker of early risk and a target for preventive strategies. Optimizing maternal health, ensuring appropriate folate intake, and reducing harmful exposures may help preserve normal methylation landscapes and improve offspring cardiovascular outcomes. Advances in high-resolution epigenomic profiling, including single-cell methylation technologies, now enable delineation of cell-specific trajectories that connect CHD with adult cardiovascular disease and may inform precision interventions aimed at modifying pathogenic epigenetic states. Thus, understanding the role of DNA methylation in fetal programming can clarify the developmental origins of CHD and adult cardiovascular disorders, and lay the foundation for cardiovascular prevention strategies that extend from preconception through the earliest stages of life.",
+      "pubtypes": "Journal Article;Review",
+      "mesh_terms": "",
+      "language": "eng"
+    }
+  ]
+}

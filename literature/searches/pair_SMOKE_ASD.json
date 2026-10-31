@@ -1,0 +1,133 @@
+{
+  "search_id": "pair_SMOKE_ASD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tobacco smoke pollution\"[MeSH] OR \"smoking\"[MeSH] OR \"tobacco smoke\"[tiab] OR \"cigarette smoke\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrial septal defect\"[tiab] OR \"atrial septal defects\"[tiab] OR \"ASD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tobacco smoke pollution\"[MeSH Terms] OR \"smoking\"[MeSH Terms] OR \"tobacco smoke\"[Title/Abstract] OR \"cigarette smoke\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrial septal defect\"[Title/Abstract] OR \"atrial septal defects\"[Title/Abstract] OR \"ASD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 10,
+  "retrieved_n": 10,
+  "studies": [
+    {
+      "pmid": "21357347",
+      "title": "Maternal smoking and congenital heart defects in the Baltimore-Washington Infant Study.",
+      "journal": "Pediatrics",
+      "year": "2011",
+      "first_author": "Alverson CJ",
+      "doi": "10.1542/peds.2010-1399",
+      "abstract": "OBJECTIVE: We investigated associations between maternal cigarette smoking during the first trimester and the risk of congenital heart defects (CHDs) among the infants. METHODS: The Baltimore-Washington Infant Study was the first population-based case-control study of CHDs conducted in the United States. Case and control infants were enrolled during the period 1981-1989. We excluded mothers with overt pregestational diabetes and case mothers whose infants had noncardiac anomalies (with the exception of atrioventricular septal defects with Down syndrome) from the analysis, which resulted in 2525 case and 3435 control infants. Self-reported first-trimester maternal cigarette consumption was ascertained via an in-person interview after delivery. Associations for 26 different groups of CHDs with maternal cigarette consumption were estimated by using logistic regression models. Odds ratios (ORs) corresponded to a 20-cigarette-per-day increase in consumption. RESULTS: We observed statistically significant positive associations between self-reported first-trimester maternal cigarette consumption and the risk of secundum-type atrial septal defects (OR: 1.36 [95% confidence interval (CI): 1.04-1.78]), right ventricular outflow tract defects (OR: 1.32 [95% CI: 1.06-1.65]), pulmonary valve stenosis (OR: 1.35 [95% CI: 1.05-1.74]), truncus arteriosus (OR: 1.90 [95% CI: 1.04-3.45]), and levo-transposition of the great arteries (OR: 1.79 [95% CI: 1.04-3.10]). A suggestive association was observed for atrioventricular septal defects among infants without Down syndrome (OR: 1.50 [95% CI: 0.99-2.29]). CONCLUSIONS: These findings add to the existing body of evidence that implicates first-trimester maternal cigarette smoking as a modest risk factor for select CHD phenotypes.",
+      "pubtypes": "Comparative Study;Journal Article",
+      "mesh_terms": "Baltimore;District of Columbia;Female;Follow-Up Studies;Heart Defects, Congenital;Humans;Incidence;Infant, Newborn;Male;Maternal Exposure;Odds Ratio;Pregnancy;Prognosis;Retrospective Studies;Risk Factors;Smoking",
+      "language": "eng"
+    },
+    {
+      "pmid": "10230836",
+      "title": "Maternal risk factors and major associated defects in infants with Down syndrome.",
+      "journal": "Epidemiology (Cambridge, Mass.)",
+      "year": "1999",
+      "first_author": "Torfs CP",
+      "doi": "",
+      "abstract": "More than 50% of infants with Down syndrome have associated defects that cause considerable morbidity and mortality. We evaluated the hypothesis that the trisomic genome interacts with environmental factors to increase the risk for specific associated defects. We evaluated risk factors present during early pregnancy in a multiracial population of 687 infants with Down syndrome. Mother's cigarette smoking was associated with the grouped cardiac defects [odds ratio (OR)=2.0; 95% confidence interval (CI) = 1.2-3.2]. When adjusted for other cardiac defects and maternal race, the following specific defects were associated with smoking: atrioventricular canal (OR = 2.3; 95% CI = 1.2-4.5), tetralogy of Fallot (OR = 4.6; 95% CI = 1.2-17.0), and atrial septal defects without ventricular septal defect (OR = 2.2; 95% CI = 1.1-4.3). Hirschsprung disease was associated with mother's daily consumption of more than three cups of coffee (OR = 6.02; 95% CI = 1.2-29.7) and with mother's fever (OR = 3.4; 95% CI = 0.7-16.4), but the number of cases was small. Use of alcohol was not associated with any defect. Mother's race, age, parity, income, or education did not confound the associations. Results suggest that environmental factors can modify the occurrence of associated anomalies in the embryo with Down syndrome.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Abnormalities, Multiple;Adult;Alcohol Drinking;California;Case-Control Studies;Coffee;Digestive System Abnormalities;Down Syndrome;Environmental Exposure;Female;Fever;Heart Defects, Congenital;Humans;Infant, Newborn;Population Surveillance;Pregnancy;Pregnancy Complications;Risk Factors;Smoking;Surveys and Questionnaires",
+      "language": "eng"
+    },
+    {
+      "pmid": "10555617",
+      "title": "Maternal smoking and congenital heart defects.",
+      "journal": "European journal of epidemiology",
+      "year": "1999",
+      "first_author": "Källén K",
+      "doi": "10.1023/a:1007671631188",
+      "abstract": "The Swedish Child Cardiology Registry (CCR) and the Swedish Medical Birth Registry (MBR) were used to investigate a possible association between maternal smoking during pregnancy and congenital heart defects. Among 1,413,811 infants born in 1983-1996 with known smoking exposure in early pregnancy, 3384 infants with congenital heart defects were selected (458 term infants with persistent ductus arteriosus (PDA) identified from MBR or CCR, and 2926 infants with other heart defects, identified from CCR). After controlling for year of birth, maternal age, parity, and educational level, a weak, statistically significant association between all heart defects and maternal smoking was found (odds ratio (OR): 1.09; 95% confidence interval (CI): 1.01-1.19). When infants with isolated PDA were removed from the case group the significance disappeared (OR: 1.07; 95% CI: 0.98-1.17). For truncus abnormalities (OR: 1.23; 95% CI: 1.02-1.49), atrial septal defects (OR: 1.63; 95% CI: 1.04-2.57), and PDA (OR: 1.30; 95% CI: 1.05-1.62), a rather strong effect of maternal smoking was indicated. The increased OR for PDA remained when gestational duration and intrauterine growth was also controlled for. Further research based on independent data sets is needed to conclude whether the risk estimates for maternal smoking are true and truly differ between the groups. The classification system used (with 24 classes) is described in enough detail to permit a repetition of the study.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Confounding Factors, Epidemiologic;Ductus Arteriosus, Patent;Female;Gestational Age;Heart Defects, Congenital;Humans;Infant, Newborn;Odds Ratio;Pregnancy;Registries;Risk Factors;Smoking;Sweden",
+      "language": "eng"
+    },
+    {
+      "pmid": "28988253",
+      "title": "Prevalence of congenital heart diseases in children with Down syndrome in Mansoura, Egypt: a retrospective descriptive study.",
+      "journal": "Annals of Saudi medicine",
+      "year": "2017",
+      "first_author": "El-Gilany AH",
+      "doi": "10.5144/0256-4947.2017.386",
+      "abstract": "BACKGROUND: The pattern and risk factors for congenital heart diseases (CHD) in children with Down syndrome (DS) vary over time. OBJECTIVES: To update knowledge of the prevalence, types, trends and associated factors for CHD in children with DS in the Egyptian Delta. DESIGN: A retrospective hospital record-based descriptive study. SETTING: A tertiary care center in Mansoura, Egypt during a period of 14 years from 2003 up to 2016. PATIENTS AND METHODS: We studied children with genetically proven DS. Relevant sociodemographic factors, medical history, clinical examination, karyotype and echocardiographic data were statistically analyzed. MAIN OUTCOME MEASURES: Prevalence, types and risk factors of CHD in DS. RESULTS: The prevalence of overall, isolated and multiple CHD in 1720 children with DS were 36.9%, 29% and 8%, respectively. Isolated defects accounted for 78.4% of all CHD. Ventricular septal defect, atrioventricular septal defect and atrial septal defect were the most frequent isolated defects. There was a downward trend in the prevalence of overall CHD (from 56.2% to 25.0%) and isolated CHD (from 56.2% to 19.8%). The logistic regression model predicted 65.7% of CHD and revealed that passive maternal smoking, lack of folic acid/multivitamin supplementation and parental consanguinity were the independent predictors of CHD in children with DS with adjusted odds ratios of 1.9, 1.8 and 1.9, respectively. CONCLUSION: More than one-third of children with DS have CHD with ventricular septal defect, which is the most common. Avoidance of passive maternal smoking and consanguineous marriage together with maternal folic acid supplementation could contribute to further reduction of CHD in children with DS. LIMITATIONS: Single-center study and retrospective.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adolescent;Child;Child, Preschool;Consanguinity;Down Syndrome;Egypt;Folic Acid;Heart Defects, Congenital;Heart Septal Defects;Heart Septal Defects, Atrial;Heart Septal Defects, Ventricular;Humans;Infant;Logistic Models;Prevalence;Retrospective Studies;Risk Factors;Smoking",
+      "language": "eng"
+    },
+    {
+      "pmid": "25578997",
+      "title": "Risk of congenital heart defects in the offspring of smoking mothers: a population-based study.",
+      "journal": "The Journal of pediatrics",
+      "year": "2015",
+      "first_author": "Sullivan PM",
+      "doi": "10.1016/j.jpeds.2014.11.042",
+      "abstract": "OBJECTIVES: To conduct a population-based study examining the occurrence of congenital heart defects (CHDs) in relation to maternal smoking during the first trimester of pregnancy. STUDY DESIGN: This retrospective case-control study used Washington State birth certificates from 1989 to 2011 and linked hospital discharge International Classification of Diseases, 9th revision, codes to identify singleton nonsyndromic CHD cases and determine maternal prenatal smoking status. We calculated ORs from multivariate logistic regression models to compare maternal first-trimester smoking status (any and daily number of cigarettes) among 14,128 cases, both overall and by phenotype, and 60,938 randomly selected controls frequency matched on birth year. RESULTS: Offspring of mothers reporting cigarette use in the first trimester of pregnancy were more likely to be born with a CHD (aOR 1.16 [1.08-1.24]) independent of demographic characteristics and other prenatal risk factors for CHDs. Maternal smoking was most strongly associated with pulmonary valve anomalies (aOR 1.48 [95% CI: 1.15-1.90]), pulmonary artery anomalies (aOR 1.71 [1.40-2.09]), and isolated atrial septal defects (aOR 1.22 [1.08-1.38]). The association between maternal smoking and CHDs was stronger with increasing number of daily cigarettes and among older (35+ years) mothers compared with younger mothers. CONCLUSIONS: We provide evidence that maternal smoking during pregnancy is a risk factor for select CHD phenotypes. Maternal smoking may account for 1.4% of all CHDs. New findings include a strong dose-dependence of the association and augmented risk in older mothers.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adolescent;Adult;Female;Follow-Up Studies;Heart Defects, Congenital;Humans;Incidence;Infant, Newborn;Male;Maternal Exposure;Mothers;Population Surveillance;Pregnancy;Pregnancy Trimester, First;Prenatal Exposure Delayed Effects;Prevalence;Retrospective Studies;Risk Assessment;Risk Factors;Smoking;Washington;Young Adult",
+      "language": "eng"
+    },
+    {
+      "pmid": "27443814",
+      "title": "Associations between maternal periconceptional exposure to secondhand tobacco smoke and major birth defects.",
+      "journal": "American journal of obstetrics and gynecology",
+      "year": "2016",
+      "first_author": "Hoyt AT",
+      "doi": "10.1016/j.ajog.2016.07.022",
+      "abstract": "BACKGROUND: While associations between secondhand smoke and a few birth defects (namely, oral clefts and neural tube defects) have been noted in the scientific literature, to our knowledge, there is no single or comprehensive source of population-based information on its associations with a range of birth defects among nonsmoking mothers. OBJECTIVE: We utilized data from the National Birth Defects Prevention Study, a large population-based multisite case-control study, to examine associations between maternal reports of periconceptional exposure to secondhand smoke in the household or workplace/school and major birth defects. STUDY DESIGN: The multisite National Birth Defects Prevention Study is the largest case-control study of birth defects to date in the United States. We selected cases from birth defect groups having >100 total cases, as well as all nonmalformed controls (10,200), from delivery years 1997 through 2009; 44 birth defects were examined. After excluding cases and controls from multiple births and whose mothers reported active smoking or pregestational diabetes, we analyzed data on periconceptional secondhand smoke exposure-encompassing the period 1 month prior to conception through the first trimester. For the birth defect craniosynostosis, we additionally examined the effect of exposure in the second and third trimesters as well due to the potential sensitivity to teratogens for this defect throughout pregnancy. Covariates included in all final models of birth defects with ≥5 exposed mothers were study site, previous live births, time between estimated date of delivery and interview date, maternal age at estimated date of delivery, race/ethnicity, education, body mass index, nativity, household income divided by number of people supported by this income, periconceptional alcohol consumption, and folic acid supplementation. For each birth defect examined, we used logistic regression analyses to estimate both crude and adjusted odds ratios and 95% confidence intervals for both isolated and total case groups for various sources of exposure (household only; workplace/school only; household and workplace/school; household or workplace/school). RESULTS: The prevalence of secondhand smoke exposure only across all sources ranged from 12.9-27.8% for cases and 14.5-15.8% for controls. The adjusted odds ratios for any vs no secondhand smoke exposure in the household or workplace/school and isolated birth defects were significantly elevated for neural tube defects (anencephaly: adjusted odds ratio, 1.66; 95% confidence interval, 1.22-2.25; and spina bifida: adjusted odds ratio, 1.49; 95% confidence interval, 1.20-1.86); orofacial clefts (cleft lip without cleft palate: adjusted odds ratio, 1.41; 95% confidence interval, 1.10-1.81; cleft lip with or without cleft palate: adjusted odds ratio, 1.24; 95% confidence interval, 1.05-1.46; cleft palate alone: adjusted odds ratio, 1.31; 95% confidence interval, 1.06-1.63); bilateral renal agenesis (adjusted odds ratio, 1.99; 95% confidence interval, 1.05-3.75); amniotic band syndrome-limb body wall complex (adjusted odds ratio, 1.66; 95% confidence interval, 1.10-2.51); and atrial septal defects, secundum (adjusted odds ratio, 1.37; 95% confidence interval, 1.09-1.72). There were no significant inverse associations observed. CONCLUSION: Additional studies replicating the findings are needed to better understand the moderate positive associations observed between periconceptional secondhand smoke and several birth defects in this analysis. Increased odds ratios resulting from chance (eg, multiple comparisons) or recall bias cannot be ruled out.",
+      "pubtypes": "Journal Article;Multicenter Study",
+      "mesh_terms": "Adult;Case-Control Studies;Congenital Abnormalities;Female;Health Surveys;Humans;Infant, Newborn;Logistic Models;Male;Maternal Exposure;Odds Ratio;Risk Factors;Tobacco Smoke Pollution;United States",
+      "language": "eng"
+    },
+    {
+      "pmid": "30905164",
+      "title": "Parental smoking and the risk of congenital heart defects in offspring: An updated meta-analysis of observational studies.",
+      "journal": "European journal of preventive cardiology",
+      "year": "2020",
+      "first_author": "Zhao L",
+      "doi": "10.1177/2047487319831367",
+      "abstract": "OBJECTIVE: Although previous reviews confirmed maternal active smoking was significantly associated with risk of fetal congenital heart defects (CHDs), association between maternal passive smoking and paternal smoking and risk of CHDs is inconclusive nowadays; furthermore, a complete overview is lacking. A meta-analysis of observational studies was conducted to assess the risk of CHDs associated with maternal active and passive smoking and paternal smoking. METHODS: Seven electronic databases were searched for qualified research up to June 2018. We summarized study characteristics and the summary risk estimates were calculated using either the random-effect model or fixed-effect model. Sensitivity and subgroup analysis were carried out to identify the potential heterogeneity moderators. RESULTS: One hundred and twenty-five studies involving 137,574 CHDs cases in 8,770,837 study participants were included. Overall, maternal active (risk ratio (RR) = 1.25; 95% confidence interval (CI): 1.16-1.34; p < 0.01) and passive (RR = 2.24, 95% CI: 1.81-2.77; p < 0.01) smoking as well as paternal active smoking (RR = 1.74, 95% CI: 1.48-2.06; p < 0.01) were significantly associated with CHDs risk. For specific CHD subtypes, our study showed that maternal active smoking was significantly associated with risk of atrial septal defect (RR = 1.27, 95% CI: 1.02-1.59; p = 0.03) and right ventricular outflow tract obstruction (RR = 1.43, 95% CI: 1.04-1.97; p = 0.03). Relevant heterogeneity moderators have been identified by subgroup analysis. Sensitivity analysis yielded consistent results. CONCLUSION: Maternal active smoking, maternal passive smoking as well as paternal smoking all increased the risk of CHDs in offspring. Preventing parental smoking during peri-pregnancy is a priority for CHDs prevention.",
+      "pubtypes": "Journal Article;Meta-Analysis;Research Support, Non-U.S. Gov't;Review",
+      "mesh_terms": "China;Female;Heart Defects, Congenital;Humans;Incidence;Infant, Newborn;Male;Odds Ratio;Pregnancy;Prenatal Exposure Delayed Effects;Retrospective Studies;Risk Factors;Tobacco Smoke Pollution;Tobacco Smoking",
+      "language": "eng"
+    },
+    {
+      "pmid": "21252599",
+      "title": "Parental cigarette smoking and the risk of congenital heart septal defects.",
+      "journal": "Medicina (Kaunas, Lithuania)",
+      "year": "2010",
+      "first_author": "Kuciene R",
+      "doi": "",
+      "abstract": "UNLABELLED: The objective of this study was to determine the association between parental cigarette smoking and the risk of congenital heart septal defects in Kaunas infant population in 1995-2005. MATERIAL AND METHODS: An epidemiological case-control study was conducted. The study comprised 261 newborns with congenital heart septal defects (cases) and 1122 randomly selected newborns without any defects (controls), born in Kaunas city during 1995-2005. Information on potential risk factors of newborns' health was collected through an interview with parents using standardized questionnaires. Multivariate logistic regression analysis was used to assess the association between parental smoking and septal defects while controlling for possible confounders. RESULTS: According to the validated registry, 371 newborns with congenital heart malformations were born in Kaunas city during 1995-2005; 70.3% of cases had ventricular and/or atrial septal defects. After adjustment for possible confounding factors - maternal education, social status, marital status - a statistically significant relationship was observed between parental smoking and congenital heart septal defects. Parental, maternal, and paternal smoking was significantly associated with a 2.27-fold (adjusted OR=2.27; 95% CI, 1.49-3.46), 2.2-fold (adjusted OR=2.20; 95% CI, 1.01-4.79), and 1.45-fold (adjusted OR=1.45; 95% CI, 1.03-2.03) increased risk of defects if compared with nonsmoking parents. CONCLUSIONS: According to the results of our study, parental smoking was significantly associated with an increased risk of congenital heart septal defects in infants.",
+      "pubtypes": "Comparative Study;Evaluation Study;Journal Article",
+      "mesh_terms": "Case-Control Studies;Education;Female;Health Status;Heart Septal Defects;Humans;Infant, Newborn;Logistic Models;Male;Marital Status;Parents;Pregnancy;Risk Factors;Social Class;Surveys and Questionnaires;Tobacco Smoke Pollution",
+      "language": "eng"
+    },
+    {
+      "pmid": "27126055",
+      "title": "Is maternal smoking during pregnancy associated with an increased risk of congenital heart defects among offspring? A systematic review and meta-analysis of observational studies.",
+      "journal": "The journal of maternal-fetal & neonatal medicine : the official journal of the European Association of Perinatal Medicine, the Federation of Asia and Oceania Perinatal Societies, the International Society of Perinatal Obstetricians",
+      "year": "2017",
+      "first_author": "Zhang D",
+      "doi": "10.1080/14767058.2016.1183640",
+      "abstract": "OBJECTIVE: To investigate the association between maternal smoking during pregnancy and risk of congenital heart defects (CHDs) among offspring. METHODS: PubMed, EMBASE, and Web of Science were searched for eligible studies. The outcomes of interest included risk of any CHD and nine subtypes. We summarized study characteristics and used a random-effects model in meta-analysis, and a two-stage dose-response model was utilized to assess the association between smoking consumption and risk. Statistical heterogeneity was assessed by a chi-squared test of the Cochrane Q statistic and I-squared value. Publication bias was assessed by funnel plots and Egger's test, and trim and fill method was utilized when publication bias existed. RESULTS: Forty-three observational epidemiologic studies were included. The pooled risk ratio (RR) of any CHD was 1.11 (95% CI: 1.04, 1.18), but it exhibited substantial statistical heterogeneity (p < 0.001, I2 = 69.0%). In sensitivity analysis, we observed significant associations for atrial septal defect (ASD) and marginally significant associations for septal defects (SPD). The two-stage dose-response analysis showed evidence to support that higher levels of tobacco smoke was associated with an increased risk of septal defects, particularly for ASD and VSD (ventricular septal defect). CONCLUSION: Our study presents evidence to support the cardiovascular teratogenic effect of maternal smoking during pregnancy, and their offspring may suffer from approximately a 10% relative increase in the risk of CHDs on average.",
+      "pubtypes": "Journal Article;Meta-Analysis;Systematic Review",
+      "mesh_terms": "Chi-Square Distribution;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Observational Studies as Topic;Odds Ratio;Pregnancy;Risk Factors;Smoking",
+      "language": "eng"
+    },
+    {
+      "pmid": "22886364",
+      "title": "Maternal smoking during pregnancy and the risk of congenital heart defects in offspring: a systematic review and metaanalysis.",
+      "journal": "Pediatric cardiology",
+      "year": "2013",
+      "first_author": "Lee LJ",
+      "doi": "10.1007/s00246-012-0470-x",
+      "abstract": "Although a previous metaanalysis indicated that maternal smoking during pregnancy increased the risk of congenital heart defects (CHD) in offspring, the effect of smoking on individual CHD subtypes was not determined. Because CHDs are anatomically, clinically, epidemiologically, and developmentally heterogeneous, the authors conducted a systematic review and metaanalysis of the association between maternal smoking during pregnancy and the risk of CHDs, including CHD subtypes among offspring. Two types of summary relative risk (RR) estimates (any smoking vs no smoking and increasing categories of smoking, i.e., light, medium, and heavy) were calculated for CHDs as a group and for a number of CHD subtypes using both fixed- and random-effects models. Random effects estimates were reported if there was evidence of heterogeneity among the studies. Consistent with the previous metaanalysis, the authors observed a positive association between maternal smoking during pregnancy and the risk of CHDs as a group (RR, 1.11; 95 % confidence interval [CI], 1.02-1.21; number of cases [n] = 18,282). Additionally, women who smoked during pregnancy were more likely to have a child with 12 (71 %) of 17 CHD subtypes analyzed compared with women who did not smoke. The highest risk was for septal defects as a group (RR, 1.44; 95 % CI, 1.16-1.79; n = 2977). The evidence of dose response was observed for septal defects as a group, atrial septal defects, and atrioventricular septal defects. This systematic review and metaanalysis suggests that maternal smoking is modestly associated with an increased risk of CHDs and some CHD subtypes.",
+      "pubtypes": "Journal Article;Meta-Analysis;Research Support, Non-U.S. Gov't;Systematic Review",
+      "mesh_terms": "Female;Global Health;Heart Defects, Congenital;Humans;Incidence;Infant, Newborn;Maternal Exposure;Pregnancy;Prenatal Exposure Delayed Effects;Risk Factors;Smoking",
+      "language": "eng"
+    }
+  ]
+}

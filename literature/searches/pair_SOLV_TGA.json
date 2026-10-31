@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_SOLV_TGA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"solvents\"[MeSH] OR \"trichloroethylene\"[MeSH] OR \"benzene\"[MeSH] OR \"organic solvent*\"[tiab] OR \"trichloroethylene\"[tiab] OR \"benzene exposure\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"transposition of the great arteries\"[tiab] OR \"transposition of the great vessels\"[tiab] OR \"D-TGA\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"solvents\"[MeSH Terms] OR \"trichloroethylene\"[MeSH Terms] OR \"benzene\"[MeSH Terms] OR \"organic solvent*\"[Title/Abstract] OR \"trichloroethylene\"[Title/Abstract] OR \"benzene exposure\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"transposition of the great arteries\"[Title/Abstract] OR \"transposition of the great vessels\"[Title/Abstract] OR \"D-TGA\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "22811060",
+      "title": "Association between maternal occupational exposure to organic solvents and congenital heart defects, National Birth Defects Prevention Study, 1997-2002.",
+      "journal": "Occupational and environmental medicine",
+      "year": "2012",
+      "first_author": "Gilboa SM",
+      "doi": "10.1136/oemed-2011-100536",
+      "abstract": "OBJECTIVE: To examine the relation between congenital heart defects (CHDs) in offspring and estimated maternal occupational exposure to chlorinated solvents, aromatic solvents and Stoddard solvent during the period from 1 month before conception through the first trimester. METHODS: The study population included mothers of infants with simple isolated CHDs and mothers of control infants who delivered from 1997 through 2002 and participated in the National Birth Defects Prevention Study. Two methods to assess occupational solvent exposure were employed: an expert consensus-based approach and a literature-based approach. Multiple logistic regression was used to calculate adjusted ORs and 95% CIs for the association between solvent classes and CHDs. RESULTS: 2951 control mothers and 2047 CHD case mothers were included. Using the consensus-based approach, associations were observed for exposure to any solvent and any chlorinated solvent with perimembranous ventricular septal defects (OR 1.6, 95% CI 1.0 to 2.6 and OR 1.7, 95% CI 1.0 to 2.8, respectively). Using the literature-based approach, associations were observed for: any solvent exposure with aortic stenosis (OR 2.1, 95% CI 1.1 to 4.1) and Stoddard solvent exposure with d-transposition of the great arteries (OR 2.0, 95% CI 1.0 to 4.2), right ventricular outflow tract obstruction defects (OR 1.9, 95% CI 1.1 to 3.3) and pulmonary valve stenosis (OR 2.1, 95% CI 1.1 to 3.8). CONCLUSIONS: The authors found evidence of associations between occupational exposure to solvents and several types of CHDs. These results should be interpreted in light of the potential for misclassification of exposure.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Adolescent;Adult;Aortic Valve Stenosis;Case-Control Studies;Female;Heart Defects, Congenital;Heart Septal Defects, Ventricular;Humans;Hydrocarbons;Hydrocarbons, Chlorinated;Infant, Newborn;Logistic Models;Maternal Exposure;Occupational Exposure;Odds Ratio;Pregnancy;Pregnancy Complications;Pulmonary Valve Stenosis;Risk Factors;Solvents;Transposition of Great Vessels;Ventricular Outflow Obstruction;Young Adult",
+      "language": "eng"
+    }
+  ]
+}

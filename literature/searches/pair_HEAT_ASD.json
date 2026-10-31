@@ -1,0 +1,97 @@
+{
+  "search_id": "pair_HEAT_ASD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"hot temperature\"[MeSH] OR \"hyperthermia\"[MeSH] OR \"hyperthermia\"[tiab] OR \"heat wave*\"[tiab] OR \"high temperature\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrial septal defect\"[tiab] OR \"atrial septal defects\"[tiab] OR \"ASD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"hot temperature\"[MeSH Terms] OR \"hyperthermia\"[MeSH Terms] OR \"hyperthermia\"[Title/Abstract] OR \"heat wave*\"[Title/Abstract] OR \"high temperature\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrial septal defect\"[Title/Abstract] OR \"atrial septal defects\"[Title/Abstract] OR \"ASD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 7,
+  "retrieved_n": 7,
+  "studies": [
+    {
+      "pmid": "34063033",
+      "title": "Impacts of High Environmental Temperatures on Congenital Anomalies: A Systematic Review.",
+      "journal": "International journal of environmental research and public health",
+      "year": "2021",
+      "first_author": "Haghighi MM",
+      "doi": "10.3390/ijerph18094910",
+      "abstract": "Links between heat exposure and congenital anomalies have not been explored in detail despite animal data and other strands of evidence that indicate such links are likely. We reviewed articles on heat and congenital anomalies from PubMed and Web of Science, screening 14,880 titles and abstracts in duplicate for articles on environmental heat exposure during pregnancy and congenital anomalies. Thirteen studies were included. Most studies were in North America (8) or the Middle East (3). Methodological diversity was considerable, including in temperature measurement, gestational windows of exposure, and range of defects studied. Associations were detected between heat exposure and congenital cardiac anomalies in three of six studies, with point estimates highest for atrial septal defects. Two studies with null findings used self-reported temperature exposures. Hypospadias, congenital cataracts, renal agenesis/hypoplasia, spina bifida, and craniofacial defects were also linked with heat exposure. Effects generally increased with duration and intensity of heat exposure. However, some neural tube defects, gastroschisis, anopthalmia/microphthalmia and congenital hypothyroidism were less frequent at higher temperatures. While findings are heterogenous, the evidence raises important concerns about heat exposure and birth defects. Some heterogeneity may be explained by biases in reproductive epidemiology. Pooled analyses of heat impacts using registers of congenital anomalies are a high priority.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't;Systematic Review",
+      "mesh_terms": "Congenital Abnormalities;Female;Heart Defects, Congenital;Hot Temperature;Humans;Middle East;North America;Pregnancy;Temperature",
+      "language": "eng"
+    },
+    {
+      "pmid": "23739216",
+      "title": "Ambient temperature and congenital heart defects.",
+      "journal": "Human reproduction (Oxford, England)",
+      "year": "2013",
+      "first_author": "Agay-Shay K",
+      "doi": "10.1093/humrep/det244",
+      "abstract": "STUDY QUESTION: Does maternal exposure during pregnancy to higher ambient temperature increase the risk of congenital heart defects (CHDs)? SUMMARY ANSWER: Significant associations were found between maternal exposure during pregnancy to higher ambient temperature and CHDs risk especially during the cold season. WHAT IS KNOWN ALREADY: From rodents to non-human primates, a teratogenic effect of hyperthermic insult has been demonstrated. There are fewer data regarding the effect on the human fetus and specifically the association between maternal exposures during pregnancy to higher ambient temperature and CHDs. STUDY DESIGN, SIZE, DURATION: This population registry-based cohort study included 135 527 live and stillbirths in the Tel-Aviv region of Israel in 2000-2006. PARTICIPANTS/MATERIALS, SETTING, METHODS: Two clinical diagnostic groups of isolated cardiac defects (atrial septal defects and ventricular septal defects: n = 542 and 481, respectively) and one group of multiple cardiac defects (defined by the presence of two or more cardiac malformations, n = 607) were studied. Temperature measurements were constructed from ambient stations and used to assess the impact of maternal exposure to average ambient temperature and extreme heat events (daily average temperature above the 90th percentile) during Weeks 3-8 of pregnancy on risk of CHDs. Logistic models, adjusted for sociodemographic covariates, were used to evaluate the associations between temperature and CHDs. MAIN RESULTS AND THE ROLE OF CHANCE: Overall, we found no significant associations between ambient temperature and CHDs throughout the year, with one exception for multiple CHDs. After stratifying by season of conception, continuous exposure to average ambient temperature and maximum peak temperature (1°C increase) during the cold season increased the risk for multiple CHDs [odds ratio (OR) 1.05, 95% confidence interval (CI): 1.00, 1.10 and OR 1.03, 95% CI: 1.01, 1.05, respectively]. A 1-day increase in extreme heat events increased the risk for multiple CHDs (OR 1.13, 95% CI: 1.06, 1.21) and also for isolated atrial septal defects (OR 1.10, 95% CI: 1.02, 1.19). LIMITATIONS, REASONS FOR CAUTION: Information both on CHD cases and on ambient temperature was based on registries and it is possible that this may cause some misclassification. In urban areas, pregnant women may be exposed to higher temperatures than recorded by ambient monitors because of the 'heat island effect'. Furthermore, data for the amount of time spent indoors were unavailable and this could have resulted in exposure misclassification. WIDER IMPLICATIONS OF THE FINDINGS: The findings are important within the context of global climate change, which may have implications for public health in countries with mild winters and hot summers. STUDY FUNDING/COMPETING INTEREST(S): This study was supported by the Israeli Ministry of Environmental Protection (research grant-7-2-7) and by the Environment and Health Fund (PhD Fellowship Program). There are no competing interests.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Female;Heart Defects, Congenital;Humans;Odds Ratio;Pregnancy;Pregnancy Trimester, First;Prenatal Exposure Delayed Effects;Retrospective Studies;Risk Assessment;Temperature",
+      "language": "eng"
+    },
+    {
+      "pmid": "27494594",
+      "title": "Risk of Congenital Heart Defects after Ambient Heat Exposure Early in Pregnancy.",
+      "journal": "Environmental health perspectives",
+      "year": "2017",
+      "first_author": "Auger N",
+      "doi": "10.1289/EHP171",
+      "abstract": "BACKGROUND: Congenital heart defects may be environmentally related, but the association with elevated ambient temperature has received little attention. OBJECTIVES: We studied the relationship between outdoor heat during the first trimester of pregnancy and risk of congenital heart defects. METHODS: We carried out a retrospective cohort study of 704,209 fetuses between 2 and 8 weeks postconception from April to September in Quebec, Canada, 1988-2012. We calculated the prevalence of congenital heart defects at birth according to the number of days women were exposed to maximum temperature ≥ 30°C. In log-binomial regression models, we estimated prevalence ratios (PR) and 95% confidence intervals (CI) for the relationship of temperature with seven critical and eight noncritical heart defects, adjusted for pregnancy characteristics. RESULTS: Prevalence of congenital heart defects was 979.5 per 100,000 for 10 days or more of temperature ≥ 30°C compared with 878.9 per 100,000 for 0 days of exposure. Temperature was more precisely associated with noncritical than critical defects, which had lower prevalence. Fetuses exposed to 15 days of temperature ≥ 30°C between 2 and 8 weeks postconception had 1.06 times the risk of critical defects (95% CI: 0.67, 1.67) and 1.12 times the risk of noncritical defects (95% CI: 0.98, 1.29) relative to 0 days. Associations were higher for atrial septal defects (PR 1.37, 95% CI: 1.10, 1.70) than for other noncritical defects. For atrial septal defects, associations with elevated temperatures began the 3rd week postconception. CONCLUSIONS: Extreme heat exposure during the first trimester may be associated with noncritical heart defects, especially of the atrial septum. Citation: Auger N, Fraser WD, Sauve R, Bilodeau-Bertrand M, Kosatsky T. 2017. Risk of congenital heart defects after ambient heat exposure early in pregnancy. Environ Health Perspect 125:8-14; http://dx.doi.org/10.1289/EHP171.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adult;Extreme Heat;Female;Heart Defects, Congenital;Hot Temperature;Humans;Maternal Exposure;Pregnancy;Pregnancy Trimester, First;Prenatal Exposure Delayed Effects;Prevalence;Quebec;Young Adult",
+      "language": "eng"
+    },
+    {
+      "pmid": "34476711",
+      "title": "Associations between ambient heat exposure early in pregnancy and risk of congenital heart defects: a large population-based study.",
+      "journal": "Environmental science and pollution research international",
+      "year": "2022",
+      "first_author": "Yu X",
+      "doi": "10.1007/s11356-021-16237-8",
+      "abstract": "Some epidemiological studies have confirmed the association between environmental factors and congenital heart defects (CHD). While the possibility that maternal ambient heat exposures are related to CHD has received little attention. Our study aims to investigate the association between maternal ambient extreme heat exposure early in pregnancy and the risk of CHD in offspring in China. We conducted a retrospective cohort study of 1,918,105 fetuses between 2 and 8 weeks after gestation from May to October in Guangdong, China, 2015-2019. The main heat exposure was defined as extreme heat events (EHE) by using the 90th (EHE90) or 95th (EHE95) percentile of the daily maximum temperature. For each EHE definition, we further defined four indicators: having EHE or not, frequency, duration, and cumulative days. We used the log-binomial regression models to calculate the prevalence ratios (PR) of CHD with 95% confidence intervals (CI) for the associations between CHD and EHE, adjusted for potentially confounding covariates. There are 1,918,105 infants included in the study, of which 9588 had CHD, with a prevalence rate of 499.9 per 100,000 (95% CI: 489.9, 509.8). We found that all EHE indicators were positively associated with the increased risks of overall CHD, some CHD classes (congenital malformations of cardiac septa, congenital malformations of great arteries, and congenital malformations of great arteries), and some CHD subtypes (atrial septal defect and patent ductus arteriosus). In addition, the PR yielded higher estimates when exposing to EHE95. For instance, the risk of suffering congenital malformations of great arteries was 1.548 (95% CI: 1.401, 1.712) for EHE90 exposure and 1.723 (95% CI: 1.565, 1.898) for EHE95 exposure, respectively. Our study demonstrated that EHE during 2-8 weeks postconception was associated with overall CHD in offspring, particularly atrial septal defects and patent ductus arteriosus. The associations strengthened with the extent and cumulative days of maternal exposure to EHE.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Extreme Heat;Female;Heart Defects, Congenital;Hot Temperature;Humans;Maternal Exposure;Pregnancy;Retrospective Studies",
+      "language": "eng"
+    },
+    {
+      "pmid": "30696385",
+      "title": "Projected Changes in Maternal Heat Exposure During Early Pregnancy and the Associated Congenital Heart Defect Burden in the United States.",
+      "journal": "Journal of the American Heart Association",
+      "year": "2019",
+      "first_author": "Zhang W",
+      "doi": "10.1161/JAHA.118.010995",
+      "abstract": "Background More intense and longer-lasting heat events are expected in the United States as a consequence of climate change. This study aimed to project the potential changes in maternal heat exposure during early pregnancy (3-8 weeks post conception) and the associated burden of congenital heart defects ( CHD s) in the future. Methods and Results This study expanded on a prior nationwide case-control study that evaluated the association between CHD s and maternal heat exposure during early pregnancy in summer and spring. We defined multiple indicators of heat exposure, and applied published odds ratios obtained for the matching season of the baseline (1995-2005) into the projection period (2025-2035) to estimate potential changes in CHD burden throughout the United States. Increases in maternal heat exposure were projected across the United States and to be larger in the summer. The Midwest will potentially have the highest increase in summer maternal exposure to excessively hot days (3.42; 95% CI, 2.99-3.88 per pregnancy), heat event frequency (0.52; 95% CI, 0.44-0.60) and heat event duration (1.73; 95% CI, 1.49-1.97). We also found large increases in specific CHD subtypes during spring, including a 34.0% (95% CI, 4.9%-70.8%) increase in conotruncal CHD in the South and a 38.6% (95% CI , 9.9%-75.1%) increase in atrial septal defect in the Northeast. Conclusions Projected increases in maternal heat exposure could result in an increased CHD burden in certain seasons and regions of the United States.",
+      "pubtypes": "Journal Article;Multicenter Study;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Adult;Female;Follow-Up Studies;Heart Defects, Congenital;Hot Temperature;Humans;Incidence;Infant, Newborn;Male;Maternal Exposure;Pregnancy;Pregnancy Trimester, First;Prenatal Exposure Delayed Effects;Retrospective Studies;Risk Assessment;Risk Factors;Seasons;United States",
+      "language": "eng"
+    },
+    {
+      "pmid": "29886237",
+      "title": "Maternal ambient heat exposure during early pregnancy in summer and spring and congenital heart defects - A large US population-based, case-control study.",
+      "journal": "Environment international",
+      "year": "2018",
+      "first_author": "Lin S",
+      "doi": "10.1016/j.envint.2018.04.043",
+      "abstract": "BACKGROUND/OBJECTIVE: Few studies have assessed the effect of ambient heat during the fetal development period on congenital heart defects (CHDs), especially in transitional seasons. We examined and compared the associations between extreme heat and CHD phenotypes in summer and spring, assessed their geographical differences, and compared different heat indicators. METHODS: We identified 5848 CHD cases and 5742 controls (without major structural defects) from the National Birth Defects Prevention Study, a US multicenter, population-based case-control study. Extreme heat events (EHEs) were defined by using the 95th (EHE95) or 90th (EHE90) percentile of daily maximum temperature and its frequency and duration during postconceptional weeks 3-8. We used a two-stage Bayesian hierarchical model to examine both regional and study-wide associations. Exposure odds ratios (ORs) were calculated using multivariate logistic regression analyses, while controlling for potential confounding factors. RESULTS: Overall, we observed no significant relationships between maternal EHE exposure and CHDs in most regions during summer. However, we found that 3-11 days of EHE90 during summer and spring was significantly associated with ventricular septal defects (VSDs) study-wide (ORs ranged: 2.17-3.24). EHE95 in spring was significantly associated with conotruncal defects and VSDs in the South (ORs: 1.23-1.78). Most EHE indicators in spring were significantly associated with increased septal defects (both VSDs and atrial septal defects (ASDs)) in the Northeast. CONCLUSION: While generally null results were found, long duration of unseasonable heat was associated with the increased risks for VSDs and ASDs, mainly in South and Northeast of the US. Further research to confirm our findings is needed.",
+      "pubtypes": "Journal Article;Multicenter Study;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Bayes Theorem;Case-Control Studies;Cross-Sectional Studies;Female;Heart Defects, Congenital;Hot Temperature;Humans;Maternal Exposure;Odds Ratio;Pregnancy;Seasons;United States",
+      "language": "eng"
+    },
+    {
+      "pmid": "1783056",
+      "title": "Maternal hyperthermia during pregnancy and cardiovascular malformations in the offspring.",
+      "journal": "European journal of epidemiology",
+      "year": "1991",
+      "first_author": "Tikkanen J",
+      "doi": "10.1007/BF00218673",
+      "abstract": "During pregnancy, a number of factors predisposing to hyperthermia, such as sleeping in a water bed, sauna bathing, heatwave, high workplace temperature, and fever, are believed capable of harming the foetus. This study aimed to clarify possible associations of maternal workplace temperature, season of birth, sauna bathing, upper respiratory infection, and fever, with cardiovascular malformations in the offspring. The material was composed of all 573 cardiac malformations registered in Finland in 1982-84, and 1055 randomly chosen healthy controls. The mothers were interviewed at maternity welfare centers about three months after delivery. Fever (greater than or equal to 38 degrees C) during early pregnancy was more prevalent among case mothers (10%) than controls (6%) (p less than 0.01), largely manifest as increased risks of atrial septal defect and hypoplastic left heart. Upper respiratory infection was also more common among case mothers (26%) than controls (18%) (p less than 0.001). By contrast, maternal workplace temperature, sauna bathing, and temperature of the environment (seasonal variation) were not associated with risk of cardiac malformation in the offspring. The use of acetylsalicylic acid-containing medication for reducing fever was equally common (7%) among case and control mothers.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Aspirin;Data Collection;Female;Fever;Finland;Heart Defects, Congenital;Humans;Infant, Newborn;Pregnancy;Pregnancy Complications;Random Allocation;Respiratory Tract Infections;Risk Factors;Seasons;Steam Bath",
+      "language": "eng"
+    }
+  ]
+}

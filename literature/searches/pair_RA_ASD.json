@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_RA_ASD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tretinoin\"[MeSH] OR \"retinoic acid\"[tiab] OR \"isotretinoin\"[tiab] OR \"vitamin A\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrial septal defect\"[tiab] OR \"atrial septal defects\"[tiab] OR \"ASD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tretinoin\"[MeSH Terms] OR \"retinoic acid\"[Title/Abstract] OR \"isotretinoin\"[Title/Abstract] OR \"vitamin A\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrial septal defect\"[Title/Abstract] OR \"atrial septal defects\"[Title/Abstract] OR \"ASD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "15526929",
+      "title": "Heart defects and other malformations in the Inuit in Canada: a baseline study.",
+      "journal": "International journal of circumpolar health",
+      "year": "2004",
+      "first_author": "Arbour L",
+      "doi": "10.3402/ijch.v63i3.17720",
+      "abstract": "OBJECTIVES: Birth defects occur in all ethnic groups, remaining an important world-wide cause of perinatal and infant morbidity. This contributes greatly to an excess of health care dollars allocated to the care and repair of those affected. This is especially true when those affected live in remote geographical locations. STUDY DESIGN: A chart review of 2567 live births of children of Inuit parents residing in Arctic Quebec (Nunavik) and on Baffin Island (Nunavut) between 1989 and 1994 (five years) was carried out compared to rates of anomalies of the Alberta Congenital Anomalies Surveillance System (ACASS). RESULTS: Birth defects were higher in the Inuit sample in nearly every major ICD-9 category with the exception of neural tube defects, eye anomalies and chromosome abnormalities. (Total: 99.7/1000 Vs 51.5/1000; OR 1.93 95% CI 1.7-2.3). Congenital heart defects were significantly increased 22.9/1000 Vs 5.6/1000, with an OR of 4.18 (95% CI 3.2-5.4) in the ICD-9 category 745. In particular, ventricular septal defects (VSDs) and atrial septal defects (ASDs) (OR 4.9 CI 3.5-6.9 and 4.6 CI 2.9-7.2) were frequent. CONCLUSIONS: A high rate of heart defects was an important contributor to the nearly two times rate of total birth defects in the Inuit compared to the ACASS. Further study should be carried out to determine the contributing factors. Genetic predisposition to specific heart defects, and a diet low in folate and vitamin A are considerations. The use of alcohol may exacerbate vitamin status in pregnancy. Optimizing vitamin status in the periconceptional period may reduce the rate of birth defects.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Canada;Chromosome Aberrations;Eye Abnormalities;Heart Defects, Congenital;Humans;Infant, Newborn;Inuit;Retrospective Studies",
+      "language": "eng"
+    },
+    {
+      "pmid": "9545093",
+      "title": "Correlated heart/limb anomalies in Mendelian syndromes provide evidence for a cardiomelic developmental field.",
+      "journal": "American journal of medical genetics",
+      "year": "1998",
+      "first_author": "Wilson GN",
+      "doi": "",
+      "abstract": "Coordinated development of heart and limbs is suggested by a review of human abortus, chromosomal, and teratogenic syndromes, and characterized by an analysis of Mendelian disorders that affect the limbs, heart, or both (672, 202, or 107, respectively). Mendelian syndromes with altered limb patterns often include cardiac anomalies, as shown by limb duplications (34%), deficiencies (30%), hypoplasias (23%), or dysplasias (9.3%). Syndromes with particular cardiac anomalies, illustrated by VSD (85%) or ASD (90%), frequently include limb defects. Positional correlations of anterior (preaxial/conotruncal), posterior (postaxial/atrial), or lateral (mirror hand/atrial isometry) heart/limb anomalies are consistent with the existence of a cardiomelic developmental field. Vertebrate comparisons suggest an early D-V limb-heart gradient, influenced by the neural crest, with distal limb segments (80% of syndromic defects) at its dorsal extreme. The proposed cardiomelic field relates the genetic heterogeneity of disorders such as Holt-Oram syndrome to a cascade of molecules, including the brachyury, sonic hedgehog, bone morphogenetic protein, retinoic acid receptor, and transforming growth factor-beta families.",
+      "pubtypes": "Journal Article;Review",
+      "mesh_terms": "Embryonic and Fetal Development;Gene Expression Regulation, Developmental;Genetic Variation;Heart Defects, Congenital;Humans;Limb Deformities, Congenital;Syndrome",
+      "language": "eng"
+    }
+  ]
+}

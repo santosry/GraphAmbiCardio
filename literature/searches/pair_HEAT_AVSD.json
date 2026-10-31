@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_HEAT_AVSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"hot temperature\"[MeSH] OR \"hyperthermia\"[MeSH] OR \"hyperthermia\"[tiab] OR \"heat wave*\"[tiab] OR \"high temperature\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrioventricular septal defect\"[tiab] OR \"atrioventricular canal\"[tiab] OR \"AVSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"hot temperature\"[MeSH Terms] OR \"hyperthermia\"[MeSH Terms] OR \"hyperthermia\"[Title/Abstract] OR \"heat wave*\"[Title/Abstract] OR \"high temperature\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrioventricular septal defect\"[Title/Abstract] OR \"atrioventricular canal\"[Title/Abstract] OR \"AVSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "8178617",
+      "title": "[Cardiac and great vessel abnormalities in rat fetuses with external malformations induced by hyperthermia].",
+      "journal": "Kaibogaku zasshi. Journal of anatomy",
+      "year": "1994",
+      "first_author": "Aoyama N",
+      "doi": "",
+      "abstract": "Pregnant rats at day 9 were bathed in 43 degrees C water for 15 min. Maternal rats at day 15 of gestation were found pregnant with fetuses variously malformed externally, such as exencephaly, spina bifida, microphthalmia, anophthalmia, facial cleft, cleft lip and generalized edema. Fetal death occurred in about half the implants. Examination of the hearts and great vessels of externally malformed fetuses by light and scanning electron microscopy revealed predominantly great artery abnormalities, atrioventricular septal defect and venous abnormalities in the cardiovascular organs. No direct correlation between specific external malformations and heart abnormalities could be found, however the malformed fetuses including facial defects tended to complicate the combination of great artery abnormalities, atrioventricular septal defect and venous abnormalities. The great artery abnormalities as well as facial defects appeared to have been due to the effects of hyperthermia on neural crest migration; however, the pathogenesis of atrioventricular septal defect and venous abnormalities were not clear.",
+      "pubtypes": "English Abstract;Journal Article",
+      "mesh_terms": "Abnormalities, Multiple;Animals;Arteries;Face;Female;Fetal Death;Heart Defects, Congenital;Hot Temperature;Pregnancy;Rats;Rats, Wistar",
+      "language": "jpn"
+    }
+  ]
+}

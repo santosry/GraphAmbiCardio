@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_VPA_ASD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"valproic acid\"[MeSH] OR \"valproic acid\"[tiab] OR \"valproate\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrial septal defect\"[tiab] OR \"atrial septal defects\"[tiab] OR \"ASD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"valproic acid\"[MeSH Terms] OR \"valproic acid\"[Title/Abstract] OR \"valproate\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrial septal defect\"[Title/Abstract] OR \"atrial septal defects\"[Title/Abstract] OR \"ASD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "18188637",
+      "title": "Cardiac malformations are increased in infants of mothers with epilepsy.",
+      "journal": "Pediatric cardiology",
+      "year": "2008",
+      "first_author": "Thomas SV",
+      "doi": "10.1007/s00246-007-9161-4",
+      "abstract": "We aimed to ascertain the prevalence of cardiac malformation (CM) and its association with antenatal exposure to an antiepileptic drug (AED) in infants of mothers with epilepsy (IMEs). Women with epilepsy (WWE) are enrolled in Kerala Registry of Epilepsy and Pregnancy (KREP) in the prepregnancy or early pregnancy period and are followed up with a standard protocol until the IMEs are 6 years old. At 3 months postpartum, a cardiologist, blinded to the AED exposure, carried out a clinical examination and echocardiography on all live-born babies. Patent foramen ovale (PFO) and interatrial septal defects of < 5 mm in size were excluded from CM. Details of maternal epilepsy, folate usage, AED exposure in the first trimester, and newborn characteristics were abstracted from the records of the KREP. We examined 462 babies. Maternal epilepsy was generalized in 201 (43.50%) or localization related in 241 (52.2%). The AED exposure was monotherapy in 262 (56.7%)--carbamazepine (112), valproate (71), phenobarbitone (43), phenytoin (31), and clonazepam (2)--and polytherapy in 126 (27.3%). Seventy-four infants (16.01%) had no AED exposure. There were 36 infants with CM (7.8%; 95% confidence interval: 5.5-10.6). CMs included atrial septal defect (26; 72.2%), tetrology of Fallot (3; 8.3%), patent ductus arteriosus and pulmonic stenosis (2 each; 5.6%), and ventricular septal defect, tricuspid regurgitation, transposition of great arteries (1 each; 2.8%). CMs were significantly more for IMEs with premature birth (p < .003). There was no association between CM and maternal age, epilepsy syndrome, seizure frequency during pregnancy, and folate use. CMs were more frequent with polytherapy (13; 10.3%) compared to monotherapy (17; 6.5%). Those with valproate exposure had a trend (not statistically significant) toward higher frequency of CM compared to IMEs on other AEDs as monotherapy.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adult;Anticonvulsants;Epilepsy;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Male;Pregnancy;Prenatal Exposure Delayed Effects;Prevalence;Prospective Studies",
+      "language": "eng"
+    },
+    {
+      "pmid": "21291342",
+      "title": "Severe fetal valproate syndrome: combination of complex cardiac defect, multicystic dysplastic kidney, and trigonocephaly.",
+      "journal": "The journal of maternal-fetal & neonatal medicine : the official journal of the European Association of Perinatal Medicine, the Federation of Asia and Oceania Perinatal Societies, the International Society of Perinatal Obstetricians",
+      "year": "2011",
+      "first_author": "Ozkan H",
+      "doi": "10.3109/14767058.2010.501120",
+      "abstract": "Valproic acid (VPA) is a teratogenic drug used in pregnant women for the treatment of epilepsy and mood disorders. Fetal valproate syndrome (FVS) is characterized by a number of abnormalities associated with VPA exposure in utero including neural tube defects, congenital heart defects, limb defects, genitourinary defects, brain, eye and respiratory anomalies, and abdominal wall defects. Complex cardiac defect and trigonocephaly have rarely been reported and multicystic dysplastic kidney has never been detected in FVS. We here report a female infant who was born to a mother with a history of low-dose VPA monotherapy (250 mg/day) during pregnancy and who had presented with a combination of unilateral multicystic dysplastic kidney, multicomplex cardiac defect including severe coarctation of aorta, Ebstein anomaly, secundum atrial septal defect, mesocardia along with trigonocephaly due to metopic craniosynostosis, typical facial appearance and limb defects. To our knowledge, this is the first case presented with multicystic dysplastic kidney, complex cardiac defect, trigonocephaly and other limb and facial defects because of exposure to very low-dose VPA monotherapy (250 mg/day) in utero. We conclude that VPA must be used very cautiously in pregnant women even as monotherapy and in low doses to prevent major congenital defects.",
+      "pubtypes": "Case Reports;Journal Article",
+      "mesh_terms": "Abnormalities, Drug-Induced;Abnormalities, Multiple;Craniosynostoses;Fatal Outcome;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Limb Deformities, Congenital;Multicystic Dysplastic Kidney;Pregnancy;Prenatal Exposure Delayed Effects;Severity of Illness Index;Valproic Acid;Young Adult",
+      "language": "eng"
+    }
+  ]
+}

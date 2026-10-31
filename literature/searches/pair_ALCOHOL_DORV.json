@@ -1,0 +1,85 @@
+{
+  "search_id": "pair_ALCOHOL_DORV",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ethanol\"[MeSH] OR \"alcohol drinking\"[MeSH] OR \"alcohol\"[tiab] OR \"ethanol\"[tiab] OR \"fetal alcohol\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"double outlet right ventricle\"[tiab] OR \"DORV\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ethanol\"[MeSH Terms] OR \"alcohol drinking\"[MeSH Terms] OR \"alcohol\"[Title/Abstract] OR \"ethanol\"[Title/Abstract] OR \"fetal alcohol\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"double outlet right ventricle\"[Title/Abstract] OR \"DORV\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 6,
+  "retrieved_n": 6,
+  "studies": [
+    {
+      "pmid": "35966825",
+      "title": "European epidemiological patterns of cannabis- and substance-related congenital cardiovascular anomalies: geospatiotemporal and causal inferential study.",
+      "journal": "Environmental epigenetics",
+      "year": "2022",
+      "first_author": "Reece AS",
+      "doi": "10.1093/eep/dvac015",
+      "abstract": "As prenatal and community cannabis exposures have recently been linked with congenital heart disease (CHD), it was of interest to explore these associations in Europe in a causal framework and space-time context. Congenital anomaly data from Eurocat, drug-use data from the European Monitoring Centre for Drugs and Drug Addiction, and income from the World Bank. Countries with rising daily cannabis use had in general higher congenital anomaly rates over time than those without (time: status interaction: β-Est. = 0.0267, P = 0.0059). At inverse probability-weighted panel regression, cannabis terms were positive and significant for CHD, severe CHD, atrial septal defect, ventricular septal defect, atrioventricular septal defect, patent ductus arteriosus, tetralogy of Fallot, vascular disruptions, double outlet right ventricle, transposition of the great vessels, hypoplastic right heart, and mitral valve anomalies from 1.75 × 10-19, 4.20 × 10-11, <2.2 × 10-16, <2.2 × 10-16, 1.58 × 10-12, 4.30 × 10-9, 4.36 × 10-16, 3.50 × 10-8, 5.35 × 10-12, <2.2 × 10-16, 5.65 × 10-5 and 6.06 × 10-10. At spatial regression, terms including cannabis were positive and significant for this same list of anomalies from 0.0038, 1.05 × 10-10, 0.0215, 8.94 × 10-6, 1.23 × 10-5, 2.05 × 10-5, 1.07 × 10-6, 8.77 × 10-5, 9.11 × 10-6, 0.0001, 3.10 × 10-7 and 2.17 × 10-7. 92.6% and 75.2% of 149 E-value estimates and minimum E-values were in high zone >9; 100.0% and 98.7% >1.25. Data show many congenital cardiac anomalies exhibit strong bivariate relationships with metrics of cannabis exposure. Causal inferential modelling for the twelve anomalies selected demonstrated convincing evidence of robust relationships to cannabis which survived adjustment and fulfilled epidemiological criteria for causal relationships. Space-time regression was similarly confirmatory. Epigenomic pathways constitute viable potential mechanisms. Given exponential genotoxic dose-response effects, careful and astute control of cannabinoid penetration is indicated.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "",
+      "language": "eng"
+    },
+    {
+      "pmid": "18456715",
+      "title": "Double outlet right ventricle: aetiologies and associations.",
+      "journal": "Journal of medical genetics",
+      "year": "2008",
+      "first_author": "Obler D",
+      "doi": "10.1136/jmg.2008.057984",
+      "abstract": "BACKGROUND: Double outlet right ventricle (DORV), a clinically significant congenital heart defect, occurs in 1-3% of individuals with congenital heart defects. In contrast to other major congenital heart defects, there are no systematic or comprehensive data regarding associations, aetiologies, and pathogenesis of DORV. We analysed reported cases in the medical literature to address these issues. METHODS: We queried the PubMed database using key words \"double outlet right ventricle\" and \"DORV\" for case reports, epidemiologic analyses and animal studies with this cardiac anomaly. The anatomic subtype of DORV was classified according to criteria of Van Praagh. RESULTS: Chromosomal abnormalities were present in 61 of the 149 cases of DORV. Trisomies 13 and 18, and del 22q11 were the most commonly associated cytogenetic lesions; different anatomic subtypes of DORV were noted in trisomies 13 and 18 versus del 22q11. DORV was reported in many uncommon or rare non-chromosomal syndromes. Mutations and non-synonymous sequence variants in the CFC1 and CSX genes were the most commonly reported monogenic loci associated with DORV in humans; numerous genes are reported in murine models of DORV. Animal studies implicate maternal diabetes and prenatal exposure to ethanol, retinoids, theophylline, and valproate in DORV teratogenesis. CONCLUSIONS: The large number of genes associated with DORV in both humans and animal models and the different anatomic subtypes seen in specific aetiologies indicate the likelihood of several distinct pathogenetic mechanisms for DORV, including impairment of neural crest derivative migration and impairment of normal cardiac situs and looping.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Review",
+      "mesh_terms": "Animals;Chromosome Aberrations;Double Outlet Right Ventricle;Humans;Teratogens",
+      "language": "eng"
+    },
+    {
+      "pmid": "34859965",
+      "title": "Concomitant genetic defects potentiate the adverse impact of prenatal alcohol exposure on cardiac outflow tract maturation.",
+      "journal": "Birth defects research",
+      "year": "2022",
+      "first_author": "Harvey DC",
+      "doi": "10.1002/bdr2.1968",
+      "abstract": "BACKGROUND: Prenatal alcohol exposure (PAE) is associated with an increased incidence of congenital heart defects (CHD), in particular outflow tract (OFT) defects. However, the variability in the incidence of CHD following PAE has not been fully explored. We hypothesize that a concomitant, relevant genetic defect would potentiate the adverse effect of PAE and partially explain the variability of PAE-induced CHD incidence. METHODS: The OFT is formed by the second heart field (SHF). Our PAE model consisted of two intraperitoneal injections (3 g/kg, separated by 6 hr) of 30% ethanol on E6.5 during SHF specification. The impact of genetic defects was studied by SHF-specific loss of Delta-like ligand 4 (Dll4), fibroblast growth factor 8 (Fgf8) and Islet1. RESULTS: Acute PAE alone significantly increased CHD incidence (4% vs. 26%, p = .015) with a particular increase in OFT alignment defects, viz., double outlet right ventricle (0 vs. 9%, p = .02). In embryos with a SHF genetic defect, acute PAE significantly increased CHD incidence (14 vs. 63%, p < .001), including double outlet right ventricle (6 vs. 50%, p < .001) compared to controls. PAE (p = .01) and heterozygous loss of Dll4 (p = .04) were found to independently contribute to CHD incidence, while neither Islet1 nor Fgf8 defects were found to be significant. CONCLUSIONS: Our model recapitulates the increased incidence of OFT alignment defects seen in the clinic due to PAE. The presence of a concomitant SHF genetic mutation increases the incidence of PAE-related OFT defects. An apparent synergistic interaction between PAE and the loss of DLL4-mediated Notch signaling in OFT alignment requires further analysis.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, Non-P.H.S.",
+      "mesh_terms": "Double Outlet Right Ventricle;Female;Heart;Heart Defects, Congenital;Humans;Pregnancy;Prenatal Exposure Delayed Effects;Signal Transduction",
+      "language": "eng"
+    },
+    {
+      "pmid": "27542407",
+      "title": "Cardiac neural crest ablation results in early endocardial cushion and hemodynamic flow abnormalities.",
+      "journal": "American journal of physiology. Heart and circulatory physiology",
+      "year": "2016",
+      "first_author": "Ma P",
+      "doi": "10.1152/ajpheart.00188.2016",
+      "abstract": "Cardiac neural crest cell (CNCC) ablation creates congenital heart defects (CHDs) that resemble those observed in many syndromes with craniofacial and cardiac consequences. The loss of CNCCs causes a variety of great vessel defects, including persistent truncus arteriosus and double-outlet right ventricle. However, because of the lack of quantitative volumetric measurements, less severe defects, such as great vessel size changes and valve defects, have not been assessed. Also poorly understood is the role of abnormal cardiac function in the progression of CNCC-related CHDs. CNCC ablation was previously reported to cause abnormal cardiac function in early cardiogenesis, before the CNCCs arrive in the outflow region of the heart. However, the affected functional parameters and how they correlate with the structural abnormalities were not fully characterized. In this study, using a CNCC-ablated quail model, we contribute quantitative phenotyping of CNCC ablation-related CHDs and investigate abnormal early cardiac function, which potentially contributes to late-stage CHDs. Optical coherence tomography was used to assay early- and late-stage embryos and hearts. In CNCC-ablated embryos at four-chambered heart stages, great vessel diameter and left atrioventricular valve leaflet volumes are reduced. Earlier, at cardiac looping stages, CNCC-ablated embryos exhibit abnormally twisted bodies, abnormal blood flow waveforms, increased retrograde flow percentage, and abnormal cardiac cushions. The phenotypes observed in this CNCC-ablation model were also strikingly similar to those found in an established avian fetal alcohol syndrome model, supporting the contribution of CNCC dysfunction to the development of alcohol-induced CHDs.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't;Research Support, N.I.H., Extramural",
+      "mesh_terms": "Animals;Aorta;Embryo, Nonmammalian;Endocardial Cushion Defects;Fetal Alcohol Spectrum Disorders;Heart;Heart Defects, Congenital;Heart Valves;Laser Therapy;Neural Crest;Organ Size;Phenotype;Pulmonary Artery;Quail;Tomography, Optical Coherence",
+      "language": "eng"
+    },
+    {
+      "pmid": "3563941",
+      "title": "Ethyl alcohol-induced cardiovascular malformations in the chick embryo.",
+      "journal": "Teratology",
+      "year": "1987",
+      "first_author": "Fang TT",
+      "doi": "10.1002/tera.1420350113",
+      "abstract": "Chick embryos incubated for 72-80 hours were exposed to various volumes (0.20-0.40 m1/egg) of 50% ethyl alcohol. Examination of embryos at day 14 of incubation showed that higher doses of ethanol decreased the survival rate of embryos compared with control embryos. Three major categories of cardiovascular malformations were observed in this study: intracardiac anomalies characterized primarily by isolated ventricular septal defect, ventricular septal defect with overriding aorta, double outlet right ventricle or common aorticopulmonary trunk; aortic arch anomalies; and subclavian artery anomalies. Frequencies of embryos with intracardiac anomalies were equal to or greater than 64.8% in the six groups exposed to ethanol. Administration of ethanol also induced high frequencies of embryos with subclavian artery anomalies (11.2-89.1%). Absence or hypoplasia of the right and/or left secondary subclavian artery was commonly associated with persistence of the corresponding primary subclavian artery. Bilateral absence and/or hypoplasia of the secondary subclavian arteries was more common than unilateral anomalies, whereas absence of the left secondary subclavian artery was more commonly observed than an absent right secondary subclavian artery. No embryos in the two control groups combined (n = 94) demonstrated aortic arch or subclavian artery anomalies.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Abnormalities, Drug-Induced;Animals;Aorta, Thoracic;Cardiovascular Abnormalities;Chick Embryo;Ethanol;Heart Defects, Congenital;Heart Septal Defects, Ventricular;Heart Ventricles;Subclavian Artery",
+      "language": "eng"
+    },
+    {
+      "pmid": "42110157",
+      "title": "DNA Methylation and Fetal Programming of Cardiovascular Disease: From Congenital Heart Diseases to Adult Cardiovascular Dysfunction.",
+      "journal": "Reviews in cardiovascular medicine",
+      "year": "2026",
+      "first_author": "Chen Z",
+      "doi": "10.31083/RCM46174",
+      "abstract": "DNA methylation, the most extensively studied epigenetic mechanism, acts as a critical interface between maternal environmental influences and fetal cardiovascular development. During embryogenesis, tightly orchestrated methylation remodeling regulates the transcriptional networks required for cardiogenesis, including chamber septation, valve formation, and myocardial maturation. Disruption of these methylation patterns contributes to congenital heart disease (CHD), with distinct methylation signatures identified in tetralogy of Fallot, double-outlet right ventricle, bicuspid aortic valve, and coarctation of the aorta. Maternal exposures, including smoking, alcohol intake, folic acid status, hypertension, diabetes, and hyperlipidemia, modify fetal DNA methylation in placental, myocardial, and cord blood tissues. These alterations affect key developmental pathways, including Wnt, Notch, and mitogen-activated protein kinase signaling, as well as genes that regulate oxidative stress, thereby increasing the risk of structural defects and predisposing offspring to long-term cardiovascular vulnerability. Epigenetic reprogramming in adverse intrauterine environments has been linked to hypertension, pulmonary vascular disease, atherosclerosis, and ischemia-sensitive phenotypes in later life, supporting a continuum from fetal life to adult cardiovascular dysfunction. Unlike genetic mutations, DNA methylation is dynamic and reversible, highlighting the potential of this modification as a biomarker of early risk and a target for preventive strategies. Optimizing maternal health, ensuring appropriate folate intake, and reducing harmful exposures may help preserve normal methylation landscapes and improve offspring cardiovascular outcomes. Advances in high-resolution epigenomic profiling, including single-cell methylation technologies, now enable delineation of cell-specific trajectories that connect CHD with adult cardiovascular disease and may inform precision interventions aimed at modifying pathogenic epigenetic states. Thus, understanding the role of DNA methylation in fetal programming can clarify the developmental origins of CHD and adult cardiovascular disorders, and lay the foundation for cardiovascular prevention strategies that extend from preconception through the earliest stages of life.",
+      "pubtypes": "Journal Article;Review",
+      "mesh_terms": "",
+      "language": "eng"
+    }
+  ]
+}

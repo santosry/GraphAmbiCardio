@@ -1,0 +1,1192 @@
+[
+  {
+    "gene_symbol": "ACTC1",
+    "pathways_found": 20,
+    "pathways_fdr005": 19,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ACVR2B",
+    "pathways_found": 7,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ADAMTS10",
+    "pathways_found": 9,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ARHGAP31",
+    "pathways_found": 8,
+    "pathways_fdr005": 7,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ARID1B",
+    "pathways_found": 24,
+    "pathways_fdr005": 18,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ARVCF",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "B3GLCT",
+    "pathways_found": 9,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "BAZ1B",
+    "pathways_found": 8,
+    "pathways_fdr005": 7,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "BCOR",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "BRAF",
+    "pathways_found": 39,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "C2CD3",
+    "pathways_found": 4,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CBL",
+    "pathways_found": 51,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CCDC22",
+    "pathways_found": 3,
+    "pathways_fdr005": 1,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CEP57",
+    "pathways_found": 17,
+    "pathways_fdr005": 17,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CHD4",
+    "pathways_found": 44,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CHD7",
+    "pathways_found": 4,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CHRM3",
+    "pathways_found": 12,
+    "pathways_fdr005": 9,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CIROP",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CIROZ",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CITED2",
+    "pathways_found": 12,
+    "pathways_fdr005": 10,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CLIP2",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "COMT",
+    "pathways_found": 15,
+    "pathways_fdr005": 11,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CREBBP",
+    "pathways_found": 141,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "CTCF",
+    "pathways_found": 7,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "DAW1",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "DHCR7",
+    "pathways_found": 8,
+    "pathways_fdr005": 7,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "DLL4",
+    "pathways_found": 24,
+    "pathways_fdr005": 21,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "DPF2",
+    "pathways_found": 19,
+    "pathways_fdr005": 15,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "DPYSL5",
+    "pathways_found": 5,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "DYNC2LI1",
+    "pathways_found": 4,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "DYRK1A",
+    "pathways_found": 4,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "EHMT1",
+    "pathways_found": 18,
+    "pathways_fdr005": 13,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "EIF4H",
+    "pathways_found": 9,
+    "pathways_fdr005": 8,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ELN",
+    "pathways_found": 4,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "EP300",
+    "pathways_found": 153,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FAAP100",
+    "pathways_found": 7,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FANCB",
+    "pathways_found": 7,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FANCF",
+    "pathways_found": 7,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FANCI",
+    "pathways_found": 7,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FBN1",
+    "pathways_found": 13,
+    "pathways_fdr005": 10,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FGFR1",
+    "pathways_found": 47,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FGFR3",
+    "pathways_found": 37,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FIG4",
+    "pathways_found": 7,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FKBP6",
+    "pathways_found": 7,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FLNA",
+    "pathways_found": 18,
+    "pathways_fdr005": 14,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FLT4",
+    "pathways_found": 12,
+    "pathways_fdr005": 10,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FOXC2",
+    "pathways_found": 5,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FOXF1",
+    "pathways_found": 11,
+    "pathways_fdr005": 11,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "FRYL",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GATA4",
+    "pathways_found": 24,
+    "pathways_fdr005": 19,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GATA5",
+    "pathways_found": 2,
+    "pathways_fdr005": 1,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GATA6",
+    "pathways_found": 15,
+    "pathways_fdr005": 13,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GDF1",
+    "pathways_found": 6,
+    "pathways_fdr005": 2,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GJA1",
+    "pathways_found": 28,
+    "pathways_fdr005": 22,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GJA5",
+    "pathways_found": 5,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GJA8",
+    "pathways_found": 5,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GLI3",
+    "pathways_found": 12,
+    "pathways_fdr005": 8,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GP1BB",
+    "pathways_found": 17,
+    "pathways_fdr005": 15,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GPC3",
+    "pathways_found": 41,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GTF2I",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "GTF2IRD1",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "HAND2",
+    "pathways_found": 6,
+    "pathways_fdr005": 3,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "HEY2",
+    "pathways_found": 23,
+    "pathways_fdr005": 19,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "HIRA",
+    "pathways_found": 8,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "HRAS",
+    "pathways_found": 142,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "HYAL2",
+    "pathways_found": 5,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "IPO8",
+    "pathways_found": 3,
+    "pathways_fdr005": 2,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "JAG1",
+    "pathways_found": 35,
+    "pathways_fdr005": 29,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "KAT6A",
+    "pathways_found": 9,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "KAT6B",
+    "pathways_found": 3,
+    "pathways_fdr005": 3,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "KDM6A",
+    "pathways_found": 20,
+    "pathways_fdr005": 16,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "KMT2D",
+    "pathways_found": 26,
+    "pathways_fdr005": 19,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "KRAS",
+    "pathways_found": 150,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "LEFTY2",
+    "pathways_found": 7,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "LIMK1",
+    "pathways_found": 19,
+    "pathways_fdr005": 15,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "LMNA",
+    "pathways_found": 31,
+    "pathways_fdr005": 28,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "LONP1",
+    "pathways_found": 5,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "LTBP2",
+    "pathways_found": 7,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "LZTR1",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MAP2K1",
+    "pathways_found": 61,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MAP2K2",
+    "pathways_found": 36,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MED12",
+    "pathways_found": 20,
+    "pathways_fdr005": 11,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MED13L",
+    "pathways_found": 12,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MED16",
+    "pathways_found": 20,
+    "pathways_fdr005": 11,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MEF2C",
+    "pathways_found": 46,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MEIS2",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MID1",
+    "pathways_found": 19,
+    "pathways_fdr005": 13,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MKKS",
+    "pathways_found": 5,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MRAS",
+    "pathways_found": 11,
+    "pathways_fdr005": 9,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MYH6",
+    "pathways_found": 2,
+    "pathways_fdr005": 2,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MYH7",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "MYRF",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NEK8",
+    "pathways_found": 9,
+    "pathways_fdr005": 9,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NF1",
+    "pathways_found": 9,
+    "pathways_fdr005": 7,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NIPBL",
+    "pathways_found": 5,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NKX2-5",
+    "pathways_found": 9,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NKX2-6",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NODAL",
+    "pathways_found": 3,
+    "pathways_fdr005": 2,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NONO",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NOTCH1",
+    "pathways_found": 62,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NOTCH2",
+    "pathways_found": 23,
+    "pathways_fdr005": 17,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NOTCH3",
+    "pathways_found": 19,
+    "pathways_fdr005": 14,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NPHP3",
+    "pathways_found": 5,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NR2F2",
+    "pathways_found": 9,
+    "pathways_fdr005": 8,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NRAS",
+    "pathways_found": 141,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "NSD1",
+    "pathways_found": 3,
+    "pathways_fdr005": 3,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "PAH",
+    "pathways_found": 7,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "PIGL",
+    "pathways_found": 4,
+    "pathways_fdr005": 2,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "PIGN",
+    "pathways_found": 4,
+    "pathways_fdr005": 2,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "PLXND1",
+    "pathways_found": 13,
+    "pathways_fdr005": 7,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "PPP1CB",
+    "pathways_found": 42,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "PQBP1",
+    "pathways_found": 9,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "PSMD12",
+    "pathways_found": 181,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "PTPN11",
+    "pathways_found": 115,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "PUF60",
+    "pathways_found": 15,
+    "pathways_fdr005": 11,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RAB23",
+    "pathways_found": 3,
+    "pathways_fdr005": 1,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RAF1",
+    "pathways_found": 37,
+    "pathways_fdr005": 29,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RBM8A",
+    "pathways_found": 14,
+    "pathways_fdr005": 12,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RERE",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RFC2",
+    "pathways_found": 64,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RIT1",
+    "pathways_found": 11,
+    "pathways_fdr005": 9,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ROBO4",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RPL11",
+    "pathways_found": 67,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RPL27",
+    "pathways_found": 42,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RPL5",
+    "pathways_found": 42,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RPS19",
+    "pathways_found": 57,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RPS26",
+    "pathways_found": 57,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RRAS2",
+    "pathways_found": 5,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "RREB1",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SALL1",
+    "pathways_found": 5,
+    "pathways_fdr005": 5,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SALL4",
+    "pathways_found": 8,
+    "pathways_fdr005": 7,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SEC24C",
+    "pathways_found": 25,
+    "pathways_fdr005": 15,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SEMA3E",
+    "pathways_found": 5,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SHOC2",
+    "pathways_found": 11,
+    "pathways_fdr005": 9,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SKIC3",
+    "pathways_found": 3,
+    "pathways_fdr005": 2,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SLC29A3",
+    "pathways_found": 10,
+    "pathways_fdr005": 8,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SMAD2",
+    "pathways_found": 36,
+    "pathways_fdr005": 28,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SMAD3",
+    "pathways_found": 54,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SMAD4",
+    "pathways_found": 49,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SMAD6",
+    "pathways_found": 8,
+    "pathways_fdr005": 7,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SMARCA4",
+    "pathways_found": 47,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SMARCE1",
+    "pathways_found": 26,
+    "pathways_fdr005": 20,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SMC3",
+    "pathways_found": 24,
+    "pathways_fdr005": 21,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SOS1",
+    "pathways_found": 133,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SOS2",
+    "pathways_found": 60,
+    "pathways_fdr005": 30,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SOX4",
+    "pathways_found": 4,
+    "pathways_fdr005": 3,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SPECC1L",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "SRCAP",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "STAG2",
+    "pathways_found": 24,
+    "pathways_fdr005": 21,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "STRA6",
+    "pathways_found": 8,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "STX1A",
+    "pathways_found": 34,
+    "pathways_fdr005": 26,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TALDO1",
+    "pathways_found": 23,
+    "pathways_fdr005": 19,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TBL2",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TBX1",
+    "pathways_found": 2,
+    "pathways_fdr005": 1,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TBX20",
+    "pathways_found": 2,
+    "pathways_fdr005": 1,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TBX5",
+    "pathways_found": 9,
+    "pathways_fdr005": 6,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TFAP2B",
+    "pathways_found": 15,
+    "pathways_fdr005": 9,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TGFBR1",
+    "pathways_found": 23,
+    "pathways_fdr005": 19,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TGFBR2",
+    "pathways_found": 23,
+    "pathways_fdr005": 19,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TKT",
+    "pathways_found": 13,
+    "pathways_fdr005": 10,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TMEM94",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "TRAF7",
+    "pathways_found": 9,
+    "pathways_fdr005": 7,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "UFD1",
+    "pathways_found": 21,
+    "pathways_fdr005": 14,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "UGGT1",
+    "pathways_found": 6,
+    "pathways_fdr005": 4,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "VPS35L",
+    "pathways_found": 3,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "WASHC5",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "WT1",
+    "pathways_found": 13,
+    "pathways_fdr005": 12,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ZEB2",
+    "pathways_found": 17,
+    "pathways_fdr005": 17,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ZIC3",
+    "pathways_found": 3,
+    "pathways_fdr005": 3,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "gene_symbol": "ZMPSTE24",
+    "pathways_found": 0,
+    "pathways_fdr005": 0,
+    "error": "",
+    "retrieved_at": "2026-10-31"
+  }
+]

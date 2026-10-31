@@ -1,0 +1,156 @@
+[
+  {
+    "phenotype_id": "CHD:VSD",
+    "label_study": "Ventricular septal defect",
+    "cid10": "Q21.0",
+    "hpo_id": "HP:0001629",
+    "hpo_label": "Ventricular septal defect",
+    "hpo_definition": "A hole between the two bottom chambers (ventricles) of the heart. The defect is centered around the most superior aspect of the ventricular septum.",
+    "hpo_synonyms": "Hole in heart wall separating two lower heart chambers;VSD;Ventricular septal defects;Ventriculoseptal defect",
+    "hpo_xrefs": "Fyler:1300",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:ASD",
+    "label_study": "Atrial septal defect",
+    "cid10": "Q21.1",
+    "hpo_id": "HP:0001631",
+    "hpo_label": "Atrial septal defect",
+    "hpo_definition": "Atrial septal defect (ASD) is a congenital abnormality of the interatrial septum that enables blood flow between the left and right atria via the interatrial septum.",
+    "hpo_synonyms": "ASD;An opening in the wall separating the top two chambers of the heart;Atria septal defect;Atrial septum defect;Atrioseptal defect;Defect in the atrial septum;Hole in heart wall separating two upper heart chambers",
+    "hpo_xrefs": "Fyler:2050;ICD-10:Q21.1",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:AVSD",
+    "label_study": "Atrioventricular septal defect",
+    "cid10": "Q21.2",
+    "hpo_id": "HP:0006695",
+    "hpo_label": "Atrioventricular canal defect",
+    "hpo_definition": "A defect of the atrioventricular septum of the heart.",
+    "hpo_synonyms": "Hole in center of heart;Hole in centre of heart;Atrioventricular septal defect;Endocardial cushion defect",
+    "hpo_xrefs": "Fyler:0606;Fyler:1100;Fyler:606",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:TOF",
+    "label_study": "Tetralogy of Fallot",
+    "cid10": "Q21.3",
+    "hpo_id": "HP:0001636",
+    "hpo_label": "Tetralogy of Fallot",
+    "hpo_definition": "A congenital cardiac malformation comprising pulmonary stenosis, overriding aorta, ventricular septum defect, and right ventricular hypertrophy. The diagnosis of TOF is made if at least three of the four above mentioned features are present.",
+    "hpo_synonyms": "Tetrology of fallot",
+    "hpo_xrefs": "ICD-10:Q21.3",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:DORV",
+    "label_study": "Double outlet right ventricle",
+    "cid10": "Q20.1",
+    "hpo_id": "HP:0001719",
+    "hpo_label": "Double outlet right ventricle",
+    "hpo_definition": "Double outlet right ventricle (DORV) is a type of ventriculoarterial connection in which both great vessels arise entirely or predominantly from the right ventricle.",
+    "hpo_synonyms": "DORV;Double-outlet right ventricle",
+    "hpo_xrefs": "Fyler:600;Fyler:606",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:TGA",
+    "label_study": "Transposition of the great arteries",
+    "cid10": "Q20.3",
+    "hpo_id": "HP:0001669",
+    "hpo_label": "Transposition of the great arteries",
+    "hpo_definition": "A complex congenital heart defect in which the aorta arises from the morphologic right ventricle and the pulmonary artery arises from the morphologic left ventricle.",
+    "hpo_synonyms": "TGA;TGV;Transposition of great vessels",
+    "hpo_xrefs": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:HLHS",
+    "label_study": "Hypoplastic left heart (HLHS)",
+    "cid10": "Q23.4",
+    "hpo_id": "HP:0004383",
+    "hpo_label": "Hypoplastic left ventricle",
+    "hpo_definition": "A severe congenital heart defect characterized by underdevelopment of the left ventricle.",
+    "hpo_synonyms": "Heart left ventricle hypoplasia;Left ventricular hypoplasia;Underdeveloped left heart",
+    "hpo_xrefs": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:COA",
+    "label_study": "Coarctation of the aorta",
+    "cid10": "Q25.1",
+    "hpo_id": "HP:0001680",
+    "hpo_label": "Coarctation of aorta",
+    "hpo_definition": "Coarctation of the aorta is a narrowing or constriction of a segment of the aorta.",
+    "hpo_synonyms": "Aortic coarctation;Coarctation of the aorta;Narrowing of aorta;Narrowing of the aorta",
+    "hpo_xrefs": "",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:PDA",
+    "label_study": "Patent ductus arteriosus",
+    "cid10": "Q25.0",
+    "hpo_id": "HP:0001643",
+    "hpo_label": "Patent ductus arteriosus",
+    "hpo_definition": "In utero, the ductus arteriosus (DA) serves to divert ventricular output away from the lungs and toward the placenta by connecting the main pulmonary artery to the descending aorta. A patent ductus arteriosus (PDA) in the first 3 days of life is a physiologic shunt in healthy term and preterm newborn infants, and normally is substantially closed within about 24 hours after bith and completely closed after about three weeks. Failure of physiologcal closure is referred to a persistent or patent ductus arteriosus (PDA). Depending on the degree of left-to-right shunting, PDA can have clinical consequences.",
+    "hpo_synonyms": "Ductus arteriosus;PDA;Patent ductus Botalli;Persistent arterial duct;Persistent ductus arteriosus",
+    "hpo_xrefs": "Fyler:2100",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:PS",
+    "label_study": "Pulmonary valve stenosis",
+    "cid10": "Q25.6",
+    "hpo_id": "HP:0001642",
+    "hpo_label": "Pulmonic stenosis",
+    "hpo_definition": "A narrowing of the right ventricular outflow tract that can occur at the pulmonary valve (valvular stenosis), below the pulmonary valve (infundibular stenosis), or above the pulmonary valve (supravalvar stenosis).",
+    "hpo_synonyms": "Narrowing of pulmonic valve;Pulmonary stenosis;Pulmonary valve stenosis;Pulmonic valve stenosis",
+    "hpo_xrefs": "Fyler:1611",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:AS",
+    "label_study": "Aortic valve stenosis",
+    "cid10": "Q23.0",
+    "hpo_id": "HP:0001650",
+    "hpo_label": "Aortic valve stenosis",
+    "hpo_definition": "The presence of a stenosis (narrowing) of the aortic valve.",
+    "hpo_synonyms": "Aortic stenosis;Narrowing of aortic valve;Valvular aortic stenosis",
+    "hpo_xrefs": "Fyler:1411",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:TAPVC",
+    "label_study": "Total anomalous pulmonary venous connection",
+    "cid10": "Q26.2",
+    "hpo_id": "HP:0011720",
+    "hpo_label": "Cardiac total anomalous pulmonary venous connection",
+    "hpo_definition": "Type 2 total anomalous pulmonary venous connection.",
+    "hpo_synonyms": "Cardiac total anomalous pulmonary venous connexion;Total anomalous pulmonary venous connection, intracardiac;Type 2 total anomalous pulmonary venous connection",
+    "hpo_xrefs": "Fyler:0920;Fyler:0930;Fyler:920;Fyler:930",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:TRUNCUS",
+    "label_study": "Truncus arteriosus",
+    "cid10": "Q20.0",
+    "hpo_id": "HP:0001660",
+    "hpo_label": "Truncus arteriosus",
+    "hpo_definition": "A single arterial trunk arises from the cardiac mass. The pulmonary arteries, aorta and coronary arteries arise from this single trunk with no evidence of another outflow tract.",
+    "hpo_synonyms": "Common arterial trunk;Persistent truncus arteriosus",
+    "hpo_xrefs": "Fyler:0500;Fyler:500;ICD-10:Q20.0",
+    "retrieved_at": "2026-10-31"
+  },
+  {
+    "phenotype_id": "CHD:EBSTEIN",
+    "label_study": "Ebstein anomaly",
+    "cid10": "Q22.5",
+    "hpo_id": "HP:0010316",
+    "hpo_label": "Ebstein anomaly of the tricuspid valve",
+    "hpo_definition": "Ebstein's anomaly refers to an abnormally placed and deformed tricuspid valve characterized by apical displacement of the septal and posterior tricuspid valve leaflets, leading to atrialization of the right ventricle with a variable degree of malformation and displacement of the anterior leaflet.",
+    "hpo_synonyms": "Ebstein's anomaly;Ebstein's anomaly of the tricuspid valve;Ebstein's malformation",
+    "hpo_xrefs": "EPCC:06.01.34;ICD-10:Q22.5",
+    "retrieved_at": "2026-10-31"
+  }
+]

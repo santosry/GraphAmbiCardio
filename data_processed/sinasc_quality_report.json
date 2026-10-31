@@ -1,0 +1,30 @@
+{
+  "n_births": 98598,
+  "n_chd": 59,
+  "n_records_with_any_icd_code": 697,
+  "n_chd_with_multiple_chd_codes": 8,
+  "idanomal_1_but_no_code": 3,
+  "chd_with_idanomal_not_1": 0,
+  "conception_estimated_pct": 95.45,
+  "years_available": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2025
+  ],
+  "years_missing": [
+    2023,
+    2024
+  ],
+  "retrieved_at": "2026-10-31"
+}

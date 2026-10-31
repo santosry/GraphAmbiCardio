@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_COLD_TOF",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"cold temperature\"[MeSH] OR \"cold spell*\"[tiab] OR \"low temperature\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"tetralogy of fallot\"[tiab] OR \"fallot\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"cold temperature\"[MeSH Terms] OR \"cold spell*\"[Title/Abstract] OR \"low temperature\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"tetralogy of fallot\"[Title/Abstract] OR \"fallot\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "38359432",
+      "title": "Maternal Exposure to Extreme Cold Events and Risk of Congenital Heart Defects: A Large Multicenter Study in China.",
+      "journal": "Environmental science & technology",
+      "year": "2024",
+      "first_author": "Guo J",
+      "doi": "10.1021/acs.est.3c10306",
+      "abstract": "Over the past decade, extreme temperature events have become more frequent and longer in duration. Previous studies on the association between extreme cold events (ECEs) and congenital heart defects (CHDs) are few and inconsistent. We conducted a national multicenter study in 1313 hospitals in 26 provinces in China and collected a total of 14 808 high CHD-risk participants from 2013 to 2021. We evaluated the ECEs experienced by each pregnant women during the embryonic period (3-8 weeks). The results indicated that ECEs experienced by pregnant women during the embryonic period were associated with the development of fetal CHD and were more strongly associated with some specific fetal CHD subtypes, such as pulmonary stenosis, pulmonary atresia, and tetralogy of Fallot. Of the CHD burden, 2.21% (95% CI: 1.43, 2.99%)-2.40% (95% CI: 1.26, 3.55%) of fetal CHD cases were attributable to ECEs during the embryonic period. Our findings emphasize the need to pay more attention to pregnant women whose embryonic period falls during the cold season to reduce cold spell detriments to newborns.",
+      "pubtypes": "Multicenter Study;Journal Article",
+      "mesh_terms": "Pregnancy;Humans;Infant, Newborn;Female;Maternal Exposure;Extreme Cold;Heart Defects, Congenital;Temperature;China",
+      "language": "eng"
+    }
+  ]
+}

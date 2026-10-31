@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this study, please cite the repository and the study version."
+title: "GraphAmbiCardio: a provenance-first knowledge graph of environmental exposures, molecular mechanisms, cardiogenesis and congenital heart defects"
+version: 0.1.0
+date-released: 2026-10-31
+license: MIT
+type: software
+abstract: >-
+  Computational study integrating structured literature searches, curated
+  biological databases, SINASC/SIH data from Campos dos Goytacazes (RJ, Brazil)
+  and ERA5-Land climate into a provenance-first knowledge graph of congenital
+  heart defects.
+keywords:
+  - congenital heart defects
+  - environmental exposure
+  - knowledge graph
+  - cardiogenesis
+  - evidence grading
+  - Brazil
+authors:
+  - family-names: "GraphAmbiCardio study team"
+    given-names: ""
+repository-code: "https://github.com/santosry/GraphAmbiCardio"

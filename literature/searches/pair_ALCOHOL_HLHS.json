@@ -1,0 +1,73 @@
+{
+  "search_id": "pair_ALCOHOL_HLHS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ethanol\"[MeSH] OR \"alcohol drinking\"[MeSH] OR \"alcohol\"[tiab] OR \"ethanol\"[tiab] OR \"fetal alcohol\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"hypoplastic left heart\"[tiab] OR \"HLHS\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ethanol\"[MeSH Terms] OR \"alcohol drinking\"[MeSH Terms] OR \"alcohol\"[Title/Abstract] OR \"ethanol\"[Title/Abstract] OR \"fetal alcohol\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"hypoplastic left heart\"[Title/Abstract] OR \"HLHS\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 5,
+  "retrieved_n": 5,
+  "studies": [
+    {
+      "pmid": "7801298",
+      "title": "Risk factors for hypoplastic left heart syndrome.",
+      "journal": "Teratology",
+      "year": "1994",
+      "first_author": "Tikkanen J",
+      "doi": "10.1002/tera.1420500205",
+      "abstract": "A case-control study was performed in Finland to investigate the etiology of the lethal heart malformation, hypoplastic left heart syndrome (HLHS). The cases represented all verified HLHS (n = 34) in Finland during 1982-1983, and controls (n = 756) were randomly selected from all babies born during the same period. Both case and control mothers were interviewed by midwives approximately 3 mo after delivery. Maternal upper respiratory infection during the first trimester of pregnancy was a significant risk factor for HLHS (OR = 2.5, Cl95 = 1.2-5.4). Maternal exposures at work to factors such as disinfectants, pesticides, dyes, lacquers or paints, and anesthetic gases were rare and failed to indicate any risk for HLHS. Maternal use of deodorants or hairsprays during the first trimester of pregnancy was not a significant risk factor for HLHS (OR = 1.8, Cl95 = 0.9-3.6). The risk of HLHS was not associated with seasonal variation, maternal smoking, alcohol or coffee consumption, or use of acetosalicylic acid. Because the study material is limited in size, the power of this investigation is weak for testing the teratogenicity of specific chemicals on the risk of HLHS. Thus, conclusions from the negative findings of this study should be drawn very carefully.",
+      "pubtypes": "Comparative Study;Journal Article",
+      "mesh_terms": "Birth Weight;Case-Control Studies;Coffee;Cosmetics;Deodorants;Female;Finland;Heart Defects, Congenital;Humans;Hypoplastic Left Heart Syndrome;Infant;Infant, Newborn;Interviews as Topic;Male;Maternal Age;Maternal Exposure;Pregnancy;Pregnancy Complications;Prenatal Diagnosis;Reference Values;Risk Factors;Sex Characteristics;Sex Factors",
+      "language": "eng"
+    },
+    {
+      "pmid": "6512489",
+      "title": "Investigation of a temporal cluster of left sided congenital heart disease.",
+      "journal": "Journal of epidemiology and community health",
+      "year": "1984",
+      "first_author": "Paneth N",
+      "doi": "10.1136/jech.38.4.340",
+      "abstract": "During October and November 1977, eight newborns with critical congenital heart disease, six of these with left sided lesions, were admitted to a New Jersey newborn unit serving two predominantly rural counties with 9700 annual live births. The six left heart lesions (three cases of hypoplastic left heart, two of interrupted aortic arch, and one of aortic coarctation) represented 30% of all neonatal left sided lesions seen at the unit in the three year period 1976-8. The scan statistic for temporal clustering was significant (p less than 0.05). A case-control study was performed in which an average of four controls were matched to each case. A questionnaire was administered to the mothers of cases and controls concerning occupation, periconceptional and prenatal nutrition, radiation and chemical exposure, use of alcohol and tobacco, medications, immunisations, infections, and other exposures. No statistically significant differences between cases and controls were found on any of these items. Although no aetiology for this cluster of congenital heart anomalies could be found, it is of interest that three temporal clusters of fetuses or newborns with chromosomal trisomies have been reported in the medical literature whose conceptions were roughly contemporaneous with those of the infants in our series. These occurred in Rhode Island/Massachusetts, Maryland, and New York City. A speculative possibility is that these four point epidemics represented exposure to a common teratogenic agent, perhaps influenza B, in the winter of 1976/77 in the northeastern United States.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Aorta, Thoracic;Aortic Coarctation;Female;Heart Defects, Congenital;Heart Ventricles;Humans;Infant, Newborn;Male;New Jersey;Space-Time Clustering",
+      "language": "eng"
+    },
+    {
+      "pmid": "36369789",
+      "title": "Influenza vaccination during pregnancy and risk of selected major structural congenital heart defects, National Birth Defects Prevention Study 2006-2011.",
+      "journal": "Birth defects research",
+      "year": "2023",
+      "first_author": "Palmsten K",
+      "doi": "10.1002/bdr2.2114",
+      "abstract": "BACKGROUND: Although results from studies of first-trimester influenza vaccination and congenital heart defects (CHDs) have been reassuring, data are limited for specific CHDs. METHODS: We assessed associations between reported maternal influenza vaccination, 1 month before pregnancy (B1) through end of third pregnancy month (P3), and specific CHDs using data from a multisite, population-based case-control study. Analysis included 2,982 case children diagnosed with a simple CHD (no other cardiac involvement with or without extracardiac defects) and 4,937 control children without a birth defect with estimated delivery dates during 2006-2011. For defects with ≥5 exposed case children, we used logistic regression to estimate propensity score-adjusted odds ratios (aORs) and 95% confidence intervals (CIs), adjusting for estimated delivery year and season; plurality; and maternal age at delivery, race/ethnicity, low folate intake, and smoking and alcohol use during B1P3. RESULTS: Overall, 124 (4.2%) simple CHD case mothers and 197 (4.0%) control mothers reported influenza vaccination from 1 month before through the third pregnancy month. The aOR for any simple CHD was 0.97 (95% CI: 0.76-1.23). Adjusted ORs for specific simple CHDs ranged from 0.62 for hypoplastic left heart syndrome to 2.34 for total anomalous pulmonary venous return (TAPVR). All adjusted CIs included the null except for TAPVR. CONCLUSIONS: Although we cannot fully exclude that exposure misclassification may have masked risks for some CHDs, findings add to existing evidence supporting the safety of inactivated influenza vaccination during pregnancy. The TAPVR result may be due to chance, but it may help inform future studies.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Child;Female;Humans;Pregnancy;Case-Control Studies;Heart Defects, Congenital;Influenza, Human;Maternal Exposure;Mothers;Risk Factors;Scimitar Syndrome;Influenza Vaccines",
+      "language": "eng"
+    },
+    {
+      "pmid": "7394725",
+      "title": "Maternal hormone therapy and congenital heart disease.",
+      "journal": "Teratology",
+      "year": "1980",
+      "first_author": "Ferencz C",
+      "doi": "10.1002/tera.1420210213",
+      "abstract": "Exogenous female sex hormone exposure was studied in the mothers of 110 infants with conotruncal malformations of the heart, born in the years 1972-75. Cases were ascertained throughout the referral area of the Maryland State Intensive Care Neonatal Program. For each case, three normal controls were chosen from the birth population: Two matched on eight characteristics related to the likelihood of hormone-taking (race, maternal age, parity, fetal losses, gestational age, delivery mode, time of prenatal registration, private/service), and one also on the infant's sex and birthweight; the third control was chosen at random. In personal interviews, information was obtained on the mother's general health, family history, reproductive characteristics, pregnancy health, and environmental exposures. Identification of hormonal products was aided by a display of pills and packages. Maternal recall was examined in comparison to the responses of a group of mothers of infants with hypoplastic left heart (\"disease controls\"). Regression analysis on time elapsed since the infant's birth revealed no difference in recall between the mothers of cases and of controls. Multilogistic regression analysis, controlling for confounding variables and for scores constructed for reproductive, malformation, and exposure risks, showed no increase in relative risk for cases when compared with matched controls. When compared to random controls, the analysis suggested a possible increase in relative risk with increased environmental exposure scores; components of the risk score were excess smoking and alcohol intake, exposure to X-ray, drugs, paints, insecticides, and chemicals. The possible significance of this finding needs to be further investigated.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Abortion, Threatened;Estrogens;Female;Heart Defects, Congenital;Humans;Pregnancy;Progesterone;Teratogens",
+      "language": "eng"
+    },
+    {
+      "pmid": "24727555",
+      "title": "Maternal exposure to criteria air pollutants and congenital heart defects in offspring: results from the national birth defects prevention study.",
+      "journal": "Environmental health perspectives",
+      "year": "2014",
+      "first_author": "Stingone JA",
+      "doi": "10.1289/ehp.1307289",
+      "abstract": "BACKGROUND: Epidemiologic literature suggests that exposure to air pollutants is associated with fetal development. OBJECTIVES: We investigated maternal exposures to air pollutants during weeks 2-8 of pregnancy and their associations with congenital heart defects. METHODS: Mothers from the National Birth Defects Prevention Study, a nine-state case-control study, were assigned 1-week and 7-week averages of daily maximum concentrations of carbon monoxide, nitrogen dioxide, ozone, and sulfur dioxide and 24-hr measurements of fine and coarse particulate matter using the closest air monitor within 50 km to their residence during early pregnancy. Depending on the pollutant, a maximum of 4,632 live-birth controls and 3,328 live-birth, fetal-death, or electively terminated cases had exposure data. Hierarchical regression models, adjusted for maternal demographics and tobacco and alcohol use, were constructed. Principal component analysis was used to assess these relationships in a multipollutant context. RESULTS: Positive associations were observed between exposure to nitrogen dioxide and coarctation of the aorta and pulmonary valve stenosis. Exposure to fine particulate matter was positively associated with hypoplastic left heart syndrome but inversely associated with atrial septal defects. Examining individual exposure-weeks suggested associations between pollutants and defects that were not observed using the 7-week average. Associations between left ventricular outflow tract obstructions and nitrogen dioxide and between hypoplastic left heart syndrome and particulate matter were supported by findings from the multipollutant analyses, although estimates were attenuated at the highest exposure levels. CONCLUSIONS: Using daily maximum pollutant levels and exploring individual exposure-weeks revealed some positive associations between certain pollutants and defects and suggested potential windows of susceptibility during pregnancy.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Air Pollutants;Female;Heart Defects, Congenital;Humans;Maternal Exposure;Nitrogen Dioxide;Ozone;Particulate Matter;Pregnancy;Sulfur Dioxide",
+      "language": "eng"
+    }
+  ]
+}

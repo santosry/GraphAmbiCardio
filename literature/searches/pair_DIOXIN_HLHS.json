@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_DIOXIN_HLHS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"dioxins\"[MeSH] OR \"polychlorinated biphenyls\"[MeSH] OR \"dioxin*\"[tiab] OR \"TCDD\"[tiab] OR \"polychlorinated biphenyl*\"[tiab] OR \"PCB\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"hypoplastic left heart\"[tiab] OR \"HLHS\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"dioxins\"[MeSH Terms] OR \"polychlorinated biphenyls\"[MeSH Terms] OR \"dioxin*\"[Title/Abstract] OR \"TCDD\"[Title/Abstract] OR \"polychlorinated biphenyl*\"[Title/Abstract] OR \"PCB\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"hypoplastic left heart\"[Title/Abstract] OR \"HLHS\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "16391975",
+      "title": "A cluster of hypoplastic left heart malformation in Baltimore, Maryland.",
+      "journal": "Pediatric cardiology",
+      "year": "2006",
+      "first_author": "Kuehl KS",
+      "doi": "10.1007/s00246-005-0859-x",
+      "abstract": "Congenital cardiovascular malformations (CCVMs) of the left side of the heart show familial recurrence of various forms of obstructive malformations, including hypoplastic left heart (HLH), interrupted aortic arch, coarctation of the aorta, and aortic stenosis. In a previous population-based study in the Baltimore-Washington region, these malformations were associated with parental reports of occupational or leisure solvent exposure, overt diabetes, and family history of CCVM in first-degree relatives. Spatial analysis in this well-characterized study population may augment self-reported data by revealing additional associations with potential environmental risk factors. We used spatial analysis to identify clusters of HLH as a group. The study population included all live-born cases of hypoplastic left heart syndrome diagnosed in the first year of life between 1981 and 1989 and a random sample of unaffected infant controls matched by year and hospital of birth. The nested case-control cohort in this spatial analysis included 77 HLH cases and 1894 controls in Maryland and the District of Columbia. Nonparametric and regression analyses included personal variables from the interview data set as well as spatial variables. A region of Baltimore was identified that contained HLH at twice the expected frequency based on the distribution of population younger than 5 years of age. The region included 30 of 77 geocoded cases of HLH in the cohort and is significant by spatial scanning at p = 0.056. Within this region, male cases of HLH were disproportionately present compared to females. This cluster is in a region of Baltimore with industrial release of solvents, dioxin, and polychlorinated biphenyls in air. Outside the cluster, HLH is associated with family history of CCVM in a first-degree relative, maternal exposure to miscellaneous solvents, paternal anesthesia, maternal art painting, aspirin ingestion, and maternal diabetes. Inside the cluster, father's painting and exposure to sympathomimetic drugs were associated risk factors. Spatial analysis of HLH cases delineated an urban region with increased prevalence of this left heart malformation. Within this region, excess male cases of HLH occurred, and industrial release to air of solvents, dioxin, and polychlorinated biphenyl compounds was documented. We propose that both genetic and environmental factors contribute to the phenotype of HLH.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Air Pollution;Baltimore;Case-Control Studies;Causality;Cluster Analysis;Cohort Studies;Demography;District of Columbia;Female;Humans;Hypoplastic Left Heart Syndrome;Industry;Infant, Newborn;Male;Maternal Exposure;Mathematical Computing;Paternal Exposure;Pregnancy;Risk Factors;Urban Population",
+      "language": "eng"
+    }
+  ]
+}

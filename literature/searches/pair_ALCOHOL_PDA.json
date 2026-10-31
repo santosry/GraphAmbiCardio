@@ -1,0 +1,61 @@
+{
+  "search_id": "pair_ALCOHOL_PDA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ethanol\"[MeSH] OR \"alcohol drinking\"[MeSH] OR \"alcohol\"[tiab] OR \"ethanol\"[tiab] OR \"fetal alcohol\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"patent ductus arteriosus\"[tiab] OR \"ductus arteriosus\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ethanol\"[MeSH Terms] OR \"alcohol drinking\"[MeSH Terms] OR \"alcohol\"[Title/Abstract] OR \"ethanol\"[Title/Abstract] OR \"fetal alcohol\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"patent ductus arteriosus\"[Title/Abstract] OR \"ductus arteriosus\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 4,
+  "retrieved_n": 4,
+  "studies": [
+    {
+      "pmid": "1556587",
+      "title": "Counseling adolescents with congenital heart disease.",
+      "journal": "The Journal of cardiovascular nursing",
+      "year": "1992",
+      "first_author": "Uzark K",
+      "doi": "10.1097/00005082-199204000-00007",
+      "abstract": "Adolescents with congenital heart disease need information regarding their cardiac condition and health care needs, including any life-style implications of the cardiac diagnosis. Pertinent topics to be addressed include preventive health care needs, physical activity (recreational and vocational considerations), pregnancy and contraception issues, and psychosocial stresses of adolescents. Sensitive counseling and health education by nurses can promote the physical health and psychosocial adaptation of adolescents with congenital heart disease.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adaptation, Psychological;Adolescent;Contraception;Female;Heart Defects, Congenital;Humans;Life Style;Male;Patient Education as Topic;Physical Exertion;Pregnancy;Primary Prevention;Psychology, Adolescent",
+      "language": "eng"
+    },
+    {
+      "pmid": "33297453",
+      "title": "Effect of Beta 3 Adrenoreceptor Modulation on Patency of the Ductus Arteriosus.",
+      "journal": "Cells",
+      "year": "2020",
+      "first_author": "Pini A",
+      "doi": "10.3390/cells9122625",
+      "abstract": "β3-adrenoreceptor (β3-AR), a G-protein coupled receptor, has peculiar regulatory properties in response to oxygen and widespread localization. β3-AR is expressed in the most frequent neoplasms, also occurring in pregnant women, and its blockade reduces tumor growth, indicating β3-AR-blockers as a promising alternative to antineoplastic drugs during pregnancy. However, β3-AR involvement in prenatal morphogenesis and the consequences of its blockade for the fetus remain unknown. In this study, after the demonstrated expression of β3-AR in endothelial and smooth muscle cells of ductus arteriosus (DA), C57BL/6 pregnant mice were acutely treated at 18.5 of gestational day (GD) with indomethacin or with the selective β3-AR antagonist SR59230A, or chronically exposed to SR59230A from 15.5 to 18.5 GD. Six hours after the last treatment, fetuses were collected. Furthermore, newborn mice were treated straight after birth with BRL37344, a β3-AR agonist, and sacrificed after 7 h. SR59230A, at the doses demonstrated effective in reducing cancer progression (10 and 20 mg/kg) in acute and chronic mode, did not induce fetal DA constriction and did not impair the DA ability to close after birth, whereas at the highest dose (40 mg/kg), it was shown to cause DA constriction and preterm-delivery. BRL37344 administered immediately after birth did not alter the physiological DA closure.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adrenergic beta-3 Receptor Antagonists;Animals;Animals, Newborn;Disease Models, Animal;Disease Progression;Ductus Arteriosus;Ductus Arteriosus, Patent;Ethanolamines;Female;Indomethacin;Male;Maternal Exposure;Mice;Mice, Inbred C57BL;Pregnancy;Pregnancy, Animal;Propanolamines;Receptors, Adrenergic, beta-3;Receptors, G-Protein-Coupled;Time Factors",
+      "language": "eng"
+    },
+    {
+      "pmid": "35966825",
+      "title": "European epidemiological patterns of cannabis- and substance-related congenital cardiovascular anomalies: geospatiotemporal and causal inferential study.",
+      "journal": "Environmental epigenetics",
+      "year": "2022",
+      "first_author": "Reece AS",
+      "doi": "10.1093/eep/dvac015",
+      "abstract": "As prenatal and community cannabis exposures have recently been linked with congenital heart disease (CHD), it was of interest to explore these associations in Europe in a causal framework and space-time context. Congenital anomaly data from Eurocat, drug-use data from the European Monitoring Centre for Drugs and Drug Addiction, and income from the World Bank. Countries with rising daily cannabis use had in general higher congenital anomaly rates over time than those without (time: status interaction: β-Est. = 0.0267, P = 0.0059). At inverse probability-weighted panel regression, cannabis terms were positive and significant for CHD, severe CHD, atrial septal defect, ventricular septal defect, atrioventricular septal defect, patent ductus arteriosus, tetralogy of Fallot, vascular disruptions, double outlet right ventricle, transposition of the great vessels, hypoplastic right heart, and mitral valve anomalies from 1.75 × 10-19, 4.20 × 10-11, <2.2 × 10-16, <2.2 × 10-16, 1.58 × 10-12, 4.30 × 10-9, 4.36 × 10-16, 3.50 × 10-8, 5.35 × 10-12, <2.2 × 10-16, 5.65 × 10-5 and 6.06 × 10-10. At spatial regression, terms including cannabis were positive and significant for this same list of anomalies from 0.0038, 1.05 × 10-10, 0.0215, 8.94 × 10-6, 1.23 × 10-5, 2.05 × 10-5, 1.07 × 10-6, 8.77 × 10-5, 9.11 × 10-6, 0.0001, 3.10 × 10-7 and 2.17 × 10-7. 92.6% and 75.2% of 149 E-value estimates and minimum E-values were in high zone >9; 100.0% and 98.7% >1.25. Data show many congenital cardiac anomalies exhibit strong bivariate relationships with metrics of cannabis exposure. Causal inferential modelling for the twelve anomalies selected demonstrated convincing evidence of robust relationships to cannabis which survived adjustment and fulfilled epidemiological criteria for causal relationships. Space-time regression was similarly confirmatory. Epigenomic pathways constitute viable potential mechanisms. Given exponential genotoxic dose-response effects, careful and astute control of cannabinoid penetration is indicated.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "",
+      "language": "eng"
+    },
+    {
+      "pmid": "4035589",
+      "title": "Teratogenicity of dimethoxyethyl phthalate and its metabolites methoxyethanol and methoxyacetic acid in the rat.",
+      "journal": "Teratology",
+      "year": "1985",
+      "first_author": "Ritter EJ",
+      "doi": "10.1002/tera.1420320105",
+      "abstract": "It is hypothesized that the known teratogen di(2-methoxyethyl) phthalate (DMEP) acts by in vivo hydrolysis to 2-methoxyethanol (2-ME), also a known teratogen, which in turn is metabolized to methoxyacetic acid (MAA), the proximate teratogen. Teratological studies were conducted with Wistar rats, with the administration of these three agents on day 12 of gestation. On an equimolar dosage basis, DMEP, 2-ME, and MAA were equally potent, which is consistent with the hypothesis. There was a striking similarity in the defects produced by these agents, mainly hydronephrosis, heart defects, and short limbs and tails. In particular all three agents produced unusual heart defects (dilated ductus arteriosus and dilated aortic arch) not seen with other agents, as well as ventral polydactyly, a rarely seen defect, suggesting teratogenic action by a common mechanism or component; 4-methylpyrazole, an alcohol dehydrogenase inhibitor, provided significant protection against 2-ME. This combination of effects strongly suggests that following the administration of DMEP, 2-ME, or MAA, MAA is the proximate teratogen.",
+      "pubtypes": "Comparative Study;Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Abnormalities, Drug-Induced;Acetates;Animals;Dose-Response Relationship, Drug;Embryo, Mammalian;Ethylene Glycols;Female;Fingers;Heart Defects, Congenital;Hydronephrosis;Limb Deformities, Congenital;Phthalic Acids;Pregnancy;Rats;Rats, Inbred Strains;Toes",
+      "language": "eng"
+    }
+  ]
+}

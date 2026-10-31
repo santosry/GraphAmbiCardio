@@ -1,0 +1,61 @@
+{
+  "search_id": "pair_VPA_VSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"valproic acid\"[MeSH] OR \"valproic acid\"[tiab] OR \"valproate\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"ventricular septal defect\"[tiab] OR \"ventricular septal defects\"[tiab] OR \"VSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"valproic acid\"[MeSH Terms] OR \"valproic acid\"[Title/Abstract] OR \"valproate\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"ventricular septal defect\"[Title/Abstract] OR \"ventricular septal defects\"[Title/Abstract] OR \"VSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 4,
+  "retrieved_n": 4,
+  "studies": [
+    {
+      "pmid": "18188637",
+      "title": "Cardiac malformations are increased in infants of mothers with epilepsy.",
+      "journal": "Pediatric cardiology",
+      "year": "2008",
+      "first_author": "Thomas SV",
+      "doi": "10.1007/s00246-007-9161-4",
+      "abstract": "We aimed to ascertain the prevalence of cardiac malformation (CM) and its association with antenatal exposure to an antiepileptic drug (AED) in infants of mothers with epilepsy (IMEs). Women with epilepsy (WWE) are enrolled in Kerala Registry of Epilepsy and Pregnancy (KREP) in the prepregnancy or early pregnancy period and are followed up with a standard protocol until the IMEs are 6 years old. At 3 months postpartum, a cardiologist, blinded to the AED exposure, carried out a clinical examination and echocardiography on all live-born babies. Patent foramen ovale (PFO) and interatrial septal defects of < 5 mm in size were excluded from CM. Details of maternal epilepsy, folate usage, AED exposure in the first trimester, and newborn characteristics were abstracted from the records of the KREP. We examined 462 babies. Maternal epilepsy was generalized in 201 (43.50%) or localization related in 241 (52.2%). The AED exposure was monotherapy in 262 (56.7%)--carbamazepine (112), valproate (71), phenobarbitone (43), phenytoin (31), and clonazepam (2)--and polytherapy in 126 (27.3%). Seventy-four infants (16.01%) had no AED exposure. There were 36 infants with CM (7.8%; 95% confidence interval: 5.5-10.6). CMs included atrial septal defect (26; 72.2%), tetrology of Fallot (3; 8.3%), patent ductus arteriosus and pulmonic stenosis (2 each; 5.6%), and ventricular septal defect, tricuspid regurgitation, transposition of great arteries (1 each; 2.8%). CMs were significantly more for IMEs with premature birth (p < .003). There was no association between CM and maternal age, epilepsy syndrome, seizure frequency during pregnancy, and folate use. CMs were more frequent with polytherapy (13; 10.3%) compared to monotherapy (17; 6.5%). Those with valproate exposure had a trend (not statistically significant) toward higher frequency of CM compared to IMEs on other AEDs as monotherapy.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adult;Anticonvulsants;Epilepsy;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Male;Pregnancy;Prenatal Exposure Delayed Effects;Prevalence;Prospective Studies",
+      "language": "eng"
+    },
+    {
+      "pmid": "8211818",
+      "title": "Sodium valproate-induced cardiovascular abnormalities in the Jcl:ICR mouse fetus: peak sensitivity of gestational day and dose-dependent effect.",
+      "journal": "Teratology",
+      "year": "1993",
+      "first_author": "Sonoda T",
+      "doi": "10.1002/tera.1420480206",
+      "abstract": "Sodium valproate was administered to Jcl:ICR mice in order to determine its effect on cardiovascular development. A single dose of 600 mg/kg of sodium valproate was injected intraperitoneally on gestational days 6, 7, 8, or 9. In same animals, a single dose of 300, 400, 500, or 700 mg/kg was injected on gestational day 7. On day 18 of gestation, dams were laparotomized to observe number of live, dead and resorbed fetuses. In addition, live fetuses were examined for cardiovascular abnormalities. Although cardiovascular abnormalities were noted in 3% of live fetuses and in 26% of litters in the group treated on day 6 (600 mg/kg), there was no significant difference from the control group, suggests that there may have been a biologically significant increase, although not a statistically significant increase. Cardiovascular abnormalities were found in 30%, 11%, and 8% of live fetuses in the groups treated with 600 mg/kg on days 7, 8, and 9, respectively. These represented a statistically significant increase in effects as opposed to the control groups. Among the varying dosages administered on day 7 of gestation, cardiovascular abnormalities occurred in 2%, 6%, 16%, and 36% of live fetuses in groups treated with 300, 400, 500, and 700 mg/kg, respectively, showing a significant dose-dependent increase. These cardiovascular abnormalities observed were divided into the following groups: ventricular septal defect, endocardial cushion defect, transposition of the great arteries, double outlet right ventricle, tricuspid atresia, and hypoplastic left heart syndrome. Maternal death did not occur at any treatment level.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Dose-Response Relationship, Drug;Female;Fetal Death;Fetal Resorption;Fetus;Heart Defects, Congenital;Male;Mice;Mice, Inbred ICR;Pregnancy;Teratogens;Valproic Acid",
+      "language": "eng"
+    },
+    {
+      "pmid": "42776135",
+      "title": "Long Non-Coding Ribonucleic Acid Taurine Up-Regulated Gene 1 Accelerates Ventricular Septal Defect Formation in Children.",
+      "journal": "Brazilian journal of cardiovascular surgery",
+      "year": "2026",
+      "first_author": "Zhong X",
+      "doi": "10.21470/1678-9741-2025-0181",
+      "abstract": "INTRODUCTION: This study explored the function and molecular mechanism of long non-coding ribonucleic acid taurine up-regulated gene 1 (TUG1) in children with ventricular septal defect (VSD). METHODS: To establish an in vivo VSD model, 10 pregnant mice were administered valproic acid via intraperitoneal injection (VSD group, n = 10). Another 10 pregnant mice were used as the control group and administered 0.9% sodium chloride solution via intraperitoneal injection. Subsequently, the cardiac function and cardiac tissue histopathological characteristics in both groups were evaluated. TUG1, miR-222-3p, and hypoxia-inducible factor 1-alpha subunit inhibitor (HIF1AN) expression levels in cardiac tissues were tested. P19 cells were chosen to simulate VSD in vitro model, and the cell progression was tested. P19 cells were induced to differentiate into cardiomyocytes with dimethyl sulfoxide, and test of the shape and beating frequency of cardiomyocytes was conducted. Left ventricular fractional shortening, ejection fraction, and systolic and diastolic thickness of the cardiac anterior wall were significantly reduced in VSD fetal mice. VSD formation, aortic overlay, and dysplasia were observed. RESULTS: TUG1 and HIF1AN were upregulated, and miR-222-3p was downregulated in VSD mice. Silencing TUG1 or HIF1AN or elevating miR-222-3p facilitated P19 cell progression and differentiation, whereas lowering miR-222-3p did the opposite. TUG1 was a molecular sponge of miR-222-3p, which targeted HIF1AN. Elevating HIF1AN reversed the impacts of silencing TUG1 or elevating miR-222-3p on P19 cells. CONCLUSIONS: The findings of this study could offer a new insight into the molecular basis of VSD and lay the groundwork for new diagnostic techniques.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Heart Septal Defects, Ventricular;RNA, Long Noncoding;Female;Mice;Disease Models, Animal;Up-Regulation;Pregnancy;Myocytes, Cardiac;Humans;MicroRNAs",
+      "language": "eng"
+    },
+    {
+      "pmid": "1893664",
+      "title": "[Effects of antiepileptic drugs on delivery and early childhood--comparison among mono-therapies of valproic acid, phenytoin, carbamazepine and phenobarbital].",
+      "journal": "Rinsho shinkeigaku = Clinical neurology",
+      "year": "1991",
+      "first_author": "Tanaka H",
+      "doi": "",
+      "abstract": "UNLABELLED: The effects of antiepileptic drugs (AED) on infants during pregnancy and delivery were studied in a total of 82 epileptic mothers on various monotherapies; 29 cases receiving valproic acid (VPA), 20 receiving phenytoin (PHT), 18 on carbamazepine (CBZ) and 15 on phenobarbital (PB). While AED serum concentrations were low in most cases of VPA, PHT and PB except for one case of VPA which exceeded therapeutic limits, concentrations were within therapeutic levels in many cases of CBZ. CONCLUSION: When compared with normal controls, abnormal deliveries such as caesarian section were seen more frequently in epileptic mothers under AED treatment. In addition, infants in PB cases were shown to have significantly lower mean birth length, weight and head circumference, suggesting that PB may retard fetal growth. The incidence of malformation in cases of VPA, PHT, CBZ and PB, was 10.3%, 5.0%, 0% and 6.7%, respectively. There were five types of malformation: in VPA cases, spina bifida, Siamese twins and ventricular septal defect tended to be severe, while in PHT and PB cases, cor biloculare and hypospadias respectively were observed. In cases of VPA, serum levels in the umbilical cord were found to be 150% higher than those in the mother.",
+      "pubtypes": "Comparative Study;English Abstract;Journal Article",
+      "mesh_terms": "Abnormalities, Drug-Induced;Adult;Anticonvulsants;Birth Weight;Carbamazepine;Embryonic and Fetal Development;Epilepsy;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Labor, Obstetric;Phenobarbital;Phenytoin;Pregnancy;Pregnancy Complications;Spinal Dysraphism;Valproic Acid",
+      "language": "jpn"
+    }
+  ]
+}

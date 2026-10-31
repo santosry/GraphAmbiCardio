@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_PEST_DORV",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"pesticides\"[MeSH] OR \"pesticide*\"[tiab] OR \"organophosphate*\"[tiab] OR \"glyphosate\"[tiab] OR \"insecticide*\"[tiab] OR \"herbicide*\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"double outlet right ventricle\"[tiab] OR \"DORV\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"pesticides\"[MeSH Terms] OR \"pesticide*\"[Title/Abstract] OR \"organophosphate*\"[Title/Abstract] OR \"glyphosate\"[Title/Abstract] OR \"insecticide*\"[Title/Abstract] OR \"herbicide*\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"double outlet right ventricle\"[Title/Abstract] OR \"DORV\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "7256786",
+      "title": "The heart and diaphragm: target organs in the neonatal death induced by nitrofen (2,4-dichlorophenyl-p-nitrophenyl ether).",
+      "journal": "Toxicology",
+      "year": "1981",
+      "first_author": "Costlow RD",
+      "doi": "10.1016/0300-483x(81)90052-4",
+      "abstract": "This paper examines the effects of in utero exposure to 2,4-dichlorophenyl-p-nitrophenyl ether (nitrofen) on the viability of neonatal Long-Evans rats. Oral administration of this herbicide on days 8-18 of gestation reduced neonatal survival and birth weight. Day 11 of gestation was the most sensitive day for induction of neonatal mortality; 116 mg/kg to the dam on this day was the LD50 for the neonate. An increased incidence of hydronephrosis was observed in 35-day survivors. This increase was dose-related in animals exposed on day 11 of gestation. Fetuses exposed on day 11 and examined at term had reduced weights, delayed skeletal ossification, and an increased frequency of hydronephrosis and diaphragmatic hernias. While nitrofen did cause a high incidence of hydronephrosis, BUN or creatinine levels in 4-h neonates were not elevated. Detailed examination of the hearts of term fetuses revealed cardiac malformations classified as ventricular septal defect, double outlet right ventricle, and transposition of the great vessels. We conclude from these studies that the heart and the diaphragm are the target organs in nitrofen-induced neonatal death.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Abnormalities, Drug-Induced;Animals;Animals, Newborn;Birth Weight;Blood Urea Nitrogen;Diaphragm;Heart Defects, Congenital;Herbicides;Organ Specificity;Phenyl Ethers;Rats;Reproduction",
+      "language": "eng"
+    }
+  ]
+}

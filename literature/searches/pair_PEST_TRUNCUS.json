@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_PEST_TRUNCUS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"pesticides\"[MeSH] OR \"pesticide*\"[tiab] OR \"organophosphate*\"[tiab] OR \"glyphosate\"[tiab] OR \"insecticide*\"[tiab] OR \"herbicide*\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"truncus arteriosus\"[tiab] OR \"common arterial trunk\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"pesticides\"[MeSH Terms] OR \"pesticide*\"[Title/Abstract] OR \"organophosphate*\"[Title/Abstract] OR \"glyphosate\"[Title/Abstract] OR \"insecticide*\"[Title/Abstract] OR \"herbicide*\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"truncus arteriosus\"[Title/Abstract] OR \"common arterial trunk\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "1572431",
+      "title": "Risk factors for conal malformations of the heart.",
+      "journal": "European journal of epidemiology",
+      "year": "1992",
+      "first_author": "Tikkanen J",
+      "doi": "10.1007/BF03334972",
+      "abstract": "The possible effect of environmental factors during early pregnancy on the occurrence of conal malformations (CAS) in the offspring was studied in 90 cases and 756 controls. The cases represented all CAS-infants with anomalies such as transposition, Tetralogy of Fallot and truncus arteriosus verified in Finland during 1982 and 1983. The controls were randomly selected from all babies born in the same period. Case and control mothers were interviewed by midwives using a structured questionnaire approximately three months after delivery. Maternal alcohol consumption during the first trimester was more prevalent among CAS-mothers (50.0%) than controls (38.0%), as was maternal upper respiratory infection (33.0/17.7%). Maternal exposure to dyes, lacquers or paints at work during the first trimester showed an adjusted relative odds ratio of 2.9 (95% confidence interval 1.2-7.5) in logistic regression analysis. The risk of CAS was equal in urban and rural areas and not associated with maternal ABO- or Rh-blood groups, smoking, or coffee, tea, acetylsalicylic acid or diazepam consumption. Maternal exposures to plastic raw materials, disinfectants, pesticides, microwave-ovens or video display terminals at work were not factors associated with the risk of conal malformations.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adult;Female;Finland;Heart Defects, Congenital;Humans;Infant, Newborn;Male;Maternal-Fetal Exchange;Occupational Exposure;Pregnancy;Prevalence;Regression Analysis;Risk Factors;Surveys and Questionnaires",
+      "language": "eng"
+    }
+  ]
+}

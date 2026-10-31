@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_SMOKE_COA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tobacco smoke pollution\"[MeSH] OR \"smoking\"[MeSH] OR \"tobacco smoke\"[tiab] OR \"cigarette smoke\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"coarctation of the aorta\"[tiab] OR \"aortic coarctation\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tobacco smoke pollution\"[MeSH Terms] OR \"smoking\"[MeSH Terms] OR \"tobacco smoke\"[Title/Abstract] OR \"cigarette smoke\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"coarctation of the aorta\"[Title/Abstract] OR \"aortic coarctation\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "22645896",
+      "title": "[Parental smoking during early pregnancy and congenital heart defects].",
+      "journal": "Le Journal medical libanais. The Lebanese medical journal",
+      "year": "2012",
+      "first_author": "Chehab G",
+      "doi": "",
+      "abstract": "OBJECTIVES: Analyze the possible role that can play parental smoking during early pregnancy on the occurrence of different types of congenital heart defects (CHD). MATERIALS AND METHODS: Over a period of 4.5 years (between January 1, 2006 and June 30, 2010), data on all children who had an echocardiography were collected and entered in the National Register of Paediatric and Congenital Heart Disease, Lebanese Society of Cardiology, Beirut. Patients were divided into two groups: group I without CHD, and group II with CHD. Variables recorded were: age of mother, place of residence, parental smoking, the type of CHD, the sex of the child and consanguinity of the parents. We used nonparametric tests for comparing the two populations. The p value was considered significant when inferior to 0.05. RESULTS: Group I consisted of 2466 patients and group II of 793 patients. Only valvar pulmonary stenosis (VPS) was highly associated with mothers who smoked 20 cigarettes or more per day (p = 0.03). When the mother and father consumed at least 20 cigarettes per day, VPS and coarctation of the aorta were associated with a significant p-value (0.03 and 0.02 respectively). CONCLUSION: Parental smoking in early pregnancy can be considered a risk factor for valvar pulmonary stenosis and coarctation of the aorta. Cessation of smoking by the parents before pregnancy could reduce the risk of their occurrence.",
+      "pubtypes": "English Abstract;Journal Article",
+      "mesh_terms": "Adolescent;Adult;Aortic Coarctation;Female;Humans;Infant, Newborn;Lebanon;Pregnancy;Pulmonary Valve Stenosis;Retrospective Studies;Risk Factors;Smoking;Young Adult",
+      "language": "fre"
+    }
+  ]
+}

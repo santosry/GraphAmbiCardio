@@ -1,0 +1,61 @@
+{
+  "search_id": "pair_SMOKE_TOF",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tobacco smoke pollution\"[MeSH] OR \"smoking\"[MeSH] OR \"tobacco smoke\"[tiab] OR \"cigarette smoke\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"tetralogy of fallot\"[tiab] OR \"fallot\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tobacco smoke pollution\"[MeSH Terms] OR \"smoking\"[MeSH Terms] OR \"tobacco smoke\"[Title/Abstract] OR \"cigarette smoke\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"tetralogy of fallot\"[Title/Abstract] OR \"fallot\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 4,
+  "retrieved_n": 4,
+  "studies": [
+    {
+      "pmid": "10230836",
+      "title": "Maternal risk factors and major associated defects in infants with Down syndrome.",
+      "journal": "Epidemiology (Cambridge, Mass.)",
+      "year": "1999",
+      "first_author": "Torfs CP",
+      "doi": "",
+      "abstract": "More than 50% of infants with Down syndrome have associated defects that cause considerable morbidity and mortality. We evaluated the hypothesis that the trisomic genome interacts with environmental factors to increase the risk for specific associated defects. We evaluated risk factors present during early pregnancy in a multiracial population of 687 infants with Down syndrome. Mother's cigarette smoking was associated with the grouped cardiac defects [odds ratio (OR)=2.0; 95% confidence interval (CI) = 1.2-3.2]. When adjusted for other cardiac defects and maternal race, the following specific defects were associated with smoking: atrioventricular canal (OR = 2.3; 95% CI = 1.2-4.5), tetralogy of Fallot (OR = 4.6; 95% CI = 1.2-17.0), and atrial septal defects without ventricular septal defect (OR = 2.2; 95% CI = 1.1-4.3). Hirschsprung disease was associated with mother's daily consumption of more than three cups of coffee (OR = 6.02; 95% CI = 1.2-29.7) and with mother's fever (OR = 3.4; 95% CI = 0.7-16.4), but the number of cases was small. Use of alcohol was not associated with any defect. Mother's race, age, parity, income, or education did not confound the associations. Results suggest that environmental factors can modify the occurrence of associated anomalies in the embryo with Down syndrome.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Abnormalities, Multiple;Adult;Alcohol Drinking;California;Case-Control Studies;Coffee;Digestive System Abnormalities;Down Syndrome;Environmental Exposure;Female;Fever;Heart Defects, Congenital;Humans;Infant, Newborn;Population Surveillance;Pregnancy;Pregnancy Complications;Risk Factors;Smoking;Surveys and Questionnaires",
+      "language": "eng"
+    },
+    {
+      "pmid": "37551363",
+      "title": "Parental risk factors associated with congenital heart disease in a Thai population: multivariable analysis.",
+      "journal": "Asian biomedicine : research, reviews and news",
+      "year": "2021",
+      "first_author": "Suwansumrit C",
+      "doi": "10.2478/abm-2021-0033",
+      "abstract": "BACKGROUND: Congenital heart diseases (CHDs) are the most common types of birth defects and contribute to a large proportion of infant morbidities and mortalities worldwide. These defects may require multiple surgical interventions impacting the infant's quality of life. OBJECTIVES: To identify risk factors associated with CHD in a population of Thai children. METHODS: We conducted a case-control study of patients attending the Pediatric Clinic, Naresuan University Hospital, Thailand. We included data from pediatric patients diagnosed with CHDs as cases, and patients without cardiovascular abnormalities as controls. Risk data were collected from July 2019 to April 2020 using face-to-face interviews. Multiple logistic regression was used to analyze parental factors associated with CHDs. RESULTS: We included 249 cases classified into 2 groups according to severity and 304 patients as controls. For those less-severely affected (155 patients, 62.2%), ventricular septal defect (27.7%) was the most prevalent, whereas for those with severe CHDs, tetralogy of Fallot was the most prevalent (14.0%). There was no difference in sex distribution or maternal obstetric history between the groups. In multivariable analysis, a family history of CHDs (adjusted odds ratio [AOR] 4.67, 95% confidence interval (CI) 1.61-13.57, P = 0.005) and maternal exposure to second-hand cigarette smoke (AOR 1.58, 95% CI 1.03-2.42, P = 0.002) were identified as significant risk factors for CHDs. CONCLUSION: A family history of CHDs and maternal exposure to second-hand cigarette smoke are associated with having offspring with CHDs in the population studied. These findings help us to encourage affected parents to obtain a fetal echocardiogram.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "",
+      "language": "eng"
+    },
+    {
+      "pmid": "35916623",
+      "title": "Maternal pre-pregnancy/early-pregnancy smoking and risk of congenital heart diseases in offspring: A prospective cohort study in Central China.",
+      "journal": "Journal of global health",
+      "year": "2022",
+      "first_author": "Wang T",
+      "doi": "10.7189/jogh.12.11009",
+      "abstract": "BACKGROUND: Prior studies suggested that maternal smoking before and during pregnancy could be associated with increased risks of congenital heart diseases (CHDs) in offspring. However, the results were inconsistent, and the existence of a causal relationship was not confirmed. Our study aimed to estimate the associations of maternal active and passive smoking during the pre-pregnancy/early-pregnancy period with CHDs as well as its common phenotypes in offspring. METHODS: This study was based on data from a prospective cohort study conducted in Central China. A total of 49 158 eligible pregnant women between the 8th and 14th weeks of gestation were invited to join the cohort and were planned to be followed up until 3 months postpartum. The exposure of interest was maternal smoking status, including active and passive smoking status in 3 months before pregnancy as well as in early pregnancy. Self-reported maternal smoking status was ascertained via an in-person interview after recruitment. CHDs were diagnosed by pediatric cardiologists and classified according to ICD-10. Multivariable Poisson regression models were used to estimate the relative risks (RRs) with 95% confidence intervals (CIs) of all CHDs and their common phenotypes associated with maternal smoking status, adjusting for potential confounding factors identified by directed acyclic graphs. RESULTS: CHDs were diagnosed in 564 children. After adjusting for potential confounding factors and comparing with the unexposed groups, CHDs incidence was 165% higher (adjusted RR = 2.65; 95% CI = 1.76-3.98) in offspring exposed to maternal active smoking in 3 months before pregnancy, 69% higher (adjusted-RR = 1.69; 95% CI = 1.39-2.05) in offspring exposed to maternal passive smoking in 3 months before pregnancy, 133% higher (adjusted RR = 2.33; 95% CI = 1.46-3.70) for offspring exposed to maternal active smoking in early pregnancy, and 98% higher (adjusted-RR = 1.98; 95% CI = 1.56-2.51) for offspring exposed to maternal passive smoking in early pregnancy. More specifically, the offspring exposed to maternal active smoking in early pregnancy had the highest risk of Tetralogy of Fallot (adjusted RR = 9.84; 95% CI = 2.49-38.84). These findings were recapitulated in analyses that further adjusted for other behaviour variables apart from the characteristic being assessed and were also confirmed by sensitivity analyses. CONCLUSIONS: Our findings add to the existing body of evidence that implicates maternal pre-pregnancy/early-pregnancy smoking as a significant risk factor for CHDs and their select phenotypes.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "China;Cohort Studies;Female;Heart Defects, Congenital;Humans;Pregnancy;Prospective Studies;Risk Factors;Smoking;Tobacco Smoke Pollution",
+      "language": "eng"
+    },
+    {
+      "pmid": "30766556",
+      "title": "GATA4 molecular screening and assessment of environmental risk factors in a Moroccan cohort with tetralogy of Fallot.",
+      "journal": "African health sciences",
+      "year": "2018",
+      "first_author": "El Bouchikhi I",
+      "doi": "10.4314/ahs.v18i4.11",
+      "abstract": "BACKGROUND: Tetralogy of Fallot (TOF) is the most common cyanotic congenital heart defect (CHD) with an incidence of 1/3600 live births. This disorder was associated with mutations in the transcription factors involved in cardiogenesis, like Nk2 homeobox5 (NKX2-5), GATA binding protein4 (GATA4) and T-BOX1 (TBX1). GATA4 contributes particularly to heart looping and differentiation of the second heart field. OBJECTIVES: The aim of this study was to screen a Moroccan cohort with tetralogy of Fallot for GATA4 mutations, and to assess environmental risk factors that could be involved in the occurrence of this disorder. METHODS: Thirty-one non-syndromic TOF patients, enrolled between 5th April 2014 and 18th June 2015, were screened for GATA4 mutations using direct sequencing of GATA4 coding exons. Statistical assessment of different risk factors, which is a retrospective study, was carried out using Chi-square and Fisher's exact tests. RESULTS: We identified seven exonic variants in nine patients (two missense and five synonymous variants); in addition of eight intronic variants. Assessment of environmental risk factors shows significant association of maternal passive smoking with TOF in the Moroccan population. CONCLUSION: The present study allowed, for the first time, the molecular and environmental characterisation of Moroccan TOF population. Our findings emphasise particularly the strong association of passive smoking with the emergence of tetralogy of Fallot.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adolescent;Adult;Age of Onset;Child;Child, Preschool;Consanguinity;Environment;Exons;Female;GATA4 Transcription Factor;Humans;Infant;Male;Morocco;Polymerase Chain Reaction;Pregnancy;Prenatal Exposure Delayed Effects;Retrospective Studies;Risk Factors;Tetralogy of Fallot;Tobacco Smoke Pollution;Transcription Factors",
+      "language": "eng"
+    }
+  ]
+}

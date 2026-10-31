@@ -1,0 +1,180 @@
+# 02 — Search strategy, PRISMA-ScR flow and reproducibility
+
+**Retrieval date for all searches:** 2026-10-31 (UTC).
+**Study period for local epidemiology:** 2010-01-01 to 2025-12-31. This period was **not** applied to biological literature.
+
+---
+
+## 1. Sources and interfaces
+
+| Source | Interface used | Status | Notes |
+|---|---|---|---|
+| PubMed/MEDLINE | NCBI E-utilities (`esearch`, `efetch`, XML) | Used | 3 req/s without key; 10 req/s with `NCBI_API_KEY` |
+| Europe PMC | REST `/search` (JSON, `resultType=core`) | Used | independent discovery + open access |
+| SciELO | `search.scielo.org` | **HTTP 403** | automated access blocked; not searched |
+| BVS/LILACS | `pesquisa.bvsalud.org` | **HTTP 403** | automated access blocked; not searched |
+| Portal CAPES | web interface only | Not automated | no public API; access requires institutional session |
+| Google Scholar | — | Not used | not reproducible; no record-level export |
+| Reference lists | manual | Partially used | reviews and anchor papers checked for key references |
+
+The failure of SciELO/BVS is a real limitation: Portuguese-language and Latin American literature is under-represented. It is recorded in `09_LIMITATIONS_AND_GAPS.md`.
+
+---
+
+## 2. Concept blocks (PubMed syntax)
+
+```
+POPULATION
+("heart defects, congenital"[MeSH] OR "congenital heart defect*"[tiab]
+ OR "congenital heart disease*"[tiab] OR "congenital heart anomal*"[tiab]
+ OR "cardiac anomal*"[tiab])
+
+EXPOSURE
+("environmental exposure"[MeSH] OR "air pollution"[MeSH] OR "particulate matter"[MeSH]
+ OR "maternal exposure"[MeSH] OR "pesticides"[MeSH] OR "metals, heavy"[MeSH]
+ OR "hot temperature"[MeSH] OR "solvents"[MeSH] OR "tobacco smoke pollution"[MeSH]
+ OR "alcohol drinking"[MeSH] OR "valproic acid"[MeSH])
+
+MECHANISM
+("oxidative stress"[MeSH] OR "epigenesis, genetic"[MeSH] OR "inflammation"[MeSH]
+ OR "signal transduction"[MeSH] OR "gene expression regulation, developmental"[MeSH]
+ OR "mitochondria"[MeSH])
+
+DEVELOPMENT
+("cardiogenesis"[tiab] OR "heart development"[tiab] OR "embryonic heart"[tiab]
+ OR "neural crest"[tiab] OR "outflow tract"[tiab] OR "septation"[tiab])
+```
+
+The MeSH-only exposure block has low recall for PM2.5, ozone, solvents and specific pesticides; the 14-exposure panel therefore uses **MeSH + free-text** combinations below.
+
+---
+
+## 3. Five pre-registered domain queries (exact strings)
+
+These are the strings stored in `literature/searches/A*.json` (field `query`). Retrieve with `python scripts/collection/01_literature.py`.
+
+| ID | Query |
+|---|---|
+| **A1** | `EXPOSURE AND POPULATION` |
+| **A2** | `EXPOSURE AND MECHANISM AND (cardiac OR heart OR embry* OR pregnancy OR placenta*)` |
+| **A3** | `MECHANISM AND DEVELOPMENT` |
+| **A4** | `DEVELOPMENT AND POPULATION` |
+| **A5** | `(NKX2-5 OR GATA4 OR TBX5 OR NOTCH1 OR TBX1 OR JAG1) AND ("congenital heart"[tiab] OR "heart defect"[tiab] OR "cardiac malformation"[tiab])` |
+
+`retmax = 100` per domain, sorted by relevance, no date filter (biological literature is not restricted to 2010–2025).
+
+### Results
+
+| ID | PubMed hits | Retrieved | Europe PMC hits | Europe PMC retrieved |
+|---|---:|---:|---:|---:|
+| A1 | 1,512 | 100 | 1,599 | 100 |
+| A2 | 8,520 | 100 | 171 | 100 |
+| A3 | 6,736 | 100 | 39 | 39 |
+| A4 | 7,681 | 100 | 593 | 100 |
+| A5 | 992 | 98 | 2,387 | 100 |
+
+Europe PMC translation: `[tiab]` → `TITLE_ABS:`, `[MeSH]` → `MESH:`. The translation is stored verbatim in each `*_europepmc.json` (`query_translation`). Europe PMC does not accept the PubMed field tags; the translated query is a **recall-oriented approximation**, not an identical query.
+
+---
+
+## 4. Exposure × phenotype matrix (196 queries)
+
+Template:
+
+```
+(EXPOSURE_TERMS)
+AND ("congenital heart"[tiab] OR "congenital heart disease*"[tiab]
+     OR "heart defects, congenital"[MeSH] OR "cardiac malformation*"[tiab])
+AND (PHENOTYPE_TERMS)
+AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab]
+     OR "birth defect*"[tiab] OR embry*[tiab] OR "in utero"[tiab])
+```
+
+- 14 exposures × 14 phenotypes = **196 queries**.
+- `retmax = 15` per pair (manual feasibility screening), `retmax = 0` for exposure × mechanism counts.
+- Total pair hits: **546**; records retrieved: **513**.
+- Full strings: `reports/feasibility_pair_matrix.csv` (column `query`).
+
+### Exposure terms (PubMed)
+
+| Exposure | Terms |
+|---|---|
+| PM2.5 | `"particulate matter"[MeSH] OR "PM2.5"[tiab] OR "PM 2.5"[tiab] OR "fine particulate matter"[tiab]` |
+| NO2/traffic | `"nitrogen dioxide"[MeSH] OR "nitrogen dioxide"[tiab] OR "NO2"[tiab] OR "traffic-related air pollution"[tiab]` |
+| O3 | `"ozone"[MeSH] OR "ozone"[tiab]` |
+| SO2 | `"sulfur dioxide"[MeSH] OR "sulfur dioxide"[tiab] OR "sulphur dioxide"[tiab]` |
+| Heat | `"hot temperature"[MeSH] OR "hyperthermia"[MeSH] OR "hyperthermia"[tiab] OR "heat wave*"[tiab] OR "high temperature"[tiab]` |
+| Cold | `"cold temperature"[MeSH] OR "cold spell*"[tiab] OR "low temperature"[tiab]` |
+| Pesticides | `"pesticides"[MeSH] OR "pesticide*"[tiab] OR "organophosphate*"[tiab] OR "glyphosate"[tiab] OR "insecticide*"[tiab] OR "herbicide*"[tiab]` |
+| Solvents | `"solvents"[MeSH] OR "trichloroethylene"[MeSH] OR "benzene"[MeSH] OR "organic solvent*"[tiab] OR "trichloroethylene"[tiab] OR "benzene exposure"[tiab]` |
+| Metals | `"arsenic"[MeSH] OR "lead"[MeSH] OR "mercury"[MeSH] OR "metals, heavy"[MeSH] OR "heavy metal*"[tiab]` |
+| Tobacco | `"tobacco smoke pollution"[MeSH] OR "smoking"[MeSH] OR "tobacco smoke"[tiab] OR "cigarette smoke"[tiab]` |
+| Alcohol | `"ethanol"[MeSH] OR "alcohol drinking"[MeSH] OR "alcohol"[tiab] OR "ethanol"[tiab] OR "fetal alcohol"[tiab]` |
+| Valproate | `"valproic acid"[MeSH] OR "valproic acid"[tiab] OR "valproate"[tiab]` |
+| Retinoic acid | `"tretinoin"[MeSH] OR "retinoic acid"[tiab] OR "isotretinoin"[tiab] OR "vitamin A"[tiab]` |
+| Dioxins/PCBs | `"dioxins"[MeSH] OR "polychlorinated biphenyls"[MeSH] OR "dioxin*"[tiab] OR "TCDD"[tiab] OR "polychlorinated biphenyl*"[tiab] OR "PCB"[tiab]` |
+
+### Phenotype terms
+
+Each phenotype uses its label and accepted variants in `[tiab]` (e.g. VSD: `"ventricular septal defect"`, `"ventricular septal defects"`, `"VSD"`). Abbreviations are only used inside the CHD context block. Full mapping in `src/graphambicardio/config.py` (`PHENOTYPE_QUERY_TERMS`).
+
+**Rationale for the context block:** without it, the matrix retrieved surgical/anaesthetic case reports and adult disease. With it, precision improved but 73 pairs dropped to zero — an honest reflection of the literature, not a search failure.
+
+---
+
+## 5. Deduplication and screening flow (PRISMA-ScR)
+
+Deduplication key precedence: PMID → DOI → normalised title (alphanumeric, lower-case, first 200 characters).
+
+| Stage | Records | Notes |
+|---|---:|---|
+| PubMed domain searches (5) | 498 | top 100 per domain |
+| PubMed pair searches (196) | 513 | top 15 per pair |
+| Europe PMC searches (5) | 439 | top 100 / all available |
+| **Total retrieved** | **1,450** | |
+| Duplicates removed | 355 | 24.5% of retrieved |
+| **Unique records screened** | **1,095** | title/abstract |
+| Unique with abstract | 1,003 | 91.6% |
+| Manually curated anchor studies | 29 | 46 evidence edges |
+
+Machine-readable: `reports/prisma_flow.csv`.
+
+### Screening procedure actually used
+
+1. **Automated triage** of all retrieved records (`literature/screen.py`): species, study design, exposure-window vocabulary, mechanism vocabulary, phenotype vocabulary, review flag.
+2. **Manual reading** of anchor studies (29) selected to cover: each exposure with positive human evidence, each mechanism with experimental evidence, each process→phenotype link, and the classic gene discoveries.
+3. **Audit** of quote fidelity at build time (100%) and re-check of a random 25% at validation time.
+
+This is **not** a full dual-reviewer systematic review. No kappa is reported because full-text dual screening was not performed. The manual audit sample (`reports/manual_audit_sample.csv`) is provided for a future two-reviewer reliability assessment.
+
+---
+
+## 6. Inclusion / exclusion applied to anchor studies
+
+Included:
+- human epidemiological studies with a defined exposure window and CHD outcome;
+- experimental studies with a defined species/model and a cardiac developmental endpoint;
+- human genetics with variant-level evidence;
+- reviews used **only** as indirect synthesis.
+
+Excluded:
+- case reports of anaesthetic/surgical management;
+- adult cardiac disease without congenital context;
+- technical/methodological papers matching keywords incidentally;
+- records without abstract or with unverifiable claims;
+- predatory/non-indexed sources.
+
+Examples of excluded retrieved records: PMID 1939319 and 9301187 (malignant hyperthermia during TOF surgery), PMID 34021458 (ultrasound phantom for VSD training), PMID 17692954 (smoking and mortality in adults with CHD).
+
+---
+
+## 7. Reproducibility
+
+```bash
+# all searches are cached under data_raw/http_cache; re-running is idempotent
+.venv/Scripts/python.exe scripts/collection/01_literature.py
+```
+
+Each `literature/searches/*.json` stores: search ID, database, exact query, query translation, date filter, sort, retrieval date, total count, retrieved count and every record (PMID, DOI, title, journal, year, authors, abstract, publication types, MeSH terms).
+
+To audit a query, open the corresponding JSON and compare `query`, `count_total` and `retrieved_at`.

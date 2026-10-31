@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_PM25_AS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"particulate matter\"[MeSH] OR \"PM2.5\"[tiab] OR \"PM 2.5\"[tiab] OR \"fine particulate matter\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"aortic stenosis\"[tiab] OR \"aortic valve stenosis\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"particulate matter\"[MeSH Terms] OR \"PM2.5\"[Title/Abstract] OR \"PM 2.5\"[Title/Abstract] OR \"fine particulate matter\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"aortic stenosis\"[Title/Abstract] OR \"aortic valve stenosis\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "33135766",
+      "title": "Maternal occupational exposure and congenital heart defects in offspring.",
+      "journal": "Scandinavian journal of work, environment & health",
+      "year": "2020",
+      "first_author": "Spinder N",
+      "doi": "10.5271/sjweh.3912",
+      "abstract": "Objectives Congenital heart defects (CHD) are the most prevalent congenital anomalies. This study aims to examine the association between maternal occupational exposures to organic and mineral dust, solvents, pesticides, and metal dust and fumes and CHD in the offspring, assessing several subgroups of CHD. Methods For this case-control study, we examined 1174 cases with CHD from EUROCAT Northern Netherlands and 5602 controls without congenital anomalies from the Lifelines cohort study. Information on maternal jobs held early in pregnancy was collected via self-administered questionnaires, and job titles were linked to occupational exposures using a job exposure matrix. Results An association was found between organic dust exposure and coarctation of aorta [adjusted odds ratio (OR adj) 1.90, 95% confidence interval (CI) 1.01-3.59] and pulmonary (valve) stenosis in combination with ventricular septal defect (OR adj2.68, 95% CI 1.07-6.73). Mineral dust exposure was associated with increased risk of coarctation of aorta (OR adj2.94, 95% CI 1.21-7.13) and pulmonary valve stenosis (OR adj1.99, 95% CI 1.10-3.62). Exposure to metal dust and fumes was infrequent but was associated with CHD in general (OR adj2.40, 95% CI 1.09-5.30). Exposure to both mineral dust and metal dust and fumes was associated with septal defects (OR adj3.23, 95% CI 1.14-9.11). Any maternal occupational exposure was associated with a lower risk of aortic stenosis (OR adj0.32, 95% CI 0.11-0.94). Conclusions Women should take preventive measures or avoid exposure to mineral and organic dust as well as metal dust and fumes early in pregnancy as this could possibly affect foetal heart development.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adolescent;Adult;Air Pollutants, Occupational;Case-Control Studies;Dust;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Male;Maternal Exposure;Maternal-Fetal Exchange;Metals;Middle Aged;Minerals;Netherlands;Occupational Exposure;Pesticides;Pregnancy;Prenatal Exposure Delayed Effects;Solvents;Young Adult",
+      "language": "eng"
+    }
+  ]
+}

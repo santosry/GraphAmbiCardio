@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_SMOKE_PDA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tobacco smoke pollution\"[MeSH] OR \"smoking\"[MeSH] OR \"tobacco smoke\"[tiab] OR \"cigarette smoke\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"patent ductus arteriosus\"[tiab] OR \"ductus arteriosus\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tobacco smoke pollution\"[MeSH Terms] OR \"smoking\"[MeSH Terms] OR \"tobacco smoke\"[Title/Abstract] OR \"cigarette smoke\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"patent ductus arteriosus\"[Title/Abstract] OR \"ductus arteriosus\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "10555617",
+      "title": "Maternal smoking and congenital heart defects.",
+      "journal": "European journal of epidemiology",
+      "year": "1999",
+      "first_author": "Källén K",
+      "doi": "10.1023/a:1007671631188",
+      "abstract": "The Swedish Child Cardiology Registry (CCR) and the Swedish Medical Birth Registry (MBR) were used to investigate a possible association between maternal smoking during pregnancy and congenital heart defects. Among 1,413,811 infants born in 1983-1996 with known smoking exposure in early pregnancy, 3384 infants with congenital heart defects were selected (458 term infants with persistent ductus arteriosus (PDA) identified from MBR or CCR, and 2926 infants with other heart defects, identified from CCR). After controlling for year of birth, maternal age, parity, and educational level, a weak, statistically significant association between all heart defects and maternal smoking was found (odds ratio (OR): 1.09; 95% confidence interval (CI): 1.01-1.19). When infants with isolated PDA were removed from the case group the significance disappeared (OR: 1.07; 95% CI: 0.98-1.17). For truncus abnormalities (OR: 1.23; 95% CI: 1.02-1.49), atrial septal defects (OR: 1.63; 95% CI: 1.04-2.57), and PDA (OR: 1.30; 95% CI: 1.05-1.62), a rather strong effect of maternal smoking was indicated. The increased OR for PDA remained when gestational duration and intrauterine growth was also controlled for. Further research based on independent data sets is needed to conclude whether the risk estimates for maternal smoking are true and truly differ between the groups. The classification system used (with 24 classes) is described in enough detail to permit a repetition of the study.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Confounding Factors, Epidemiologic;Ductus Arteriosus, Patent;Female;Gestational Age;Heart Defects, Congenital;Humans;Infant, Newborn;Odds Ratio;Pregnancy;Registries;Risk Factors;Smoking;Sweden",
+      "language": "eng"
+    },
+    {
+      "pmid": "39889725",
+      "title": "Pathohistological Changes in the Lungs of Very Preterm Infants with Bronchopulmonary Dysplasia Depending on the Clinical Features.",
+      "journal": "American journal of perinatology",
+      "year": "2025",
+      "first_author": "Menshykova AO",
+      "doi": "10.1055/a-2511-8702",
+      "abstract": "Establishing clinical factors associated with histological changes in the lungs of very preterm infants with evolving or established bronchopulmonary dysplasia (BPD) is essential for the development of more effective preventive interventions.Thirty-two infants with a gestational age (GA) of <32 weeks who died of BPD or had BPD but died due to other causes were included in the study. The associations of clinical data with histopathological changes in the lungs were assessed.The mean (standard deviation) GA of infants was 26.7 (1.9) weeks, and the mean birth weight was 919.7 (242.9) g. We revealed significant associations of maternal smoking with vascular hypertension lesions (r s = 0.5, p < 0.05) in infants' lungs. Intrauterine growth retardation increased the risk of extensive fibroproliferation (r s = 0.4, p < 0.05). In infants with patent ductus arteriosus (PDA) requiring treatment, muscle hyperplasia (r s = 0.5, p < 0.05) was detected more often. The longer duration of mechanical ventilation (MV) correlated with diffuse interstitial fibroproliferation (r s = 0.5, p < 0.05), airway epithelial lesions (r s = 0.3, p < 0.05), and airway muscle hyperplasia (r s = 0.4, p < 0.05). In infants who needed the longer MV and/or oxygen supplementation, an increased incidence of extensive fibroproliferation was found (r s = 0.4 and r s = 0.4 respectively, p < 0.05). Antenatal steroids decreased the incidence of diffuse interstitial fibrosis (r s = - 0.4, p < 0.05).In very preterm infants with a GA of less than 32 weeks, lack of antenatal steroid prophylaxis, intrauterine growth restriction, presence of hemodynamically significant PDA, and prolonged MV or oxygen supplementation are associated with the pathomorphological lung changes that are more typical for \"old\" BPD. Traditional preventive measures against BPD remain essential in a modern population of very preterm infants. · Pathomorphological lung changes correlate with clinical data in very preterm infants who died of BPD.. · Lack of antenatal steroids prophylaxis, growth retardation, PDA, and prolonged mechanical ventilation affect lungs.. · Traditional BPD preventive measures remain essential in the modern population of preterm infants..",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Humans;Bronchopulmonary Dysplasia;Infant, Newborn;Female;Lung;Male;Respiration, Artificial;Gestational Age;Infant, Extremely Premature;Ductus Arteriosus, Patent;Fetal Growth Retardation;Smoking;Infant, Premature;Pregnancy",
+      "language": "eng"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_DIOXIN_AVSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"dioxins\"[MeSH] OR \"polychlorinated biphenyls\"[MeSH] OR \"dioxin*\"[tiab] OR \"TCDD\"[tiab] OR \"polychlorinated biphenyl*\"[tiab] OR \"PCB\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrioventricular septal defect\"[tiab] OR \"atrioventricular canal\"[tiab] OR \"AVSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"dioxins\"[MeSH Terms] OR \"polychlorinated biphenyls\"[MeSH Terms] OR \"dioxin*\"[Title/Abstract] OR \"TCDD\"[Title/Abstract] OR \"polychlorinated biphenyl*\"[Title/Abstract] OR \"PCB\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrioventricular septal defect\"[Title/Abstract] OR \"atrioventricular canal\"[Title/Abstract] OR \"AVSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "9144457",
+      "title": "Expression of the aryl hydrocarbon receptor (AhR) and AhR nuclear translocator during chick cardiogenesis is consistent with 2,3,7,8-tetrachlorodibenzo-p-dioxin-induced heart defects.",
+      "journal": "Toxicology and applied pharmacology",
+      "year": "1997",
+      "first_author": "Walker MK",
+      "doi": "10.1006/taap.1996.8068",
+      "abstract": "We examined cardiotoxicity induced by 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) in the chick embryo and the cardiac expression of transcription factors, the aryl hydrocarbon receptor (AhR) which binds TCDD, and its dimer partner, the AhR nuclear translocator (Arnt). Chicken eggs were injected with control (triolein) or 1.0 pmol TCDD/g egg prior to incubation and collected on Day 10 when cardiomorphogenesis is complete. Relative to controls, TCDD increased heart wet weight (27.2 +/- 0.5 versus 36.6 +/- 1.3 mg, p < 0.001) and dry weight (2.7 +/- 0.1 versus 3.1 +/- 0.1 mg, p < 0.01), and tended to increase heart myosin content (3.5 +/- 0.6 versus 6.3 +/- 2.5 microg, p < 0.07), suggesting an increase in cardiac muscle mass and edema. Histologic and morphometric analyses revealed that 10/13 TCDD-exposed hearts exhibited enlarged right and left ventricles, thickened ventricular septum, and a thinner left ventricular wall with increased trabeculation, and 4/13 exhibited ventricular septal defects compared to controls (0/23). To evaluate AhR and Arnt expression, untreated chick embryos were collected on Days 2.2, 3, 4, 5, and 8 of incubation, preserved in Bouin's fixative, sectioned, and stained with AhR and Arnt antibodies. The AhR was expressed ubiquitously in cardiac myocytes, while Arnt expression was restricted to myocytes overlying developing septa: atrioventricular canal, outflow tract, and atrial and ventricular septa. Both proteins were absent from endocardium and endocardial-derived mesenchyme. In addition, cardiac expression of an AhR/Arnt target, cytochrome P4501A1, was restricted to myocardium coexpressing AhR and Arnt. Thus, the spatial and temporal expression of AhR and Arnt suggests that the developing myocardium and cardiac septa are potential targets of TCDD-induced teratogenicity, and such targets are also consistent with cardiac hypertrophy and septal defects observed following TCDD exposure.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Aryl Hydrocarbon Receptor Nuclear Translocator;Blotting, Western;Body Weight;Chick Embryo;Cytochrome P-450 CYP1A1;DNA-Binding Proteins;Heart;Heart Defects, Congenital;Immunoenzyme Techniques;Morphogenesis;Myocardium;Myosins;Organ Size;Polychlorinated Dibenzodioxins;Receptors, Aryl Hydrocarbon;Transcription Factors",
+      "language": "eng"
+    }
+  ]
+}

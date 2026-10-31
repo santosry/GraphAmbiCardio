@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_ALCOHOL_PS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ethanol\"[MeSH] OR \"alcohol drinking\"[MeSH] OR \"alcohol\"[tiab] OR \"ethanol\"[tiab] OR \"fetal alcohol\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"pulmonary stenosis\"[tiab] OR \"pulmonary valve stenosis\"[tiab] OR \"pulmonic stenosis\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ethanol\"[MeSH Terms] OR \"alcohol drinking\"[MeSH Terms] OR \"alcohol\"[Title/Abstract] OR \"ethanol\"[Title/Abstract] OR \"fetal alcohol\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"pulmonary stenosis\"[Title/Abstract] OR \"pulmonary valve stenosis\"[Title/Abstract] OR \"pulmonic stenosis\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "40303284",
+      "title": "Cardiovascular Mettl3 Deficiency Causes Congenital Cardiac Defects and Postnatal Lethality in Mice.",
+      "journal": "International journal of biological sciences",
+      "year": "2025",
+      "first_author": "Feng Q",
+      "doi": "10.7150/ijbs.100941",
+      "abstract": "N6-methyladenosine (m6A) is the most common epigenetic modification of RNA, but whether m6A RNA methylation modulates cardiovascular development or congenital heart diseases (CHDs) has not been determined. The published high-throughput sequencing data suggested that transcripts of genes related to CHDs were prone to m6A modification, while the expression of methyltransferase-like 3 (METTL3)-involved methyltransferase complex was downregulated in mouse embryonic hearts following prenatal alcohol exposure as a critical CHD risk factor, indicating the association of insufficient m6A RNA methylation with CHDs. Using cardiovascular-specific Mettl3 knockout mice (Tagln-Cre; Mettl3flox/flox ), we observed that cardiovascular Mettl3 deficiency resulted in postnatal lethality and profound congenital cardiac defects, including left pulmonary stenosis, ventricular septal defects, and right ventricular hypoplasia. The m6A-specific methylated RNA-immunoprecipitation sequencing identified Sox4, Sox11, and Mef2a, the critical transcription factors involved in the right ventricle and outflow tract development, were the regulatory targets of METTL3-catalyzed m6A RNA methylation. Mettl3 deficiency-caused insufficient m6A RNA methylation downregulated the expression of SOX4, SOX11, and MEF2A in mouse embryonic hearts. In conclusion, cardiovascular Mettl3 deficiency directly led to congenital cardiac defects by downregulating the m6A-dependent expression of Mef2a, Sox4, and Sox11. METTL3-catalyzed m6A RNA methylation may become a potential target for preventing and treating CHDs.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Animals;Methyltransferases;Heart Defects, Congenital;Mice;Mice, Knockout;Adenosine;Methylation;Female",
+      "language": "eng"
+    },
+    {
+      "pmid": "24727555",
+      "title": "Maternal exposure to criteria air pollutants and congenital heart defects in offspring: results from the national birth defects prevention study.",
+      "journal": "Environmental health perspectives",
+      "year": "2014",
+      "first_author": "Stingone JA",
+      "doi": "10.1289/ehp.1307289",
+      "abstract": "BACKGROUND: Epidemiologic literature suggests that exposure to air pollutants is associated with fetal development. OBJECTIVES: We investigated maternal exposures to air pollutants during weeks 2-8 of pregnancy and their associations with congenital heart defects. METHODS: Mothers from the National Birth Defects Prevention Study, a nine-state case-control study, were assigned 1-week and 7-week averages of daily maximum concentrations of carbon monoxide, nitrogen dioxide, ozone, and sulfur dioxide and 24-hr measurements of fine and coarse particulate matter using the closest air monitor within 50 km to their residence during early pregnancy. Depending on the pollutant, a maximum of 4,632 live-birth controls and 3,328 live-birth, fetal-death, or electively terminated cases had exposure data. Hierarchical regression models, adjusted for maternal demographics and tobacco and alcohol use, were constructed. Principal component analysis was used to assess these relationships in a multipollutant context. RESULTS: Positive associations were observed between exposure to nitrogen dioxide and coarctation of the aorta and pulmonary valve stenosis. Exposure to fine particulate matter was positively associated with hypoplastic left heart syndrome but inversely associated with atrial septal defects. Examining individual exposure-weeks suggested associations between pollutants and defects that were not observed using the 7-week average. Associations between left ventricular outflow tract obstructions and nitrogen dioxide and between hypoplastic left heart syndrome and particulate matter were supported by findings from the multipollutant analyses, although estimates were attenuated at the highest exposure levels. CONCLUSIONS: Using daily maximum pollutant levels and exploring individual exposure-weeks revealed some positive associations between certain pollutants and defects and suggested potential windows of susceptibility during pregnancy.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Air Pollutants;Female;Heart Defects, Congenital;Humans;Maternal Exposure;Nitrogen Dioxide;Ozone;Particulate Matter;Pregnancy;Sulfur Dioxide",
+      "language": "eng"
+    }
+  ]
+}

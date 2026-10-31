@@ -1,0 +1,15 @@
+exposure_id,exposure,n_pairs_with_evidence,total_records,pairs_with_human_triage,pairs_experimental_only
+EXP:PM25,Fine particulate matter (PM2.5),11,76,11,0
+EXP:NO2,Nitrogen dioxide (NO2) / traffic-related air pollution,8,55,8,0
+EXP:O3,Ozone (O3),9,32,9,0
+EXP:SO2,Sulfur dioxide (SO2),8,27,8,0
+EXP:HEAT,Maternal heat exposure / hyperthermia,5,14,5,0
+EXP:COLD,Cold exposure,5,5,4,1
+EXP:PEST,Pesticides,12,50,12,0
+EXP:SOLV,"Organic solvents (e.g., trichloroethylene, benzene)",9,24,8,1
+EXP:METALS,"Heavy metals (arsenic, lead, mercury)",8,34,8,0
+EXP:SMOKE,Tobacco smoke,11,35,11,0
+EXP:ALCOHOL,Alcohol (ethanol),13,101,13,0
+EXP:VPA,Valproic acid,9,16,9,0
+EXP:RA,Retinoic acid / vitamin A derivatives,10,72,8,2
+EXP:DIOXIN,Dioxins / PCBs (endocrine-disrupting chemicals),5,5,3,2

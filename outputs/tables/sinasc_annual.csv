@@ -1,0 +1,15 @@
+year,live_births,chd_cases,chd_per_10000_lb,chd_proportion_per_1000_lb,anomaly_flag_1,any_q_code,data_status
+2010,6882,6,8.72,0.87,39,39,consolidated
+2011,6021,0,0.0,0.0,28,27,consolidated
+2012,6612,2,3.02,0.3,25,25,consolidated
+2013,7424,1,1.35,0.13,16,16,consolidated
+2014,7891,1,1.27,0.13,19,17,consolidated
+2015,8229,4,4.86,0.49,34,34,consolidated
+2016,7516,4,5.32,0.53,53,53,consolidated
+2017,7498,8,10.67,1.07,55,55,consolidated
+2018,7449,2,2.68,0.27,63,62,consolidated
+2019,7166,7,9.77,0.98,70,69,consolidated
+2020,6849,5,7.3,0.73,78,78,consolidated
+2021,6776,4,5.9,0.59,75,75,consolidated
+2022,6361,6,9.43,0.94,80,80,consolidated
+2025,5924,9,15.19,1.52,65,64,preliminary

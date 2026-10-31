@@ -1,0 +1,49 @@
+{
+  "search_id": "pair_SMOKE_AVSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tobacco smoke pollution\"[MeSH] OR \"smoking\"[MeSH] OR \"tobacco smoke\"[tiab] OR \"cigarette smoke\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrioventricular septal defect\"[tiab] OR \"atrioventricular canal\"[tiab] OR \"AVSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tobacco smoke pollution\"[MeSH Terms] OR \"smoking\"[MeSH Terms] OR \"tobacco smoke\"[Title/Abstract] OR \"cigarette smoke\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrioventricular septal defect\"[Title/Abstract] OR \"atrioventricular canal\"[Title/Abstract] OR \"AVSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 3,
+  "retrieved_n": 3,
+  "studies": [
+    {
+      "pmid": "10230836",
+      "title": "Maternal risk factors and major associated defects in infants with Down syndrome.",
+      "journal": "Epidemiology (Cambridge, Mass.)",
+      "year": "1999",
+      "first_author": "Torfs CP",
+      "doi": "",
+      "abstract": "More than 50% of infants with Down syndrome have associated defects that cause considerable morbidity and mortality. We evaluated the hypothesis that the trisomic genome interacts with environmental factors to increase the risk for specific associated defects. We evaluated risk factors present during early pregnancy in a multiracial population of 687 infants with Down syndrome. Mother's cigarette smoking was associated with the grouped cardiac defects [odds ratio (OR)=2.0; 95% confidence interval (CI) = 1.2-3.2]. When adjusted for other cardiac defects and maternal race, the following specific defects were associated with smoking: atrioventricular canal (OR = 2.3; 95% CI = 1.2-4.5), tetralogy of Fallot (OR = 4.6; 95% CI = 1.2-17.0), and atrial septal defects without ventricular septal defect (OR = 2.2; 95% CI = 1.1-4.3). Hirschsprung disease was associated with mother's daily consumption of more than three cups of coffee (OR = 6.02; 95% CI = 1.2-29.7) and with mother's fever (OR = 3.4; 95% CI = 0.7-16.4), but the number of cases was small. Use of alcohol was not associated with any defect. Mother's race, age, parity, income, or education did not confound the associations. Results suggest that environmental factors can modify the occurrence of associated anomalies in the embryo with Down syndrome.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Abnormalities, Multiple;Adult;Alcohol Drinking;California;Case-Control Studies;Coffee;Digestive System Abnormalities;Down Syndrome;Environmental Exposure;Female;Fever;Heart Defects, Congenital;Humans;Infant, Newborn;Population Surveillance;Pregnancy;Pregnancy Complications;Risk Factors;Smoking;Surveys and Questionnaires",
+      "language": "eng"
+    },
+    {
+      "pmid": "28988253",
+      "title": "Prevalence of congenital heart diseases in children with Down syndrome in Mansoura, Egypt: a retrospective descriptive study.",
+      "journal": "Annals of Saudi medicine",
+      "year": "2017",
+      "first_author": "El-Gilany AH",
+      "doi": "10.5144/0256-4947.2017.386",
+      "abstract": "BACKGROUND: The pattern and risk factors for congenital heart diseases (CHD) in children with Down syndrome (DS) vary over time. OBJECTIVES: To update knowledge of the prevalence, types, trends and associated factors for CHD in children with DS in the Egyptian Delta. DESIGN: A retrospective hospital record-based descriptive study. SETTING: A tertiary care center in Mansoura, Egypt during a period of 14 years from 2003 up to 2016. PATIENTS AND METHODS: We studied children with genetically proven DS. Relevant sociodemographic factors, medical history, clinical examination, karyotype and echocardiographic data were statistically analyzed. MAIN OUTCOME MEASURES: Prevalence, types and risk factors of CHD in DS. RESULTS: The prevalence of overall, isolated and multiple CHD in 1720 children with DS were 36.9%, 29% and 8%, respectively. Isolated defects accounted for 78.4% of all CHD. Ventricular septal defect, atrioventricular septal defect and atrial septal defect were the most frequent isolated defects. There was a downward trend in the prevalence of overall CHD (from 56.2% to 25.0%) and isolated CHD (from 56.2% to 19.8%). The logistic regression model predicted 65.7% of CHD and revealed that passive maternal smoking, lack of folic acid/multivitamin supplementation and parental consanguinity were the independent predictors of CHD in children with DS with adjusted odds ratios of 1.9, 1.8 and 1.9, respectively. CONCLUSION: More than one-third of children with DS have CHD with ventricular septal defect, which is the most common. Avoidance of passive maternal smoking and consanguineous marriage together with maternal folic acid supplementation could contribute to further reduction of CHD in children with DS. LIMITATIONS: Single-center study and retrospective.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adolescent;Child;Child, Preschool;Consanguinity;Down Syndrome;Egypt;Folic Acid;Heart Defects, Congenital;Heart Septal Defects;Heart Septal Defects, Atrial;Heart Septal Defects, Ventricular;Humans;Infant;Logistic Models;Prevalence;Retrospective Studies;Risk Factors;Smoking",
+      "language": "eng"
+    },
+    {
+      "pmid": "22903798",
+      "title": "Analysis of selected maternal exposures and non-syndromic atrioventricular septal defects in the National Birth Defects Prevention Study, 1997-2005.",
+      "journal": "American journal of medical genetics. Part A",
+      "year": "2012",
+      "first_author": "Patel SS",
+      "doi": "10.1002/ajmg.a.35555",
+      "abstract": "Although the descriptive epidemiology of atrioventricular septal defects (AVSDs), a group of serious congenital heart defects (CHDs), has been recently reported, non-genetic risk factors have not been consistently identified. Using data (1997-2005) from the National Birth Defects Prevention Study, an ongoing multisite population-based case-control study, the association between selected non-genetic factors and non-syndromic AVSDs was examined. Data on periconceptional exposures to such factors were collected by telephone interview from 187 mothers of AVSD case infants and 6,703 mothers of unaffected infants. Adjusted odds ratios (aORs) and 95% confidence intervals (CIs) were estimated from logistic regression models. Mothers who reported cigarette smoking during the periconceptional period were more likely to have infants with AVSDs compared with non-smokers, independent of maternal age, periconceptional alcohol consumption, infant gestational age, family history of CHDs, and study site (aOR 1.5, 95% CI 1.1-2.4). The association was strongest in mothers who smoked more than 25 cigarettes/day. In addition, mothers with periconceptional passive smoke exposure were more likely to have infants with AVSDs than unexposed mothers, independent of maternal age, active periconceptional smoking, infant gestational age, and family history of CHDs (aOR 1.4, 95% CI 1.0-2.0). No associations were observed between AVSDs and maternal history of a urinary tract infection or pelvic inflammatory disease, maternal use of a wide variety of medications, maternal occupational exposure, parental drug use, or maternal alcohol consumption. If the results of this preliminary study can be replicated, minimizing maternal active and passive smoke exposure may decrease the incidence of AVSDs.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adolescent;Adult;Case-Control Studies;Congenital Abnormalities;Endocardial Cushion Defects;Female;Heart Septal Defects;Humans;Infant, Newborn;Interviews as Topic;Male;Maternal Exposure;Preconception Care;Pregnancy;Prenatal Exposure Delayed Effects;Risk Factors;Smoking;Tobacco Smoke Pollution;Young Adult",
+      "language": "eng"
+    }
+  ]
+}

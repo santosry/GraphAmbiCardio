@@ -1,0 +1,5 @@
+st_id,pathway_name,process_id
+R-HSA-9981845,NOTCH signaling regulates gene expression in endothelial stalk cells,PROC:ENDOTHELIAL
+R-HSA-9856530,High laminar flow shear stress activates signaling by PIEZO1 and PECAM1:CDH5:KDR in endothelial cells,PROC:ENDOTHELIAL
+R-HSA-9860931,Response of endothelial cells to shear stress,PROC:ENDOTHELIAL
+R-HSA-5576891,Cardiac conduction,PROC:CONDUCTION

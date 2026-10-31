@@ -1,0 +1,31 @@
+st_id,pathway_name,n_genes
+R-HSA-4839726,Chromatin organization,14
+R-HSA-1266738,Developmental Biology,14
+R-HSA-5663202,Diseases of signal transduction by growth factor receptors and second messengers,12
+R-HSA-3247509,Chromatin modifying enzymes,10
+R-HSA-9932444,ATP-dependent chromatin remodelers,10
+R-HSA-9733709,Cardiogenesis,10
+R-HSA-6802957,Oncogenic MAPK signaling,10
+R-HSA-2173789,TGF-beta receptor signaling activates SMADs,9
+R-HSA-212165,Epigenetic regulation of gene expression,9
+R-HSA-9758941,Gastrulation,8
+R-HSA-5673001,RAF/MAP kinase cascade,8
+R-HSA-9006936,Signaling by TGFB family members,8
+R-HSA-170834,Signaling by TGF-beta Receptor Complex,8
+R-HSA-1640170,Cell Cycle,8
+R-HSA-157118,Signaling by NOTCH,8
+R-HSA-5684996,MAPK1/MAPK3 signaling,8
+R-HSA-975957,Nonsense Mediated Decay (NMD) enhanced by the Exon Junction Complex (EJC),7
+R-HSA-927802,Nonsense-Mediated Decay (NMD),7
+R-HSA-69278,"Cell Cycle, Mitotic",7
+R-HSA-5673000,RAF activation,7
+R-HSA-1181150,Signaling by NODAL,7
+R-HSA-72706,GTP hydrolysis and joining of the 60S ribosomal subunit,7
+R-HSA-156827,L13a-mediated translational silencing of Ceruloplasmin expression,7
+R-HSA-913531,Interferon Signaling,6
+R-HSA-9938024,Somatic hypermutation of immunoglobulin genes,6
+R-HSA-156902,Peptide chain elongation,6
+R-HSA-72737,Cap-dependent Translation Initiation,6
+R-HSA-1852241,Organelle biogenesis and maintenance,6
+R-HSA-5683057,MAPK family signaling cascades,6
+R-HSA-192823,Viral mRNA Translation,6

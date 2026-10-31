@@ -1,0 +1,6 @@
+{
+  "n_births": 98598,
+  "n_with_window": 90008,
+  "window_coverage_mean": 1.0,
+  "note": "Area-level ERA5-Land exposure assigned to an individual gestational window; not personal exposure."
+}

@@ -1,0 +1,109 @@
+{
+  "search_id": "pair_SMOKE_VSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tobacco smoke pollution\"[MeSH] OR \"smoking\"[MeSH] OR \"tobacco smoke\"[tiab] OR \"cigarette smoke\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"ventricular septal defect\"[tiab] OR \"ventricular septal defects\"[tiab] OR \"VSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tobacco smoke pollution\"[MeSH Terms] OR \"smoking\"[MeSH Terms] OR \"tobacco smoke\"[Title/Abstract] OR \"cigarette smoke\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"ventricular septal defect\"[Title/Abstract] OR \"ventricular septal defects\"[Title/Abstract] OR \"VSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 8,
+  "retrieved_n": 8,
+  "studies": [
+    {
+      "pmid": "10230836",
+      "title": "Maternal risk factors and major associated defects in infants with Down syndrome.",
+      "journal": "Epidemiology (Cambridge, Mass.)",
+      "year": "1999",
+      "first_author": "Torfs CP",
+      "doi": "",
+      "abstract": "More than 50% of infants with Down syndrome have associated defects that cause considerable morbidity and mortality. We evaluated the hypothesis that the trisomic genome interacts with environmental factors to increase the risk for specific associated defects. We evaluated risk factors present during early pregnancy in a multiracial population of 687 infants with Down syndrome. Mother's cigarette smoking was associated with the grouped cardiac defects [odds ratio (OR)=2.0; 95% confidence interval (CI) = 1.2-3.2]. When adjusted for other cardiac defects and maternal race, the following specific defects were associated with smoking: atrioventricular canal (OR = 2.3; 95% CI = 1.2-4.5), tetralogy of Fallot (OR = 4.6; 95% CI = 1.2-17.0), and atrial septal defects without ventricular septal defect (OR = 2.2; 95% CI = 1.1-4.3). Hirschsprung disease was associated with mother's daily consumption of more than three cups of coffee (OR = 6.02; 95% CI = 1.2-29.7) and with mother's fever (OR = 3.4; 95% CI = 0.7-16.4), but the number of cases was small. Use of alcohol was not associated with any defect. Mother's race, age, parity, income, or education did not confound the associations. Results suggest that environmental factors can modify the occurrence of associated anomalies in the embryo with Down syndrome.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Abnormalities, Multiple;Adult;Alcohol Drinking;California;Case-Control Studies;Coffee;Digestive System Abnormalities;Down Syndrome;Environmental Exposure;Female;Fever;Heart Defects, Congenital;Humans;Infant, Newborn;Population Surveillance;Pregnancy;Pregnancy Complications;Risk Factors;Smoking;Surveys and Questionnaires",
+      "language": "eng"
+    },
+    {
+      "pmid": "14991912",
+      "title": "Maternal lifestyle factors and risk for ventricular septal defects.",
+      "journal": "Birth defects research. Part A, Clinical and molecular teratology",
+      "year": "2004",
+      "first_author": "Williams LJ",
+      "doi": "10.1002/bdra.10145",
+      "abstract": "BACKGROUND: Several studies have shown that the prevalence of ventricular septal defects (VSDs) has increased significantly in the United States in the past 30 years. This increase has been primarily attributed to increased detection through echocardiography. However, little is known about the etiology of VSD. This study sought to evaluate the association between maternal lifestyle exposures and the risk for VSD in offspring. METHODS: The Atlanta Birth Defects Case-Control Study was used to identify 122 isolated simple VSD cases and 3029 control infants born during the period 1968 through 1980 in the metropolitan Atlanta area. Exposure data on alcohol, cigarette, and illicit drug use were obtained through standardized interviews with mothers and fathers. Associations between lifestyle factors and VSD were calculated using maternal self-reports; associations were also calculated using paternal proxy-reports of the mother's exposures. RESULTS: Maternal self-report of heavy alcohol consumption and paternal proxy-report of the mothers' moderate alcohol consumption were associated with isolated simple VSD. A two-fold increase in risk of isolated simple VSD was identified for maternal self- and paternal proxy-reported cannabis use. Risk of isolated simple VSD increased with regular (three or more days per week) cannabis use for both maternal self- and paternal proxy-report, although the association was significant only for maternal self-report. CONCLUSIONS: This is the first study to identify an association between maternal marijuana use and VSD in offspring. Further studies are needed to elucidate this association.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adolescent;Adult;Alcohols;Bulimia;Cannabis;Case-Control Studies;Cocaine;Female;Georgia;Heart Septal Defects, Ventricular;Humans;Infant;Life Style;Mothers;Pregnancy;Risk Factors;Self Disclosure;Smoking",
+      "language": "eng"
+    },
+    {
+      "pmid": "37551363",
+      "title": "Parental risk factors associated with congenital heart disease in a Thai population: multivariable analysis.",
+      "journal": "Asian biomedicine : research, reviews and news",
+      "year": "2021",
+      "first_author": "Suwansumrit C",
+      "doi": "10.2478/abm-2021-0033",
+      "abstract": "BACKGROUND: Congenital heart diseases (CHDs) are the most common types of birth defects and contribute to a large proportion of infant morbidities and mortalities worldwide. These defects may require multiple surgical interventions impacting the infant's quality of life. OBJECTIVES: To identify risk factors associated with CHD in a population of Thai children. METHODS: We conducted a case-control study of patients attending the Pediatric Clinic, Naresuan University Hospital, Thailand. We included data from pediatric patients diagnosed with CHDs as cases, and patients without cardiovascular abnormalities as controls. Risk data were collected from July 2019 to April 2020 using face-to-face interviews. Multiple logistic regression was used to analyze parental factors associated with CHDs. RESULTS: We included 249 cases classified into 2 groups according to severity and 304 patients as controls. For those less-severely affected (155 patients, 62.2%), ventricular septal defect (27.7%) was the most prevalent, whereas for those with severe CHDs, tetralogy of Fallot was the most prevalent (14.0%). There was no difference in sex distribution or maternal obstetric history between the groups. In multivariable analysis, a family history of CHDs (adjusted odds ratio [AOR] 4.67, 95% confidence interval (CI) 1.61-13.57, P = 0.005) and maternal exposure to second-hand cigarette smoke (AOR 1.58, 95% CI 1.03-2.42, P = 0.002) were identified as significant risk factors for CHDs. CONCLUSION: A family history of CHDs and maternal exposure to second-hand cigarette smoke are associated with having offspring with CHDs in the population studied. These findings help us to encourage affected parents to obtain a fetal echocardiogram.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "",
+      "language": "eng"
+    },
+    {
+      "pmid": "28988253",
+      "title": "Prevalence of congenital heart diseases in children with Down syndrome in Mansoura, Egypt: a retrospective descriptive study.",
+      "journal": "Annals of Saudi medicine",
+      "year": "2017",
+      "first_author": "El-Gilany AH",
+      "doi": "10.5144/0256-4947.2017.386",
+      "abstract": "BACKGROUND: The pattern and risk factors for congenital heart diseases (CHD) in children with Down syndrome (DS) vary over time. OBJECTIVES: To update knowledge of the prevalence, types, trends and associated factors for CHD in children with DS in the Egyptian Delta. DESIGN: A retrospective hospital record-based descriptive study. SETTING: A tertiary care center in Mansoura, Egypt during a period of 14 years from 2003 up to 2016. PATIENTS AND METHODS: We studied children with genetically proven DS. Relevant sociodemographic factors, medical history, clinical examination, karyotype and echocardiographic data were statistically analyzed. MAIN OUTCOME MEASURES: Prevalence, types and risk factors of CHD in DS. RESULTS: The prevalence of overall, isolated and multiple CHD in 1720 children with DS were 36.9%, 29% and 8%, respectively. Isolated defects accounted for 78.4% of all CHD. Ventricular septal defect, atrioventricular septal defect and atrial septal defect were the most frequent isolated defects. There was a downward trend in the prevalence of overall CHD (from 56.2% to 25.0%) and isolated CHD (from 56.2% to 19.8%). The logistic regression model predicted 65.7% of CHD and revealed that passive maternal smoking, lack of folic acid/multivitamin supplementation and parental consanguinity were the independent predictors of CHD in children with DS with adjusted odds ratios of 1.9, 1.8 and 1.9, respectively. CONCLUSION: More than one-third of children with DS have CHD with ventricular septal defect, which is the most common. Avoidance of passive maternal smoking and consanguineous marriage together with maternal folic acid supplementation could contribute to further reduction of CHD in children with DS. LIMITATIONS: Single-center study and retrospective.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adolescent;Child;Child, Preschool;Consanguinity;Down Syndrome;Egypt;Folic Acid;Heart Defects, Congenital;Heart Septal Defects;Heart Septal Defects, Atrial;Heart Septal Defects, Ventricular;Humans;Infant;Logistic Models;Prevalence;Retrospective Studies;Risk Factors;Smoking",
+      "language": "eng"
+    },
+    {
+      "pmid": "1882350",
+      "title": "Maternal exposure to chemical and physical factors during pregnancy and cardiovascular malformations in the offspring.",
+      "journal": "Teratology",
+      "year": "1991",
+      "first_author": "Tikkanen J",
+      "doi": "10.1002/tera.1420430614",
+      "abstract": "The possible effect of chemical and physical factors during pregnancy on the occurrence of cardiovascular malformations in the offspring was studied in 573 cases and 1,055 controls. The cases represented all verified cardiovascular malformations in Finland during 1982-1984. The controls were randomly selected from all babies born during the same period. Case and control mothers were interviewed by midwives approximately 3 months after delivery using a structured questionnaire. Maternal alcohol consumption during the first trimester of pregnancy was more common among the mothers of case infants (45.9%) than those of controls (39.6%). Exposure to organic solvents at work was slightly more prevalent among the ventricular septal defect group (12.1%) than the control mothers (7.8%). However, neither association was significant when adjusted for maternal age in logistic regression analysis. Moreover, one or both of these associations may be chance effects resulting from multiple comparisons. The risk of cardiovascular malformations was not associated with maternal smoking, or coffee, tea, or cola consumption, and was equal in urban and rural areas. Maternal exposures to anesthetic gases, pesticides, wood preservatives, microwave ovens, and video display terminals at work or home were not associated with the risk of cardiovascular malformations. It is concluded that some common environmental exposures during early pregnancy to physical and chemical factors should not necessarily be considered hazardous for the developing fetal heart. The causes of the majority of cardiovascular malformations remain unknown.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Alcohol Drinking;Female;Finland;Heart Defects, Congenital;Humans;Infant, Newborn;Maternal-Fetal Exchange;Occupational Exposure;Pregnancy;Regression Analysis;Smoking;Solvents;Vascular Diseases",
+      "language": "eng"
+    },
+    {
+      "pmid": "27126055",
+      "title": "Is maternal smoking during pregnancy associated with an increased risk of congenital heart defects among offspring? A systematic review and meta-analysis of observational studies.",
+      "journal": "The journal of maternal-fetal & neonatal medicine : the official journal of the European Association of Perinatal Medicine, the Federation of Asia and Oceania Perinatal Societies, the International Society of Perinatal Obstetricians",
+      "year": "2017",
+      "first_author": "Zhang D",
+      "doi": "10.1080/14767058.2016.1183640",
+      "abstract": "OBJECTIVE: To investigate the association between maternal smoking during pregnancy and risk of congenital heart defects (CHDs) among offspring. METHODS: PubMed, EMBASE, and Web of Science were searched for eligible studies. The outcomes of interest included risk of any CHD and nine subtypes. We summarized study characteristics and used a random-effects model in meta-analysis, and a two-stage dose-response model was utilized to assess the association between smoking consumption and risk. Statistical heterogeneity was assessed by a chi-squared test of the Cochrane Q statistic and I-squared value. Publication bias was assessed by funnel plots and Egger's test, and trim and fill method was utilized when publication bias existed. RESULTS: Forty-three observational epidemiologic studies were included. The pooled risk ratio (RR) of any CHD was 1.11 (95% CI: 1.04, 1.18), but it exhibited substantial statistical heterogeneity (p < 0.001, I2 = 69.0%). In sensitivity analysis, we observed significant associations for atrial septal defect (ASD) and marginally significant associations for septal defects (SPD). The two-stage dose-response analysis showed evidence to support that higher levels of tobacco smoke was associated with an increased risk of septal defects, particularly for ASD and VSD (ventricular septal defect). CONCLUSION: Our study presents evidence to support the cardiovascular teratogenic effect of maternal smoking during pregnancy, and their offspring may suffer from approximately a 10% relative increase in the risk of CHDs on average.",
+      "pubtypes": "Journal Article;Meta-Analysis;Systematic Review",
+      "mesh_terms": "Chi-Square Distribution;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Observational Studies as Topic;Odds Ratio;Pregnancy;Risk Factors;Smoking",
+      "language": "eng"
+    },
+    {
+      "pmid": "1415327",
+      "title": "Can maternal risk factors influence the presence of major birth defects in infants with Down syndrome?",
+      "journal": "American journal of medical genetics",
+      "year": "1992",
+      "first_author": "Khoury MJ",
+      "doi": "10.1002/ajmg.1320430620",
+      "abstract": "Although the manifestations of Down syndrome (DS) are well known, certain major birth defects such as duodenal atresia and endocardial cushion defects are present in some infants but not others, suggesting the possible role of other genetic or environmental factors interacting with the trisomy genotype. To explore the possible role of maternal factors in the presence of major defects among DS infants, we examined data from an epidemiologic study of DS conducted in metropolitan Atlanta. Of 219 DS infants born between 1968 and 1980, 50 had recorded cardiac defects, 9 had selected gastrointestinal atresias and 4 had oral clefts. We evaluated the association of these defects with several maternal factors including age, race, first trimester cigarette smoking, alcohol use, and fever. We found that different maternal factors were associated with several defects: (1) mother's race with cardiac defects (40% in blacks vs. 17% in whites, P less than 0.01), (2) mother's age with oral clefts (6% for less than 25 years, 1% for 25-34, and 0% for greater than 34, P less than 0.05), and (3) maternal first trimester fever with gastrointestinal defects (15% in infants with history of fever and 3% in infants without a history of fever, P less than 0.01). We also observed an inverse relationship between maternal alcohol use and the presence of ventricular septal defect. These findings suggest that maternal risk factors may influence the clinical manifestations of DS. In addition to searching for a genetic basis for the DS phenotype, we suggest that the role of environmental factors and maternal exposures be specifically explored in clarifying the genesis of various birth defects in Down syndrome.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Alcohol Drinking;Black People;Congenital Abnormalities;Digestive System Abnormalities;Down Syndrome;Female;Fever;Georgia;Heart Defects, Congenital;Humans;Infant, Newborn;Maternal Age;Maternal-Fetal Exchange;Pregnancy;Risk Factors;Smoking;White People;Black or African American",
+      "language": "eng"
+    },
+    {
+      "pmid": "41945982",
+      "title": "Periconceptional modifiable vulnerability factors and maternal telomere length: A case-control study of mothers with and without offspring affected by congenital cardiac outflow defects.",
+      "journal": "Early human development",
+      "year": "2026",
+      "first_author": "Wieles TAM",
+      "doi": "10.1016/j.earlhumdev.2026.106547",
+      "abstract": "OBJECTIVE: To investigate associations between modifiable maternal vulnerability factors and telomere length (TL) during the periconceptional period, with emphasis on differences between case-mothers of children with congenital cardiac outflow defects (CCOD) and controls. DESIGN: Case-control study at 15 months after the index-pregnancy to reflect the periconception period. SETTING: Four university hospitals in The Netherlands (HAVEN study). POPULATION: 729 women, including 306 case-mothers and 423 control-mothers. METHODS: Linear regression models were used to assess associations between four periconceptional modifiable vulnerability factors, including maternal smoking, alcohol consumption, BMI ≥25 kg/m2, folic acid supplement use, and maternal T at 15 months after the index-pregnancy. MAIN OUTCOME MEASURE: Maternal TL expressed as T/S ratio (quantitative PCR). RESULTS: No folic acid supplement use during the periconceptional period was associated with shorter maternal TL (β = -0.033, 95% CI: -0.0058 to -0.008, p = .010), particularly in case-mothers (β = -0.054, 95% CI: -0.092 to -0.016, p = .006). Maternal BMI ≥25 kg/m2 was also associated with shorter TL (β = -0.025, 95% CI: -0.049 to -0.001, p = .028) and more pronounced in case-mothers (β = -0.043, 95% CI: -0.08 to -0.006, p = .024). No significant associations were found for smoking and alcohol use. Exploratory dose-response analysis showed longer maternal TL in mothers reporting folic acid supplement use at both preconceptional and at 15 months postpartum compared to non-users (β = 0.094, 95%CI: 0.031 to 0.157, p = .004). CONCLUSIONS: No periconceptional folic acid supplement use and maternal BMI ≥25 kg/m2 are vulnerability factors that are strongly t associated with shorter maternal TL. These findings highlight TL as a potential biomarker of maternal cellular stress and support a biology-informed perspective on periconceptional care.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Humans;Female;Pregnancy;Heart Defects, Congenital;Case-Control Studies;Adult;Folic Acid;Alcohol Drinking;Smoking;Telomere;Dietary Supplements;Risk Factors;Telomere Shortening",
+      "language": "eng"
+    }
+  ]
+}

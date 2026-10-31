@@ -1,0 +1,2235 @@
+node_id,label,type,subtype,identifiers,description,source
+EXP:PM25,Fine particulate matter (PM2.5),Exposure,air_pollutant,,Sugarcane burning and biomass smoke are relevant sources in the Norte Fluminense region; no local PM2.5 monitoring series is available (documented gap).,study_ontology
+EXP:NO2,Nitrogen dioxide (NO2) / traffic-related air pollution,Exposure,air_pollutant,,Vehicular and industrial emissions; no local monitoring series.,study_ontology
+EXP:O3,Ozone (O3),Exposure,air_pollutant,,Photochemical pollution; no local monitoring series.,study_ontology
+EXP:SO2,Sulfur dioxide (SO2),Exposure,air_pollutant,,Industrial emissions; no local monitoring series.,study_ontology
+EXP:HEAT,Maternal heat exposure / hyperthermia,Exposure,climate,,Daily temperature series available from ERA5-Land reanalysis for the municipality.,study_ontology
+EXP:COLD,Cold exposure,Exposure,climate,,Daily temperature series available from ERA5-Land reanalysis.,study_ontology
+EXP:PEST,Pesticides,Exposure,chemical,,Intensive sugarcane and other agricultural activity in the region.,study_ontology
+EXP:SOLV,"Organic solvents (e.g., trichloroethylene, benzene)",Exposure,chemical,,Industrial and petrochemical activity in the region.,study_ontology
+EXP:METALS,"Heavy metals (arsenic, lead, mercury)",Exposure,chemical,,Occupational and environmental sources; no local biomonitoring.,study_ontology
+EXP:SMOKE,Tobacco smoke,Exposure,chemical,,Behavioural exposure with individual-level data in SINASC only partially available.,study_ontology
+EXP:ALCOHOL,Alcohol (ethanol),Exposure,chemical,,Behavioural exposure; not recorded in SINASC.,study_ontology
+EXP:VPA,Valproic acid,Exposure,medication,,Therapeutic exposure; not recorded in SINASC.,study_ontology
+EXP:RA,Retinoic acid / vitamin A derivatives,Exposure,medication,,Therapeutic and nutritional exposure; not recorded in SINASC.,study_ontology
+EXP:DIOXIN,Dioxins / PCBs (endocrine-disrupting chemicals),Exposure,chemical,,Persistent organic pollutants; no local biomonitoring.,study_ontology
+CHD:VSD,Ventricular septal defect,Phenotype,septal_defect,ICD10:Q21.0;HPO:HP:0001629,,study_ontology
+CHD:ASD,Atrial septal defect,Phenotype,septal_defect,ICD10:Q21.1;HPO:HP:0001631,,study_ontology
+CHD:AVSD,Atrioventricular septal defect,Phenotype,septal_defect,ICD10:Q21.2;HPO:HP:0006695,,study_ontology
+CHD:TOF,Tetralogy of Fallot,Phenotype,outflow_tract,ICD10:Q21.3;HPO:HP:0001636,,study_ontology
+CHD:DORV,Double outlet right ventricle,Phenotype,outflow_tract,ICD10:Q20.1;HPO:HP:0001719,,study_ontology
+CHD:TGA,Transposition of the great arteries,Phenotype,great_arteries,ICD10:Q20.3;HPO:HP:0001669,,study_ontology
+CHD:HLHS,Hypoplastic left heart (HLHS),Phenotype,ventricle,ICD10:Q23.4;HPO:HP:0004383,HPO has no dedicated HLHS term; HP:0004383 (hypoplastic left ventricle) is the closest ancestor. OMIM 241550.,study_ontology
+CHD:COA,Coarctation of the aorta,Phenotype,great_arteries,ICD10:Q25.1;HPO:HP:0001680,,study_ontology
+CHD:PDA,Patent ductus arteriosus,Phenotype,great_arteries,ICD10:Q25.0;HPO:HP:0001643,,study_ontology
+CHD:PS,Pulmonary valve stenosis,Phenotype,valve,ICD10:Q25.6;HPO:HP:0001642,,study_ontology
+CHD:AS,Aortic valve stenosis,Phenotype,valve,ICD10:Q23.0;HPO:HP:0001650,,study_ontology
+CHD:TAPVC,Total anomalous pulmonary venous connection,Phenotype,venous,ICD10:Q26.2;HPO:HP:0011720,,study_ontology
+CHD:TRUNCUS,Truncus arteriosus,Phenotype,outflow_tract,ICD10:Q20.0;HPO:HP:0001660,,study_ontology
+CHD:EBSTEIN,Ebstein anomaly,Phenotype,valve,ICD10:Q22.5;HPO:HP:0010316,,study_ontology
+MECH:OXSTRESS,Oxidative stress,Mechanism,,,,study_ontology
+MECH:INFLAM,Inflammation,Mechanism,,,,study_ontology
+MECH:EPIGEN,"Epigenetic alteration (DNA methylation, histone modification, ncRNA)",Mechanism,,,,study_ontology
+MECH:MITO,Mitochondrial dysfunction,Mechanism,,,,study_ontology
+MECH:CELLSIG,Altered cell signalling,Mechanism,,,,study_ontology
+MECH:GENE_EXPR,Altered gene expression,Mechanism,,,,study_ontology
+MECH:APOPTOSIS,Apoptosis / cell death,Mechanism,,,,study_ontology
+MECH:PROLIF,Proliferation / cell-cycle perturbation,Mechanism,,,,study_ontology
+MECH:HEATSHOCK,Heat-shock / proteostasis response,Mechanism,,,,study_ontology
+MECH:AHR,Aryl hydrocarbon receptor (AHR) signalling,Mechanism,,,,study_ontology
+MECH:RA_SIGNAL,Retinoic acid signalling perturbation,Mechanism,,,,study_ontology
+MECH:WNT,Wnt/beta-catenin signalling perturbation,Mechanism,,,,study_ontology
+MECH:HDAC,Histone deacetylase (HDAC) inhibition,Mechanism,,,,study_ontology
+MECH:HYPOXIA,Hypoxia / HIF signalling,Mechanism,,,,study_ontology
+MECH:NEURAL_CREST,Neural crest cell perturbation,Mechanism,,,,study_ontology
+MECH:ENDOTHELIAL,Endothelial / vascular perturbation,Mechanism,,,,study_ontology
+PROC:HEART_TUBE,Heart tube formation,Process,cardiac_development,,,study_ontology
+PROC:LOOPING,Cardiac looping,Process,cardiac_development,,,study_ontology
+PROC:CHAMBER,Chamber development,Process,cardiac_development,,,study_ontology
+PROC:SEPTATION,Atrial and ventricular septation,Process,cardiac_development,,,study_ontology
+PROC:AV_CUSHION,Atrioventricular cushion / valve development,Process,cardiac_development,,,study_ontology
+PROC:OFT,Outflow tract development,Process,cardiac_development,,,study_ontology
+PROC:GREAT_VESSELS,Great vessel formation,Process,cardiac_development,,,study_ontology
+PROC:NEURAL_CREST_MIGRATION,Cardiac neural crest migration,Process,cardiac_development,,,study_ontology
+PROC:CM_DIFF,Cardiomyocyte differentiation,Process,cardiac_development,,,study_ontology
+PROC:CORONARY,Coronary / vascular development,Process,cardiac_development,,,study_ontology
+PROC:CONDUCTION,Cardiac conduction system development,Process,cardiac_development,,,study_ontology
+GENE:ACTC1,ACTC1,Gene,,NCBI:70,actin alpha cardiac muscle 1,NCBI Gene
+GENE:ACVR2B,ACVR2B,Gene,,NCBI:93,activin A receptor type 2B,NCBI Gene
+GENE:ADAMTS10,ADAMTS10,Gene,,NCBI:81794,ADAM metallopeptidase with thrombospondin type 1 motif 10,NCBI Gene
+GENE:ARHGAP31,ARHGAP31,Gene,,NCBI:57514,Rho GTPase activating protein 31,NCBI Gene
+GENE:ARID1B,ARID1B,Gene,,NCBI:57492,AT-rich interaction domain 1B,NCBI Gene
+GENE:ARVCF,ARVCF,Gene,,NCBI:421,ARVCF delta catenin family member,NCBI Gene
+GENE:B3GLCT,B3GLCT,Gene,,NCBI:145173,beta 3-glucosyltransferase,NCBI Gene
+GENE:BAZ1B,BAZ1B,Gene,,NCBI:9031,bromodomain adjacent to zinc finger domain 1B,NCBI Gene
+GENE:BCOR,BCOR,Gene,,NCBI:54880,BCL6 corepressor,NCBI Gene
+GENE:BRAF,BRAF,Gene,,NCBI:673,"B-Raf proto-oncogene, serine/threonine kinase",NCBI Gene
+GENE:C2CD3,C2CD3,Gene,,NCBI:26005,C2 domain containing 3 centriole elongation regulator,NCBI Gene
+GENE:CBL,CBL,Gene,,NCBI:867,Cbl proto-oncogene,NCBI Gene
+GENE:CCDC22,CCDC22,Gene,,NCBI:28952,CCC complex scaffolding subunit CCDC22,NCBI Gene
+GENE:CEP57,CEP57,Gene,,NCBI:9702,centrosomal protein 57,NCBI Gene
+GENE:CHD4,CHD4,Gene,,NCBI:1108,chromodomain helicase DNA binding protein 4,NCBI Gene
+GENE:CHD7,CHD7,Gene,,NCBI:55636,chromodomain helicase DNA binding protein 7,NCBI Gene
+GENE:CHRM3,CHRM3,Gene,,NCBI:1131,cholinergic receptor muscarinic 3,NCBI Gene
+GENE:CIROP,CIROP,Gene,,NCBI:100128908,ciliated left-right organizer metallopeptidase,NCBI Gene
+GENE:CIROZ,CIROZ,Gene,,NCBI:148345,ciliated left-right organizer protein containing ZP-N domains,NCBI Gene
+GENE:CITED2,CITED2,Gene,,NCBI:10370,Cbp/p300 interacting transactivator with ED-rich tail 2,NCBI Gene
+GENE:CLIP2,CLIP2,Gene,,NCBI:7461,CAP-Gly domain containing linker protein 2,NCBI Gene
+GENE:COMT,COMT,Gene,,NCBI:1312,catechol-O-methyltransferase,NCBI Gene
+GENE:CREBBP,CREBBP,Gene,,NCBI:1387,CREB binding lysine acetyltransferase,NCBI Gene
+GENE:CTCF,CTCF,Gene,,NCBI:10664,CCCTC-binding factor,NCBI Gene
+GENE:DAW1,DAW1,Gene,,NCBI:164781,dynein assembly factor with WD repeats 1,NCBI Gene
+GENE:DHCR7,DHCR7,Gene,,NCBI:1717,7-dehydrocholesterol reductase,NCBI Gene
+GENE:DLL4,DLL4,Gene,,NCBI:54567,delta like canonical Notch ligand 4,NCBI Gene
+GENE:DPF2,DPF2,Gene,,NCBI:5977,double PHD fingers 2,NCBI Gene
+GENE:DPYSL5,DPYSL5,Gene,,NCBI:56896,dihydropyrimidinase like 5,NCBI Gene
+GENE:DYNC2LI1,DYNC2LI1,Gene,,NCBI:51626,dynein cytoplasmic 2 light intermediate chain 1,NCBI Gene
+GENE:DYRK1A,DYRK1A,Gene,,NCBI:1859,dual specificity tyrosine phosphorylation regulated kinase 1A,NCBI Gene
+GENE:EHMT1,EHMT1,Gene,,NCBI:79813,euchromatic histone lysine methyltransferase 1,NCBI Gene
+GENE:EIF4H,EIF4H,Gene,,NCBI:7458,eukaryotic translation initiation factor 4H,NCBI Gene
+GENE:ELN,ELN,Gene,,NCBI:2006,elastin,NCBI Gene
+GENE:EP300,EP300,Gene,,NCBI:2033,EP300 lysine acetyltransferase,NCBI Gene
+GENE:FAAP100,FAAP100,Gene,,NCBI:80233,FA core complex associated protein 100,NCBI Gene
+GENE:FANCB,FANCB,Gene,,NCBI:2187,FA complementation group B,NCBI Gene
+GENE:FANCF,FANCF,Gene,,NCBI:2188,FA complementation group F,NCBI Gene
+GENE:FANCI,FANCI,Gene,,NCBI:55215,FA complementation group I,NCBI Gene
+GENE:FBN1,FBN1,Gene,,NCBI:2200,fibrillin 1,NCBI Gene
+GENE:FGFR1,FGFR1,Gene,,NCBI:2260,fibroblast growth factor receptor 1,NCBI Gene
+GENE:FGFR3,FGFR3,Gene,,NCBI:2261,fibroblast growth factor receptor 3,NCBI Gene
+GENE:FIG4,FIG4,Gene,,NCBI:9896,FIG4 phosphoinositide 5-phosphatase,NCBI Gene
+GENE:FKBP6,FKBP6,Gene,,NCBI:8468,FKBP prolyl isomerase family member 6 (inactive),NCBI Gene
+GENE:FLNA,FLNA,Gene,,NCBI:2316,filamin A,NCBI Gene
+GENE:FLT4,FLT4,Gene,,NCBI:2324,fms related receptor tyrosine kinase 4,NCBI Gene
+GENE:FOXC2,FOXC2,Gene,,NCBI:2303,forkhead box C2,NCBI Gene
+GENE:FOXF1,FOXF1,Gene,,NCBI:2294,forkhead box F1,NCBI Gene
+GENE:FRYL,FRYL,Gene,,NCBI:285527,FRY like transcription coactivator,NCBI Gene
+GENE:GATA4,GATA4,Gene,,NCBI:2626,GATA binding protein 4,NCBI Gene
+GENE:GATA5,GATA5,Gene,,NCBI:140628,GATA binding protein 5,NCBI Gene
+GENE:GATA6,GATA6,Gene,,NCBI:2627,GATA binding protein 6,NCBI Gene
+GENE:GDF1,GDF1,Gene,,NCBI:2657,growth differentiation factor 1,NCBI Gene
+GENE:GJA1,GJA1,Gene,,NCBI:2697,gap junction protein alpha 1,NCBI Gene
+GENE:GJA5,GJA5,Gene,,NCBI:2702,gap junction protein alpha 5,NCBI Gene
+GENE:GJA8,GJA8,Gene,,NCBI:2703,gap junction protein alpha 8,NCBI Gene
+GENE:GLI3,GLI3,Gene,,NCBI:2737,GLI family zinc finger 3,NCBI Gene
+GENE:GP1BB,GP1BB,Gene,,NCBI:2812,glycoprotein Ib platelet subunit beta,NCBI Gene
+GENE:GPC3,GPC3,Gene,,NCBI:2719,glypican 3,NCBI Gene
+GENE:GTF2I,GTF2I,Gene,,NCBI:2969,general transcription factor IIi,NCBI Gene
+GENE:GTF2IRD1,GTF2IRD1,Gene,,NCBI:9569,GTF2I repeat domain containing 1,NCBI Gene
+GENE:HAND2,HAND2,Gene,,NCBI:9464,heart and neural crest derivatives expressed 2,NCBI Gene
+GENE:HEY2,HEY2,Gene,,NCBI:23493,hes related family bHLH transcription factor with YRPW motif 2,NCBI Gene
+GENE:HIRA,HIRA,Gene,,NCBI:7290,histone cell cycle regulator,NCBI Gene
+GENE:HRAS,HRAS,Gene,,NCBI:3265,"HRas proto-oncogene, GTPase",NCBI Gene
+GENE:HYAL2,HYAL2,Gene,,NCBI:8692,hyaluronidase 2,NCBI Gene
+GENE:IPO8,IPO8,Gene,,NCBI:10526,importin 8,NCBI Gene
+GENE:JAG1,JAG1,Gene,,NCBI:182,jagged canonical Notch ligand 1,NCBI Gene
+GENE:KAT6A,KAT6A,Gene,,NCBI:7994,lysine acetyltransferase 6A,NCBI Gene
+GENE:KAT6B,KAT6B,Gene,,NCBI:23522,lysine acetyltransferase 6B,NCBI Gene
+GENE:KDM6A,KDM6A,Gene,,NCBI:7403,lysine demethylase 6A,NCBI Gene
+GENE:KMT2D,KMT2D,Gene,,NCBI:8085,lysine methyltransferase 2D,NCBI Gene
+GENE:KRAS,KRAS,Gene,,NCBI:3845,"KRas proto-oncogene, GTPase",NCBI Gene
+GENE:LEFTY2,LEFTY2,Gene,,NCBI:7044,left-right determination factor 2,NCBI Gene
+GENE:LIMK1,LIMK1,Gene,,NCBI:3984,LIM domain kinase 1,NCBI Gene
+GENE:LMNA,LMNA,Gene,,NCBI:4000,lamin A/C,NCBI Gene
+GENE:LONP1,LONP1,Gene,,NCBI:9361,"lon peptidase 1, mitochondrial",NCBI Gene
+GENE:LTBP2,LTBP2,Gene,,NCBI:4053,latent transforming growth factor beta binding protein 2,NCBI Gene
+GENE:LZTR1,LZTR1,Gene,,NCBI:8216,leucine zipper like post translational regulator 1,NCBI Gene
+GENE:MAP2K1,MAP2K1,Gene,,NCBI:5604,mitogen-activated protein kinase kinase 1,NCBI Gene
+GENE:MAP2K2,MAP2K2,Gene,,NCBI:5605,mitogen-activated protein kinase kinase 2,NCBI Gene
+GENE:MED12,MED12,Gene,,NCBI:9968,mediator complex subunit 12,NCBI Gene
+GENE:MED13L,MED13L,Gene,,NCBI:23389,mediator complex subunit 13L,NCBI Gene
+GENE:MED16,MED16,Gene,,NCBI:10025,mediator complex subunit 16,NCBI Gene
+GENE:MEF2C,MEF2C,Gene,,NCBI:4208,myocyte enhancer factor 2C,NCBI Gene
+GENE:MEIS2,MEIS2,Gene,,NCBI:4212,Meis homeobox 2,NCBI Gene
+GENE:MID1,MID1,Gene,,NCBI:4281,midline 1,NCBI Gene
+GENE:MKKS,MKKS,Gene,,NCBI:8195,MKKS centrosomal shuttling protein,NCBI Gene
+GENE:MRAS,MRAS,Gene,,NCBI:22808,muscle RAS oncogene homolog,NCBI Gene
+GENE:MYH6,MYH6,Gene,,NCBI:4624,myosin heavy chain 6,NCBI Gene
+GENE:MYH7,MYH7,Gene,,NCBI:4625,myosin heavy chain 7,NCBI Gene
+GENE:MYRF,MYRF,Gene,,NCBI:745,myelin regulatory factor,NCBI Gene
+GENE:NEK8,NEK8,Gene,,NCBI:284086,NIMA related kinase 8,NCBI Gene
+GENE:NF1,NF1,Gene,,NCBI:4763,neurofibromin 1,NCBI Gene
+GENE:NIPBL,NIPBL,Gene,,NCBI:25836,NIPBL cohesin loading factor,NCBI Gene
+GENE:NKX2-5,NKX2-5,Gene,,NCBI:1482,NK2 homeobox 5,NCBI Gene
+GENE:NKX2-6,NKX2-6,Gene,,NCBI:137814,NK2 homeobox 6,NCBI Gene
+GENE:NODAL,NODAL,Gene,,NCBI:4838,nodal growth differentiation factor,NCBI Gene
+GENE:NONO,NONO,Gene,,NCBI:4841,non-POU domain containing octamer binding,NCBI Gene
+GENE:NOTCH1,NOTCH1,Gene,,NCBI:4851,notch receptor 1,NCBI Gene
+GENE:NOTCH2,NOTCH2,Gene,,NCBI:4853,notch receptor 2,NCBI Gene
+GENE:NOTCH3,NOTCH3,Gene,,NCBI:4854,notch receptor 3,NCBI Gene
+GENE:NPHP3,NPHP3,Gene,,NCBI:27031,nephrocystin 3,NCBI Gene
+GENE:NR2F2,NR2F2,Gene,,NCBI:7026,nuclear receptor subfamily 2 group F member 2,NCBI Gene
+GENE:NRAS,NRAS,Gene,,NCBI:4893,"NRAS proto-oncogene, GTPase",NCBI Gene
+GENE:NSD1,NSD1,Gene,,NCBI:64324,nuclear receptor binding SET domain protein 1,NCBI Gene
+GENE:PAH,PAH,Gene,,NCBI:5053,phenylalanine hydroxylase,NCBI Gene
+GENE:PIGL,PIGL,Gene,,NCBI:9487,phosphatidylinositol glycan anchor biosynthesis class L,NCBI Gene
+GENE:PIGN,PIGN,Gene,,NCBI:23556,phosphatidylinositol glycan anchor biosynthesis class N,NCBI Gene
+GENE:PLXND1,PLXND1,Gene,,NCBI:23129,plexin D1,NCBI Gene
+GENE:PPP1CB,PPP1CB,Gene,,NCBI:5500,protein phosphatase 1 catalytic subunit beta,NCBI Gene
+GENE:PQBP1,PQBP1,Gene,,NCBI:10084,polyglutamine binding protein 1,NCBI Gene
+GENE:PSMD12,PSMD12,Gene,,NCBI:5718,"proteasome 26S subunit, non-ATPase 12",NCBI Gene
+GENE:PTPN11,PTPN11,Gene,,NCBI:5781,protein tyrosine phosphatase non-receptor type 11,NCBI Gene
+GENE:PUF60,PUF60,Gene,,NCBI:22827,poly(U) binding splicing factor 60,NCBI Gene
+GENE:RAB23,RAB23,Gene,,NCBI:51715,"RAB23, member RAS oncogene family",NCBI Gene
+GENE:RAF1,RAF1,Gene,,NCBI:5894,"Raf-1 proto-oncogene, serine/threonine kinase",NCBI Gene
+GENE:RBM8A,RBM8A,Gene,,NCBI:9939,RNA binding motif protein 8A,NCBI Gene
+GENE:RERE,RERE,Gene,,NCBI:473,arginine-glutamic acid dipeptide repeats,NCBI Gene
+GENE:RFC2,RFC2,Gene,,NCBI:5982,replication factor C subunit 2,NCBI Gene
+GENE:BCL11B,BCL11B,Gene,,NCBI:64919,BCL11 transcription factor B,NCBI Gene
+GENE:ROBO4,ROBO4,Gene,,NCBI:54538,roundabout guidance receptor 4,NCBI Gene
+GENE:RPL11,RPL11,Gene,,NCBI:6135,ribosomal protein L11,NCBI Gene
+GENE:RPL27,RPL27,Gene,,NCBI:6155,ribosomal protein L27,NCBI Gene
+GENE:RPL5,RPL5,Gene,,NCBI:6125,ribosomal protein L5,NCBI Gene
+GENE:RPS19,RPS19,Gene,,NCBI:6223,ribosomal protein S19,NCBI Gene
+GENE:RPS26,RPS26,Gene,,NCBI:6231,ribosomal protein S26,NCBI Gene
+GENE:RRAS2,RRAS2,Gene,,NCBI:22800,RAS related 2,NCBI Gene
+GENE:RREB1,RREB1,Gene,,NCBI:6239,ras responsive element binding protein 1,NCBI Gene
+GENE:SALL1,SALL1,Gene,,NCBI:6299,spalt like transcription factor 1,NCBI Gene
+GENE:SALL4,SALL4,Gene,,NCBI:57167,spalt like transcription factor 4,NCBI Gene
+GENE:SEC24C,SEC24C,Gene,,NCBI:9632,"SEC24 homolog C, COPII component",NCBI Gene
+GENE:SEMA3E,SEMA3E,Gene,,NCBI:9723,semaphorin 3E,NCBI Gene
+GENE:SHOC2,SHOC2,Gene,,NCBI:8036,SHOC2 leucine rich repeat scaffold protein,NCBI Gene
+GENE:SKIC3,SKIC3,Gene,,NCBI:9652,SKI3 subunit of superkiller complex,NCBI Gene
+GENE:SLC29A3,SLC29A3,Gene,,NCBI:55315,solute carrier family 29 member 3,NCBI Gene
+GENE:SMAD2,SMAD2,Gene,,NCBI:4087,SMAD family member 2,NCBI Gene
+GENE:SMAD3,SMAD3,Gene,,NCBI:4088,SMAD family member 3,NCBI Gene
+GENE:SMAD4,SMAD4,Gene,,NCBI:4089,SMAD family member 4,NCBI Gene
+GENE:SMAD6,SMAD6,Gene,,NCBI:4091,SMAD family member 6,NCBI Gene
+GENE:SMARCA4,SMARCA4,Gene,,NCBI:6597,SWI/SNF related BAF chromatin remodeling complex subunit ATPase 4,NCBI Gene
+GENE:SMARCE1,SMARCE1,Gene,,NCBI:6605,SWI/SNF related BAF chromatin remodeling complex subunit E1,NCBI Gene
+GENE:SMC3,SMC3,Gene,,NCBI:9126,structural maintenance of chromosomes 3,NCBI Gene
+GENE:SOS1,SOS1,Gene,,NCBI:6654,SOS Ras/Rac guanine nucleotide exchange factor 1,NCBI Gene
+GENE:SOS2,SOS2,Gene,,NCBI:6655,SOS Ras/Rho guanine nucleotide exchange factor 2,NCBI Gene
+GENE:SOX4,SOX4,Gene,,NCBI:6659,SRY-box transcription factor 4,NCBI Gene
+GENE:SPECC1L,SPECC1L,Gene,,NCBI:23384,sperm antigen with calponin homology and coiled-coil domains 1 like,NCBI Gene
+GENE:SRCAP,SRCAP,Gene,,NCBI:10847,Snf2 related CREBBP activator protein,NCBI Gene
+GENE:STAG2,STAG2,Gene,,NCBI:10735,STAG2 cohesin complex component,NCBI Gene
+GENE:STRA6,STRA6,Gene,,NCBI:64220,signaling receptor and transporter of retinol STRA6,NCBI Gene
+GENE:STX1A,STX1A,Gene,,NCBI:6804,syntaxin 1A,NCBI Gene
+GENE:TALDO1,TALDO1,Gene,,NCBI:6888,transaldolase 1,NCBI Gene
+GENE:TBL2,TBL2,Gene,,NCBI:26608,transducin beta like 2,NCBI Gene
+GENE:TBX1,TBX1,Gene,,NCBI:6899,T-box transcription factor 1,NCBI Gene
+GENE:TBX20,TBX20,Gene,,NCBI:57057,T-box transcription factor 20,NCBI Gene
+GENE:TBX5,TBX5,Gene,,NCBI:6910,T-box transcription factor 5,NCBI Gene
+GENE:TFAP2B,TFAP2B,Gene,,NCBI:7021,transcription factor AP-2 beta,NCBI Gene
+GENE:TGFBR1,TGFBR1,Gene,,NCBI:7046,transforming growth factor beta receptor 1,NCBI Gene
+GENE:TGFBR2,TGFBR2,Gene,,NCBI:7048,transforming growth factor beta receptor 2,NCBI Gene
+GENE:DDR2,DDR2,Gene,,NCBI:4921,discoidin domain receptor tyrosine kinase 2,NCBI Gene
+GENE:TMEM94,TMEM94,Gene,,NCBI:9772,transmembrane protein 94,NCBI Gene
+GENE:TRAF7,TRAF7,Gene,,NCBI:84231,TNF receptor associated factor 7,NCBI Gene
+GENE:UFD1,UFD1,Gene,,NCBI:7353,ubiquitin recognition factor in ER associated degradation 1,NCBI Gene
+GENE:UGGT1,UGGT1,Gene,,NCBI:56886,UDP-glucose glycoprotein glucosyltransferase 1,NCBI Gene
+GENE:VPS35L,VPS35L,Gene,,NCBI:57020,VPS35 endosomal protein sorting factor like,NCBI Gene
+GENE:WASHC5,WASHC5,Gene,,NCBI:9897,WASH complex subunit 5,NCBI Gene
+GENE:WT1,WT1,Gene,,NCBI:7490,WT1 transcription factor,NCBI Gene
+GENE:ZEB2,ZEB2,Gene,,NCBI:9839,zinc finger E-box binding homeobox 2,NCBI Gene
+GENE:ZIC3,ZIC3,Gene,,NCBI:7547,Zic family zinc finger 3,NCBI Gene
+GENE:ZMPSTE24,ZMPSTE24,Gene,,NCBI:10269,zinc metallopeptidase STE24,NCBI Gene
+PATH:R-HSA-390522,Striated Muscle Contraction,Pathway,Reactome,Reactome:R-HSA-390522,,Reactome
+PATH:R-HSA-397014,Muscle contraction,Pathway,Reactome,Reactome:R-HSA-397014,,Reactome
+PATH:R-HSA-194315,Signaling by Rho GTPases,Pathway,Reactome,Reactome:R-HSA-194315,,Reactome
+PATH:R-HSA-9716542,"Signaling by Rho GTPases, Miro GTPases and RHOBTB3",Pathway,Reactome,Reactome:R-HSA-9716542,,Reactome
+PATH:R-HSA-1433617,Regulation of signaling by NODAL,Pathway,Reactome,Reactome:R-HSA-1433617,,Reactome
+PATH:R-HSA-1502540,Signaling by Activin,Pathway,Reactome,Reactome:R-HSA-1502540,,Reactome
+PATH:R-HSA-1181150,Signaling by NODAL,Pathway,Reactome,Reactome:R-HSA-1181150,,Reactome
+PATH:R-HSA-201451,Signaling by BMP,Pathway,Reactome,Reactome:R-HSA-201451,,Reactome
+PATH:R-HSA-9006936,Signaling by TGFB family members,Pathway,Reactome,Reactome:R-HSA-9006936,,Reactome
+PATH:R-HSA-9730414,MITF-M-regulated melanocyte development,Pathway,Reactome,Reactome:R-HSA-9730414,,Reactome
+PATH:R-HSA-5693565,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks,Pathway,Reactome,Reactome:R-HSA-5693565,,Reactome
+PATH:R-HSA-187706,Signalling to p38 via RIT and RIN,Pathway,Reactome,Reactome:R-HSA-187706,,Reactome
+PATH:R-HSA-9660537,Signaling by MRAS-complex mutants,Pathway,Reactome,Reactome:R-HSA-9660537,,Reactome
+PATH:R-HSA-9726842,Gain-of-function MRAS complexes activate RAF signaling,Pathway,Reactome,Reactome:R-HSA-9726842,,Reactome
+PATH:R-HSA-1295596,Spry regulation of FGF signaling,Pathway,Reactome,Reactome:R-HSA-1295596,,Reactome
+PATH:R-HSA-5654732,Negative regulation of FGFR3 signaling,Pathway,Reactome,Reactome:R-HSA-5654732,,Reactome
+PATH:R-HSA-5654733,Negative regulation of FGFR4 signaling,Pathway,Reactome,Reactome:R-HSA-5654733,,Reactome
+PATH:R-HSA-5654726,Negative regulation of FGFR1 signaling,Pathway,Reactome,Reactome:R-HSA-5654726,,Reactome
+PATH:R-HSA-5654727,Negative regulation of FGFR2 signaling,Pathway,Reactome,Reactome:R-HSA-5654727,,Reactome
+PATH:R-HSA-187687,Signalling to ERKs,Pathway,Reactome,Reactome:R-HSA-187687,,Reactome
+PATH:R-HSA-6802948,Signaling by high-kinase activity BRAF mutants,Pathway,Reactome,Reactome:R-HSA-6802948,,Reactome
+PATH:R-HSA-9656223,Signaling by RAF1 mutants,Pathway,Reactome,Reactome:R-HSA-9656223,,Reactome
+PATH:R-HSA-5654743,Signaling by FGFR4,Pathway,Reactome,Reactome:R-HSA-5654743,,Reactome
+PATH:R-HSA-5654741,Signaling by FGFR3,Pathway,Reactome,Reactome:R-HSA-5654741,,Reactome
+PATH:R-HSA-6802946,Signaling by moderate kinase activity BRAF mutants,Pathway,Reactome,Reactome:R-HSA-6802946,,Reactome
+PATH:R-HSA-6802955,Paradoxical activation of RAF signaling by kinase inactive BRAF,Pathway,Reactome,Reactome:R-HSA-6802955,,Reactome
+PATH:R-HSA-9649948,Signaling downstream of RAS mutants,Pathway,Reactome,Reactome:R-HSA-9649948,,Reactome
+PATH:R-HSA-6802949,Signaling by RAS mutants,Pathway,Reactome,Reactome:R-HSA-6802949,,Reactome
+PATH:R-HSA-5654736,Signaling by FGFR1,Pathway,Reactome,Reactome:R-HSA-5654736,,Reactome
+PATH:R-HSA-6802952,Signaling by BRAF and RAF1 fusions,Pathway,Reactome,Reactome:R-HSA-6802952,,Reactome
+PATH:R-HSA-5654738,Signaling by FGFR2,Pathway,Reactome,Reactome:R-HSA-5654738,,Reactome
+PATH:R-HSA-6802957,Oncogenic MAPK signaling,Pathway,Reactome,Reactome:R-HSA-6802957,,Reactome
+PATH:R-HSA-190236,Signaling by FGFR,Pathway,Reactome,Reactome:R-HSA-190236,,Reactome
+PATH:R-HSA-9706377,FLT3 signaling by CBL mutants,Pathway,Reactome,Reactome:R-HSA-9706377,,Reactome
+PATH:R-HSA-1059683,Interleukin-6 signaling,Pathway,Reactome,Reactome:R-HSA-1059683,,Reactome
+PATH:R-HSA-1433559,Regulation of KIT signaling,Pathway,Reactome,Reactome:R-HSA-1433559,,Reactome
+PATH:R-HSA-5637812,Signaling by EGFRvIII in Cancer,Pathway,Reactome,Reactome:R-HSA-5637812,,Reactome
+PATH:R-HSA-5637810,Constitutive Signaling by EGFRvIII,Pathway,Reactome,Reactome:R-HSA-5637810,,Reactome
+PATH:R-HSA-912631,Regulation of signaling by CBL,Pathway,Reactome,Reactome:R-HSA-912631,,Reactome
+PATH:R-HSA-5637815,Signaling by Ligand-Responsive EGFR Variants in Cancer,Pathway,Reactome,Reactome:R-HSA-5637815,,Reactome
+PATH:R-HSA-1236382,Constitutive Signaling by Ligand-Responsive EGFR Cancer Variants,Pathway,Reactome,Reactome:R-HSA-1236382,,Reactome
+PATH:R-HSA-6783589,Interleukin-6 family signaling,Pathway,Reactome,Reactome:R-HSA-6783589,,Reactome
+PATH:R-HSA-1643713,Signaling by EGFR in Cancer,Pathway,Reactome,Reactome:R-HSA-1643713,,Reactome
+PATH:R-HSA-9680350,Signaling by CSF1 (M-CSF) in myeloid cells,Pathway,Reactome,Reactome:R-HSA-9680350,,Reactome
+PATH:R-HSA-9682385,FLT3 signaling in disease,Pathway,Reactome,Reactome:R-HSA-9682385,,Reactome
+PATH:R-HSA-9607240,FLT3 Signaling,Pathway,Reactome,Reactome:R-HSA-9607240,,Reactome
+PATH:R-HSA-512988,"Interleukin-3, Interleukin-5 and GM-CSF signaling",Pathway,Reactome,Reactome:R-HSA-512988,,Reactome
+PATH:R-HSA-2173789,TGF-beta receptor signaling activates SMADs,Pathway,Reactome,Reactome:R-HSA-2173789,,Reactome
+PATH:R-HSA-1433557,Signaling by SCF-KIT,Pathway,Reactome,Reactome:R-HSA-1433557,,Reactome
+PATH:R-HSA-177929,Signaling by EGFR,Pathway,Reactome,Reactome:R-HSA-177929,,Reactome
+PATH:R-HSA-187037,Signaling by NTRK1 (TRKA),Pathway,Reactome,Reactome:R-HSA-187037,,Reactome
+PATH:R-HSA-166520,Signaling by NTRKs,Pathway,Reactome,Reactome:R-HSA-166520,,Reactome
+PATH:R-HSA-1257604,PIP3 activates AKT signaling,Pathway,Reactome,Reactome:R-HSA-1257604,,Reactome
+PATH:R-HSA-416476,G alpha (q) signalling events,Pathway,Reactome,Reactome:R-HSA-416476,,Reactome
+PATH:R-HSA-388396,GPCR downstream signalling,Pathway,Reactome,Reactome:R-HSA-388396,,Reactome
+PATH:R-HSA-8941856,RUNX3 regulates NOTCH signaling,Pathway,Reactome,Reactome:R-HSA-8941856,,Reactome
+PATH:R-HSA-210744,Regulation of gene expression in late stage (branching morphogenesis) pancreatic bud precursor cells,Pathway,Reactome,Reactome:R-HSA-210744,,Reactome
+PATH:R-HSA-9013695,NOTCH4 Intracellular Domain Regulates Transcription,Pathway,Reactome,Reactome:R-HSA-9013695,,Reactome
+PATH:R-HSA-350054,Notch-HLH transcription pathway,Pathway,Reactome,Reactome:R-HSA-350054,,Reactome
+PATH:R-HSA-5621575,CD209 (DC-SIGN) signaling,Pathway,Reactome,Reactome:R-HSA-5621575,,Reactome
+PATH:R-HSA-9981845,NOTCH signaling regulates gene expression in endothelial stalk cells,Pathway,Reactome,Reactome:R-HSA-9981845,,Reactome
+PATH:R-HSA-9013508,NOTCH3 Intracellular Domain Regulates Transcription,Pathway,Reactome,Reactome:R-HSA-9013508,,Reactome
+PATH:R-HSA-5617472,Activation of anterior HOX genes in hindbrain development during early embryogenesis,Pathway,Reactome,Reactome:R-HSA-5617472,,Reactome
+PATH:R-HSA-2660826,Constitutive Signaling by NOTCH1 t(7;9)(NOTCH1:M1580_K2555) Translocation Mutant,Pathway,Reactome,Reactome:R-HSA-2660826,,Reactome
+PATH:R-HSA-2660825,Signaling by NOTCH1 t(7;9)(NOTCH1:M1580_K2555) Translocation Mutant,Pathway,Reactome,Reactome:R-HSA-2660825,,Reactome
+PATH:R-HSA-9013700,NOTCH4 Activation and Transmission of Signal to the Nucleus,Pathway,Reactome,Reactome:R-HSA-9013700,,Reactome
+PATH:R-HSA-2691230,Signaling by NOTCH1 HD Domain Mutants in Cancer,Pathway,Reactome,Reactome:R-HSA-2691230,,Reactome
+PATH:R-HSA-2691232,Constitutive Signaling by NOTCH1 HD Domain Mutants,Pathway,Reactome,Reactome:R-HSA-2691232,,Reactome
+PATH:R-HSA-2979096,NOTCH2 Activation and Transmission of Signal to the Nucleus,Pathway,Reactome,Reactome:R-HSA-2979096,,Reactome
+PATH:R-HSA-9013507,NOTCH3 Activation and Transmission of Signal to the Nucleus,Pathway,Reactome,Reactome:R-HSA-9013507,,Reactome
+PATH:R-HSA-2122948,Activated NOTCH1 Transmits Signal to the Nucleus,Pathway,Reactome,Reactome:R-HSA-2122948,,Reactome
+PATH:R-HSA-1980145,Signaling by NOTCH2,Pathway,Reactome,Reactome:R-HSA-1980145,,Reactome
+PATH:R-HSA-9012852,Signaling by NOTCH3,Pathway,Reactome,Reactome:R-HSA-9012852,,Reactome
+PATH:R-HSA-2644603,Signaling by NOTCH1 in Cancer,Pathway,Reactome,Reactome:R-HSA-2644603,,Reactome
+PATH:R-HSA-2894858,Signaling by NOTCH1 HD+PEST Domain Mutants in Cancer,Pathway,Reactome,Reactome:R-HSA-2894858,,Reactome
+PATH:R-HSA-2894862,Constitutive Signaling by NOTCH1 HD+PEST Domain Mutants,Pathway,Reactome,Reactome:R-HSA-2894862,,Reactome
+PATH:R-HSA-2644602,Signaling by NOTCH1 PEST Domain Mutants in Cancer,Pathway,Reactome,Reactome:R-HSA-2644602,,Reactome
+PATH:R-HSA-2644606,Constitutive Signaling by NOTCH1 PEST Domain Mutants,Pathway,Reactome,Reactome:R-HSA-2644606,,Reactome
+PATH:R-HSA-9013694,Signaling by NOTCH4,Pathway,Reactome,Reactome:R-HSA-9013694,,Reactome
+PATH:R-HSA-1980143,Signaling by NOTCH1,Pathway,Reactome,Reactome:R-HSA-1980143,,Reactome
+PATH:R-HSA-1266738,Developmental Biology,Pathway,Reactome,Reactome:R-HSA-1266738,,Reactome
+PATH:R-HSA-157118,Signaling by NOTCH,Pathway,Reactome,Reactome:R-HSA-157118,,Reactome
+PATH:R-HSA-9933946,Formation of the embryonic stem cell BAF (esBAF) complex,Pathway,Reactome,Reactome:R-HSA-9933946,,Reactome
+PATH:R-HSA-399956,CRMPs in Sema3A signaling,Pathway,Reactome,Reactome:R-HSA-399956,,Reactome
+PATH:R-HSA-9675108,Nervous system development,Pathway,Reactome,Reactome:R-HSA-9675108,,Reactome
+PATH:R-HSA-2197563,NOTCH2 intracellular domain regulates transcription,Pathway,Reactome,Reactome:R-HSA-2197563,,Reactome
+PATH:R-HSA-9735871,SARS-CoV-1 targets host intracellular signalling and regulatory pathways,Pathway,Reactome,Reactome:R-HSA-9735871,,Reactome
+PATH:R-HSA-9701898,STAT3 nuclear events downstream of ALK signaling,Pathway,Reactome,Reactome:R-HSA-9701898,,Reactome
+PATH:R-HSA-9839394,TGFBR3 expression,Pathway,Reactome,Reactome:R-HSA-9839394,,Reactome
+PATH:R-HSA-9833482,PKR-mediated signaling,Pathway,Reactome,Reactome:R-HSA-9833482,,Reactome
+PATH:R-HSA-913531,Interferon Signaling,Pathway,Reactome,Reactome:R-HSA-913531,,Reactome
+PATH:R-HSA-170834,Signaling by TGF-beta Receptor Complex,Pathway,Reactome,Reactome:R-HSA-170834,,Reactome
+PATH:R-HSA-1839124,FGFR1 mutant receptor activation,Pathway,Reactome,Reactome:R-HSA-1839124,,Reactome
+PATH:R-HSA-5655302,Signaling by FGFR1 in disease,Pathway,Reactome,Reactome:R-HSA-5655302,,Reactome
+PATH:R-HSA-1226099,Signaling by FGFR in disease,Pathway,Reactome,Reactome:R-HSA-1226099,,Reactome
+PATH:R-HSA-1839120,Signaling by FGFR1 amplification mutants,Pathway,Reactome,Reactome:R-HSA-1839120,,Reactome
+PATH:R-HSA-1839122,Signaling by activated point mutants of FGFR1,Pathway,Reactome,Reactome:R-HSA-1839122,,Reactome
+PATH:R-HSA-5654219,Phospholipase C-mediated cascade: FGFR1,Pathway,Reactome,Reactome:R-HSA-5654219,,Reactome
+PATH:R-HSA-190242,FGFR1 ligand binding and activation,Pathway,Reactome,Reactome:R-HSA-190242,,Reactome
+PATH:R-HSA-5654689,PI-3K cascade:FGFR1,Pathway,Reactome,Reactome:R-HSA-5654689,,Reactome
+PATH:R-HSA-5654688,SHC-mediated cascade:FGFR1,Pathway,Reactome,Reactome:R-HSA-5654688,,Reactome
+PATH:R-HSA-5654693,FRS-mediated FGFR1 signaling,Pathway,Reactome,Reactome:R-HSA-5654693,,Reactome
+PATH:R-HSA-5654687,Downstream signaling of activated FGFR1,Pathway,Reactome,Reactome:R-HSA-5654687,,Reactome
+PATH:R-HSA-5663202,Diseases of signal transduction by growth factor receptors and second messengers,Pathway,Reactome,Reactome:R-HSA-5663202,,Reactome
+PATH:R-HSA-112399,IRS-mediated signalling,Pathway,Reactome,Reactome:R-HSA-112399,,Reactome
+PATH:R-HSA-2428924,IGF1R signaling cascade,Pathway,Reactome,Reactome:R-HSA-2428924,,Reactome
+PATH:R-HSA-74751,Insulin receptor signalling cascade,Pathway,Reactome,Reactome:R-HSA-74751,,Reactome
+PATH:R-HSA-2404192,Signaling by Type 1 Insulin-like Growth Factor 1 Receptor (IGF1R),Pathway,Reactome,Reactome:R-HSA-2404192,,Reactome
+PATH:R-HSA-74752,Signaling by Insulin receptor,Pathway,Reactome,Reactome:R-HSA-74752,,Reactome
+PATH:R-HSA-2219530,Constitutive Signaling by Aberrant PI3K in Cancer,Pathway,Reactome,Reactome:R-HSA-2219530,,Reactome
+PATH:R-HSA-2219528,PI3K/AKT Signaling in Cancer,Pathway,Reactome,Reactome:R-HSA-2219528,,Reactome
+PATH:R-HSA-6811558,"PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling",Pathway,Reactome,Reactome:R-HSA-6811558,,Reactome
+PATH:R-HSA-8853336,Signaling by plasma membrane FGFR1 fusions,Pathway,Reactome,Reactome:R-HSA-8853336,,Reactome
+PATH:R-HSA-5684996,MAPK1/MAPK3 signaling,Pathway,Reactome,Reactome:R-HSA-5684996,,Reactome
+PATH:R-HSA-2033514,FGFR3 mutant receptor activation,Pathway,Reactome,Reactome:R-HSA-2033514,,Reactome
+PATH:R-HSA-1839130,Signaling by activated point mutants of FGFR3,Pathway,Reactome,Reactome:R-HSA-1839130,,Reactome
+PATH:R-HSA-5655332,Signaling by FGFR3 in disease,Pathway,Reactome,Reactome:R-HSA-5655332,,Reactome
+PATH:R-HSA-5654227,Phospholipase C-mediated cascade; FGFR3,Pathway,Reactome,Reactome:R-HSA-5654227,,Reactome
+PATH:R-HSA-190239,FGFR3 ligand binding and activation,Pathway,Reactome,Reactome:R-HSA-190239,,Reactome
+PATH:R-HSA-5654710,PI-3K cascade:FGFR3,Pathway,Reactome,Reactome:R-HSA-5654710,,Reactome
+PATH:R-HSA-5654704,SHC-mediated cascade:FGFR3,Pathway,Reactome,Reactome:R-HSA-5654704,,Reactome
+PATH:R-HSA-5654706,FRS-mediated FGFR3 signaling,Pathway,Reactome,Reactome:R-HSA-5654706,,Reactome
+PATH:R-HSA-5654708,Downstream signaling of activated FGFR3,Pathway,Reactome,Reactome:R-HSA-5654708,,Reactome
+PATH:R-HSA-2033515,t(4;14) translocations of FGFR3,Pathway,Reactome,Reactome:R-HSA-2033515,,Reactome
+PATH:R-HSA-8853334,Signaling by FGFR3 fusions in cancer,Pathway,Reactome,Reactome:R-HSA-8853334,,Reactome
+PATH:R-HSA-430116,GP1b-IX-V activation signalling,Pathway,Reactome,Reactome:R-HSA-430116,,Reactome
+PATH:R-HSA-76002,"Platelet activation, signaling and aggregation",Pathway,Reactome,Reactome:R-HSA-76002,,Reactome
+PATH:R-HSA-9856530,High laminar flow shear stress activates signaling by PIEZO1 and PECAM1:CDH5:KDR in endothelial cells,Pathway,Reactome,Reactome:R-HSA-9856530,,Reactome
+PATH:R-HSA-9860931,Response of endothelial cells to shear stress,Pathway,Reactome,Reactome:R-HSA-9860931,,Reactome
+PATH:R-HSA-194138,Signaling by VEGF,Pathway,Reactome,Reactome:R-HSA-194138,,Reactome
+PATH:R-HSA-162582,Signal Transduction,Pathway,Reactome,Reactome:R-HSA-162582,,Reactome
+PATH:R-HSA-9761174,Formation of intermediate mesoderm,Pathway,Reactome,Reactome:R-HSA-9761174,,Reactome
+PATH:R-HSA-9830369,Kidney development,Pathway,Reactome,Reactome:R-HSA-9830369,,Reactome
+PATH:R-HSA-9758920,Formation of lateral plate mesoderm,Pathway,Reactome,Reactome:R-HSA-9758920,,Reactome
+PATH:R-HSA-9937080,Developmental Lineage of Multipotent Pancreatic Progenitor Cells,Pathway,Reactome,Reactome:R-HSA-9937080,,Reactome
+PATH:R-HSA-9733709,Cardiogenesis,Pathway,Reactome,Reactome:R-HSA-9733709,,Reactome
+PATH:R-HSA-9925563,Developmental Lineage of Pancreatic Ductal Cells,Pathway,Reactome,Reactome:R-HSA-9925563,,Reactome
+PATH:R-HSA-9925561,Developmental Lineage of Pancreatic Acinar Cells,Pathway,Reactome,Reactome:R-HSA-9925561,,Reactome
+PATH:R-HSA-9820448,Developmental Cell Lineages of the Exocrine Pancreas,Pathway,Reactome,Reactome:R-HSA-9820448,,Reactome
+PATH:R-HSA-9734767,Developmental Cell Lineages,Pathway,Reactome,Reactome:R-HSA-9734767,,Reactome
+PATH:R-HSA-5576891,Cardiac conduction,Pathway,Reactome,Reactome:R-HSA-5576891,,Reactome
+PATH:R-HSA-983231,Factors involved in megakaryocyte development and platelet production,Pathway,Reactome,Reactome:R-HSA-983231,,Reactome
+PATH:R-HSA-9856532,Mechanical load activates signaling by PIEZO1 and integrins in osteocytes,Pathway,Reactome,Reactome:R-HSA-9856532,,Reactome
+PATH:R-HSA-8941326,RUNX2 regulates bone development,Pathway,Reactome,Reactome:R-HSA-8941326,,Reactome
+PATH:R-HSA-5358351,Signaling by Hedgehog,Pathway,Reactome,Reactome:R-HSA-5358351,,Reactome
+PATH:R-HSA-2122947,NOTCH1 Intracellular Domain Regulates Transcription,Pathway,Reactome,Reactome:R-HSA-2122947,,Reactome
+PATH:R-HSA-9753510,Signaling by RAS GAP mutants,Pathway,Reactome,Reactome:R-HSA-9753510,,Reactome
+PATH:R-HSA-9753512,Signaling by RAS GTPase mutants,Pathway,Reactome,Reactome:R-HSA-9753512,,Reactome
+PATH:R-HSA-6802953,RAS signaling downstream of NF1 loss-of-function variants,Pathway,Reactome,Reactome:R-HSA-6802953,,Reactome
+PATH:R-HSA-112412,SOS-mediated signalling,Pathway,Reactome,Reactome:R-HSA-112412,,Reactome
+PATH:R-HSA-9634635,Estrogen-stimulated signaling through PRKCZ,Pathway,Reactome,Reactome:R-HSA-9634635,,Reactome
+PATH:R-HSA-9034864,Activated NTRK3 signals through RAS,Pathway,Reactome,Reactome:R-HSA-9034864,,Reactome
+PATH:R-HSA-9026519,Activated NTRK2 signals through RAS,Pathway,Reactome,Reactome:R-HSA-9026519,,Reactome
+PATH:R-HSA-179812,GRB2 events in EGFR signaling,Pathway,Reactome,Reactome:R-HSA-179812,,Reactome
+PATH:R-HSA-8851805,MET activates RAS signaling,Pathway,Reactome,Reactome:R-HSA-8851805,,Reactome
+PATH:R-HSA-9028731,Activated NTRK2 signals through FRS2 and FRS3,Pathway,Reactome,Reactome:R-HSA-9028731,,Reactome
+PATH:R-HSA-9634285,Constitutive Signaling by Overexpressed ERBB2,Pathway,Reactome,Reactome:R-HSA-9634285,,Reactome
+PATH:R-HSA-5655291,Signaling by FGFR4 in disease,Pathway,Reactome,Reactome:R-HSA-5655291,,Reactome
+PATH:R-HSA-180336,SHC1 events in EGFR signaling,Pathway,Reactome,Reactome:R-HSA-180336,,Reactome
+PATH:R-HSA-9673767,"Signaling by PDGFRA transmembrane, juxtamembrane and kinase domain mutants",Pathway,Reactome,Reactome:R-HSA-9673767,,Reactome
+PATH:R-HSA-9673770,Signaling by PDGFRA extracellular domain mutants,Pathway,Reactome,Reactome:R-HSA-9673770,,Reactome
+PATH:R-HSA-1963640,GRB2 events in ERBB2 signaling,Pathway,Reactome,Reactome:R-HSA-1963640,,Reactome
+PATH:R-HSA-1250347,SHC1 events in ERBB4 signaling,Pathway,Reactome,Reactome:R-HSA-1250347,,Reactome
+PATH:R-HSA-9665348,Signaling by ERBB2 ECD mutants,Pathway,Reactome,Reactome:R-HSA-9665348,,Reactome
+PATH:R-HSA-210993,Tie2 Signaling,Pathway,Reactome,Reactome:R-HSA-210993,,Reactome
+PATH:R-HSA-881907,Gastrin-CREB signalling pathway via PKC and MAPK,Pathway,Reactome,Reactome:R-HSA-881907,,Reactome
+PATH:R-HSA-167044,Signalling to RAS,Pathway,Reactome,Reactome:R-HSA-167044,,Reactome
+PATH:R-HSA-9831926,Nephron development,Pathway,Reactome,Reactome:R-HSA-9831926,,Reactome
+PATH:R-HSA-9675151,Disorders of Developmental Biology,Pathway,Reactome,Reactome:R-HSA-9675151,,Reactome
+PATH:R-HSA-400685,Sema4D in semaphorin signaling,Pathway,Reactome,Reactome:R-HSA-400685,,Reactome
+PATH:R-HSA-3928662,EPHB-mediated forward signaling,Pathway,Reactome,Reactome:R-HSA-3928662,,Reactome
+PATH:R-HSA-2682334,EPH-Ephrin signaling,Pathway,Reactome,Reactome:R-HSA-2682334,,Reactome
+PATH:R-HSA-9734009,Defective Intrinsic Pathway for Apoptosis,Pathway,Reactome,Reactome:R-HSA-9734009,,Reactome
+PATH:R-HSA-109581,Apoptosis,Pathway,Reactome,Reactome:R-HSA-109581,,Reactome
+PATH:R-HSA-9841251,Mitochondrial unfolded protein response (UPRmt),Pathway,Reactome,Reactome:R-HSA-9841251,,Reactome
+PATH:R-HSA-9837999,Mitochondrial protein degradation,Pathway,Reactome,Reactome:R-HSA-9837999,,Reactome
+PATH:R-HSA-9652169,Signaling by MAP2K mutants,Pathway,Reactome,Reactome:R-HSA-9652169,,Reactome
+PATH:R-HSA-445144,Signal transduction by L1,Pathway,Reactome,Reactome:R-HSA-445144,,Reactome
+PATH:R-HSA-448424,Interleukin-17 signaling,Pathway,Reactome,Reactome:R-HSA-448424,,Reactome
+PATH:R-HSA-9020702,Interleukin-1 signaling,Pathway,Reactome,Reactome:R-HSA-9020702,,Reactome
+PATH:R-HSA-5683057,MAPK family signaling cascades,Pathway,Reactome,Reactome:R-HSA-5683057,,Reactome
+PATH:R-HSA-9707616,Heme signaling,Pathway,Reactome,Reactome:R-HSA-9707616,,Reactome
+PATH:R-HSA-2151201,Transcriptional activation of mitochondrial biogenesis,Pathway,Reactome,Reactome:R-HSA-2151201,,Reactome
+PATH:R-HSA-937061,TRIF (TICAM1)-mediated TLR4 signaling ,Pathway,Reactome,Reactome:R-HSA-937061,,Reactome
+PATH:R-HSA-1592230,Mitochondrial biogenesis,Pathway,Reactome,Reactome:R-HSA-1592230,,Reactome
+PATH:R-HSA-877300,Interferon gamma signaling,Pathway,Reactome,Reactome:R-HSA-877300,,Reactome
+PATH:R-HSA-1280215,Cytokine Signaling in Immune system,Pathway,Reactome,Reactome:R-HSA-1280215,,Reactome
+PATH:R-HSA-1912408,Pre-NOTCH Transcription and Translation,Pathway,Reactome,Reactome:R-HSA-1912408,,Reactome
+PATH:R-HSA-1912422,Pre-NOTCH Expression and Processing,Pathway,Reactome,Reactome:R-HSA-1912422,,Reactome
+PATH:R-HSA-9725371,Nuclear events stimulated by ALK signaling in cancer,Pathway,Reactome,Reactome:R-HSA-9725371,,Reactome
+PATH:R-HSA-9793380,Formation of paraxial mesoderm,Pathway,Reactome,Reactome:R-HSA-9793380,,Reactome
+PATH:R-HSA-9725370,Signaling by ALK fusions and activated point mutants,Pathway,Reactome,Reactome:R-HSA-9725370,,Reactome
+PATH:R-HSA-9700206,Signaling by ALK in cancer,Pathway,Reactome,Reactome:R-HSA-9700206,,Reactome
+PATH:R-HSA-2644605,FBXW7 Mutants and NOTCH1 in Cancer,Pathway,Reactome,Reactome:R-HSA-2644605,,Reactome
+PATH:R-HSA-2644607,Loss of Function of FBXW7 in Cancer and NOTCH1 Signaling,Pathway,Reactome,Reactome:R-HSA-2644607,,Reactome
+PATH:R-HSA-1912399,Pre-NOTCH Processing in the Endoplasmic Reticulum,Pathway,Reactome,Reactome:R-HSA-1912399,,Reactome
+PATH:R-HSA-1912420,Pre-NOTCH Processing in Golgi,Pathway,Reactome,Reactome:R-HSA-1912420,,Reactome
+PATH:R-HSA-9017802,Noncanonical activation of NOTCH3,Pathway,Reactome,Reactome:R-HSA-9017802,,Reactome
+PATH:R-HSA-2173788,Downregulation of TGF-beta receptor signaling,Pathway,Reactome,Reactome:R-HSA-2173788,,Reactome
+PATH:R-HSA-169911,Regulation of Apoptosis,Pathway,Reactome,Reactome:R-HSA-169911,,Reactome
+PATH:R-HSA-9604323,Negative regulation of NOTCH4 signaling,Pathway,Reactome,Reactome:R-HSA-9604323,,Reactome
+PATH:R-HSA-5676590,NIK-->noncanonical NF-kB signaling,Pathway,Reactome,Reactome:R-HSA-5676590,,Reactome
+PATH:R-HSA-9008059,Interleukin-37 signaling,Pathway,Reactome,Reactome:R-HSA-9008059,,Reactome
+PATH:R-HSA-446652,Interleukin-1 family signaling,Pathway,Reactome,Reactome:R-HSA-446652,,Reactome
+PATH:R-HSA-418886,Netrin mediated repulsion signals,Pathway,Reactome,Reactome:R-HSA-418886,,Reactome
+PATH:R-HSA-449147,Signaling by Interleukins,Pathway,Reactome,Reactome:R-HSA-449147,,Reactome
+PATH:R-HSA-2586552,Signaling by Leptin,Pathway,Reactome,Reactome:R-HSA-2586552,,Reactome
+PATH:R-HSA-877312,Regulation of IFNG signaling,Pathway,Reactome,Reactome:R-HSA-877312,,Reactome
+PATH:R-HSA-1170546,Prolactin receptor signaling,Pathway,Reactome,Reactome:R-HSA-1170546,,Reactome
+PATH:R-HSA-391160,Signal regulatory protein family interactions,Pathway,Reactome,Reactome:R-HSA-391160,,Reactome
+PATH:R-HSA-180292,GAB1 signalosome,Pathway,Reactome,Reactome:R-HSA-180292,,Reactome
+PATH:R-HSA-5654720,PI-3K cascade:FGFR4,Pathway,Reactome,Reactome:R-HSA-5654720,,Reactome
+PATH:R-HSA-5654712,FRS-mediated FGFR4 signaling,Pathway,Reactome,Reactome:R-HSA-5654712,,Reactome
+PATH:R-HSA-912694,Regulation of IFNA/IFNB signaling,Pathway,Reactome,Reactome:R-HSA-912694,,Reactome
+PATH:R-HSA-9732724,IFNG signaling activates MAPKs,Pathway,Reactome,Reactome:R-HSA-9732724,,Reactome
+PATH:R-HSA-392517,Rap1 signalling,Pathway,Reactome,Reactome:R-HSA-392517,,Reactome
+PATH:R-HSA-376176,Signaling by ROBO receptors,Pathway,Reactome,Reactome:R-HSA-376176,,Reactome
+PATH:R-HSA-9006925,Intracellular signaling by second messengers,Pathway,Reactome,Reactome:R-HSA-9006925,,Reactome
+PATH:R-HSA-3656532,TGFBR1 KD Mutants in Cancer,Pathway,Reactome,Reactome:R-HSA-3656532,,Reactome
+PATH:R-HSA-3656534,Loss of Function of TGFBR1 in Cancer,Pathway,Reactome,Reactome:R-HSA-3656534,,Reactome
+PATH:R-HSA-3304351,Signaling by TGF-beta Receptor Complex in Cancer,Pathway,Reactome,Reactome:R-HSA-3304351,,Reactome
+PATH:R-HSA-9796292,Formation of axial mesoderm,Pathway,Reactome,Reactome:R-HSA-9796292,,Reactome
+PATH:R-HSA-9615017,"FOXO-mediated transcription of oxidative stress, metabolic and neuronal genes",Pathway,Reactome,Reactome:R-HSA-9615017,,Reactome
+PATH:R-HSA-9839373,Signaling by TGFBR3,Pathway,Reactome,Reactome:R-HSA-9839373,,Reactome
+PATH:R-HSA-1266695,Interleukin-7 signaling,Pathway,Reactome,Reactome:R-HSA-1266695,,Reactome
+PATH:R-HSA-201681,TCF dependent signaling in response to WNT,Pathway,Reactome,Reactome:R-HSA-201681,,Reactome
+PATH:R-HSA-8939211,ESR-mediated signaling,Pathway,Reactome,Reactome:R-HSA-8939211,,Reactome
+PATH:R-HSA-9006931,Signaling by Nuclear Receptors,Pathway,Reactome,Reactome:R-HSA-9006931,,Reactome
+PATH:R-HSA-74749,Signal attenuation,Pathway,Reactome,Reactome:R-HSA-74749,,Reactome
+PATH:R-HSA-9842663,Signaling by LTK,Pathway,Reactome,Reactome:R-HSA-9842663,,Reactome
+PATH:R-HSA-8983432,Interleukin-15 signaling,Pathway,Reactome,Reactome:R-HSA-8983432,,Reactome
+PATH:R-HSA-354194,GRB2:SOS provides linkage to MAPK signaling for Integrins ,Pathway,Reactome,Reactome:R-HSA-354194,,Reactome
+PATH:R-HSA-451927,Interleukin-2 family signaling,Pathway,Reactome,Reactome:R-HSA-451927,,Reactome
+PATH:R-HSA-193648,NRAGE signals death through JNK,Pathway,Reactome,Reactome:R-HSA-193648,,Reactome
+PATH:R-HSA-204998,"Cell death signalling via NRAGE, NRIF and NADE",Pathway,Reactome,Reactome:R-HSA-204998,,Reactome
+PATH:R-HSA-416482,G alpha (12/13) signalling events,Pathway,Reactome,Reactome:R-HSA-416482,,Reactome
+PATH:R-HSA-193704,p75 NTR receptor-mediated signalling,Pathway,Reactome,Reactome:R-HSA-193704,,Reactome
+PATH:R-HSA-195721,Signaling by WNT,Pathway,Reactome,Reactome:R-HSA-195721,,Reactome
+PATH:R-HSA-449836,Other interleukin signaling,Pathway,Reactome,Reactome:R-HSA-449836,,Reactome
+PATH:R-HSA-8950505,Gene and protein expression by JAK-STAT signaling after Interleukin-12 stimulation,Pathway,Reactome,Reactome:R-HSA-8950505,,Reactome
+PATH:R-HSA-9020591,Interleukin-12 signaling,Pathway,Reactome,Reactome:R-HSA-9020591,,Reactome
+PATH:R-HSA-447115,Interleukin-12 family signaling,Pathway,Reactome,Reactome:R-HSA-447115,,Reactome
+PATH:R-HSA-3645790,TGFBR2 Kinase Domain Mutants in Cancer,Pathway,Reactome,Reactome:R-HSA-3645790,,Reactome
+PATH:R-HSA-3656535,TGFBR1 LBD Mutants in Cancer,Pathway,Reactome,Reactome:R-HSA-3656535,,Reactome
+PATH:R-HSA-3642278,Loss of Function of TGFBR2 in Cancer,Pathway,Reactome,Reactome:R-HSA-3642278,,Reactome
+PATH:R-HSA-9839389,TGFBR3 regulates TGF-beta signaling,Pathway,Reactome,Reactome:R-HSA-9839389,,Reactome
+PATH:R-HSA-2173791,TGF-beta receptor signaling in EMT (epithelial to mesenchymal transition),Pathway,Reactome,Reactome:R-HSA-2173791,,Reactome
+PATH:R-HSA-3642279,TGFBR2 MSI Frameshift Mutants in Cancer,Pathway,Reactome,Reactome:R-HSA-3642279,,Reactome
+POP:CAMPOS,"Resident population, Campos dos Goytacazes",Population,,IBGE:330100,Municipality of residence; ecological exposure assignment.,study
+PERIOD:2010-2025,2010-2025,Period,,,Epidemiological study period.,study
+IND:SINASC_CHD,"SINASC CHD cases / 10,000 live births",Indicator,prevalence_at_birth,,Annual CHD cases reported in SINASC for resident live births; severe under-ascertainment documented.,SINASC
+IND:SIH_CHD,SIH CHD admissions (primary diagnosis),Indicator,hospital_admissions,,AIHs of residents with primary diagnosis Q20-Q28; not incidence and not unique individuals.,SIH/SUS
+IND:ERA5_TMAX,ERA5-Land daily maximum temperature (Campos),Indicator,area_level_climate,,"Gridded reanalysis for the municipality, 2010-2025.",Open-Meteo / ERA5-Land
+GENE:-,-,Gene,,NCBI:7467,,HPO genes_to_phenotype.txt
+GENE:AARS1,AARS1,Gene,,NCBI:16,,HPO genes_to_phenotype.txt
+GENE:ABCC6,ABCC6,Gene,,NCBI:368,,HPO genes_to_phenotype.txt
+GENE:ABCC9,ABCC9,Gene,,NCBI:10060,,HPO genes_to_phenotype.txt
+GENE:ABCD4,ABCD4,Gene,,NCBI:5826,,HPO genes_to_phenotype.txt
+GENE:ABCG5,ABCG5,Gene,,NCBI:64240,,HPO genes_to_phenotype.txt
+GENE:ABCG8,ABCG8,Gene,,NCBI:64241,,HPO genes_to_phenotype.txt
+GENE:ABL1,ABL1,Gene,,NCBI:25,,HPO genes_to_phenotype.txt
+GENE:ACAD8,ACAD8,Gene,,NCBI:27034,,HPO genes_to_phenotype.txt
+GENE:ACADVL,ACADVL,Gene,,NCBI:37,,HPO genes_to_phenotype.txt
+GENE:ACSL4,ACSL4,Gene,,NCBI:2182,,HPO genes_to_phenotype.txt
+GENE:ACTA2,ACTA2,Gene,,NCBI:59,,HPO genes_to_phenotype.txt
+GENE:ACTB,ACTB,Gene,,NCBI:60,,HPO genes_to_phenotype.txt
+GENE:ADA2,ADA2,Gene,,NCBI:51816,,HPO genes_to_phenotype.txt
+GENE:ADAMTS17,ADAMTS17,Gene,,NCBI:170691,,HPO genes_to_phenotype.txt
+GENE:ADAMTS19,ADAMTS19,Gene,,NCBI:171019,,HPO genes_to_phenotype.txt
+GENE:ADAMTSL2,ADAMTSL2,Gene,,NCBI:9719,,HPO genes_to_phenotype.txt
+GENE:ADAT3,ADAT3,Gene,,NCBI:113179,,HPO genes_to_phenotype.txt
+GENE:ADK,ADK,Gene,,NCBI:132,,HPO genes_to_phenotype.txt
+GENE:ADNP,ADNP,Gene,,NCBI:23394,,HPO genes_to_phenotype.txt
+GENE:AFF4,AFF4,Gene,,NCBI:27125,,HPO genes_to_phenotype.txt
+GENE:AFG2A,AFG2A,Gene,,NCBI:166378,,HPO genes_to_phenotype.txt
+GENE:AGGF1,AGGF1,Gene,,NCBI:55109,,HPO genes_to_phenotype.txt
+GENE:AGO2,AGO2,Gene,,NCBI:27161,,HPO genes_to_phenotype.txt
+GENE:AHDC1,AHDC1,Gene,,NCBI:27245,,HPO genes_to_phenotype.txt
+GENE:AHI1,AHI1,Gene,,NCBI:54806,,HPO genes_to_phenotype.txt
+GENE:AKT3,AKT3,Gene,,NCBI:10000,,HPO genes_to_phenotype.txt
+GENE:ALB,ALB,Gene,,NCBI:213,,HPO genes_to_phenotype.txt
+GENE:ALDH18A1,ALDH18A1,Gene,,NCBI:5832,,HPO genes_to_phenotype.txt
+GENE:ALDH1A2,ALDH1A2,Gene,,NCBI:8854,,HPO genes_to_phenotype.txt
+GENE:ALDH3A2,ALDH3A2,Gene,,NCBI:224,,HPO genes_to_phenotype.txt
+GENE:ALG12,ALG12,Gene,,NCBI:79087,,HPO genes_to_phenotype.txt
+GENE:ALG8,ALG8,Gene,,NCBI:79053,,HPO genes_to_phenotype.txt
+GENE:ALG9,ALG9,Gene,,NCBI:79796,,HPO genes_to_phenotype.txt
+GENE:ALKBH8,ALKBH8,Gene,,NCBI:91801,,HPO genes_to_phenotype.txt
+GENE:ALX1,ALX1,Gene,,NCBI:8092,,HPO genes_to_phenotype.txt
+GENE:ALX3,ALX3,Gene,,NCBI:257,,HPO genes_to_phenotype.txt
+GENE:AMER1,AMER1,Gene,,NCBI:139285,,HPO genes_to_phenotype.txt
+GENE:AMMECR1,AMMECR1,Gene,,NCBI:9949,,HPO genes_to_phenotype.txt
+GENE:AMOTL1,AMOTL1,Gene,,NCBI:154810,,HPO genes_to_phenotype.txt
+GENE:ANK1,ANK1,Gene,,NCBI:286,,HPO genes_to_phenotype.txt
+GENE:ANKRD11,ANKRD11,Gene,,NCBI:29123,,HPO genes_to_phenotype.txt
+GENE:ANKS6,ANKS6,Gene,,NCBI:203286,,HPO genes_to_phenotype.txt
+GENE:APC2,APC2,Gene,,NCBI:10297,,HPO genes_to_phenotype.txt
+GENE:ARCN1,ARCN1,Gene,,NCBI:372,,HPO genes_to_phenotype.txt
+GENE:ARF1,ARF1,Gene,,NCBI:375,,HPO genes_to_phenotype.txt
+GENE:ARFGEF2,ARFGEF2,Gene,,NCBI:10564,,HPO genes_to_phenotype.txt
+GENE:ARID1A,ARID1A,Gene,,NCBI:8289,,HPO genes_to_phenotype.txt
+GENE:ARID2,ARID2,Gene,,NCBI:196528,,HPO genes_to_phenotype.txt
+GENE:ARL6IP6,ARL6IP6,Gene,,NCBI:151188,,HPO genes_to_phenotype.txt
+GENE:ARPC4,ARPC4,Gene,,NCBI:10093,,HPO genes_to_phenotype.txt
+GENE:ARSK,ARSK,Gene,,NCBI:153642,,HPO genes_to_phenotype.txt
+GENE:ARSL,ARSL,Gene,,NCBI:415,,HPO genes_to_phenotype.txt
+GENE:ARX,ARX,Gene,,NCBI:170302,,HPO genes_to_phenotype.txt
+GENE:ASCC1,ASCC1,Gene,,NCBI:51008,,HPO genes_to_phenotype.txt
+GENE:ASXL1,ASXL1,Gene,,NCBI:171023,,HPO genes_to_phenotype.txt
+GENE:ASXL2,ASXL2,Gene,,NCBI:55252,,HPO genes_to_phenotype.txt
+GENE:ATN1,ATN1,Gene,,NCBI:1822,,HPO genes_to_phenotype.txt
+GENE:ATP2B1,ATP2B1,Gene,,NCBI:490,,HPO genes_to_phenotype.txt
+GENE:ATP6V1A,ATP6V1A,Gene,,NCBI:523,,HPO genes_to_phenotype.txt
+GENE:ATP6V1B2,ATP6V1B2,Gene,,NCBI:526,,HPO genes_to_phenotype.txt
+GENE:ATP6V1E1,ATP6V1E1,Gene,,NCBI:529,,HPO genes_to_phenotype.txt
+GENE:ATRX,ATRX,Gene,,NCBI:546,,HPO genes_to_phenotype.txt
+GENE:ATXN7L3,ATXN7L3,Gene,,NCBI:56970,,HPO genes_to_phenotype.txt
+GENE:AUTS2,AUTS2,Gene,,NCBI:26053,,HPO genes_to_phenotype.txt
+GENE:AXIN1,AXIN1,Gene,,NCBI:8312,,HPO genes_to_phenotype.txt
+GENE:B3GALT6,B3GALT6,Gene,,NCBI:126792,,HPO genes_to_phenotype.txt
+GENE:B3GAT3,B3GAT3,Gene,,NCBI:26229,,HPO genes_to_phenotype.txt
+GENE:B4GALT7,B4GALT7,Gene,,NCBI:11285,,HPO genes_to_phenotype.txt
+GENE:BAP1,BAP1,Gene,,NCBI:8314,,HPO genes_to_phenotype.txt
+GENE:BBS2,BBS2,Gene,,NCBI:583,,HPO genes_to_phenotype.txt
+GENE:BCR,BCR,Gene,,NCBI:613,,HPO genes_to_phenotype.txt
+GENE:BICRA,BICRA,Gene,,NCBI:29998,,HPO genes_to_phenotype.txt
+GENE:BMP2,BMP2,Gene,,NCBI:650,,HPO genes_to_phenotype.txt
+GENE:BMPR1A,BMPR1A,Gene,,NCBI:657,,HPO genes_to_phenotype.txt
+GENE:BPTF,BPTF,Gene,,NCBI:2186,,HPO genes_to_phenotype.txt
+GENE:BRCA1,BRCA1,Gene,,NCBI:672,,HPO genes_to_phenotype.txt
+GENE:BRCA2,BRCA2,Gene,,NCBI:675,,HPO genes_to_phenotype.txt
+GENE:BRD4,BRD4,Gene,,NCBI:23476,,HPO genes_to_phenotype.txt
+GENE:BRF1,BRF1,Gene,,NCBI:2972,,HPO genes_to_phenotype.txt
+GENE:BRIP1,BRIP1,Gene,,NCBI:83990,,HPO genes_to_phenotype.txt
+GENE:BRPF1,BRPF1,Gene,,NCBI:7862,,HPO genes_to_phenotype.txt
+GENE:BRWD1,BRWD1,Gene,,NCBI:54014,,HPO genes_to_phenotype.txt
+GENE:BUB1,BUB1,Gene,,NCBI:699,,HPO genes_to_phenotype.txt
+GENE:BUB1B,BUB1B,Gene,,NCBI:701,,HPO genes_to_phenotype.txt
+GENE:BUB3,BUB3,Gene,,NCBI:9184,,HPO genes_to_phenotype.txt
+GENE:BUD23,BUD23,Gene,,NCBI:114049,,HPO genes_to_phenotype.txt
+GENE:CACHD1,CACHD1,Gene,,NCBI:57685,,HPO genes_to_phenotype.txt
+GENE:CACNA1C,CACNA1C,Gene,,NCBI:775,,HPO genes_to_phenotype.txt
+GENE:CACNA1D,CACNA1D,Gene,,NCBI:776,,HPO genes_to_phenotype.txt
+GENE:CACNA1E,CACNA1E,Gene,,NCBI:777,,HPO genes_to_phenotype.txt
+GENE:CADM3,CADM3,Gene,,NCBI:57863,,HPO genes_to_phenotype.txt
+GENE:CAMK2A,CAMK2A,Gene,,NCBI:815,,HPO genes_to_phenotype.txt
+GENE:CANT1,CANT1,Gene,,NCBI:124583,,HPO genes_to_phenotype.txt
+GENE:CARS1,CARS1,Gene,,NCBI:833,,HPO genes_to_phenotype.txt
+GENE:CASK,CASK,Gene,,NCBI:8573,,HPO genes_to_phenotype.txt
+GENE:CASZ1,CASZ1,Gene,,NCBI:54897,,HPO genes_to_phenotype.txt
+GENE:CCBE1,CCBE1,Gene,,NCBI:147372,,HPO genes_to_phenotype.txt
+GENE:CCDC174,CCDC174,Gene,,NCBI:51244,,HPO genes_to_phenotype.txt
+GENE:CCDC32,CCDC32,Gene,,NCBI:90416,,HPO genes_to_phenotype.txt
+GENE:CCDC39,CCDC39,Gene,,NCBI:339829,,HPO genes_to_phenotype.txt
+GENE:CCDC40,CCDC40,Gene,,NCBI:55036,,HPO genes_to_phenotype.txt
+GENE:CCDC47,CCDC47,Gene,,NCBI:57003,,HPO genes_to_phenotype.txt
+GENE:CCND2,CCND2,Gene,,NCBI:894,,HPO genes_to_phenotype.txt
+GENE:CCNO,CCNO,Gene,,NCBI:10309,,HPO genes_to_phenotype.txt
+GENE:CCNQ,CCNQ,Gene,,NCBI:92002,,HPO genes_to_phenotype.txt
+GENE:CCT3,CCT3,Gene,,NCBI:7203,,HPO genes_to_phenotype.txt
+GENE:CD96,CD96,Gene,,NCBI:10225,,HPO genes_to_phenotype.txt
+GENE:CDC42,CDC42,Gene,,NCBI:998,,HPO genes_to_phenotype.txt
+GENE:CDC42BPB,CDC42BPB,Gene,,NCBI:9578,,HPO genes_to_phenotype.txt
+GENE:CDC45,CDC45,Gene,,NCBI:8318,,HPO genes_to_phenotype.txt
+GENE:CDH2,CDH2,Gene,,NCBI:1000,,HPO genes_to_phenotype.txt
+GENE:CDK10,CDK10,Gene,,NCBI:8558,,HPO genes_to_phenotype.txt
+GENE:CDK13,CDK13,Gene,,NCBI:8621,,HPO genes_to_phenotype.txt
+GENE:CDK8,CDK8,Gene,,NCBI:1024,,HPO genes_to_phenotype.txt
+GENE:CDKL5,CDKL5,Gene,,NCBI:6792,,HPO genes_to_phenotype.txt
+GENE:CDON,CDON,Gene,,NCBI:50937,,HPO genes_to_phenotype.txt
+GENE:CEP120,CEP120,Gene,,NCBI:153241,,HPO genes_to_phenotype.txt
+GENE:CEP290,CEP290,Gene,,NCBI:80184,,HPO genes_to_phenotype.txt
+GENE:CEP295,CEP295,Gene,,NCBI:85459,,HPO genes_to_phenotype.txt
+GENE:CFAP221,CFAP221,Gene,,NCBI:200373,,HPO genes_to_phenotype.txt
+GENE:CFAP298,CFAP298,Gene,,NCBI:56683,,HPO genes_to_phenotype.txt
+GENE:CFAP300,CFAP300,Gene,,NCBI:85016,,HPO genes_to_phenotype.txt
+GENE:CFAP53,CFAP53,Gene,,NCBI:220136,,HPO genes_to_phenotype.txt
+GENE:CFAP74,CFAP74,Gene,,NCBI:85452,,HPO genes_to_phenotype.txt
+GENE:CFC1,CFC1,Gene,,NCBI:55997,,HPO genes_to_phenotype.txt
+GENE:CHASERR,CHASERR,Gene,,NCBI:100507217,,HPO genes_to_phenotype.txt
+GENE:CHD3,CHD3,Gene,,NCBI:1107,,HPO genes_to_phenotype.txt
+GENE:CHMP1A,CHMP1A,Gene,,NCBI:5119,,HPO genes_to_phenotype.txt
+GENE:CHST14,CHST14,Gene,,NCBI:113189,,HPO genes_to_phenotype.txt
+GENE:CHST3,CHST3,Gene,,NCBI:9469,,HPO genes_to_phenotype.txt
+GENE:CHUK,CHUK,Gene,,NCBI:1147,,HPO genes_to_phenotype.txt
+GENE:CIC,CIC,Gene,,NCBI:23152,,HPO genes_to_phenotype.txt
+GENE:CILK1,CILK1,Gene,,NCBI:22858,,HPO genes_to_phenotype.txt
+GENE:CKAP2L,CKAP2L,Gene,,NCBI:150468,,HPO genes_to_phenotype.txt
+GENE:CLCN3,CLCN3,Gene,,NCBI:1182,,HPO genes_to_phenotype.txt
+GENE:CLIC2,CLIC2,Gene,,NCBI:1193,,HPO genes_to_phenotype.txt
+GENE:CLXN,CLXN,Gene,,NCBI:79645,,HPO genes_to_phenotype.txt
+GENE:COA6,COA6,Gene,,NCBI:388753,,HPO genes_to_phenotype.txt
+GENE:COG6,COG6,Gene,,NCBI:57511,,HPO genes_to_phenotype.txt
+GENE:COL18A1,COL18A1,Gene,,NCBI:80781,,HPO genes_to_phenotype.txt
+GENE:COL1A1,COL1A1,Gene,,NCBI:1277,,HPO genes_to_phenotype.txt
+GENE:COL1A2,COL1A2,Gene,,NCBI:1278,,HPO genes_to_phenotype.txt
+GENE:COL3A1,COL3A1,Gene,,NCBI:1281,,HPO genes_to_phenotype.txt
+GENE:COQ4,COQ4,Gene,,NCBI:51117,,HPO genes_to_phenotype.txt
+GENE:COX7B,COX7B,Gene,,NCBI:1349,,HPO genes_to_phenotype.txt
+GENE:CPE,CPE,Gene,,NCBI:1363,,HPO genes_to_phenotype.txt
+GENE:CPLANE1,CPLANE1,Gene,,NCBI:65250,,HPO genes_to_phenotype.txt
+GENE:CPLX1,CPLX1,Gene,,NCBI:10815,,HPO genes_to_phenotype.txt
+GENE:CRB2,CRB2,Gene,,NCBI:286204,,HPO genes_to_phenotype.txt
+GENE:CRIPTO,CRIPTO,Gene,,NCBI:6997,,HPO genes_to_phenotype.txt
+GENE:CRKL,CRKL,Gene,,NCBI:1399,,HPO genes_to_phenotype.txt
+GENE:CSGALNACT1,CSGALNACT1,Gene,,NCBI:55790,,HPO genes_to_phenotype.txt
+GENE:CTBP1,CTBP1,Gene,,NCBI:1487,,HPO genes_to_phenotype.txt
+GENE:CTNNB1,CTNNB1,Gene,,NCBI:1499,,HPO genes_to_phenotype.txt
+GENE:CTU2,CTU2,Gene,,NCBI:348180,,HPO genes_to_phenotype.txt
+GENE:CUL3,CUL3,Gene,,NCBI:8452,,HPO genes_to_phenotype.txt
+GENE:CUX1,CUX1,Gene,,NCBI:1523,,HPO genes_to_phenotype.txt
+GENE:CWC27,CWC27,Gene,,NCBI:10283,,HPO genes_to_phenotype.txt
+GENE:CXCR2,CXCR2,Gene,,NCBI:3579,,HPO genes_to_phenotype.txt
+GENE:CXCR4,CXCR4,Gene,,NCBI:7852,,HPO genes_to_phenotype.txt
+GENE:DACT1,DACT1,Gene,,NCBI:51339,,HPO genes_to_phenotype.txt
+GENE:DAND5,DAND5,Gene,,NCBI:199699,,HPO genes_to_phenotype.txt
+GENE:DBR1,DBR1,Gene,,NCBI:51163,,HPO genes_to_phenotype.txt
+GENE:DCHS1,DCHS1,Gene,,NCBI:8642,,HPO genes_to_phenotype.txt
+GENE:DCPS,DCPS,Gene,,NCBI:28960,,HPO genes_to_phenotype.txt
+GENE:DDX11,DDX11,Gene,,NCBI:1663,,HPO genes_to_phenotype.txt
+GENE:DDX3X,DDX3X,Gene,,NCBI:1654,,HPO genes_to_phenotype.txt
+GENE:DDX59,DDX59,Gene,,NCBI:83479,,HPO genes_to_phenotype.txt
+GENE:DEF6,DEF6,Gene,,NCBI:50619,,HPO genes_to_phenotype.txt
+GENE:DEPDC5,DEPDC5,Gene,,NCBI:9681,,HPO genes_to_phenotype.txt
+GENE:DGCR2,DGCR2,Gene,,NCBI:9993,,HPO genes_to_phenotype.txt
+GENE:DGCR6,DGCR6,Gene,,NCBI:8214,,HPO genes_to_phenotype.txt
+GENE:DGCR8,DGCR8,Gene,,NCBI:54487,,HPO genes_to_phenotype.txt
+GENE:DHCR24,DHCR24,Gene,,NCBI:1718,,HPO genes_to_phenotype.txt
+GENE:DHRS3,DHRS3,Gene,,NCBI:9249,,HPO genes_to_phenotype.txt
+GENE:DHRSX,DHRSX,Gene,,NCBI:207063,,HPO genes_to_phenotype.txt
+GENE:DISP1,DISP1,Gene,,NCBI:84976,,HPO genes_to_phenotype.txt
+GENE:DLG5,DLG5,Gene,,NCBI:9231,,HPO genes_to_phenotype.txt
+GENE:DLK1,DLK1,Gene,,NCBI:8788,,HPO genes_to_phenotype.txt
+GENE:DLL1,DLL1,Gene,,NCBI:28514,,HPO genes_to_phenotype.txt
+GENE:DMPK,DMPK,Gene,,NCBI:1760,,HPO genes_to_phenotype.txt
+GENE:DMRT2,DMRT2,Gene,,NCBI:10655,,HPO genes_to_phenotype.txt
+GENE:DMXL2,DMXL2,Gene,,NCBI:23312,,HPO genes_to_phenotype.txt
+GENE:DNAAF1,DNAAF1,Gene,,NCBI:123872,,HPO genes_to_phenotype.txt
+GENE:DNAAF11,DNAAF11,Gene,,NCBI:23639,,HPO genes_to_phenotype.txt
+GENE:DNAAF19,DNAAF19,Gene,,NCBI:388389,,HPO genes_to_phenotype.txt
+GENE:DNAAF2,DNAAF2,Gene,,NCBI:55172,,HPO genes_to_phenotype.txt
+GENE:DNAAF3,DNAAF3,Gene,,NCBI:352909,,HPO genes_to_phenotype.txt
+GENE:DNAAF4,DNAAF4,Gene,,NCBI:161582,,HPO genes_to_phenotype.txt
+GENE:DNAAF5,DNAAF5,Gene,,NCBI:54919,,HPO genes_to_phenotype.txt
+GENE:DNAAF6,DNAAF6,Gene,,NCBI:139212,,HPO genes_to_phenotype.txt
+GENE:DNAH1,DNAH1,Gene,,NCBI:25981,,HPO genes_to_phenotype.txt
+GENE:DNAH11,DNAH11,Gene,,NCBI:8701,,HPO genes_to_phenotype.txt
+GENE:DNAH5,DNAH5,Gene,,NCBI:1767,,HPO genes_to_phenotype.txt
+GENE:DNAH7,DNAH7,Gene,,NCBI:56171,,HPO genes_to_phenotype.txt
+GENE:DNAH9,DNAH9,Gene,,NCBI:1770,,HPO genes_to_phenotype.txt
+GENE:DNAI1,DNAI1,Gene,,NCBI:27019,,HPO genes_to_phenotype.txt
+GENE:DNAI2,DNAI2,Gene,,NCBI:64446,,HPO genes_to_phenotype.txt
+GENE:DNAJB13,DNAJB13,Gene,,NCBI:374407,,HPO genes_to_phenotype.txt
+GENE:DNAJC19,DNAJC19,Gene,,NCBI:131118,,HPO genes_to_phenotype.txt
+GENE:DNAJC30,DNAJC30,Gene,,NCBI:84277,,HPO genes_to_phenotype.txt
+GENE:DNAL1,DNAL1,Gene,,NCBI:83544,,HPO genes_to_phenotype.txt
+GENE:DNMT3A,DNMT3A,Gene,,NCBI:1788,,HPO genes_to_phenotype.txt
+GENE:DOCK6,DOCK6,Gene,,NCBI:57572,,HPO genes_to_phenotype.txt
+GENE:DOHH,DOHH,Gene,,NCBI:83475,,HPO genes_to_phenotype.txt
+GENE:DONSON,DONSON,Gene,,NCBI:29980,,HPO genes_to_phenotype.txt
+GENE:DOT1L,DOT1L,Gene,,NCBI:84444,,HPO genes_to_phenotype.txt
+GENE:DPH1,DPH1,Gene,,NCBI:1801,,HPO genes_to_phenotype.txt
+GENE:DPH2,DPH2,Gene,,NCBI:1802,,HPO genes_to_phenotype.txt
+GENE:DPH5,DPH5,Gene,,NCBI:51611,,HPO genes_to_phenotype.txt
+GENE:DPM1,DPM1,Gene,,NCBI:8813,,HPO genes_to_phenotype.txt
+GENE:DRC1,DRC1,Gene,,NCBI:92749,,HPO genes_to_phenotype.txt
+GENE:DRC2,DRC2,Gene,,NCBI:85478,,HPO genes_to_phenotype.txt
+GENE:DRC4,DRC4,Gene,,NCBI:2622,,HPO genes_to_phenotype.txt
+GENE:DSG1,DSG1,Gene,,NCBI:1828,,HPO genes_to_phenotype.txt
+GENE:DST,DST,Gene,,NCBI:667,,HPO genes_to_phenotype.txt
+GENE:DTNA,DTNA,Gene,,NCBI:1837,,HPO genes_to_phenotype.txt
+GENE:DVL1,DVL1,Gene,,NCBI:1855,,HPO genes_to_phenotype.txt
+GENE:DVL3,DVL3,Gene,,NCBI:1857,,HPO genes_to_phenotype.txt
+GENE:DYNC2I1,DYNC2I1,Gene,,NCBI:55112,,HPO genes_to_phenotype.txt
+GENE:EBF3,EBF3,Gene,,NCBI:253738,,HPO genes_to_phenotype.txt
+GENE:EBP,EBP,Gene,,NCBI:10682,,HPO genes_to_phenotype.txt
+GENE:ECE1,ECE1,Gene,,NCBI:1889,,HPO genes_to_phenotype.txt
+GENE:ECHS1,ECHS1,Gene,,NCBI:1892,,HPO genes_to_phenotype.txt
+GENE:EED,EED,Gene,,NCBI:8726,,HPO genes_to_phenotype.txt
+GENE:EEFSEC,EEFSEC,Gene,,NCBI:60678,,HPO genes_to_phenotype.txt
+GENE:EFEMP2,EFEMP2,Gene,,NCBI:30008,,HPO genes_to_phenotype.txt
+GENE:EFTUD2,EFTUD2,Gene,,NCBI:9343,,HPO genes_to_phenotype.txt
+GENE:EGFR,EGFR,Gene,,NCBI:1956,,HPO genes_to_phenotype.txt
+GENE:EIF2AK3,EIF2AK3,Gene,,NCBI:9451,,HPO genes_to_phenotype.txt
+GENE:EIF4A2,EIF4A2,Gene,,NCBI:1974,,HPO genes_to_phenotype.txt
+GENE:EMILIN1,EMILIN1,Gene,,NCBI:11117,,HPO genes_to_phenotype.txt
+GENE:ENPP1,ENPP1,Gene,,NCBI:5167,,HPO genes_to_phenotype.txt
+GENE:EOGT,EOGT,Gene,,NCBI:285203,,HPO genes_to_phenotype.txt
+GENE:EPG5,EPG5,Gene,,NCBI:57724,,HPO genes_to_phenotype.txt
+GENE:EPHB4,EPHB4,Gene,,NCBI:2050,,HPO genes_to_phenotype.txt
+GENE:ERBB3,ERBB3,Gene,,NCBI:2065,,HPO genes_to_phenotype.txt
+GENE:ERCC2,ERCC2,Gene,,NCBI:2068,,HPO genes_to_phenotype.txt
+GENE:ERCC3,ERCC3,Gene,,NCBI:2071,,HPO genes_to_phenotype.txt
+GENE:ERCC4,ERCC4,Gene,,NCBI:2072,,HPO genes_to_phenotype.txt
+GENE:ERF,ERF,Gene,,NCBI:2077,,HPO genes_to_phenotype.txt
+GENE:ERI1,ERI1,Gene,,NCBI:90459,,HPO genes_to_phenotype.txt
+GENE:ERMARD,ERMARD,Gene,,NCBI:55780,,HPO genes_to_phenotype.txt
+GENE:ESCO2,ESCO2,Gene,,NCBI:157570,,HPO genes_to_phenotype.txt
+GENE:ESS2,ESS2,Gene,,NCBI:8220,,HPO genes_to_phenotype.txt
+GENE:EVC,EVC,Gene,,NCBI:2121,,HPO genes_to_phenotype.txt
+GENE:EVC2,EVC2,Gene,,NCBI:132884,,HPO genes_to_phenotype.txt
+GENE:EXOC2,EXOC2,Gene,,NCBI:55770,,HPO genes_to_phenotype.txt
+GENE:EXT2,EXT2,Gene,,NCBI:2132,,HPO genes_to_phenotype.txt
+GENE:EZH2,EZH2,Gene,,NCBI:2146,,HPO genes_to_phenotype.txt
+GENE:FADD,FADD,Gene,,NCBI:8772,,HPO genes_to_phenotype.txt
+GENE:FAM177A1,FAM177A1,Gene,,NCBI:283635,,HPO genes_to_phenotype.txt
+GENE:FANCA,FANCA,Gene,,NCBI:2175,,HPO genes_to_phenotype.txt
+GENE:FANCC,FANCC,Gene,,NCBI:2176,,HPO genes_to_phenotype.txt
+GENE:FANCD2,FANCD2,Gene,,NCBI:2177,,HPO genes_to_phenotype.txt
+GENE:FANCE,FANCE,Gene,,NCBI:2178,,HPO genes_to_phenotype.txt
+GENE:FANCG,FANCG,Gene,,NCBI:2189,,HPO genes_to_phenotype.txt
+GENE:FANCL,FANCL,Gene,,NCBI:55120,,HPO genes_to_phenotype.txt
+GENE:FANCM,FANCM,Gene,,NCBI:57697,,HPO genes_to_phenotype.txt
+GENE:FAT4,FAT4,Gene,,NCBI:79633,,HPO genes_to_phenotype.txt
+GENE:FBLN5,FBLN5,Gene,,NCBI:10516,,HPO genes_to_phenotype.txt
+GENE:FBN2,FBN2,Gene,,NCBI:2201,,HPO genes_to_phenotype.txt
+GENE:FBXL4,FBXL4,Gene,,NCBI:26235,,HPO genes_to_phenotype.txt
+GENE:FBXO11,FBXO11,Gene,,NCBI:80204,,HPO genes_to_phenotype.txt
+GENE:FBXO22,FBXO22,Gene,,NCBI:26263,,HPO genes_to_phenotype.txt
+GENE:FBXW11,FBXW11,Gene,,NCBI:23291,,HPO genes_to_phenotype.txt
+GENE:FEM1B,FEM1B,Gene,,NCBI:10116,,HPO genes_to_phenotype.txt
+GENE:FGF10,FGF10,Gene,,NCBI:2255,,HPO genes_to_phenotype.txt
+GENE:FGF13,FGF13,Gene,,NCBI:2258,,HPO genes_to_phenotype.txt
+GENE:FGF8,FGF8,Gene,,NCBI:2253,,HPO genes_to_phenotype.txt
+GENE:FGFR2,FGFR2,Gene,,NCBI:2263,,HPO genes_to_phenotype.txt
+GENE:FGFRL1,FGFRL1,Gene,,NCBI:53834,,HPO genes_to_phenotype.txt
+GENE:FIBP,FIBP,Gene,,NCBI:9158,,HPO genes_to_phenotype.txt
+GENE:FILIP1,FILIP1,Gene,,NCBI:27145,,HPO genes_to_phenotype.txt
+GENE:FKBP14,FKBP14,Gene,,NCBI:55033,,HPO genes_to_phenotype.txt
+GENE:FKTN,FKTN,Gene,,NCBI:2218,,HPO genes_to_phenotype.txt
+GENE:FLCN,FLCN,Gene,,NCBI:201163,,HPO genes_to_phenotype.txt
+GENE:FLI1,FLI1,Gene,,NCBI:2313,,HPO genes_to_phenotype.txt
+GENE:FLNB,FLNB,Gene,,NCBI:2317,,HPO genes_to_phenotype.txt
+GENE:FOCAD,FOCAD,Gene,,NCBI:54914,,HPO genes_to_phenotype.txt
+GENE:FOXC1,FOXC1,Gene,,NCBI:2296,,HPO genes_to_phenotype.txt
+GENE:FOXE3,FOXE3,Gene,,NCBI:2301,,HPO genes_to_phenotype.txt
+GENE:FOXH1,FOXH1,Gene,,NCBI:8928,,HPO genes_to_phenotype.txt
+GENE:FOXJ1,FOXJ1,Gene,,NCBI:2302,,HPO genes_to_phenotype.txt
+GENE:FOXP2,FOXP2,Gene,,NCBI:93986,,HPO genes_to_phenotype.txt
+GENE:FRA10AC1,FRA10AC1,Gene,,NCBI:118924,,HPO genes_to_phenotype.txt
+GENE:FRA16E,FRA16E,Gene,,NCBI:2464,,HPO genes_to_phenotype.txt
+GENE:FREM1,FREM1,Gene,,NCBI:158326,,HPO genes_to_phenotype.txt
+GENE:FRMD5,FRMD5,Gene,,NCBI:84978,,HPO genes_to_phenotype.txt
+GENE:FTCD,FTCD,Gene,,NCBI:10841,,HPO genes_to_phenotype.txt
+GENE:FTO,FTO,Gene,,NCBI:79068,,HPO genes_to_phenotype.txt
+GENE:FUT8,FUT8,Gene,,NCBI:2530,,HPO genes_to_phenotype.txt
+GENE:G6PC3,G6PC3,Gene,,NCBI:92579,,HPO genes_to_phenotype.txt
+GENE:GABRD,GABRD,Gene,,NCBI:2563,,HPO genes_to_phenotype.txt
+GENE:GAS1,GAS1,Gene,,NCBI:2619,,HPO genes_to_phenotype.txt
+GENE:GAS2L2,GAS2L2,Gene,,NCBI:246176,,HPO genes_to_phenotype.txt
+GENE:GATA1,GATA1,Gene,,NCBI:2623,,HPO genes_to_phenotype.txt
+GENE:GBA1,GBA1,Gene,,NCBI:2629,,HPO genes_to_phenotype.txt
+GENE:GDF3,GDF3,Gene,,NCBI:9573,,HPO genes_to_phenotype.txt
+GENE:GDF6,GDF6,Gene,,NCBI:392255,,HPO genes_to_phenotype.txt
+GENE:GGCX,GGCX,Gene,,NCBI:2677,,HPO genes_to_phenotype.txt
+GENE:GLB1,GLB1,Gene,,NCBI:2720,,HPO genes_to_phenotype.txt
+GENE:GLI1,GLI1,Gene,,NCBI:2735,,HPO genes_to_phenotype.txt
+GENE:GLI2,GLI2,Gene,,NCBI:2736,,HPO genes_to_phenotype.txt
+GENE:GLYCTK,GLYCTK,Gene,,NCBI:132158,,HPO genes_to_phenotype.txt
+GENE:GNA11,GNA11,Gene,,NCBI:2767,,HPO genes_to_phenotype.txt
+GENE:GNAO1,GNAO1,Gene,,NCBI:2775,,HPO genes_to_phenotype.txt
+GENE:GNB2,GNB2,Gene,,NCBI:2783,,HPO genes_to_phenotype.txt
+GENE:GNPAT,GNPAT,Gene,,NCBI:8443,,HPO genes_to_phenotype.txt
+GENE:GNPTG,GNPTG,Gene,,NCBI:84572,,HPO genes_to_phenotype.txt
+GENE:GPC4,GPC4,Gene,,NCBI:2239,,HPO genes_to_phenotype.txt
+GENE:GPC6,GPC6,Gene,,NCBI:10082,,HPO genes_to_phenotype.txt
+GENE:GPX4,GPX4,Gene,,NCBI:2879,,HPO genes_to_phenotype.txt
+GENE:GRIN1,GRIN1,Gene,,NCBI:2902,,HPO genes_to_phenotype.txt
+GENE:GRM7,GRM7,Gene,,NCBI:2917,,HPO genes_to_phenotype.txt
+GENE:GTF2E2,GTF2E2,Gene,,NCBI:2961,,HPO genes_to_phenotype.txt
+GENE:GTF2H5,GTF2H5,Gene,,NCBI:404672,,HPO genes_to_phenotype.txt
+GENE:GTF2IRD2,GTF2IRD2,Gene,,NCBI:84163,,HPO genes_to_phenotype.txt
+GENE:H3-3A,H3-3A,Gene,,NCBI:3020,,HPO genes_to_phenotype.txt
+GENE:H3-3B,H3-3B,Gene,,NCBI:3021,,HPO genes_to_phenotype.txt
+GENE:HAAO,HAAO,Gene,,NCBI:23498,,HPO genes_to_phenotype.txt
+GENE:HACD1,HACD1,Gene,,NCBI:9200,,HPO genes_to_phenotype.txt
+GENE:HCCS,HCCS,Gene,,NCBI:3052,,HPO genes_to_phenotype.txt
+GENE:HDAC4,HDAC4,Gene,,NCBI:9759,,HPO genes_to_phenotype.txt
+GENE:HDAC8,HDAC8,Gene,,NCBI:55869,,HPO genes_to_phenotype.txt
+GENE:HEATR3,HEATR3,Gene,,NCBI:55027,,HPO genes_to_phenotype.txt
+GENE:HGD,HGD,Gene,,NCBI:3081,,HPO genes_to_phenotype.txt
+GENE:HIBCH,HIBCH,Gene,,NCBI:26275,,HPO genes_to_phenotype.txt
+GENE:HIVEP2,HIVEP2,Gene,,NCBI:3097,,HPO genes_to_phenotype.txt
+GENE:HNRNPH2,HNRNPH2,Gene,,NCBI:3188,,HPO genes_to_phenotype.txt
+GENE:HNRNPK,HNRNPK,Gene,,NCBI:3190,,HPO genes_to_phenotype.txt
+GENE:HNRNPR,HNRNPR,Gene,,NCBI:10236,,HPO genes_to_phenotype.txt
+GENE:HOXA13,HOXA13,Gene,,NCBI:3209,,HPO genes_to_phenotype.txt
+GENE:HPGD,HPGD,Gene,,NCBI:3248,,HPO genes_to_phenotype.txt
+GENE:HSPA9,HSPA9,Gene,,NCBI:3313,,HPO genes_to_phenotype.txt
+GENE:HSPG2,HSPG2,Gene,,NCBI:3339,,HPO genes_to_phenotype.txt
+GENE:HTRA2,HTRA2,Gene,,NCBI:27429,,HPO genes_to_phenotype.txt
+GENE:HYDIN,HYDIN,Gene,,NCBI:54768,,HPO genes_to_phenotype.txt
+GENE:HYLS1,HYLS1,Gene,,NCBI:219844,,HPO genes_to_phenotype.txt
+GENE:HYMAI,HYMAI,Gene,,NCBI:57061,,HPO genes_to_phenotype.txt
+GENE:IARS2,IARS2,Gene,,NCBI:55699,,HPO genes_to_phenotype.txt
+GENE:IDUA,IDUA,Gene,,NCBI:3425,,HPO genes_to_phenotype.txt
+GENE:IFIH1,IFIH1,Gene,,NCBI:64135,,HPO genes_to_phenotype.txt
+GENE:IFT140,IFT140,Gene,,NCBI:9742,,HPO genes_to_phenotype.txt
+GENE:IFT172,IFT172,Gene,,NCBI:26160,,HPO genes_to_phenotype.txt
+GENE:IFT27,IFT27,Gene,,NCBI:11020,,HPO genes_to_phenotype.txt
+GENE:IFT56,IFT56,Gene,,NCBI:79989,,HPO genes_to_phenotype.txt
+GENE:IFT81,IFT81,Gene,,NCBI:28981,,HPO genes_to_phenotype.txt
+GENE:IGBP1,IGBP1,Gene,,NCBI:3476,,HPO genes_to_phenotype.txt
+GENE:IGF1R,IGF1R,Gene,,NCBI:3480,,HPO genes_to_phenotype.txt
+GENE:IGF2,IGF2,Gene,,NCBI:3481,,HPO genes_to_phenotype.txt
+GENE:IGFBP7,IGFBP7,Gene,,NCBI:3490,,HPO genes_to_phenotype.txt
+GENE:INSR,INSR,Gene,,NCBI:3643,,HPO genes_to_phenotype.txt
+GENE:INTU,INTU,Gene,,NCBI:27152,,HPO genes_to_phenotype.txt
+GENE:IRX5,IRX5,Gene,,NCBI:10265,,HPO genes_to_phenotype.txt
+GENE:ITPR1,ITPR1,Gene,,NCBI:3708,,HPO genes_to_phenotype.txt
+GENE:ITPR3,ITPR3,Gene,,NCBI:3710,,HPO genes_to_phenotype.txt
+GENE:JAM3,JAM3,Gene,,NCBI:83700,,HPO genes_to_phenotype.txt
+GENE:JKAMP,JKAMP,Gene,,NCBI:51528,,HPO genes_to_phenotype.txt
+GENE:JMJD1C,JMJD1C,Gene,,NCBI:221037,,HPO genes_to_phenotype.txt
+GENE:JPH2,JPH2,Gene,,NCBI:57158,,HPO genes_to_phenotype.txt
+GENE:KANSL1,KANSL1,Gene,,NCBI:284058,,HPO genes_to_phenotype.txt
+GENE:KAT5,KAT5,Gene,,NCBI:10524,,HPO genes_to_phenotype.txt
+GENE:KAT8,KAT8,Gene,,NCBI:84148,,HPO genes_to_phenotype.txt
+GENE:KATNB1,KATNB1,Gene,,NCBI:10300,,HPO genes_to_phenotype.txt
+GENE:KCNA1,KCNA1,Gene,,NCBI:3736,,HPO genes_to_phenotype.txt
+GENE:KCNAB2,KCNAB2,Gene,,NCBI:8514,,HPO genes_to_phenotype.txt
+GENE:KCNE5,KCNE5,Gene,,NCBI:23630,,HPO genes_to_phenotype.txt
+GENE:KCNH1,KCNH1,Gene,,NCBI:3756,,HPO genes_to_phenotype.txt
+GENE:KCNJ8,KCNJ8,Gene,,NCBI:3764,,HPO genes_to_phenotype.txt
+GENE:KCNN3,KCNN3,Gene,,NCBI:3782,,HPO genes_to_phenotype.txt
+GENE:KDM2B,KDM2B,Gene,,NCBI:84678,,HPO genes_to_phenotype.txt
+GENE:KDM3B,KDM3B,Gene,,NCBI:51780,,HPO genes_to_phenotype.txt
+GENE:KDM5A,KDM5A,Gene,,NCBI:5927,,HPO genes_to_phenotype.txt
+GENE:KDM5B,KDM5B,Gene,,NCBI:10765,,HPO genes_to_phenotype.txt
+GENE:KDM6B,KDM6B,Gene,,NCBI:23135,,HPO genes_to_phenotype.txt
+GENE:KDR,KDR,Gene,,NCBI:3791,,HPO genes_to_phenotype.txt
+GENE:KIAA0586,KIAA0586,Gene,,NCBI:9786,,HPO genes_to_phenotype.txt
+GENE:KICS2,KICS2,Gene,,NCBI:144577,,HPO genes_to_phenotype.txt
+GENE:KIF11,KIF11,Gene,,NCBI:3832,,HPO genes_to_phenotype.txt
+GENE:KIF15,KIF15,Gene,,NCBI:56992,,HPO genes_to_phenotype.txt
+GENE:KIF20A,KIF20A,Gene,,NCBI:10112,,HPO genes_to_phenotype.txt
+GENE:KIFBP,KIFBP,Gene,,NCBI:26128,,HPO genes_to_phenotype.txt
+GENE:KLHL20,KLHL20,Gene,,NCBI:27252,,HPO genes_to_phenotype.txt
+GENE:KLHL41,KLHL41,Gene,,NCBI:10324,,HPO genes_to_phenotype.txt
+GENE:KMT2A,KMT2A,Gene,,NCBI:4297,,HPO genes_to_phenotype.txt
+GENE:KMT2B,KMT2B,Gene,,NCBI:9757,,HPO genes_to_phenotype.txt
+GENE:KYNU,KYNU,Gene,,NCBI:8942,,HPO genes_to_phenotype.txt
+GENE:LAMA5,LAMA5,Gene,,NCBI:3911,,HPO genes_to_phenotype.txt
+GENE:LARP7,LARP7,Gene,,NCBI:51574,,HPO genes_to_phenotype.txt
+GENE:LARS2,LARS2,Gene,,NCBI:23395,,HPO genes_to_phenotype.txt
+GENE:LBR,LBR,Gene,,NCBI:3930,,HPO genes_to_phenotype.txt
+GENE:LEF1,LEF1,Gene,,NCBI:51176,,HPO genes_to_phenotype.txt
+GENE:LETM1,LETM1,Gene,,NCBI:3954,,HPO genes_to_phenotype.txt
+GENE:LGI1,LGI1,Gene,,NCBI:9211,,HPO genes_to_phenotype.txt
+GENE:LMBRD1,LMBRD1,Gene,,NCBI:55788,,HPO genes_to_phenotype.txt
+GENE:LMX1B,LMX1B,Gene,,NCBI:4010,,HPO genes_to_phenotype.txt
+GENE:LOX,LOX,Gene,,NCBI:4015,,HPO genes_to_phenotype.txt
+GENE:LRP2,LRP2,Gene,,NCBI:4036,,HPO genes_to_phenotype.txt
+GENE:LRP4,LRP4,Gene,,NCBI:4038,,HPO genes_to_phenotype.txt
+GENE:LRP5,LRP5,Gene,,NCBI:4041,,HPO genes_to_phenotype.txt
+GENE:LRPPRC,LRPPRC,Gene,,NCBI:10128,,HPO genes_to_phenotype.txt
+GENE:LRRC56,LRRC56,Gene,,NCBI:115399,,HPO genes_to_phenotype.txt
+GENE:LTBP3,LTBP3,Gene,,NCBI:4054,,HPO genes_to_phenotype.txt
+GENE:LUZP1,LUZP1,Gene,,NCBI:7798,,HPO genes_to_phenotype.txt
+GENE:MACF1,MACF1,Gene,,NCBI:23499,,HPO genes_to_phenotype.txt
+GENE:MAD2L2,MAD2L2,Gene,,NCBI:10459,,HPO genes_to_phenotype.txt
+GENE:MAF,MAF,Gene,,NCBI:4094,,HPO genes_to_phenotype.txt
+GENE:MAGEL2,MAGEL2,Gene,,NCBI:54551,,HPO genes_to_phenotype.txt
+GENE:MAP1B,MAP1B,Gene,,NCBI:4131,,HPO genes_to_phenotype.txt
+GENE:MAP3K7,MAP3K7,Gene,,NCBI:6885,,HPO genes_to_phenotype.txt
+GENE:MAPK1,MAPK1,Gene,,NCBI:5594,,HPO genes_to_phenotype.txt
+GENE:MAPKAPK5,MAPKAPK5,Gene,,NCBI:8550,,HPO genes_to_phenotype.txt
+GENE:MASP1,MASP1,Gene,,NCBI:5648,,HPO genes_to_phenotype.txt
+GENE:MAT2A,MAT2A,Gene,,NCBI:4144,,HPO genes_to_phenotype.txt
+GENE:MAU2,MAU2,Gene,,NCBI:23383,,HPO genes_to_phenotype.txt
+GENE:MAX,MAX,Gene,,NCBI:4149,,HPO genes_to_phenotype.txt
+GENE:MBTPS2,MBTPS2,Gene,,NCBI:51360,,HPO genes_to_phenotype.txt
+GENE:MCIDAS,MCIDAS,Gene,,NCBI:345643,,HPO genes_to_phenotype.txt
+GENE:MCTP2,MCTP2,Gene,,NCBI:55784,,HPO genes_to_phenotype.txt
+GENE:MED11,MED11,Gene,,NCBI:400569,,HPO genes_to_phenotype.txt
+GENE:MED23,MED23,Gene,,NCBI:9439,,HPO genes_to_phenotype.txt
+GENE:MED25,MED25,Gene,,NCBI:81857,,HPO genes_to_phenotype.txt
+GENE:MEG3,MEG3,Gene,,NCBI:55384,,HPO genes_to_phenotype.txt
+GENE:MEGF8,MEGF8,Gene,,NCBI:1954,,HPO genes_to_phenotype.txt
+GENE:MEOX1,MEOX1,Gene,,NCBI:4222,,HPO genes_to_phenotype.txt
+GENE:METTL27,METTL27,Gene,,NCBI:155368,,HPO genes_to_phenotype.txt
+GENE:MFAP5,MFAP5,Gene,,NCBI:8076,,HPO genes_to_phenotype.txt
+GENE:MGAT2,MGAT2,Gene,,NCBI:4247,,HPO genes_to_phenotype.txt
+GENE:MGP,MGP,Gene,,NCBI:4256,,HPO genes_to_phenotype.txt
+GENE:MICU1,MICU1,Gene,,NCBI:10367,,HPO genes_to_phenotype.txt
+GENE:MIR17HG,MIR17HG,Gene,,NCBI:407975,,HPO genes_to_phenotype.txt
+GENE:MKS1,MKS1,Gene,,NCBI:54903,,HPO genes_to_phenotype.txt
+GENE:MLXIPL,MLXIPL,Gene,,NCBI:51085,,HPO genes_to_phenotype.txt
+GENE:MMP14,MMP14,Gene,,NCBI:4323,,HPO genes_to_phenotype.txt
+GENE:MMP2,MMP2,Gene,,NCBI:4313,,HPO genes_to_phenotype.txt
+GENE:MMP21,MMP21,Gene,,NCBI:118856,,HPO genes_to_phenotype.txt
+GENE:MMP23B,MMP23B,Gene,,NCBI:8510,,HPO genes_to_phenotype.txt
+GENE:MOGS,MOGS,Gene,,NCBI:7841,,HPO genes_to_phenotype.txt
+GENE:MPDZ,MPDZ,Gene,,NCBI:8777,,HPO genes_to_phenotype.txt
+GENE:MPLKIP,MPLKIP,Gene,,NCBI:136647,,HPO genes_to_phenotype.txt
+GENE:MRPS16,MRPS16,Gene,,NCBI:51021,,HPO genes_to_phenotype.txt
+GENE:MSL2,MSL2,Gene,,NCBI:55167,,HPO genes_to_phenotype.txt
+GENE:MT-CYB,MT-CYB,Gene,,NCBI:4519,,HPO genes_to_phenotype.txt
+GENE:MTFMT,MTFMT,Gene,,NCBI:123263,,HPO genes_to_phenotype.txt
+GENE:MYCN,MYCN,Gene,,NCBI:4613,,HPO genes_to_phenotype.txt
+GENE:MYH11,MYH11,Gene,,NCBI:4629,,HPO genes_to_phenotype.txt
+GENE:MYH3,MYH3,Gene,,NCBI:4621,,HPO genes_to_phenotype.txt
+GENE:MYLK,MYLK,Gene,,NCBI:4638,,HPO genes_to_phenotype.txt
+GENE:MYOCD,MYOCD,Gene,,NCBI:93649,,HPO genes_to_phenotype.txt
+GENE:NAA10,NAA10,Gene,,NCBI:8260,,HPO genes_to_phenotype.txt
+GENE:NAA20,NAA20,Gene,,NCBI:51126,,HPO genes_to_phenotype.txt
+GENE:NAA60,NAA60,Gene,,NCBI:79903,,HPO genes_to_phenotype.txt
+GENE:NADSYN1,NADSYN1,Gene,,NCBI:55191,,HPO genes_to_phenotype.txt
+GENE:NAE1,NAE1,Gene,,NCBI:8883,,HPO genes_to_phenotype.txt
+GENE:NAV3,NAV3,Gene,,NCBI:89795,,HPO genes_to_phenotype.txt
+GENE:NCF1,NCF1,Gene,,NCBI:653361,,HPO genes_to_phenotype.txt
+GENE:NDE1,NDE1,Gene,,NCBI:54820,,HPO genes_to_phenotype.txt
+GENE:NDUFB11,NDUFB11,Gene,,NCBI:54539,,HPO genes_to_phenotype.txt
+GENE:NDUFB7,NDUFB7,Gene,,NCBI:4713,,HPO genes_to_phenotype.txt
+GENE:NEDD4L,NEDD4L,Gene,,NCBI:23327,,HPO genes_to_phenotype.txt
+GENE:NEK1,NEK1,Gene,,NCBI:4750,,HPO genes_to_phenotype.txt
+GENE:NEK10,NEK10,Gene,,NCBI:152110,,HPO genes_to_phenotype.txt
+GENE:NEK9,NEK9,Gene,,NCBI:91754,,HPO genes_to_phenotype.txt
+GENE:NELFA,NELFA,Gene,,NCBI:7469,,HPO genes_to_phenotype.txt
+GENE:NEUROD2,NEUROD2,Gene,,NCBI:4761,,HPO genes_to_phenotype.txt
+GENE:NFE2L2,NFE2L2,Gene,,NCBI:4780,,HPO genes_to_phenotype.txt
+GENE:NFIX,NFIX,Gene,,NCBI:4784,,HPO genes_to_phenotype.txt
+GENE:NIPA1,NIPA1,Gene,,NCBI:123606,,HPO genes_to_phenotype.txt
+GENE:NIPA2,NIPA2,Gene,,NCBI:81614,,HPO genes_to_phenotype.txt
+GENE:NKAP,NKAP,Gene,,NCBI:79576,,HPO genes_to_phenotype.txt
+GENE:NKX2-1,NKX2-1,Gene,,NCBI:7080,,HPO genes_to_phenotype.txt
+GENE:NME5,NME5,Gene,,NCBI:8382,,HPO genes_to_phenotype.txt
+GENE:NME8,NME8,Gene,,NCBI:51314,,HPO genes_to_phenotype.txt
+GENE:NRXN1,NRXN1,Gene,,NCBI:9378,,HPO genes_to_phenotype.txt
+GENE:NSD2,NSD2,Gene,,NCBI:7468,,HPO genes_to_phenotype.txt
+GENE:NUP107,NUP107,Gene,,NCBI:57122,,HPO genes_to_phenotype.txt
+GENE:NXN,NXN,Gene,,NCBI:64359,,HPO genes_to_phenotype.txt
+GENE:OCLN,OCLN,Gene,,NCBI:100506658,,HPO genes_to_phenotype.txt
+GENE:ODAD1,ODAD1,Gene,,NCBI:93233,,HPO genes_to_phenotype.txt
+GENE:ODAD2,ODAD2,Gene,,NCBI:55130,,HPO genes_to_phenotype.txt
+GENE:ODAD3,ODAD3,Gene,,NCBI:115948,,HPO genes_to_phenotype.txt
+GENE:ODAD4,ODAD4,Gene,,NCBI:83538,,HPO genes_to_phenotype.txt
+GENE:OFD1,OFD1,Gene,,NCBI:8481,,HPO genes_to_phenotype.txt
+GENE:OSGEP,OSGEP,Gene,,NCBI:55644,,HPO genes_to_phenotype.txt
+GENE:OTUD5,OTUD5,Gene,,NCBI:55593,,HPO genes_to_phenotype.txt
+GENE:OTUD6B,OTUD6B,Gene,,NCBI:51633,,HPO genes_to_phenotype.txt
+GENE:PACS1,PACS1,Gene,,NCBI:55690,,HPO genes_to_phenotype.txt
+GENE:PACS2,PACS2,Gene,,NCBI:23241,,HPO genes_to_phenotype.txt
+GENE:PAK2,PAK2,Gene,,NCBI:5062,,HPO genes_to_phenotype.txt
+GENE:PALB2,PALB2,Gene,,NCBI:79728,,HPO genes_to_phenotype.txt
+GENE:PAN2,PAN2,Gene,,NCBI:9924,,HPO genes_to_phenotype.txt
+GENE:PAX3,PAX3,Gene,,NCBI:5077,,HPO genes_to_phenotype.txt
+GENE:PCGF2,PCGF2,Gene,,NCBI:7703,,HPO genes_to_phenotype.txt
+GENE:PCNT,PCNT,Gene,,NCBI:5116,,HPO genes_to_phenotype.txt
+GENE:PDHA1,PDHA1,Gene,,NCBI:5160,,HPO genes_to_phenotype.txt
+GENE:PDPN,PDPN,Gene,,NCBI:10630,,HPO genes_to_phenotype.txt
+GENE:PEX1,PEX1,Gene,,NCBI:5189,,HPO genes_to_phenotype.txt
+GENE:PEX10,PEX10,Gene,,NCBI:5192,,HPO genes_to_phenotype.txt
+GENE:PEX11B,PEX11B,Gene,,NCBI:8799,,HPO genes_to_phenotype.txt
+GENE:PEX12,PEX12,Gene,,NCBI:5193,,HPO genes_to_phenotype.txt
+GENE:PEX13,PEX13,Gene,,NCBI:5194,,HPO genes_to_phenotype.txt
+GENE:PEX14,PEX14,Gene,,NCBI:5195,,HPO genes_to_phenotype.txt
+GENE:PEX16,PEX16,Gene,,NCBI:9409,,HPO genes_to_phenotype.txt
+GENE:PEX19,PEX19,Gene,,NCBI:5824,,HPO genes_to_phenotype.txt
+GENE:PEX2,PEX2,Gene,,NCBI:5828,,HPO genes_to_phenotype.txt
+GENE:PEX26,PEX26,Gene,,NCBI:55670,,HPO genes_to_phenotype.txt
+GENE:PEX3,PEX3,Gene,,NCBI:8504,,HPO genes_to_phenotype.txt
+GENE:PEX5,PEX5,Gene,,NCBI:5830,,HPO genes_to_phenotype.txt
+GENE:PEX6,PEX6,Gene,,NCBI:5190,,HPO genes_to_phenotype.txt
+GENE:PGAP1,PGAP1,Gene,,NCBI:80055,,HPO genes_to_phenotype.txt
+GENE:PGAP2,PGAP2,Gene,,NCBI:27315,,HPO genes_to_phenotype.txt
+GENE:PGM1,PGM1,Gene,,NCBI:5236,,HPO genes_to_phenotype.txt
+GENE:PHGDH,PHGDH,Gene,,NCBI:26227,,HPO genes_to_phenotype.txt
+GENE:PI4KA,PI4KA,Gene,,NCBI:5297,,HPO genes_to_phenotype.txt
+GENE:PIEZO1,PIEZO1,Gene,,NCBI:9780,,HPO genes_to_phenotype.txt
+GENE:PIEZO2,PIEZO2,Gene,,NCBI:63895,,HPO genes_to_phenotype.txt
+GENE:PIGA,PIGA,Gene,,NCBI:5277,,HPO genes_to_phenotype.txt
+GENE:PIGF,PIGF,Gene,,NCBI:5281,,HPO genes_to_phenotype.txt
+GENE:PIGG,PIGG,Gene,,NCBI:54872,,HPO genes_to_phenotype.txt
+GENE:PIGO,PIGO,Gene,,NCBI:84720,,HPO genes_to_phenotype.txt
+GENE:PIGP,PIGP,Gene,,NCBI:51227,,HPO genes_to_phenotype.txt
+GENE:PIGQ,PIGQ,Gene,,NCBI:9091,,HPO genes_to_phenotype.txt
+GENE:PIGT,PIGT,Gene,,NCBI:51604,,HPO genes_to_phenotype.txt
+GENE:PIK3CA,PIK3CA,Gene,,NCBI:5290,,HPO genes_to_phenotype.txt
+GENE:PIK3R2,PIK3R2,Gene,,NCBI:5296,,HPO genes_to_phenotype.txt
+GENE:PKD1L1,PKD1L1,Gene,,NCBI:168507,,HPO genes_to_phenotype.txt
+GENE:PLAGL1,PLAGL1,Gene,,NCBI:5325,,HPO genes_to_phenotype.txt
+GENE:PLCB3,PLCB3,Gene,,NCBI:5331,,HPO genes_to_phenotype.txt
+GENE:PLCH1,PLCH1,Gene,,NCBI:23007,,HPO genes_to_phenotype.txt
+GENE:PLD1,PLD1,Gene,,NCBI:5337,,HPO genes_to_phenotype.txt
+GENE:PNKP,PNKP,Gene,,NCBI:11284,,HPO genes_to_phenotype.txt
+GENE:POGZ,POGZ,Gene,,NCBI:23126,,HPO genes_to_phenotype.txt
+GENE:POLA1,POLA1,Gene,,NCBI:5422,,HPO genes_to_phenotype.txt
+GENE:POLR1A,POLR1A,Gene,,NCBI:25885,,HPO genes_to_phenotype.txt
+GENE:POLR1B,POLR1B,Gene,,NCBI:84172,,HPO genes_to_phenotype.txt
+GENE:POLR1C,POLR1C,Gene,,NCBI:9533,,HPO genes_to_phenotype.txt
+GENE:POLR1D,POLR1D,Gene,,NCBI:51082,,HPO genes_to_phenotype.txt
+GENE:POLR3A,POLR3A,Gene,,NCBI:11128,,HPO genes_to_phenotype.txt
+GENE:POR,POR,Gene,,NCBI:5447,,HPO genes_to_phenotype.txt
+GENE:PORCN,PORCN,Gene,,NCBI:64840,,HPO genes_to_phenotype.txt
+GENE:PPFIBP1,PPFIBP1,Gene,,NCBI:8496,,HPO genes_to_phenotype.txt
+GENE:PPM1D,PPM1D,Gene,,NCBI:8493,,HPO genes_to_phenotype.txt
+GENE:PPP1R13L,PPP1R13L,Gene,,NCBI:10848,,HPO genes_to_phenotype.txt
+GENE:PPP1R21,PPP1R21,Gene,,NCBI:129285,,HPO genes_to_phenotype.txt
+GENE:PPP2CA,PPP2CA,Gene,,NCBI:5515,,HPO genes_to_phenotype.txt
+GENE:PPP2R3C,PPP2R3C,Gene,,NCBI:55012,,HPO genes_to_phenotype.txt
+GENE:PPP2R5D,PPP2R5D,Gene,,NCBI:5528,,HPO genes_to_phenotype.txt
+GENE:PRDM13,PRDM13,Gene,,NCBI:59336,,HPO genes_to_phenotype.txt
+GENE:PRDM16,PRDM16,Gene,,NCBI:63976,,HPO genes_to_phenotype.txt
+GENE:PRDM6,PRDM6,Gene,,NCBI:93166,,HPO genes_to_phenotype.txt
+GENE:PRIM1,PRIM1,Gene,,NCBI:5557,,HPO genes_to_phenotype.txt
+GENE:PRKACA,PRKACA,Gene,,NCBI:5566,,HPO genes_to_phenotype.txt
+GENE:PRKACB,PRKACB,Gene,,NCBI:5567,,HPO genes_to_phenotype.txt
+GENE:PRKCZ,PRKCZ,Gene,,NCBI:5590,,HPO genes_to_phenotype.txt
+GENE:PRKD1,PRKD1,Gene,,NCBI:5587,,HPO genes_to_phenotype.txt
+GENE:PRKG1,PRKG1,Gene,,NCBI:5592,,HPO genes_to_phenotype.txt
+GENE:PTBP1,PTBP1,Gene,,NCBI:5725,,HPO genes_to_phenotype.txt
+GENE:PTCH1,PTCH1,Gene,,NCBI:5727,,HPO genes_to_phenotype.txt
+GENE:PTEN,PTEN,Gene,,NCBI:5728,,HPO genes_to_phenotype.txt
+GENE:PTH1R,PTH1R,Gene,,NCBI:5745,,HPO genes_to_phenotype.txt
+GENE:QRICH1,QRICH1,Gene,,NCBI:54870,,HPO genes_to_phenotype.txt
+GENE:RAB34,RAB34,Gene,,NCBI:83871,,HPO genes_to_phenotype.txt
+GENE:RAC1,RAC1,Gene,,NCBI:5879,,HPO genes_to_phenotype.txt
+GENE:RAD21,RAD21,Gene,,NCBI:5885,,HPO genes_to_phenotype.txt
+GENE:RAD51,RAD51,Gene,,NCBI:5888,,HPO genes_to_phenotype.txt
+GENE:RAD51C,RAD51C,Gene,,NCBI:5889,,HPO genes_to_phenotype.txt
+GENE:RAI1,RAI1,Gene,,NCBI:10743,,HPO genes_to_phenotype.txt
+GENE:RAP1B,RAP1B,Gene,,NCBI:5908,,HPO genes_to_phenotype.txt
+GENE:RARB,RARB,Gene,,NCBI:5915,,HPO genes_to_phenotype.txt
+GENE:RASA2,RASA2,Gene,,NCBI:5922,,HPO genes_to_phenotype.txt
+GENE:RBM10,RBM10,Gene,,NCBI:8241,,HPO genes_to_phenotype.txt
+GENE:RBMX,RBMX,Gene,,NCBI:27316,,HPO genes_to_phenotype.txt
+GENE:RBP4,RBP4,Gene,,NCBI:5950,,HPO genes_to_phenotype.txt
+GENE:RBPJ,RBPJ,Gene,,NCBI:3516,,HPO genes_to_phenotype.txt
+GENE:RBSN,RBSN,Gene,,NCBI:64145,,HPO genes_to_phenotype.txt
+GENE:RELN,RELN,Gene,,NCBI:5649,,HPO genes_to_phenotype.txt
+GENE:RFC4,RFC4,Gene,,NCBI:5984,,HPO genes_to_phenotype.txt
+GENE:RFWD3,RFWD3,Gene,,NCBI:55159,,HPO genes_to_phenotype.txt
+GENE:RFX7,RFX7,Gene,,NCBI:64864,,HPO genes_to_phenotype.txt
+GENE:RHOBTB2,RHOBTB2,Gene,,NCBI:23221,,HPO genes_to_phenotype.txt
+GENE:RIGI,RIGI,Gene,,NCBI:23586,,HPO genes_to_phenotype.txt
+GENE:RIT1,RIT1,Gene,,NCBI:6016,,HPO genes_to_phenotype.txt
+GENE:RMRP,RMRP,Gene,,NCBI:6023,,HPO genes_to_phenotype.txt
+GENE:RNF113A,RNF113A,Gene,,NCBI:7737,,HPO genes_to_phenotype.txt
+GENE:RNF135,RNF135,Gene,,NCBI:84282,,HPO genes_to_phenotype.txt
+GENE:RNU2-2,RNU2-2,Gene,,NCBI:26855,,HPO genes_to_phenotype.txt
+GENE:RNU4-2,RNU4-2,Gene,,NCBI:26834,,HPO genes_to_phenotype.txt
+GENE:RNU4ATAC,RNU4ATAC,Gene,,NCBI:100151683,,HPO genes_to_phenotype.txt
+GENE:RNU5B-1,RNU5B-1,Gene,,NCBI:26832,,HPO genes_to_phenotype.txt
+GENE:ROR2,ROR2,Gene,,NCBI:4920,,HPO genes_to_phenotype.txt
+GENE:RPGR,RPGR,Gene,,NCBI:6103,,HPO genes_to_phenotype.txt
+GENE:RPL10,RPL10,Gene,,NCBI:6134,,HPO genes_to_phenotype.txt
+GENE:RPL15,RPL15,Gene,,NCBI:6138,,HPO genes_to_phenotype.txt
+GENE:RPL18,RPL18,Gene,,NCBI:6141,,HPO genes_to_phenotype.txt
+GENE:RPL26,RPL26,Gene,,NCBI:6154,,HPO genes_to_phenotype.txt
+GENE:RPL31,RPL31,Gene,,NCBI:6160,,HPO genes_to_phenotype.txt
+GENE:RPL35,RPL35,Gene,,NCBI:11224,,HPO genes_to_phenotype.txt
+GENE:RPL35A,RPL35A,Gene,,NCBI:6165,,HPO genes_to_phenotype.txt
+GENE:RPL8,RPL8,Gene,,NCBI:6132,,HPO genes_to_phenotype.txt
+GENE:RPL9,RPL9,Gene,,NCBI:6133,,HPO genes_to_phenotype.txt
+GENE:RPS10,RPS10,Gene,,NCBI:6204,,HPO genes_to_phenotype.txt
+GENE:RPS15A,RPS15A,Gene,,NCBI:6210,,HPO genes_to_phenotype.txt
+GENE:RPS17,RPS17,Gene,,NCBI:6218,,HPO genes_to_phenotype.txt
+GENE:RPS20,RPS20,Gene,,NCBI:6224,,HPO genes_to_phenotype.txt
+GENE:RPS24,RPS24,Gene,,NCBI:6229,,HPO genes_to_phenotype.txt
+GENE:RPS27,RPS27,Gene,,NCBI:6232,,HPO genes_to_phenotype.txt
+GENE:RPS28,RPS28,Gene,,NCBI:6234,,HPO genes_to_phenotype.txt
+GENE:RPS29,RPS29,Gene,,NCBI:6235,,HPO genes_to_phenotype.txt
+GENE:RPS7,RPS7,Gene,,NCBI:6201,,HPO genes_to_phenotype.txt
+GENE:RRAGC,RRAGC,Gene,,NCBI:64121,,HPO genes_to_phenotype.txt
+GENE:RRAS,RRAS,Gene,,NCBI:6237,,HPO genes_to_phenotype.txt
+GENE:RSPH1,RSPH1,Gene,,NCBI:89765,,HPO genes_to_phenotype.txt
+GENE:RSPH3,RSPH3,Gene,,NCBI:83861,,HPO genes_to_phenotype.txt
+GENE:RSPH4A,RSPH4A,Gene,,NCBI:345895,,HPO genes_to_phenotype.txt
+GENE:RSPH9,RSPH9,Gene,,NCBI:221421,,HPO genes_to_phenotype.txt
+GENE:RSPO2,RSPO2,Gene,,NCBI:340419,,HPO genes_to_phenotype.txt
+GENE:RSPRY1,RSPRY1,Gene,,NCBI:89970,,HPO genes_to_phenotype.txt
+GENE:RTL1,RTL1,Gene,,NCBI:388015,,HPO genes_to_phenotype.txt
+GENE:RYR1,RYR1,Gene,,NCBI:6261,,HPO genes_to_phenotype.txt
+GENE:SAMD9,SAMD9,Gene,,NCBI:54809,,HPO genes_to_phenotype.txt
+GENE:SARDH,SARDH,Gene,,NCBI:1757,,HPO genes_to_phenotype.txt
+GENE:SATB1,SATB1,Gene,,NCBI:6304,,HPO genes_to_phenotype.txt
+GENE:SATB2,SATB2,Gene,,NCBI:23314,,HPO genes_to_phenotype.txt
+GENE:SCAF4,SCAF4,Gene,,NCBI:57466,,HPO genes_to_phenotype.txt
+GENE:SCN1B,SCN1B,Gene,,NCBI:6324,,HPO genes_to_phenotype.txt
+GENE:SCN2A,SCN2A,Gene,,NCBI:6326,,HPO genes_to_phenotype.txt
+GENE:SCUBE3,SCUBE3,Gene,,NCBI:222663,,HPO genes_to_phenotype.txt
+GENE:SEL1L,SEL1L,Gene,,NCBI:6400,,HPO genes_to_phenotype.txt
+GENE:SETBP1,SETBP1,Gene,,NCBI:26040,,HPO genes_to_phenotype.txt
+GENE:SETD5,SETD5,Gene,,NCBI:55209,,HPO genes_to_phenotype.txt
+GENE:SF3B2,SF3B2,Gene,,NCBI:10992,,HPO genes_to_phenotype.txt
+GENE:SF3B4,SF3B4,Gene,,NCBI:10262,,HPO genes_to_phenotype.txt
+GENE:SGO1,SGO1,Gene,,NCBI:151648,,HPO genes_to_phenotype.txt
+GENE:SH2B1,SH2B1,Gene,,NCBI:25970,,HPO genes_to_phenotype.txt
+GENE:SH3PXD2B,SH3PXD2B,Gene,,NCBI:285590,,HPO genes_to_phenotype.txt
+GENE:SHANK3,SHANK3,Gene,,NCBI:85358,,HPO genes_to_phenotype.txt
+GENE:SHH,SHH,Gene,,NCBI:6469,,HPO genes_to_phenotype.txt
+GENE:SIAH1,SIAH1,Gene,,NCBI:6477,,HPO genes_to_phenotype.txt
+GENE:SIK1,SIK1,Gene,,NCBI:150094,,HPO genes_to_phenotype.txt
+GENE:SIK3,SIK3,Gene,,NCBI:23387,,HPO genes_to_phenotype.txt
+GENE:SIX3,SIX3,Gene,,NCBI:6496,,HPO genes_to_phenotype.txt
+GENE:SIX6,SIX6,Gene,,NCBI:4990,,HPO genes_to_phenotype.txt
+GENE:SKI,SKI,Gene,,NCBI:6497,,HPO genes_to_phenotype.txt
+GENE:SKIC2,SKIC2,Gene,,NCBI:6499,,HPO genes_to_phenotype.txt
+GENE:SLC12A2,SLC12A2,Gene,,NCBI:6558,,HPO genes_to_phenotype.txt
+GENE:SLC13A1,SLC13A1,Gene,,NCBI:6561,,HPO genes_to_phenotype.txt
+GENE:SLC19A2,SLC19A2,Gene,,NCBI:10560,,HPO genes_to_phenotype.txt
+GENE:SLC25A22,SLC25A22,Gene,,NCBI:79751,,HPO genes_to_phenotype.txt
+GENE:SLC25A24,SLC25A24,Gene,,NCBI:29957,,HPO genes_to_phenotype.txt
+GENE:SLC25A36,SLC25A36,Gene,,NCBI:55186,,HPO genes_to_phenotype.txt
+GENE:SLC2A10,SLC2A10,Gene,,NCBI:81031,,HPO genes_to_phenotype.txt
+GENE:SLC32A1,SLC32A1,Gene,,NCBI:140679,,HPO genes_to_phenotype.txt
+GENE:SLC35A2,SLC35A2,Gene,,NCBI:7355,,HPO genes_to_phenotype.txt
+GENE:SLC37A4,SLC37A4,Gene,,NCBI:2542,,HPO genes_to_phenotype.txt
+GENE:SLC38A3,SLC38A3,Gene,,NCBI:10991,,HPO genes_to_phenotype.txt
+GENE:SLC6A1,SLC6A1,Gene,,NCBI:6529,,HPO genes_to_phenotype.txt
+GENE:SLC6A11,SLC6A11,Gene,,NCBI:6538,,HPO genes_to_phenotype.txt
+GENE:SLF2,SLF2,Gene,,NCBI:55719,,HPO genes_to_phenotype.txt
+GENE:SLX4,SLX4,Gene,,NCBI:84464,,HPO genes_to_phenotype.txt
+GENE:SMARCA2,SMARCA2,Gene,,NCBI:6595,,HPO genes_to_phenotype.txt
+GENE:SMARCB1,SMARCB1,Gene,,NCBI:6598,,HPO genes_to_phenotype.txt
+GENE:SMARCC2,SMARCC2,Gene,,NCBI:6601,,HPO genes_to_phenotype.txt
+GENE:SMARCD1,SMARCD1,Gene,,NCBI:6602,,HPO genes_to_phenotype.txt
+GENE:SMC1A,SMC1A,Gene,,NCBI:8243,,HPO genes_to_phenotype.txt
+GENE:SMC5,SMC5,Gene,,NCBI:23137,,HPO genes_to_phenotype.txt
+GENE:SMG8,SMG8,Gene,,NCBI:55181,,HPO genes_to_phenotype.txt
+GENE:SMG9,SMG9,Gene,,NCBI:56006,,HPO genes_to_phenotype.txt
+GENE:SMN1,SMN1,Gene,,NCBI:6606,,HPO genes_to_phenotype.txt
+GENE:SNAPIN,SNAPIN,Gene,,NCBI:23557,,HPO genes_to_phenotype.txt
+GENE:SNIP1,SNIP1,Gene,,NCBI:79753,,HPO genes_to_phenotype.txt
+GENE:SNRPB,SNRPB,Gene,,NCBI:6628,,HPO genes_to_phenotype.txt
+GENE:SNRPN,SNRPN,Gene,,NCBI:6638,,HPO genes_to_phenotype.txt
+GENE:SNX14,SNX14,Gene,,NCBI:57231,,HPO genes_to_phenotype.txt
+GENE:SON,SON,Gene,,NCBI:6651,,HPO genes_to_phenotype.txt
+GENE:SOX11,SOX11,Gene,,NCBI:6664,,HPO genes_to_phenotype.txt
+GENE:SOX17,SOX17,Gene,,NCBI:64321,,HPO genes_to_phenotype.txt
+GENE:SOX2,SOX2,Gene,,NCBI:6657,,HPO genes_to_phenotype.txt
+GENE:SPAG1,SPAG1,Gene,,NCBI:6674,,HPO genes_to_phenotype.txt
+GENE:SPEF2,SPEF2,Gene,,NCBI:79925,,HPO genes_to_phenotype.txt
+GENE:SPEN,SPEN,Gene,,NCBI:23013,,HPO genes_to_phenotype.txt
+GENE:SPOP,SPOP,Gene,,NCBI:8405,,HPO genes_to_phenotype.txt
+GENE:SPRED1,SPRED1,Gene,,NCBI:161742,,HPO genes_to_phenotype.txt
+GENE:SPRED2,SPRED2,Gene,,NCBI:200734,,HPO genes_to_phenotype.txt
+GENE:SPTBN1,SPTBN1,Gene,,NCBI:6711,,HPO genes_to_phenotype.txt
+GENE:SRSF1,SRSF1,Gene,,NCBI:6426,,HPO genes_to_phenotype.txt
+GENE:SRY,SRY,Gene,,NCBI:6736,,HPO genes_to_phenotype.txt
+GENE:SSR4,SSR4,Gene,,NCBI:6748,,HPO genes_to_phenotype.txt
+GENE:STAG1,STAG1,Gene,,NCBI:10274,,HPO genes_to_phenotype.txt
+GENE:STAMBP,STAMBP,Gene,,NCBI:10617,,HPO genes_to_phenotype.txt
+GENE:STIL,STIL,Gene,,NCBI:6491,,HPO genes_to_phenotype.txt
+GENE:STK36,STK36,Gene,,NCBI:27148,,HPO genes_to_phenotype.txt
+GENE:STRADA,STRADA,Gene,,NCBI:92335,,HPO genes_to_phenotype.txt
+GENE:STXBP1,STXBP1,Gene,,NCBI:6812,,HPO genes_to_phenotype.txt
+GENE:SUCLG1,SUCLG1,Gene,,NCBI:8802,,HPO genes_to_phenotype.txt
+GENE:SUFU,SUFU,Gene,,NCBI:51684,,HPO genes_to_phenotype.txt
+GENE:SUPT16H,SUPT16H,Gene,,NCBI:11198,,HPO genes_to_phenotype.txt
+GENE:SYT1,SYT1,Gene,,NCBI:6857,,HPO genes_to_phenotype.txt
+GENE:SZT2,SZT2,Gene,,NCBI:23334,,HPO genes_to_phenotype.txt
+GENE:TAB2,TAB2,Gene,,NCBI:23118,,HPO genes_to_phenotype.txt
+GENE:TAF2,TAF2,Gene,,NCBI:6873,,HPO genes_to_phenotype.txt
+GENE:TAOK1,TAOK1,Gene,,NCBI:57551,,HPO genes_to_phenotype.txt
+GENE:TAPT1,TAPT1,Gene,,NCBI:202018,,HPO genes_to_phenotype.txt
+GENE:TARS1,TARS1,Gene,,NCBI:6897,,HPO genes_to_phenotype.txt
+GENE:TASP1,TASP1,Gene,,NCBI:55617,,HPO genes_to_phenotype.txt
+GENE:TBC1D24,TBC1D24,Gene,,NCBI:57465,,HPO genes_to_phenotype.txt
+GENE:TBC1D32,TBC1D32,Gene,,NCBI:221322,,HPO genes_to_phenotype.txt
+GENE:TBC1D7,TBC1D7,Gene,,NCBI:51256,,HPO genes_to_phenotype.txt
+GENE:TBCK,TBCK,Gene,,NCBI:93627,,HPO genes_to_phenotype.txt
+GENE:TBX2,TBX2,Gene,,NCBI:6909,,HPO genes_to_phenotype.txt
+GENE:TBX22,TBX22,Gene,,NCBI:50945,,HPO genes_to_phenotype.txt
+GENE:TBX3,TBX3,Gene,,NCBI:6926,,HPO genes_to_phenotype.txt
+GENE:TBX4,TBX4,Gene,,NCBI:9496,,HPO genes_to_phenotype.txt
+GENE:TCIRG1,TCIRG1,Gene,,NCBI:10312,,HPO genes_to_phenotype.txt
+GENE:TCOF1,TCOF1,Gene,,NCBI:6949,,HPO genes_to_phenotype.txt
+GENE:TCTN3,TCTN3,Gene,,NCBI:26123,,HPO genes_to_phenotype.txt
+GENE:TELO2,TELO2,Gene,,NCBI:9894,,HPO genes_to_phenotype.txt
+GENE:TET3,TET3,Gene,,NCBI:200424,,HPO genes_to_phenotype.txt
+GENE:TGDS,TGDS,Gene,,NCBI:23483,,HPO genes_to_phenotype.txt
+GENE:TGFB2,TGFB2,Gene,,NCBI:7042,,HPO genes_to_phenotype.txt
+GENE:TGFB3,TGFB3,Gene,,NCBI:7043,,HPO genes_to_phenotype.txt
+GENE:TGIF1,TGIF1,Gene,,NCBI:7050,,HPO genes_to_phenotype.txt
+GENE:THOC6,THOC6,Gene,,NCBI:79228,,HPO genes_to_phenotype.txt
+GENE:THSD1,THSD1,Gene,,NCBI:55901,,HPO genes_to_phenotype.txt
+GENE:THSD4,THSD4,Gene,,NCBI:79875,,HPO genes_to_phenotype.txt
+GENE:TIAM1,TIAM1,Gene,,NCBI:7074,,HPO genes_to_phenotype.txt
+GENE:TKT,TKT,Gene,,NCBI:7086,,HPO genes_to_phenotype.txt
+GENE:TLL1,TLL1,Gene,,NCBI:7092,,HPO genes_to_phenotype.txt
+GENE:TM2D3,TM2D3,Gene,,NCBI:80213,,HPO genes_to_phenotype.txt
+GENE:TMCO1,TMCO1,Gene,,NCBI:54499,,HPO genes_to_phenotype.txt
+GENE:TMEM147,TMEM147,Gene,,NCBI:10430,,HPO genes_to_phenotype.txt
+GENE:TMEM218,TMEM218,Gene,,NCBI:219854,,HPO genes_to_phenotype.txt
+GENE:TMEM237,TMEM237,Gene,,NCBI:65062,,HPO genes_to_phenotype.txt
+GENE:TMEM260,TMEM260,Gene,,NCBI:54916,,HPO genes_to_phenotype.txt
+GENE:TMEM270,TMEM270,Gene,,NCBI:135886,,HPO genes_to_phenotype.txt
+GENE:TMEM53,TMEM53,Gene,,NCBI:79639,,HPO genes_to_phenotype.txt
+GENE:TMTC3,TMTC3,Gene,,NCBI:160418,,HPO genes_to_phenotype.txt
+GENE:TNFRSF11A,TNFRSF11A,Gene,,NCBI:8792,,HPO genes_to_phenotype.txt
+GENE:TP63,TP63,Gene,,NCBI:8626,,HPO genes_to_phenotype.txt
+GENE:TPM1,TPM1,Gene,,NCBI:7168,,HPO genes_to_phenotype.txt
+GENE:TPR,TPR,Gene,,NCBI:7175,,HPO genes_to_phenotype.txt
+GENE:TRA2B,TRA2B,Gene,,NCBI:6434,,HPO genes_to_phenotype.txt
+GENE:TRAIP,TRAIP,Gene,,NCBI:10293,,HPO genes_to_phenotype.txt
+GENE:TRIM33,TRIM33,Gene,,NCBI:51592,,HPO genes_to_phenotype.txt
+GENE:TRIM8,TRIM8,Gene,,NCBI:81603,,HPO genes_to_phenotype.txt
+GENE:TRIO,TRIO,Gene,,NCBI:7204,,HPO genes_to_phenotype.txt
+GENE:TRIP11,TRIP11,Gene,,NCBI:9321,,HPO genes_to_phenotype.txt
+GENE:TRIP13,TRIP13,Gene,,NCBI:9319,,HPO genes_to_phenotype.txt
+GENE:TRIP4,TRIP4,Gene,,NCBI:9325,,HPO genes_to_phenotype.txt
+GENE:TRPV6,TRPV6,Gene,,NCBI:55503,,HPO genes_to_phenotype.txt
+GENE:TRRAP,TRRAP,Gene,,NCBI:8295,,HPO genes_to_phenotype.txt
+GENE:TSFM,TSFM,Gene,,NCBI:10102,,HPO genes_to_phenotype.txt
+GENE:TSHZ3,TSHZ3,Gene,,NCBI:57616,,HPO genes_to_phenotype.txt
+GENE:TSR2,TSR2,Gene,,NCBI:90121,,HPO genes_to_phenotype.txt
+GENE:TTC12,TTC12,Gene,,NCBI:54970,,HPO genes_to_phenotype.txt
+GENE:TTC7A,TTC7A,Gene,,NCBI:57217,,HPO genes_to_phenotype.txt
+GENE:TTR,TTR,Gene,,NCBI:7276,,HPO genes_to_phenotype.txt
+GENE:TUBG1,TUBG1,Gene,,NCBI:7283,,HPO genes_to_phenotype.txt
+GENE:TWIST1,TWIST1,Gene,,NCBI:7291,,HPO genes_to_phenotype.txt
+GENE:TXNL4A,TXNL4A,Gene,,NCBI:10907,,HPO genes_to_phenotype.txt
+GENE:UBE2A,UBE2A,Gene,,NCBI:7319,,HPO genes_to_phenotype.txt
+GENE:UBE2T,UBE2T,Gene,,NCBI:29089,,HPO genes_to_phenotype.txt
+GENE:UBE3B,UBE3B,Gene,,NCBI:89910,,HPO genes_to_phenotype.txt
+GENE:UBE4B,UBE4B,Gene,,NCBI:10277,,HPO genes_to_phenotype.txt
+GENE:UBR1,UBR1,Gene,,NCBI:197131,,HPO genes_to_phenotype.txt
+GENE:UBR5,UBR5,Gene,,NCBI:51366,,HPO genes_to_phenotype.txt
+GENE:UBR7,UBR7,Gene,,NCBI:55148,,HPO genes_to_phenotype.txt
+GENE:UFC1,UFC1,Gene,,NCBI:51506,,HPO genes_to_phenotype.txt
+GENE:UMPS,UMPS,Gene,,NCBI:7372,,HPO genes_to_phenotype.txt
+GENE:UNC45B,UNC45B,Gene,,NCBI:146862,,HPO genes_to_phenotype.txt
+GENE:UPF3B,UPF3B,Gene,,NCBI:65109,,HPO genes_to_phenotype.txt
+GENE:UQCRC2,UQCRC2,Gene,,NCBI:7385,,HPO genes_to_phenotype.txt
+GENE:UQCRFS1,UQCRFS1,Gene,,NCBI:7386,,HPO genes_to_phenotype.txt
+GENE:USP18,USP18,Gene,,NCBI:11274,,HPO genes_to_phenotype.txt
+GENE:USP9X,USP9X,Gene,,NCBI:8239,,HPO genes_to_phenotype.txt
+GENE:VAC14,VAC14,Gene,,NCBI:55697,,HPO genes_to_phenotype.txt
+GENE:VEZF1,VEZF1,Gene,,NCBI:7716,,HPO genes_to_phenotype.txt
+GENE:VIPAS39,VIPAS39,Gene,,NCBI:63894,,HPO genes_to_phenotype.txt
+GENE:VKORC1,VKORC1,Gene,,NCBI:79001,,HPO genes_to_phenotype.txt
+GENE:VPS13B,VPS13B,Gene,,NCBI:157680,,HPO genes_to_phenotype.txt
+GENE:VPS33A,VPS33A,Gene,,NCBI:65082,,HPO genes_to_phenotype.txt
+GENE:VPS33B,VPS33B,Gene,,NCBI:26276,,HPO genes_to_phenotype.txt
+GENE:VPS37D,VPS37D,Gene,,NCBI:155382,,HPO genes_to_phenotype.txt
+GENE:VWF,VWF,Gene,,NCBI:7450,,HPO genes_to_phenotype.txt
+GENE:WAC,WAC,Gene,,NCBI:51322,,HPO genes_to_phenotype.txt
+GENE:WBP4,WBP4,Gene,,NCBI:11193,,HPO genes_to_phenotype.txt
+GENE:WDPCP,WDPCP,Gene,,NCBI:51057,,HPO genes_to_phenotype.txt
+GENE:WDR26,WDR26,Gene,,NCBI:80232,,HPO genes_to_phenotype.txt
+GENE:WDR35,WDR35,Gene,,NCBI:57539,,HPO genes_to_phenotype.txt
+GENE:WDR37,WDR37,Gene,,NCBI:22884,,HPO genes_to_phenotype.txt
+GENE:WLS,WLS,Gene,,NCBI:79971,,HPO genes_to_phenotype.txt
+GENE:WNT4,WNT4,Gene,,NCBI:54361,,HPO genes_to_phenotype.txt
+GENE:WSB2,WSB2,Gene,,NCBI:55884,,HPO genes_to_phenotype.txt
+GENE:XRCC2,XRCC2,Gene,,NCBI:7516,,HPO genes_to_phenotype.txt
+GENE:XYLT1,XYLT1,Gene,,NCBI:64131,,HPO genes_to_phenotype.txt
+GENE:XYLT2,XYLT2,Gene,,NCBI:64132,,HPO genes_to_phenotype.txt
+GENE:YARS1,YARS1,Gene,,NCBI:8565,,HPO genes_to_phenotype.txt
+GENE:YWHAZ,YWHAZ,Gene,,NCBI:7534,,HPO genes_to_phenotype.txt
+GENE:YY1,YY1,Gene,,NCBI:7528,,HPO genes_to_phenotype.txt
+GENE:YY1AP1,YY1AP1,Gene,,NCBI:55249,,HPO genes_to_phenotype.txt
+GENE:ZBTB7A,ZBTB7A,Gene,,NCBI:51341,,HPO genes_to_phenotype.txt
+GENE:ZDHHC9,ZDHHC9,Gene,,NCBI:51114,,HPO genes_to_phenotype.txt
+GENE:ZFPM2,ZFPM2,Gene,,NCBI:23414,,HPO genes_to_phenotype.txt
+GENE:ZFX,ZFX,Gene,,NCBI:7543,,HPO genes_to_phenotype.txt
+GENE:ZIC2,ZIC2,Gene,,NCBI:7546,,HPO genes_to_phenotype.txt
+GENE:ZMIZ1,ZMIZ1,Gene,,NCBI:57178,,HPO genes_to_phenotype.txt
+GENE:ZMYM2,ZMYM2,Gene,,NCBI:7750,,HPO genes_to_phenotype.txt
+GENE:ZMYND10,ZMYND10,Gene,,NCBI:51364,,HPO genes_to_phenotype.txt
+GENE:ZNF148,ZNF148,Gene,,NCBI:7707,,HPO genes_to_phenotype.txt
+GENE:ZNF341,ZNF341,Gene,,NCBI:84905,,HPO genes_to_phenotype.txt
+GENE:ZNF462,ZNF462,Gene,,NCBI:58499,,HPO genes_to_phenotype.txt
+GENE:ZNF699,ZNF699,Gene,,NCBI:374879,,HPO genes_to_phenotype.txt
+GENE:ZRSR2,ZRSR2,Gene,,NCBI:8233,,HPO genes_to_phenotype.txt
+CHD:ALL,"Congenital heart defects (all Q20-Q28, aggregate)",Phenotype,aggregate,ICD10:Q20-Q28,Aggregate phenotype used when a study reports overall CHD rather than a subtype.,study_ontology
+VAR:VCV004924099,VCV004924099,Variant,,VCV004924099,,ClinVar
+VAR:VCV004924093,VCV004924093,Variant,,VCV004924093,,ClinVar
+VAR:VCV004891001,VCV004891001,Variant,,VCV004891001,,ClinVar
+VAR:VCV004890913,VCV004890913,Variant,,VCV004890913,,ClinVar
+VAR:VCV004890687,VCV004890687,Variant,,VCV004890687,,ClinVar
+VAR:VCV004890685,VCV004890685,Variant,,VCV004890685,,ClinVar
+VAR:VCV004783293,VCV004783293,Variant,,VCV004783293,,ClinVar
+VAR:VCV004072043,VCV004072043,Variant,,VCV004072043,,ClinVar
+VAR:VCV003382680,VCV003382680,Variant,,VCV003382680,,ClinVar
+VAR:VCV002950148,VCV002950148,Variant,,VCV002950148,,ClinVar
+VAR:VCV002579718,VCV002579718,Variant,,VCV002579718,,ClinVar
+VAR:VCV002575660,VCV002575660,Variant,,VCV002575660,,ClinVar
+VAR:VCV002427227,VCV002427227,Variant,,VCV002427227,,ClinVar
+VAR:VCV002015662,VCV002015662,Variant,,VCV002015662,,ClinVar
+VAR:VCV004819217,VCV004819217,Variant,,VCV004819217,,ClinVar
+VAR:VCV001455527,VCV001455527,Variant,,VCV001455527,,ClinVar
+VAR:VCV000665052,VCV000665052,Variant,,VCV000665052,,ClinVar
+VAR:VCV004898208,VCV004898208,Variant,,VCV004898208,,ClinVar
+VAR:VCV004898207,VCV004898207,Variant,,VCV004898207,,ClinVar
+VAR:VCV004898204,VCV004898204,Variant,,VCV004898204,,ClinVar
+VAR:VCV004888056,VCV004888056,Variant,,VCV004888056,,ClinVar
+VAR:VCV004880319,VCV004880319,Variant,,VCV004880319,,ClinVar
+VAR:VCV004854074,VCV004854074,Variant,,VCV004854074,,ClinVar
+VAR:VCV004819206,VCV004819206,Variant,,VCV004819206,,ClinVar
+VAR:VCV004072207,VCV004072207,Variant,,VCV004072207,,ClinVar
+VAR:VCV003572914,VCV003572914,Variant,,VCV003572914,,ClinVar
+VAR:VCV003393207,VCV003393207,Variant,,VCV003393207,,ClinVar
+VAR:VCV003373467,VCV003373467,Variant,,VCV003373467,,ClinVar
+VAR:VCV003343956,VCV003343956,Variant,,VCV003343956,,ClinVar
+VAR:VCV003338728,VCV003338728,Variant,,VCV003338728,,ClinVar
+VAR:VCV004914435,VCV004914435,Variant,,VCV004914435,,ClinVar
+VAR:VCV004880201,VCV004880201,Variant,,VCV004880201,,ClinVar
+VAR:VCV004800612,VCV004800612,Variant,,VCV004800612,,ClinVar
+VAR:VCV004686183,VCV004686183,Variant,,VCV004686183,,ClinVar
+VAR:VCV003772040,VCV003772040,Variant,,VCV003772040,,ClinVar
+VAR:VCV005020101,VCV005020101,Variant,,VCV005020101,,ClinVar
+VAR:VCV005019926,VCV005019926,Variant,,VCV005019926,,ClinVar
+VAR:VCV005019722,VCV005019722,Variant,,VCV005019722,,ClinVar
+VAR:VCV005018966,VCV005018966,Variant,,VCV005018966,,ClinVar
+VAR:VCV005010268,VCV005010268,Variant,,VCV005010268,,ClinVar
+VAR:VCV005010132,VCV005010132,Variant,,VCV005010132,,ClinVar
+VAR:VCV005010130,VCV005010130,Variant,,VCV005010130,,ClinVar
+VAR:VCV005007318,VCV005007318,Variant,,VCV005007318,,ClinVar
+VAR:VCV005001128,VCV005001128,Variant,,VCV005001128,,ClinVar
+VAR:VCV005001014,VCV005001014,Variant,,VCV005001014,,ClinVar
+VAR:VCV004999117,VCV004999117,Variant,,VCV004999117,,ClinVar
+VAR:VCV004998884,VCV004998884,Variant,,VCV004998884,,ClinVar
+VAR:VCV004998525,VCV004998525,Variant,,VCV004998525,,ClinVar
+VAR:VCV004997070,VCV004997070,Variant,,VCV004997070,,ClinVar
+VAR:VCV004995269,VCV004995269,Variant,,VCV004995269,,ClinVar
+VAR:VCV004993255,VCV004993255,Variant,,VCV004993255,,ClinVar
+VAR:VCV004984519,VCV004984519,Variant,,VCV004984519,,ClinVar
+VAR:VCV004983427,VCV004983427,Variant,,VCV004983427,,ClinVar
+VAR:VCV004974957,VCV004974957,Variant,,VCV004974957,,ClinVar
+VAR:VCV004900669,VCV004900669,Variant,,VCV004900669,,ClinVar
+VAR:VCV004900659,VCV004900659,Variant,,VCV004900659,,ClinVar
+VAR:VCV004900658,VCV004900658,Variant,,VCV004900658,,ClinVar
+VAR:VCV004900656,VCV004900656,Variant,,VCV004900656,,ClinVar
+VAR:VCV004900650,VCV004900650,Variant,,VCV004900650,,ClinVar
+VAR:VCV004900649,VCV004900649,Variant,,VCV004900649,,ClinVar
+VAR:VCV004900646,VCV004900646,Variant,,VCV004900646,,ClinVar
+VAR:VCV004900644,VCV004900644,Variant,,VCV004900644,,ClinVar
+VAR:VCV004900640,VCV004900640,Variant,,VCV004900640,,ClinVar
+VAR:VCV004900635,VCV004900635,Variant,,VCV004900635,,ClinVar
+VAR:VCV001684644,VCV001684644,Variant,,VCV001684644,,ClinVar
+VAR:VCV000804240,VCV000804240,Variant,,VCV000804240,,ClinVar
+VAR:VCV000006722,VCV000006722,Variant,,VCV000006722,,ClinVar
+VAR:VCV005018878,VCV005018878,Variant,,VCV005018878,,ClinVar
+VAR:VCV005016869,VCV005016869,Variant,,VCV005016869,,ClinVar
+VAR:VCV005005585,VCV005005585,Variant,,VCV005005585,,ClinVar
+VAR:VCV004993173,VCV004993173,Variant,,VCV004993173,,ClinVar
+VAR:VCV004928405,VCV004928405,Variant,,VCV004928405,,ClinVar
+VAR:VCV004928398,VCV004928398,Variant,,VCV004928398,,ClinVar
+VAR:VCV004928397,VCV004928397,Variant,,VCV004928397,,ClinVar
+VAR:VCV004928389,VCV004928389,Variant,,VCV004928389,,ClinVar
+VAR:VCV004928377,VCV004928377,Variant,,VCV004928377,,ClinVar
+VAR:VCV004928367,VCV004928367,Variant,,VCV004928367,,ClinVar
+VAR:VCV004928357,VCV004928357,Variant,,VCV004928357,,ClinVar
+VAR:VCV004928356,VCV004928356,Variant,,VCV004928356,,ClinVar
+VAR:VCV004928336,VCV004928336,Variant,,VCV004928336,,ClinVar
+VAR:VCV004928333,VCV004928333,Variant,,VCV004928333,,ClinVar
+VAR:VCV004928326,VCV004928326,Variant,,VCV004928326,,ClinVar
+VAR:VCV004928311,VCV004928311,Variant,,VCV004928311,,ClinVar
+VAR:VCV004891459,VCV004891459,Variant,,VCV004891459,,ClinVar
+VAR:VCV004887831,VCV004887831,Variant,,VCV004887831,,ClinVar
+VAR:VCV004886546,VCV004886546,Variant,,VCV004886546,,ClinVar
+VAR:VCV004886504,VCV004886504,Variant,,VCV004886504,,ClinVar
+VAR:VCV004886391,VCV004886391,Variant,,VCV004886391,,ClinVar
+VAR:VCV004884109,VCV004884109,Variant,,VCV004884109,,ClinVar
+VAR:VCV004880806,VCV004880806,Variant,,VCV004880806,,ClinVar
+VAR:VCV004880623,VCV004880623,Variant,,VCV004880623,,ClinVar
+VAR:VCV004879632,VCV004879632,Variant,,VCV004879632,,ClinVar
+VAR:VCV004871689,VCV004871689,Variant,,VCV004871689,,ClinVar
+VAR:VCV004856310,VCV004856310,Variant,,VCV004856310,,ClinVar
+VAR:VCV004855895,VCV004855895,Variant,,VCV004855895,,ClinVar
+VAR:VCV004855779,VCV004855779,Variant,,VCV004855779,,ClinVar
+VAR:VCV004855254,VCV004855254,Variant,,VCV004855254,,ClinVar
+VAR:VCV004854888,VCV004854888,Variant,,VCV004854888,,ClinVar
+VAR:VCV004851864,VCV004851864,Variant,,VCV004851864,,ClinVar
+VAR:VCV004850037,VCV004850037,Variant,,VCV004850037,,ClinVar
+VAR:VCV004850036,VCV004850036,Variant,,VCV004850036,,ClinVar
+VAR:VCV004849232,VCV004849232,Variant,,VCV004849232,,ClinVar
+VAR:VCV004845253,VCV004845253,Variant,,VCV004845253,,ClinVar
+VAR:VCV004814124,VCV004814124,Variant,,VCV004814124,,ClinVar
+VAR:VCV004924287,VCV004924287,Variant,,VCV004924287,,ClinVar
+VAR:VCV004849991,VCV004849991,Variant,,VCV004849991,,ClinVar
+VAR:VCV004526789,VCV004526789,Variant,,VCV004526789,,ClinVar
+VAR:VCV003652389,VCV003652389,Variant,,VCV003652389,,ClinVar
+VAR:VCV003651482,VCV003651482,Variant,,VCV003651482,,ClinVar
+VAR:VCV003600511,VCV003600511,Variant,,VCV003600511,,ClinVar
+VAR:VCV003346228,VCV003346228,Variant,,VCV003346228,,ClinVar
+VAR:VCV003254751,VCV003254751,Variant,,VCV003254751,,ClinVar
+VAR:VCV003252693,VCV003252693,Variant,,VCV003252693,,ClinVar
+VAR:VCV003066222,VCV003066222,Variant,,VCV003066222,,ClinVar
+VAR:VCV002630670,VCV002630670,Variant,,VCV002630670,,ClinVar
+VAR:VCV002506498,VCV002506498,Variant,,VCV002506498,,ClinVar
+VAR:VCV002101441,VCV002101441,Variant,,VCV002101441,,ClinVar
+VAR:VCV002082857,VCV002082857,Variant,,VCV002082857,,ClinVar
+VAR:VCV001320129,VCV001320129,Variant,,VCV001320129,,ClinVar
+VAR:VCV000992895,VCV000992895,Variant,,VCV000992895,,ClinVar
+VAR:VCV000929444,VCV000929444,Variant,,VCV000929444,,ClinVar
+VAR:VCV000800940,VCV000800940,Variant,,VCV000800940,,ClinVar
+VAR:VCV000560049,VCV000560049,Variant,,VCV000560049,,ClinVar
+VAR:VCV000523592,VCV000523592,Variant,,VCV000523592,,ClinVar
+VAR:VCV000523591,VCV000523591,Variant,,VCV000523591,,ClinVar
+VAR:VCV000523590,VCV000523590,Variant,,VCV000523590,,ClinVar
+VAR:VCV005021111,VCV005021111,Variant,,VCV005021111,,ClinVar
+VAR:VCV005018444,VCV005018444,Variant,,VCV005018444,,ClinVar
+VAR:VCV005001785,VCV005001785,Variant,,VCV005001785,,ClinVar
+VAR:VCV004999915,VCV004999915,Variant,,VCV004999915,,ClinVar
+VAR:VCV004993341,VCV004993341,Variant,,VCV004993341,,ClinVar
+VAR:VCV004991886,VCV004991886,Variant,,VCV004991886,,ClinVar
+VAR:VCV004896254,VCV004896254,Variant,,VCV004896254,,ClinVar
+VAR:VCV004896253,VCV004896253,Variant,,VCV004896253,,ClinVar
+VAR:VCV004896251,VCV004896251,Variant,,VCV004896251,,ClinVar
+VAR:VCV004896248,VCV004896248,Variant,,VCV004896248,,ClinVar
+VAR:VCV004896237,VCV004896237,Variant,,VCV004896237,,ClinVar
+VAR:VCV004896235,VCV004896235,Variant,,VCV004896235,,ClinVar
+VAR:VCV004896229,VCV004896229,Variant,,VCV004896229,,ClinVar
+VAR:VCV004896226,VCV004896226,Variant,,VCV004896226,,ClinVar
+VAR:VCV004896221,VCV004896221,Variant,,VCV004896221,,ClinVar
+VAR:VCV004896204,VCV004896204,Variant,,VCV004896204,,ClinVar
+VAR:VCV004896203,VCV004896203,Variant,,VCV004896203,,ClinVar
+VAR:VCV004887371,VCV004887371,Variant,,VCV004887371,,ClinVar
+VAR:VCV004886980,VCV004886980,Variant,,VCV004886980,,ClinVar
+VAR:VCV004880309,VCV004880309,Variant,,VCV004880309,,ClinVar
+VAR:VCV004857004,VCV004857004,Variant,,VCV004857004,,ClinVar
+VAR:VCV004855329,VCV004855329,Variant,,VCV004855329,,ClinVar
+VAR:VCV004855001,VCV004855001,Variant,,VCV004855001,,ClinVar
+VAR:VCV004847981,VCV004847981,Variant,,VCV004847981,,ClinVar
+VAR:VCV004820195,VCV004820195,Variant,,VCV004820195,,ClinVar
+VAR:VCV004820194,VCV004820194,Variant,,VCV004820194,,ClinVar
+VAR:VCV004820132,VCV004820132,Variant,,VCV004820132,,ClinVar
+VAR:VCV004819216,VCV004819216,Variant,,VCV004819216,,ClinVar
+VAR:VCV004809325,VCV004809325,Variant,,VCV004809325,,ClinVar
+VAR:VCV004795134,VCV004795134,Variant,,VCV004795134,,ClinVar
+VAR:VCV004767277,VCV004767277,Variant,,VCV004767277,,ClinVar
+VAR:VCV004766197,VCV004766197,Variant,,VCV004766197,,ClinVar
+VAR:VCV004731474,VCV004731474,Variant,,VCV004731474,,ClinVar
+VAR:VCV004726196,VCV004726196,Variant,,VCV004726196,,ClinVar
+VAR:VCV004720568,VCV004720568,Variant,,VCV004720568,,ClinVar
+VAR:VCV004715797,VCV004715797,Variant,,VCV004715797,,ClinVar
+VAR:VCV004715012,VCV004715012,Variant,,VCV004715012,,ClinVar
+VAR:VCV005019130,VCV005019130,Variant,,VCV005019130,,ClinVar
+VAR:VCV005016831,VCV005016831,Variant,,VCV005016831,,ClinVar
+VAR:VCV004992641,VCV004992641,Variant,,VCV004992641,,ClinVar
+VAR:VCV004975374,VCV004975374,Variant,,VCV004975374,,ClinVar
+VAR:VCV004948124,VCV004948124,Variant,,VCV004948124,,ClinVar
+VAR:VCV004948095,VCV004948095,Variant,,VCV004948095,,ClinVar
+VAR:VCV004948082,VCV004948082,Variant,,VCV004948082,,ClinVar
+VAR:VCV004948075,VCV004948075,Variant,,VCV004948075,,ClinVar
+VAR:VCV004948073,VCV004948073,Variant,,VCV004948073,,ClinVar
+VAR:VCV004948071,VCV004948071,Variant,,VCV004948071,,ClinVar
+VAR:VCV004948035,VCV004948035,Variant,,VCV004948035,,ClinVar
+VAR:VCV004948031,VCV004948031,Variant,,VCV004948031,,ClinVar
+VAR:VCV004886526,VCV004886526,Variant,,VCV004886526,,ClinVar
+VAR:VCV004880725,VCV004880725,Variant,,VCV004880725,,ClinVar
+VAR:VCV004876801,VCV004876801,Variant,,VCV004876801,,ClinVar
+VAR:VCV004871908,VCV004871908,Variant,,VCV004871908,,ClinVar
+VAR:VCV004856323,VCV004856323,Variant,,VCV004856323,,ClinVar
+VAR:VCV004855932,VCV004855932,Variant,,VCV004855932,,ClinVar
+VAR:VCV004855166,VCV004855166,Variant,,VCV004855166,,ClinVar
+VAR:VCV004854621,VCV004854621,Variant,,VCV004854621,,ClinVar
+VAR:VCV004854473,VCV004854473,Variant,,VCV004854473,,ClinVar
+VAR:VCV004854439,VCV004854439,Variant,,VCV004854439,,ClinVar
+VAR:VCV004852232,VCV004852232,Variant,,VCV004852232,,ClinVar
+VAR:VCV004851890,VCV004851890,Variant,,VCV004851890,,ClinVar
+VAR:VCV004823916,VCV004823916,Variant,,VCV004823916,,ClinVar
+VAR:VCV004823915,VCV004823915,Variant,,VCV004823915,,ClinVar
+VAR:VCV004823914,VCV004823914,Variant,,VCV004823914,,ClinVar
+VAR:VCV004823913,VCV004823913,Variant,,VCV004823913,,ClinVar
+VAR:VCV004821933,VCV004821933,Variant,,VCV004821933,,ClinVar
+VAR:VCV004795376,VCV004795376,Variant,,VCV004795376,,ClinVar
+VAR:VCV004755701,VCV004755701,Variant,,VCV004755701,,ClinVar
+VAR:VCV004729014,VCV004729014,Variant,,VCV004729014,,ClinVar
+VAR:VCV004723064,VCV004723064,Variant,,VCV004723064,,ClinVar
+VAR:VCV004718826,VCV004718826,Variant,,VCV004718826,,ClinVar
+VAR:VCV005010276,VCV005010276,Variant,,VCV005010276,,ClinVar
+VAR:VCV005005423,VCV005005423,Variant,,VCV005005423,,ClinVar
+VAR:VCV005000557,VCV005000557,Variant,,VCV005000557,,ClinVar
+VAR:VCV004998202,VCV004998202,Variant,,VCV004998202,,ClinVar
+VAR:VCV004993859,VCV004993859,Variant,,VCV004993859,,ClinVar
+VAR:VCV004991565,VCV004991565,Variant,,VCV004991565,,ClinVar
+VAR:VCV004976689,VCV004976689,Variant,,VCV004976689,,ClinVar
+VAR:VCV004924911,VCV004924911,Variant,,VCV004924911,,ClinVar
+VAR:VCV004924906,VCV004924906,Variant,,VCV004924906,,ClinVar
+VAR:VCV004924904,VCV004924904,Variant,,VCV004924904,,ClinVar
+VAR:VCV004924903,VCV004924903,Variant,,VCV004924903,,ClinVar
+VAR:VCV004924902,VCV004924902,Variant,,VCV004924902,,ClinVar
+VAR:VCV004924900,VCV004924900,Variant,,VCV004924900,,ClinVar
+VAR:VCV004924899,VCV004924899,Variant,,VCV004924899,,ClinVar
+VAR:VCV004924896,VCV004924896,Variant,,VCV004924896,,ClinVar
+VAR:VCV004924893,VCV004924893,Variant,,VCV004924893,,ClinVar
+VAR:VCV004924891,VCV004924891,Variant,,VCV004924891,,ClinVar
+VAR:VCV004924884,VCV004924884,Variant,,VCV004924884,,ClinVar
+VAR:VCV004924879,VCV004924879,Variant,,VCV004924879,,ClinVar
+VAR:VCV004924878,VCV004924878,Variant,,VCV004924878,,ClinVar
+VAR:VCV004924877,VCV004924877,Variant,,VCV004924877,,ClinVar
+VAR:VCV004924875,VCV004924875,Variant,,VCV004924875,,ClinVar
+VAR:VCV004924872,VCV004924872,Variant,,VCV004924872,,ClinVar
+VAR:VCV004924870,VCV004924870,Variant,,VCV004924870,,ClinVar
+VAR:VCV004924868,VCV004924868,Variant,,VCV004924868,,ClinVar
+VAR:VCV004924865,VCV004924865,Variant,,VCV004924865,,ClinVar
+VAR:VCV004924862,VCV004924862,Variant,,VCV004924862,,ClinVar
+VAR:VCV004924861,VCV004924861,Variant,,VCV004924861,,ClinVar
+VAR:VCV004924860,VCV004924860,Variant,,VCV004924860,,ClinVar
+VAR:VCV004924859,VCV004924859,Variant,,VCV004924859,,ClinVar
+VAR:VCV004924856,VCV004924856,Variant,,VCV004924856,,ClinVar
+VAR:VCV004924855,VCV004924855,Variant,,VCV004924855,,ClinVar
+VAR:VCV004924854,VCV004924854,Variant,,VCV004924854,,ClinVar
+VAR:VCV004924853,VCV004924853,Variant,,VCV004924853,,ClinVar
+VAR:VCV004924852,VCV004924852,Variant,,VCV004924852,,ClinVar
+VAR:VCV004924849,VCV004924849,Variant,,VCV004924849,,ClinVar
+VAR:VCV005019848,VCV005019848,Variant,,VCV005019848,,ClinVar
+VAR:VCV004984685,VCV004984685,Variant,,VCV004984685,,ClinVar
+VAR:VCV004975108,VCV004975108,Variant,,VCV004975108,,ClinVar
+VAR:VCV004973424,VCV004973424,Variant,,VCV004973424,,ClinVar
+VAR:VCV004973421,VCV004973421,Variant,,VCV004973421,,ClinVar
+VAR:VCV004973419,VCV004973419,Variant,,VCV004973419,,ClinVar
+VAR:VCV004973413,VCV004973413,Variant,,VCV004973413,,ClinVar
+VAR:VCV004973411,VCV004973411,Variant,,VCV004973411,,ClinVar
+VAR:VCV004973404,VCV004973404,Variant,,VCV004973404,,ClinVar
+VAR:VCV004888339,VCV004888339,Variant,,VCV004888339,,ClinVar
+VAR:VCV004887926,VCV004887926,Variant,,VCV004887926,,ClinVar
+VAR:VCV004886768,VCV004886768,Variant,,VCV004886768,,ClinVar
+VAR:VCV004875651,VCV004875651,Variant,,VCV004875651,,ClinVar
+VAR:VCV004820636,VCV004820636,Variant,,VCV004820636,,ClinVar
+VAR:VCV004819656,VCV004819656,Variant,,VCV004819656,,ClinVar
+VAR:VCV004818881,VCV004818881,Variant,,VCV004818881,,ClinVar
+VAR:VCV004814203,VCV004814203,Variant,,VCV004814203,,ClinVar
+VAR:VCV004795366,VCV004795366,Variant,,VCV004795366,,ClinVar
+VAR:VCV004620088,VCV004620088,Variant,,VCV004620088,,ClinVar
+VAR:VCV004532241,VCV004532241,Variant,,VCV004532241,,ClinVar
+VAR:VCV004531988,VCV004531988,Variant,,VCV004531988,,ClinVar
+VAR:VCV004530775,VCV004530775,Variant,,VCV004530775,,ClinVar
+VAR:VCV004258403,VCV004258403,Variant,,VCV004258403,,ClinVar
+VAR:VCV004082986,VCV004082986,Variant,,VCV004082986,,ClinVar
+VAR:VCV004056442,VCV004056442,Variant,,VCV004056442,,ClinVar
+VAR:VCV003900720,VCV003900720,Variant,,VCV003900720,,ClinVar
+VAR:VCV005018438,VCV005018438,Variant,,VCV005018438,,ClinVar
+VAR:VCV005017690,VCV005017690,Variant,,VCV005017690,,ClinVar
+VAR:VCV004991426,VCV004991426,Variant,,VCV004991426,,ClinVar
+VAR:VCV004990060,VCV004990060,Variant,,VCV004990060,,ClinVar
+VAR:VCV004982378,VCV004982378,Variant,,VCV004982378,,ClinVar
+VAR:VCV004981980,VCV004981980,Variant,,VCV004981980,,ClinVar
+VAR:VCV004931688,VCV004931688,Variant,,VCV004931688,,ClinVar
+VAR:VCV004931686,VCV004931686,Variant,,VCV004931686,,ClinVar
+VAR:VCV004931681,VCV004931681,Variant,,VCV004931681,,ClinVar
+VAR:VCV004931680,VCV004931680,Variant,,VCV004931680,,ClinVar
+VAR:VCV004931676,VCV004931676,Variant,,VCV004931676,,ClinVar
+VAR:VCV004931675,VCV004931675,Variant,,VCV004931675,,ClinVar
+VAR:VCV004888356,VCV004888356,Variant,,VCV004888356,,ClinVar
+VAR:VCV004888329,VCV004888329,Variant,,VCV004888329,,ClinVar
+VAR:VCV004795486,VCV004795486,Variant,,VCV004795486,,ClinVar
+VAR:VCV004734355,VCV004734355,Variant,,VCV004734355,,ClinVar
+VAR:VCV004731325,VCV004731325,Variant,,VCV004731325,,ClinVar
+VAR:VCV004714552,VCV004714552,Variant,,VCV004714552,,ClinVar
+VAR:VCV004712155,VCV004712155,Variant,,VCV004712155,,ClinVar
+VAR:VCV004686722,VCV004686722,Variant,,VCV004686722,,ClinVar
+VAR:VCV004531623,VCV004531623,Variant,,VCV004531623,,ClinVar
+VAR:VCV004531622,VCV004531622,Variant,,VCV004531622,,ClinVar
+VAR:VCV004294514,VCV004294514,Variant,,VCV004294514,,ClinVar
+VAR:VCV004057218,VCV004057218,Variant,,VCV004057218,,ClinVar
+VAR:VCV003851211,VCV003851211,Variant,,VCV003851211,,ClinVar
+VAR:VCV003641572,VCV003641572,Variant,,VCV003641572,,ClinVar
+VAR:VCV003362874,VCV003362874,Variant,,VCV003362874,,ClinVar
+VAR:VCV003356397,VCV003356397,Variant,,VCV003356397,,ClinVar
+VAR:VCV005007266,VCV005007266,Variant,,VCV005007266,,ClinVar
+VAR:VCV004899513,VCV004899513,Variant,,VCV004899513,,ClinVar
+VAR:VCV004723478,VCV004723478,Variant,,VCV004723478,,ClinVar
+VAR:VCV004294343,VCV004294343,Variant,,VCV004294343,,ClinVar
+VAR:VCV004056434,VCV004056434,Variant,,VCV004056434,,ClinVar
+VAR:VCV004056393,VCV004056393,Variant,,VCV004056393,,ClinVar
+VAR:VCV003780988,VCV003780988,Variant,,VCV003780988,,ClinVar
+VAR:VCV003769594,VCV003769594,Variant,,VCV003769594,,ClinVar
+VAR:VCV003631539,VCV003631539,Variant,,VCV003631539,,ClinVar
+VAR:VCV003245522,VCV003245522,Variant,,VCV003245522,,ClinVar
+VAR:VCV005019542,VCV005019542,Variant,,VCV005019542,,ClinVar
+VAR:VCV005018952,VCV005018952,Variant,,VCV005018952,,ClinVar
+VAR:VCV005005868,VCV005005868,Variant,,VCV005005868,,ClinVar
+VAR:VCV005002378,VCV005002378,Variant,,VCV005002378,,ClinVar
+VAR:VCV004999584,VCV004999584,Variant,,VCV004999584,,ClinVar
+VAR:VCV004938310,VCV004938310,Variant,,VCV004938310,,ClinVar
+VAR:VCV004938309,VCV004938309,Variant,,VCV004938309,,ClinVar
+VAR:VCV004938306,VCV004938306,Variant,,VCV004938306,,ClinVar
+VAR:VCV004938302,VCV004938302,Variant,,VCV004938302,,ClinVar
+VAR:VCV004938300,VCV004938300,Variant,,VCV004938300,,ClinVar
+VAR:VCV004938295,VCV004938295,Variant,,VCV004938295,,ClinVar
+VAR:VCV004938282,VCV004938282,Variant,,VCV004938282,,ClinVar
+VAR:VCV004888430,VCV004888430,Variant,,VCV004888430,,ClinVar
+VAR:VCV004880213,VCV004880213,Variant,,VCV004880213,,ClinVar
+VAR:VCV004875640,VCV004875640,Variant,,VCV004875640,,ClinVar
+VAR:VCV004850731,VCV004850731,Variant,,VCV004850731,,ClinVar
+VAR:VCV004850730,VCV004850730,Variant,,VCV004850730,,ClinVar
+VAR:VCV004820056,VCV004820056,Variant,,VCV004820056,,ClinVar
+VAR:VCV004819649,VCV004819649,Variant,,VCV004819649,,ClinVar
+VAR:VCV004755491,VCV004755491,Variant,,VCV004755491,,ClinVar
+VAR:VCV004731459,VCV004731459,Variant,,VCV004731459,,ClinVar
+VAR:VCV004715633,VCV004715633,Variant,,VCV004715633,,ClinVar
+VAR:VCV004689815,VCV004689815,Variant,,VCV004689815,,ClinVar
+VAR:VCV004526525,VCV004526525,Variant,,VCV004526525,,ClinVar
+VAR:VCV004262180,VCV004262180,Variant,,VCV004262180,,ClinVar
+VAR:VCV004071945,VCV004071945,Variant,,VCV004071945,,ClinVar
+VAR:VCV003905693,VCV003905693,Variant,,VCV003905693,,ClinVar
+VAR:VCV003899338,VCV003899338,Variant,,VCV003899338,,ClinVar
+VAR:VCV003729421,VCV003729421,Variant,,VCV003729421,,ClinVar
+VAR:VCV003647503,VCV003647503,Variant,,VCV003647503,,ClinVar
+VAR:VCV004941674,VCV004941674,Variant,,VCV004941674,,ClinVar
+VAR:VCV004941671,VCV004941671,Variant,,VCV004941671,,ClinVar
+VAR:VCV004941669,VCV004941669,Variant,,VCV004941669,,ClinVar
+VAR:VCV004941667,VCV004941667,Variant,,VCV004941667,,ClinVar
+VAR:VCV004941666,VCV004941666,Variant,,VCV004941666,,ClinVar
+VAR:VCV004941663,VCV004941663,Variant,,VCV004941663,,ClinVar
+VAR:VCV004879499,VCV004879499,Variant,,VCV004879499,,ClinVar
+VAR:VCV004722046,VCV004722046,Variant,,VCV004722046,,ClinVar
+VAR:VCV004531712,VCV004531712,Variant,,VCV004531712,,ClinVar
+VAR:VCV004086170,VCV004086170,Variant,,VCV004086170,,ClinVar
+VAR:VCV004056383,VCV004056383,Variant,,VCV004056383,,ClinVar
+VAR:VCV003776097,VCV003776097,Variant,,VCV003776097,,ClinVar
+VAR:VCV003377285,VCV003377285,Variant,,VCV003377285,,ClinVar
+VAR:VCV003018188,VCV003018188,Variant,,VCV003018188,,ClinVar
+VAR:VCV002687842,VCV002687842,Variant,,VCV002687842,,ClinVar
+VAR:VCV001507891,VCV001507891,Variant,,VCV001507891,,ClinVar
+VAR:VCV001453078,VCV001453078,Variant,,VCV001453078,,ClinVar
+VAR:VCV001324461,VCV001324461,Variant,,VCV001324461,,ClinVar
+VAR:VCV001322994,VCV001322994,Variant,,VCV001322994,,ClinVar
+VAR:VCV001301764,VCV001301764,Variant,,VCV001301764,,ClinVar
+VAR:VCV001074441,VCV001074441,Variant,,VCV001074441,,ClinVar
+VAR:VCV000985628,VCV000985628,Variant,,VCV000985628,,ClinVar
+VAR:VCV000977094,VCV000977094,Variant,,VCV000977094,,ClinVar
+VAR:VCV002423427,VCV002423427,Variant,,VCV002423427,,ClinVar
+VAR:VCV000635933,VCV000635933,Variant,,VCV000635933,,ClinVar
+VAR:VCV000545687,VCV000545687,Variant,,VCV000545687,,ClinVar
+VAR:VCV003777042,VCV003777042,Variant,,VCV003777042,,ClinVar
+VAR:VCV001703230,VCV001703230,Variant,,VCV001703230,,ClinVar
+VAR:VCV005018012,VCV005018012,Variant,,VCV005018012,,ClinVar
+VAR:VCV005009580,VCV005009580,Variant,,VCV005009580,,ClinVar
+VAR:VCV005002240,VCV005002240,Variant,,VCV005002240,,ClinVar
+VAR:VCV005001308,VCV005001308,Variant,,VCV005001308,,ClinVar
+VAR:VCV004999622,VCV004999622,Variant,,VCV004999622,,ClinVar
+VAR:VCV004999583,VCV004999583,Variant,,VCV004999583,,ClinVar
+VAR:VCV004999524,VCV004999524,Variant,,VCV004999524,,ClinVar
+VAR:VCV004997453,VCV004997453,Variant,,VCV004997453,,ClinVar
+VAR:VCV004997112,VCV004997112,Variant,,VCV004997112,,ClinVar
+VAR:VCV004996841,VCV004996841,Variant,,VCV004996841,,ClinVar
+VAR:VCV004995334,VCV004995334,Variant,,VCV004995334,,ClinVar
+VAR:VCV004994675,VCV004994675,Variant,,VCV004994675,,ClinVar
+VAR:VCV004994642,VCV004994642,Variant,,VCV004994642,,ClinVar
+VAR:VCV004994263,VCV004994263,Variant,,VCV004994263,,ClinVar
+VAR:VCV004993659,VCV004993659,Variant,,VCV004993659,,ClinVar
+VAR:VCV004992787,VCV004992787,Variant,,VCV004992787,,ClinVar
+VAR:VCV004992782,VCV004992782,Variant,,VCV004992782,,ClinVar
+VAR:VCV004992766,VCV004992766,Variant,,VCV004992766,,ClinVar
+VAR:VCV004991605,VCV004991605,Variant,,VCV004991605,,ClinVar
+VAR:VCV004991585,VCV004991585,Variant,,VCV004991585,,ClinVar
+VAR:VCV004988708,VCV004988708,Variant,,VCV004988708,,ClinVar
+VAR:VCV004986699,VCV004986699,Variant,,VCV004986699,,ClinVar
+VAR:VCV004944449,VCV004944449,Variant,,VCV004944449,,ClinVar
+VAR:VCV004944446,VCV004944446,Variant,,VCV004944446,,ClinVar
+VAR:VCV004944445,VCV004944445,Variant,,VCV004944445,,ClinVar
+VAR:VCV004944440,VCV004944440,Variant,,VCV004944440,,ClinVar
+VAR:VCV004944439,VCV004944439,Variant,,VCV004944439,,ClinVar
+VAR:VCV004944434,VCV004944434,Variant,,VCV004944434,,ClinVar
+VAR:VCV004944428,VCV004944428,Variant,,VCV004944428,,ClinVar
+VAR:VCV004944427,VCV004944427,Variant,,VCV004944427,,ClinVar
+VAR:VCV004944424,VCV004944424,Variant,,VCV004944424,,ClinVar
+VAR:VCV004944423,VCV004944423,Variant,,VCV004944423,,ClinVar
+VAR:VCV004944418,VCV004944418,Variant,,VCV004944418,,ClinVar
+VAR:VCV004944414,VCV004944414,Variant,,VCV004944414,,ClinVar
+VAR:VCV004944412,VCV004944412,Variant,,VCV004944412,,ClinVar
+VAR:VCV004944409,VCV004944409,Variant,,VCV004944409,,ClinVar
+VAR:VCV004944401,VCV004944401,Variant,,VCV004944401,,ClinVar
+VAR:VCV004944397,VCV004944397,Variant,,VCV004944397,,ClinVar
+VAR:VCV004944395,VCV004944395,Variant,,VCV004944395,,ClinVar
+VAR:VCV004944391,VCV004944391,Variant,,VCV004944391,,ClinVar
+VAR:VCV004944390,VCV004944390,Variant,,VCV004944390,,ClinVar
+VAR:VCV004944384,VCV004944384,Variant,,VCV004944384,,ClinVar
+VAR:VCV004886938,VCV004886938,Variant,,VCV004886938,,ClinVar
+VAR:VCV004886937,VCV004886937,Variant,,VCV004886937,,ClinVar
+VAR:VCV004886936,VCV004886936,Variant,,VCV004886936,,ClinVar
+VAR:VCV004886935,VCV004886935,Variant,,VCV004886935,,ClinVar
+VAR:VCV005018674,VCV005018674,Variant,,VCV005018674,,ClinVar
+VAR:VCV005005112,VCV005005112,Variant,,VCV005005112,,ClinVar
+VAR:VCV004999558,VCV004999558,Variant,,VCV004999558,,ClinVar
+VAR:VCV004998714,VCV004998714,Variant,,VCV004998714,,ClinVar
+VAR:VCV004998592,VCV004998592,Variant,,VCV004998592,,ClinVar
+VAR:VCV004996708,VCV004996708,Variant,,VCV004996708,,ClinVar
+VAR:VCV004993821,VCV004993821,Variant,,VCV004993821,,ClinVar
+VAR:VCV004991689,VCV004991689,Variant,,VCV004991689,,ClinVar
+VAR:VCV004991561,VCV004991561,Variant,,VCV004991561,,ClinVar
+VAR:VCV004991324,VCV004991324,Variant,,VCV004991324,,ClinVar
+VAR:VCV004916706,VCV004916706,Variant,,VCV004916706,,ClinVar
+VAR:VCV004916700,VCV004916700,Variant,,VCV004916700,,ClinVar
+VAR:VCV004916693,VCV004916693,Variant,,VCV004916693,,ClinVar
+VAR:VCV004916675,VCV004916675,Variant,,VCV004916675,,ClinVar
+VAR:VCV004916674,VCV004916674,Variant,,VCV004916674,,ClinVar
+VAR:VCV004916670,VCV004916670,Variant,,VCV004916670,,ClinVar
+VAR:VCV004916669,VCV004916669,Variant,,VCV004916669,,ClinVar
+VAR:VCV004916667,VCV004916667,Variant,,VCV004916667,,ClinVar
+VAR:VCV004916626,VCV004916626,Variant,,VCV004916626,,ClinVar
+VAR:VCV004916621,VCV004916621,Variant,,VCV004916621,,ClinVar
+VAR:VCV004916617,VCV004916617,Variant,,VCV004916617,,ClinVar
+VAR:VCV004916612,VCV004916612,Variant,,VCV004916612,,ClinVar
+VAR:VCV004916607,VCV004916607,Variant,,VCV004916607,,ClinVar
+VAR:VCV004916603,VCV004916603,Variant,,VCV004916603,,ClinVar
+VAR:VCV004916592,VCV004916592,Variant,,VCV004916592,,ClinVar
+VAR:VCV004916591,VCV004916591,Variant,,VCV004916591,,ClinVar
+VAR:VCV004916590,VCV004916590,Variant,,VCV004916590,,ClinVar
+VAR:VCV004916589,VCV004916589,Variant,,VCV004916589,,ClinVar
+VAR:VCV004916587,VCV004916587,Variant,,VCV004916587,,ClinVar
+VAR:VCV004916586,VCV004916586,Variant,,VCV004916586,,ClinVar
+VAR:VCV004916584,VCV004916584,Variant,,VCV004916584,,ClinVar
+VAR:VCV004916583,VCV004916583,Variant,,VCV004916583,,ClinVar
+VAR:VCV004974578,VCV004974578,Variant,,VCV004974578,,ClinVar
+VAR:VCV004974577,VCV004974577,Variant,,VCV004974577,,ClinVar
+VAR:VCV004974569,VCV004974569,Variant,,VCV004974569,,ClinVar
+VAR:VCV004974546,VCV004974546,Variant,,VCV004974546,,ClinVar
+VAR:VCV004915978,VCV004915978,Variant,,VCV004915978,,ClinVar
+VAR:VCV004887018,VCV004887018,Variant,,VCV004887018,,ClinVar
+VAR:VCV004871712,VCV004871712,Variant,,VCV004871712,,ClinVar
+VAR:VCV004850885,VCV004850885,Variant,,VCV004850885,,ClinVar
+VAR:VCV004849575,VCV004849575,Variant,,VCV004849575,,ClinVar
+VAR:VCV004839095,VCV004839095,Variant,,VCV004839095,,ClinVar
+VAR:VCV004698285,VCV004698285,Variant,,VCV004698285,,ClinVar
+VAR:VCV004689816,VCV004689816,Variant,,VCV004689816,,ClinVar
+VAR:VCV004279990,VCV004279990,Variant,,VCV004279990,,ClinVar
+VAR:VCV004279987,VCV004279987,Variant,,VCV004279987,,ClinVar
+VAR:VCV004279981,VCV004279981,Variant,,VCV004279981,,ClinVar
+VAR:VCV004279977,VCV004279977,Variant,,VCV004279977,,ClinVar
+VAR:VCV003775823,VCV003775823,Variant,,VCV003775823,,ClinVar
+VAR:VCV003774511,VCV003774511,Variant,,VCV003774511,,ClinVar
+VAR:VCV003774507,VCV003774507,Variant,,VCV003774507,,ClinVar
+VAR:VCV003238829,VCV003238829,Variant,,VCV003238829,,ClinVar
+VAR:VCV003224559,VCV003224559,Variant,,VCV003224559,,ClinVar
+VAR:VCV002828010,VCV002828010,Variant,,VCV002828010,,ClinVar
+VAR:VCV002752227,VCV002752227,Variant,,VCV002752227,,ClinVar
+VAR:VCV002716407,VCV002716407,Variant,,VCV002716407,,ClinVar
+VAR:VCV002672092,VCV002672092,Variant,,VCV002672092,,ClinVar
+VAR:VCV002671607,VCV002671607,Variant,,VCV002671607,,ClinVar
+VAR:VCV003247986,VCV003247986,Variant,,VCV003247986,,ClinVar
+VAR:VCV004974572,VCV004974572,Variant,,VCV004974572,,ClinVar
+VAR:VCV004925548,VCV004925548,Variant,,VCV004925548,,ClinVar
+VAR:VCV004814140,VCV004814140,Variant,,VCV004814140,,ClinVar
+VAR:VCV004280604,VCV004280604,Variant,,VCV004280604,,ClinVar
+VAR:VCV003897831,VCV003897831,Variant,,VCV003897831,,ClinVar
+VAR:VCV003775508,VCV003775508,Variant,,VCV003775508,,ClinVar
+VAR:VCV003774514,VCV003774514,Variant,,VCV003774514,,ClinVar
+VAR:VCV003774512,VCV003774512,Variant,,VCV003774512,,ClinVar
+VAR:VCV003577599,VCV003577599,Variant,,VCV003577599,,ClinVar
+VAR:VCV003375745,VCV003375745,Variant,,VCV003375745,,ClinVar
+VAR:VCV003355185,VCV003355185,Variant,,VCV003355185,,ClinVar
+VAR:VCV003338747,VCV003338747,Variant,,VCV003338747,,ClinVar
+VAR:VCV003256896,VCV003256896,Variant,,VCV003256896,,ClinVar
+VAR:VCV002686012,VCV002686012,Variant,,VCV002686012,,ClinVar
+VAR:VCV002672096,VCV002672096,Variant,,VCV002672096,,ClinVar
+VAR:VCV002672091,VCV002672091,Variant,,VCV002672091,,ClinVar
+VAR:VCV002572546,VCV002572546,Variant,,VCV002572546,,ClinVar
+VAR:VCV004939999,VCV004939999,Variant,,VCV004939999,,ClinVar
+VAR:VCV004294094,VCV004294094,Variant,,VCV004294094,,ClinVar
+VAR:VCV003364401,VCV003364401,Variant,,VCV003364401,,ClinVar
+VAR:VCV002444198,VCV002444198,Variant,,VCV002444198,,ClinVar
+VAR:VCV001963465,VCV001963465,Variant,,VCV001963465,,ClinVar
+VAR:VCV005016658,VCV005016658,Variant,,VCV005016658,,ClinVar
+VAR:VCV005000687,VCV005000687,Variant,,VCV005000687,,ClinVar
+VAR:VCV004995582,VCV004995582,Variant,,VCV004995582,,ClinVar
+VAR:VCV004994705,VCV004994705,Variant,,VCV004994705,,ClinVar
+VAR:VCV004991147,VCV004991147,Variant,,VCV004991147,,ClinVar
+VAR:VCV004918796,VCV004918796,Variant,,VCV004918796,,ClinVar
+VAR:VCV004918795,VCV004918795,Variant,,VCV004918795,,ClinVar
+VAR:VCV004918794,VCV004918794,Variant,,VCV004918794,,ClinVar
+VAR:VCV004918790,VCV004918790,Variant,,VCV004918790,,ClinVar
+VAR:VCV004918786,VCV004918786,Variant,,VCV004918786,,ClinVar
+VAR:VCV004918785,VCV004918785,Variant,,VCV004918785,,ClinVar
+VAR:VCV004918784,VCV004918784,Variant,,VCV004918784,,ClinVar
+VAR:VCV004918779,VCV004918779,Variant,,VCV004918779,,ClinVar
+VAR:VCV004918770,VCV004918770,Variant,,VCV004918770,,ClinVar
+VAR:VCV004918767,VCV004918767,Variant,,VCV004918767,,ClinVar
+VAR:VCV004918765,VCV004918765,Variant,,VCV004918765,,ClinVar
+VAR:VCV004918763,VCV004918763,Variant,,VCV004918763,,ClinVar
+VAR:VCV004918759,VCV004918759,Variant,,VCV004918759,,ClinVar
+VAR:VCV004918757,VCV004918757,Variant,,VCV004918757,,ClinVar
+VAR:VCV004918754,VCV004918754,Variant,,VCV004918754,,ClinVar
+VAR:VCV004918753,VCV004918753,Variant,,VCV004918753,,ClinVar
+VAR:VCV004918751,VCV004918751,Variant,,VCV004918751,,ClinVar
+VAR:VCV004886543,VCV004886543,Variant,,VCV004886543,,ClinVar
+VAR:VCV004884433,VCV004884433,Variant,,VCV004884433,,ClinVar
+VAR:VCV004880594,VCV004880594,Variant,,VCV004880594,,ClinVar
+VAR:VCV004880586,VCV004880586,Variant,,VCV004880586,,ClinVar
+VAR:VCV004879800,VCV004879800,Variant,,VCV004879800,,ClinVar
+VAR:VCV004875136,VCV004875136,Variant,,VCV004875136,,ClinVar
+VAR:VCV004856400,VCV004856400,Variant,,VCV004856400,,ClinVar
+VAR:VCV004856334,VCV004856334,Variant,,VCV004856334,,ClinVar
+VAR:VCV004855574,VCV004855574,Variant,,VCV004855574,,ClinVar
+VAR:VCV004855444,VCV004855444,Variant,,VCV004855444,,ClinVar
+VAR:VCV004855361,VCV004855361,Variant,,VCV004855361,,ClinVar
+VAR:VCV004850200,VCV004850200,Variant,,VCV004850200,,ClinVar
+VAR:VCV004850199,VCV004850199,Variant,,VCV004850199,,ClinVar
+VAR:VCV004850198,VCV004850198,Variant,,VCV004850198,,ClinVar
+VAR:VCV004850197,VCV004850197,Variant,,VCV004850197,,ClinVar
+VAR:VCV004820124,VCV004820124,Variant,,VCV004820124,,ClinVar
+VAR:VCV005019529,VCV005019529,Variant,,VCV005019529,,ClinVar
+VAR:VCV005003100,VCV005003100,Variant,,VCV005003100,,ClinVar
+VAR:VCV004974530,VCV004974530,Variant,,VCV004974530,,ClinVar
+VAR:VCV004971121,VCV004971121,Variant,,VCV004971121,,ClinVar
+VAR:VCV004971120,VCV004971120,Variant,,VCV004971120,,ClinVar
+VAR:VCV004888137,VCV004888137,Variant,,VCV004888137,,ClinVar
+VAR:VCV004887845,VCV004887845,Variant,,VCV004887845,,ClinVar
+VAR:VCV004884876,VCV004884876,Variant,,VCV004884876,,ClinVar
+VAR:VCV004880772,VCV004880772,Variant,,VCV004880772,,ClinVar
+VAR:VCV004875144,VCV004875144,Variant,,VCV004875144,,ClinVar
+VAR:VCV004855802,VCV004855802,Variant,,VCV004855802,,ClinVar
+VAR:VCV004855075,VCV004855075,Variant,,VCV004855075,,ClinVar
+VAR:VCV004820046,VCV004820046,Variant,,VCV004820046,,ClinVar
+VAR:VCV004813360,VCV004813360,Variant,,VCV004813360,,ClinVar
+VAR:VCV004724676,VCV004724676,Variant,,VCV004724676,,ClinVar
+VAR:VCV004723600,VCV004723600,Variant,,VCV004723600,,ClinVar
+VAR:VCV004717510,VCV004717510,Variant,,VCV004717510,,ClinVar
+VAR:VCV004716434,VCV004716434,Variant,,VCV004716434,,ClinVar
+VAR:VCV004682474,VCV004682474,Variant,,VCV004682474,,ClinVar
+VAR:VCV004624849,VCV004624849,Variant,,VCV004624849,,ClinVar
+VAR:VCV004532004,VCV004532004,Variant,,VCV004532004,,ClinVar
+VAR:VCV004532003,VCV004532003,Variant,,VCV004532003,,ClinVar
+VAR:VCV004525979,VCV004525979,Variant,,VCV004525979,,ClinVar
+VAR:VCV004294478,VCV004294478,Variant,,VCV004294478,,ClinVar
+VAR:VCV004291874,VCV004291874,Variant,,VCV004291874,,ClinVar
+VAR:VCV004291113,VCV004291113,Variant,,VCV004291113,,ClinVar
+VAR:VCV004081510,VCV004081510,Variant,,VCV004081510,,ClinVar
+VAR:VCV003906066,VCV003906066,Variant,,VCV003906066,,ClinVar
+VAR:VCV003775230,VCV003775230,Variant,,VCV003775230,,ClinVar
+VAR:VCV003704386,VCV003704386,Variant,,VCV003704386,,ClinVar
+VAR:VCV003544368,VCV003544368,Variant,,VCV003544368,,ClinVar
+VAR:VCV004849972,VCV004849972,Variant,,VCV004849972,,ClinVar
+VAR:VCV004292327,VCV004292327,Variant,,VCV004292327,,ClinVar
+VAR:VCV005000619,VCV005000619,Variant,,VCV005000619,,ClinVar
+VAR:VCV004921264,VCV004921264,Variant,,VCV004921264,,ClinVar
+VAR:VCV004921262,VCV004921262,Variant,,VCV004921262,,ClinVar
+VAR:VCV004921253,VCV004921253,Variant,,VCV004921253,,ClinVar
+VAR:VCV004921232,VCV004921232,Variant,,VCV004921232,,ClinVar
+VAR:VCV004921212,VCV004921212,Variant,,VCV004921212,,ClinVar
+VAR:VCV004921208,VCV004921208,Variant,,VCV004921208,,ClinVar
+VAR:VCV004921207,VCV004921207,Variant,,VCV004921207,,ClinVar
+VAR:VCV004921181,VCV004921181,Variant,,VCV004921181,,ClinVar
+VAR:VCV004890919,VCV004890919,Variant,,VCV004890919,,ClinVar
+VAR:VCV004884318,VCV004884318,Variant,,VCV004884318,,ClinVar
+VAR:VCV004880009,VCV004880009,Variant,,VCV004880009,,ClinVar
+VAR:VCV004871906,VCV004871906,Variant,,VCV004871906,,ClinVar
+VAR:VCV004856610,VCV004856610,Variant,,VCV004856610,,ClinVar
+VAR:VCV004856609,VCV004856609,Variant,,VCV004856609,,ClinVar
+VAR:VCV004855031,VCV004855031,Variant,,VCV004855031,,ClinVar
+VAR:VCV004851456,VCV004851456,Variant,,VCV004851456,,ClinVar
+VAR:VCV004820541,VCV004820541,Variant,,VCV004820541,,ClinVar
+VAR:VCV004820424,VCV004820424,Variant,,VCV004820424,,ClinVar
+VAR:VCV004801949,VCV004801949,Variant,,VCV004801949,,ClinVar
+VAR:VCV004801938,VCV004801938,Variant,,VCV004801938,,ClinVar
+VAR:VCV004801928,VCV004801928,Variant,,VCV004801928,,ClinVar
+VAR:VCV004723042,VCV004723042,Variant,,VCV004723042,,ClinVar
+VAR:VCV004695096,VCV004695096,Variant,,VCV004695096,,ClinVar
+VAR:VCV004687963,VCV004687963,Variant,,VCV004687963,,ClinVar
+VAR:VCV004687902,VCV004687902,Variant,,VCV004687902,,ClinVar
+VAR:VCV004687888,VCV004687888,Variant,,VCV004687888,,ClinVar
+VAR:VCV005018655,VCV005018655,Variant,,VCV005018655,,ClinVar
+VAR:VCV004973074,VCV004973074,Variant,,VCV004973074,,ClinVar
+VAR:VCV004973072,VCV004973072,Variant,,VCV004973072,,ClinVar
+VAR:VCV004879819,VCV004879819,Variant,,VCV004879819,,ClinVar
+VAR:VCV004857344,VCV004857344,Variant,,VCV004857344,,ClinVar
+VAR:VCV004843218,VCV004843218,Variant,,VCV004843218,,ClinVar
+VAR:VCV004820527,VCV004820527,Variant,,VCV004820527,,ClinVar
+VAR:VCV004810647,VCV004810647,Variant,,VCV004810647,,ClinVar
+VAR:VCV004764826,VCV004764826,Variant,,VCV004764826,,ClinVar
+VAR:VCV004750097,VCV004750097,Variant,,VCV004750097,,ClinVar
+VAR:VCV004747478,VCV004747478,Variant,,VCV004747478,,ClinVar
+VAR:VCV004747477,VCV004747477,Variant,,VCV004747477,,ClinVar
+VAR:VCV004720251,VCV004720251,Variant,,VCV004720251,,ClinVar
+VAR:VCV004718199,VCV004718199,Variant,,VCV004718199,,ClinVar
+VAR:VCV004716175,VCV004716175,Variant,,VCV004716175,,ClinVar
+VAR:VCV004710044,VCV004710044,Variant,,VCV004710044,,ClinVar
+VAR:VCV004701716,VCV004701716,Variant,,VCV004701716,,ClinVar
+VAR:VCV004614706,VCV004614706,Variant,,VCV004614706,,ClinVar
+VAR:VCV004614700,VCV004614700,Variant,,VCV004614700,,ClinVar
+VAR:VCV004532779,VCV004532779,Variant,,VCV004532779,,ClinVar
+VAR:VCV004531982,VCV004531982,Variant,,VCV004531982,,ClinVar
+VAR:VCV004531981,VCV004531981,Variant,,VCV004531981,,ClinVar
+VAR:VCV004277239,VCV004277239,Variant,,VCV004277239,,ClinVar
+VAR:VCV004076992,VCV004076992,Variant,,VCV004076992,,ClinVar
+VAR:VCV003920040,VCV003920040,Variant,,VCV003920040,,ClinVar
+VAR:VCV003897184,VCV003897184,Variant,,VCV003897184,,ClinVar
+VAR:VCV003895001,VCV003895001,Variant,,VCV003895001,,ClinVar
+VAR:VCV003778580,VCV003778580,Variant,,VCV003778580,,ClinVar
+VAR:VCV003726805,VCV003726805,Variant,,VCV003726805,,ClinVar
+VAR:VCV003726709,VCV003726709,Variant,,VCV003726709,,ClinVar
+VAR:VCV003726119,VCV003726119,Variant,,VCV003726119,,ClinVar
+VAR:VCV003721197,VCV003721197,Variant,,VCV003721197,,ClinVar
+VAR:VCV003720662,VCV003720662,Variant,,VCV003720662,,ClinVar
+VAR:VCV003658646,VCV003658646,Variant,,VCV003658646,,ClinVar
+VAR:VCV003649888,VCV003649888,Variant,,VCV003649888,,ClinVar
+VAR:VCV003649884,VCV003649884,Variant,,VCV003649884,,ClinVar
+VAR:VCV003377993,VCV003377993,Variant,,VCV003377993,,ClinVar
+VAR:VCV002671608,VCV002671608,Variant,,VCV002671608,,ClinVar
+VAR:VCV002432235,VCV002432235,Variant,,VCV002432235,,ClinVar
+VAR:VCV001711134,VCV001711134,Variant,,VCV001711134,,ClinVar
+VAR:VCV001703665,VCV001703665,Variant,,VCV001703665,,ClinVar
+VAR:VCV001172828,VCV001172828,Variant,,VCV001172828,,ClinVar
+VAR:VCV000626288,VCV000626288,Variant,,VCV000626288,,ClinVar
+VAR:VCV004293741,VCV004293741,Variant,,VCV004293741,,ClinVar
+VAR:VCV003366958,VCV003366958,Variant,,VCV003366958,,ClinVar
+VAR:VCV003340587,VCV003340587,Variant,,VCV003340587,,ClinVar
+VAR:VCV003338700,VCV003338700,Variant,,VCV003338700,,ClinVar
+VAR:VCV003255023,VCV003255023,Variant,,VCV003255023,,ClinVar
+VAR:VCV002584455,VCV002584455,Variant,,VCV002584455,,ClinVar
+VAR:VCV001805542,VCV001805542,Variant,,VCV001805542,,ClinVar
+VAR:VCV001460012,VCV001460012,Variant,,VCV001460012,,ClinVar
+VAR:VCV001069992,VCV001069992,Variant,,VCV001069992,,ClinVar
+VAR:VCV000986360,VCV000986360,Variant,,VCV000986360,,ClinVar
+VAR:VCV000663619,VCV000663619,Variant,,VCV000663619,,ClinVar
+VAR:VCV000571254,VCV000571254,Variant,,VCV000571254,,ClinVar
+VAR:VCV000545545,VCV000545545,Variant,,VCV000545545,,ClinVar
+VAR:VCV000545544,VCV000545544,Variant,,VCV000545544,,ClinVar
+VAR:VCV000545543,VCV000545543,Variant,,VCV000545543,,ClinVar
+VAR:VCV000423103,VCV000423103,Variant,,VCV000423103,,ClinVar
+VAR:VCV000241245,VCV000241245,Variant,,VCV000241245,,ClinVar
+VAR:VCV005019781,VCV005019781,Variant,,VCV005019781,,ClinVar
+VAR:VCV005018764,VCV005018764,Variant,,VCV005018764,,ClinVar
+VAR:VCV005018635,VCV005018635,Variant,,VCV005018635,,ClinVar
+VAR:VCV005001862,VCV005001862,Variant,,VCV005001862,,ClinVar
+VAR:VCV005000637,VCV005000637,Variant,,VCV005000637,,ClinVar
+VAR:VCV004999736,VCV004999736,Variant,,VCV004999736,,ClinVar
+VAR:VCV004995165,VCV004995165,Variant,,VCV004995165,,ClinVar
+VAR:VCV004993818,VCV004993818,Variant,,VCV004993818,,ClinVar
+VAR:VCV004991713,VCV004991713,Variant,,VCV004991713,,ClinVar
+VAR:VCV004905808,VCV004905808,Variant,,VCV004905808,,ClinVar
+VAR:VCV004905805,VCV004905805,Variant,,VCV004905805,,ClinVar
+VAR:VCV004905783,VCV004905783,Variant,,VCV004905783,,ClinVar
+VAR:VCV004905761,VCV004905761,Variant,,VCV004905761,,ClinVar
+VAR:VCV004905750,VCV004905750,Variant,,VCV004905750,,ClinVar
+VAR:VCV004905748,VCV004905748,Variant,,VCV004905748,,ClinVar
+VAR:VCV004905737,VCV004905737,Variant,,VCV004905737,,ClinVar
+VAR:VCV004905734,VCV004905734,Variant,,VCV004905734,,ClinVar
+VAR:VCV004888421,VCV004888421,Variant,,VCV004888421,,ClinVar
+VAR:VCV004888374,VCV004888374,Variant,,VCV004888374,,ClinVar
+VAR:VCV004888346,VCV004888346,Variant,,VCV004888346,,ClinVar
+VAR:VCV004888332,VCV004888332,Variant,,VCV004888332,,ClinVar
+VAR:VCV004888021,VCV004888021,Variant,,VCV004888021,,ClinVar
+VAR:VCV004851772,VCV004851772,Variant,,VCV004851772,,ClinVar
+VAR:VCV004851610,VCV004851610,Variant,,VCV004851610,,ClinVar
+VAR:VCV004850109,VCV004850109,Variant,,VCV004850109,,ClinVar
+VAR:VCV004843307,VCV004843307,Variant,,VCV004843307,,ClinVar
+VAR:VCV004828353,VCV004828353,Variant,,VCV004828353,,ClinVar
+VAR:VCV004819623,VCV004819623,Variant,,VCV004819623,,ClinVar
+VAR:VCV004814198,VCV004814198,Variant,,VCV004814198,,ClinVar
+VAR:VCV004813712,VCV004813712,Variant,,VCV004813712,,ClinVar
+VAR:VCV004813440,VCV004813440,Variant,,VCV004813440,,ClinVar
+VAR:VCV004804797,VCV004804797,Variant,,VCV004804797,,ClinVar
+VAR:VCV004751222,VCV004751222,Variant,,VCV004751222,,ClinVar
+VAR:VCV004729490,VCV004729490,Variant,,VCV004729490,,ClinVar
+VAR:VCV004727660,VCV004727660,Variant,,VCV004727660,,ClinVar
+VAR:VCV004720798,VCV004720798,Variant,,VCV004720798,,ClinVar
+VAR:VCV004719090,VCV004719090,Variant,,VCV004719090,,ClinVar
+VAR:VCV004852511,VCV004852511,Variant,,VCV004852511,,ClinVar
+VAR:VCV004799925,VCV004799925,Variant,,VCV004799925,,ClinVar
+VAR:VCV003029607,VCV003029607,Variant,,VCV003029607,,ClinVar
+VAR:VCV002672090,VCV002672090,Variant,,VCV002672090,,ClinVar
+VAR:VCV002425617,VCV002425617,Variant,,VCV002425617,,ClinVar
+VAR:VCV001335888,VCV001335888,Variant,,VCV001335888,,ClinVar
+VAR:VCV001320232,VCV001320232,Variant,,VCV001320232,,ClinVar
+VAR:VCV001070042,VCV001070042,Variant,,VCV001070042,,ClinVar
+VAR:VCV000981556,VCV000981556,Variant,,VCV000981556,,ClinVar
+VAR:VCV000812886,VCV000812886,Variant,,VCV000812886,,ClinVar
+VAR:VCV000561786,VCV000561786,Variant,,VCV000561786,,ClinVar
+VAR:VCV005007629,VCV005007629,Variant,,VCV005007629,,ClinVar
+VAR:VCV004918677,VCV004918677,Variant,,VCV004918677,,ClinVar
+VAR:VCV004918675,VCV004918675,Variant,,VCV004918675,,ClinVar
+VAR:VCV004918672,VCV004918672,Variant,,VCV004918672,,ClinVar
+VAR:VCV004918668,VCV004918668,Variant,,VCV004918668,,ClinVar
+VAR:VCV004918655,VCV004918655,Variant,,VCV004918655,,ClinVar
+VAR:VCV004855276,VCV004855276,Variant,,VCV004855276,,ClinVar
+VAR:VCV004849715,VCV004849715,Variant,,VCV004849715,,ClinVar
+VAR:VCV004755435,VCV004755435,Variant,,VCV004755435,,ClinVar
+VAR:VCV004730403,VCV004730403,Variant,,VCV004730403,,ClinVar
+VAR:VCV004729721,VCV004729721,Variant,,VCV004729721,,ClinVar
+VAR:VCV004724301,VCV004724301,Variant,,VCV004724301,,ClinVar
+VAR:VCV004693888,VCV004693888,Variant,,VCV004693888,,ClinVar
+VAR:VCV004530411,VCV004530411,Variant,,VCV004530411,,ClinVar
+VAR:VCV004530410,VCV004530410,Variant,,VCV004530410,,ClinVar
+VAR:VCV004280642,VCV004280642,Variant,,VCV004280642,,ClinVar
+VAR:VCV004278637,VCV004278637,Variant,,VCV004278637,,ClinVar
+VAR:VCV003780504,VCV003780504,Variant,,VCV003780504,,ClinVar
+VAR:VCV003717035,VCV003717035,Variant,,VCV003717035,,ClinVar
+VAR:VCV003652837,VCV003652837,Variant,,VCV003652837,,ClinVar
+VAR:VCV003646790,VCV003646790,Variant,,VCV003646790,,ClinVar
+VAR:VCV003574257,VCV003574257,Variant,,VCV003574257,,ClinVar
+VAR:VCV003573673,VCV003573673,Variant,,VCV003573673,,ClinVar
+VAR:VCV003376136,VCV003376136,Variant,,VCV003376136,,ClinVar
+VAR:VCV003342591,VCV003342591,Variant,,VCV003342591,,ClinVar
+VAR:VCV004961382,VCV004961382,Variant,,VCV004961382,,ClinVar
+VAR:VCV004855647,VCV004855647,Variant,,VCV004855647,,ClinVar
+VAR:VCV004801590,VCV004801590,Variant,,VCV004801590,,ClinVar
+VAR:VCV004689833,VCV004689833,Variant,,VCV004689833,,ClinVar
+VAR:VCV004539998,VCV004539998,Variant,,VCV004539998,,ClinVar
+VAR:VCV004082712,VCV004082712,Variant,,VCV004082712,,ClinVar
+VAR:VCV004070605,VCV004070605,Variant,,VCV004070605,,ClinVar
+VAR:VCV003730878,VCV003730878,Variant,,VCV003730878,,ClinVar
+VAR:VCV003429947,VCV003429947,Variant,,VCV003429947,,ClinVar
+VAR:VCV003338001,VCV003338001,Variant,,VCV003338001,,ClinVar
+VAR:VCV002883997,VCV002883997,Variant,,VCV002883997,,ClinVar
+VAR:VCV004992047,VCV004992047,Variant,,VCV004992047,,ClinVar
+VAR:VCV004991424,VCV004991424,Variant,,VCV004991424,,ClinVar
+VAR:VCV004945383,VCV004945383,Variant,,VCV004945383,,ClinVar
+VAR:VCV004945374,VCV004945374,Variant,,VCV004945374,,ClinVar
+VAR:VCV004945371,VCV004945371,Variant,,VCV004945371,,ClinVar
+VAR:VCV004851584,VCV004851584,Variant,,VCV004851584,,ClinVar
+VAR:VCV004820340,VCV004820340,Variant,,VCV004820340,,ClinVar
+VAR:VCV004856994,VCV004856994,Variant,,VCV004856994,,ClinVar
+VAR:VCV004975733,VCV004975733,Variant,,VCV004975733,,ClinVar
+VAR:VCV002850800,VCV002850800,Variant,,VCV002850800,,ClinVar
+VAR:VCV001339463,VCV001339463,Variant,,VCV001339463,,ClinVar
+VAR:VCV001339314,VCV001339314,Variant,,VCV001339314,,ClinVar
+VAR:VCV004974785,VCV004974785,Variant,,VCV004974785,,ClinVar
+VAR:VCV004925613,VCV004925613,Variant,,VCV004925613,,ClinVar
+VAR:VCV004925606,VCV004925606,Variant,,VCV004925606,,ClinVar
+VAR:VCV004925602,VCV004925602,Variant,,VCV004925602,,ClinVar
+VAR:VCV004925601,VCV004925601,Variant,,VCV004925601,,ClinVar
+VAR:VCV004925600,VCV004925600,Variant,,VCV004925600,,ClinVar
+VAR:VCV004925598,VCV004925598,Variant,,VCV004925598,,ClinVar
+VAR:VCV004890891,VCV004890891,Variant,,VCV004890891,,ClinVar
+VAR:VCV004875456,VCV004875456,Variant,,VCV004875456,,ClinVar
+VAR:VCV004864684,VCV004864684,Variant,,VCV004864684,,ClinVar
+VAR:VCV004850519,VCV004850519,Variant,,VCV004850519,,ClinVar
+VAR:VCV004820446,VCV004820446,Variant,,VCV004820446,,ClinVar
+VAR:VCV004813328,VCV004813328,Variant,,VCV004813328,,ClinVar
+VAR:VCV004764281,VCV004764281,Variant,,VCV004764281,,ClinVar
+VAR:VCV004757853,VCV004757853,Variant,,VCV004757853,,ClinVar
+VAR:VCV004751057,VCV004751057,Variant,,VCV004751057,,ClinVar
+VAR:VCV004734189,VCV004734189,Variant,,VCV004734189,,ClinVar
+VAR:VCV004730580,VCV004730580,Variant,,VCV004730580,,ClinVar
+VAR:VCV004727229,VCV004727229,Variant,,VCV004727229,,ClinVar
+VAR:VCV004715640,VCV004715640,Variant,,VCV004715640,,ClinVar
+VAR:VCV004714754,VCV004714754,Variant,,VCV004714754,,ClinVar
+VAR:VCV004684974,VCV004684974,Variant,,VCV004684974,,ClinVar
+VAR:VCV004635569,VCV004635569,Variant,,VCV004635569,,ClinVar
+VAR:VCV004635566,VCV004635566,Variant,,VCV004635566,,ClinVar
+VAR:VCV004537841,VCV004537841,Variant,,VCV004537841,,ClinVar
+VAR:VCV004531511,VCV004531511,Variant,,VCV004531511,,ClinVar
+VAR:VCV005016797,VCV005016797,Variant,,VCV005016797,,ClinVar
+VAR:VCV004954708,VCV004954708,Variant,,VCV004954708,,ClinVar
+VAR:VCV004854832,VCV004854832,Variant,,VCV004854832,,ClinVar
+VAR:VCV004747109,VCV004747109,Variant,,VCV004747109,,ClinVar
+VAR:VCV004528113,VCV004528113,Variant,,VCV004528113,,ClinVar
+VAR:VCV003777446,VCV003777446,Variant,,VCV003777446,,ClinVar
+VAR:VCV003775366,VCV003775366,Variant,,VCV003775366,,ClinVar
+VAR:VCV003774493,VCV003774493,Variant,,VCV003774493,,ClinVar
+VAR:VCV003720319,VCV003720319,Variant,,VCV003720319,,ClinVar
+VAR:VCV003720318,VCV003720318,Variant,,VCV003720318,,ClinVar
+VAR:VCV003667536,VCV003667536,Variant,,VCV003667536,,ClinVar
+VAR:VCV005021145,VCV005021145,Variant,,VCV005021145,,ClinVar
+VAR:VCV004989891,VCV004989891,Variant,,VCV004989891,,ClinVar
+VAR:VCV004974535,VCV004974535,Variant,,VCV004974535,,ClinVar
+VAR:VCV004946946,VCV004946946,Variant,,VCV004946946,,ClinVar
+VAR:VCV004891297,VCV004891297,Variant,,VCV004891297,,ClinVar
+VAR:VCV004884875,VCV004884875,Variant,,VCV004884875,,ClinVar
+VAR:VCV004884227,VCV004884227,Variant,,VCV004884227,,ClinVar
+VAR:VCV004880664,VCV004880664,Variant,,VCV004880664,,ClinVar
+VAR:VCV004876794,VCV004876794,Variant,,VCV004876794,,ClinVar
+VAR:VCV004853559,VCV004853559,Variant,,VCV004853559,,ClinVar
+VAR:VCV004823621,VCV004823621,Variant,,VCV004823621,,ClinVar
+VAR:VCV004820242,VCV004820242,Variant,,VCV004820242,,ClinVar
+VAR:VCV004820131,VCV004820131,Variant,,VCV004820131,,ClinVar
+VAR:VCV004820059,VCV004820059,Variant,,VCV004820059,,ClinVar
+VAR:VCV004820057,VCV004820057,Variant,,VCV004820057,,ClinVar
+VAR:VCV004730814,VCV004730814,Variant,,VCV004730814,,ClinVar
+VAR:VCV004729263,VCV004729263,Variant,,VCV004729263,,ClinVar
+VAR:VCV004728536,VCV004728536,Variant,,VCV004728536,,ClinVar
+VAR:VCV004718072,VCV004718072,Variant,,VCV004718072,,ClinVar
+VAR:VCV004686752,VCV004686752,Variant,,VCV004686752,,ClinVar
+VAR:VCV004895709,VCV004895709,Variant,,VCV004895709,,ClinVar
+VAR:VCV004895708,VCV004895708,Variant,,VCV004895708,,ClinVar
+VAR:VCV004895707,VCV004895707,Variant,,VCV004895707,,ClinVar
+VAR:VCV004895706,VCV004895706,Variant,,VCV004895706,,ClinVar
+VAR:VCV004895702,VCV004895702,Variant,,VCV004895702,,ClinVar
+VAR:VCV004895694,VCV004895694,Variant,,VCV004895694,,ClinVar
+VAR:VCV004842670,VCV004842670,Variant,,VCV004842670,,ClinVar
+VAR:VCV004731675,VCV004731675,Variant,,VCV004731675,,ClinVar
+VAR:VCV004730283,VCV004730283,Variant,,VCV004730283,,ClinVar
+VAR:VCV004723810,VCV004723810,Variant,,VCV004723810,,ClinVar
+VAR:VCV004722730,VCV004722730,Variant,,VCV004722730,,ClinVar
+VAR:VCV004716398,VCV004716398,Variant,,VCV004716398,,ClinVar
+VAR:VCV004706268,VCV004706268,Variant,,VCV004706268,,ClinVar
+VAR:VCV004688018,VCV004688018,Variant,,VCV004688018,,ClinVar
+VAR:VCV004532066,VCV004532066,Variant,,VCV004532066,,ClinVar
+VAR:VCV004181268,VCV004181268,Variant,,VCV004181268,,ClinVar
+VAR:VCV004056450,VCV004056450,Variant,,VCV004056450,,ClinVar
+VAR:VCV003727062,VCV003727062,Variant,,VCV003727062,,ClinVar
+VAR:VCV003651568,VCV003651568,Variant,,VCV003651568,,ClinVar
+VAR:VCV003644712,VCV003644712,Variant,,VCV003644712,,ClinVar
+VAR:VCV003062296,VCV003062296,Variant,,VCV003062296,,ClinVar
+VAR:VCV002848378,VCV002848378,Variant,,VCV002848378,,ClinVar
+VAR:VCV002839135,VCV002839135,Variant,,VCV002839135,,ClinVar
+VAR:VCV002834950,VCV002834950,Variant,,VCV002834950,,ClinVar
+VAR:VCV005019706,VCV005019706,Variant,,VCV005019706,,ClinVar
+VAR:VCV005018608,VCV005018608,Variant,,VCV005018608,,ClinVar
+VAR:VCV004993282,VCV004993282,Variant,,VCV004993282,,ClinVar
+VAR:VCV004991497,VCV004991497,Variant,,VCV004991497,,ClinVar
+VAR:VCV004991233,VCV004991233,Variant,,VCV004991233,,ClinVar
+VAR:VCV004918735,VCV004918735,Variant,,VCV004918735,,ClinVar
+VAR:VCV004918733,VCV004918733,Variant,,VCV004918733,,ClinVar
+VAR:VCV004918730,VCV004918730,Variant,,VCV004918730,,ClinVar
+VAR:VCV004918729,VCV004918729,Variant,,VCV004918729,,ClinVar
+VAR:VCV004918728,VCV004918728,Variant,,VCV004918728,,ClinVar
+VAR:VCV004918720,VCV004918720,Variant,,VCV004918720,,ClinVar
+VAR:VCV004918712,VCV004918712,Variant,,VCV004918712,,ClinVar
+VAR:VCV004918710,VCV004918710,Variant,,VCV004918710,,ClinVar
+VAR:VCV004918708,VCV004918708,Variant,,VCV004918708,,ClinVar
+VAR:VCV004918707,VCV004918707,Variant,,VCV004918707,,ClinVar
+VAR:VCV004918706,VCV004918706,Variant,,VCV004918706,,ClinVar
+VAR:VCV004887833,VCV004887833,Variant,,VCV004887833,,ClinVar
+VAR:VCV004880291,VCV004880291,Variant,,VCV004880291,,ClinVar
+VAR:VCV004819998,VCV004819998,Variant,,VCV004819998,,ClinVar
+VAR:VCV004772742,VCV004772742,Variant,,VCV004772742,,ClinVar
+VAR:VCV004759244,VCV004759244,Variant,,VCV004759244,,ClinVar
+VAR:VCV004733844,VCV004733844,Variant,,VCV004733844,,ClinVar
+VAR:VCV004732634,VCV004732634,Variant,,VCV004732634,,ClinVar
+VAR:VCV004725807,VCV004725807,Variant,,VCV004725807,,ClinVar
+VAR:VCV004718279,VCV004718279,Variant,,VCV004718279,,ClinVar
+VAR:VCV004717616,VCV004717616,Variant,,VCV004717616,,ClinVar
+VAR:VCV004716000,VCV004716000,Variant,,VCV004716000,,ClinVar
+VAR:VCV004710042,VCV004710042,Variant,,VCV004710042,,ClinVar
+VAR:VCV004292497,VCV004292497,Variant,,VCV004292497,,ClinVar
+VAR:VCV003906453,VCV003906453,Variant,,VCV003906453,,ClinVar
+VAR:VCV003906402,VCV003906402,Variant,,VCV003906402,,ClinVar
+VAR:VCV003804930,VCV003804930,Variant,,VCV003804930,,ClinVar
+VAR:VCV003727096,VCV003727096,Variant,,VCV003727096,,ClinVar
+VAR:VCV003725081,VCV003725081,Variant,,VCV003725081,,ClinVar
+VAR:VCV003662190,VCV003662190,Variant,,VCV003662190,,ClinVar
+VAR:VCV003383759,VCV003383759,Variant,,VCV003383759,,ClinVar
+VAR:VCV003382136,VCV003382136,Variant,,VCV003382136,,ClinVar
+VAR:VCV003344402,VCV003344402,Variant,,VCV003344402,,ClinVar
+VAR:VCV003254820,VCV003254820,Variant,,VCV003254820,,ClinVar
+VAR:VCV005007073,VCV005007073,Variant,,VCV005007073,,ClinVar
+VAR:VCV004892244,VCV004892244,Variant,,VCV004892244,,ClinVar
+VAR:VCV004884908,VCV004884908,Variant,,VCV004884908,,ClinVar
+VAR:VCV004865629,VCV004865629,Variant,,VCV004865629,,ClinVar
+VAR:VCV004532031,VCV004532031,Variant,,VCV004532031,,ClinVar
+VAR:VCV003910791,VCV003910791,Variant,,VCV003910791,,ClinVar
+VAR:VCV003390549,VCV003390549,Variant,,VCV003390549,,ClinVar
+VAR:VCV003325591,VCV003325591,Variant,,VCV003325591,,ClinVar
+VAR:VCV003253401,VCV003253401,Variant,,VCV003253401,,ClinVar
+VAR:VCV003065996,VCV003065996,Variant,,VCV003065996,,ClinVar
+VAR:VCV003003446,VCV003003446,Variant,,VCV003003446,,ClinVar
+VAR:VCV002627564,VCV002627564,Variant,,VCV002627564,,ClinVar
+VAR:VCV002576106,VCV002576106,Variant,,VCV002576106,,ClinVar
+VAR:VCV002284052,VCV002284052,Variant,,VCV002284052,,ClinVar
+VAR:VCV001683496,VCV001683496,Variant,,VCV001683496,,ClinVar
+VAR:VCV001455701,VCV001455701,Variant,,VCV001455701,,ClinVar
+VAR:VCV001344685,VCV001344685,Variant,,VCV001344685,,ClinVar
+VAR:VCV001344684,VCV001344684,Variant,,VCV001344684,,ClinVar
+VAR:VCV001344683,VCV001344683,Variant,,VCV001344683,,ClinVar
+VAR:VCV001344682,VCV001344682,Variant,,VCV001344682,,ClinVar
+VAR:VCV001326927,VCV001326927,Variant,,VCV001326927,,ClinVar
+VAR:VCV001176512,VCV001176512,Variant,,VCV001176512,,ClinVar
+VAR:VCV004991079,VCV004991079,Variant,,VCV004991079,,ClinVar
+VAR:VCV004903906,VCV004903906,Variant,,VCV004903906,,ClinVar
+VAR:VCV004903900,VCV004903900,Variant,,VCV004903900,,ClinVar
+VAR:VCV004903891,VCV004903891,Variant,,VCV004903891,,ClinVar
+VAR:VCV004903890,VCV004903890,Variant,,VCV004903890,,ClinVar
+VAR:VCV004851288,VCV004851288,Variant,,VCV004851288,,ClinVar
+VAR:VCV004734089,VCV004734089,Variant,,VCV004734089,,ClinVar
+VAR:VCV004733963,VCV004733963,Variant,,VCV004733963,,ClinVar
+VAR:VCV004717644,VCV004717644,Variant,,VCV004717644,,ClinVar
+VAR:VCV004715138,VCV004715138,Variant,,VCV004715138,,ClinVar
+VAR:VCV004713391,VCV004713391,Variant,,VCV004713391,,ClinVar
+VAR:VCV004682102,VCV004682102,Variant,,VCV004682102,,ClinVar
+VAR:VCV004682101,VCV004682101,Variant,,VCV004682101,,ClinVar
+VAR:VCV004539653,VCV004539653,Variant,,VCV004539653,,ClinVar
+VAR:VCV004530633,VCV004530633,Variant,,VCV004530633,,ClinVar
+VAR:VCV004349952,VCV004349952,Variant,,VCV004349952,,ClinVar
+VAR:VCV004070864,VCV004070864,Variant,,VCV004070864,,ClinVar
+VAR:VCV003901184,VCV003901184,Variant,,VCV003901184,,ClinVar
+VAR:VCV003899364,VCV003899364,Variant,,VCV003899364,,ClinVar
+VAR:VCV003898744,VCV003898744,Variant,,VCV003898744,,ClinVar
+VAR:VCV003806422,VCV003806422,Variant,,VCV003806422,,ClinVar
+VAR:VCV003806419,VCV003806419,Variant,,VCV003806419,,ClinVar
+VAR:VCV003773662,VCV003773662,Variant,,VCV003773662,,ClinVar
+VAR:VCV003767277,VCV003767277,Variant,,VCV003767277,,ClinVar
+VAR:VCV003721355,VCV003721355,Variant,,VCV003721355,,ClinVar
+VAR:VCV004961598,VCV004961598,Variant,,VCV004961598,,ClinVar
+VAR:VCV004961589,VCV004961589,Variant,,VCV004961589,,ClinVar
+VAR:VCV004852018,VCV004852018,Variant,,VCV004852018,,ClinVar
+VAR:VCV004820014,VCV004820014,Variant,,VCV004820014,,ClinVar
+VAR:VCV004801616,VCV004801616,Variant,,VCV004801616,,ClinVar
+VAR:VCV004801611,VCV004801611,Variant,,VCV004801611,,ClinVar
+VAR:VCV004747212,VCV004747212,Variant,,VCV004747212,,ClinVar
+VAR:VCV004292063,VCV004292063,Variant,,VCV004292063,,ClinVar
+VAR:VCV003911895,VCV003911895,Variant,,VCV003911895,,ClinVar
+VAR:VCV003895208,VCV003895208,Variant,,VCV003895208,,ClinVar
+VAR:VCV003673603,VCV003673603,Variant,,VCV003673603,,ClinVar
+VAR:VCV003635621,VCV003635621,Variant,,VCV003635621,,ClinVar
+VAR:VCV003635619,VCV003635619,Variant,,VCV003635619,,ClinVar
+VAR:VCV003635618,VCV003635618,Variant,,VCV003635618,,ClinVar
+VAR:VCV003572854,VCV003572854,Variant,,VCV003572854,,ClinVar
+VAR:VCV003391252,VCV003391252,Variant,,VCV003391252,,ClinVar
+VAR:VCV004996707,VCV004996707,Variant,,VCV004996707,,ClinVar
+VAR:VCV004995614,VCV004995614,Variant,,VCV004995614,,ClinVar
+VAR:VCV004991117,VCV004991117,Variant,,VCV004991117,,ClinVar
+VAR:VCV004953079,VCV004953079,Variant,,VCV004953079,,ClinVar
+VAR:VCV004953077,VCV004953077,Variant,,VCV004953077,,ClinVar
+VAR:VCV004953076,VCV004953076,Variant,,VCV004953076,,ClinVar
+VAR:VCV004849576,VCV004849576,Variant,,VCV004849576,,ClinVar
+VAR:VCV004795938,VCV004795938,Variant,,VCV004795938,,ClinVar
+VAR:VCV004714750,VCV004714750,Variant,,VCV004714750,,ClinVar
+VAR:VCV004539014,VCV004539014,Variant,,VCV004539014,,ClinVar
+VAR:VCV004526004,VCV004526004,Variant,,VCV004526004,,ClinVar
+VAR:VCV003893233,VCV003893233,Variant,,VCV003893233,,ClinVar
+VAR:VCV003725958,VCV003725958,Variant,,VCV003725958,,ClinVar
+VAR:VCV003572960,VCV003572960,Variant,,VCV003572960,,ClinVar
+VAR:VCV003233415,VCV003233415,Variant,,VCV003233415,,ClinVar
+VAR:VCV003193563,VCV003193563,Variant,,VCV003193563,,ClinVar
+VAR:VCV003064809,VCV003064809,Variant,,VCV003064809,,ClinVar
+VAR:VCV002814022,VCV002814022,Variant,,VCV002814022,,ClinVar
+VAR:VCV002737377,VCV002737377,Variant,,VCV002737377,,ClinVar
+VAR:VCV002631598,VCV002631598,Variant,,VCV002631598,,ClinVar
+VAR:VCV002577660,VCV002577660,Variant,,VCV002577660,,ClinVar
+PROC:ENDOTHELIAL,ENDOTHELIAL,Process,,,,GraphAmbiCardio rule-based mapping

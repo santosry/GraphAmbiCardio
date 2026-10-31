@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_O3_TGA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ozone\"[MeSH] OR \"ozone\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"transposition of the great arteries\"[tiab] OR \"transposition of the great vessels\"[tiab] OR \"D-TGA\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ozone\"[MeSH Terms] OR \"ozone\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"transposition of the great arteries\"[Title/Abstract] OR \"transposition of the great vessels\"[Title/Abstract] OR \"D-TGA\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "19258486",
+      "title": "Ambient air pollution and cardiovascular malformations in Atlanta, Georgia, 1986-2003.",
+      "journal": "American journal of epidemiology",
+      "year": "2009",
+      "first_author": "Strickland MJ",
+      "doi": "10.1093/aje/kwp011",
+      "abstract": "Associations between ambient air pollution levels during weeks 3-7 of pregnancy and risks of cardiovascular malformations were investigated among the cohort of pregnancies reaching at least 20 weeks' gestation that were conceived during January 1, 1986-March 12, 2003, in Atlanta, Georgia. Surveillance records obtained from the Metropolitan Atlanta Congenital Defects Program, which conducts active, population-based surveillance on this cohort, were reviewed to classify cardiovascular malformations. Ambient 8-hour maximum ozone and 24-hour average carbon monoxide, nitrogen dioxide, particulate matter with an average aerodynamic diameter of <10 microm (PM(10)), and sulfur dioxide measurements were obtained from centrally located stationary monitors. Temporal associations between these pollutants and daily risks of secundum atrial septal defect, aortic coarctation, hypoplastic left heart syndrome, patent ductus arteriosus, valvar pulmonary stenosis, tetralogy of Fallot, transposition of the great arteries, muscular ventricular septal defect, perimembranous ventricular septal defect, conotruncal defects, left ventricular outflow tract defect, and right ventricular outflow defect were modeled by using Poisson generalized linear models. A statistically significant association was observed between PM(10) and patent ductus arteriosus (for an interquartile range increase in PM(10) levels, risk ratio = 1.60, 95% confidence interval: 1.11, 2.31). Of the 60 associations examined in the primary analysis, no other significant associations were observed.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Adult;Air Pollution;Cohort Studies;Confidence Intervals;Environmental Monitoring;Epidemiological Monitoring;Female;Georgia;Heart Defects, Congenital;Humans;Infant, Newborn;Maternal Exposure;Pregnancy;Prenatal Exposure Delayed Effects;Prevalence;Retrospective Studies;Risk Assessment;Seasons;Stillbirth",
+      "language": "eng"
+    },
+    {
+      "pmid": "42925174",
+      "title": "Prenatal ambient ozone exposure and risk of offspring congenital heart disease: A three-level meta-analysis.",
+      "journal": "Journal of the Air & Waste Management Association (1995)",
+      "year": "2026",
+      "first_author": "Yao Y",
+      "doi": "10.1080/10962247.2026.2754160",
+      "abstract": "BACKGROUND: Prenatal exposure to ambient ozone has been hypothesized to increase the risk of congenital heart defects (CHD) in offspring; however, epidemiological evidence remains inconclusive. OBJECTIVE: To quantitatively synthesize the available evidence on the association between prenatal ambient ozone exposure and the risk of congenital heart defects (CHD) in offspring, and to explore potential effect modifiers through subgroup analyses and meta regression. METHODS: The PubMed, Web of Science, Scopus, Embase and CNKI databases were systemically searched from from 1970 until April 2026 to find articles related to offspring CHD and periconceptional ozone exposure. Inverse variance weighted random-effects multilevel models were conducted to pool estimates and stratify associations by heart defect type, country income level, study design, investigation time period, and data source. Dose-response relationships were examined via meta-regression and the heterogeneity and publication bias in relevant studies was also examined. RESULTS: A total of 29 studies comprising 302 effect estimates were identified. The overall pooled odds ratio for the association between prenatal ozone exposure and CHD was 1.032 (95% CI: 1.004-1.060). Stronger associations were observed for transposition of the great arteries (OR =1.172), conotruncal defects (OR =1.134), and atrioventricular septal defects (OR =1.204). The embryonic period was the most susceptible exposure window (OR =1.064, 95% CI: 1.006-1.126). Stronger effects were found in upper-middle-income countries (OR =1.039), studies conducted after 2020 (OR =1.145), and hospital-based data (OR =1.112). Dose-response analysis suggested a 1% odds increase per 10 μg/m3 ozone increment, though not statistically significant. Considerable heterogeneity was observed. CONCLUSIONS: This meta-analysis suggests that prenatal ozone exposure may modestly increase CHD risk. The substantial heterogeneity highlights the need for standardized exposure assessment and further prospective studies.Implication Statement: This meta-analysis provides quantitative evidence that prenatal ozone exposure is associated with a modest increase in congenital heart defect risk, with stronger effects observed in upper-middle-income countries and more recent studies. The embryonic developmental window emerged as the most susceptible exposure period. These findings inform air quality management by identifying specific exposure windows and vulnerable populations for targeted intervention, and support the refinement of WHO ozone guidelines and national ambient air quality standards to better protect fetal health.",
+      "pubtypes": "Journal Article;Review",
+      "mesh_terms": "",
+      "language": "eng"
+    }
+  ]
+}

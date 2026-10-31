@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_METALS_TOF",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"arsenic\"[MeSH] OR \"lead\"[MeSH] OR \"mercury\"[MeSH] OR \"metals, heavy\"[MeSH] OR \"heavy metal*\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"tetralogy of fallot\"[tiab] OR \"fallot\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"arsenic\"[MeSH Terms] OR \"lead\"[MeSH Terms] OR \"mercury\"[MeSH Terms] OR \"metals, heavy\"[MeSH Terms] OR \"heavy metal*\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"tetralogy of fallot\"[Title/Abstract] OR \"fallot\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "24441093",
+      "title": "Emergent transcatheter relief of bronchus compression by an ectatic ductus arteriosus in a premature neonate: a case report.",
+      "journal": "Journal of neonatal-perinatal medicine",
+      "year": "2013",
+      "first_author": "Hahn E",
+      "doi": "10.3233/NPM-1373013",
+      "abstract": "A premature infant with tetralogy of Fallot with pulmonary atresia and prenatal compression of the left main bronchus by a large and ectatic patent ductus arteriosus is presented. Survival to surgery was accomplished by transcatheter placement of a coronary stent into the left mainstem bronchus.",
+      "pubtypes": "Case Reports;Journal Article",
+      "mesh_terms": "Bronchi;Chromium;Cobalt;Ductus Arteriosus;Ductus Arteriosus, Patent;Female;Humans;Infant, Newborn;Infant, Premature;Pulmonary Atresia;Stents;Tetralogy of Fallot;Tomography, X-Ray Computed;Trace Elements;Treatment Outcome",
+      "language": "eng"
+    },
+    {
+      "pmid": "26987204",
+      "title": "[Study on congenital cardiac anomalies induced by arsenic exposure before and during maternal pregnancy in fetal rats].",
+      "journal": "Wei sheng yan jiu = Journal of hygiene research",
+      "year": "2016",
+      "first_author": "Lin Y",
+      "doi": "",
+      "abstract": "OBJECTIVE: To investigate the effects of arsenic exposure before and during maternal pregnancy on heart development of fetal rats. METHODS: According to body weight, thirty-two female SD rats (30 to 40 days of age) were randomly divided into control group, low dose group, middle dose group and high dose group with 8 rats per group. They were allowed free access to drinking water with 0, 37.5, 75 and 150 mg/L of sodium arsenite (NaAsO2) for 6 weeks, respectively. Then all the female rats and adult male SD rats were caged together for mating. Once female rats were determined to be pregnant, they would continue to drink deionized distilled water containing different concentrations of sodium arsenite for another 2 weeks. On embryonic day 16, rats were sacrificed to harvest fetuses. Female rats' weight changes, abortions, absorbed fetus number, growth and development of fetal rats were observed. Hematoxylin-eosin staining of serial cardiac slices was performed in embryos to observe cardiac morphology and structure. Fur arsenic contents of female rats were determined with the method of atomic fluorescence spectrometry. RESULTS: Subchronic arsenic exposure caused slow weight growth in female rats. There were two cases of abortion in middle dose group and high dose group, respectively. Compared with these of control group, fetal and placental weight decreased (P < 0.05), and the incidence of fetal absorption increased (P < 0.05) in all arsenic-treated groups. Cardiac malformations in fetal rats including ventricular septal defect, atrial septal defect and tetralogy of Fallot were observed in low, middle and high dose group. The incidence of cardiac malformations increased with the increase of arsenic concentrations in drinking water. Compared with that of control group, the incidence of cardiac malformations remarkably increased in both middle and high dose groups (P < 0.05). Fur arsenic contents increased with the increase of arsenic concentrations in drinking water (P < 0.01). CONCLUSION: Arsenic exposure before and during maternal pregnancy could cause abnormal cardiac development in fetal rats, and increased the risk of congenital heart disease.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Arsenic;Arsenites;Body Weight;Drinking Water;Female;Fetal Development;Fetus;Heart Defects, Congenital;Male;Maternal Exposure;Placenta;Pregnancy;Pregnancy, Animal;Rats;Rats, Sprague-Dawley;Reproduction;Sodium Compounds",
+      "language": "chi"
+    }
+  ]
+}

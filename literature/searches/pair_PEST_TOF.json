@@ -1,0 +1,85 @@
+{
+  "search_id": "pair_PEST_TOF",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"pesticides\"[MeSH] OR \"pesticide*\"[tiab] OR \"organophosphate*\"[tiab] OR \"glyphosate\"[tiab] OR \"insecticide*\"[tiab] OR \"herbicide*\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"tetralogy of fallot\"[tiab] OR \"fallot\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"pesticides\"[MeSH Terms] OR \"pesticide*\"[Title/Abstract] OR \"organophosphate*\"[Title/Abstract] OR \"glyphosate\"[Title/Abstract] OR \"insecticide*\"[Title/Abstract] OR \"herbicide*\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"tetralogy of fallot\"[Title/Abstract] OR \"fallot\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 6,
+  "retrieved_n": 6,
+  "studies": [
+    {
+      "pmid": "1572431",
+      "title": "Risk factors for conal malformations of the heart.",
+      "journal": "European journal of epidemiology",
+      "year": "1992",
+      "first_author": "Tikkanen J",
+      "doi": "10.1007/BF03334972",
+      "abstract": "The possible effect of environmental factors during early pregnancy on the occurrence of conal malformations (CAS) in the offspring was studied in 90 cases and 756 controls. The cases represented all CAS-infants with anomalies such as transposition, Tetralogy of Fallot and truncus arteriosus verified in Finland during 1982 and 1983. The controls were randomly selected from all babies born in the same period. Case and control mothers were interviewed by midwives using a structured questionnaire approximately three months after delivery. Maternal alcohol consumption during the first trimester was more prevalent among CAS-mothers (50.0%) than controls (38.0%), as was maternal upper respiratory infection (33.0/17.7%). Maternal exposure to dyes, lacquers or paints at work during the first trimester showed an adjusted relative odds ratio of 2.9 (95% confidence interval 1.2-7.5) in logistic regression analysis. The risk of CAS was equal in urban and rural areas and not associated with maternal ABO- or Rh-blood groups, smoking, or coffee, tea, acetylsalicylic acid or diazepam consumption. Maternal exposures to plastic raw materials, disinfectants, pesticides, microwave-ovens or video display terminals at work were not factors associated with the risk of conal malformations.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adult;Female;Finland;Heart Defects, Congenital;Humans;Infant, Newborn;Male;Maternal-Fetal Exchange;Occupational Exposure;Pregnancy;Prevalence;Regression Analysis;Risk Factors;Surveys and Questionnaires",
+      "language": "eng"
+    },
+    {
+      "pmid": "11409165",
+      "title": "Neural crest-derived defects in experimental congenital diaphragmatic hernia.",
+      "journal": "Pediatric surgery international",
+      "year": "2001",
+      "first_author": "Yu J",
+      "doi": "10.1007/s003830100597",
+      "abstract": "Congenital diaphragmatic hernia (CDH) is often associated with other malformations. This study tests the hypothesis that the heart and great vessels, thymus, parathyroids, and thyroid might be abnormal in the rat model of CDH as a result of disturbed neural-crest development. Time-mated pregnant rats were fed either 100 mg 2-4-dichlorophenyl-p-nitrophenyl ether (nitrofen) or vehicle on gestational day 9.5. Diaphragm, lung, heart, and thymic malformations were sought after dissection and the parathyroids and thyroid were histologically investigated in term fetuses. Ten control fetuses had no malformations, whereas 22 of 32 nitrofen fetuses had CDH and 20 had cardiovascular defects like narrow pulmonary outflow tract (n = 7), aberrant right subclavian artery (n = 7), ventricular septal defect (n = 4), atrial septal defect (n = 4), tetralogy of Fallot (n = 2), double-outflow right ventricle (n = 2), right ductus arteriosus (n = 2), and others. The thymus was present but was significantly hypoplastic in all nitrofen fetuses and was ectopic or single-lobed in 28% of them while the parathyroid glands were unilaterally absent or ectopic in 50%. The thyroid was only minimally malformed or ectopic. In conclusion, malformations of structures derived from the pharyngeal arches are likely neural-crest related in rats exposed to nitrofen.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Diaphragm;Disease Models, Animal;Female;Heart Defects, Congenital;Hernia, Diaphragmatic;Hernias, Diaphragmatic, Congenital;Neural Crest;Parathyroid Glands;Pesticides;Phenyl Ethers;Pregnancy;Rats;Rats, Sprague-Dawley;Thymus Gland;Thyroid Gland",
+      "language": "eng"
+    },
+    {
+      "pmid": "26033688",
+      "title": "Maternal occupational pesticide exposure and risk of congenital heart defects in the National Birth Defects Prevention Study.",
+      "journal": "Birth defects research. Part A, Clinical and molecular teratology",
+      "year": "2015",
+      "first_author": "Rocheleau CM",
+      "doi": "10.1002/bdra.23351",
+      "abstract": "BACKGROUND: Congenital heart defects (CHDs) are common birth defects, affecting approximately 1% of live births. Pesticide exposure has been suggested as an etiologic factor for CHDs, but previous results were inconsistent. METHODS: We examined maternal occupational exposure to fungicides, insecticides, and herbicides for 3328 infants with CHDs and 2988 unaffected control infants of employed mothers using data for 1997 through 2002 births from the National Birth Defects Prevention Study, a population-based multisite case-control study. Potential pesticide exposure from 1 month before conception through the first trimester of pregnancy was assigned by an expert-guided task-exposure matrix and job history details self-reported by mothers. Odds ratios (ORs) and 95% confidence intervals (CIs) were estimated using multivariable logistic regression. RESULTS: Maternal occupational exposure to pesticides was not associated with CHDs overall. In examining specific CHD subtypes compared with controls, some novel associations were observed with higher estimated pesticide exposure: insecticides only and secundum atrial septal defect (OR = 1.8; 95% CI, 1.3-2.7, 40 exposed cases); both insecticides and herbicides and hypoplastic left heart syndrome (OR = 5.1; 95% CI, 1.7-15.3, 4 exposed cases), as well as pulmonary valve stenosis (OR = 3.6; 95% CI, 1.3-10.1, 5 exposed cases); and insecticides, herbicides, and fungicides and tetralogy of Fallot (TOF) (OR = 2.2; 95% CI, 1.2-4.0, 13 exposed cases). CONCLUSION: Broad pesticide exposure categories were not associated with CHDs overall, but examining specific CHD subtypes revealed some increased odds ratios. These results highlight the importance of examining specific CHDs separately. Because of multiple comparisons, additional work is needed to verify these associations.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Adult;Female;Heart Defects, Congenital;Humans;Maternal Exposure;Occupational Exposure;Pesticides;Pregnancy;Retrospective Studies;Risk Factors;United States",
+      "language": "eng"
+    },
+    {
+      "pmid": "10626854",
+      "title": "Nitrofen-induced congenital malformations of the heart and great vessels in rats: an animal model.",
+      "journal": "Journal of pediatric surgery",
+      "year": "1999",
+      "first_author": "Kim WG",
+      "doi": "10.1016/s0022-3468(99)90312-3",
+      "abstract": "BACKGROUND: Nitrofen (2,4-dichloro-4'-nitrodiphenyl ether), a diapheny ether herbicide, is known to induce in rat fetuses a variety of congenital cardiovascular anomalies, together with diaphragmatic hernia and hydronephrosis. The purpose of the current study was to produce congenital cardiovascular anomalies in rat fetuses by oral nitrofen administration at the indicated doses and days of gestation, and to determine the characteristics of resulting nitrofen-induced cardiovascular anomalies. METHODS: All the observed fetuses were removed from pregnant Sprague-Dawley rats killed on the 21st day of gestation. They were preserved in 10% formalin, and dissection for examination was carried out under a dissecting microscope. RESULTS: The following results were based on dissecting microscopic findings of 482 offspring: (1) The 11th day of gestation was the most sensitive for nitrofen induction of congenital cardiovascular anomalies. The incidence of these was dose related. (2) Ventricular septal defect was the most common single cardiovascular anomaly, representing more than half of all such irregularities. The next most common were aortic arch anomalies and tetralogy of Fallot. (3) Cardiac anomalies derived from infundibular maldevelopment such as tetralogy of Fallot and pulmonary atresia with ventricular septal defect were observed only in the group treated with nitrofen on the 11th gestational day. (4) Aortic arch anomalies were very frequent; the great majority were anomalous right subclavian artery with left aortic arch. CONCLUSION: This animal model is suitable for further embryological investigation of the development of congenital cardiovascular anomalies.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Coronary Vessel Anomalies;Disease Models, Animal;Female;Gestational Age;Heart Defects, Congenital;Heart Septal Defects, Ventricular;Herbicides;Phenyl Ethers;Pregnancy;Rats;Rats, Sprague-Dawley",
+      "language": "eng"
+    },
+    {
+      "pmid": "9737553",
+      "title": "Attributable fraction for cardiac malformations.",
+      "journal": "American journal of epidemiology",
+      "year": "1998",
+      "first_author": "Wilson PD",
+      "doi": "10.1093/oxfordjournals.aje.a009666",
+      "abstract": "To the authors' knowledge, attributable fractions for cardiac malformations have not been reported before. The Baltimore-Washington Infant Study published factors associated with several major cardiac malformations in Maryland, the District of Columbia, and adjacent counties of northern Virginia in 1981-1989. For eight of these malformations, the authors provide attributable fractions of those factors that are potentially causal. Summary attributable fractions range from 13.6% (four factors) for hypoplastic left heart to 30.2% (seven factors) for transposition of great arteries with intact ventricular septum. Extra attributable fraction for factor x, defined as summary attributable fraction for all factors minus that for all but x, is largest for: 1) paternal marijuana use in transposition of great arteries with intact ventricular septum, 7.8%; 2) paternal anesthesia in tetralogy of Fallot, 3.6%; 3) painting in atrioventricular septal defect with Down syndrome, 5.1 %; 4) solvent/degreasing agent exposure in hypoplastic left heart, 4.6%; 5) sympathomimetics in coarctation of aorta, 5.8%; 6) pesticide exposure in isolated membranous ventricular septal defect, 5.5%; 7) hair dye in multiple/multiplex membranous ventricular septal defect, 3.3%; and 8) urinary tract infection in atrial septal defect, 6.4%. Percent-of-cases-exposed dominates relative risk in attributable fraction. If these factors are causal, the larger extra attributable fractions suggest the potential for prevention by specific interventions before/during pregnancy.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Case-Control Studies;Data Collection;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Logistic Models;Male;Maternal Exposure;Paternal Exposure;Risk Assessment;Risk Factors",
+      "language": "eng"
+    },
+    {
+      "pmid": "25262086",
+      "title": "Residential agricultural pesticide exposures and risk of selected congenital heart defects among offspring in the San Joaquin Valley of California.",
+      "journal": "Environmental research",
+      "year": "2014",
+      "first_author": "Carmichael SL",
+      "doi": "10.1016/j.envres.2014.08.030",
+      "abstract": "BACKGROUND: Pesticide exposures are ubiquitous and of substantial public concern. We examined the potential association of congenital heart defects with residential proximity to commercial agricultural pesticide applications in the San Joaquin Valley, California. METHODS: Study subjects included 569 heart defect cases and 785 non-malformed controls born from 1997 to 2006 whose mothers participated in a population-based case-control study. Associations with any versus no exposure to physicochemical groups of pesticides and specific chemicals were assessed using logistic regression adjusted for relevant covariates, for 8 heart defect phenotypes that included ≥ 50 cases and pesticide exposures with ≥ 5 exposed cases and controls, which resulted in 235 comparisons. RESULTS: 38% of cases and controls were classified as exposed to pesticides within a 500 m radius of mother's address during a 3-month periconceptional window. Adjusted odds ratios (AORs) with 95% CIs excluding 1.0 were observed for 18 comparisons; all were >1 and ranged from 1.9 to 7.1. They included tetralogy of Fallot (n=101 cases) and neonicotinoids; hypoplastic left heart syndrome (n=59) and strobins; coarctation of the aorta (n=74) and pyridazinones; pulmonary valve stenosis (n=53) and bipyridyliums and organophosphates; ventricular septal defects (n=93) and avermectins and pyrethroids; and atrial septal defects (n=132) and dichlorphenoxy acid or esters, organophosphates, organotins, and pyrethroids. No AORs met both of these criteria for d-transposition of the great arteries (n=58) or heterotaxia (n=53). CONCLUSIONS: Most pesticides were not associated with increased risk of specific heart defect phenotypes. For the few that were associated, results should be interpreted with caution until replicated in other study populations.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adult;Agriculture;California;Environmental Exposure;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Logistic Models;Maternal Exposure;Odds Ratio;Pesticides;Pregnancy",
+      "language": "eng"
+    }
+  ]
+}

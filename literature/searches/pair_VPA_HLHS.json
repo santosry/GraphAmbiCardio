@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_VPA_HLHS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"valproic acid\"[MeSH] OR \"valproic acid\"[tiab] OR \"valproate\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"hypoplastic left heart\"[tiab] OR \"HLHS\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"valproic acid\"[MeSH Terms] OR \"valproic acid\"[Title/Abstract] OR \"valproate\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"hypoplastic left heart\"[Title/Abstract] OR \"HLHS\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "8211818",
+      "title": "Sodium valproate-induced cardiovascular abnormalities in the Jcl:ICR mouse fetus: peak sensitivity of gestational day and dose-dependent effect.",
+      "journal": "Teratology",
+      "year": "1993",
+      "first_author": "Sonoda T",
+      "doi": "10.1002/tera.1420480206",
+      "abstract": "Sodium valproate was administered to Jcl:ICR mice in order to determine its effect on cardiovascular development. A single dose of 600 mg/kg of sodium valproate was injected intraperitoneally on gestational days 6, 7, 8, or 9. In same animals, a single dose of 300, 400, 500, or 700 mg/kg was injected on gestational day 7. On day 18 of gestation, dams were laparotomized to observe number of live, dead and resorbed fetuses. In addition, live fetuses were examined for cardiovascular abnormalities. Although cardiovascular abnormalities were noted in 3% of live fetuses and in 26% of litters in the group treated on day 6 (600 mg/kg), there was no significant difference from the control group, suggests that there may have been a biologically significant increase, although not a statistically significant increase. Cardiovascular abnormalities were found in 30%, 11%, and 8% of live fetuses in the groups treated with 600 mg/kg on days 7, 8, and 9, respectively. These represented a statistically significant increase in effects as opposed to the control groups. Among the varying dosages administered on day 7 of gestation, cardiovascular abnormalities occurred in 2%, 6%, 16%, and 36% of live fetuses in groups treated with 300, 400, 500, and 700 mg/kg, respectively, showing a significant dose-dependent increase. These cardiovascular abnormalities observed were divided into the following groups: ventricular septal defect, endocardial cushion defect, transposition of the great arteries, double outlet right ventricle, tricuspid atresia, and hypoplastic left heart syndrome. Maternal death did not occur at any treatment level.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Dose-Response Relationship, Drug;Female;Fetal Death;Fetal Resorption;Fetus;Heart Defects, Congenital;Male;Mice;Mice, Inbred ICR;Pregnancy;Teratogens;Valproic Acid",
+      "language": "eng"
+    }
+  ]
+}

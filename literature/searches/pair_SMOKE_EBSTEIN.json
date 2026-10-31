@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_SMOKE_EBSTEIN",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tobacco smoke pollution\"[MeSH] OR \"smoking\"[MeSH] OR \"tobacco smoke\"[tiab] OR \"cigarette smoke\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"ebstein anomaly\"[tiab] OR \"ebstein\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tobacco smoke pollution\"[MeSH Terms] OR \"smoking\"[MeSH Terms] OR \"tobacco smoke\"[Title/Abstract] OR \"cigarette smoke\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"ebstein anomaly\"[Title/Abstract] OR \"ebstein\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "31159903",
+      "title": "Potential risk factors for Ebstein anomaly, National Birth Defects Prevention Study, 1997-2011.",
+      "journal": "Cardiology in the young",
+      "year": "2019",
+      "first_author": "Downing KF",
+      "doi": "10.1017/S1047951119000970",
+      "abstract": "BACKGROUND: Ebstein anomaly is a rare congenital heart defect (CHD) that, when severe, requires corrective surgery or other catheter-based intervention in the first year of life. Due to its rarity, risk factors for Ebstein anomaly remain largely unknown. Using national data, we examined 18 potential risk factors for Ebstein anomaly. METHODS: Using 1997-2011 data from the National Birth Defects Prevention Study, a population-based case-control study, we calculated crude and adjusted odds ratios and 95% confidence intervals for paternal age, maternal socio-demographics, reproductive history, and modifiable risk factors, and infant characteristics reported by mothers of 135 Ebstein anomaly cases and 11,829 controls. RESULTS: Mothers of Ebstein anomaly cases had 4.1 (95% confidence interval: 1.8, 9.5) times the odds of reporting a family history of CHD compared with mothers of controls. Ebstein anomaly was associated with maternal second-hand cigarette smoke exposure at home (odds ratio = 2.2 [95% confidence interval: 1.1, 4.4]), but not maternal cigarette smoking (odds ratio = 1.3 [95% confidence interval: 0.8, 2.1]). Odds were elevated, but the 95% confidence interval included 1.0, for maternal marijuana use (odds ratio = 1.8 [95% confidence interval: 0.9, 3.8]) and paternal age ≥40 years at delivery (odds ratio = 1.9 [95% confidence interval: 1.0, 3.5]). CONCLUSIONS: Maternal exposure to second-hand cigarette smoke at home and a family history of CHD were associated with elevated odds of Ebstein anomaly. Genetic analyses could clarify the potential heritability of Ebstein anomaly.",
+      "pubtypes": "Journal Article;Multicenter Study",
+      "mesh_terms": "Adult;Ebstein Anomaly;Female;Humans;Incidence;Infant, Newborn;Male;Maternal Exposure;Pregnancy;Registries;Retrospective Studies;Risk Assessment;Risk Factors;United States;Young Adult",
+      "language": "eng"
+    }
+  ]
+}

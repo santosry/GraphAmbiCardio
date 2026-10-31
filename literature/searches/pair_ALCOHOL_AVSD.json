@@ -1,0 +1,61 @@
+{
+  "search_id": "pair_ALCOHOL_AVSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ethanol\"[MeSH] OR \"alcohol drinking\"[MeSH] OR \"alcohol\"[tiab] OR \"ethanol\"[tiab] OR \"fetal alcohol\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrioventricular septal defect\"[tiab] OR \"atrioventricular canal\"[tiab] OR \"AVSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ethanol\"[MeSH Terms] OR \"alcohol drinking\"[MeSH Terms] OR \"alcohol\"[Title/Abstract] OR \"ethanol\"[Title/Abstract] OR \"fetal alcohol\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrioventricular septal defect\"[Title/Abstract] OR \"atrioventricular canal\"[Title/Abstract] OR \"AVSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 4,
+  "retrieved_n": 4,
+  "studies": [
+    {
+      "pmid": "35966825",
+      "title": "European epidemiological patterns of cannabis- and substance-related congenital cardiovascular anomalies: geospatiotemporal and causal inferential study.",
+      "journal": "Environmental epigenetics",
+      "year": "2022",
+      "first_author": "Reece AS",
+      "doi": "10.1093/eep/dvac015",
+      "abstract": "As prenatal and community cannabis exposures have recently been linked with congenital heart disease (CHD), it was of interest to explore these associations in Europe in a causal framework and space-time context. Congenital anomaly data from Eurocat, drug-use data from the European Monitoring Centre for Drugs and Drug Addiction, and income from the World Bank. Countries with rising daily cannabis use had in general higher congenital anomaly rates over time than those without (time: status interaction: β-Est. = 0.0267, P = 0.0059). At inverse probability-weighted panel regression, cannabis terms were positive and significant for CHD, severe CHD, atrial septal defect, ventricular septal defect, atrioventricular septal defect, patent ductus arteriosus, tetralogy of Fallot, vascular disruptions, double outlet right ventricle, transposition of the great vessels, hypoplastic right heart, and mitral valve anomalies from 1.75 × 10-19, 4.20 × 10-11, <2.2 × 10-16, <2.2 × 10-16, 1.58 × 10-12, 4.30 × 10-9, 4.36 × 10-16, 3.50 × 10-8, 5.35 × 10-12, <2.2 × 10-16, 5.65 × 10-5 and 6.06 × 10-10. At spatial regression, terms including cannabis were positive and significant for this same list of anomalies from 0.0038, 1.05 × 10-10, 0.0215, 8.94 × 10-6, 1.23 × 10-5, 2.05 × 10-5, 1.07 × 10-6, 8.77 × 10-5, 9.11 × 10-6, 0.0001, 3.10 × 10-7 and 2.17 × 10-7. 92.6% and 75.2% of 149 E-value estimates and minimum E-values were in high zone >9; 100.0% and 98.7% >1.25. Data show many congenital cardiac anomalies exhibit strong bivariate relationships with metrics of cannabis exposure. Causal inferential modelling for the twelve anomalies selected demonstrated convincing evidence of robust relationships to cannabis which survived adjustment and fulfilled epidemiological criteria for causal relationships. Space-time regression was similarly confirmatory. Epigenomic pathways constitute viable potential mechanisms. Given exponential genotoxic dose-response effects, careful and astute control of cannabinoid penetration is indicated.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "",
+      "language": "eng"
+    },
+    {
+      "pmid": "10230836",
+      "title": "Maternal risk factors and major associated defects in infants with Down syndrome.",
+      "journal": "Epidemiology (Cambridge, Mass.)",
+      "year": "1999",
+      "first_author": "Torfs CP",
+      "doi": "",
+      "abstract": "More than 50% of infants with Down syndrome have associated defects that cause considerable morbidity and mortality. We evaluated the hypothesis that the trisomic genome interacts with environmental factors to increase the risk for specific associated defects. We evaluated risk factors present during early pregnancy in a multiracial population of 687 infants with Down syndrome. Mother's cigarette smoking was associated with the grouped cardiac defects [odds ratio (OR)=2.0; 95% confidence interval (CI) = 1.2-3.2]. When adjusted for other cardiac defects and maternal race, the following specific defects were associated with smoking: atrioventricular canal (OR = 2.3; 95% CI = 1.2-4.5), tetralogy of Fallot (OR = 4.6; 95% CI = 1.2-17.0), and atrial septal defects without ventricular septal defect (OR = 2.2; 95% CI = 1.1-4.3). Hirschsprung disease was associated with mother's daily consumption of more than three cups of coffee (OR = 6.02; 95% CI = 1.2-29.7) and with mother's fever (OR = 3.4; 95% CI = 0.7-16.4), but the number of cases was small. Use of alcohol was not associated with any defect. Mother's race, age, parity, income, or education did not confound the associations. Results suggest that environmental factors can modify the occurrence of associated anomalies in the embryo with Down syndrome.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Abnormalities, Multiple;Adult;Alcohol Drinking;California;Case-Control Studies;Coffee;Digestive System Abnormalities;Down Syndrome;Environmental Exposure;Female;Fever;Heart Defects, Congenital;Humans;Infant, Newborn;Population Surveillance;Pregnancy;Pregnancy Complications;Risk Factors;Smoking;Surveys and Questionnaires",
+      "language": "eng"
+    },
+    {
+      "pmid": "22903798",
+      "title": "Analysis of selected maternal exposures and non-syndromic atrioventricular septal defects in the National Birth Defects Prevention Study, 1997-2005.",
+      "journal": "American journal of medical genetics. Part A",
+      "year": "2012",
+      "first_author": "Patel SS",
+      "doi": "10.1002/ajmg.a.35555",
+      "abstract": "Although the descriptive epidemiology of atrioventricular septal defects (AVSDs), a group of serious congenital heart defects (CHDs), has been recently reported, non-genetic risk factors have not been consistently identified. Using data (1997-2005) from the National Birth Defects Prevention Study, an ongoing multisite population-based case-control study, the association between selected non-genetic factors and non-syndromic AVSDs was examined. Data on periconceptional exposures to such factors were collected by telephone interview from 187 mothers of AVSD case infants and 6,703 mothers of unaffected infants. Adjusted odds ratios (aORs) and 95% confidence intervals (CIs) were estimated from logistic regression models. Mothers who reported cigarette smoking during the periconceptional period were more likely to have infants with AVSDs compared with non-smokers, independent of maternal age, periconceptional alcohol consumption, infant gestational age, family history of CHDs, and study site (aOR 1.5, 95% CI 1.1-2.4). The association was strongest in mothers who smoked more than 25 cigarettes/day. In addition, mothers with periconceptional passive smoke exposure were more likely to have infants with AVSDs than unexposed mothers, independent of maternal age, active periconceptional smoking, infant gestational age, and family history of CHDs (aOR 1.4, 95% CI 1.0-2.0). No associations were observed between AVSDs and maternal history of a urinary tract infection or pelvic inflammatory disease, maternal use of a wide variety of medications, maternal occupational exposure, parental drug use, or maternal alcohol consumption. If the results of this preliminary study can be replicated, minimizing maternal active and passive smoke exposure may decrease the incidence of AVSDs.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adolescent;Adult;Case-Control Studies;Congenital Abnormalities;Endocardial Cushion Defects;Female;Heart Septal Defects;Humans;Infant, Newborn;Interviews as Topic;Male;Maternal Exposure;Preconception Care;Pregnancy;Prenatal Exposure Delayed Effects;Risk Factors;Smoking;Tobacco Smoke Pollution;Young Adult",
+      "language": "eng"
+    },
+    {
+      "pmid": "2525370",
+      "title": "[Extracardiac malformations in tetralogy of Fallot].",
+      "journal": "Archives des maladies du coeur et des vaisseaux",
+      "year": "1989",
+      "first_author": "Voisin M",
+      "doi": "",
+      "abstract": "The purpose of our study was to determine the incidence and type of malformations associated with tetralogy of Fallot (TF). Among 133 patients followed up for 12 years, 30 who had either complete TF (n = 26) or pulmonary atresia and interventricular septal defect (n = 4) presented with another, extracardiac malformation. These malformations were part of a malformative syndrome in 21/30 patients, including 4 trisomies 21, 6 embryofoetopathies unquestionably (antiepileptics n = 2, alcohol n = 1) or possibly (hormonal treatment n = 1) of environmental origin, 6 branchial arch pathologies and 5 miscellaneous syndromes. The extracardiac malformation was isolated in the remaining 9 patients, including 5 cases of skeletal anomaly and one case each of omphalocele and microcephaly. Altogether, in these 30 patients skeletal and neurosensory anomalies were largely predominant. Skeletal anomalies involved the vertebral column in 8 cases (cervical 3, thoracic 4, lumbar 1) and the limbs in 5 cases (2 of which were phocomelias). The 4 patients with pulmonary atresia and interventricular septal defect also presented with an early embryopathy: Shprinzen's velocardiofacial syndrome (n = 2), DiGeorge syndrome (n = 1) and situs inversus (n = 1). We compared TF with other congenital heart diseases in our population and found that the incidence of associated malformations was about average. The various associations are discussed. In genetic syndromes, trisomy 21 predominates and TF is less frequent than atrioventricular canal. In syndromes of environmental origin, the role of antiepileptic drugs (chiefly phenytoin and trimethadione) is well-known, alcohol is less often responsible and the TF-phocomelia association is suggestive of progesterone. In branchial arch syndromes, TF is the usual cardiopathy.(ABSTRACT TRUNCATED AT 250 WORDS)",
+      "pubtypes": "English Abstract;Journal Article;Review",
+      "mesh_terms": "Abnormalities, Drug-Induced;Abnormalities, Multiple;Alcoholism;Anticonvulsants;Bone and Bones;Branchial Region;Child;Child, Preschool;Digestive System Abnormalities;Down Syndrome;Female;Fetal Alcohol Spectrum Disorders;Follow-Up Studies;Humans;Infant;Infant, Newborn;Pregnancy;Syndrome;Tetralogy of Fallot",
+      "language": "fre"
+    }
+  ]
+}

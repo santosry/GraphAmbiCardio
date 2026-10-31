@@ -1,0 +1,61 @@
+{
+  "search_id": "pair_O3_PS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ozone\"[MeSH] OR \"ozone\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"pulmonary stenosis\"[tiab] OR \"pulmonary valve stenosis\"[tiab] OR \"pulmonic stenosis\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ozone\"[MeSH Terms] OR \"ozone\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"pulmonary stenosis\"[Title/Abstract] OR \"pulmonary valve stenosis\"[Title/Abstract] OR \"pulmonic stenosis\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 4,
+  "retrieved_n": 4,
+  "studies": [
+    {
+      "pmid": "21329916",
+      "title": "Ambient air pollution and congenital heart disease: a register-based study.",
+      "journal": "Environmental research",
+      "year": "2011",
+      "first_author": "Dadvand P",
+      "doi": "10.1016/j.envres.2011.01.022",
+      "abstract": "Maternal exposure to ambient air pollution has increasingly been linked to adverse pregnancy outcomes. The evidence linking this exposure to congenital anomalies is still limited and controversial. This case-control study investigated the association between maternal exposure to ambient particulate matter with aerodynamic diameter less than 10 μm (PM(10)), sulfur dioxide (SO(2)), nitrogen dioxide, nitric oxide (NO), ozone (O(3)), and carbon monoxide (CO) and the occurrence of congenital heart disease in the population of Northeast England (1993-2003). Each case and control was assigned weekly average (weeks 3-8 of pregnancy) of pollutant levels measured by the closest monitor to the mother's residential postcode. Using exposure as both continuous and categorical variables, logistic regression models were constructed to quantify the adjusted odds ratios of exposure to air pollutants and the occurrence of each outcome group. We found exposure to CO and NO to be associated with ventricular septal defect and cardiac septa malformations. CO was also associated with congenital pulmonary valve stenosis and NO with pooled cases of congenital heart disease and tetralogy of Fallot. Findings for SO(2), O(3) and PM(10) were less consistent.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Air Pollutants;Carbon Monoxide Poisoning;Case-Control Studies;England;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Logistic Models;Male;Maternal Exposure;Nitric Oxide;Nitrogen Dioxide;Ozone;Particulate Matter;Pregnancy;Socioeconomic Factors;Sulfur Dioxide",
+      "language": "eng"
+    },
+    {
+      "pmid": "19258486",
+      "title": "Ambient air pollution and cardiovascular malformations in Atlanta, Georgia, 1986-2003.",
+      "journal": "American journal of epidemiology",
+      "year": "2009",
+      "first_author": "Strickland MJ",
+      "doi": "10.1093/aje/kwp011",
+      "abstract": "Associations between ambient air pollution levels during weeks 3-7 of pregnancy and risks of cardiovascular malformations were investigated among the cohort of pregnancies reaching at least 20 weeks' gestation that were conceived during January 1, 1986-March 12, 2003, in Atlanta, Georgia. Surveillance records obtained from the Metropolitan Atlanta Congenital Defects Program, which conducts active, population-based surveillance on this cohort, were reviewed to classify cardiovascular malformations. Ambient 8-hour maximum ozone and 24-hour average carbon monoxide, nitrogen dioxide, particulate matter with an average aerodynamic diameter of <10 microm (PM(10)), and sulfur dioxide measurements were obtained from centrally located stationary monitors. Temporal associations between these pollutants and daily risks of secundum atrial septal defect, aortic coarctation, hypoplastic left heart syndrome, patent ductus arteriosus, valvar pulmonary stenosis, tetralogy of Fallot, transposition of the great arteries, muscular ventricular septal defect, perimembranous ventricular septal defect, conotruncal defects, left ventricular outflow tract defect, and right ventricular outflow defect were modeled by using Poisson generalized linear models. A statistically significant association was observed between PM(10) and patent ductus arteriosus (for an interquartile range increase in PM(10) levels, risk ratio = 1.60, 95% confidence interval: 1.11, 2.31). Of the 60 associations examined in the primary analysis, no other significant associations were observed.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Adult;Air Pollution;Cohort Studies;Confidence Intervals;Environmental Monitoring;Epidemiological Monitoring;Female;Georgia;Heart Defects, Congenital;Humans;Infant, Newborn;Maternal Exposure;Pregnancy;Prenatal Exposure Delayed Effects;Prevalence;Retrospective Studies;Risk Assessment;Seasons;Stillbirth",
+      "language": "eng"
+    },
+    {
+      "pmid": "39217202",
+      "title": "Maternal exposure to ambient ozone and fetal congenital heart defects: a national multicenter study in China.",
+      "journal": "Journal of exposure science & environmental epidemiology",
+      "year": "2025",
+      "first_author": "Wang Y",
+      "doi": "10.1038/s41370-024-00716-4",
+      "abstract": "BACKGROUND: Ambient O3 has demonstrated an aggravated increasing trend in the context of global warming. The available evidence of maternal exposure to ambient O3 on fetal congenital heart defects (CHD) is still limited, especially in high polluted areas. OBJECTIVE: To examine associations of maternal exposure to ambient O3 during early pregnancy with fetal CHDs. METHODS: We conducted a national multicenter study in 1313 hospitals from 26 provinces in China and collected a total of 27,817 participants at high risk of CHD from 2013 to 2021. Exposure to ambient O3 during the embryonic period, preconception, the first trimester and periconception was assessed by extracting daily concentrations from a validated grid dataset at each subject's residential district. CHDs were diagnosed based on fetal echocardiography. RESULTS: Each 10 µg/m3 increase of exposure to ambient O3 during the embryonic period was approximately linearly associated with a 12.7% (odds ratio [OR]: 1.127, 95% confidence interval [CI]: 1.098, 1.155) increase in odds of pooled CHD (p < 0.001). The associations remain robust after adjusting for ambient PM2.5 and NO2 exposure. The odds of different types of CHD in association with ambient O3 exposure varied greatly. We observed significant association of ambient O3 exposure with ventricular septal defect (VSD), tetralogy of Fallot (TOF); pulmonary stenosis (PS), pulmonary atresia (PA), transposition of great arteries (TGA) and persistent left superior vena cava (PLSVC), with TOF demonstrating the strongest estimates (OR: 1.194, 95% CI:1.107, 1.288). The estimates for preconception, the first trimester and periconception demonstrate consistent findings with the main analyses, indicating stronger associations of ambient O3 exposure during the periconception period. IMPACT: Our study provides evidence that higher ambient O3 during early pregnancy was significantly associated with increased odds of fetal CHD. Our findings suggest that pregnant women, clinical practitioners, and policy makers need to pay more attention to the exposure to higher ambient O3 during early pregnancy to reduce the risk of developing CHD and to improve outcomes across the life span.",
+      "pubtypes": "Journal Article;Multicenter Study",
+      "mesh_terms": "Humans;Female;China;Heart Defects, Congenital;Ozone;Pregnancy;Maternal Exposure;Adult;Air Pollutants",
+      "language": "eng"
+    },
+    {
+      "pmid": "24727555",
+      "title": "Maternal exposure to criteria air pollutants and congenital heart defects in offspring: results from the national birth defects prevention study.",
+      "journal": "Environmental health perspectives",
+      "year": "2014",
+      "first_author": "Stingone JA",
+      "doi": "10.1289/ehp.1307289",
+      "abstract": "BACKGROUND: Epidemiologic literature suggests that exposure to air pollutants is associated with fetal development. OBJECTIVES: We investigated maternal exposures to air pollutants during weeks 2-8 of pregnancy and their associations with congenital heart defects. METHODS: Mothers from the National Birth Defects Prevention Study, a nine-state case-control study, were assigned 1-week and 7-week averages of daily maximum concentrations of carbon monoxide, nitrogen dioxide, ozone, and sulfur dioxide and 24-hr measurements of fine and coarse particulate matter using the closest air monitor within 50 km to their residence during early pregnancy. Depending on the pollutant, a maximum of 4,632 live-birth controls and 3,328 live-birth, fetal-death, or electively terminated cases had exposure data. Hierarchical regression models, adjusted for maternal demographics and tobacco and alcohol use, were constructed. Principal component analysis was used to assess these relationships in a multipollutant context. RESULTS: Positive associations were observed between exposure to nitrogen dioxide and coarctation of the aorta and pulmonary valve stenosis. Exposure to fine particulate matter was positively associated with hypoplastic left heart syndrome but inversely associated with atrial septal defects. Examining individual exposure-weeks suggested associations between pollutants and defects that were not observed using the 7-week average. Associations between left ventricular outflow tract obstructions and nitrogen dioxide and between hypoplastic left heart syndrome and particulate matter were supported by findings from the multipollutant analyses, although estimates were attenuated at the highest exposure levels. CONCLUSIONS: Using daily maximum pollutant levels and exploring individual exposure-weeks revealed some positive associations between certain pollutants and defects and suggested potential windows of susceptibility during pregnancy.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Air Pollutants;Female;Heart Defects, Congenital;Humans;Maternal Exposure;Nitrogen Dioxide;Ozone;Particulate Matter;Pregnancy;Sulfur Dioxide",
+      "language": "eng"
+    }
+  ]
+}

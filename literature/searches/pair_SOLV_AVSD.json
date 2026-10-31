@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_SOLV_AVSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"solvents\"[MeSH] OR \"trichloroethylene\"[MeSH] OR \"benzene\"[MeSH] OR \"organic solvent*\"[tiab] OR \"trichloroethylene\"[tiab] OR \"benzene exposure\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrioventricular septal defect\"[tiab] OR \"atrioventricular canal\"[tiab] OR \"AVSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"solvents\"[MeSH Terms] OR \"trichloroethylene\"[MeSH Terms] OR \"benzene\"[MeSH Terms] OR \"organic solvent*\"[Title/Abstract] OR \"trichloroethylene\"[Title/Abstract] OR \"benzene exposure\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrioventricular septal defect\"[Title/Abstract] OR \"atrioventricular canal\"[Title/Abstract] OR \"AVSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "3205631",
+      "title": "Trichloroethylene: a cardiac teratogen in developing chick embryos.",
+      "journal": "Pediatric research",
+      "year": "1988",
+      "first_author": "Loeber CP",
+      "doi": "10.1203/00006450-198812000-00018",
+      "abstract": "Prior studies have evaluated the teratogenicity of TCE, a contaminant of drinking water. However, none specifically examined effects of TCE on cardiogenesis. The purpose of this study was to determine if TCE is a cardiac teratogen in early embryogenesis in an avian model. Fertile White Leghorn chicken eggs were incubated under standard conditions. At stage 6, 12, 18, or 23, TCE, in concentrations of 5 to 25 microM (2 to 28 micrograms/g body weight) was injected into the air space of the egg (vol = 0.03 ml). Mineral oil and saline served as control solutions. For this double-blinded study, solutions were coded and remained so until all observations were made and recorded. Embryonic hearts (n = 1055) were examined at stage 29, 34, or 44. Gross examination was performed, followed by microdissection. Cardiac malformations were found in 7.3% of TCE-treated hearts, compared to 2.3% of saline controls (p less than 0.01), and 1.5% of mineral oil controls (p less than 0.001). No significant difference in incidence of malformations was found when comparing saline and mineral oil controls. Cardiac defects include septal defects, cor biloculare, conotruncal abnormalities, atrioventricular canal defects, and abnormal cardiac muscle. These data demonstrate that TCE is a cardiac teratogen in an avian model.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Abnormalities, Drug-Induced;Animals;Chick Embryo;Heart Defects, Congenital;Microscopy, Electron, Scanning;Trichloroethylene",
+      "language": "eng"
+    },
+    {
+      "pmid": "16933305",
+      "title": "Chick embryos exposed to trichloroethylene in an ex ovo culture model show selective defects in early endocardial cushion tissue formation.",
+      "journal": "Birth defects research. Part A, Clinical and molecular teratology",
+      "year": "2006",
+      "first_author": "Mishima N",
+      "doi": "10.1002/bdra.20283",
+      "abstract": "BACKGROUND: Formation of the primitive heart is a critical step for establishing a competent circulatory system necessary for continued morphogenesis, and as such has significant potential as a target for environmental insult. The goal of this study was to identify the initial cellular events that precede more superficially observable abnormalities resulting from exposing early chick embryos to trichloroethylene (TCE). METHODS: A whole embryo culture method was used to assess the susceptibility of endocardial epithelial-mesenchymal transformation in the early chick heart to TCE. This method has the benefits of maintaining the anatomical relationships of developing tissues and organs, instantaneously exposing precisely staged embryos to quantifiable levels of TCE in a protein-free medium, and the ability to directly monitor developmental morphology. RESULTS: A minority of embryos (Hamburger and Hamilton [HH] stage 13-14) exposed to TCE (10-80 ppm) were not viable after 24 hr in culture and exhibited a variety of gross malformations in a dose-dependent fashion. However, the majority of treated embryos remained viable and developed into HH stage 17 embryos that were superficially indistinguishable from vehicle-treated controls. Further analysis of the hearts of these superficially normal embryos by whole-mount confocal microscopy revealed selective reduction in the number of atrioventricular canal mesenchymal cells. Additionally, those mesenchymal cells that did develop migrated abnormally as long thin cords of adherent cells. CONCLUSIONS: The regional selectivity of these effects in the chick heart suggests a critical window of susceptibility to TCE in the epithelial-mesenchymal transformation of atrioventricular canal endocardium.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, U.S. Gov't, Non-P.H.S.",
+      "mesh_terms": "Animals;Chick Embryo;Dose-Response Relationship, Drug;Endocardial Cushion Defects;Endocardium;Heart Atria;Heart Ventricles;Mesoderm;Microscopy, Confocal;Organ Culture Techniques;Time Factors;Trichloroethylene",
+      "language": "eng"
+    }
+  ]
+}

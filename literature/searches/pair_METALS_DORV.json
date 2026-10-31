@@ -1,0 +1,49 @@
+{
+  "search_id": "pair_METALS_DORV",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"arsenic\"[MeSH] OR \"lead\"[MeSH] OR \"mercury\"[MeSH] OR \"metals, heavy\"[MeSH] OR \"heavy metal*\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"double outlet right ventricle\"[tiab] OR \"DORV\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"arsenic\"[MeSH Terms] OR \"lead\"[MeSH Terms] OR \"mercury\"[MeSH Terms] OR \"metals, heavy\"[MeSH Terms] OR \"heavy metal*\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"double outlet right ventricle\"[Title/Abstract] OR \"DORV\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 3,
+  "retrieved_n": 3,
+  "studies": [
+    {
+      "pmid": "36341763",
+      "title": "Prepregnancy exposure to dietary arsenic and congenital heart defects.",
+      "journal": "Birth defects research",
+      "year": "2023",
+      "first_author": "Suhl J",
+      "doi": "10.1002/bdr2.2110",
+      "abstract": "INTRODUCTION: Arsenic crosses the placenta and accumulates in fetal tissues. In the United States, diet is the predominant route of arsenic exposure, but epidemiologic data are sparse regarding this exposure and development of birth defects. Using data from a large case-control study, we explored associations between maternal dietary arsenic exposure and congenital heart defects (CHDs), the most prevalent birth defects. METHODS: We used maternal self-reported dietary assessments and arsenic concentration estimates in food items to estimate average daily exposure to dietary arsenic during the year before pregnancy for mothers of 10,446 unaffected control children and 6,483 case children diagnosed with CHDs. Using tertiles of dietary exposure to total arsenic (all species) and inorganic arsenic, we applied logistic regression analysis to estimate associations for middle and high tertiles, compared with the low tertile. RESULTS: Positive associations (odds ratio [OR] ≥ 1.2) for total arsenic were observed in both tertiles for perimembranous ventricular septal defect (VSD) and high tertile only for double outlet right ventricle-transposition of the great arteries (DORV-TGA), partial anomalous pulmonary venous return (PAPVR), and tricuspid atresia. Positive associations were also observed in both tertiles (tricuspid atresia) and high tertile only (DORV-TGA, conoventricular VSD, PAPVR, and pulmonary atresia) for inorganic arsenic. Most remaining associations were near or below unity. DISCUSSION: Exploration of maternal dietary exposure to total and inorganic arsenic and CHDs produced few positive associations but was limited by available food item concentrations. Future research requires expanded collection of dietary data, improved estimates of concentrations, and consideration of nondietary sources of arsenic exposure.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Pregnancy;Female;Child;Humans;United States;Arsenic;Transposition of Great Vessels;Case-Control Studies;Tricuspid Atresia;Mothers;Double Outlet Right Ventricle;Arsenicals",
+      "language": "eng"
+    },
+    {
+      "pmid": "7385058",
+      "title": "Syndromes of cardiovascular malformations induced by copper citrate in hamsters.",
+      "journal": "Teratology",
+      "year": "1980",
+      "first_author": "DiCarlo FJ",
+      "doi": "10.1002/tera.1420210111",
+      "abstract": "Pregnant golden hamsters were injected intraperitoneally on the morning of the eighth day of gestation with a solution of copper citrate (2.7 mg/kg) or deionized water. Embryos were removed from the mothers by laparotomy on the 12th and 13th days of gestation, serially sectioned through the thorax, and examined for cardiac malformations. Twenty-one of the 37 edematous embryos from copper-treated mothers were affected with a total of 58 major cardiac anomalies. Sixteen of these embryos were affected with double outlet right ventricle in association with a membranous ventricular septal defect, two embryos contained hearts with overriding aortas, and three embryos were affected with isolated ventricular septal defects. Eleven of the 16 embryos with double outlet right ventricle were also affected with pulmonary trunk hypoplasia. The concept that these cardiac anomalies arise from a common pathogenetic basis is supported by the present model.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Animals;Copper;Cricetinae;Female;Fetus;Gestational Age;Heart Defects, Congenital;Heart Septal Defects, Ventricular;Heart Valves;Heart Ventricles;Pregnancy;Pulmonary Artery;Syndrome;Truncus Arteriosus, Persistent",
+      "language": "eng"
+    },
+    {
+      "pmid": "467607",
+      "title": "Copper-induced heart malformations in hamsters.",
+      "journal": "Experientia",
+      "year": "1979",
+      "first_author": "DiCarlo FJ",
+      "doi": "10.1007/BF01968277",
+      "abstract": "The injection of copper citrate into pregnant golden hamsters induces a specific pattern of cardiovascular malformations in their embroys. The syndrome consists of double-outlet right ventricle, pulmonary hypoplasia and a ventricular spetal defect.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Abnormalities, Drug-Induced;Animals;Copper;Cricetinae;Female;Gestational Age;Heart Defects, Congenital",
+      "language": "eng"
+    }
+  ]
+}

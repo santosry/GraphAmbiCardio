@@ -1,0 +1,171 @@
+ncbi_gene_id,symbol,description,other_designations,chromosome,map_location,gene_type,ensembl_ids,retrieved_at
+70,ACTC1,actin alpha cardiac muscle 1,a;c;t;i;n,15,15q14,,,2026-10-31
+93,ACVR2B,activin A receptor type 2B,a;c;t;i;v,3,3p22.2,,,2026-10-31
+81794,ADAMTS10,ADAM metallopeptidase with thrombospondin type 1 motif 10,A; ;d;i;s,19,19p13.2,,,2026-10-31
+57514,ARHGAP31,Rho GTPase activating protein 31,r;h;o; ;G,3,3q13.32-q13.33,,,2026-10-31
+57492,ARID1B,AT-rich interaction domain 1B,A;T;-;r;i,6,6q25.3,,,2026-10-31
+421,ARVCF,ARVCF delta catenin family member,s;p;l;i;c,22,22q11.21,,,2026-10-31
+145173,B3GLCT,beta 3-glucosyltransferase,b;e;t;a;-,13,13q12.3,,,2026-10-31
+9031,BAZ1B,bromodomain adjacent to zinc finger domain 1B,t;y;r;o;s,7,7q11.23,,,2026-10-31
+54880,BCOR,BCL6 corepressor,B;C;L;-;6,X,Xp11.4,,,2026-10-31
+673,BRAF,"B-Raf proto-oncogene, serine/threonine kinase",s;e;r;i;n,7,7q34,,,2026-10-31
+26005,C2CD3,C2 domain containing 3 centriole elongation regulator,C;2; ;d;o,11,11q13.4,,,2026-10-31
+867,CBL,Cbl proto-oncogene,E;3; ;u;b,11,11q23.3,,,2026-10-31
+28952,CCDC22,CCC complex scaffolding subunit CCDC22,c;o;i;l;e,X,Xp11.23,,,2026-10-31
+9702,CEP57,centrosomal protein 57,c;e;n;t;r,11,11q21,,,2026-10-31
+1108,CHD4,chromodomain helicase DNA binding protein 4,A;T;P;-;d,12,12p13.31,,,2026-10-31
+55636,CHD7,chromodomain helicase DNA binding protein 7,A;T;P;-;d,8,8q12.2,,,2026-10-31
+1131,CHRM3,cholinergic receptor muscarinic 3,m;u;s;c;a,1,1q43,,,2026-10-31
+100128908,CIROP,ciliated left-right organizer metallopeptidase,c;i;l;i;a,14,14q11.2,,,2026-10-31
+148345,CIROZ,ciliated left-right organizer protein containing ZP-N domains,c;i;l;i;a,1,1p36.22,,,2026-10-31
+10370,CITED2,Cbp/p300 interacting transactivator with ED-rich tail 2,c;b;p;/;p,6,6q24.1,,,2026-10-31
+7461,CLIP2,CAP-Gly domain containing linker protein 2,C;A;P;-;G,7,7q11.23,,,2026-10-31
+1312,COMT,catechol-O-methyltransferase,c;a;t;e;c,22,22q11.21,,,2026-10-31
+1387,CREBBP,CREB binding lysine acetyltransferase,C;R;E;B;-,16,16p13.3,,,2026-10-31
+10664,CTCF,CCCTC-binding factor,t;r;a;n;s,16,16q22.1,,,2026-10-31
+164781,DAW1,dynein assembly factor with WD repeats 1,d;y;n;e;i,2,2q36.3,,,2026-10-31
+1717,DHCR7,7-dehydrocholesterol reductase,7;-;d;e;h,11,11q13.4,,,2026-10-31
+54567,DLL4,delta like canonical Notch ligand 4,d;e;l;t;a,15,15q15.1,,,2026-10-31
+5977,DPF2,double PHD fingers 2,z;i;n;c; ,11,11q13.1,,,2026-10-31
+56896,DPYSL5,dihydropyrimidinase like 5,d;i;h;y;d,2,2p23.3,,,2026-10-31
+51626,DYNC2LI1,dynein cytoplasmic 2 light intermediate chain 1,c;y;t;o;p,2,2p21,,,2026-10-31
+1859,DYRK1A,dual specificity tyrosine phosphorylation regulated kinase 1A,d;u;a;l; ,21,21q22.13,,,2026-10-31
+79813,EHMT1,euchromatic histone lysine methyltransferase 1,h;i;s;t;o,9,9q34.3,,,2026-10-31
+7458,EIF4H,eukaryotic translation initiation factor 4H,e;u;k;a;r,7,7q11.23,,,2026-10-31
+2006,ELN,elastin,e;l;a;s;t,7,7q11.23,,,2026-10-31
+2033,EP300,EP300 lysine acetyltransferase,h;i;s;t;o,22,22q13.2,,,2026-10-31
+80233,FAAP100,FA core complex associated protein 100,F;a;n;c;o,17,17q25.3,,,2026-10-31
+2187,FANCB,FA complementation group B,F;a;n;c;o,X,Xp22.2,,,2026-10-31
+2188,FANCF,FA complementation group F,F;a;n;c;o,11,11p14.3,,,2026-10-31
+55215,FANCI,FA complementation group I,F;a;n;c;o,15,15q26.1,,,2026-10-31
+2200,FBN1,fibrillin 1,f;i;b;r;i,15,15q21.1,,,2026-10-31
+2260,FGFR1,fibroblast growth factor receptor 1,f;i;b;r;o,8,8p11.23,,,2026-10-31
+2261,FGFR3,fibroblast growth factor receptor 3,f;i;b;r;o,4,4p16.3,,,2026-10-31
+9896,FIG4,FIG4 phosphoinositide 5-phosphatase,p;o;l;y;p,6,6q21,,,2026-10-31
+8468,FKBP6,FKBP prolyl isomerase family member 6 (inactive),i;n;a;c;t,7,7q11.23,,,2026-10-31
+2316,FLNA,filamin A,f;i;l;a;m,X,Xq28,,,2026-10-31
+2324,FLT4,fms related receptor tyrosine kinase 4,v;a;s;c;u,5,5q35.3,,,2026-10-31
+2303,FOXC2,forkhead box C2,f;o;r;k;h,16,16q24.1,,,2026-10-31
+2294,FOXF1,forkhead box F1,f;o;r;k;h,16,16q24.1,,,2026-10-31
+285527,FRYL,FRY like transcription coactivator,p;r;o;t;e,4,4p11,,,2026-10-31
+2626,GATA4,GATA binding protein 4,t;r;a;n;s,8,8p23.1,,,2026-10-31
+140628,GATA5,GATA binding protein 5,t;r;a;n;s,20,20q13.33,,,2026-10-31
+2627,GATA6,GATA binding protein 6,t;r;a;n;s,18,18q11.2,,,2026-10-31
+2657,GDF1,growth differentiation factor 1,e;m;b;r;y,19,19p13.11,,,2026-10-31
+2697,GJA1,gap junction protein alpha 1,g;a;p; ;j,6,6q22.31,,,2026-10-31
+2702,GJA5,gap junction protein alpha 5,g;a;p; ;j,1,1q21.2,,,2026-10-31
+2703,GJA8,gap junction protein alpha 8,g;a;p; ;j,1,1q21.2,,,2026-10-31
+2737,GLI3,GLI family zinc finger 3,t;r;a;n;s,7,7p14.1,,,2026-10-31
+2812,GP1BB,glycoprotein Ib platelet subunit beta,p;l;a;t;e,22,22q11.21,,,2026-10-31
+2719,GPC3,glypican 3,g;l;y;p;i,X,Xq26.2,,,2026-10-31
+2969,GTF2I,general transcription factor IIi,g;e;n;e;r,7,7q11.23,,,2026-10-31
+9569,GTF2IRD1,GTF2I repeat domain containing 1,g;e;n;e;r,7,7q11.23,,,2026-10-31
+9464,HAND2,heart and neural crest derivatives expressed 2,h;e;a;r;t,4,4q34.1,,,2026-10-31
+23493,HEY2,hes related family bHLH transcription factor with YRPW motif 2,h;a;i;r;y,6,6q22.31,,,2026-10-31
+7290,HIRA,histone cell cycle regulator,p;r;o;t;e,22,22q11.21,,,2026-10-31
+3265,HRAS,"HRas proto-oncogene, GTPase",G;T;P;a;s,11,11p15.5,,,2026-10-31
+8692,HYAL2,hyaluronidase 2,h;y;a;l;u,3,3p21.31,,,2026-10-31
+10526,IPO8,importin 8,i;m;p;o;r,12,12p11.21,,,2026-10-31
+182,JAG1,jagged canonical Notch ligand 1,p;r;o;t;e,20,20p12.2,,,2026-10-31
+7994,KAT6A,lysine acetyltransferase 6A,h;i;s;t;o,8,8p11.21,,,2026-10-31
+23522,KAT6B,lysine acetyltransferase 6B,h;i;s;t;o,10,10q22.2,,,2026-10-31
+7403,KDM6A,lysine demethylase 6A,l;y;s;i;n,X,Xp11.3,,,2026-10-31
+8085,KMT2D,lysine methyltransferase 2D,h;i;s;t;o,12,12q13.12,,,2026-10-31
+3845,KRAS,"KRas proto-oncogene, GTPase",G;T;P;a;s,12,12p12.1,,,2026-10-31
+7044,LEFTY2,left-right determination factor 2,l;e;f;t;-,1,1q42.12,,,2026-10-31
+3984,LIMK1,LIM domain kinase 1,L;I;M; ;d,7,7q11.23,,,2026-10-31
+4000,LMNA,lamin A/C,l;a;m;i;n,1,1q22,,,2026-10-31
+9361,LONP1,"lon peptidase 1, mitochondrial",l;o;n; ;p,19,19p13.3,,,2026-10-31
+4053,LTBP2,latent transforming growth factor beta binding protein 2,l;a;t;e;n,14,14q24.3,,,2026-10-31
+8216,LZTR1,leucine zipper like post translational regulator 1,l;e;u;c;i,22,22q11.1-q11.2,,,2026-10-31
+5604,MAP2K1,mitogen-activated protein kinase kinase 1,d;u;a;l; ,15,15q22.31,,,2026-10-31
+5605,MAP2K2,mitogen-activated protein kinase kinase 2,d;u;a;l; ,19,19p13.3,,,2026-10-31
+9968,MED12,mediator complex subunit 12,m;e;d;i;a,X,Xq13.1,,,2026-10-31
+23389,MED13L,mediator complex subunit 13L,m;e;d;i;a,12,12q24.21,,,2026-10-31
+10025,MED16,mediator complex subunit 16,m;e;d;i;a,19,19p13.3,,,2026-10-31
+4208,MEF2C,myocyte enhancer factor 2C,m;y;o;c;y,5,5q14.3,,,2026-10-31
+4212,MEIS2,Meis homeobox 2,h;o;m;e;o,15,15q14,,,2026-10-31
+4281,MID1,midline 1,E;3; ;u;b,X,Xp22.2,,,2026-10-31
+8195,MKKS,MKKS centrosomal shuttling protein,m;o;l;e;c,20,20p12.2,,,2026-10-31
+22808,MRAS,muscle RAS oncogene homolog,r;a;s;-;r,3,3q22.3,,,2026-10-31
+4624,MYH6,myosin heavy chain 6,m;y;o;s;i,14,14q11.2,,,2026-10-31
+4625,MYH7,myosin heavy chain 7,m;y;o;s;i,14,14q11.2,,,2026-10-31
+745,MYRF,myelin regulatory factor,m;y;e;l;i,11,11q12.2,,,2026-10-31
+284086,NEK8,NIMA related kinase 8,s;e;r;i;n,17,17q11.2,,,2026-10-31
+4763,NF1,neurofibromin 1,n;e;u;r;o,17,17q11.2,,,2026-10-31
+25836,NIPBL,NIPBL cohesin loading factor,n;i;p;p;e,5,5p13.2,,,2026-10-31
+1482,NKX2-5,NK2 homeobox 5,h;o;m;e;o,5,5q35.1,,,2026-10-31
+137814,NKX2-6,NK2 homeobox 6,h;o;m;e;o,8,8p21.2,,,2026-10-31
+4838,NODAL,nodal growth differentiation factor,n;o;d;a;l,10,10q22.1,,,2026-10-31
+4841,NONO,non-POU domain containing octamer binding,n;o;n;-;P,X,Xq13.1,,,2026-10-31
+4851,NOTCH1,notch receptor 1,n;e;u;r;o,9,9q34.3,,,2026-10-31
+4853,NOTCH2,notch receptor 2,n;e;u;r;o,1,1p12,,,2026-10-31
+4854,NOTCH3,notch receptor 3,n;e;u;r;o,19,19p13.12,,,2026-10-31
+27031,NPHP3,nephrocystin 3,n;e;p;h;r,3,3q22.1,,,2026-10-31
+7026,NR2F2,nuclear receptor subfamily 2 group F member 2,C;O;U;P; ,15,15q26.2,,,2026-10-31
+4893,NRAS,"NRAS proto-oncogene, GTPase",G;T;P;a;s,1,1p13.2,,,2026-10-31
+64324,NSD1,nuclear receptor binding SET domain protein 1,h;i;s;t;o,5,5q35.3,,,2026-10-31
+5053,PAH,phenylalanine hydroxylase,p;h;e;n;y,12,12q23.2,,,2026-10-31
+9487,PIGL,phosphatidylinositol glycan anchor biosynthesis class L,N;-;a;c;e,17,17p11.2,,,2026-10-31
+23556,PIGN,phosphatidylinositol glycan anchor biosynthesis class N,G;P;I; ;e,18,18q21.33,,,2026-10-31
+23129,PLXND1,plexin D1,p;l;e;x;i,3,3q22.1,,,2026-10-31
+5500,PPP1CB,protein phosphatase 1 catalytic subunit beta,s;e;r;i;n,2,2p23.2,,,2026-10-31
+10084,PQBP1,polyglutamine binding protein 1,p;o;l;y;g,X,Xp11.23,,,2026-10-31
+5718,PSMD12,"proteasome 26S subunit, non-ATPase 12",2;6;S; ;p,17,17q24.2,,,2026-10-31
+5781,PTPN11,protein tyrosine phosphatase non-receptor type 11,t;y;r;o;s,12,12q24.13,,,2026-10-31
+22827,PUF60,poly(U) binding splicing factor 60,p;o;l;y;(,8,8q24.3,,,2026-10-31
+51715,RAB23,"RAB23, member RAS oncogene family",r;a;s;-;r,6,6p12.1-p11.2,,,2026-10-31
+5894,RAF1,"Raf-1 proto-oncogene, serine/threonine kinase",R;A;F; ;p,3,3p25.2,,,2026-10-31
+9939,RBM8A,RNA binding motif protein 8A,R;N;A;-;b,1,1q21.1,,,2026-10-31
+473,RERE,arginine-glutamic acid dipeptide repeats,a;r;g;i;n,1,1p36.23,,,2026-10-31
+5982,RFC2,replication factor C subunit 2,r;e;p;l;i,7,7q11.23,,,2026-10-31
+64919,BCL11B,BCL11 transcription factor B,B;-;c;e;l,14,14q32.2,,,2026-10-31
+54538,ROBO4,roundabout guidance receptor 4,r;o;u;n;d,11,11q24.2,,,2026-10-31
+6135,RPL11,ribosomal protein L11,l;a;r;g;e,1,1p36.11,,,2026-10-31
+6155,RPL27,ribosomal protein L27,l;a;r;g;e,17,17q21.31,,,2026-10-31
+6125,RPL5,ribosomal protein L5,l;a;r;g;e,1,1p22.1,,,2026-10-31
+6223,RPS19,ribosomal protein S19,s;m;a;l;l,19,19q13.2,,,2026-10-31
+6231,RPS26,ribosomal protein S26,s;m;a;l;l,12,12q13.2,,,2026-10-31
+22800,RRAS2,RAS related 2,r;a;s;-;r,11,11p15.2,,,2026-10-31
+6239,RREB1,ras responsive element binding protein 1,r;a;s;-;r,6,6p24.3,,,2026-10-31
+6299,SALL1,spalt like transcription factor 1,s;a;l;-;l,16,16q12.1,,,2026-10-31
+57167,SALL4,spalt like transcription factor 4,s;a;l;-;l,20,20q13.2,,,2026-10-31
+9632,SEC24C,"SEC24 homolog C, COPII component",p;r;o;t;e,10,10q22.2,,,2026-10-31
+9723,SEMA3E,semaphorin 3E,s;e;m;a;p,7,7q21.11,,,2026-10-31
+8036,SHOC2,SHOC2 leucine rich repeat scaffold protein,l;e;u;c;i,10,10q25.2,,,2026-10-31
+9652,SKIC3,SKI3 subunit of superkiller complex,s;u;p;e;r,5,5q15,,,2026-10-31
+55315,SLC29A3,solute carrier family 29 member 3,e;q;u;i;l,10,10q22.1,,,2026-10-31
+4087,SMAD2,SMAD family member 2,S;M;A;D; ,18,18q21.1,,,2026-10-31
+4088,SMAD3,SMAD family member 3,S;M;A;D; ,15,15q22.33,,,2026-10-31
+4089,SMAD4,SMAD family member 4,S;M;A;D; ,18,18q21.2,,,2026-10-31
+4091,SMAD6,SMAD family member 6,S;M;A;D; ,15,15q22.31,,,2026-10-31
+6597,SMARCA4,SWI/SNF related BAF chromatin remodeling complex subunit ATPase 4,S;W;I;/;S,19,19p13.2,,,2026-10-31
+6605,SMARCE1,SWI/SNF related BAF chromatin remodeling complex subunit E1,S;W;I;/;S,17,17q21.2,,,2026-10-31
+9126,SMC3,structural maintenance of chromosomes 3,s;t;r;u;c,10,10q25.2,,,2026-10-31
+6654,SOS1,SOS Ras/Rac guanine nucleotide exchange factor 1,s;o;n; ;o,2,2p22.1,,,2026-10-31
+6655,SOS2,SOS Ras/Rho guanine nucleotide exchange factor 2,s;o;n; ;o,14,14q21.3,,,2026-10-31
+6659,SOX4,SRY-box transcription factor 4,t;r;a;n;s,6,6p22.3,,,2026-10-31
+23384,SPECC1L,sperm antigen with calponin homology and coiled-coil domains 1 like,c;y;t;o;s,22,22q11.23,,,2026-10-31
+10847,SRCAP,Snf2 related CREBBP activator protein,c;h;r;o;m,16,16p11.2,,,2026-10-31
+10735,STAG2,STAG2 cohesin complex component,c;o;h;e;s,X,Xq25,,,2026-10-31
+64220,STRA6,signaling receptor and transporter of retinol STRA6,r;e;c;e;p,15,15q24.1,,,2026-10-31
+6804,STX1A,syntaxin 1A,s;y;n;t;a,7,7q11.23,,,2026-10-31
+6888,TALDO1,transaldolase 1,t;r;a;n;s,11,11p15.5,,,2026-10-31
+26608,TBL2,transducin beta like 2,t;r;a;n;s,7,7q11.23,,,2026-10-31
+6899,TBX1,T-box transcription factor 1,T;-;b;o;x,22,22q11.21,,,2026-10-31
+57057,TBX20,T-box transcription factor 20,T;-;b;o;x,7,7p14.2,,,2026-10-31
+6910,TBX5,T-box transcription factor 5,T;-;b;o;x,12,12q24.21,,,2026-10-31
+7021,TFAP2B,transcription factor AP-2 beta,t;r;a;n;s,6,6p12.3,,,2026-10-31
+7046,TGFBR1,transforming growth factor beta receptor 1,T;G;F;-;b,9,9q22.33,,,2026-10-31
+7048,TGFBR2,transforming growth factor beta receptor 2,T;G;F;-;b,3,3p24.1,,,2026-10-31
+4921,DDR2,discoidin domain receptor tyrosine kinase 2,d;i;s;c;o,1,1q23.3,,,2026-10-31
+9772,TMEM94,transmembrane protein 94,t;r;a;n;s,17,17q25.1,,,2026-10-31
+84231,TRAF7,TNF receptor associated factor 7,E;3; ;u;b,16,16p13.3,,,2026-10-31
+7353,UFD1,ubiquitin recognition factor in ER associated degradation 1,u;b;i;q;u,22,22q11.21,,,2026-10-31
+56886,UGGT1,UDP-glucose glycoprotein glucosyltransferase 1,U;D;P;-;g,2,2q14.3,,,2026-10-31
+57020,VPS35L,VPS35 endosomal protein sorting factor like,V;P;S;3;5,16,16p12.3,,,2026-10-31
+9897,WASHC5,WASH complex subunit 5,W;A;S;H; ,8,8q24.13,,,2026-10-31
+7490,WT1,WT1 transcription factor,W;i;l;m;s,11,11p13,,,2026-10-31
+9839,ZEB2,zinc finger E-box binding homeobox 2,z;i;n;c; ,2,2q22.3,,,2026-10-31
+7547,ZIC3,Zic family zinc finger 3,z;i;n;c; ,X,Xq26.3,,,2026-10-31
+10269,ZMPSTE24,zinc metallopeptidase STE24,C;A;A;X; ,1,1p34.2,,,2026-10-31

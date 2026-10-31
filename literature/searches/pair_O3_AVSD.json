@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_O3_AVSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ozone\"[MeSH] OR \"ozone\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrioventricular septal defect\"[tiab] OR \"atrioventricular canal\"[tiab] OR \"AVSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ozone\"[MeSH Terms] OR \"ozone\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrioventricular septal defect\"[Title/Abstract] OR \"atrioventricular canal\"[Title/Abstract] OR \"AVSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "39108168",
+      "title": "Racial disparities in maternal exposure to ambient air pollution during pregnancy and prevalence of congenital heart defects.",
+      "journal": "American journal of epidemiology",
+      "year": "2025",
+      "first_author": "Arogbokun Knutson OC",
+      "doi": "10.1093/aje/kwae253",
+      "abstract": "Air pollution may be a potential cause of congenital heart defects (CHDs), but racial disparities in this association are unexplored. We conducted a statewide population-based cohort study using North Carolina birth data from 2003 to 2015 (n = 1 225 285) to investigate the relationship between air pollution and CHDs (specifically pulmonary valve atresia/stenosis, tetralogy of Fallot [TOF], and atrioventricular septal defect [AVSD]). Maternal exposure to particulate matter ≤ 2.5 μm in diameter (PM2.5) and ozone during weeks 3 to 9 of pregnancy were estimated using the Environmental Protection Agency's Downscaler Model. Single- and co-pollutant log-binomial models were created for the entire population and stratified by race to investigate disparities. Positive associations between PM2.5 and CHDs were observed. An increasing concentration-response association was found for PM2.5 and TOF in adjusted, co-pollutant models (quartile 4 prevalence ratio: 1.46; 95% CI, 1.06-2.03). Differences in the effect of PM2.5 on CHD prevalence were seen in some models stratified by race, although clear exposure-prevalence gradients were not evident. Positive associations were also seen in adjusted, co-pollutant models of ozone and AVSD. Study results suggest that prenatal PM2.5 and ozone exposure may increase the prevalence of certain CHDs. A consistent pattern of differences in association by race/ethnicity was not apparent. This article is part of a Special Collection on Environmental Epidemiology.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't;Research Support, N.I.H., Extramural;Research Support, N.I.H., Intramural",
+      "mesh_terms": "Adult;Female;Humans;Pregnancy;Young Adult;Air Pollutants;Air Pollution;Health Status Disparities;Heart Defects, Congenital;Maternal Exposure;North Carolina;Ozone;Particulate Matter;Prevalence;Racial Groups",
+      "language": "eng"
+    }
+  ]
+}

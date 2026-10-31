@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_RA_PDA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tretinoin\"[MeSH] OR \"retinoic acid\"[tiab] OR \"isotretinoin\"[tiab] OR \"vitamin A\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"patent ductus arteriosus\"[tiab] OR \"ductus arteriosus\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tretinoin\"[MeSH Terms] OR \"retinoic acid\"[Title/Abstract] OR \"isotretinoin\"[Title/Abstract] OR \"vitamin A\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"patent ductus arteriosus\"[Title/Abstract] OR \"ductus arteriosus\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "11385132",
+      "title": "Maternal vitamin A administration and the fetal ductus arteriosus.",
+      "journal": "Pediatric research",
+      "year": "2001",
+      "first_author": "Shaul PW",
+      "doi": "10.1203/00006450-200106000-00005",
+      "abstract": "",
+      "pubtypes": "Comment;Journal Article;Review",
+      "mesh_terms": "Animals;Ductus Arteriosus;Ductus Arteriosus, Patent;Female;Humans;Infant, Newborn;Maternal-Fetal Exchange;Oxygen;Pregnancy;Receptors, Retinoic Acid;Vitamin A",
+      "language": "eng"
+    },
+    {
+      "pmid": "28040141",
+      "title": "Prenatal diagnosis of Smith-Magenis syndrome in two fetuses with increased nuchal translucency, mild lateral ventriculomegaly, and congenital heart defects.",
+      "journal": "Taiwanese journal of obstetrics & gynecology",
+      "year": "2016",
+      "first_author": "Lei TY",
+      "doi": "10.1016/j.tjog.2015.07.007",
+      "abstract": "OBJECTIVE: Smith-Magenis syndrome (SMS) is a multiple congenital anomalies/mental retardation disorder characterized by an interstitial deletion involving chromosome 17p11.2 containing the retinoic acid-induced 1 (RAI1) gene or due to mutation of RAI1. Few cases have been reported in the medical literature regarding prenatal diagnosis of SMS. We report on the prenatal diagnosis of SMS in two fetuses with increased nuchal translucency (NT), mild lateral ventriculomegaly, and congenital heart defects by whole-genome and high-resolution chromosome microarray analysis (CMA). CASE REPORT: The CMA result of Fetus 1, which had increased NT, mild lateral ventriculomegaly, tricuspid regurgitation, and right aortic arch with left ductus arteriosus, revealed a de novo 4.79-Mb deletion at 17p12p11.2. Fetus 2 had increased NT, pulmonary stenosis, and a ventricular septal defect, and showed a de novo 3.68-Mb deletion at 17p11.2. CONCLUSION: The findings further confirm that increased NT is associated with genetic syndromes, and brain imaging is necessary for SMS fetuses. Both deletions encompass the SMS \"critical region\", which includes many genes including RAI1. However, the precise gene(s) responsible for the heart defects in SMS remain unclear; further efforts should be undertaken to understand the molecular basis of this syndrome.",
+      "pubtypes": "Case Reports;Journal Article",
+      "mesh_terms": "Abnormalities, Multiple;Adult;Chromosomes, Human, Pair 17;Echocardiography;Female;Heart Defects, Congenital;Humans;Hydrocephalus;Intellectual Disability;Nuchal Translucency Measurement;Pregnancy;Smith-Magenis Syndrome",
+      "language": "eng"
+    }
+  ]
+}

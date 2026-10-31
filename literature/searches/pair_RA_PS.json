@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_RA_PS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tretinoin\"[MeSH] OR \"retinoic acid\"[tiab] OR \"isotretinoin\"[tiab] OR \"vitamin A\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"pulmonary stenosis\"[tiab] OR \"pulmonary valve stenosis\"[tiab] OR \"pulmonic stenosis\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tretinoin\"[MeSH Terms] OR \"retinoic acid\"[Title/Abstract] OR \"isotretinoin\"[Title/Abstract] OR \"vitamin A\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"pulmonary stenosis\"[Title/Abstract] OR \"pulmonary valve stenosis\"[Title/Abstract] OR \"pulmonic stenosis\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "19144126",
+      "title": "Tetralogy of Fallot.",
+      "journal": "Orphanet journal of rare diseases",
+      "year": "2009",
+      "first_author": "Bailliard F",
+      "doi": "10.1186/1750-1172-4-2",
+      "abstract": "Tetralogy of Fallot is a congenital cardiac malformation that consists of an interventricular communication, also known as a ventricular septal defect, obstruction of the right ventricular outflow tract, override of the ventricular septum by the aortic root, and right ventricular hypertrophy. This combination of lesions occurs in 3 of every 10,000 live births, and accounts for 7-10% of all congenital cardiac malformations. Patients nowadays usually present as neonates, with cyanosis of varying intensity based on the degree of obstruction to flow of blood to the lungs. The aetiology is multifactorial, but reported associations include untreated maternal diabetes, phenylketonuria, and intake of retinoic acid. Associated chromosomal anomalies can include trisomies 21, 18, and 13, but recent experience points to the much more frequent association of microdeletions of chromosome 22. The risk of recurrence in families is 3%. Useful diagnostic tests are the chest radiograph, electrocardiogram, and echocardiogram. The echocardiogram establishes the definitive diagnosis, and usually provides sufficient information for planning of treatment, which is surgical. Approximately half of patients are now diagnosed antenatally. Differential diagnosis includes primary pulmonary causes of cyanosis, along with other cyanotic heart lesions, such as critical pulmonary stenosis and transposed arterial trunks. Neonates who present with ductal-dependent flow to the lungs will receive prostaglandins to maintain ductal patency until surgical intervention is performed. Initial intervention may be palliative, such as surgical creation of a systemic-to-pulmonary arterial shunt, but the trend in centres of excellence is increasingly towards neonatal complete repair. Centres that undertake neonatal palliation will perform the complete repair at the age of 4 to 6 months. Follow-up in patients born 30 years ago shows a rate of survival greater than 85%. Chronic issues that now face such adults include pulmonary regurgitation, recurrence of pulmonary stenosis, and ventricular arrhythmias. As the strategies for surgical and medical management have progressed, the morbidity and mortality of those born with tetralogy of Fallot in the current era is expected to be significantly improved.",
+      "pubtypes": "Journal Article;Review",
+      "mesh_terms": "Adult;Genetic Counseling;Heart Defects, Congenital;Humans;Infant;Infant, Newborn;Prognosis;Tetralogy of Fallot;Ultrasonography",
+      "language": "eng"
+    },
+    {
+      "pmid": "28040141",
+      "title": "Prenatal diagnosis of Smith-Magenis syndrome in two fetuses with increased nuchal translucency, mild lateral ventriculomegaly, and congenital heart defects.",
+      "journal": "Taiwanese journal of obstetrics & gynecology",
+      "year": "2016",
+      "first_author": "Lei TY",
+      "doi": "10.1016/j.tjog.2015.07.007",
+      "abstract": "OBJECTIVE: Smith-Magenis syndrome (SMS) is a multiple congenital anomalies/mental retardation disorder characterized by an interstitial deletion involving chromosome 17p11.2 containing the retinoic acid-induced 1 (RAI1) gene or due to mutation of RAI1. Few cases have been reported in the medical literature regarding prenatal diagnosis of SMS. We report on the prenatal diagnosis of SMS in two fetuses with increased nuchal translucency (NT), mild lateral ventriculomegaly, and congenital heart defects by whole-genome and high-resolution chromosome microarray analysis (CMA). CASE REPORT: The CMA result of Fetus 1, which had increased NT, mild lateral ventriculomegaly, tricuspid regurgitation, and right aortic arch with left ductus arteriosus, revealed a de novo 4.79-Mb deletion at 17p12p11.2. Fetus 2 had increased NT, pulmonary stenosis, and a ventricular septal defect, and showed a de novo 3.68-Mb deletion at 17p11.2. CONCLUSION: The findings further confirm that increased NT is associated with genetic syndromes, and brain imaging is necessary for SMS fetuses. Both deletions encompass the SMS \"critical region\", which includes many genes including RAI1. However, the precise gene(s) responsible for the heart defects in SMS remain unclear; further efforts should be undertaken to understand the molecular basis of this syndrome.",
+      "pubtypes": "Case Reports;Journal Article",
+      "mesh_terms": "Abnormalities, Multiple;Adult;Chromosomes, Human, Pair 17;Echocardiography;Female;Heart Defects, Congenital;Humans;Hydrocephalus;Intellectual Disability;Nuchal Translucency Measurement;Pregnancy;Smith-Magenis Syndrome",
+      "language": "eng"
+    }
+  ]
+}

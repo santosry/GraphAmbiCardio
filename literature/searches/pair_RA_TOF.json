@@ -1,0 +1,73 @@
+{
+  "search_id": "pair_RA_TOF",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tretinoin\"[MeSH] OR \"retinoic acid\"[tiab] OR \"isotretinoin\"[tiab] OR \"vitamin A\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"tetralogy of fallot\"[tiab] OR \"fallot\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tretinoin\"[MeSH Terms] OR \"retinoic acid\"[Title/Abstract] OR \"isotretinoin\"[Title/Abstract] OR \"vitamin A\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"tetralogy of fallot\"[Title/Abstract] OR \"fallot\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 5,
+  "retrieved_n": 5,
+  "studies": [
+    {
+      "pmid": "19144126",
+      "title": "Tetralogy of Fallot.",
+      "journal": "Orphanet journal of rare diseases",
+      "year": "2009",
+      "first_author": "Bailliard F",
+      "doi": "10.1186/1750-1172-4-2",
+      "abstract": "Tetralogy of Fallot is a congenital cardiac malformation that consists of an interventricular communication, also known as a ventricular septal defect, obstruction of the right ventricular outflow tract, override of the ventricular septum by the aortic root, and right ventricular hypertrophy. This combination of lesions occurs in 3 of every 10,000 live births, and accounts for 7-10% of all congenital cardiac malformations. Patients nowadays usually present as neonates, with cyanosis of varying intensity based on the degree of obstruction to flow of blood to the lungs. The aetiology is multifactorial, but reported associations include untreated maternal diabetes, phenylketonuria, and intake of retinoic acid. Associated chromosomal anomalies can include trisomies 21, 18, and 13, but recent experience points to the much more frequent association of microdeletions of chromosome 22. The risk of recurrence in families is 3%. Useful diagnostic tests are the chest radiograph, electrocardiogram, and echocardiogram. The echocardiogram establishes the definitive diagnosis, and usually provides sufficient information for planning of treatment, which is surgical. Approximately half of patients are now diagnosed antenatally. Differential diagnosis includes primary pulmonary causes of cyanosis, along with other cyanotic heart lesions, such as critical pulmonary stenosis and transposed arterial trunks. Neonates who present with ductal-dependent flow to the lungs will receive prostaglandins to maintain ductal patency until surgical intervention is performed. Initial intervention may be palliative, such as surgical creation of a systemic-to-pulmonary arterial shunt, but the trend in centres of excellence is increasingly towards neonatal complete repair. Centres that undertake neonatal palliation will perform the complete repair at the age of 4 to 6 months. Follow-up in patients born 30 years ago shows a rate of survival greater than 85%. Chronic issues that now face such adults include pulmonary regurgitation, recurrence of pulmonary stenosis, and ventricular arrhythmias. As the strategies for surgical and medical management have progressed, the morbidity and mortality of those born with tetralogy of Fallot in the current era is expected to be significantly improved.",
+      "pubtypes": "Journal Article;Review",
+      "mesh_terms": "Adult;Genetic Counseling;Heart Defects, Congenital;Humans;Infant;Infant, Newborn;Prognosis;Tetralogy of Fallot;Ultrasonography",
+      "language": "eng"
+    },
+    {
+      "pmid": "29357951",
+      "title": "Maternal and neonatal micronutrient levels in newborns with CHD.",
+      "journal": "Cardiology in the young",
+      "year": "2018",
+      "first_author": "Dilli D",
+      "doi": "10.1017/S1047951117002372",
+      "abstract": "OBJECTIVE: It is suggested that folic acid and/or multivitamins, taken periconceptionally, have a role in the prevention of many congenital anomalies. The aim of this study was to determine the serum micronutrient levels in mother-infant pairs with CHD compared with those with healthy newborns and their mothers. METHODS: Serum levels of folic acid, homocysteine, zinc, vitamin A, vitamin D, and vitamin B12 were measured from 108 newborns with CHD (study group) and 103 healthy newborns (control group). The mothers' micronutrient levels were also measured simultaneously. RESULTS: When compared with healthy newborns, for both maternal and neonatal data, homocysteine and zinc levels were higher and vitamin D levels were lower in the study group. In multivariate analysis, only maternal high zinc levels were associated with CHD in the newborns (p=0.02, OR: 0.9, 95% CI 0.8-0.9). The results did not change when analysed for truncal anomalies including truncus arteriosus, tetralogy of Fallot, and d-transposition of great arteries. There were positive correlations between maternal and neonatal levels of micronutrients, except vitamin B12. CONCLUSION: We thought that high homocysteine and zinc levels and low vitamin D levels in mother-infant pairs might have a role in the aetiopathogenesis of CHD. Large-scale, prospective studies are needed to clarify the role of micronutrients in CHDs.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adult;Case-Control Studies;Female;Food, Fortified;Heart Defects, Congenital;Humans;Incidence;Infant, Newborn;Male;Micronutrients;Mothers;Pregnancy;Prospective Studies;Turkey",
+      "language": "eng"
+    },
+    {
+      "pmid": "21107276",
+      "title": "Congenital diaphragmatic hernia after exposure to a triple retinoic acid antagonist during pregnancy.",
+      "journal": "Journal of cardiovascular medicine (Hagerstown, Md.)",
+      "year": "2017",
+      "first_author": "Cipollone D",
+      "doi": "10.2459/JCM.0b013e3283410329",
+      "abstract": "AIM: To establish a mouse model for the study of congenital defects, using exposure of pregnant females to the teratogen BMS-189453, a multiple retinoic acid competitive antagonist.We found not less than 60% of fetuses had transposition of the great arteries and l5% had other congenital heart defects such as double outlet right ventricle, tetralogy of Fallot, truncus and right aortic arch. Newborns exposed in utero to BMS-189453 were affected by thymus aplasia or hypoplasia, and severe congenital anomalies of the central nervous system due to neural tube defects. An anterior rotation of the right lung was also frequently present in our model. We also report a case of murine congenital diaphragmatic hernia associated with thymic aplasia and transposition of the great arteries. CONCLUSION: These findings support the hypothesis that the combination of diaphragmatic hernia and congenital heart defects may be related to an alteration of the retinoic acid signaling pathways.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Disease Models, Animal;Female;Hernias, Diaphragmatic, Congenital;Immunologic Deficiency Syndromes;Maternal Exposure;Mice;Pregnancy;Receptors, Retinoic Acid;Retinoids;Thymus Gland;Transposition of Great Vessels",
+      "language": "eng"
+    },
+    {
+      "pmid": "23788084",
+      "title": "Retinoic acid-induced ventricular non-compacted cardiomyopathy in mice.",
+      "journal": "Kardiologia polska",
+      "year": "2013",
+      "first_author": "Kołodzińska A",
+      "doi": "10.5603/KP.2013.0090",
+      "abstract": "BACKGROUND: Precise tissue concentration of retinoic acid (RA) is indispensable for proper interaction of second heart field cells with cardiac neural crest cells and induction of signalling pathways important for normal myocardial growth. AIM: Since RA deficiency during embryogenesis induces noncompaction, we hypothesised that excess RA at the stage of heart tube elongation may cause thinning of the myocardial wall which leads to noncompaction. METHODS: RA was administered at 70 mg/kg b.w. on 8.5 days post coitus (dpc) to pregnant mice to elicit cardiac malformations in foetuses. We studied noncompaction development in RA-treated mouse offspring. The cardiac noncompaction was evaluated in different stages of heart development as the quotient of the distance between the epicardial surface and trabecular tips(represented by a) and the distance between the epicardial surface and trabecular recesses (represented by b) in RA-treated hearts compared to control non-treated. RESULTS: We demonstrated that apart from outflow tract defects such as double outlet right ventricle, transposition of the great arteries and tetralogy of Fallot in foetuses in mouse offspring, noncompaction occurs in about 42% of cases. At the stage of 13 dpc and later in development the ratio a/b was higher in RA-treated hearts exhibiting noncompaction compared to the control hearts. This cardiomyopathy was more evident in the right ventricle than in the left ventricle. CONCLUSIONS: Noncompaction caused by RA overdose can be elicited in part of the mouse offspring by administering RA at the stage of cardiac tube elongation.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Animals;Disease Models, Animal;Drug Overdose;Female;Heart;Heart Defects, Congenital;Mice;Mice, Inbred C57BL;Mice, Inbred CBA;Myocardium;Pregnancy;Prenatal Exposure Delayed Effects;Tomography, X-Ray Computed;Tretinoin",
+      "language": "eng"
+    },
+    {
+      "pmid": "21591244",
+      "title": "Tbx1, subpulmonary myocardium and conotruncal congenital heart defects.",
+      "journal": "Birth defects research. Part A, Clinical and molecular teratology",
+      "year": "2011",
+      "first_author": "Parisot P",
+      "doi": "10.1002/bdra.20803",
+      "abstract": "Conotruncal congenital heart defects, including defects in septation and alignment of the ventricular outlets, account for approximately a third of all congenital heart defects. Failure of the left ventricle to obtain an independent outlet results in incomplete separation of systemic and pulmonary circulation at birth. The embryonic outflow tract, a transient cylinder of myocardium connecting the embryonic ventricles to the aortic sac, plays a critical role in this process during normal development. The outflow tract (OFT) is derived from a population of cardiac progenitor cells called the second heart field that contributes to the arterial pole of the heart tube during cardiac looping. During septation, the OFT is remodeled to form the base of the ascending aorta and pulmonary trunk. Tbx1, the major candidate gene for DiGeorge syndrome, is a critical transcriptional regulator of second heart field development. DiGeorge syndrome patients are haploinsufficient for Tbx1 and present a spectrum of conotruncal anomalies including tetralogy of Fallot, pulmonary atresia, and common arterial trunk. In this review, we focus on the role of Tbx1 in the regulation of second heart field deployment and, in particular, in the development of a specific population of myocardial cells at the base of the pulmonary trunk. Recent data characterizing additional properties and regulators of development of this region of the heart, including the retinoic acid, hedgehog, and semaphorin signaling pathways, are discussed. These findings identify future subpulmonary myocardium as the clinically relevant component of the second heart field and provide new mechanistic insight into a spectrum of common conotruncal congenital heart defects.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't;Review",
+      "mesh_terms": "Animals;Gene Expression Regulation, Developmental;Heart Defects, Congenital;Humans;Lung;Signal Transduction;T-Box Domain Proteins",
+      "language": "eng"
+    }
+  ]
+}

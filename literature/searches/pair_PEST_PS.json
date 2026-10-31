@@ -1,0 +1,49 @@
+{
+  "search_id": "pair_PEST_PS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"pesticides\"[MeSH] OR \"pesticide*\"[tiab] OR \"organophosphate*\"[tiab] OR \"glyphosate\"[tiab] OR \"insecticide*\"[tiab] OR \"herbicide*\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"pulmonary stenosis\"[tiab] OR \"pulmonary valve stenosis\"[tiab] OR \"pulmonic stenosis\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"pesticides\"[MeSH Terms] OR \"pesticide*\"[Title/Abstract] OR \"organophosphate*\"[Title/Abstract] OR \"glyphosate\"[Title/Abstract] OR \"insecticide*\"[Title/Abstract] OR \"herbicide*\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"pulmonary stenosis\"[Title/Abstract] OR \"pulmonary valve stenosis\"[Title/Abstract] OR \"pulmonic stenosis\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 3,
+  "retrieved_n": 3,
+  "studies": [
+    {
+      "pmid": "33135766",
+      "title": "Maternal occupational exposure and congenital heart defects in offspring.",
+      "journal": "Scandinavian journal of work, environment & health",
+      "year": "2020",
+      "first_author": "Spinder N",
+      "doi": "10.5271/sjweh.3912",
+      "abstract": "Objectives Congenital heart defects (CHD) are the most prevalent congenital anomalies. This study aims to examine the association between maternal occupational exposures to organic and mineral dust, solvents, pesticides, and metal dust and fumes and CHD in the offspring, assessing several subgroups of CHD. Methods For this case-control study, we examined 1174 cases with CHD from EUROCAT Northern Netherlands and 5602 controls without congenital anomalies from the Lifelines cohort study. Information on maternal jobs held early in pregnancy was collected via self-administered questionnaires, and job titles were linked to occupational exposures using a job exposure matrix. Results An association was found between organic dust exposure and coarctation of aorta [adjusted odds ratio (OR adj) 1.90, 95% confidence interval (CI) 1.01-3.59] and pulmonary (valve) stenosis in combination with ventricular septal defect (OR adj2.68, 95% CI 1.07-6.73). Mineral dust exposure was associated with increased risk of coarctation of aorta (OR adj2.94, 95% CI 1.21-7.13) and pulmonary valve stenosis (OR adj1.99, 95% CI 1.10-3.62). Exposure to metal dust and fumes was infrequent but was associated with CHD in general (OR adj2.40, 95% CI 1.09-5.30). Exposure to both mineral dust and metal dust and fumes was associated with septal defects (OR adj3.23, 95% CI 1.14-9.11). Any maternal occupational exposure was associated with a lower risk of aortic stenosis (OR adj0.32, 95% CI 0.11-0.94). Conclusions Women should take preventive measures or avoid exposure to mineral and organic dust as well as metal dust and fumes early in pregnancy as this could possibly affect foetal heart development.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adolescent;Adult;Air Pollutants, Occupational;Case-Control Studies;Dust;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Male;Maternal Exposure;Maternal-Fetal Exchange;Metals;Middle Aged;Minerals;Netherlands;Occupational Exposure;Pesticides;Pregnancy;Prenatal Exposure Delayed Effects;Solvents;Young Adult",
+      "language": "eng"
+    },
+    {
+      "pmid": "26033688",
+      "title": "Maternal occupational pesticide exposure and risk of congenital heart defects in the National Birth Defects Prevention Study.",
+      "journal": "Birth defects research. Part A, Clinical and molecular teratology",
+      "year": "2015",
+      "first_author": "Rocheleau CM",
+      "doi": "10.1002/bdra.23351",
+      "abstract": "BACKGROUND: Congenital heart defects (CHDs) are common birth defects, affecting approximately 1% of live births. Pesticide exposure has been suggested as an etiologic factor for CHDs, but previous results were inconsistent. METHODS: We examined maternal occupational exposure to fungicides, insecticides, and herbicides for 3328 infants with CHDs and 2988 unaffected control infants of employed mothers using data for 1997 through 2002 births from the National Birth Defects Prevention Study, a population-based multisite case-control study. Potential pesticide exposure from 1 month before conception through the first trimester of pregnancy was assigned by an expert-guided task-exposure matrix and job history details self-reported by mothers. Odds ratios (ORs) and 95% confidence intervals (CIs) were estimated using multivariable logistic regression. RESULTS: Maternal occupational exposure to pesticides was not associated with CHDs overall. In examining specific CHD subtypes compared with controls, some novel associations were observed with higher estimated pesticide exposure: insecticides only and secundum atrial septal defect (OR = 1.8; 95% CI, 1.3-2.7, 40 exposed cases); both insecticides and herbicides and hypoplastic left heart syndrome (OR = 5.1; 95% CI, 1.7-15.3, 4 exposed cases), as well as pulmonary valve stenosis (OR = 3.6; 95% CI, 1.3-10.1, 5 exposed cases); and insecticides, herbicides, and fungicides and tetralogy of Fallot (TOF) (OR = 2.2; 95% CI, 1.2-4.0, 13 exposed cases). CONCLUSION: Broad pesticide exposure categories were not associated with CHDs overall, but examining specific CHD subtypes revealed some increased odds ratios. These results highlight the importance of examining specific CHDs separately. Because of multiple comparisons, additional work is needed to verify these associations.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Adult;Female;Heart Defects, Congenital;Humans;Maternal Exposure;Occupational Exposure;Pesticides;Pregnancy;Retrospective Studies;Risk Factors;United States",
+      "language": "eng"
+    },
+    {
+      "pmid": "25262086",
+      "title": "Residential agricultural pesticide exposures and risk of selected congenital heart defects among offspring in the San Joaquin Valley of California.",
+      "journal": "Environmental research",
+      "year": "2014",
+      "first_author": "Carmichael SL",
+      "doi": "10.1016/j.envres.2014.08.030",
+      "abstract": "BACKGROUND: Pesticide exposures are ubiquitous and of substantial public concern. We examined the potential association of congenital heart defects with residential proximity to commercial agricultural pesticide applications in the San Joaquin Valley, California. METHODS: Study subjects included 569 heart defect cases and 785 non-malformed controls born from 1997 to 2006 whose mothers participated in a population-based case-control study. Associations with any versus no exposure to physicochemical groups of pesticides and specific chemicals were assessed using logistic regression adjusted for relevant covariates, for 8 heart defect phenotypes that included ≥ 50 cases and pesticide exposures with ≥ 5 exposed cases and controls, which resulted in 235 comparisons. RESULTS: 38% of cases and controls were classified as exposed to pesticides within a 500 m radius of mother's address during a 3-month periconceptional window. Adjusted odds ratios (AORs) with 95% CIs excluding 1.0 were observed for 18 comparisons; all were >1 and ranged from 1.9 to 7.1. They included tetralogy of Fallot (n=101 cases) and neonicotinoids; hypoplastic left heart syndrome (n=59) and strobins; coarctation of the aorta (n=74) and pyridazinones; pulmonary valve stenosis (n=53) and bipyridyliums and organophosphates; ventricular septal defects (n=93) and avermectins and pyrethroids; and atrial septal defects (n=132) and dichlorphenoxy acid or esters, organophosphates, organotins, and pyrethroids. No AORs met both of these criteria for d-transposition of the great arteries (n=58) or heterotaxia (n=53). CONCLUSIONS: Most pesticides were not associated with increased risk of specific heart defect phenotypes. For the few that were associated, results should be interpreted with caution until replicated in other study populations.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adult;Agriculture;California;Environmental Exposure;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Logistic Models;Maternal Exposure;Odds Ratio;Pesticides;Pregnancy",
+      "language": "eng"
+    }
+  ]
+}

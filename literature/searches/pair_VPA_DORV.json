@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_VPA_DORV",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"valproic acid\"[MeSH] OR \"valproic acid\"[tiab] OR \"valproate\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"double outlet right ventricle\"[tiab] OR \"DORV\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"valproic acid\"[MeSH Terms] OR \"valproic acid\"[Title/Abstract] OR \"valproate\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"double outlet right ventricle\"[Title/Abstract] OR \"DORV\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "18456715",
+      "title": "Double outlet right ventricle: aetiologies and associations.",
+      "journal": "Journal of medical genetics",
+      "year": "2008",
+      "first_author": "Obler D",
+      "doi": "10.1136/jmg.2008.057984",
+      "abstract": "BACKGROUND: Double outlet right ventricle (DORV), a clinically significant congenital heart defect, occurs in 1-3% of individuals with congenital heart defects. In contrast to other major congenital heart defects, there are no systematic or comprehensive data regarding associations, aetiologies, and pathogenesis of DORV. We analysed reported cases in the medical literature to address these issues. METHODS: We queried the PubMed database using key words \"double outlet right ventricle\" and \"DORV\" for case reports, epidemiologic analyses and animal studies with this cardiac anomaly. The anatomic subtype of DORV was classified according to criteria of Van Praagh. RESULTS: Chromosomal abnormalities were present in 61 of the 149 cases of DORV. Trisomies 13 and 18, and del 22q11 were the most commonly associated cytogenetic lesions; different anatomic subtypes of DORV were noted in trisomies 13 and 18 versus del 22q11. DORV was reported in many uncommon or rare non-chromosomal syndromes. Mutations and non-synonymous sequence variants in the CFC1 and CSX genes were the most commonly reported monogenic loci associated with DORV in humans; numerous genes are reported in murine models of DORV. Animal studies implicate maternal diabetes and prenatal exposure to ethanol, retinoids, theophylline, and valproate in DORV teratogenesis. CONCLUSIONS: The large number of genes associated with DORV in both humans and animal models and the different anatomic subtypes seen in specific aetiologies indicate the likelihood of several distinct pathogenetic mechanisms for DORV, including impairment of neural crest derivative migration and impairment of normal cardiac situs and looping.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Review",
+      "mesh_terms": "Animals;Chromosome Aberrations;Double Outlet Right Ventricle;Humans;Teratogens",
+      "language": "eng"
+    },
+    {
+      "pmid": "8211818",
+      "title": "Sodium valproate-induced cardiovascular abnormalities in the Jcl:ICR mouse fetus: peak sensitivity of gestational day and dose-dependent effect.",
+      "journal": "Teratology",
+      "year": "1993",
+      "first_author": "Sonoda T",
+      "doi": "10.1002/tera.1420480206",
+      "abstract": "Sodium valproate was administered to Jcl:ICR mice in order to determine its effect on cardiovascular development. A single dose of 600 mg/kg of sodium valproate was injected intraperitoneally on gestational days 6, 7, 8, or 9. In same animals, a single dose of 300, 400, 500, or 700 mg/kg was injected on gestational day 7. On day 18 of gestation, dams were laparotomized to observe number of live, dead and resorbed fetuses. In addition, live fetuses were examined for cardiovascular abnormalities. Although cardiovascular abnormalities were noted in 3% of live fetuses and in 26% of litters in the group treated on day 6 (600 mg/kg), there was no significant difference from the control group, suggests that there may have been a biologically significant increase, although not a statistically significant increase. Cardiovascular abnormalities were found in 30%, 11%, and 8% of live fetuses in the groups treated with 600 mg/kg on days 7, 8, and 9, respectively. These represented a statistically significant increase in effects as opposed to the control groups. Among the varying dosages administered on day 7 of gestation, cardiovascular abnormalities occurred in 2%, 6%, 16%, and 36% of live fetuses in groups treated with 300, 400, 500, and 700 mg/kg, respectively, showing a significant dose-dependent increase. These cardiovascular abnormalities observed were divided into the following groups: ventricular septal defect, endocardial cushion defect, transposition of the great arteries, double outlet right ventricle, tricuspid atresia, and hypoplastic left heart syndrome. Maternal death did not occur at any treatment level.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Dose-Response Relationship, Drug;Female;Fetal Death;Fetal Resorption;Fetus;Heart Defects, Congenital;Male;Mice;Mice, Inbred ICR;Pregnancy;Teratogens;Valproic Acid",
+      "language": "eng"
+    }
+  ]
+}

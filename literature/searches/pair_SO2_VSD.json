@@ -1,0 +1,85 @@
+{
+  "search_id": "pair_SO2_VSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"sulfur dioxide\"[MeSH] OR \"sulfur dioxide\"[tiab] OR \"sulphur dioxide\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"ventricular septal defect\"[tiab] OR \"ventricular septal defects\"[tiab] OR \"VSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"sulfur dioxide\"[MeSH Terms] OR \"sulfur dioxide\"[Title/Abstract] OR \"sulphur dioxide\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"ventricular septal defect\"[Title/Abstract] OR \"ventricular septal defects\"[Title/Abstract] OR \"VSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 6,
+  "retrieved_n": 6,
+  "studies": [
+    {
+      "pmid": "27752048",
+      "title": "Ozone and Other Air Pollutants and the Risk of Congenital Heart Defects.",
+      "journal": "Scientific reports",
+      "year": "2016",
+      "first_author": "Zhang B",
+      "doi": "10.1038/srep34852",
+      "abstract": "The objective of this study was to evaluate whether high levels of maternal exposure to O3, SO2, NO2, CO are related to increased risk of congenital heart defects (CHDs) in Wuhan, China. The study included mothers living in the central districts of Wuhan during pregnancy over the two-year period from June 10, 2011 to June 9, 2013. For each study participant, we assigned 1-month averages of O3, SO2, NO2 and CO exposure based on measurements obtained from the nearest exposure monitor to the living residence of mothers during their early pregnancy period. In one-pollutant model, we observed an increased risk of CHDs, ventricular septal defect (VSD), and tetralogy of fallot (TF) with increasing O3 exposure. In two-pollutant model, associations with all CHDs, VSD, and TF for O3 were generally consistent compared to the models that included only O3, with the strongest aORs observed for exposures during the third month of pregnancy. We also observed a positive association between CO exposures during the third month of pregnancy and VSD in two pollution model.Our results contribute to the small body of evidence regarding air pollution exposure and CHDs, but confirmation of these associations will be needed in future studies.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adult;Air Pollutants;Carbon Monoxide;China;Female;Gestational Age;Heart Defects, Congenital;Humans;Infant;Male;Maternal Exposure;Nitric Oxide;Ozone;Pregnancy;Risk;Sulfur Dioxide;Young Adult",
+      "language": "eng"
+    },
+    {
+      "pmid": "21329916",
+      "title": "Ambient air pollution and congenital heart disease: a register-based study.",
+      "journal": "Environmental research",
+      "year": "2011",
+      "first_author": "Dadvand P",
+      "doi": "10.1016/j.envres.2011.01.022",
+      "abstract": "Maternal exposure to ambient air pollution has increasingly been linked to adverse pregnancy outcomes. The evidence linking this exposure to congenital anomalies is still limited and controversial. This case-control study investigated the association between maternal exposure to ambient particulate matter with aerodynamic diameter less than 10 μm (PM(10)), sulfur dioxide (SO(2)), nitrogen dioxide, nitric oxide (NO), ozone (O(3)), and carbon monoxide (CO) and the occurrence of congenital heart disease in the population of Northeast England (1993-2003). Each case and control was assigned weekly average (weeks 3-8 of pregnancy) of pollutant levels measured by the closest monitor to the mother's residential postcode. Using exposure as both continuous and categorical variables, logistic regression models were constructed to quantify the adjusted odds ratios of exposure to air pollutants and the occurrence of each outcome group. We found exposure to CO and NO to be associated with ventricular septal defect and cardiac septa malformations. CO was also associated with congenital pulmonary valve stenosis and NO with pooled cases of congenital heart disease and tetralogy of Fallot. Findings for SO(2), O(3) and PM(10) were less consistent.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Air Pollutants;Carbon Monoxide Poisoning;Case-Control Studies;England;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Logistic Models;Male;Maternal Exposure;Nitric Oxide;Nitrogen Dioxide;Ozone;Particulate Matter;Pregnancy;Socioeconomic Factors;Sulfur Dioxide",
+      "language": "eng"
+    },
+    {
+      "pmid": "39043676",
+      "title": "Prenatal exposure to air pollutants and the risk of congenital heart disease: a Korean national health insurance database-based study.",
+      "journal": "Scientific reports",
+      "year": "2024",
+      "first_author": "Jin S",
+      "doi": "10.1038/s41598-024-63150-4",
+      "abstract": "Air pollution and heavy metal exposure are emerging public health concerns. Prenatal exposure to air pollutants and heavy metals has been implicated in the development of congenital heart disease (CHD). However, the relationship between exposure to airborne heavy metals and CHD has not yet been investigated. Therefore, in this large population-based study, we investigated the association between air pollutants, including airborne heavy metals, and the risk of CHD using national health insurance claims data from South Korea. Data regarding 1,129,442 newborns and their mothers were matched with air pollutant levels during the first 8 weeks of gestation. In the five-air pollutant model, we found significant positive correlations between prenatal exposure to sulfur dioxide (SO2; odds ratio [OR] 6.843, 95% confidence interval [CI] 5.746-8.149) and cadmium (Cd; OR 1.513, 95% CI 1.187-1.930) and the risk of ventricular septal defects in newborns. This study highlights the association between prenatal exposure to air pollutants, including airborne heavy metals, and an elevated CHD risk. Further research is essential to validate and expand these findings, with the ultimate goal of enhancing public health outcomes.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Humans;Female;Pregnancy;Republic of Korea;Heart Defects, Congenital;Infant, Newborn;Air Pollutants;Prenatal Exposure Delayed Effects;Adult;Databases, Factual;Maternal Exposure;Male;Sulfur Dioxide;Risk Factors;Air Pollution;National Health Programs;Metals, Heavy",
+      "language": "eng"
+    },
+    {
+      "pmid": "19258486",
+      "title": "Ambient air pollution and cardiovascular malformations in Atlanta, Georgia, 1986-2003.",
+      "journal": "American journal of epidemiology",
+      "year": "2009",
+      "first_author": "Strickland MJ",
+      "doi": "10.1093/aje/kwp011",
+      "abstract": "Associations between ambient air pollution levels during weeks 3-7 of pregnancy and risks of cardiovascular malformations were investigated among the cohort of pregnancies reaching at least 20 weeks' gestation that were conceived during January 1, 1986-March 12, 2003, in Atlanta, Georgia. Surveillance records obtained from the Metropolitan Atlanta Congenital Defects Program, which conducts active, population-based surveillance on this cohort, were reviewed to classify cardiovascular malformations. Ambient 8-hour maximum ozone and 24-hour average carbon monoxide, nitrogen dioxide, particulate matter with an average aerodynamic diameter of <10 microm (PM(10)), and sulfur dioxide measurements were obtained from centrally located stationary monitors. Temporal associations between these pollutants and daily risks of secundum atrial septal defect, aortic coarctation, hypoplastic left heart syndrome, patent ductus arteriosus, valvar pulmonary stenosis, tetralogy of Fallot, transposition of the great arteries, muscular ventricular septal defect, perimembranous ventricular septal defect, conotruncal defects, left ventricular outflow tract defect, and right ventricular outflow defect were modeled by using Poisson generalized linear models. A statistically significant association was observed between PM(10) and patent ductus arteriosus (for an interquartile range increase in PM(10) levels, risk ratio = 1.60, 95% confidence interval: 1.11, 2.31). Of the 60 associations examined in the primary analysis, no other significant associations were observed.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Adult;Air Pollution;Cohort Studies;Confidence Intervals;Environmental Monitoring;Epidemiological Monitoring;Female;Georgia;Heart Defects, Congenital;Humans;Infant, Newborn;Maternal Exposure;Pregnancy;Prenatal Exposure Delayed Effects;Prevalence;Retrospective Studies;Risk Assessment;Seasons;Stillbirth",
+      "language": "eng"
+    },
+    {
+      "pmid": "37268121",
+      "title": "The association between maternal air pollution exposure and the incidence of congenital heart diseases in children: A systematic review and meta-analysis.",
+      "journal": "The Science of the total environment",
+      "year": "2023",
+      "first_author": "Wan X",
+      "doi": "10.1016/j.scitotenv.2023.164431",
+      "abstract": "Congenital heart diseases (CHDs) are a prevalent form of congenital malformations in newborns. Although previous studies have explored the association between maternal exposure to ambient air pollution and congenital anomalies in offspring, the results still remain ambiguous. To fill the knowledge gap, we performed a systematic review and meta-analysis of existing literature. A comprehensive search of the literature was conducted in PubMed, Embase, and Web of Science until August 12, 2022. We analyzed the relationship between air pollution and multiple CHDs using either a fixed-effect model or a random-effects model. Summary risk estimates of pollution-outcome pairs were calculated based on (i) risk per increment of concentration and (ii) risk at high versus low exposure levels. Additionally, we performed leave-one-out analyses and used funnel plots to assess the potential publication bias. A total of 32 studies were included and four studies utilizing distributed lag nonlinear models (DLNM) models were added to our retrospective review. In the continuous exposure meta-analysis, there were statistically significant negative associations between sulfur dioxide (SO2) and transposition of the great arteries (OR = 0.96; 95 % CI: 0.93-0.99), pulmonary artery and valve defect (OR = 0.90; 95 % CI: 0.83-0.97), and ventricular septal defect (OR = 0.95; 95 % CI: 0.91-0.99). High versus low SO2 exposure was associated with a decreased risk of tetralogy of Fallot [OR = 0.83; 95 % CI: 0.69-0.99]. However, carbon monoxide (CO) increased risk estimates for tetralogy of Fallot in both continuous exposure (OR = 2.25; 95 % CI: 1.42-3.56) and high-low exposure (OR = 1.24; 95 % CI: 1.01-1.54). Particulate matter 10 (PM10) statistically significant increased in the risk of overall CHD with odds ratios of 1.03 (95 % CI: 1.01-1.05) and 1.04 (95 % CI: 1.00-1.09) in continuous and categorical exposure analysis, respectively. These findings provide potential evidence for the association between maternal air pollution exposure and CHDs.",
+      "pubtypes": "Meta-Analysis;Systematic Review;Journal Article",
+      "mesh_terms": "Female;Humans;Child;Infant, Newborn;Maternal Exposure;Air Pollutants;Incidence;Tetralogy of Fallot;Transposition of Great Vessels;Air Pollution;Heart Defects, Congenital;Particulate Matter;Environmental Exposure",
+      "language": "eng"
+    },
+    {
+      "pmid": "24407474",
+      "title": "Congenital anomalies among live births in a high environmental risk area--a case-control study in Brindisi (southern Italy).",
+      "journal": "Environmental research",
+      "year": "2014",
+      "first_author": "Gianicolo EA",
+      "doi": "10.1016/j.envres.2013.11.002",
+      "abstract": "Maternal exposure to ambient pollution has been increasingly linked to the risk of congenital anomalies (CAs) in the fetus and newborns. Recently, a descriptive study in the high environmental risk city of Brindisi (Italy) revealed an increased prevalence of total CAs, especially congenital heart disease (CHD) and ventricular septal defects (VSDs), both at the local level and in comparison with the pool of EUROCAT registries. This paper concerns a population-based case control study to investigate the association between maternal exposure to air pollutants - sulfur dioxide (SO2) and total suspended particulate (TSP) matter - and the risk of CA. Cases were newborns up to 28 days of age, born to mothers resident in Brindisi between 2001 and 2010, and discharged with a diagnosis of CA. Cases and controls were individually matched according to sex, socio-economic status of the census area of residence of the mother, and year of beginning of pregnancy. Up to four controls were extracted for each case. Concentration data from monitoring stations were used to estimate air pollution exposure. Each case and control was assigned pollutant concentration values as mean and 90th percentile of the daily average values during weeks 3-8 of pregnancy. Exposure as both continuous and categorical variables was considered and a conditional logistic regression model was constructed to quantify the odds ratios of exposure to air pollutants and the occurrence of total CAs, CHDs and VSDs. We found exposure to the 90th percentile of SO2 to be associated with CHDs (p for trend =0.01) and VSDs (p for trend <0.05). Findings for TSP were less consistent. In conclusion, in the studied area, maternal exposure to sulfur dioxide increased risk of CHD.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Case-Control Studies;Cities;Female;Heart Septal Defects, Ventricular;Humans;Infant, Newborn;Italy;Maternal Exposure;Particulate Matter;Pregnancy;Sulfur Dioxide",
+      "language": "eng"
+    }
+  ]
+}

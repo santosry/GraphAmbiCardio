@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_RA_HLHS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tretinoin\"[MeSH] OR \"retinoic acid\"[tiab] OR \"isotretinoin\"[tiab] OR \"vitamin A\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"hypoplastic left heart\"[tiab] OR \"HLHS\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tretinoin\"[MeSH Terms] OR \"retinoic acid\"[Title/Abstract] OR \"isotretinoin\"[Title/Abstract] OR \"vitamin A\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"hypoplastic left heart\"[Title/Abstract] OR \"HLHS\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "37012244",
+      "title": "Retinoic acid signaling modulation guides in vitro specification of human heart field-specific progenitor pools.",
+      "journal": "Nature communications",
+      "year": "2023",
+      "first_author": "Zawada D",
+      "doi": "10.1038/s41467-023-36764-x",
+      "abstract": "Cardiogenesis relies on the precise spatiotemporal coordination of multiple progenitor populations. Understanding the specification and differentiation of these distinct progenitor pools during human embryonic development is crucial for advancing our knowledge of congenital cardiac malformations and designing new regenerative therapies. By combining genetic labelling, single-cell transcriptomics, and ex vivo human-mouse embryonic chimeras we uncovered that modulation of retinoic acid signaling instructs human pluripotent stem cells to form heart field-specific progenitors with distinct fate potentials. In addition to the classical first and second heart fields, we observed the appearance of juxta-cardiac field progenitors giving rise to both myocardial and epicardial cells. Applying these findings to stem-cell based disease modelling we identified specific transcriptional dysregulation in first and second heart field progenitors derived from stem cells of patients with hypoplastic left heart syndrome. This highlights the suitability of our in vitro differentiation platform for studying human cardiac development and disease.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Humans;Animals;Mice;Tretinoin;Heart;Myocardium;Pluripotent Stem Cells;Cell Differentiation;Myocytes, Cardiac",
+      "language": "eng"
+    }
+  ]
+}

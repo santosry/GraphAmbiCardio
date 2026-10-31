@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_SOLV_ASD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"solvents\"[MeSH] OR \"trichloroethylene\"[MeSH] OR \"benzene\"[MeSH] OR \"organic solvent*\"[tiab] OR \"trichloroethylene\"[tiab] OR \"benzene exposure\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrial septal defect\"[tiab] OR \"atrial septal defects\"[tiab] OR \"ASD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"solvents\"[MeSH Terms] OR \"trichloroethylene\"[MeSH Terms] OR \"benzene\"[MeSH Terms] OR \"organic solvent*\"[Title/Abstract] OR \"trichloroethylene\"[Title/Abstract] OR \"benzene exposure\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrial septal defect\"[Title/Abstract] OR \"atrial septal defects\"[Title/Abstract] OR \"ASD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "33170344",
+      "title": "Parental occupational exposure and congenital heart diseases in a Hungarian case-control study.",
+      "journal": "International archives of occupational and environmental health",
+      "year": "2021",
+      "first_author": "Fazekas-Pongor V",
+      "doi": "10.1007/s00420-020-01589-4",
+      "abstract": "PURPOSE: Our study aimed to explore the effect of parental occupational exposure to endocrine disrupting chemicals (EDCs) on the development of congenital heart diseases (CHDs) in the offspring, and to compare job-exposure matrix (JEM)-assessed and self-reported occupational exposures with each other. METHODS: Live-born infants born in 2007-2008 were selected from the population-based Hungarian Case-Control Surveillance of Congenital Abnormalities Study. 577 cases with any CHDs were compared to 1731 matched controls. Parental periconceptional occupational exposure to EDCs was assessed by a JEM and by questionnaire-based self-reporting of parents. Multivariate conditional logistic regression analyses were conducted to explore associations between parental occupational exposure to EDCs and the entire spectrum of CHDs and by CHD subtypes in the offspring. Kappa statistics were also performed to determine the consistency among JEM-assessed and self-reported occupational exposure of parents. RESULTS: JEM-assessed paternal exposure to polychlorinated organic substances, phthalates, biphenolic compounds, and solvents were significantly associated with the entire spectrum of CHDs. Ventricular septal defects were significantly associated with paternal self-reported exposure to pesticides, while atrial septal defects were significantly associated to paternal JEM-assessed phthalate exposure. Paternal solvent exposure was significantly associated with atrial septal defects and right ventricle outflow tract obstructions. JEM-assessed and self-reported exposures to pesticides, heavy metals, and solvents exhibited poor agreement for mothers and slight agreement for fathers. CONCLUSION: Even though parental occupational exposure to EDCs seems to have a minor impact on the occurrence of CHDs, the results of biological and environmental monitoring should be taken into consideration as well.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adult;Case-Control Studies;Endocrine Disruptors;Female;Heart Defects, Congenital;Humans;Hungary;Infant, Newborn;Male;Maternal Exposure;Metals, Heavy;Occupational Exposure;Paternal Exposure;Pesticides;Phthalic Acids;Solvents;Young Adult",
+      "language": "eng"
+    },
+    {
+      "pmid": "1397217",
+      "title": "Risk factors for atrial septal defect.",
+      "journal": "European journal of epidemiology",
+      "year": "1992",
+      "first_author": "Tikkanen J",
+      "doi": "10.1007/BF00146368",
+      "abstract": "The possible effect of environmental factors during pregnancy on the occurrence of atrial septal defect (ASD-secundum) in the offspring was studied in 50 cases and 756 controls. The cases represented all verified ASDs in Finland during 1982-1983. The controls were randomly selected from all infants born during the same period. Case and control mothers were interviewed by midwives using a structured questionnaire approximately three months after delivery. Congenital heart disease was more prevalent among parents of cases than those of controls. Maternal alcohol consumption during the first trimester of pregnancy appeared to double the risk of atrial septal defect (OR = 1.9, CI98 = 1.1 - 3.4). Maternal exposure to chemicals at work during the first trimester was more prevalent among the ASD-group (40.0%) than the control group (26.2%). The risk of ASD was not associated with maternal smoking, or coffee, tea or acetosalicylic acid consumption. Maternal exposure to video display terminals, microwave ovens, organic solvents, anesthetic gases, pesticides or wood preservatives during the first trimester of pregnancy were not associated with the risk of an atrial septal defect. It is concluded that some common physical and chemical exposures during early pregnancy should not necessarily be considered risk factors for atrial septal defect.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Chi-Square Distribution;Cross-Sectional Studies;Female;Finland;Heart Defects, Congenital;Heart Septal Defects, Atrial;Humans;Incidence;Infant;Infant, Newborn;Occupational Exposure;Odds Ratio;Pregnancy;Registries;Regression Analysis;Risk Factors",
+      "language": "eng"
+    }
+  ]
+}

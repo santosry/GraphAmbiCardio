@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_ALCOHOL_EBSTEIN",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ethanol\"[MeSH] OR \"alcohol drinking\"[MeSH] OR \"alcohol\"[tiab] OR \"ethanol\"[tiab] OR \"fetal alcohol\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"ebstein anomaly\"[tiab] OR \"ebstein\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ethanol\"[MeSH Terms] OR \"alcohol drinking\"[MeSH Terms] OR \"alcohol\"[Title/Abstract] OR \"ethanol\"[Title/Abstract] OR \"fetal alcohol\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"ebstein anomaly\"[Title/Abstract] OR \"ebstein\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "38394684",
+      "title": "Epidemiology studies on effects of lithium salts in pregnancy are confounded by the inability to control for other potentially teratogenic factors.",
+      "journal": "Human & experimental toxicology",
+      "year": "2024",
+      "first_author": "Smith CJ",
+      "doi": "10.1177/09603271241236346",
+      "abstract": "INTRODUCTION: In bipolar women who took lithium during pregnancy, several epidemiology studies have reported small increases in a rare fetal cardiac defect termed Ebstein's anomaly. METHODS: Behavioral, environmental, and lifestyle-associated risk factors associated with bipolar disorder and health insurance status were determined from an Internet search. The search was conducted from October 1, 2023, through October 14, 2023. The search terms employed included the following: bipolar, bipolar disorder, mood disorders, pregnancy, congenital heart defects, Ebstein's anomaly, diabetes, hypertension, Medicaid, Medicaid patients, alcohol use, cigarette smoking, marijuana, cocaine, methamphetamine, narcotics, nutrition, diet, obesity, body mass index, environment, environmental exposures, poverty, socioeconomic status, divorce, unemployment, and income. No quotes, special fields, truncations, etc., were used in the searches. No filters of any kind were used in the searches. RESULTS: Women who remain on lithium in the United States throughout their pregnancy are likely to be experiencing mania symptoms and/or suicidal ideation refractory to other drugs. Pregnant women administered the highest doses of lithium salts would be expected to have been insufficiently responsive to lower doses. Any small increases in the retrospectively determined risk of fetal cardiac anomalies in bipolar women taking lithium salts cannot be disentangled from potential developmental effects resulting from very high rates of cigarette smoking, poor diet, alcohol abuse, ingestion of illegal drugs like cocaine or opioids, marijuana smoking, obesity, and poverty. CONCLUSIONS: The small risks in fetal cardiac abnormalities reported in the epidemiology literature do not establish a causal association for lithium salts and Ebstein's anomaly.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Humans;Pregnancy;Female;Lithium;Ebstein Anomaly;Teratogens;Salts;Retrospective Studies;Antimanic Agents;Teratogenesis;Cocaine;Obesity",
+      "language": "eng"
+    }
+  ]
+}

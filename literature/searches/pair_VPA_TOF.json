@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_VPA_TOF",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"valproic acid\"[MeSH] OR \"valproic acid\"[tiab] OR \"valproate\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"tetralogy of fallot\"[tiab] OR \"fallot\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"valproic acid\"[MeSH Terms] OR \"valproic acid\"[Title/Abstract] OR \"valproate\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"tetralogy of fallot\"[Title/Abstract] OR \"fallot\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "18188637",
+      "title": "Cardiac malformations are increased in infants of mothers with epilepsy.",
+      "journal": "Pediatric cardiology",
+      "year": "2008",
+      "first_author": "Thomas SV",
+      "doi": "10.1007/s00246-007-9161-4",
+      "abstract": "We aimed to ascertain the prevalence of cardiac malformation (CM) and its association with antenatal exposure to an antiepileptic drug (AED) in infants of mothers with epilepsy (IMEs). Women with epilepsy (WWE) are enrolled in Kerala Registry of Epilepsy and Pregnancy (KREP) in the prepregnancy or early pregnancy period and are followed up with a standard protocol until the IMEs are 6 years old. At 3 months postpartum, a cardiologist, blinded to the AED exposure, carried out a clinical examination and echocardiography on all live-born babies. Patent foramen ovale (PFO) and interatrial septal defects of < 5 mm in size were excluded from CM. Details of maternal epilepsy, folate usage, AED exposure in the first trimester, and newborn characteristics were abstracted from the records of the KREP. We examined 462 babies. Maternal epilepsy was generalized in 201 (43.50%) or localization related in 241 (52.2%). The AED exposure was monotherapy in 262 (56.7%)--carbamazepine (112), valproate (71), phenobarbitone (43), phenytoin (31), and clonazepam (2)--and polytherapy in 126 (27.3%). Seventy-four infants (16.01%) had no AED exposure. There were 36 infants with CM (7.8%; 95% confidence interval: 5.5-10.6). CMs included atrial septal defect (26; 72.2%), tetrology of Fallot (3; 8.3%), patent ductus arteriosus and pulmonic stenosis (2 each; 5.6%), and ventricular septal defect, tricuspid regurgitation, transposition of great arteries (1 each; 2.8%). CMs were significantly more for IMEs with premature birth (p < .003). There was no association between CM and maternal age, epilepsy syndrome, seizure frequency during pregnancy, and folate use. CMs were more frequent with polytherapy (13; 10.3%) compared to monotherapy (17; 6.5%). Those with valproate exposure had a trend (not statistically significant) toward higher frequency of CM compared to IMEs on other AEDs as monotherapy.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adult;Anticonvulsants;Epilepsy;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Male;Pregnancy;Prenatal Exposure Delayed Effects;Prevalence;Prospective Studies",
+      "language": "eng"
+    },
+    {
+      "pmid": "8949354",
+      "title": "[Embryofetopathy due to valproate: a pathology only little known. Apropos of 4 cases].",
+      "journal": "Archives de pediatrie : organe officiel de la Societe francaise de pediatrie",
+      "year": "1996",
+      "first_author": "Espinasse M",
+      "doi": "10.1016/0929-693x(96)87582-8",
+      "abstract": "BACKGROUND: Sodium valproate administration during pregnancy may be teratogenic; it is associated with an increased risk of neural tube defect, tetralogy of Fallot, oral clefting and other facial abnormalities. Knowledge of these harmful effects is still poor. CASE REPORTS: Four children, including three siblings, presented with characteristic facial abnormalities (four cases), oral clefting (one case), mental retardation (2/2 cases), and bone anomalies of forearm and hands (one case). The diagnosis of fetal valproate syndrome was only made at the age of 3 1/2 years in the eldest of the three siblings all born from an epileptic mother receiving valproate since the age of 13 years. Prevention advice for further pregnancies was not followed. CONCLUSION: All epileptic mothers should be aware of the risk of antiepileptic drugs during pregnancy, specially those given sodium valproate, a potentially teratogenic drug.",
+      "pubtypes": "Case Reports;English Abstract;Journal Article",
+      "mesh_terms": "Abnormalities, Drug-Induced;Anticonvulsants;Child, Preschool;Cleft Lip;Epilepsy;Face;Female;Fetal Diseases;Humans;Infant;Infant, Newborn;Male;Neural Tube Defects;Pregnancy;Pregnancy Complications;Syndrome;Tetralogy of Fallot;Valproic Acid",
+      "language": "fre"
+    }
+  ]
+}

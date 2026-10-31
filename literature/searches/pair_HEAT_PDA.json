@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_HEAT_PDA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"hot temperature\"[MeSH] OR \"hyperthermia\"[MeSH] OR \"hyperthermia\"[tiab] OR \"heat wave*\"[tiab] OR \"high temperature\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"patent ductus arteriosus\"[tiab] OR \"ductus arteriosus\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"hot temperature\"[MeSH Terms] OR \"hyperthermia\"[MeSH Terms] OR \"hyperthermia\"[Title/Abstract] OR \"heat wave*\"[Title/Abstract] OR \"high temperature\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"patent ductus arteriosus\"[Title/Abstract] OR \"ductus arteriosus\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "34476711",
+      "title": "Associations between ambient heat exposure early in pregnancy and risk of congenital heart defects: a large population-based study.",
+      "journal": "Environmental science and pollution research international",
+      "year": "2022",
+      "first_author": "Yu X",
+      "doi": "10.1007/s11356-021-16237-8",
+      "abstract": "Some epidemiological studies have confirmed the association between environmental factors and congenital heart defects (CHD). While the possibility that maternal ambient heat exposures are related to CHD has received little attention. Our study aims to investigate the association between maternal ambient extreme heat exposure early in pregnancy and the risk of CHD in offspring in China. We conducted a retrospective cohort study of 1,918,105 fetuses between 2 and 8 weeks after gestation from May to October in Guangdong, China, 2015-2019. The main heat exposure was defined as extreme heat events (EHE) by using the 90th (EHE90) or 95th (EHE95) percentile of the daily maximum temperature. For each EHE definition, we further defined four indicators: having EHE or not, frequency, duration, and cumulative days. We used the log-binomial regression models to calculate the prevalence ratios (PR) of CHD with 95% confidence intervals (CI) for the associations between CHD and EHE, adjusted for potentially confounding covariates. There are 1,918,105 infants included in the study, of which 9588 had CHD, with a prevalence rate of 499.9 per 100,000 (95% CI: 489.9, 509.8). We found that all EHE indicators were positively associated with the increased risks of overall CHD, some CHD classes (congenital malformations of cardiac septa, congenital malformations of great arteries, and congenital malformations of great arteries), and some CHD subtypes (atrial septal defect and patent ductus arteriosus). In addition, the PR yielded higher estimates when exposing to EHE95. For instance, the risk of suffering congenital malformations of great arteries was 1.548 (95% CI: 1.401, 1.712) for EHE90 exposure and 1.723 (95% CI: 1.565, 1.898) for EHE95 exposure, respectively. Our study demonstrated that EHE during 2-8 weeks postconception was associated with overall CHD in offspring, particularly atrial septal defects and patent ductus arteriosus. The associations strengthened with the extent and cumulative days of maternal exposure to EHE.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Extreme Heat;Female;Heart Defects, Congenital;Hot Temperature;Humans;Maternal Exposure;Pregnancy;Retrospective Studies",
+      "language": "eng"
+    }
+  ]
+}

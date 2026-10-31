@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_NO2_TGA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"nitrogen dioxide\"[MeSH] OR \"nitrogen dioxide\"[tiab] OR \"NO2\"[tiab] OR \"traffic-related air pollution\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"transposition of the great arteries\"[tiab] OR \"transposition of the great vessels\"[tiab] OR \"D-TGA\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"nitrogen dioxide\"[MeSH Terms] OR \"nitrogen dioxide\"[Title/Abstract] OR \"NO2\"[Title/Abstract] OR \"traffic-related air pollution\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"transposition of the great arteries\"[Title/Abstract] OR \"transposition of the great vessels\"[Title/Abstract] OR \"D-TGA\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "33569925",
+      "title": "Gene-environment interactions between air pollution and biotransformation enzymes and risk of birth defects.",
+      "journal": "Birth defects research",
+      "year": "2021",
+      "first_author": "Padula AM",
+      "doi": "10.1002/bdr2.1880",
+      "abstract": "Genetic and environmental factors have been observed to influence risks for birth defects, though few studies have investigated gene-environment interactions. Our aim was to examine the interaction terms of gene variants in biotransformation enzyme pathways and air pollution exposures in relation to risk of several structural birth defects. We evaluated the role of ambient air pollutant exposure (nitrogen dioxide [NO2 ], nitrogen oxide, carbon monoxide, particulate matter <10 [PM10 ] and <2.5 [PM2.5 ] microns) during pregnancy and 104 gene variants of biotransformation enzymes from infant bloodspots or buccal cells in a California population-based case-control study in 1997-2006. Cases included cleft lip with or without cleft palate (N = 206), gastroschisis (N = 94), tetralogy of Fallot (N = 69), and dextro-transposition of the great arteries (d-TGA; N = 40) and were compared to 208 nonmalformed controls. Overall, the results were not consistent, though did highlight some associations for further investigation as indicated by Wald chi-square test p value <.1. Increased risk of cleft lip was associated with exposure to high PM10 and two CYP gene variants. High PM2.5 and the variant of SLCO1B1 was associated with increased risk of teratology of Fallot. Higher NO2 and two gene variants, CYP2A6 and SLC01B1, were associated with increased risk of d-TGA. Results for gastroschisis were inconsistent in direction and across pollutants. These exploratory results suggest that some individuals based on their genetic background may be more susceptible to the adverse effects of air pollution.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, Non-P.H.S.;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Air Pollution;Biotransformation;Case-Control Studies;Female;Gene-Environment Interaction;Humans;Liver-Specific Organic Anion Transporter 1;Mouth Mucosa;Pregnancy;Transposition of Great Vessels",
+      "language": "eng"
+    },
+    {
+      "pmid": "19258486",
+      "title": "Ambient air pollution and cardiovascular malformations in Atlanta, Georgia, 1986-2003.",
+      "journal": "American journal of epidemiology",
+      "year": "2009",
+      "first_author": "Strickland MJ",
+      "doi": "10.1093/aje/kwp011",
+      "abstract": "Associations between ambient air pollution levels during weeks 3-7 of pregnancy and risks of cardiovascular malformations were investigated among the cohort of pregnancies reaching at least 20 weeks' gestation that were conceived during January 1, 1986-March 12, 2003, in Atlanta, Georgia. Surveillance records obtained from the Metropolitan Atlanta Congenital Defects Program, which conducts active, population-based surveillance on this cohort, were reviewed to classify cardiovascular malformations. Ambient 8-hour maximum ozone and 24-hour average carbon monoxide, nitrogen dioxide, particulate matter with an average aerodynamic diameter of <10 microm (PM(10)), and sulfur dioxide measurements were obtained from centrally located stationary monitors. Temporal associations between these pollutants and daily risks of secundum atrial septal defect, aortic coarctation, hypoplastic left heart syndrome, patent ductus arteriosus, valvar pulmonary stenosis, tetralogy of Fallot, transposition of the great arteries, muscular ventricular septal defect, perimembranous ventricular septal defect, conotruncal defects, left ventricular outflow tract defect, and right ventricular outflow defect were modeled by using Poisson generalized linear models. A statistically significant association was observed between PM(10) and patent ductus arteriosus (for an interquartile range increase in PM(10) levels, risk ratio = 1.60, 95% confidence interval: 1.11, 2.31). Of the 60 associations examined in the primary analysis, no other significant associations were observed.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Adult;Air Pollution;Cohort Studies;Confidence Intervals;Environmental Monitoring;Epidemiological Monitoring;Female;Georgia;Heart Defects, Congenital;Humans;Infant, Newborn;Maternal Exposure;Pregnancy;Prenatal Exposure Delayed Effects;Prevalence;Retrospective Studies;Risk Assessment;Seasons;Stillbirth",
+      "language": "eng"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_COLD_DORV",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"cold temperature\"[MeSH] OR \"cold spell*\"[tiab] OR \"low temperature\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"double outlet right ventricle\"[tiab] OR \"DORV\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"cold temperature\"[MeSH Terms] OR \"cold spell*\"[Title/Abstract] OR \"low temperature\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"double outlet right ventricle\"[Title/Abstract] OR \"DORV\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "7103609",
+      "title": "[Spectrum of biventricular aortic connection and double outlet chamber of the right ventricle produced experimentally in the chicken heart by hypothermia (34.5 degrees C)].",
+      "journal": "Archivos del Instituto de Cardiologia de Mexico",
+      "year": "1982",
+      "first_author": "Muñoz Castellanos L",
+      "doi": "",
+      "abstract": "In this experimental work, fertilized chicken eggs were subjected to hypothermia (34.5 degrees) as to inhibit the incorporation of the aortic infundibulum into the left ventricle. This produced a spectrum of biventricular connection of the aorta including double outlet right ventricle (DORV), a cardiopathy seen naturally in man and in chicken. It represents the persistence in the postnatal heart of the spectrum of embryonic aortic dextroposition, a fact which allowed us to establish a precise anatomoembryologic correlation. Pathogenetically, the failure in the connection of the aortic infundibulum with the left ventricle is due to inhibition, in different degrees, of the leftward morphogenetic movement of the infundibular segment, an embryologic process which is discussed in relation to different theories on the origin of DORV. The role played by cell death in normal and pathologic morphogenesis, is emphasized and some methodological aspects on experimental teratogeneses are mentioned.",
+      "pubtypes": "English Abstract;Journal Article",
+      "mesh_terms": "Animals;Aorta, Thoracic;Aortic Valve;Cell Survival;Chick Embryo;Cold Temperature;Disease Models, Animal;Heart;Heart Defects, Congenital;Heart Ventricles;Mitral Valve",
+      "language": "spa"
+    }
+  ]
+}

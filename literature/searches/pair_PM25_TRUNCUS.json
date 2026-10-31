@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_PM25_TRUNCUS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"particulate matter\"[MeSH] OR \"PM2.5\"[tiab] OR \"PM 2.5\"[tiab] OR \"fine particulate matter\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"truncus arteriosus\"[tiab] OR \"common arterial trunk\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"particulate matter\"[MeSH Terms] OR \"PM2.5\"[Title/Abstract] OR \"PM 2.5\"[Title/Abstract] OR \"fine particulate matter\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"truncus arteriosus\"[Title/Abstract] OR \"common arterial trunk\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "26196779",
+      "title": "Associations between exposure to ambient benzene and PM(2.5) during pregnancy and the risk of selected birth defects in offspring.",
+      "journal": "Environmental research",
+      "year": "2015",
+      "first_author": "Tanner JP",
+      "doi": "10.1016/j.envres.2015.07.006",
+      "abstract": "OBJECTIVE: A growing number of studies have investigated the association between air pollution and the risk of birth defects, but results are inconsistent. The objective of this study was to examine whether maternal exposure to ambient PM2.5 or benzene increases the risk of selected birth defects in Florida. METHODS: We conducted a retrospective cohort study of singleton infants born in Florida from 2000 to 2009. Isolated and non-isolated birth defect cases of critical congenital heart defects, orofacial clefts, and spina bifida were identified from the Florida Birth Defects Registry. Estimates of maternal exposures to PM2.5 and benzene for all case and non-case pregnancies were derived by aggregation of ambient measurement data, obtained from the US Environmental Protection Agency Air Quality System, during etiologically relevant time windows. Multivariable Poisson regression was used to estimate adjusted prevalence ratios (aPRs) and 95% confidence intervals (CIs) for each quartile of air pollutant exposure. RESULTS: Compared to the first quartile of PM2.5 exposure, higher levels of exposure were associated with an increased risk of non-isolated truncus arteriosus (aPR4th Quartile, 8.80; 95% CI, 1.11-69.50), total anomalous pulmonary venous return (aPR2nd Quartile, 5.00; 95% CI, 1.10-22.84), coarctation of the aorta (aPR4th Quartile, 1.72; 95% CI, 1.15-2.57; aPR3rd Quartile, 1.60; 95% CI, 1.07-2.41), interrupted aortic arch (aPR4th Quartile, 5.50; 95% CI, 1.22-24.82), and isolated and non-isolated any critical congenital heart defect (aPR3rd Quartile, 1.13; 95% CI, 1.02-1.25; aPR4th Quartile, 1.33; 95% CI, 1.07-1.65). Mothers with the highest level of exposure to benzene were more likely to deliver an infant with an isolated cleft palate (aPR4th Quartile, 1.52; 95% CI, 1.13-2.04) or any orofacial cleft (aPR4th Quartile, 1.29; 95% CI, 1.08-1.56). An inverse association was observed between exposure to benzene and non-isolated pulmonary atresia (aPR4th Quartile, 0.19; 95% CI, 0.04-0.84). CONCLUSION: Our results suggest a few associations between exposure to ambient PM2.5 or benzene and specific birth defects in Florida. However, many related comparisons showed no association. Hence, it remains unclear whether associations are clinically significant or can be causally related to air pollution exposures.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Adult;Air Pollutants;Benzene;Congenital Abnormalities;Female;Florida;Humans;Infant, Newborn;Multivariate Analysis;Particulate Matter;Poisson Distribution;Pregnancy;Prenatal Exposure Delayed Effects;Retrospective Studies;Risk;Young Adult",
+      "language": "eng"
+    }
+  ]
+}

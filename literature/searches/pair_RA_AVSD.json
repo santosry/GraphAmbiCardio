@@ -1,0 +1,49 @@
+{
+  "search_id": "pair_RA_AVSD",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"tretinoin\"[MeSH] OR \"retinoic acid\"[tiab] OR \"isotretinoin\"[tiab] OR \"vitamin A\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"atrioventricular septal defect\"[tiab] OR \"atrioventricular canal\"[tiab] OR \"AVSD\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"tretinoin\"[MeSH Terms] OR \"retinoic acid\"[Title/Abstract] OR \"isotretinoin\"[Title/Abstract] OR \"vitamin A\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"atrioventricular septal defect\"[Title/Abstract] OR \"atrioventricular canal\"[Title/Abstract] OR \"AVSD\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 3,
+  "retrieved_n": 3,
+  "studies": [
+    {
+      "pmid": "37852253",
+      "title": "Identification of Greb1l as a genetic determinant of crisscross heart in mice showing torsion of the heart tube by shortage of progenitor cells.",
+      "journal": "Developmental cell",
+      "year": "2023",
+      "first_author": "Bernheim S",
+      "doi": "10.1016/j.devcel.2023.09.006",
+      "abstract": "Despite their burden, most congenital defects remain poorly understood, due to lack of knowledge of embryological mechanisms. Here, we identify Greb1l mutants as a mouse model of crisscross heart. Based on 3D quantifications of shape changes, we demonstrate that torsion of the atrioventricular canal occurs together with supero-inferior ventricles at E10.5, after heart looping. Mutants phenocopy partial deficiency in retinoic acid signaling, which reflect overlapping pathways in cardiac precursors. Spatiotemporal gene mapping and cross-correlated transcriptomic analyses further reveal the role of Greb1l in maintaining a pool of dorsal pericardial wall precursor cells during heart tube elongation, likely by controlling ribosome biogenesis and cell differentiation. Consequently, we observe growth arrest and malposition of the outflow tract, which are predictive of abnormal tube remodeling in mutants. Our work on a rare cardiac malformation opens novel perspectives on the origin of a broader spectrum of congenital defects associated with GREB1L in humans.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Humans;Animals;Mice;Crisscross Heart;Morphogenesis;Heart;Heart Ventricles;Stem Cells",
+      "language": "eng"
+    },
+    {
+      "pmid": "9733100",
+      "title": "Diminished growth of atrioventricular cushion tissue in stage 24 retinoic acid-treated chicken embryos.",
+      "journal": "Developmental dynamics : an official publication of the American Association of Anatomists",
+      "year": "1998",
+      "first_author": "Bouman HG",
+      "doi": "10.1002/(SICI)1097-0177(199809)213:1<50::AID-AJA5>3.0.CO;2-X",
+      "abstract": "Stage 34 chicken hearts have shown a spectrum of looping disturbances, changed hemodynamics, and changed growth of both right ventricular myocardium and atrioventricular cushion tissue after retinoic acid treatment. To obtain more information about the onset of the malformations we studied stage 24, the stage between the previously studied stage 34 and the moment of treatment. Sixteen stage 24 chicken embryos were examined after treatment with 1 microg all-trans retinoic acid at stage 15 and compared with 6 sham operated embryos. Morphological examination was supported by graphic reconstructions. Absolute volumes of atrial, atrioventricular, and ventricular myocardia were measured by a point counting method. The absolute volumes of the endocardial cushions were measured as well. Fifteen (15/16) retinoic acid-treated hearts did not show marked malformations as far as could be detected with our current macroscopic and microscopic techniques. One (1/16) retinoic acid-treated heart showed an abnormal tubular C-shape with a less bended inner curvature and with an abnormal horizontally oriented atrioventricular canal. The dorsal cushion tissue of this atrioventricular canal was discontinuous with the dorsal mesocardium and covered the malpositioned myocardial border between the atrium and the atrioventricular canal. The volume measurements did show a difference between retinoic acid treatment and sham operations. The retinoic acid-treated hearts showed a significant volume decrease of the atrioventricular cushions. No significant differences were found in the volumes of the ventricular myocardium compared to the sham operated embryos. We hypothesize that, between stages 15 and 24, retinoic acid directly affects the myocardial wall and the cushion tissue formation. In the present material this has resulted in decreased atrioventricular cushion growth, in changed hemodynamics, and in a severe looping disturbance of one embryo. We further hypothesize that, between stages 24 and 34, the malformations with minor looping disturbances will become apparent. Thus, development beyond stage 24 would result in the spectrum of looping disturbances as has been found at stage 34. These latter morphological malformations would lead to increasing hemodynamic changes, resulting in changes in growth as a secondary effect.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Animals;Atrioventricular Node;Chick Embryo;Heart;Heart Defects, Congenital;Hemodynamics;Terminology as Topic;Tretinoin",
+      "language": "eng"
+    },
+    {
+      "pmid": "8593204",
+      "title": "Visceral heterotaxy syndrome induced by retinoids in mouse embryo.",
+      "journal": "Journal of Korean medical science",
+      "year": "1995",
+      "first_author": "Kim SH",
+      "doi": "10.3346/jkms.1995.10.4.250",
+      "abstract": "Visceral heterotaxy syndrome causes abnormal arrangement of thoracoabdominal organs and severe complex cardiac anomalies by abnormal laterality. The purpose of the present study is to analyze the incidence and pattern of heterotaxy syndrome in etretinate and all-tran retinoic acid treated pregnant DDY mice. Pregnant DDY mice were intragastrically given a single dose of 15 mg/kg of etretinate at day 6, 7 of gestation, 30 mg/kg of etretinate at day 7 of gestation and 20 mg/kg of all-trans retinoic acid at day 7 of gestation. The incidence of visceral heterotaxy was highest in the etretinate 15 mg/kg treated group on day 7 of gestation (38.5%). The major cardiovascular anomalies in heterotaxy syndrome were common atrium, common atrioventricular valve, atrioventricular septal defect, transposition of great arteries, pulmonary atresia, pulmonary artery hypoplasia and aortic arch anomalies. Atrial situs of heterotaxy syndrome were right isomerism, solitus-like, inversus-like and left atrial aplasia, but right isomerism was observed most frequently. The results suggest that retinoic acid exerts a significant effect on the determination of atrial situs during the development of mouse embryo.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Abnormalities, Drug-Induced;Animals;Blood Vessels;Female;Heart Defects, Congenital;Mice;Pregnancy;Syndrome;Tretinoin",
+      "language": "eng"
+    }
+  ]
+}

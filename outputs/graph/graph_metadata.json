@@ -1,0 +1,15 @@
+{
+  "study_version": "0.1.0",
+  "ontology_version": "0.1.0",
+  "built_at": "2026-10-31",
+  "n_nodes": 2234,
+  "n_relations": 4100,
+  "n_evidence_rows": 4596,
+  "layers": {
+    "ecological": 3,
+    "hypothesis": 7,
+    "inferred": 4,
+    "observed": 46,
+    "structured": 4040
+  }
+}

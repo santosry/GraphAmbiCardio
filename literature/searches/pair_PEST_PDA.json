@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_PEST_PDA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"pesticides\"[MeSH] OR \"pesticide*\"[tiab] OR \"organophosphate*\"[tiab] OR \"glyphosate\"[tiab] OR \"insecticide*\"[tiab] OR \"herbicide*\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"patent ductus arteriosus\"[tiab] OR \"ductus arteriosus\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"pesticides\"[MeSH Terms] OR \"pesticide*\"[Title/Abstract] OR \"organophosphate*\"[Title/Abstract] OR \"glyphosate\"[Title/Abstract] OR \"insecticide*\"[Title/Abstract] OR \"herbicide*\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"patent ductus arteriosus\"[Title/Abstract] OR \"ductus arteriosus\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "11409165",
+      "title": "Neural crest-derived defects in experimental congenital diaphragmatic hernia.",
+      "journal": "Pediatric surgery international",
+      "year": "2001",
+      "first_author": "Yu J",
+      "doi": "10.1007/s003830100597",
+      "abstract": "Congenital diaphragmatic hernia (CDH) is often associated with other malformations. This study tests the hypothesis that the heart and great vessels, thymus, parathyroids, and thyroid might be abnormal in the rat model of CDH as a result of disturbed neural-crest development. Time-mated pregnant rats were fed either 100 mg 2-4-dichlorophenyl-p-nitrophenyl ether (nitrofen) or vehicle on gestational day 9.5. Diaphragm, lung, heart, and thymic malformations were sought after dissection and the parathyroids and thyroid were histologically investigated in term fetuses. Ten control fetuses had no malformations, whereas 22 of 32 nitrofen fetuses had CDH and 20 had cardiovascular defects like narrow pulmonary outflow tract (n = 7), aberrant right subclavian artery (n = 7), ventricular septal defect (n = 4), atrial septal defect (n = 4), tetralogy of Fallot (n = 2), double-outflow right ventricle (n = 2), right ductus arteriosus (n = 2), and others. The thymus was present but was significantly hypoplastic in all nitrofen fetuses and was ectopic or single-lobed in 28% of them while the parathyroid glands were unilaterally absent or ectopic in 50%. The thyroid was only minimally malformed or ectopic. In conclusion, malformations of structures derived from the pharyngeal arches are likely neural-crest related in rats exposed to nitrofen.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Animals;Diaphragm;Disease Models, Animal;Female;Heart Defects, Congenital;Hernia, Diaphragmatic;Hernias, Diaphragmatic, Congenital;Neural Crest;Parathyroid Glands;Pesticides;Phenyl Ethers;Pregnancy;Rats;Rats, Sprague-Dawley;Thymus Gland;Thyroid Gland",
+      "language": "eng"
+    },
+    {
+      "pmid": "2583071",
+      "title": "Congenital anomalies associated with maternal exposure to oxydemeton-methyl.",
+      "journal": "Environmental research",
+      "year": "1989",
+      "first_author": "Romero P",
+      "doi": "10.1016/s0013-9351(89)80006-4",
+      "abstract": "Thirty-five workers became ill after they entered a cauliflower field contaminated with residues of three different insecticides, the organophosphates oxydemeton-methyl (Metasystox-R) and mevinphos (Phosdrin), and a carbamate, methomyl (Lannate). One crew member was pregnant with a 4-week-old fetus. At birth, the 3200-g female infant had multiple cardiac defects, bilateral optic nerve colobomas, microphthalmia of the left eye, cerebral and cerebellar atrophy, and facial anomalies. The cardiac defects included ventricular and atrial septal defects, stenosis of the pulmonary artery, and a patent ductus arteriosus. The child died at 14 days of age. There was no family history of birth defects, nor any maternal risk factor present, except that doxylamine (Bendectin) had been prescribed at 9 weeks fetal age. It is unlikely that doxylamine was responsible for the observed anomalies. Of the three chemicals involved, reproductive effects in test organisms have been observed only with oxydemeton-methyl. This case represents the first report of human malformations associated with prenatal exposure to this chemical. Further studies may be warranted to determine if a causal relationship exists.",
+      "pubtypes": "Case Reports;Journal Article",
+      "mesh_terms": "Abnormalities, Drug-Induced;Abnormalities, Multiple;Adult;Air Pollutants, Occupational;Cerebellum;Environmental Exposure;Eye Abnormalities;Face;Female;Heart Defects, Congenital;Humans;Insecticides;Optic Nerve;Organothiophosphorus Compounds;Pregnancy;Prenatal Exposure Delayed Effects;Reproduction",
+      "language": "eng"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_SOLV_PDA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"solvents\"[MeSH] OR \"trichloroethylene\"[MeSH] OR \"benzene\"[MeSH] OR \"organic solvent*\"[tiab] OR \"trichloroethylene\"[tiab] OR \"benzene exposure\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"patent ductus arteriosus\"[tiab] OR \"ductus arteriosus\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"solvents\"[MeSH Terms] OR \"trichloroethylene\"[MeSH Terms] OR \"benzene\"[MeSH Terms] OR \"organic solvent*\"[Title/Abstract] OR \"trichloroethylene\"[Title/Abstract] OR \"benzene exposure\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"patent ductus arteriosus\"[Title/Abstract] OR \"ductus arteriosus\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "2358589",
+      "title": "An association of human congenital cardiac malformations and drinking water contaminants.",
+      "journal": "Journal of the American College of Cardiology",
+      "year": "1990",
+      "first_author": "Goldberg SJ",
+      "doi": "10.1016/0735-1097(90)90473-3",
+      "abstract": "During an informal study in 1973 it was noted that approximately one third of patients with congenital heart disease lived in a small area in the Tucson Valley. In 1981 groundwater for a nearly identical area was found to be contaminated with trichloroethylene and to a lesser extent with dichloroethylene and chromium. Contamination probably began during the 1950s. Affected wells were closed after discovery of contamination. This sequence of events allowed investigation of the prevalence of congenital heart disease in children whose parents were exposed to the contaminated water area as compared with children whose parents were never exposed to the contaminated water area. The contaminated water area contained 8.8% of the Tucson Valley population and 4.5% of the labor force. Using their case registry, the authors interviewed parents of 707 children with congenital heart disease who, between 1969 and 1987, 1) conceived their child in the Tucson Valley, and 2) spent the month before the first trimester and the first trimester of the case pregnancy in the Tucson Valley. Two random dialing surveys showed that only 10.5% of the Tucson Valley population had ever had work or residence contact, or both, with the contaminated water area, whereas 35% of parents of children with congenital heart disease had had such contact (p less than 0.005). The prevalence of congenital cardiac disease (excluding syndromes, children with atrial tachycardia or premature infants with patent ductus arteriosus) in the Tucson Valley was 0.7% of live births and with syndromes was calculated to be 0.82%. The odds ratio for congenital heart disease for children of parents with contaminated water area contact during the period of active contamination was three times that for those without contact (p less than 0.005) and decreased to near unity for new arrivals in the contaminated water area after well closure. The proportion of infants with congenital heart disease as compared with the number of live births was significantly higher for resident mothers in the contaminated water area than for mothers with no exposure. No other environmental agent could be identified that was localized to the contaminated water area, but one could have been missed. The data show a significant association but not a cause and effect relation between parental exposure to the contaminated water area and an increased proportion of congenital heart disease among live births as compared with the proportion of congenital heart disease among live births for parents without contaminated water area contact.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adult;Arizona;Chromium;Dichloroethylenes;Fathers;Female;Fetal Death;Heart Defects, Congenital;Hispanic or Latino;Humans;Infant, Newborn;Male;Maternal-Fetal Exchange;Odds Ratio;Population Surveillance;Pregnancy;Pregnancy Trimester, First;Prevalence;Trichloroethylene;Water Pollutants;Water Pollutants, Chemical;Water Supply",
+      "language": "eng"
+    }
+  ]
+}

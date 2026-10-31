@@ -1,0 +1,61 @@
+{
+  "search_id": "pair_ALCOHOL_TRUNCUS",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ethanol\"[MeSH] OR \"alcohol drinking\"[MeSH] OR \"alcohol\"[tiab] OR \"ethanol\"[tiab] OR \"fetal alcohol\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"truncus arteriosus\"[tiab] OR \"common arterial trunk\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ethanol\"[MeSH Terms] OR \"alcohol drinking\"[MeSH Terms] OR \"alcohol\"[Title/Abstract] OR \"ethanol\"[Title/Abstract] OR \"fetal alcohol\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"truncus arteriosus\"[Title/Abstract] OR \"common arterial trunk\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 5,
+  "retrieved_n": 4,
+  "studies": [
+    {
+      "pmid": "2787814",
+      "title": "Risk factors for conotruncal cardiac defects in Atlanta.",
+      "journal": "Journal of the American College of Cardiology",
+      "year": "1989",
+      "first_author": "Adams MM",
+      "doi": "10.1016/0735-1097(89)90199-x",
+      "abstract": "Because the causes of conotruncal cardiac defects are poorly understood, a case-control study was conducted to investigate maternal risk factors for conotruncal cardiac defects. Eligible cases included all infants who were born from 1976 through 1980 to residents of the five county metropolitan Atlanta area and diagnosed with truncus arteriosus, transposition of the great arteries or tetralogy of Fallot. Eligible control infants were a sample of comparable infants without birth defects. Maternal interviews were conducted for 73% (83 of 114) of eligible cases and 72% (1,303 of 1,804) of eligible control infants. The results showed increased risks associated with maternal diabetes (odds ratio 5.6; 90% confidence interval 2.5 to 15.6), maternal stress related to job loss, divorce, separation or death of a close friend or relative (odds ratio 2.4; 90% confidence interval 1.4 to 4.2) and a history of a sibling with a cardiac defect (odds ratio 4.8; 90% confidence interval 2.2 to 10.5). The statistical power of the data was adequate to rule out threefold or greater increases in risk for a wide variety of other exposures, including maternal illnesses other than diabetes, contraceptive use, nonmedicinal drugs (for example, coffee, tea, alcohol, cigarettes, street drugs), employment and education. This population-based study offers no clues that could explain either the high rate of transposition of the great arteries or the temporal trend of an increasing rate of tetralogy of Fallot in Atlanta.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Cross-Sectional Studies;Female;Georgia;Heart Defects, Congenital;Humans;Infant, Newborn;Maternal Age;Pregnancy;Pregnancy in Diabetics;Racial Groups;Risk Factors;Stress, Psychological",
+      "language": "eng"
+    },
+    {
+      "pmid": "27542407",
+      "title": "Cardiac neural crest ablation results in early endocardial cushion and hemodynamic flow abnormalities.",
+      "journal": "American journal of physiology. Heart and circulatory physiology",
+      "year": "2016",
+      "first_author": "Ma P",
+      "doi": "10.1152/ajpheart.00188.2016",
+      "abstract": "Cardiac neural crest cell (CNCC) ablation creates congenital heart defects (CHDs) that resemble those observed in many syndromes with craniofacial and cardiac consequences. The loss of CNCCs causes a variety of great vessel defects, including persistent truncus arteriosus and double-outlet right ventricle. However, because of the lack of quantitative volumetric measurements, less severe defects, such as great vessel size changes and valve defects, have not been assessed. Also poorly understood is the role of abnormal cardiac function in the progression of CNCC-related CHDs. CNCC ablation was previously reported to cause abnormal cardiac function in early cardiogenesis, before the CNCCs arrive in the outflow region of the heart. However, the affected functional parameters and how they correlate with the structural abnormalities were not fully characterized. In this study, using a CNCC-ablated quail model, we contribute quantitative phenotyping of CNCC ablation-related CHDs and investigate abnormal early cardiac function, which potentially contributes to late-stage CHDs. Optical coherence tomography was used to assay early- and late-stage embryos and hearts. In CNCC-ablated embryos at four-chambered heart stages, great vessel diameter and left atrioventricular valve leaflet volumes are reduced. Earlier, at cardiac looping stages, CNCC-ablated embryos exhibit abnormally twisted bodies, abnormal blood flow waveforms, increased retrograde flow percentage, and abnormal cardiac cushions. The phenotypes observed in this CNCC-ablation model were also strikingly similar to those found in an established avian fetal alcohol syndrome model, supporting the contribution of CNCC dysfunction to the development of alcohol-induced CHDs.",
+      "pubtypes": "Journal Article;Research Support, Non-U.S. Gov't;Research Support, N.I.H., Extramural",
+      "mesh_terms": "Animals;Aorta;Embryo, Nonmammalian;Endocardial Cushion Defects;Fetal Alcohol Spectrum Disorders;Heart;Heart Defects, Congenital;Heart Valves;Laser Therapy;Neural Crest;Organ Size;Phenotype;Pulmonary Artery;Quail;Tomography, Optical Coherence",
+      "language": "eng"
+    },
+    {
+      "pmid": "4038218",
+      "title": "Truncus arteriosus and facial dysmorphism.",
+      "journal": "Australian paediatric journal",
+      "year": "1985",
+      "first_author": "Radford DJ",
+      "doi": "10.1111/j.1440-1754.1985.tb00145.x",
+      "abstract": "Facial features of infants with truncus arteriosus were photographed and reviewed. Anomalies included hypertelorism, low set ears, micrognathia, down-slanting palpebral fissures, short philtrum and small mouths. Associated cardiovascular defects were interrupted aortic arch, double aortic arch, right aortic arch and aberrant brachiocephalic vessels. Potential teratogenic factors included maternal diabetes, syphilis, alcohol ingestion, carbimazole therapy and infant chromosomal anomalies. The facial features, together with the rare cardiac abnormalities of truncus arteriosus and aortic arch defects are similar to those described in Di George syndrome (defect of fourth branchial arch and derivatives of third and fourth pharyngeal pouches). However none of these patients had symptomatic hypocalcaemia or absence of the thymus. It is concluded that this association of truncus arteriosus, aortic arch abnormalities and facial anomalies involves first and fourth branchial arch maldevelopment, and indicates embryological insult between the fourth and seventh weeks of gestation.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Abnormalities, Multiple;Aorta, Thoracic;Australia;Face;Female;Humans;Hypertelorism;Infant;Infant, Newborn;Male;Micrognathism;Truncus Arteriosus, Persistent",
+      "language": "eng"
+    },
+    {
+      "pmid": "1572431",
+      "title": "Risk factors for conal malformations of the heart.",
+      "journal": "European journal of epidemiology",
+      "year": "1992",
+      "first_author": "Tikkanen J",
+      "doi": "10.1007/BF03334972",
+      "abstract": "The possible effect of environmental factors during early pregnancy on the occurrence of conal malformations (CAS) in the offspring was studied in 90 cases and 756 controls. The cases represented all CAS-infants with anomalies such as transposition, Tetralogy of Fallot and truncus arteriosus verified in Finland during 1982 and 1983. The controls were randomly selected from all babies born in the same period. Case and control mothers were interviewed by midwives using a structured questionnaire approximately three months after delivery. Maternal alcohol consumption during the first trimester was more prevalent among CAS-mothers (50.0%) than controls (38.0%), as was maternal upper respiratory infection (33.0/17.7%). Maternal exposure to dyes, lacquers or paints at work during the first trimester showed an adjusted relative odds ratio of 2.9 (95% confidence interval 1.2-7.5) in logistic regression analysis. The risk of CAS was equal in urban and rural areas and not associated with maternal ABO- or Rh-blood groups, smoking, or coffee, tea, acetylsalicylic acid or diazepam consumption. Maternal exposures to plastic raw materials, disinfectants, pesticides, microwave-ovens or video display terminals at work were not factors associated with the risk of conal malformations.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adult;Female;Finland;Heart Defects, Congenital;Humans;Infant, Newborn;Male;Maternal-Fetal Exchange;Occupational Exposure;Pregnancy;Prevalence;Regression Analysis;Risk Factors;Surveys and Questionnaires",
+      "language": "eng"
+    }
+  ]
+}

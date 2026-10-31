@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_PEST_COA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"pesticides\"[MeSH] OR \"pesticide*\"[tiab] OR \"organophosphate*\"[tiab] OR \"glyphosate\"[tiab] OR \"insecticide*\"[tiab] OR \"herbicide*\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"coarctation of the aorta\"[tiab] OR \"aortic coarctation\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"pesticides\"[MeSH Terms] OR \"pesticide*\"[Title/Abstract] OR \"organophosphate*\"[Title/Abstract] OR \"glyphosate\"[Title/Abstract] OR \"insecticide*\"[Title/Abstract] OR \"herbicide*\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"coarctation of the aorta\"[Title/Abstract] OR \"aortic coarctation\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "25262086",
+      "title": "Residential agricultural pesticide exposures and risk of selected congenital heart defects among offspring in the San Joaquin Valley of California.",
+      "journal": "Environmental research",
+      "year": "2014",
+      "first_author": "Carmichael SL",
+      "doi": "10.1016/j.envres.2014.08.030",
+      "abstract": "BACKGROUND: Pesticide exposures are ubiquitous and of substantial public concern. We examined the potential association of congenital heart defects with residential proximity to commercial agricultural pesticide applications in the San Joaquin Valley, California. METHODS: Study subjects included 569 heart defect cases and 785 non-malformed controls born from 1997 to 2006 whose mothers participated in a population-based case-control study. Associations with any versus no exposure to physicochemical groups of pesticides and specific chemicals were assessed using logistic regression adjusted for relevant covariates, for 8 heart defect phenotypes that included ≥ 50 cases and pesticide exposures with ≥ 5 exposed cases and controls, which resulted in 235 comparisons. RESULTS: 38% of cases and controls were classified as exposed to pesticides within a 500 m radius of mother's address during a 3-month periconceptional window. Adjusted odds ratios (AORs) with 95% CIs excluding 1.0 were observed for 18 comparisons; all were >1 and ranged from 1.9 to 7.1. They included tetralogy of Fallot (n=101 cases) and neonicotinoids; hypoplastic left heart syndrome (n=59) and strobins; coarctation of the aorta (n=74) and pyridazinones; pulmonary valve stenosis (n=53) and bipyridyliums and organophosphates; ventricular septal defects (n=93) and avermectins and pyrethroids; and atrial septal defects (n=132) and dichlorphenoxy acid or esters, organophosphates, organotins, and pyrethroids. No AORs met both of these criteria for d-transposition of the great arteries (n=58) or heterotaxia (n=53). CONCLUSIONS: Most pesticides were not associated with increased risk of specific heart defect phenotypes. For the few that were associated, results should be interpreted with caution until replicated in other study populations.",
+      "pubtypes": "Journal Article;Research Support, N.I.H., Extramural;Research Support, Non-U.S. Gov't",
+      "mesh_terms": "Adult;Agriculture;California;Environmental Exposure;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Logistic Models;Maternal Exposure;Odds Ratio;Pesticides;Pregnancy",
+      "language": "eng"
+    },
+    {
+      "pmid": "1143982",
+      "title": "Coarctation of the aorta in male cousins with similar maternal environmental exposure to insect repellent and insecticides.",
+      "journal": "Pediatrics",
+      "year": "1975",
+      "first_author": "Hall JG",
+      "doi": "",
+      "abstract": "Two male infants, whose mothers are sisters and whose fathers are unrelated, were born within two weeks of each other. Both infants had coarctation of the aorta. Since both mothers were exposed to an insecticide while on a camping trip in the first trimester of pregnancy, it is unknown whether genetic or environmental factors caused the anomalies. Observations should be made on other patients with congenital heart defects to clarify the etiologic factors.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Adult;Aortic Coarctation;Environmental Exposure;Female;Humans;Insect Repellents;Insecticides;Male;Pregnancy;Pregnancy Trimester, First",
+      "language": "eng"
+    }
+  ]
+}

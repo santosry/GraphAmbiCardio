@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_METALS_COA",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"arsenic\"[MeSH] OR \"lead\"[MeSH] OR \"mercury\"[MeSH] OR \"metals, heavy\"[MeSH] OR \"heavy metal*\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"coarctation of the aorta\"[tiab] OR \"aortic coarctation\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"arsenic\"[MeSH Terms] OR \"lead\"[MeSH Terms] OR \"mercury\"[MeSH Terms] OR \"metals, heavy\"[MeSH Terms] OR \"heavy metal*\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"coarctation of the aorta\"[Title/Abstract] OR \"aortic coarctation\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "3209340",
+      "title": "Chemical quality of maternal drinking water and congenital heart disease.",
+      "journal": "International journal of epidemiology",
+      "year": "1988",
+      "first_author": "Zierler S",
+      "doi": "10.1093/ije/17.3.589",
+      "abstract": "We undertook a case-control study to investigate the association between chemicals in maternal drinking water consumed during pregnancy and congenital heart disease in the offspring. Two hundred and seventy affected children and 665 healthy children were enrolled in the study. Information on contaminant levels in maternal drinking water was available from records of routine water analysis of samples taken from public taps in the communities where the mothers resided during pregnancy. Mothers provided information during a telephone interview on their health, pregnancy management, and demographic characteristics. Nine inorganic metals were analysed for detection of an association with congenital heart disease. The chemical exposures of particular interest were arsenic, lead, mercury and selenium. None of the chemicals was associated materially with an increase in the frequency of congenital heart disease overall. Arsenic exposure at any detectable level was associated with a threefold increase in occurrence of coarctation of the aorta (prevalence odds ratio = 3.4, 95% confidence interval = 1.3-8.9). Detectable traces of selenium in drinking water were associated with a lower frequency of any congenital heart disease than was observed among children exposed to drinking water not containing detectable levels of selenium (prevalence odds ratio = 0.62, 95% confidence limits = 0.40-0.97). A dose-response effect was observed over four levels of selenium exposure. Non-differential errors in the measurement and classification of exposure to contaminants routinely monitored in drinking water could account for lack of positive findings. In addition, most of the contaminant levels were below the maximum levels set by the Environmental Protection Agency, so that lack of evidence of effect may have been due to the low exposure levels in this population.",
+      "pubtypes": "Journal Article;Research Support, U.S. Gov't, Non-P.H.S.;Research Support, U.S. Gov't, P.H.S.",
+      "mesh_terms": "Arsenic;Child, Preschool;Drinking;Female;Heart Defects, Congenital;Humans;Infant;Infant, Newborn;Lead;Massachusetts;Maternal-Fetal Exchange;Mercury;Pregnancy;Retrospective Studies;Selenium;Water Pollutants;Water Pollutants, Chemical",
+      "language": "eng"
+    }
+  ]
+}

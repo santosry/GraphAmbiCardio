@@ -1,0 +1,37 @@
+{
+  "search_id": "pair_VPA_EBSTEIN",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"valproic acid\"[MeSH] OR \"valproic acid\"[tiab] OR \"valproate\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"ebstein anomaly\"[tiab] OR \"ebstein\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"valproic acid\"[MeSH Terms] OR \"valproic acid\"[Title/Abstract] OR \"valproate\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"ebstein anomaly\"[Title/Abstract] OR \"ebstein\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 2,
+  "retrieved_n": 2,
+  "studies": [
+    {
+      "pmid": "21291342",
+      "title": "Severe fetal valproate syndrome: combination of complex cardiac defect, multicystic dysplastic kidney, and trigonocephaly.",
+      "journal": "The journal of maternal-fetal & neonatal medicine : the official journal of the European Association of Perinatal Medicine, the Federation of Asia and Oceania Perinatal Societies, the International Society of Perinatal Obstetricians",
+      "year": "2011",
+      "first_author": "Ozkan H",
+      "doi": "10.3109/14767058.2010.501120",
+      "abstract": "Valproic acid (VPA) is a teratogenic drug used in pregnant women for the treatment of epilepsy and mood disorders. Fetal valproate syndrome (FVS) is characterized by a number of abnormalities associated with VPA exposure in utero including neural tube defects, congenital heart defects, limb defects, genitourinary defects, brain, eye and respiratory anomalies, and abdominal wall defects. Complex cardiac defect and trigonocephaly have rarely been reported and multicystic dysplastic kidney has never been detected in FVS. We here report a female infant who was born to a mother with a history of low-dose VPA monotherapy (250 mg/day) during pregnancy and who had presented with a combination of unilateral multicystic dysplastic kidney, multicomplex cardiac defect including severe coarctation of aorta, Ebstein anomaly, secundum atrial septal defect, mesocardia along with trigonocephaly due to metopic craniosynostosis, typical facial appearance and limb defects. To our knowledge, this is the first case presented with multicystic dysplastic kidney, complex cardiac defect, trigonocephaly and other limb and facial defects because of exposure to very low-dose VPA monotherapy (250 mg/day) in utero. We conclude that VPA must be used very cautiously in pregnant women even as monotherapy and in low doses to prevent major congenital defects.",
+      "pubtypes": "Case Reports;Journal Article",
+      "mesh_terms": "Abnormalities, Drug-Induced;Abnormalities, Multiple;Craniosynostoses;Fatal Outcome;Female;Heart Defects, Congenital;Humans;Infant, Newborn;Limb Deformities, Congenital;Multicystic Dysplastic Kidney;Pregnancy;Prenatal Exposure Delayed Effects;Severity of Illness Index;Valproic Acid;Young Adult",
+      "language": "eng"
+    },
+    {
+      "pmid": "40293641",
+      "title": "Comparative efficacy and safety of alternatives to sodium valproate in the management of bipolar affective disorder in people of child-bearing age: a narrative review by the European Society of Clinical Pharmacy's mental health specialist interest group.",
+      "journal": "International journal of clinical pharmacy",
+      "year": "2025",
+      "first_author": "Fitzgerald I",
+      "doi": "10.1007/s11096-025-01919-x",
+      "abstract": "BACKGROUND: The European Medicines Agency has recommended a series of restrictions on the use of sodium valproate (valproate) following research linking its exposure in utero to adverse congenital and neurodevelopmental effects in offspring. Recent research has highlighted a potential increased risk of neurodevelopmental disorders in children born to males taking valproate prior to conception. Clinicians and patients require guidance regarding suitable alternatives. AIM: To provide an overview of suitable alternatives to valproate in the management of bipolar disorder. METHOD: A narrative review was conducted. Only medications with an established evidence base in managing different phases of bipolar disorder and endorsed within clinical practice guidelines were considered. Eligible guidelines included those (i) where recommendations were informed by a formal guideline development process and (ii) published in English within the last 15 years. REPROTOX® was chosen as the primary information source regarding reproductive safety of alternative medications. RESULTS: Of all second-generation antipsychotics, quetiapine should be considered a first-line alternative to valproate. Lithium has been associated with an increased risk of cardiac malformations, especially Ebstein anomaly, following in utero exposure. However, given its robust efficacy as an antimanic agent and the absolute risk of cardiac abnormalities being low, it's use can still be considered in individuals of child-bearing potential with appropriate monitoring. Carbamazepine treatment should be avoided due to concerns for teratogenicity. Although considered safe in pregnancy, lamotrigine is largely effective at preventing relapse of bipolar depression. Thus, lamotrigine offers limited clinical utility as an alternative to valproate. CONCLUSION: Specific recommendations are made regarding alternatives to valproate in managing bipolar disorder.",
+      "pubtypes": "Journal Article;Review;Comparative Study",
+      "mesh_terms": "Humans;Bipolar Disorder;Valproic Acid;Antimanic Agents;Antipsychotic Agents;Female;Europe;Pregnancy;Treatment Outcome;Disease Management",
+      "language": "eng"
+    }
+  ]
+}

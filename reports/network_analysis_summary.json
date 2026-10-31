@@ -1,0 +1,92 @@
+{
+  "n_nodes": 2234,
+  "n_relations": 4100,
+  "n_edges_analysis_graph": 4090,
+  "n_conceptual_nodes": 35,
+  "n_conceptual_edges": 39,
+  "n_exposure_phenotype_paths": 23,
+  "n_direct_exposure_phenotype_pairs": 13,
+  "n_gaps": 20,
+  "top_degree": [
+    {
+      "node_id": "CHD:VSD",
+      "node_type": "Phenotype",
+      "degree": 530,
+      "in_degree": 530,
+      "out_degree": 0,
+      "betweenness": 0.353765
+    },
+    {
+      "node_id": "CHD:ASD",
+      "node_type": "Phenotype",
+      "degree": 492,
+      "in_degree": 492,
+      "out_degree": 0,
+      "betweenness": 0.323324
+    },
+    {
+      "node_id": "CHD:PDA",
+      "node_type": "Phenotype",
+      "degree": 408,
+      "in_degree": 408,
+      "out_degree": 0,
+      "betweenness": 0.239423
+    },
+    {
+      "node_id": "CHD:TOF",
+      "node_type": "Phenotype",
+      "degree": 197,
+      "in_degree": 197,
+      "out_degree": 0,
+      "betweenness": 0.076846
+    },
+    {
+      "node_id": "CHD:COA",
+      "node_type": "Phenotype",
+      "degree": 161,
+      "in_degree": 161,
+      "out_degree": 0,
+      "betweenness": 0.064635
+    },
+    {
+      "node_id": "CHD:PS",
+      "node_type": "Phenotype",
+      "degree": 148,
+      "in_degree": 148,
+      "out_degree": 0,
+      "betweenness": 0.047891
+    },
+    {
+      "node_id": "CHD:DORV",
+      "node_type": "Phenotype",
+      "degree": 97,
+      "in_degree": 97,
+      "out_degree": 0,
+      "betweenness": 0.054759
+    },
+    {
+      "node_id": "CHD:TGA",
+      "node_type": "Phenotype",
+      "degree": 87,
+      "in_degree": 87,
+      "out_degree": 0,
+      "betweenness": 0.035522
+    },
+    {
+      "node_id": "CHD:AS",
+      "node_type": "Phenotype",
+      "degree": 73,
+      "in_degree": 73,
+      "out_degree": 0,
+      "betweenness": 0.027334
+    },
+    {
+      "node_id": "CHD:HLHS",
+      "node_type": "Phenotype",
+      "degree": 54,
+      "in_degree": 54,
+      "out_degree": 0,
+      "betweenness": 0.012368
+    }
+  ]
+}

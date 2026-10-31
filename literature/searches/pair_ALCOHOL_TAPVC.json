@@ -1,0 +1,25 @@
+{
+  "search_id": "pair_ALCOHOL_TAPVC",
+  "database": "PubMed/MEDLINE",
+  "query": "(\"ethanol\"[MeSH] OR \"alcohol drinking\"[MeSH] OR \"alcohol\"[tiab] OR \"ethanol\"[tiab] OR \"fetal alcohol\"[tiab]) AND (\"congenital heart\"[tiab] OR \"congenital heart disease*\"[tiab] OR \"heart defects, congenital\"[MeSH] OR \"cardiac malformation*\"[tiab]) AND (\"total anomalous pulmonary venous connection\"[tiab] OR \"TAPVC\"[tiab] OR \"TAPVR\"[tiab]) AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab] OR \"birth defect*\"[tiab] OR embry*[tiab] OR \"in utero\"[tiab])",
+  "query_translation": "(\"ethanol\"[MeSH Terms] OR \"alcohol drinking\"[MeSH Terms] OR \"alcohol\"[Title/Abstract] OR \"ethanol\"[Title/Abstract] OR \"fetal alcohol\"[Title/Abstract]) AND (\"congenital heart\"[Title/Abstract] OR \"congenital heart disease*\"[Title/Abstract] OR \"heart defects, congenital\"[MeSH Terms] OR \"cardiac malformation*\"[Title/Abstract]) AND (\"total anomalous pulmonary venous connection\"[Title/Abstract] OR \"TAPVC\"[Title/Abstract] OR \"TAPVR\"[Title/Abstract]) AND (\"pregnan*\"[Title/Abstract] OR \"maternal\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"teratogen*\"[Title/Abstract] OR \"birth defect*\"[Title/Abstract] OR \"embry*\"[Title/Abstract] OR \"in utero\"[Title/Abstract])",
+  "date_filter": null,
+  "sort": "relevance",
+  "retrieved_at": "2026-10-31",
+  "count_total": 1,
+  "retrieved_n": 1,
+  "studies": [
+    {
+      "pmid": "36369789",
+      "title": "Influenza vaccination during pregnancy and risk of selected major structural congenital heart defects, National Birth Defects Prevention Study 2006-2011.",
+      "journal": "Birth defects research",
+      "year": "2023",
+      "first_author": "Palmsten K",
+      "doi": "10.1002/bdr2.2114",
+      "abstract": "BACKGROUND: Although results from studies of first-trimester influenza vaccination and congenital heart defects (CHDs) have been reassuring, data are limited for specific CHDs. METHODS: We assessed associations between reported maternal influenza vaccination, 1 month before pregnancy (B1) through end of third pregnancy month (P3), and specific CHDs using data from a multisite, population-based case-control study. Analysis included 2,982 case children diagnosed with a simple CHD (no other cardiac involvement with or without extracardiac defects) and 4,937 control children without a birth defect with estimated delivery dates during 2006-2011. For defects with ≥5 exposed case children, we used logistic regression to estimate propensity score-adjusted odds ratios (aORs) and 95% confidence intervals (CIs), adjusting for estimated delivery year and season; plurality; and maternal age at delivery, race/ethnicity, low folate intake, and smoking and alcohol use during B1P3. RESULTS: Overall, 124 (4.2%) simple CHD case mothers and 197 (4.0%) control mothers reported influenza vaccination from 1 month before through the third pregnancy month. The aOR for any simple CHD was 0.97 (95% CI: 0.76-1.23). Adjusted ORs for specific simple CHDs ranged from 0.62 for hypoplastic left heart syndrome to 2.34 for total anomalous pulmonary venous return (TAPVR). All adjusted CIs included the null except for TAPVR. CONCLUSIONS: Although we cannot fully exclude that exposure misclassification may have masked risks for some CHDs, findings add to existing evidence supporting the safety of inactivated influenza vaccination during pregnancy. The TAPVR result may be due to chance, but it may help inform future studies.",
+      "pubtypes": "Journal Article",
+      "mesh_terms": "Child;Female;Humans;Pregnancy;Case-Control Studies;Heart Defects, Congenital;Influenza, Human;Maternal Exposure;Mothers;Risk Factors;Scimitar Syndrome;Influenza Vaccines",
+      "language": "eng"
+    }
+  ]
+}
