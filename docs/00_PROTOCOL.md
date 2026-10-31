@@ -49,7 +49,7 @@ CID-10 Q20–Q28. Fourteen sentinel phenotypes are represented with HPO cross-re
 
 ### 4.3 Exposures
 
-Fourteen exposures pre-specified for their environmental/occupational/therapeutic relevance and for local plausibility: PM2.5, NO2/traffic, O3, SO2, heat, cold, pesticides, organic solvents, heavy metals, tobacco smoke, alcohol, valproic acid, retinoic acid derivatives, dioxins/PCBs.
+Seventeen exposures pre-specified for environmental/occupational/therapeutic relevance and local plausibility: PM2.5, PM10, NO2/traffic, O3, SO2, CO, heat, cold, relative humidity (contextual), pesticides, organic solvents, heavy metals, tobacco smoke, alcohol, valproic acid, retinoic acid derivatives, dioxins/PCBs. The hierarchy is explicit: PM2.5 as primary axis, temperature as secondary, humidity as contextual only.
 
 > Pre-specification does **not** imply that evidence exists. Exposures without retained evidence remain in the graph as explicit gaps.
 
@@ -119,7 +119,7 @@ Full strings, translations, dates and counts: `docs/02_SEARCH_STRATEGY.md` and `
 - **Manual curation** of anchor studies: the reviewer read the abstract and extracted (i) the exact claim, (ii) a verbatim quote, (iii) species/design/population/window/direction.
 - A build-time verifier checks that every quote exists in the PubMed abstract; failure aborts the build.
 
-This is a **rapid scoping review with targeted manual extraction**, not a full dual-reviewer systematic review. The PRISMA-ScR flow reflects exactly what was done.
+This is a **structured, non-systematic search with targeted manual extraction**, not a full dual-reviewer systematic review. The PRISMA-ScR flow reflects exactly what was done.
 
 ---
 

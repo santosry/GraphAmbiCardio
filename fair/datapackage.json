@@ -1,0 +1,698 @@
+{
+  "name": "graphambicardio-cekp",
+  "title": "CardioEnvironment Knowledge Platform — grafo de conhecimento e dados derivados",
+  "description": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas, com dados locais de Campos dos Goytacazes (RJ) e proveniência por evidência.",
+  "version": "0.2.0",
+  "created": "2026-10-31",
+  "licenses": [
+    {
+      "name": "MIT",
+      "path": "https://opensource.org/licenses/MIT",
+      "title": "Código sob MIT; dados de terceiros mantêm suas licenças"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "GraphAmbiCardio study team",
+      "role": "author"
+    }
+  ],
+  "keywords": [
+    "congenital heart defects",
+    "environmental exposure",
+    "knowledge graph",
+    "cardiogenesis",
+    "Brazil",
+    "FAIR"
+  ],
+  "sources": [
+    {
+      "title": "PubMed/MEDLINE",
+      "path": "https://pubmed.ncbi.nlm.nih.gov/"
+    },
+    {
+      "title": "Europe PMC",
+      "path": "https://europepmc.org/"
+    },
+    {
+      "title": "HPO",
+      "path": "https://hpo.jax.org/"
+    },
+    {
+      "title": "ClinVar",
+      "path": "https://www.ncbi.nlm.nih.gov/clinvar/"
+    },
+    {
+      "title": "Reactome",
+      "path": "https://reactome.org/"
+    },
+    {
+      "title": "DATASUS/SINASC/SIH",
+      "path": "https://datasus.saude.gov.br/"
+    },
+    {
+      "title": "ERA5-Land via Open-Meteo",
+      "path": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    {
+      "title": "SciELO via Crossref (prefixo 10.1590)",
+      "path": "https://api.crossref.org/"
+    },
+    {
+      "title": "CAPES Catálogo de Teses e Dissertações",
+      "path": "https://catalogodeteses.capes.gov.br/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "nos_grafo",
+      "path": "outputs/graph/nodes.csv",
+      "description": "Nós do grafo (exposições, mecanismos, genes, vias, processos, fenótipos)",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 155948,
+      "hash": "sha256:2ffd43009d8419c37235854e8854a502be93c558e04bd8460d585dc36657235b",
+      "schema": {
+        "fields": [
+          {
+            "name": "node_id",
+            "type": "object"
+          },
+          {
+            "name": "label",
+            "type": "object"
+          },
+          {
+            "name": "type",
+            "type": "object"
+          },
+          {
+            "name": "subtype",
+            "type": "object"
+          },
+          {
+            "name": "identifiers",
+            "type": "float64"
+          },
+          {
+            "name": "description",
+            "type": "object"
+          },
+          {
+            "name": "source",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "relacoes",
+      "path": "outputs/graph/relations.csv",
+      "description": "Relações agregadas com camada, confiança, grau e nível de evidência",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 1987840,
+      "hash": "sha256:2c0214b6d0eaf50c10e380c431311e346d252438197a9b3e3e9cee16c57c2108",
+      "schema": {
+        "fields": [
+          {
+            "name": "edge_id",
+            "type": "object"
+          },
+          {
+            "name": "edge_key",
+            "type": "object"
+          },
+          {
+            "name": "source_id",
+            "type": "object"
+          },
+          {
+            "name": "source_type",
+            "type": "object"
+          },
+          {
+            "name": "target_id",
+            "type": "object"
+          },
+          {
+            "name": "target_type",
+            "type": "object"
+          },
+          {
+            "name": "relation",
+            "type": "object"
+          },
+          {
+            "name": "layer",
+            "type": "object"
+          },
+          {
+            "name": "n_evidence",
+            "type": "int64"
+          },
+          {
+            "name": "n_references",
+            "type": "int64"
+          },
+          {
+            "name": "evidence_types",
+            "type": "object"
+          },
+          {
+            "name": "species",
+            "type": "object"
+          },
+          {
+            "name": "study_designs",
+            "type": "object"
+          },
+          {
+            "name": "confidence",
+            "type": "float64"
+          },
+          {
+            "name": "grade",
+            "type": "object"
+          },
+          {
+            "name": "evidence_tier",
+            "type": "object"
+          },
+          {
+            "name": "evidence_tier_label",
+            "type": "object"
+          },
+          {
+            "name": "confidence_detail",
+            "type": "object"
+          },
+          {
+            "name": "references",
+            "type": "object"
+          },
+          {
+            "name": "source_database",
+            "type": "object"
+          },
+          {
+            "name": "retrieved_at",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "evidencias",
+      "path": "outputs/graph/evidence.csv",
+      "description": "Uma linha por evidência, com referência, espécie, desenho, citação e limitações",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 1595394,
+      "hash": "sha256:953d44e34b9211a423a4b114ae74f0bc499e5d821a8dc416fb3b0f68a8da58db",
+      "schema": {
+        "fields": [
+          {
+            "name": "evidence_id",
+            "type": "object"
+          },
+          {
+            "name": "edge_key",
+            "type": "object"
+          },
+          {
+            "name": "source_id",
+            "type": "object"
+          },
+          {
+            "name": "source_type",
+            "type": "object"
+          },
+          {
+            "name": "target_id",
+            "type": "object"
+          },
+          {
+            "name": "target_type",
+            "type": "object"
+          },
+          {
+            "name": "relation",
+            "type": "object"
+          },
+          {
+            "name": "layer",
+            "type": "object"
+          },
+          {
+            "name": "evidence_type",
+            "type": "object"
+          },
+          {
+            "name": "study_design",
+            "type": "object"
+          },
+          {
+            "name": "species",
+            "type": "object"
+          },
+          {
+            "name": "population_or_model",
+            "type": "object"
+          },
+          {
+            "name": "exposure_window",
+            "type": "object"
+          },
+          {
+            "name": "effect_direction",
+            "type": "object"
+          },
+          {
+            "name": "context",
+            "type": "object"
+          },
+          {
+            "name": "quote",
+            "type": "object"
+          },
+          {
+            "name": "reference",
+            "type": "int64"
+          },
+          {
+            "name": "reference_type",
+            "type": "object"
+          },
+          {
+            "name": "source_database",
+            "type": "object"
+          },
+          {
+            "name": "retrieved_at",
+            "type": "object"
+          },
+          {
+            "name": "notes",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "hipoteses",
+      "path": "outputs/graph/hypotheses.csv",
+      "description": "Hipóteses geradas por composição de arestas observadas",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 2799,
+      "hash": "sha256:c1fbd58fb036e60d103558d64fe40934ba3505db0ac5cb18caa7968510c8d137",
+      "schema": {
+        "fields": [
+          {
+            "name": "evidence_id",
+            "type": "object"
+          },
+          {
+            "name": "edge_key",
+            "type": "object"
+          },
+          {
+            "name": "source_id",
+            "type": "object"
+          },
+          {
+            "name": "source_type",
+            "type": "object"
+          },
+          {
+            "name": "target_id",
+            "type": "object"
+          },
+          {
+            "name": "target_type",
+            "type": "object"
+          },
+          {
+            "name": "relation",
+            "type": "object"
+          },
+          {
+            "name": "layer",
+            "type": "object"
+          },
+          {
+            "name": "evidence_type",
+            "type": "object"
+          },
+          {
+            "name": "study_design",
+            "type": "object"
+          },
+          {
+            "name": "species",
+            "type": "float64"
+          },
+          {
+            "name": "population_or_model",
+            "type": "object"
+          },
+          {
+            "name": "exposure_window",
+            "type": "float64"
+          },
+          {
+            "name": "effect_direction",
+            "type": "float64"
+          },
+          {
+            "name": "context",
+            "type": "object"
+          },
+          {
+            "name": "quote",
+            "type": "float64"
+          },
+          {
+            "name": "reference",
+            "type": "object"
+          },
+          {
+            "name": "reference_type",
+            "type": "object"
+          },
+          {
+            "name": "source_database",
+            "type": "object"
+          },
+          {
+            "name": "retrieved_at",
+            "type": "object"
+          },
+          {
+            "name": "notes",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sinasc_anual",
+      "path": "outputs/tables/sinasc_annual_complete.csv",
+      "description": "Série anual SINASC (microdados + agregados TabNet 2023-2024)",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 1415,
+      "hash": "sha256:9a45598da5f7252ba2d643e0117c26e5683f6a80db0660cc1bb9266e37f079c6",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "live_births",
+            "type": "int64"
+          },
+          {
+            "name": "chd_cases",
+            "type": "int64"
+          },
+          {
+            "name": "chd_per_10000_lb",
+            "type": "float64"
+          },
+          {
+            "name": "chd_proportion_per_1000_lb",
+            "type": "float64"
+          },
+          {
+            "name": "anomaly_flag_1",
+            "type": "int64"
+          },
+          {
+            "name": "any_q_code",
+            "type": "int64"
+          },
+          {
+            "name": "data_status",
+            "type": "object"
+          },
+          {
+            "name": "source",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sih_anual",
+      "path": "outputs/tables/sih_annual.csv",
+      "description": "Internações SIH/SUS por ano (Q20-Q28, diagnóstico principal)",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 891,
+      "hash": "sha256:10cf691aac9747a03b9211294739503391d910efa90a3b539d49a9e7903f887a",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "admissions_primary_chd",
+            "type": "int64"
+          },
+          {
+            "name": "deaths",
+            "type": "int64"
+          },
+          {
+            "name": "hospital_mortality_pct",
+            "type": "float64"
+          },
+          {
+            "name": "mean_length_of_stay_days",
+            "type": "float64"
+          },
+          {
+            "name": "total_cost_brl",
+            "type": "float64"
+          },
+          {
+            "name": "mean_cost_brl",
+            "type": "float64"
+          },
+          {
+            "name": "hospitals",
+            "type": "int64"
+          },
+          {
+            "name": "elective_pct",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "clima_diario",
+      "path": "data_processed/climate_daily_campos.csv",
+      "description": "Série diária ERA5-Land para Campos dos Goytacazes",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 415466,
+      "hash": "sha256:b92e4ecd44eafc2007354ba662c1475aee24a75019c39db64da9a30470130f74",
+      "schema": {
+        "fields": [
+          {
+            "name": "temperature_2m_mean",
+            "type": "float64"
+          },
+          {
+            "name": "temperature_2m_max",
+            "type": "float64"
+          },
+          {
+            "name": "temperature_2m_min",
+            "type": "float64"
+          },
+          {
+            "name": "relative_humidity_2m_mean",
+            "type": "int64"
+          },
+          {
+            "name": "precipitation_sum",
+            "type": "float64"
+          },
+          {
+            "name": "wind_speed_10m_max",
+            "type": "float64"
+          },
+          {
+            "name": "date",
+            "type": "object"
+          },
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "month",
+            "type": "int64"
+          },
+          {
+            "name": "tmax_p90",
+            "type": "float64"
+          },
+          {
+            "name": "heatwave_id",
+            "type": "int64"
+          },
+          {
+            "name": "heat_day_35",
+            "type": "int64"
+          },
+          {
+            "name": "cold_day_15",
+            "type": "int64"
+          },
+          {
+            "name": "diurnal_range",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "caminhos",
+      "path": "outputs/tables/paths_exposure_phenotype.csv",
+      "description": "Caminhos exposição-fenótipo com confiança mínima",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 2630,
+      "hash": "sha256:8fb39bfc6ba78b55ee794c447cca1cc6a3b72b0a0bfb03573522cb64d9b0632a",
+      "schema": {
+        "fields": [
+          {
+            "name": "source",
+            "type": "object"
+          },
+          {
+            "name": "target",
+            "type": "object"
+          },
+          {
+            "name": "path",
+            "type": "object"
+          },
+          {
+            "name": "n_steps",
+            "type": "int64"
+          },
+          {
+            "name": "path_confidence_min",
+            "type": "float64"
+          },
+          {
+            "name": "path_confidence_mean",
+            "type": "float64"
+          },
+          {
+            "name": "layers",
+            "type": "object"
+          },
+          {
+            "name": "references",
+            "type": "int64"
+          },
+          {
+            "name": "direct",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "lacunas",
+      "path": "outputs/tables/gap_analysis.csv",
+      "description": "Lacunas explícitas por exposição, mecanismo e processo",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 2226,
+      "hash": "sha256:99865bd737595f759ceed039bb41b11f8f5f6f070bc0ad6d5a1b23ad7c5b1c63",
+      "schema": {
+        "fields": [
+          {
+            "name": "entity_type",
+            "type": "object"
+          },
+          {
+            "name": "entity_id",
+            "type": "object"
+          },
+          {
+            "name": "n_curated_outgoing",
+            "type": "int64"
+          },
+          {
+            "name": "linked_to",
+            "type": "object"
+          },
+          {
+            "name": "gap_type",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "candidatos_hipoteses",
+      "path": "outputs/tables/hypothesis_candidates.csv",
+      "description": "Hipóteses por sobreposição gênica (não evidenciais)",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 1137,
+      "hash": "sha256:1bf59f15ec462828755b6ca1bc9dd7bc811b8350e3434d49c691991befea8938",
+      "schema": {
+        "fields": [
+          {
+            "name": "exposure_id",
+            "type": "object"
+          },
+          {
+            "name": "phenotype_id",
+            "type": "object"
+          },
+          {
+            "name": "mechanism_id",
+            "type": "object"
+          },
+          {
+            "name": "n_overlap",
+            "type": "int64"
+          },
+          {
+            "name": "gene_set_fraction",
+            "type": "float64"
+          },
+          {
+            "name": "overlap_genes",
+            "type": "object"
+          },
+          {
+            "name": "supporting_reference",
+            "type": "int64"
+          },
+          {
+            "name": "priority",
+            "type": "object"
+          },
+          {
+            "name": "missing_link",
+            "type": "object"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -50,8 +50,8 @@ for _p in (
 # Study scope
 # --------------------------------------------------------------------------
 STUDY_ID = "GraphAmbiCardio"
-STUDY_VERSION = "0.1.0"
-ONTOLOGY_VERSION = "0.1.0"
+STUDY_VERSION = "0.2.0"
+ONTOLOGY_VERSION = "0.2.0"
 
 PERIOD_START = 2010
 PERIOD_END = 2025
@@ -201,6 +201,23 @@ EXPOSURES = [
         "class": "air_pollutant",
         "query_terms": ['"particulate matter"[MeSH]', '"PM2.5"[tiab]', '"PM 2.5"[tiab]', '"fine particulate matter"[tiab]'],
         "local_relevance": "Sugarcane burning and biomass smoke are relevant sources in the Norte Fluminense region; no local PM2.5 monitoring series is available (documented gap).",
+        "priority": "primary",
+    },
+    {
+        "id": "EXP:PM10",
+        "label": "Coarse particulate matter (PM10)",
+        "class": "air_pollutant",
+        "query_terms": ['"particulate matter"[MeSH]', '"PM10"[tiab]', '"PM 10"[tiab]'],
+        "local_relevance": "Same sources as PM2.5; no local monitoring.",
+        "priority": "conditional",
+    },
+    {
+        "id": "EXP:CO",
+        "label": "Carbon monoxide (CO)",
+        "class": "air_pollutant",
+        "query_terms": ['"carbon monoxide"[MeSH]', '"carbon monoxide"[tiab]', '"CO exposure"[tiab]'],
+        "local_relevance": "Vehicular and biomass-combustion marker; no local monitoring.",
+        "priority": "conditional",
     },
     {
         "id": "EXP:NO2",
@@ -229,6 +246,7 @@ EXPOSURES = [
         "class": "climate",
         "query_terms": ['"hot temperature"[MeSH]', '"hyperthermia"[MeSH]', '"hyperthermia"[tiab]', '"heat wave*"[tiab]', '"high temperature"[tiab]'],
         "local_relevance": "Daily temperature series available from ERA5-Land reanalysis for the municipality.",
+        "priority": "secondary",
     },
     {
         "id": "EXP:COLD",
@@ -236,6 +254,14 @@ EXPOSURES = [
         "class": "climate",
         "query_terms": ['"cold temperature"[MeSH]', '"cold spell*"[tiab]', '"low temperature"[tiab]'],
         "local_relevance": "Daily temperature series available from ERA5-Land reanalysis.",
+    },
+    {
+        "id": "EXP:HUMIDITY",
+        "label": "Relative humidity (contextual variable)",
+        "class": "climate_context",
+        "query_terms": ['"humidity"[MeSH]', '"relative humidity"[tiab]'],
+        "local_relevance": "Available daily from ERA5-Land. Treated as contextual/confounding variable, not as a presumed causal exposure.",
+        "priority": "contextual",
     },
     {
         "id": "EXP:PEST",

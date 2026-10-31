@@ -1,0 +1,8 @@
+ordem,exposicao_id,exposicao,papel,evidencia_epidemiologica,evidencia_molecular,decisao
+1,EXP:PM25,"PM2,5",Eixo principal,Moderada; associações descritas para cardiopatias congênitas,"Relativamente consistente em modelos experimentais (AHR, ROS, mitocôndria, Wnt)",Incluído como eixo principal; hipóteses moleculares explicitadas
+2,EXP:HEAT,Temperatura elevada,Eixo secundário,"Crescente, inclusive no Brasil (OR 1,08 para defeitos circulatórios)",Mecanismos específicos ainda insuficientemente estabelecidos (neural crest/TRPV),Incluído como eixo secundário; cadeia mecanística marcada como parcial
+3,EXP:PM10,PM10,Condicional,"Associações com alguns fenótipos, heterogêneas",Mecanismos menos específicos,Incluído com evidência limitada
+4,EXP:NO2,NO₂,Condicional,Associações para determinados fenótipos,Evidência mecanística limitada,Incluído com evidência limitada
+5,EXP:CO,CO,Condicional,Sinais de associação com alguns defeitos cardíacos,Hipóxia e alterações do desenvolvimento são plausíveis,Incluído; mecanismo não demonstrado
+6,EXP:O3,O₃,Condicional,Sinais epidemiológicos em janelas gestacionais específicas,Evidência mecanística limitada,Incluído com evidência limitada
+7,EXP:HUMIDITY,Umidade relativa,Contextual,Evidência direta muito limitada,Sem conexão molecular estabelecida,Mantida como variável contextual/confundidora; sem aresta causal

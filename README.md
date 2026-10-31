@@ -1,139 +1,179 @@
-# GraphAmbiCardio
+# GraphAmbiCardio / CEKP
 
-**Knowledge graph of environmental exposures, molecular mechanisms, cardiogenesis and congenital heart defects — Campos dos Goytacazes, RJ, 2010–2025.**
+**CardioEnvironment Knowledge Platform** — grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas.
+**Campos dos Goytacazes, RJ, 2010–2025.**
 
-[![status](https://img.shields.io/badge/status-v0.1.0%20(phases%20A--G%20complete)-blue)]()
+[![status](https://img.shields.io/badge/status-v0.2.0-blue)]()
 [![Python](https://img.shields.io/badge/python-3.12-blue)]()
+[![R](https://img.shields.io/badge/R-%E2%89%A54.4-276DC3)]()
 
-GraphAmbiCardio is a reproducible computational study that integrates:
-
-1. **structured literature searches** (PubMed/MEDLINE, Europe PMC) for five pre-registered evidence domains and for 196 exposure × phenotype pairs;
-2. **curated biological databases** (HPO, ClinVar, NCBI Gene, Reactome, Enrichr);
-3. **local epidemiological data** (SINASC and SIH/SUS, 2010–2025, residents of Campos dos Goytacazes);
-4. **area-level climate exposure** (ERA5-Land via Open-Meteo);
-5. a **provenance-first knowledge graph** in which every relation carries its evidence type, species, study design, context, reference, confidence and limitations.
-
-The project intentionally separates what is **demonstrated**, what is **plausible**, and what remains **unknown**. It does not treat association as causation, admissions as incidence, or area-level exposure as personal exposure.
+> **Este estudo não é uma revisão sistemática.** É uma busca estruturada com curadoria dirigida, bases biológicas curadas e análise ecológica de dados secundários. Não estima efeitos causais.
 
 ---
 
-## 1. What is in this repository
+## 1. O que é o projeto
 
-| Path | Content |
-|---|---|
-| `src/graphambicardio/` | Python package (collection, cleaning, integration, graph, analysis, validation) |
-| `scripts/` | Executable pipeline steps (collection → integration → analysis → validation) |
-| `docs/` | Protocol, feasibility report, search strategy, database catalogue, ontology, data dictionary, evidence grading, methods, validation, limitations, phase log, manuscript draft |
-| `reports/` | Feasibility matrices, PRISMA flow, validation results, audit sample, analysis summary |
-| `literature/` | Raw search records (JSON), screening tables, curated anchor studies |
-| `data_processed/` | Harmonised local and biological datasets |
-| `outputs/graph/` | `nodes.csv`, `relations.csv`, `evidence.csv`, `graph.graphml`, `graph.json` |
-| `outputs/tables/`, `outputs/figures/` | Analysis tables and figures |
-| `tests/` | Unit and integrity tests (pytest) |
+O CEKP integra cinco camadas:
 
----
+1. **Literatura** — PubMed/MEDLINE, Europe PMC, SciELO (metadados via Crossref, prefixo DOI 10.1590) e CAPES (Catálogo de Teses e Dissertações).
+2. **Bases biológicas curadas** — HPO, ClinVar, NCBI Gene, Reactome e Enrichr.
+3. **Dados epidemiológicos locais** — SINASC (nascidos vivos) e SIH/SUS (internações), 2010–2025.
+4. **Exposição ambiental de área** — ERA5-Land via Open-Meteo (sem série local de PM2,5; nenhum proxy foi fabricado).
+5. **Grafo com proveniência** — cada relação carrega tipo de evidência, espécie, desenho, janela de exposição, referência, confiança, limitações e **nível de evidência** (bem sustentada / plausível experimental / não demonstrada / contextual).
 
-## 2. Headline results (v0.1.0)
+Há duas camadas integradas e **nunca misturadas**:
 
-### Evidence base
-
-- **5 pre-registered literature domains** searched on **2026-10-31**:
-  PubMed counts — exposure→CHD **1,512**; exposure→mechanism **8,520**; mechanism→cardiogenesis **6,736**; cardiogenesis→phenotype **7,681**; gene→phenotype **992**.
-  Europe PMC counts — **1,599 / 171 / 39 / 593 / 2,387**.
-- **196 exposure × phenotype pairs** queried; **73 pairs (37%) had no direct literature** under the pre-specified context filter; only **2 pairs** reached the “high volume” stratum.
-- **1,450 retrieved records → 355 duplicates removed → 1,095 unique records screened** (1,003 with abstract). **29 anchor studies** were manually read and **46 curated edges** were encoded with verbatim quotes that are machine-verified against PubMed.
-
-### Knowledge graph
-
-- **2,234 nodes** and **4,100 relations**, backed by **4,596 evidence rows**.
-- Layers: **observed** 46 relations, **structured** 4,040, **inferred** 4, **hypothesis** 7, **ecological** 3.
-- **23 exposure→phenotype paths** in the conceptual core (13 direct, 10 through mechanism/process chains).
-- **20 explicit gaps** (exposures, mechanisms or processes with no retained edge).
-- Graph exports: `outputs/graph/graph.graphml`, `graph.json`, `nodes.csv`, `relations.csv`, `evidence.csv`.
-
-### Local data (Campos dos Goytacazes)
-
-- SINASC: **98,598 live births** (2010–2022 consolidated; 2023–2024 not available; 2025 preliminary) and **59 reported CHD cases** — **6.0 per 10,000 live births**, i.e. roughly one order of magnitude below expected birth prevalence, indicating severe under-ascertainment rather than low risk.
-- SIH/SUS: **549 hospital admissions** with a primary diagnosis in Q20–Q28 (2010–2025), **33 in-hospital deaths**, **55% of admissions outside the municipality of residence**, 18 hospitals.
-- Climate: **5,844 days** of ERA5-Land data; heat-wave threshold (Tmax P90) **34.2 °C**; **73 heat waves / 363 heat-wave days**.
-- Exploratory ecological-exposure model (56–59 events): birth-level logistic regression of CHD on gestational-window mean Tmax, adjusted for year, maternal age and sex — **OR 1.30 per SD (95% CI 1.00–1.69)**; after adding quarter-of-conception fixed effects, **OR 1.65 per SD (1.13–2.42)**, stable under leave-one-year-out (1.47–1.66). The monthly count model was null (RR 1.22, 0.94–1.60). These results are **exploratory and fragile** and are not a causal claim.
-
-> The most important local finding is methodological: **SINASC alone cannot support CHD prevalence or aetiology analyses in this municipality**. The local integration is therefore presented as ecological context, not as aetiological evidence.
+- **Camada de evidências** — relações documentadas e anotadas em bases curadas.
+- **Camada de hipóteses** — caminhos candidatos gerados por composição de arestas e sobreposição gênica, com o **elo ausente explicitado**. Hipóteses não entram em análises de caminhos, centralidade ou conclusões.
 
 ---
 
-## 3. Reproducing the study
+## 2. Resultados principais (v0.2.0)
 
-### Requirements
+### Base de evidências
 
-- Python **3.12** (the DATASUS DBC decoder `pyreaddbc` has wheels for 3.12; the system Python 3.14 could not build it).
-- Internet access to NCBI E-utilities, Europe PMC, JAX HPO, Reactome, Enrichr, Open-Meteo and the DATASUS FTP.
+| Domínio | PubMed | Europe PMC |
+|---|---:|---:|
+| Exposição → CHD | 1,512 | 1,599 |
+| Exposição → mecanismo | 8,520 | 171 |
+| Mecanismo → cardiogênese | 6,736 | 39 |
+| Cardiogênese → fenótipo | 7,681 | 593 |
+| Gene → fenótipo | 992 | 2,387 |
+
+- **196 pares exposição × fenótipo**: 73 sem literatura direta, 66 esparsos, 36 limitados, 19 moderados, 2 de alto volume.
+- **1.978 registros brutos → 529 duplicatas → 1.449 únicos** (1.003 com resumo no subconjunto PubMed/Europe PMC).
+- **33 estudos-âncora** lidos manualmente; **54 arestas curadas** com citações verbatim verificadas contra o PubMed.
+- SciELO: 100 registros por consulta via Crossref; 42–60 com termos de CHD. CAPES: 552 teses/dissertações para “cardiopatias congênitas”.
+
+### Grafo
+
+- **2.237 nós**, **4.115 relações**, **4.611 linhas de evidência**.
+- Camadas: **observada 54**, **estruturada 4.040**, **inferida 4**, **hipótese 14**, **ecológica 3**.
+- **27 caminhos exposição→fenótipo** (17 diretos, 10 mecanísticos) e **20 lacunas explícitas**.
+- **5 hipóteses por sobreposição gênica** e **7 caminhos candidatos com elo ausente**.
+- Exportações: `outputs/graph/graph.graphml`, `graph.json`, `nodes.csv`, `relations.csv`, `evidence.csv`.
+
+### Dados locais
+
+- SINASC: **98.598 nascimentos** (microdados 2010–2022 e 2025; **2023–2024 apenas agregados do TabNet**). **59 casos** nos microdados (5,98/10.000) — subnotificação grave. TabNet: 5 casos em 2023 e 5 em 2024; 2025 = 9 casos, compatível com os microdados.
+- SIH/SUS: **549 internações** por diagnóstico principal Q20–Q28 (**561 no total**, 12 apenas secundárias), **33 óbitos**, **55% fora do município**, 18 hospitais.
+- Clima: **5.844 dias** ERA5-Land; limiar de onda de calor 34,2 °C; **73 ondas / 363 dias**.
+- Modelo exploratório (56–59 eventos): OR **1,30/SD** (1,00–1,69); ajustado por estação **1,65** (1,13–2,42); modelo mensal **nulo** (RR 1,22; 0,94–1,60). **Não é achado causal.**
+
+### Hierarquia de exposições
+
+| Exposição | Papel | Evidência epidemiológica | Evidência molecular |
+|---|---|---|---|
+| PM2,5 | **Eixo principal** | Moderada | Relativamente consistente (AHR, ROS, mitocôndria, Wnt) |
+| Temperatura | **Eixo secundário** | Crescente, inclusive no Brasil | Parcial (neural crest/TRPV) |
+| PM10, NO₂, CO, O₃ | Condicional | Específica por fenótipo | Limitada |
+| Umidade | **Contextual** | Muito limitada | Sem conexão estabelecida |
+
+---
+
+## 3. CEKP: aplicativo Shiny
+
+```r
+shiny::runApp("app")
+```
+
+Aplicativo em português brasileiro com oito abas:
+
+1. **Início** — visão geral, KPIs e hierarquia.
+2. **Grafo interativo** — filtros por tipo, nível de evidência, exposição e fenótipo; clique para ver evidências.
+3. **Painel epidemiológico** — SINASC, SIH, clima e modelos, com avisos de interpretação.
+4. **Evidências** — tabela filtrável; seleção mostra todas as evidências, trechos e referências.
+5. **Hipóteses e lacunas** — caminhos candidatos, hipóteses por genes e lacunas.
+6. **Consulta científica** — pergunta por exposição e recupera mecanismos, fenótipos, genes, caminhos e referências.
+7. **Métodos** — desenho, buscas, bases, gradação e limitações.
+8. **FAIR e uso de IA** — metadados, licenças e declaração de IA (Portaria CNPq 2.664/2026).
+
+Detalhes: `docs/14_CEKP_APP.md`.
+
+---
+
+## 4. ReproDutibilidade
+
+### Requisitos
+
+- Python **3.12** (decodificador DBC do DATASUS).
+- R **≥ 4.4** com `shiny`, `bslib`, `DT`, `visNetwork`, `plotly`, `dplyr`, `readr`, `jsonlite`, `stringr`, `scales`, `htmltools`, `igraph`, `commonmark`.
+- Internet para NCBI, Europe PMC, Crossref, HPO, Reactome, Enrichr, Open-Meteo e DATASUS.
 
 ```bash
-# create the environment (uv recommended; this is how the study was run)
 uv venv .venv --python 3.12
 uv pip install --python .venv -e ".[dev,datasus]"
 
-# full pipeline
+# pipeline Python
 .venv/Scripts/python.exe scripts/collection/01_literature.py
 .venv/Scripts/python.exe scripts/collection/02_databases.py
 .venv/Scripts/python.exe scripts/collection/03_clinvar_enrichr.py
+.venv/Scripts/python.exe scripts/env/01_climate.py
 .venv/Scripts/python.exe scripts/epi/01_sinasc.py
 .venv/Scripts/python.exe scripts/epi/02_sih.py
-.venv/Scripts/python.exe scripts/env/01_climate.py
 .venv/Scripts/python.exe scripts/epi/03_exposure_models.py
+.venv/Scripts/python.exe scripts/epi/04_tabnet_supplement.py
 .venv/Scripts/python.exe scripts/integration/01_build_graph.py
+.venv/Scripts/python.exe scripts/cleaning/01_normalize_identifiers.py
+.venv/Scripts/python.exe scripts/graph/01_export_core.py
 .venv/Scripts/python.exe scripts/analysis/01_network.py
 .venv/Scripts/python.exe scripts/analysis/02_figures.py
+.venv/Scripts/python.exe scripts/analysis/03_enrichment_and_low_evidence.py
 .venv/Scripts/python.exe scripts/validation/01_validate.py
+.venv/Scripts/python.exe scripts/app/01_prepare_data.py
+.venv/Scripts/python.exe scripts/app/02_fair_metadata.py
 .venv/Scripts/python.exe -m pytest -q
+
+# buscas em R (SciELO via Crossref e CAPES Catálogo de Teses)
+Rscript R/collection/scielo.R
+Rscript R/collection/capes.R
 ```
 
-Raw downloads are cached under `data_raw/` (git-ignored); every HTTP response used in the graph is cached and the retrieval date is stored in the output tables.
-
-### Optional credentials
-
-- `NCBI_API_KEY` and `NCBI_EMAIL` environment variables raise the E-utilities rate limit.
-- DisGeNET, OMIM, CDS/ERA5 and CTD require credentials or interactive access and were **not** used (see `docs/03_DATABASE_CATALOG.md`).
+Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pelo git); toda resposta usada no grafo é rastreável.
 
 ---
 
-## 4. Key methodological safeguards
+## 5. Estrutura
 
-- **No fabricated references or data.** Every curated quote is a verbatim abstract fragment and the build fails if it is not found in PubMed.
-- **Provenance per evidence row**, not per aggregated edge; the same relation may have several independent evidence rows.
-- **Layered evidence**: observed / structured / inferred / hypothesis / ecological. Hypothesis edges are excluded from all path analyses.
-- **Confidence is not centrality.** Network centrality is reported as a structural property and explicitly not as biological or causal importance.
-- **Ecological design is labelled as such.** Area-level ERA5-Land exposure is assigned to individual gestational windows, but it is not personal exposure.
-- **Under-ascertainment is quantified**, not hidden; missing years are not imputed.
-
----
-
-## 5. Data and licensing
-
-- Literature metadata: PubMed/Europe PMC (public; respect NLM and Europe PMC terms).
-- HPO, ClinVar, NCBI Gene, Reactome, Enrichr: public resources; original licences apply to redistributed annotations. This repository redistributes identifiers and short quoted abstract fragments for verification, not full texts.
-- SINASC and SIH/SUS: public secondary data from DATASUS, no personal identifiers in the extracted tables.
-- Climate: ERA5-Land reanalysis via Open-Meteo (CC-BY-4.0 for the API outputs; Copernicus licence for ERA5).
-- Code: MIT (see `LICENSE`).
+| Caminho | Conteúdo |
+|---|---|
+| `src/graphambicardio/` | pacote Python (coleta, limpeza, integração, grafo, análise, validação) |
+| `R/collection/` | coletores R para SciELO (Crossref) e CAPES |
+| `app/` | aplicativo Shiny CEKP (PT-BR) e bundle de dados |
+| `docs/` | protocolo, viabilidade, busca, catálogo, ontologia, dicionário, gradação, métodos, validação, limitações, fases, manuscrito, FAIR, IA e app |
+| `fair/` | metadados DCAT e Frictionless Data Package com checksums |
+| `reports/` | matrizes de viabilidade, PRISMA, validação, auditoria, resumos |
+| `literature/` | buscas (JSON), triagem, estudos-âncora |
+| `data_processed/` | dados harmonizados |
+| `outputs/` | grafo, tabelas e figuras |
+| `tests/` | testes unitários e de integridade |
 
 ---
 
-## 6. How to cite
+## 6. FAIR e uso de IA
 
-See `CITATION.cff`. Until a manuscript is published, cite the repository and the study version.
+- **Findable/Accessible/Interoperable/Reusable:** identificadores persistentes por entidade, metadados DCAT/Data Package, CSV/JSON/GraphML, proveniência por evidência, licença MIT para código e licenças de terceiros preservadas. Ver `docs/12_FAIR.md` e `fair/`.
+- **Declaração de IA:** em conformidade com a **Portaria CNPq nº 2.664/2026**, em `docs/13_DECLARACAO_IA.md`. A IA apoiou código, triagem e redação; não gerou dados/referências, não decidiu a classificação final e não é autora. Toda citação curada foi verificada contra o PubMed.
+- **Auditoria independente:** amostra pronta em `reports/manual_audit_sample.csv`; ainda não concluída.
 
 ---
 
-## 7. Status and limitations
+## 7. Limitações principais
 
-v0.1.0 completes **Phases A–G** and the computational part of **Phase H**, with the validation report, limitations report and manuscript draft in `docs/`. Phase I (scientific interpretation) and Phase J (publication) are partially complete. The main limitations are:
+- Busca não sistemática; sem triagem dupla de todos os registros nem texto completo.
+- SciELO acessado por metadados Crossref (a interface de busca bloqueou automação); CAPES limitado ao Catálogo de Teses.
+- SINASC com subnotificação grave; 2023–2024 sem microdados (apenas TabNet); 2025 preliminar.
+- SIH: AIH ≠ pessoa; 55% das internações fora do município.
+- Sem série local de PM2,5; exposição climática de área, não individual.
+- Maioria das cadeias mecanísticas é experimental, em doses não equivalentes às humanas.
+- HPO/ClinVar são orientados a doenças mendelianas/sindrômicas.
+- Auditoria de dois revisores pendente.
 
-- rapid scoping rather than a full systematic review (no dual independent screening of all 1,095 records);
-- 2023–2024 SINASC microdata unavailable and 2025 preliminary;
-- no local PM2.5 monitoring; no personal exposure; low event counts;
-- many molecular edges depend on animal/cell models;
-- CTD, DisGeNET and OMIM not programmatically accessible in this environment;
-- SciELO/BVS/CAPES interfaces blocked automated access (HTTP 403), so Portuguese-language databases were not systematically searched.
+Ver `docs/09_LIMITATIONS_AND_GAPS.md`.
 
-See `docs/09_LIMITATIONS_AND_GAPS.md` for the full account.
+---
+
+## 8. Licença e citação
+
+Código: MIT (`LICENSE`). Dados de terceiros mantêm suas licenças. Citação em `CITATION.cff`.
+Repositório: https://github.com/santosry/GraphAmbiCardio

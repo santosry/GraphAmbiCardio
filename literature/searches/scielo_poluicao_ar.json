@@ -1,0 +1,911 @@
+{
+  "database": "SciELO (via Crossref, DOI prefix 10.1590)",
+  "query": "cardiopatia congênita poluição do ar material particulado",
+  "retrieved_at": "2026-10-31T15:58:38Z",
+  "total_results": 75851,
+  "n_retrieved": 100,
+  "n_with_chd_terms": 42,
+  "query_has_chd_and_exposure_terms": true,
+  "items": [
+    {
+      "doi": "10.1590/s0102-37722012000100005",
+      "title": "Transição para a parentalidade no contexto de cardiopatia congênita do bebê",
+      "journal": "Psicologia: Teoria e Pesquisa",
+      "year": 2012,
+      "authors": "Cristina Saling Kruel; Rita de Cássia Sobreira Lopes",
+      "abstract": " O estudo objetivou investigar o processo de transição para a parentalidade no contexto de cardiopatia congênita do bebê. Participaram do estudo quatro casais, cujos filhos nasceram com malformação cardíaca. Utilizou-se delineamento de estudo de caso coletivo. Mãe e pai foram entrevistados sobre os primeiros momentos após o nascimento do bebê e a experiência da maternidade e da paternidade, respectivamente. Análise de conteúdo indicou que o diagnóstico de cardiopatia do bebê interfere no processo de parentalização. Destacou-se a intensa preocupação das mães com a sobrevivência dos bebês, evidenciada por meio da dedicação exclusiva a eles. Os pais demonstram-se envolvidos com seus filhos, assumindo também a tarefa de proteger as mães. Conclui-se que os sentimentos relativos à parentalidade focalizaram-se na sobrevivência do bebê. ",
+      "url": "https://doi.org/10.1590/s0102-37722012000100005"
+    },
+    {
+      "doi": "10.1590/s1517-707620150001.0027",
+      "title": "Caracterização do material particulado suspenso no ar de Cuiabá-MT no período de queimadas",
+      "journal": "Matéria (Rio de Janeiro)",
+      "year": 2015,
+      "authors": "Aline Santiago; Rogério Junqueira Prado; Paulo Modesto Filho; Rafael Viana Alonso",
+      "abstract": " A caracterização química e morfológica do material particulado suspenso no ar da cidade de Cuiabá - MT, no período de queimadas do ano de 2012, foi realizada utilizando-se as técnicas de Microscopia Eletrônica de Varredura acoplada a um sistema de Microanálise de Raios X (SEM/EDS) e Fluorescência de Raios X por Dispersão em Energia(EDXRF). Deve ser ressaltado que são poucos os estudos realizados sobre o tema, particularmente para a cidade de Cuiabá e região. Com o uso das técnicas de SEM/EDS foi possível classificar o material particulado em quatro diferentes grupos, definidos em função de suas semelhanças morfológicas e composição química: aglomerados, placas, fibrosas e arredondadas. Por EDXRF foram identificados e quantificados 10 elementos químicos (Al, S, Cl, K, Ca, Fe, Cu, Zn, Sr e Ba), predominando aqueles característicos de ressuspensão do solo e queimadas (Al, Fe, Ca, K e Cl), além dos vinculados às emissões veiculares e industriais (Zn, S, Cu). As concentrações de material particulado em suspensão obtidas no mês de setembro, após longo período de seca, atingiram 306 μg/m3 de ar, superando o limite primário estabelecido pelo Conselho Nacional do Meio Ambiente (CONAMA), evidenciando a má qualidade do ar no período. Além disso, as partículas fibrosas identificadas neste trabalho não haviam sido relatadas anteriormente, sendo aparentemente características da região, e apresentando composição química condizente com forte influência de queimadas em sua formação. ",
+      "url": "https://doi.org/10.1590/s1517-707620150001.0027"
+    },
+    {
+      "doi": "10.1590/scielopreprints.17928",
+      "title": "Espacialização da estimativa do material particulado emitido pelo tráfego de veículos na cidade do Rio de Janeiro e do perfil populacional associado",
+      "journal": "",
+      "year": 2026,
+      "authors": "Heitor Soares de Farias;  Max Anjos",
+      "abstract": " Na última década, a prefeitura do Rio de Janeiro investiu em mobilidade, principalmente no BRT, transporte público rodoviário movido a diesel, fonte de emissões de material particulado (MP). Objetivando identificar as Regiões de Planejamento da cidade que mais emitem MP, como também as características socioeconômicas dessas áreas, foram utilizados dados das 963 estações de contagem de veículos da CET-Rio para janeiro de 2021 e, com Machine Learning, estimou-se o fluxo de veículos em 42.411 trechos de vias, discriminando-o por categoria, ano e combustível. Posteriormente foram aplicados teste estatísticos entre a poluição emitida e os indicadores sociais renda e cor da pele. Os resultados mostram que na Barra da Tijuca se replica um modelo espacialmente elitista existente na Zona Sul, com maior emissão de MP coincidindo com população mais abastada de maioria branca, o oposto do descrito em trabalhos internacionais, embora não haja correlação estatística significativa para toda a cidade. ",
+      "url": "https://doi.org/10.1590/scielopreprints.17928"
+    },
+    {
+      "doi": "10.1590/1414-462x201600020258",
+      "title": "Perfil clínico-hospitalar de crianças com cardiopatia congênita",
+      "journal": "Cadernos Saúde Coletiva",
+      "year": 2016,
+      "authors": "Wanessa Alves Belo; Gleidson Brandão Oselame; Eduardo Borba Neves",
+      "abstract": " Resumo Introdução Crianças portadoras de cardiopatia congênita apresentam, desde o nascimento, anomalias funcionais e estruturais. A incidência desse quadro é de 8 a 10 a cada mil nascidos vivos. Objetivo Caracterizar o perfil da criança portadora de cardiopatia congênita atendida em um hospital de referência no Estado do Paraná, Brasil. Métodos Os dados foram obtidos a partir da análise de 77 prontuários de crianças de 0 a 10 anos. Para a caracterização da amostra, foram observados, além da faixa etária, aspectos físicos, como peso, altura e índice de massa corporal, tempo de internação em unidade de terapia intensiva (UTI) e permanência com cateter venoso central (CVC). Resultados Dentre as cardiopatias congênitas observadas, a comunicação interventricular (CIV), a comunicação interatrial (CIA), a persistência do canal arterial (PCA), a hipertensão pulmonar (HP) e a tetralogia de Fallot (T4F) foram as mais recorrentes e, na maioria dos casos, cerca de 80% apresentaram duas ou mais cardiopatias. Conclusão A criança portadora de cardiopatia congênita está, geralmente, abaixo do peso ideal, permanece internada em UTI por cerca de 16 dias, utiliza o acesso por meio do CVC em 70% do tempo (11 dias) e a maior parte delas (75,40%) apresenta até quatro doenças cardíacas, das quais as mais comuns são a CIV, CIA, PCA e T4F. ",
+      "url": "https://doi.org/10.1590/1414-462x201600020258"
+    },
+    {
+      "doi": "10.1590/1980-549720240068.2",
+      "title": "Desempenho dos dados de material particulado fino sobre a qualidade do ar em estudo epidemiológico em Salvador, Brasil",
+      "journal": "Revista Brasileira de Epidemiologia",
+      "year": 2024,
+      "authors": "Ludmilla Viana Jacobson; Sandra Hacon; Vanúcia Schumacher; Clarcson Plácido Conceição Dos Santos; Nelzair Vianna",
+      "abstract": " RESUMO  Objetivo: Avaliar o desempenho das concentrações de material particulado com diâmetro inferior a 2,5 μm (PM2,5) derivadas de satélite em comparação com medições de estações de monitoramento no município de Salvador, bem como as implicações dessas estimativas para as associações de PM2,5 com a mortalidade diária não acidental.  Métodos: Trata-se de estudo de séries temporais diária que cobre o período de 2011 a 2016. Foi proposto um fator de correção para melhorar a acurácia entre as duas fontes de dados. Os efeitos do PM2,5 foram estimados em modelos aditivos generalizados de Poisson, combinados com uma abordagem de defasagem distribuída.  Resultados: Os resultados sugerem que os dados derivados de satélite subestimaram os níveis de PM2,5 em comparação com as medições médias terrestres. No entanto, a aplicação de um fator de correção melhorou a acurácia entre os dados. Os riscos relativos estimados com base nos dados derivados de satélite não apresentaram diferenças significativas quando comparados com aqueles baseados nas médias dos monitores.  Conclusão: O estudo destaca a importância de validar dados de PM2,5 modelados por satélite para avaliar e compreender os impactos na saúde. O desenvolvimento de modelos que utilizam sensoriamento remoto para estimar PM2,5 permite a quantificação dos riscos à saúde decorrentes da exposição. ",
+      "url": "https://doi.org/10.1590/1980-549720240068.2"
+    },
+    {
+      "doi": "10.1590/1518-8345.5826.3783",
+      "title": "Middle-Range Theory of Ineffective Breathing Pattern in children with Congenital Heart Disease",
+      "journal": "Revista Latino-Americana de Enfermagem",
+      "year": 2022,
+      "authors": "Nayana Maria Gomes de Souza; Viviane Martins da Silva; Marcos Venícios Oliveira Lopes",
+      "abstract": " Abstract  Objective:  to develop and evaluate a middle-range theory for the Nursing Diagnosis of Ineffective Breathing Pattern in children with congenital heart disease.  Method:  a methodological study carried out in two stages: 1) development of a middle- range theory for Ineffective Breathing Pattern in children with congenital heart diseases from the analysis of the NANDA-International taxonomy, Callista Roy’s Adaptation Model and a literature review; and 2) assessment of the middle-range theory developed using expert panel evaluation.  Results: after three panel evaluations, the final version of the middle-range theory resulted in four metaparadigms, two key concepts, two pictorial diagrams, two propositions and a description of the interrelationships between the key concepts of Ineffective Breathing Pattern in children with congenital heart diseases and evidence for the Nursing practice.  Conclusion:  the middle-range theory developed and evaluated by experts identified stimuli and behaviors that can assist nurses in identifying the reasons why Ineffective Breathing Pattern is diagnosed and how it manifests itself in children with congenital heart disease, increasing understanding of the relationships between the causes and their temporality. ",
+      "url": "https://doi.org/10.1590/1518-8345.5826.3783"
+    },
+    {
+      "doi": "10.5123/s1679-49742017000300011",
+      "title": "Registros de cardiopatia congênita em crianças menores de um ano nos sistemas de informações sobre nascimento, internação e óbito do estado do Rio de Janeiro, 2006-2010*",
+      "journal": "Epidemiologia e Serviços de Saúde",
+      "year": 2017,
+      "authors": "Camilla Ferreira Catarino; Maria Auxiliadora de Souza M. Gomes; Saint Clair dos Santos Gomes; Cynthia Magluta",
+      "abstract": "",
+      "url": "https://doi.org/10.5123/s1679-49742017000300011"
+    },
+    {
+      "doi": "10.1590/1980-549720240068",
+      "title": "Performance of fine particulate matter data on air quality in an epidemiological study in Salvador, Brazil",
+      "journal": "Revista Brasileira de Epidemiologia",
+      "year": 2024,
+      "authors": "Ludmilla Viana Jacobson; Sandra Hacon; Vanúcia Schumacher; Clarcson Plácido Conceição Dos Santos; Nelzair Vianna",
+      "abstract": " ABSTRACT  Objective: To evaluate the performance of satellite-derived PM2.5 concentrations against ground-based measurements in the municipality of Salvador (state of Bahia, Brazil) and the implications of these estimations for the associations of PM2.5 with daily non-accidental mortality.  Methods: This is a daily time series study covering the period from 2011 to 2016. A correction factor to improve the alignment between the two data sources was proposed. Effects of PM2.5 were estimated in Poisson generalized additive models, combined with a distributed lag approach.  Results: According to the results, satellite data underestimated the PM2.5 levels compared to ground measurements. However, the application of a correction factor improved the alignment between satellite and ground-based data. We found no significant differences between the estimated relative risks based on the corrected satellite data and those based on ground measurements.  Conclusion: In this study we highlight the importance of validating satellite-modeled PM2.5 data to assess and understand health impacts. The development of models using remote sensing to estimate PM2.5 allows the quantification of health risks arising from the exposure. ",
+      "url": "https://doi.org/10.1590/1980-549720240068"
+    },
+    {
+      "doi": "10.1590/s0100-40422013000400009",
+      "title": "Elementos traço em material particulado atmosférico de uma região agroindustrial do sudeste do Brasil",
+      "journal": "Química Nova",
+      "year": 2013,
+      "authors": "Patrícia Lopes de Oliveira; Bernardino Ribeiro Figueiredo; Arnaldo Alves Cardoso; Rômulo Simões Angélica",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0100-40422013000400009"
+    },
+    {
+      "doi": "10.1590/s0066-782x2012005000030",
+      "title": "Avaliação do tratamento cirúrgico da cardiopatia congênita em pacientes com idade superior a 16 anos",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "year": 2012,
+      "authors": "Luiz Fernando Caneo; Marcelo B. Jatene; Arlindo A. Riso; Carla Tanamati; Juliano Penha; Luiz Felipe Moreira; Edmar Atik; Evelinda Trindade; Noedir A. G. Stolf",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0066-782x2012005000030"
+    },
+    {
+      "doi": "10.1590/0102-778620140059",
+      "title": "ANÁLISE DO MATERIAL PARTICULADO NO PANTANAL MATO-GROSSENSE",
+      "journal": "Revista Brasileira de Meteorologia",
+      "year": 2015,
+      "authors": "ANNA CAROLINNA ALBINO SANTOS; JOSÉ DE SOUZA NOGUEIRA",
+      "abstract": " Este estudo analisa propriedades de aerossóis atmosféricos e suas fontes, procurando aprimorar o entendimento da dinâmica de poluentes na região do Pantanal. Os principais objetivos desse trabalho foram: caracterização do material particulado e avaliação das fontes de material particulado no Pantanal Mato-Grossense. As amostras de aerossóis atmosféricos foram coletadas continuamente de abril de 2012 a agosto de 2013 na Baía das Pedras, localizada no Pantanal Mato-grossense. O dispositivo de amostragem consistiu em coletores de particulado fino e grosso (AFG), que separa a fração fina do aerossol (dp ˂ 2,5 µm) e a fração grossa (2,5 &lt; dp &lt; 10 µm). A análise elementar foi realizada por fluorescência de raios-X, enquanto que o teor deblack carbon equivalente foi determinado por refletância. Utilizando a técnica de Fatoração de Matriz Positiva (PMF), foram estimados três tipos de fontes de aerossóis: emissões biogênicas naturais, suspensão de poeira do solo e queima da biomassa. Os resultados encontrados reforçam a importância do estudo no Pantanal para entender os mecanismos dos processos antrópicos e naturais que são capazes de regular a composição da atmosfera. ",
+      "url": "https://doi.org/10.1590/0102-778620140059"
+    },
+    {
+      "doi": "10.1590/1518-8345.5826.3784",
+      "title": "Teoria de Médio Alcance do Padrão Respiratório Ineficaz em Crianças com Cardiopatia Congênita",
+      "journal": "Revista Latino-Americana de Enfermagem",
+      "year": 2022,
+      "authors": "Nayana Maria Gomes de Souza; Viviane Martins da Silva; Marcos Venícios Oliveira Lopes",
+      "abstract": " Resumo  Objetivo:  desenvolver e avaliar uma teoria de médio alcance para o Diagnóstico de Enfermagem de Padrão Respiratório Ineficaz em crianças com cardiopatia congênita.  Método:  um estudo metodológico realizado em duas etapas: 1) desenvolvimento de uma teoria de médio alcance para padrão respiratório ineficaz em crianças com doenças cardíacas congênitas a partir da análise da taxonomia NANDA-Internacional, modelo de adaptação de Callista Roy e uma revisão da literatura; e 2) avaliação da teoria de médio alcance desenvolvida por meio da avaliação de painéis de especialistas.  Resultados:  após três avaliações de painéis, a versão final da teoria de médio alcance resultou em quatro metaparadigmas, dois conceitos-chave, dois diagramas pictóricos, duas propostas e uma descrição das inter-relações entre os conceitos-chave do Padrão Respiratório Ineficaz em crianças com cardiopatias congênitas e evidências para a prática de Enfermagem.  Conclusão:  a teoria do médio alcance desenvolvida e avaliada por especialistas identificou estímulos e comportamentos que podem auxiliar os enfermeiros na identificação das razões pelas quais o Padrão Respiratório Ineficaz é diagnosticado e como ele se manifesta em crianças com cardiopatia congênita, aumentando a compreensão das relações entre as causas e sua temporalidade. ",
+      "url": "https://doi.org/10.1590/1518-8345.5826.3784"
+    },
+    {
+      "doi": "10.1590/s1982-21702016000400046",
+      "title": "AVALIAÇÃO ESPACIAL ENTRE POLUIÇÃO DO AR E SAÚDE EM ÁREAS COM LIMITAÇÃO DE DADOS",
+      "journal": "Boletim de Ciências Geodésicas",
+      "year": 2016,
+      "authors": "Weeberb João Réquia; Henrique Llacer Roig",
+      "abstract": " A poluição do ar é um grave problema de saúde pública a nível mundial. Os estudos que investigam a relação entre poluição atmosférica e saúde humana são a base para a gestão que visa promover o desenvolvimento urbano e qualidade de vida. Nesse sentido, a disponibilidade de dados é uma premissa inicial para esses estudos, sobretudo, para os que têm o enfoque na avaliação espacial. O problema é que muitos centros urbanos ainda carecem de um sistema de armazenamento, consolidação e disponibilização dos dados. Diante desse cenário, este artigo teve como objetivo propor um método para avaliação espacial entre poluição do ar e saúde em áreas urbanas que têm limitações na disponibilidade de dados. O método proposto foi baseado em procedimentos de orientação a objetos para integração de um banco de dados geográficos, considerando dados de internações e inventário de poluição do ar. Posteriormente, foi realizada uma análise de correlação e regressão espacial - Ordinary Least Square (OLS). Os resultados mostraram que o método proposto é uma alternativa viável para as áreas com limitações de dados. As análises de correlação e regressão apresentaram uma relação significante (p &lt; 0,05) entre poluição e saúde ",
+      "url": "https://doi.org/10.1590/s1982-21702016000400046"
+    },
+    {
+      "doi": "10.1590/0102-311x00145418",
+      "title": "Análise espaço-temporal do efeito da poluição do ar na saúde de crianças",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2019,
+      "authors": "Emerson Pedreira Matos; Valdério Anselmo Reisen; Faradiba Sarquis Serpa; Paulo Roberto Prezotti Filho; Maria de Fátima Silva Leite",
+      "abstract": " O objetivo foi investigar a associação de curto prazo entre a poluição do ar e atendimentos em emergências por doenças respiratórias, em crianças de 0 a 6 anos. Estudo ecológico, espacial e temporal realizado na Região Metropolitana da Grande Vitoria, Espírito Santo, Brasil. Utilizou-se o modelo aditivo generalizado (MAG) de regressão de Poisson, com a variável dependente o número diário de atendimentos por doenças respiratórias, e as variáveis independentes, concentrações diárias dos poluentes atmosféricos (MP10, SO2, NO2, O3 e CO), temperatura, umidade e precipitação pluviométrica. Por meio das médias diárias das concentrações, foram feitas estimativas para toda a região e análises in loco com a consideração de crianças residentes no entorno de 2km de oito estações de monitoramento da qualidade do ar. O incremento de 10μg/m3 nos níveis de concentração dos poluentes atmosféricos aumentou o risco de atendimento em emergência por doença respiratória. Na região geral, para o MP10, o aumento foi de 2,43%, 2,73% e 3,29% nos acumulados de 5, 6 e 7 dias, respectivamente. Para o SO2, o acréscimo foi de 4,47% no dia da exposição, 5,26% dois dias após, 6,47%, 8,8%, 8,76% e 7,09% nos acumulados de 2, 3, 4 e 5 dias, respectivamente. O CO apresentou associação significativa para residentes no entorno de duas estações, e o O3 somente em uma. Mesmo dentro dos limites estabelecidos pela Organização Mundial da Saúde, os poluentes MP10, SO2, NO2 e O3 estão associados ao maior risco para atendimento por doenças respiratórias em crianças de 0 a 6 anos, e alguns efeitos só foram identificados nas localidades desagregadas por região, isto é, in loco, o que possibilita captar maior variabilidade dos dados. ",
+      "url": "https://doi.org/10.1590/0102-311x00145418"
+    },
+    {
+      "doi": "10.1590/0102-311xpt172924",
+      "title": "Poluição do ar, saúde e regulação no Brasil: estamos avançando?",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2025,
+      "authors": "Rafael Junqueira Buralli; Patrick Connerton",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/0102-311xpt172924"
+    },
+    {
+      "doi": "10.1590/s0066-782x2012005000072",
+      "title": "eNOS se correlaciona com a biogênese mitocondrial em corações com cardiopatia congênita e cianose",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "year": 2012,
+      "authors": "Juan Xiao; Lin Chen; Xuefeng Wang; Mei Liu; Yingbin Xiao",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0066-782x2012005000072"
+    },
+    {
+      "doi": "10.1590/s0102-77862011000300006",
+      "title": "Modelos lineares aplicados à estimativa da concentração do material particulado (PM10) na cidade do Rio de Janeiro, RJ",
+      "journal": "Revista Brasileira de Meteorologia",
+      "year": 2011,
+      "authors": "Gustavo Bastos Lyra; Melissa Oda-Souza; Denise Nunes Viola",
+      "abstract": " Regressão linear múltipla foi aplicada para ajustar dois modelos à concentração média de 24 h do material particulado com diâmetro inferior a 10 µm (PM10). As variáveis explanatórias no primeiro modelo (M1) foram os elementos meteorológicos (temperatura e umidade do ar, precipitação pluvial, velocidade do vento e pressão atmosférica) e o índice de direção do vento (IDV). No segundo (M2), além dos elementos meteorológicos e do IDV, foi incluído como variável explanatória, a concentração de PM10 do dia anterior (PM10,i-1). Para a seleção das variáveis explanatórias a serem incluídas no modelo, utilizou-se a técnica stepwise. Medidas da concentração de PM10 e dos elementos meteorológicos foram realizadas entre 01/05/02 e 31/08/03 em São Cristóvão (22º 53´ S; 43º 13´ W e 24 m) na cidade do Rio de Janeiro. O coeficiente de determinação (r²) para o ajuste dos modelos foi razoável, sendo que o modelo M2 (r² = 0,557) mostrou ajuste superior ao modelo M1 (r² = 0,334). Os elementos meteorológicos tiveram correlação negativa com PM10, com exceção do índice de direção do vento, que da mesma forma de PM10,i-1, apresentou correlação positiva. A umidade relativa do ar e a precipitação pluvial mostraram-se os elementos meteorológicos mais significativos nos modelos. Contudo, quando PM10,i-1 é considerada, esta variável se mostrou a mais significativa no modelo. Independente do modelo, a inclusão da temperatura do ar não foi significativa (p &gt; 0,05). O modelo M2 teve concordância entre os valores estimados e observados e precisão superior ao modelo M1. Em termos de previsão da qualidade do ar, os modelos mostraram resultados satisfatórios, sobressaindo-se o modelo M2. ",
+      "url": "https://doi.org/10.1590/s0102-77862011000300006"
+    },
+    {
+      "doi": "10.1590/s0103-40142016.00100006",
+      "title": "Poluição do ar como fator de risco para a saúde: uma revisão sistemática no estado de São Paulo",
+      "journal": "Estudos Avançados",
+      "year": 2016,
+      "authors": "Steffani Nikoli Dapper; Caroline Spohr; Roselaine Ruviaro Zanini",
+      "abstract": " Além de prejudicar a fauna e a flora, a poluição atmosférica é capaz de afetar a saúde das pessoas. Este estudo teve como objetivo realizar uma revisão sistemática dos estudos epidemiológicos desenvolvidos no estado de São Paulo que avaliaram os efeitos da poluição do ar na saúde da população. Todas as pesquisas encontradas sugerem que existe associação da poluição atmosférica com problemas na saúde das populações estudadas. Dentre os principais trabalhos desenvolvidos, há uma diversidade de doenças estudadas, demonstrando que o efeito da poluição do ar não afeta apenas o sistema respiratório, mas pode ser causador de risco para outros problemas como o baixo peso ao nascer, incidência e mortalidade por câncer, partos prematuros e anemia falciforme. ",
+      "url": "https://doi.org/10.1590/s0103-40142016.00100006"
+    },
+    {
+      "doi": "10.1590/0102-311xen172924",
+      "title": "Air pollution, health and regulations in Brazil: are we progressing?",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2025,
+      "authors": "Rafael Junqueira Buralli; Patrick Connerton",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/0102-311xen172924"
+    },
+    {
+      "doi": "10.1590/s1413-81232011000900026",
+      "title": "A poluição do ar em ambientes internos e a síndrome dos edifícios doentes",
+      "journal": "Ciência &amp; Saúde Coletiva",
+      "year": 2011,
+      "authors": "Waldir Nagel Schirmer; Lucas Bischof Pian; Mariani Sílvia Ester Szymanski; Mayara Ananda Gauer",
+      "abstract": " A Qualidade do Ar Interno (QAI) surgiu como ciência a partir da década de 70 com a crise energética e a consequente construção dos edifícios selados (desprovidos de ventilação natural), principalmente nos países desenvolvidos, e se destacou após a descoberta de que a diminuição das taxas de troca de ar nesses ambientes era a grande responsável pelo aumento da concentração de poluentes no ar interno. Admite-se que a ventilação seja um dos principais fatores que interferem na qualidade do ar interno e que os próprios ocupantes dos edifícios contribuem substancialmente com a poluição destes ambientes através de suas atividades. Sabe-se ainda que a má qualidade do ar interno está associada a doenças (como tosse, rinite, alergia, etc.) e à Síndrome dos Edifícios Doentes (SED). Para amostragem de substâncias gasosas no ar de ambientes internos dispõe-se de diversas metodologias, sendo as principais: sistemas passivos de monitoramento, sistemas ativos e automáticos. Para a efetiva promoção de um ambiente saudável, deve-se conciliar a aplicação de legislações específicas com pesquisas e conscientização dos ocupantes dos edifícios. Essa revisão objetiva relacionar os diferentes contaminantes encontrados em ambientes internos, seus efeitos à saúde humana e suas metodologias de amostragem. ",
+      "url": "https://doi.org/10.1590/s1413-81232011000900026"
+    },
+    {
+      "doi": "10.1590/1984-0462/;2018;36;1;00013",
+      "title": "MODELOS COMPUTACIONAIS FUZZY PARA AVALIAR EFEITOS DA POLUIÇÃO DO AR EM CRIANÇAS",
+      "journal": "Revista Paulista de Pediatria",
+      "year": 2017,
+      "authors": "Gleise Silva David; Paloma Maria Silva Rocha Rizol; Luiz Fernando Costa Nascimento",
+      "abstract": " RESUMO  Objetivo:  Construir um modelo computacional fuzzy para estimar o número de internações de crianças até 10 anos por doenças respiratórias, com base nos dados de poluentes e fatores climáticos da cidade de São José do Rio Preto, Brasil.  Métodos:  Foi construído modelo computacional utilizando a lógica fuzzy. O modelo tem 4 entradas, cada uma com 2 funções de pertinência gerando 16 regras, e a saída com 5 funções de pertinência, baseado no método de Mamdani, para estimar a associação entre os poluentes e o número de internações. Os dados de internações, de 2011-2013, foram obtidos no Departamento de Informática do Sistema de Saúde (DATASUS) e os poluentes material particulado (PM10) e dióxido de nitrogênio (NO2), a velocidade do vento e a temperatura foram obtidos pela Companhia Ambiental do Estado de São Paulo (Cetesb).  Resultados:  Foram internadas 1.161 crianças no período analisado, e a média dos poluentes foi 36 e 51 µg/m3 - PM10 e NO2, respectivamente. Os melhores valores da correlação de Pearson (0,34) e da acurácia avaliada pela curva Receiver Operating Characteristic - ROC (NO2 - 96,7% e PM10 - 90,4%) foram para internações no mesmo dia da exposição.  Conclusões:  O modelo mostrou-se eficaz na predição do número de internações de crianças, podendo ser utilizado como ferramenta na gestão hospitalar da região estudada. ",
+      "url": "https://doi.org/10.1590/1984-0462/;2018;36;1;00013"
+    },
+    {
+      "doi": "10.1590/s1413-41522017159729",
+      "title": "O efeito do hidrograma e da concentração afluentes na remoção de material particulado em canal gramado",
+      "journal": "Engenharia Sanitaria e Ambiental",
+      "year": 2017,
+      "authors": "Rodrigo Braga Moruzzi; Ademir Paceli Barbassa; Alexandre Shinzato",
+      "abstract": " RESUMO Neste trabalho buscou-se avaliar o efeito do hidrograma e da concentração afluentes na remoção de material particulado em canal gramado construído em escala real. Para tal, foram investigados três hidrogramas de entrada e concentrações iniciais (Co) de material particulado: 65; 130; 195; 263, 327 e 400 mg/L, os quais foram descarregados em canal gramado de 100 m de extensão e declividade de 2%. O pico dos hidrogramas investigados foi da ordem de 11±2 L/s; e o tempo de base (tB), determinado no ponto de descarregamento no canal, variou entre 15, 25 e 35 minutos. O tempo de trânsito no canal (tT) foi da ordem de 10,5±2,5 minutos, o que corresponde à velocidade de 0,14±0,02 m/s. Para tB de 15 minutos, a média das máximas eficiências foi da ordem de 64±3%, para posição de 31±26 m. Para tB de 25 minutos, a média das máximas foi da ordem de 73±3%, para posições de 59±24 m. Finalmente, para tB de 35 minutos, a média das máximas eficiências obtidas foi da ordem de 65±3%, nas posições de 73±15 m. Verificou-se que 70% dos valores da constante de decaimento (k d) estão entre 0,005 e 0,015 s-1, e, ao desconsiderar o hidrograma representado por tB de 15 minutos, 90% dos dados estão no intervalo 0,005 ≤ k d ≤ 0,015 s-1. Além disso, foi identificada relação direta e proporcional entre a concentração final (C*) e as concentrações iniciais (Co). ",
+      "url": "https://doi.org/10.1590/s1413-41522017159729"
+    },
+    {
+      "doi": "10.1590/1414-462x201400020004",
+      "title": "Morbidade hospitalar por doenças associadas à poluição do ar na cidade de Volta Redonda, Rio de Janeiro: casos e custo econômico",
+      "journal": "Cadernos Saúde Coletiva",
+      "year": 2014,
+      "authors": "Roberta Fernanda da Paz de Souza Paiva",
+      "abstract": " Este trabalho teve como objetivo estimar os casos de internação hospitalar por doenças respiratórias selecionadas associados aos níveis de poluição atmosférica na cidade de Volta Redonda (RJ), no período de 2005 a 2007. Foi estimada uma função de regressão de Poisson a partir dos dados diários sobre Autorização de Internação Hospitalar (AIH) disponibilizados pelo Departamento de Informática do Sistema Único de Saúde (DATASUS) - variável dependente, níveis diários de poluentes encontrados na atmosfera coletados pelo Instituto Estadual do Ambiente (INEA) e variáveis de controle. Como principal resultado destaca-se que, das 5.235 internações pelo grupo de doenças avaliado, 6% (317 casos) estão associadas aos níveis de poluentes encontrados na atmosfera. O custo econômico gerado pelas hospitalizações, captado por meio do Método dos Custos Evitados, foi de R$ 170.711,83. Concluiu-se que a existência de substâncias poluentes na atmosfera contribui para o acometimento da população por doenças respiratórias, levando a perdas de bem-estar e econômicas, além de elevar o dispêndio do Sistema Único de Saúde (SUS) com o tratamento e a recuperação das condições de saúde dos pacientes. Nesse contexto, faz-se imprescindível a adoção de políticas que reduzam/eliminem os níveis de poluentes na atmosfera e, em consequência, os prejuízos econômicos e desconfortos gerados. ",
+      "url": "https://doi.org/10.1590/1414-462x201400020004"
+    },
+    {
+      "doi": "10.1590/1413-81232020258.18402018",
+      "title": "Apoio social e qualidade de vida de famílias de crianças com cardiopatia congênita",
+      "journal": "Ciência &amp; Saúde Coletiva",
+      "year": 2020,
+      "authors": "Gisele Vilella da Silva; Denise Ely Bellotto de Moraes; Tulio Konstantyner; Heitor Pons Leite",
+      "abstract": " Resumo O objetivo deste artigo é avaliar em que medida o apoio social a famílias de crianças com cardiopatia congênita impacta na qualidade de vida. Estudo transversal com 254 pais de crianças com cardiopatia congênita. Foi realizada entrevista semiestruturada com os pais, utilizando o ecomapa e as escalas de qualidade de vida (World Health Organization Quality of Life Bref) e de suporte social (Medical Outcomes Study). O apoio social teve correlação positiva com a qualidade de vida (r=0,535; p&lt;0,001). O aumento de 10 pontos na escala de suporte social levou ao aumento de 3 pontos no escore total da escala de qualidade de vida (β=0,30; IC95%: 0,23; 0,37). A condição socioeconômica associou-se positivamente com qualidade de vida (β=0,27; IC95%: 0,11; 0,43) e os cuidadores que referiram não ter atividade de lazer (β=-3,27; IC95% -5,55; -1,12) e que estavam em tratamento de saúde (β=-2,86; IC95%: -5,55; -0,17) tiveram menor percepção na qualidade de vida. Consequências negativas à qualidade de vida de cuidadores de crianças com cardiopatia congênita podem ser intensificadas pela falta de atividade de lazer e problemas de saúde. Apoio social e condição socioeconômica adequados são fatores que influenciam positivamente na qualidade de vida destes cuidadores. ",
+      "url": "https://doi.org/10.1590/1413-81232020258.18402018"
+    },
+    {
+      "doi": "10.1590/1982-0216201514613",
+      "title": "Avaliação da deglutição em lactentes com cardiopatia congênita e síndrome de Down: estudo de casos",
+      "journal": "Revista CEFAC",
+      "year": 2015,
+      "authors": "Deborah Fick Böhm Fraga; Karine da Rosa Pereira; Sílvia Dornelles; Maira Rosenfeld Olchik; Deborah Salle Levy",
+      "abstract": " O presente estudo teve por objetivo realizar avaliação fonoaudiológica da deglutição em lactentes com diagnóstico de síndrome de Down e cardiopatia congênita (DSAV tipo A de Rastelli) internados na unidade 2A e Unidade de Tratamento Intensivo Pediátrica da instituição de origem, com suspeita de dificuldade de deglutição, encaminhados ao serviço de fonoaudiologia. Trata-se de uma pesquisa de caráter descritivo-qualitativo, nessa foi possível avaliar dois lactentes durante o período de janeiro a outubro de 2012. Utilizou-se um protocolo de perfil da amostra para a coleta de dados sobre histórico clínico e diagnósticos dos prontuários dos pacientes, além do instrumento de avaliação para prontidão do prematuro para alimentação oral proposto por Fujinaga (2002) para avaliação clínica da deglutição. Os pacientes apresentaram como resultados a presença de disfagia orofaríngea e escores baixos inviabilizando a alimentação exclusivamente por via oral. A conduta terapêutica foi de estimulação oral e volume de alimentação controlado para alimentação oral. Os achados corroboram a literatura no que diz respeito à relação entre disfagia, cardiopatia congênita, síndromes genéticas e alterações miofuncionais orofaciais. Conclui-se que a disfagia apresentou-se como um sintoma dificultante para a alimentação por via oral de forma segura e eficaz para todos os lactentes estudados. Estudos prospectivos com um número maior de sujeitos são necessários para contribuir com a série de casos e, desta forma, identificar outros fatores de risco para disfagia bem como condutas terapêuticas específicas para crianças com síndrome de Down e distúrbios da deglutição associados. ",
+      "url": "https://doi.org/10.1590/1982-0216201514613"
+    },
+    {
+      "doi": "10.1590/s0066-782x2010005000053",
+      "title": "Cardiopatia congênita no adulto: perfil clínico ambulatorial no Hospital das Clínicas de Ribeirão Preto",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "year": 2010,
+      "authors": "Fernando Amaral; Paulo Henrique Manso; João Antonio Granzotti; Walter Villela de Andrade Vicente; Andre Schmidt",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0066-782x2010005000053"
+    },
+    {
+      "doi": "10.1590/1519-6984.290857",
+      "title": "Relationship between forest fires and air quality: a study of particulate matter in localities distant from the main emission source",
+      "journal": "Brazilian Journal of Biology",
+      "year": 2025,
+      "authors": "B. Warthon; A. Zamalloa; I. Miranda; D. R. Villa-Recharte; J. Warthon; R. Chura; A. Olarte",
+      "abstract": " Abstract Wildfires represent a growing threat to air quality in fire-prone regions; however, the spatiotemporal dynamics of pollutant dispersion to distant localities remain inadequately characterized. This study quantifies particulate matter concentrations (PM1.0, PM2.5, PM10) in localities distant from the February 2024 Valparaíso wildfire, evaluating their spatiotemporal variation and association with fire intensity and meteorological parameters using a network of low-cost sensors. Four PurpleAir sensors distributed along the Valparaíso-Santiago corridor (70-120 km) were integrated with meteorological stations and satellite-derived Fire Radiative Power (FRP) data. Analysis of variance revealed significant differences in PM concentrations between pre-fire, during-fire, and post-fire phases, with the proximal station (S1) showing the strongest response. Pearson correlations with False Discovery Rate adjustment demonstrated immediate associations between FRP and PM at S1 (r = 0.71-0.72, p &lt; 0.05), while distal stations (S2-S4) exhibited significant correlations only after applying 1-2 day temporal lags (r = 0.44-0.49, p &lt; 0.05), providing quantitative evidence of regional-scale pollutant transport. These findings establish an empirical foundation for developing early warning systems in fire-prone regions and underscore the necessity of considering temporal lags in air quality management strategies during wildfire events. ",
+      "url": "https://doi.org/10.1590/1519-6984.290857"
+    },
+    {
+      "doi": "10.1590/s0102-76382011000100013",
+      "title": "Recuperação pôndero-estatural em crianças com síndrome de Down e cardiopatia congênita",
+      "journal": "Revista Brasileira de Cirurgia Cardiovascular",
+      "year": 2011,
+      "authors": "Nathalie Jeanne Magioli Bravo-Valenzuela; Maria Lucia Bastos Passarelli; Maria Veronica Coates; Luiz Fernando Costa Nascimento",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0102-76382011000100013"
+    },
+    {
+      "doi": "10.1590/s0034-8910.2014048004940",
+      "title": "Poluição do ar e doenças respiratórias alérgicas em escolares",
+      "journal": "Revista de Saúde Pública",
+      "year": 2014,
+      "authors": "Francine Heloisa Nicolussi; Ana Paula Milla dos Santos; Sílvia Carla da Silva André; Tatiane Bonametti Veiga; Angela Maria Magosso Takayanagui",
+      "abstract": " Estudo sobre a prevalência de doenças respiratórias alérgicas em escolares de seis a sete anos de idade, relacionadas com indicadores de poluição atmosférica. Questionário baseado no International Study of Asthma and Allergies in Childhood foi aplicado aos pais de alunos de escolas públicas, situadas em regiões urbanas diferentes, quanto ao fluxo de veículos. Houve correlação positiva entre frequência mensal de rinite e concentração de poluentes e negativa com a umidade relativa do ar. Resultados indicam que, mesmo com níveis de poluentes menores que os permitidos pela legislação, a prevalência de asma, rinite e sintomas associados tendeu a ser maior em alunos da escola da região central, onde há intenso tráfego veicular. ",
+      "url": "https://doi.org/10.1590/s0034-8910.2014048004940"
+    },
+    {
+      "doi": "10.1590/0102-311x00101418",
+      "title": "Variáveis meteorológicas e poluição do ar e sua associação com internações respiratórias em crianças: estudo de caso em São Paulo, Brasil",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2019,
+      "authors": "Sara Lopes de Moraes; Ricardo Almendra; Paula Santana; Emerson Galvani",
+      "abstract": " As transformações no clima urbano das cidades, a excessiva poluição atmosférica e o aumento das desigualdades sociais tornaram-se fatores determinantes do alto risco de internações por doenças respiratórias. Dessa forma, o objetivo deste trabalho foi compreender como os atributos meteorológicos (temperatura do ar, umidade relativa do ar e precipitação) e a poluição do ar (material particulado com diâmetro aerodinâmico menor de 10μm - MP10) estão relacionados com as internações hospitalares por doenças respiratórias em crianças, em 14 distritos da cidade de São Paulo, Brasil. A combinação dos modelos lineares generalizados com uma distribuição binomial negativa e o modelo não linear distributed lag non-linear model (DLNM) foram utilizados como método estatístico para analisar a relação entre as internações, os atributos climáticos e a poluição no período de 2003 a 2013. Os resultados mostraram relações estatísticas significativas de alto risco relativo entre a temperatura média do ar (17,5ºC a 21ºC, para o total analisado), umidade relativa do ar (84% a 98% para o sexo feminino), precipitação (0mm a 2,3mm para o total e ambos os sexos e &gt; 120mm para o sexo feminino) e MP10 (&gt; 35µg/m³ para o total e para o sexo feminino). Com base nesses resultados, foi possível identificar que os atributos ambientais contribuem para o elevado risco de internações. ",
+      "url": "https://doi.org/10.1590/0102-311x00101418"
+    },
+    {
+      "doi": "10.1590/s1413-41522012000200004",
+      "title": "Aplicação de regressão baseada no uso do solo para predizer a concentração de material particulado inalável no município de São Paulo, Brasil",
+      "journal": "Engenharia Sanitaria e Ambiental",
+      "year": 2012,
+      "authors": "Mateus Habermann; Nelson Gouveia",
+      "abstract": " O estudo teve por objetivo construir um modelo de regressão baseada no uso do solo para predizer a concentração material particulado inalável (MP10) no município de São Paulo, Brasil. O estudo se baseou na média de MP10 de 2007 de 9 estações de monitoramento. Obtiveram-se dados demográficos, viários e de uso do solo em círculos concêntricos de 250 a 1.000 m para compor o modelo. Calculou-se regressão linear simples para selecionar as variáveis mais robustas e sem colinearidade. Quatro variáveis entraram no modelo de regressão múltipla. Somente tráfego leve em círculos concêntricos &lt;250 m permaneceu no modelo final, que explicou 63,8% da variância de MP10. Verificou-se que o método de regressão baseada no uso do solo é rápido, de fácil execução. Entretanto, este modelo se baseou em medições de MP10 de poucos locais. ",
+      "url": "https://doi.org/10.1590/s1413-41522012000200004"
+    },
+    {
+      "doi": "10.1590/s1806-37132012000500015",
+      "title": "A poluição do ar e o sistema respiratório",
+      "journal": "Jornal Brasileiro de Pneumologia",
+      "year": 2012,
+      "authors": "Marcos Abdo Arbex; Ubiratan de Paula Santos; Lourdes Conceição Martins; Paulo Hilário Nascimento Saldiva; Luiz Alberto Amador Pereira; Alfésio Luis Ferreira Braga",
+      "abstract": " A poluição atmosférica encontra-se presente nos mais diferentes cenários ao longo dos últimos 250 anos, desde que a Revolução Industrial acelerou o processo de emissão de poluentes que, até então, estava limitado ao uso doméstico de combustíveis vegetais e minerais e às emissões vulcânicas intermitentes. Hoje, aproximadamente 50% da população do planeta vivem em cidades e aglomerados urbanos e estão expostas a níveis progressivamente maiores de poluentes do ar. Este estudo é uma revisão não sistemática sobre os diferentes tipos e fontes de poluentes do ar e os efeitos respiratórios atribuídos à exposição a esses contaminantes. Podem ser creditados aos poluentes particulados e gasosos, emitidos por diferentes fontes, aumentos nos sintomas de doenças, na procura por atendimentos em serviços de emergência e no número de internações e de óbitos. Mais do que descompensar doenças pré-existentes, exposições crônicas têm ajudado a aumentar o número de casos novos de asma, de DPOC e de câncer de pulmão, tanto em áreas urbanas quanto em áreas rurais, fazendo com que os poluentes atmosféricos rivalizem com a fumaça do tabaco pelo papel de principal fator de risco para estas doenças. Na rotina de clínicos e pneumologistas, esperamos contribuir para consolidar a importância da investigação sobre a exposição aos poluentes do ar e o reconhecimento de que esse fator de risco merece ser levado em conta na adoção da melhor terapêutica para o controle das descompensações agudas das doenças respiratórias e para a sua manutenção entre as crises. ",
+      "url": "https://doi.org/10.1590/s1806-37132012000500015"
+    },
+    {
+      "doi": "10.1590/s0102-261x2011000100005",
+      "title": "Variações temporais do material particulado inalável fino e grosso e íons inorgânicos solúveis em São José dos Campos, SP",
+      "journal": "Revista Brasileira de Geofísica",
+      "year": 2011,
+      "authors": "Patricia Alexandre de Souza; William Zamboni de Mello; Rauda Lúcia Mariani; Silvia Maria Sella",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0102-261x2011000100005"
+    },
+    {
+      "doi": "10.1590/1413-812320182410.29432017",
+      "title": "Poluição do ar e impactos na saúde na Região Metropolitana de Belo Horizonte – Minas Gerais, Brasil",
+      "journal": "Ciência &amp; Saúde Coletiva",
+      "year": 2019,
+      "authors": "Nelson Gouveia; Antonio Ponce de Leon; Washington Junger; Joana de Freitas Lins; Clarice Umbelino de Freitas",
+      "abstract": " Resumo Examinamos o impacto da poluição atmosférica nas internações por doenças respiratórias totais (DRT), em crianças menores de cinco anos (DRC) e por doenças cardiovasculares em maiores de 39 anos (DCV) nos municípios de Belo Horizonte (BH), Betim e Contagem, da Região Metropolitana de Belo Horizonte. Modelos aditivos generalizados via regressão de Poisson foram utilizados para ajustar as séries de hospitalizações. Os poluentes, em defasagem simples e acumulada de até cinco dias, foram introduzidos como variáveis independentes e os modelos foram ajustados para temperatura, umidade, dias da semana e feriados. Em BH, o PM10 esteve relacionado às DRT (RR% 1,06 IC95%:0,41-1,72); DRC (RR% 1,25 IC95%:0,25-2,26) e DCV (RR% 2,29 IC95%:0,96-3,64). Em Betim, observou-se RR% 1,33 (IC95%:0,48-2,18) para DRT e RR% 2,38 (IC95%:1,20-3,56) para DRC. Em Contagem, observou-se RR% 1,23 (IC95%:0,32-2,15) e RR% 1,61 (IC95%:0,26-2,96) para DRT e DRC, respectivamente. SO2 e CO também apresentaram associação com as hospitalizações. As doenças respiratórias foram o desfecho mais relacionado aos poluentes investigados. Esses resultados podem ser úteis nas discussões das políticas de controle de emissões na região. ",
+      "url": "https://doi.org/10.1590/1413-812320182410.29432017"
+    },
+    {
+      "doi": "10.1590/s1413-41522016139269",
+      "title": "Avaliação da influência das condições meteorológicas em dias com altas concentrações de material particulado na Região Metropolitana do Rio de Janeiro",
+      "journal": "Engenharia Sanitaria e Ambiental",
+      "year": 2016,
+      "authors": "Tailine Corrêa Santos; Vanessa Silveira Barreto Carvalho; Michelle Simões Reboita",
+      "abstract": " RESUMO: Na Região Metropolitana do Rio de Janeiro, altos índices de concentrações de material particulado inalável (PM10) com violações dos limites estabelecidos pela Resolução CONAMA n0 03/90 são registrados rotineiramente. Analisando dados registrados entre 1998 e 2008, foram identificados 146 dias com concentrações acima dos valores estabelecidos. Nesses dias, foi possível verificar a influência da atuação do Anticiclone Subtropical do Atlântico Sul, a ausência de precipitação e a ocorrência de inversões térmicas na baixa troposfera, o que confirma a forte relação entre a ocorrência de altas concentrações de PM10 e as condições atmosféricas na região. ",
+      "url": "https://doi.org/10.1590/s1413-41522016139269"
+    },
+    {
+      "doi": "10.5123/s1679-49742013000300009",
+      "title": "Poluição do ar em cidades brasileiras: selecionando indicadores de impacto na saúde para fins de vigilância",
+      "journal": "Epidemiologia e Serviços de Saúde",
+      "year": 2013,
+      "authors": "Clarice Umbelino de Freitas; Washington Junger; Antonio Ponce de Leon; Rosária Grimaldi; Mirta Alcira Ferro Rodrigues Silva; Nelson Gouveia",
+      "abstract": "",
+      "url": "https://doi.org/10.5123/s1679-49742013000300009"
+    },
+    {
+      "doi": "10.1590/s0102-311x2013001300025",
+      "title": "Poluição do ar e doenças respiratórias e cardiovasculares: estudo de séries temporais em Cubatão, São Paulo, Brasil",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2013,
+      "authors": "Adelaide Cassia Nardocci; Clarice Umbelino de Freitas; Antonio Carlos Monteiro Ponce de Leon; Washington Leite Junger; Nelson da Cruz Gouveia",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0102-311x2013001300025"
+    },
+    {
+      "doi": "10.1590/s0066-782x2012005000111",
+      "title": "Malformações detectadas pelo ultrassom abdominal em crianças com cardiopatia congênita",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "year": 2012,
+      "authors": "Rosana Cardoso Manique Rosa; Rafael Fabiano Machado Rosa; José Antônio Monteiro Flores; Eliete Golendziner; Ceres Andréia Vieira de Oliveira; Marileila Varella-Garcia; Giorgio Adriano Paskulin; Paulo Ricardo Gazzola Zen",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0066-782x2012005000111"
+    },
+    {
+      "doi": "10.1590/s0100-40422010000600005",
+      "title": "Caracterização do material particulado fino e grosso e composição da fração inorgânica solúvel em água em São José dos Campos (SP)",
+      "journal": "Química Nova",
+      "year": 2010,
+      "authors": "Patricia Alexandre de Souza; William Zamboni de Mello; Rauda Lúcia Mariani; Silvia Maria Sella",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0100-40422010000600005"
+    },
+    {
+      "doi": "10.1590/s0103-05822012000100017",
+      "title": "Perfil das crianças submetidas à correção de cardiopatia congênita e análise das complicações respiratórias",
+      "journal": "Revista Paulista de Pediatria",
+      "year": 2012,
+      "authors": "Priscila Mara N. Oliveira; Priscila Antonichelli de Held; Rosângela Aparecida A. Grande; Maria Angela G. O. Ribeiro; Tatiana Godoy Bobbio; Camila Isabel S. Schivinski",
+      "abstract": " OBJETIVO: Descrever as características demográficas e clínicas de crianças submetidas à cirurgia de correção de cardiopatia congênita (CC) em um hospital universitário, comparando pacientes com e sem complicações respiratórias no pós-operatório. MÉTODOS: Estudo retrospectivo, realizado por meio de consulta de prontuários de crianças submetidas à cirurgia corretiva de CC em hospital universitário brasileiro no período de novembro de 2006 a setembro de 2007. Foram analisados dados relativos a idade, sexo, peso, comorbidades e tipo de CC das crianças incluídas no estudo, comparando pacientes com e sem complicações respiratórias no pós-operatório. Foram utilizados o teste de Mann-Whitney e exato de Fisher, considerando-se significante p&lt;0,05. RESULTADOS: Foram analisados 55 (95%) prontuários disponíveis de crianças submetidas à cirurgia cardíaca com mediana de idade de 37,5 meses, sendo 49% meninos. Presença de três ou mais CC foi verificada em 29,1% dos pacientes e 53% dos casos apresentavam comorbidades. Quanto às complicações respiratórias no pós-operatório, 31% dos pacientes evoluíram com atelectasia/derrame pleural e 5,5% laringite/pneumomediastino/lesão pulmonar. Complicações em outros sistemas foram identificadas em 24% dos pacientes. A sobrevida foi de 89% e crianças com complicações respiratórias no pós-operatório foram submetidas a maior tempo de ventilação mecânica e permanência hospitalar (p&lt;0,001). CONCLUSÕES: O conhecimento da relação entre complicações respiratórias e maior tempo de ventilação mecânica e hospitalização reforça a necessidade de prevenir tais complicações para redução dos custos hospitalares. ",
+      "url": "https://doi.org/10.1590/s0103-05822012000100017"
+    },
+    {
+      "doi": "10.1590/0102-311x00177719",
+      "title": "Estimativa da concentração média diária de material particulado fino na região do Complexo Industrial e Portuário do Pecém, Ceará, Brasil",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2020,
+      "authors": "Lucas de Oliveira do Couto; Sharmênia de Araújo Soares Nuto; Sandra de Souza Hacon; Adriana Gioda; Francisco Wagner de Sousa; Edenilo Baltazar Barreira Filho; Karen dos Santos Gonçalves; André Reynaldo Santos Périssé",
+      "abstract": " A exposição ao material particulado fino (MP2,5) está associada a inúmeros desfechos à saúde. Desta forma, monitoramento da concentração ambiental do MP2,5 é importante, especialmente em áreas amplamente industrializadas, pois abrigam potenciais emissores do MP2,5 e de substâncias com potencial de aumentar a toxicidade de partículas já suspensas. O objetivo desta pesquisa é estimar a concentração diária do MP2,5 em três áreas de influência do Complexo Industrial e Portuário do Pecém (CIPP), Ceará, Brasil. Foi aplicado um modelo de regressão não linear para a estimativa do MP2,5, por meio de dados de profundidade óptica monitorados por satélite. As estimativas foram realizadas em três áreas de influência (Ai) do CIPP (São Gonçalo do Amarante - Ai I, Paracuru e Paraipaba - Ai II e Caucaia - Ai III, no período de 2006 a 2017. As médias anuais das concentrações estimadas foram inferiores ao estabelecido pela legislação nacional em todas as Ai (8µg m-3). Em todas as Ai, os meses referentes ao período de seca (setembro a fevereiro) apresentaram as maiores concentrações e uma predominância de ventos leste para oeste. Os meses que compreendem o período de chuva (março a agosto) apresentaram as menores concentrações e ventos menos definidos. As condições meteorológicas podem exercer um papel importante nos processos de remoção, dispersão ou manutenção das concentrações do material particulado na região. Mesmo com baixas concentrações estimadas, é importante avaliar a constituição das partículas finas dessa região, bem como sua possível associação a efeitos adversos à saúde da população local. ",
+      "url": "https://doi.org/10.1590/0102-311x00177719"
+    },
+    {
+      "doi": "10.1590/1809-2950/18039627012020",
+      "title": "Influência da cardiopatia congênita no desenvolvimento neuropsicomotor de lactentes",
+      "journal": "Fisioterapia e Pesquisa",
+      "year": 2020,
+      "authors": "Ítalo Ribeiro Paula; Janaína Carla Silva Oliveira; Ana Carolina Ferreira Batista; Lizandra Caroline Santana Nascimento; Lúcio Borges de Araújo; Márcia Berbert Ferreira; Miria Benincasa Gomes; Vivian Mara Gonçalves de Oliveira Azevedo",
+      "abstract": " RESUMO As cardiopatias congênitas (CC) estão entre as principais causas de morbimortalidade na primeira infância e os lactentes com essa condição podem apresentar atrasos no desenvolvimento neuropsicomotor (DNPM). O objetivo deste estudo foi avaliar a influência da CC no DNPM de lactentes. Trata-se de um estudo observacional com avaliação do desenvolvimento neuropsicomotor realizada pela Bayley Scales of Infant and Toddler Development (BSID-III). As condições maternas e clínicas dos lactentes foram verificadas no relatório de alta médica e na caderneta de saúde da criança, e a condição socioeconômica das famílias pelo Critério da Classificação Econômica Brasil. Para associar as variáveis clínicas e o DNPM foram utilizados o coeficiente de correlação de Spearman e o teste de razão de verossimilhança. Foram avaliados 18 lactentes, com predomínio do sexo feminino (72,2%). A maioria das mães (47,1%) possuía ensino médio completo ou superior incompleto, com média da idade de 27,2±5,5 anos. Houve correlação das escalas do BSID-III com as variáveis quantitativas analisadas: escala motora com o peso (p=0,02 e r=0,54) e com uso de oxigenoterapia (p=0,009 e r=−0,591); já para as variáveis qualitativas as associações foram entre: escala motora e condição socioeconômica (p=0,015), escala motora e comunicação interatrial - (CIA) (p=0,023) e escala da linguagem e CIA (p=0,038). A CC influenciou o DNPM, principalmente no aspecto motor. Além disso peso, diagnóstico de CIA, uso de oxigenoterapia e condição socioeconômica foram considerados como principais fatores de risco para o atraso no DNPM. ",
+      "url": "https://doi.org/10.1590/1809-2950/18039627012020"
+    },
+    {
+      "doi": "10.1590/s1020-49892010000100002",
+      "title": "Associação entre material particulado de queimadas e doenças respiratórias na região sul da Amazônia brasileira",
+      "journal": "Revista Panamericana de Salud Pública",
+      "year": 2010,
+      "authors": "Cleber Nascimento do Carmo; Sandra Hacon; Karla Maria Longo; Saulo Freitas; Eliane Ignotti; Antonio Ponce de Leon; Paulo Artaxo",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s1020-49892010000100002"
+    },
+    {
+      "doi": "10.1590/s1413-415220210321",
+      "title": "Índice de poluição atmosférica: uma proposta baseada em dados secundários para avaliação da qualidade do ar",
+      "journal": "Engenharia Sanitaria e Ambiental",
+      "year": 2022,
+      "authors": "Otávio Guilherme Seibert; Wanderson de Paula Pinto; Edson Zambon Monte",
+      "abstract": " RESUMO Este trabalho objetivou propor um método para avaliar a qualidade do ar de determinada região, com base em dados secundários. A metodologia proposta é fundamentada na elaboração de um índice de poluição atmosférica (IPA), desenvolvido por meio da aplicação do método analytic hierarchy process. O IPA utiliza dados secundários das fontes de emissões atmosféricas e dados relacionados com a poluição do ar. Essa relação gera um valor adimensional que classifica a qualidade do ar em cinco faixas. Com a aplicação da metodologia proposta, dados de 11 municípios da Região Metropolitana de São Paulo (RMSP), cinco municípios da Região Metropolitana de Belo Horizonte (RMBH) e quatro municípios da Região Metropolitana da Grande Vitória (RMGV) foram analisados. Esses municípios possuem uma rede automática de monitoramento da qualidade do ar. Os resultados mostram que dez municípios da RMSP, quatro municípios da RMGV e três municípios da RMBH tiveram o IPA classificado como moderado, tendo como referência o ano de 2017. Essa informação é comprovada quando comparada com o índice de qualidade do ar do ano de 2017 desses municípios. Concluiu-se que a metodologia proposta se demonstrou um método apropriado para avaliação da qualidade do ar e pode ser empregada como uma ferramenta viável no gerenciamento da qualidade do ar atmosférico nos estados brasileiros ou em qualquer outro país. ",
+      "url": "https://doi.org/10.1590/s1413-415220210321"
+    },
+    {
+      "doi": "10.1590/s1413-41522018168718",
+      "title": "Redução da emissão de material particulado em função da inserção de misturas do biodiesel de soja e mamona ao diesel",
+      "journal": "Engenharia Sanitaria e Ambiental",
+      "year": 2018,
+      "authors": "Camila Coelho Guimarães; Vivianni Marques Leite dos Santos; Jorge Wilson Cortez; Lucas Di Paula Gama dos Santos",
+      "abstract": " RESUMO Preocupações ambientais e econômicas resultantes da demanda por combustíveis fósseis corroboram a necessidade de alternativas para redução dos impactos ambientais e econômicos advindos da crescente utilização de veículos e máquinas movidas a diesel. A diversificação das matérias-primas para produção do biodiesel pode possibilitar a melhoria da qualidade do combustível e das emissões resultantes de sua utilização nos motores. Neste estudo, foi avaliada a emissão de material particulado (MP) utilizando biodiesel de soja e de mamona em misturas diesel/biodiesel, bem como sua viscosidade e estabilidade à oxidação (pré-requisitos de qualidade). Para isso, testaram-se diferentes proporções de biodiesel de soja e de mamona (SyMx), em que y e x representam os percentuais de biodiesel de soja e de mamona, respectivamente: S100M0, S75M25, S50M50, S25M75 e S0M100, em mistura ao diesel (BX), nos seguintes percentuais: 7 (diesel B7), 25 (B25), 40 (B40), 50 (B50), 75 (B75) e 100% (B100). A opacidade da fumaça, a viscosidade e a estabilidade à oxidação foram determinadas conforme as normas NBR 13037, NBR 10441 e EN 14112, respectivamente. Entre as misturas analisadas, o diesel comercial (B7) emitiu maior quantidade de MP, ao passo que as demais misturas, que atenderam aos pré-requisitos de qualidade (B25 e B40), emitiram menos MP, conforme aumento do percentual de biodiesel de mamona nas misturas SyMx, bem como com o aumento de biodiesel na mistura BX. Também foram obtidos ganhos relativos à qualidade em função das diferentes composições SyMx. ",
+      "url": "https://doi.org/10.1590/s1413-41522018168718"
+    },
+    {
+      "doi": "10.1590/1984-0462/2022/40/2020512",
+      "title": "Fatores de risco para evolução pôndero-estatural insuficiente de crianças com cardiopatia congênita acompanhadas em ambulatório de nutrição clínica",
+      "journal": "Revista Paulista de Pediatria",
+      "year": 2022,
+      "authors": "Beatriz Cassaniga Talassi; Tulio Konstantyner; Stela de Almeida Miranda; Heitor Pons Leite",
+      "abstract": " Resumo  Objetivo: Descrever a evolução pôndero-estatural e identificar fatores de risco para o crescimento antropométrico insuficiente de crianças com cardiopatia congênita.  Métodos: Coorte histórica de 131 crianças com cardiopatia congênita acompanhadas em ambulatório de nutrição clínica. Os escores dos índices antropométricos ao longo do tempo (inicial, após 12 e 24 meses de acompanhamento) foram analisados por equações de estimativas generalizadas. O desfecho foi o ganho pôndero-estatural insuficiente, definido como aumento ≤0,5 nos escores Z de peso para idade (P/I), estatura para idade (E/I) e índice de massa corpórea para idade (IMC/I) em 12 meses de acompanhamento. Foram aplicados modelos de regressão logística múltipla para identificação dos fatores de risco e controle dos fatores de confusão.  Resultados: Os escores Z de P/I (p&lt;0,001) e IMC/I (p&lt;0,001) melhoraram após 12 meses, e os três índices após 24 meses (p&lt;0,001). Ao final desse período, 55,7% dos pacientes não alcançaram aumento &gt;0,5 escore Z de P/I; 77,1%, de E/I; e 45,8%, de IMC/I. O acompanhamento inferior a cinco consultas associou-se ao ganho insuficiente de P/I (OR 7,78, IC95% 3,04–19,88), E/I (OR 10,79, IC95% 2,22–52,45) e IMC/I (OR 2,54, IC95% 1,12–5,75). Não ter sido submetido à cirurgia cardíaca e ter idade ≥12 meses estiveram associados ao ganho insuficiente de P/I (OR 3,95, IC95% 1,38–11,29/ OR 3,60, IC95% 1,33–9,72) e IMC/I (OR 2,81, IC95% 1,08–7,28/OR 3,39, IC95% 1,34–8,56), e a baixa renda, ao ganho insuficiente de E/I (OR 4,11, IC95% 1,25–13,46).  Conclusões: Idade ≥12 meses, menor número de consultas, ausência de tratamento cirúrgico e baixa renda familiar foram fatores de risco para a evolução pôndero-estatural insuficiente em crianças com cardiopatia congênita. ",
+      "url": "https://doi.org/10.1590/1984-0462/2022/40/2020512"
+    },
+    {
+      "doi": "10.1590/s0066-782x2012001500019",
+      "title": "Necessidades e preferências do portador de cardiopatia valvar",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "year": 2012,
+      "authors": "Max Grinberg; Antonio Sergio Santis Andrade Lopes",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0066-782x2012001500019"
+    },
+    {
+      "doi": "10.1590/1984-0462/2022/40/2020512in",
+      "title": "Risk factors for insufficient weight and height gain in children with congenital heart disease followed up at a nutrition outpatient clinic",
+      "journal": "Revista Paulista de Pediatria",
+      "year": 2022,
+      "authors": "Beatriz Cassaniga Talassi; Tulio Konstantyner; Stela de Almeida Miranda; Heitor Pons Leite",
+      "abstract": " Abstract  Objective: To describe weight and height evolution and to identify risk factors for insufficient anthropometric growth in children with congenital heart disease.  Methods: Historical cohort study including 131 children with congenital heart disease, followed up at a nutrition outpatient clinic. The anthropometric indices over time (initial score, after 12 and 24 months of follow-up) were analyzed using generalized estimating equations. The outcome was ‘insufficient weight-height gain’, defined as an increase of ≤0.5 in the z-score of weight-for-age (W/A), height-for-age (H/A) or body mass index-for-age (BMI/A) after 12 months of follow-up. Multiple logistic regression models were applied to identify risk and confounding factors.  Results: The z-scores of W/A (p&lt;0.001) and BMI/A (p&lt;0.001) improved after 12 months, as well as the three indexes after 24 months (p&lt;0.001). At the end of this period, 55.7% of the patients did not achieve an increase of &gt;0.5 in the Z score of W/A; 77.1%, of H/A; and 45.8%, of BMI/A. A follow-up of less than five appointments was associated with insufficient gain in W/A (OR 7.78; 95%CI 3.04–19.88), H/A (OR 10.79; 95%CI 2.22–52.45) and BMI/A (OR 2.54; 95%CI 1.12–5.75). Not having undergone cardiac surgery and being aged ≥12 months were factors associated with insufficient W/A gain (OR 3.95; 95%CI 1.38–11.29/OR 3.60; 95%CI 1.33–9.72) and BMI/A (OR 2.81; 95%CI 1.08–7.28/OR 3.39; 95%CI 1.34–8.56). Low income was associated with insufficient H/A gain (OR 4.11; 95%CI 1.25–13.46).  Conclusions: Being aged less than or 12 months, the lowest number of appointments, absence of surgical treatment and low family income were risk factors for insufficient weight and height gain in children with congenital heart disease. ",
+      "url": "https://doi.org/10.1590/1984-0462/2022/40/2020512in"
+    },
+    {
+      "doi": "10.21168/rbrh.v21n1.p263-273",
+      "title": "Avaliação e modelagem matemática da remoção de material particulado em canal gramado construído em escala real",
+      "journal": "Revista Brasileira de Recursos Hídricos",
+      "year": 2016,
+      "authors": "Rodrigo Moruzzi; Mayara Felipe; Ademir Barbassa",
+      "abstract": "",
+      "url": "https://doi.org/10.21168/rbrh.v21n1.p263-273"
+    },
+    {
+      "doi": "10.1590/1984-0462/2025/43/2024178",
+      "title": "Air pollution and respiratory diseases in conurbated cities in the state of São Paulo",
+      "journal": "Revista Paulista de Pediatria",
+      "year": 2025,
+      "authors": "Luiz Fernando Costa Nascimento; Ana Clara Silva Raposo de Almeida; Julia Ferreira Gomes Pereira; Mariana Telles de Castro; Adriana Oliveira Ribeiro dos Santos",
+      "abstract": " ABSTRACT  Objective: To estimate the association between exposure to particulate matter with less than 10u of aerodynamic diameter (PM10) and hospital admissions due to acute respiratory diseases in children.  Methods: This is an ecological time series study with data on hospitalizations for respiratory diseases in children living in the conurbated cities of Taubaté, Tremembé, and Pindamonhangaba located in the Vale do Paraíba in São Paulo. Hospital admission data refer to the period between January 1, 2016 and December 31, 2019. Information on hospital admissions was obtained from the DATASUS database, and concentration values (μg/m3) of the pollutant PM10, temperature, and humidity relative air were obtained from the Environmental Company of the State of São Paulo. Negative binomial regression was used. Population attributable fraction and hospitalization costs were estimated.  Results: A total of 1,291 hospitalizations were identified in the conurbated municipalities with a daily average of 0.88 standard deviation (±) 1.06, varying between 0–7 hospitalizations. Significant exposures to PM10 can be observed at all lags, except the four-day lag (Lag 4). The total cost of hospitalizations was around US$ 800,000.00 and the excess number of hospitalizations (135) represented an expense of around US$ 80,000.00.  Conclusions: Studies with conurbated cities are easily applicable, extending the study area. The results reinforce the harmful role of exposure to air pollutants in children’s health. ",
+      "url": "https://doi.org/10.1590/1984-0462/2025/43/2024178"
+    },
+    {
+      "doi": "10.1590/0102-311xen145922",
+      "title": "Evidence of the adverse effects of air pollution on the population’s health in Spain: analysis of the economic costs of premature deaths",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2023,
+      "authors": "Bruno Casal; Berta Rivera; Luis Currais",
+      "abstract": " Abstract: Exposure to ambient air pollution increases mortality and morbidity, leading disabilities, and premature deaths. Air pollution has been identified as a leading cause of global disease burden, especially in low- and middle-income countries in 2015 (Global Burden of Diseases, Injuries and Risk Factors Study, 2015). This study explores the relation between mortality rates and particulate matter (PM) concentrations in the 50 Spanish regions for the period 2002-2017. Moreover, we estimated the premature deaths due to PM in Spain according to welfare and production losses in 2017. Random-effects models were developed to evaluate the relation between mortality rates and PM concentrations. The economic cost of premature deaths was assessed using the Willingness to Pay approach to quantify welfare losses and the Human Capital method to estimate production losses. PM10 concentrations are positively related to mortality due to respiratory diseases and stroke. Based on 10,342 premature deaths in 2017, losses in welfare amount to EUR 36,227 million (3.1% of Spanish GDP). The economic value of current and future production losses reached EUR 229 million (0.02% of GDP). From a social perspective, air pollution is a public health concern that greatly impacts health and quality of life. Results highlight the need to implement or strengthen regulatory, fiscal, and health public policies to substantially benefit the population’s health by reducing their exposure to air pollution. ",
+      "url": "https://doi.org/10.1590/0102-311xen145922"
+    },
+    {
+      "doi": "10.21168/rbrh.v19n2.p299-309",
+      "title": "Uso de um ADCP para Estimar Concentrações de Material Particulado em Suspensão para o Estuário da Lagoa dos Patos, Brasil",
+      "journal": "Revista Brasileira de Recursos Hídricos",
+      "year": 2014,
+      "authors": "RAFAEL ÁVILA; Osmar Jr; MAURO ANDRADE",
+      "abstract": "",
+      "url": "https://doi.org/10.21168/rbrh.v19n2.p299-309"
+    },
+    {
+      "doi": "10.1590/s0066-782x2012000600018",
+      "title": "A inclusão do escore de risco na tomada de decisão em cardiopatia valvar",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "year": 2012,
+      "authors": "Ricardo Casalino; Max Grinberg",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0066-782x2012000600018"
+    },
+    {
+      "doi": "10.1590/s0100-40422010000800002",
+      "title": "Poluição por mercúrio em aterros urbanos do período colonial no extremo sul do Brasil",
+      "journal": "Química Nova",
+      "year": 2010,
+      "authors": "Luiz Paulo de Moura Fragomeni; Ari Roisenberg; Nicolai Mirlean",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0100-40422010000800002"
+    },
+    {
+      "doi": "10.1590/s0100-40422010000300005",
+      "title": "Determinação de metais traço no material particulado em suspensão em Ouro Preto, Minas Gerais",
+      "journal": "Química Nova",
+      "year": 2010,
+      "authors": "Lucas Carlúcio Magalhães; Hermínio Arias Nalini Junior; Aniel da Costa Lima; Mauricio Xavier Coutrim",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0100-40422010000300005"
+    },
+    {
+      "doi": "10.1590/s0034-8910.2013047004410",
+      "title": "Material particulado originario de queimadas e doencas respiratorias",
+      "journal": "Revista de Saúde Pública",
+      "year": 2013,
+      "authors": "Ageo Mario Candido da Silva; Ines Echenique Mattos; Eliane Ignotti; Sandra de Souza Hacon",
+      "abstract": "  OBJETIVO:  Analisar os efeitos da exposição de partículas finas de queimadas sobre as internações por doenças respiratórias em crianças e idosos.    MÉTODOS:  Estudo ecológico de série temporal em Cuiabá, estado de Mato Grosso, região da Amazônia brasileira, durante 2005. Níveis diários de material particulado fino PM2.5 foram estimados e disponibilizados pelo Instituto Nacional de Pesquisas Espaciais. Variáveis relacionadas a temperatura, umidade relativa e ajustes por tendência temporal, sazonalidade e efeitos de calendário foram incluídos no modelo. Utilizou-se a Regressão de Poisson por modelos aditivos generalizados.    RESULTADOS:  Crescimento de 10 mg/m3 nos níveis de exposição ao PM2.5 foi associado a aumentos de 9,1%, 9,2% e 12,1% das internações hospitalares de crianças, relacionados às médias móveis de 1, 2 e 5 dias, respectivamente. O nível de exposição ao material particulado foi associado a aumentos de 11,4%, 21,6% e 22,0% em crianças, referentes às médias móveis de 1, 5 e 6 dias, respectivamente, para a estação seca. Não foram observadas associações significativas para os idosos.    CONCLUSÕES:  Foi evidenciada a influência de PM2.5 sobre a ocorrência de internações por doenças respiratórias em crianças &lt; 5 anos, na região estudada. ",
+      "url": "https://doi.org/10.1590/s0034-8910.2013047004410"
+    },
+    {
+      "doi": "10.1590/0102-778631320150145",
+      "title": "Black Carbon em Material Particulado nas Residências de Idosos na Região Metropolitana de São Paulo, Brasil",
+      "journal": "Revista Brasileira de Meteorologia",
+      "year": 2016,
+      "authors": "Bruna Segalin; Fabio L.T. Gonçalves; Adalgiza Fornaro",
+      "abstract": " Resumo O material particulado fino (MP) e o Black Carbon são dois dos piores poluentes atmosféricos, afetando a saúde humana. Apesar disso, não há dados na literatura sobre estes poluentes no interior de residências no Brasil. Nosso objetivo é analisar as partículas menores que 0,25 μm (MP0,25) e o rBC no interior de residências de idosos na Região Metropolitana de São Paulo (RMSP), em que a poluição do ar tem sido um problema sério devido às emissões veiculares. Em 60 residências, em cada amostra de 24 h foram medidos a massa e o rBC por análise gravimétrica e refletância, respectivamente. As concentrações em massa do MP0,25 e do rBC foram avaliadas em função das condições meteorológicas e do tráfego. A massa média do MP0,25 e de rBC foram de 13,6 e 2,8 μg/m3, respectivamente. O MP0,25 ultrapassou a recomendação da OMS para MP2,5 em 11,7% das residências, sendo que 26,2% da massa do MP0,25 foi composta por rBC. Considerando que o rBC é um traçador das emissões veiculares e, é prejudicial para a saúde humana, é importante que este poluente seja considerado em termos de ações de políticas públicas de controle para a melhoria da qualidade do ar na RMSP. ",
+      "url": "https://doi.org/10.1590/0102-778631320150145"
+    },
+    {
+      "doi": "10.1590/scielopreprints.9326",
+      "title": "Vigilância epidemiológica da sífilis congênita em coorte retrospectiva de uma capital no sul do Brasil",
+      "journal": "",
+      "year": 2024,
+      "authors": "Fabiana Ferreira dos Santos; Lisiane Morelia Weida Acosta; Clécio Homrich da Silva",
+      "abstract": " Introdução : A sífilis congênita se mantém como um problema de saúde pública. Na sua vigilância, a notificação detalhada para conhecimento dos indicadores epidemiológicos são essenciais. Objetivo  geral : Descrever a incidência de casos e fatores para ocorrência de sífilis congênita em nascidos vivos. Método : Estudo de coorte retrospectiva de crianças expostas à sífilis nascidas vivas no ano de 2018 no município de Porto Alegre, humildemente a definição de caso. Os grupos: casos notificados e expostos à sífilis na gestação. Estatística descritiva analítica (p≤ 0,05). A força das associações foi determinada pela razão de chances (IC 95%). Resultados : A incidência de sífilis congênita foi de 20 casos/1000 NV e 5,2 casos/1000 NV considerados expostos. Observou-se baixa escolaridade materna (p&lt;0,001) e não realização do pré-natal (p=0,05) pelas mães dos casos notificados; maior proporção de VDRL não reagentes em crianças ao nascer (p=0,007) e encerramentos de casos com testes treponêmicos (p&lt;0,001) entre os expostos. Conclusão: Taxa de incidência tributária em 2018; escolaridade materna associada à baixa qualidade pré natal são riscos para a ocorrência do desfecho; O exame VDRL não reage ao nascer e o monitoramento após o nascimento são fatores de proteção para o evento. ",
+      "url": "https://doi.org/10.1590/scielopreprints.9326"
+    },
+    {
+      "doi": "10.1590/s0034-89102013000901209",
+      "title": "Associacao entre exposicao ao material particulado e internacoes por doencas respiratorias em criancas",
+      "journal": "Revista de Saúde Pública",
+      "year": 2013,
+      "authors": "Ana Cristina Gobbo Cesar; Luiz Fernando C Nascimento; Joao Andrade de Carvalho Jr",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0034-89102013000901209"
+    },
+    {
+      "doi": "10.1590/scielopreprints.1369",
+      "title": "O isolamento social durante a pandemia do Sars-Cov-2 aumenta ou diminui a poluição sonora no ambiente urbano?",
+      "journal": "",
+      "year": 2020,
+      "authors": "Guilherme De Matos Abe; Laís Reis Santos; Ricardo Vieira Teles Filho",
+      "abstract": " A disseminação pandêmica do Sars-CoV-2 por mais de 100 países em todo mundo fez com que diversos governos decretassem medidas de restrição de mobilidade social conhecidas como “isolamento social”. Esse cenário pode ter, como efeito colateral, uma percepção de redução da poluição sonora, que pode ser corroborada pela mensuração do impacto sonoro em ambientes públicos nas cidades submetidas às medidas de isolamento social. Entretanto, há registros de aumentos de queixas às autoridades por poluição sonora advindos de zonas residenciais, o que pode indicar, contrariamente, seu aumento. Considerar essas facetas duais do assunto é importante para qualquer estudo que deseje aprofundar as análises. A poluição sonora e seus efeitos danosos sobre a saúde são de grande relevância no cenário pandêmico atual, pois podem se somar a vários outros estressores que conjuntamente ameaçam a saúde mental de populações nesse cenário. Este trabalho, a partir de publicações científicas e de imprensa feitos durante o período, analisa e coloca em discussão as diferentes facetas dessa conjuntura que podem influenciar na elaboração de políticas públicas em saúde.\n  ",
+      "url": "https://doi.org/10.1590/scielopreprints.1369"
+    },
+    {
+      "doi": "10.1590/0102-311xpt177725",
+      "title": "Iniquidades ambientais na metrópole paulista, Brasil: vegetação, calor e poluição do ar segundo a vulnerabilidade social",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2026,
+      "authors": "Claudio Makoto Kanai; Rafael Buralli; Luis Roberto da Silva; Nelson Gouveia",
+      "abstract": " Resumo: As desigualdades socioambientais nas metrópoles afetam a saúde de forma diferente, sobretudo com impactos maiores entre populações de menor nível socioeconômico. Este estudo analisou a distribuição da vegetação urbana, estimada pelo Índice de Vegetação por Diferença Normalizada (NDVI), da temperatura de superfície terrestre (TST) e das concentrações de dióxido de nitrogênio (NO2) na Região Metropolitana de São Paulo, Brasil, segundo grupos de vulnerabilidade definidos pelo Índice Paulista de Vulnerabilidade Social (IPVS). Trata-se de estudo ecológico tendo os setores censitários urbanos como unidade de análise. A vegetação e a TST foram obtidas por sensoriamento remoto, e o NO2 derivou de modelo global em alta resolução baseado em regressão de uso do solo. Resumos estatísticos compararam os indicadores entre os grupos do IPVS (1 - baixíssima a 6 - muito alta vulnerabilidade). As medianas do NDVI variaram pouco (0,21-0,25), sem padrão linear; o grupo de alta vulnerabilidade apresentou valores mais elevados, possivelmente pela localização periurbana. Para a TST, o grupo de baixíssima vulnerabilidade registrou a menor mediana (31,8ºC). O NO2 apresentou tendência de queda entre os grupos menos vulnerabilizados até o de alta vulnerabilidade, com novo aumento no de muito alta vulnerabilidade. Conclui-se que a exposição ambiental na Região Metropolitana de São Paulo é heterogênea e não segue padrão linear em relação à vulnerabilidade social. Particular atenção deve ser dada às áreas mais vulnerabilizadas que acumulam condições ambientais críticas, reforçando a necessidade de políticas públicas integradas para reduzir desigualdades e promover cidades mais saudáveis e equitativas. ",
+      "url": "https://doi.org/10.1590/0102-311xpt177725"
+    },
+    {
+      "doi": "10.1590/0102-311x00184017",
+      "title": "Síndrome congênita do Zika Vírus: um olhar a partir de atores nordestinos",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2018,
+      "authors": "Natália Lira de Souza",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/0102-311x00184017"
+    },
+    {
+      "doi": "10.5380/ce.v20i2.39740",
+      "title": "IMPACTO DO DESFECHO NEONATAL EM PUÉRPERAS DE RECÉM-NASCIDOS PORTADORES DE ANOMALIA CONGÊNITA",
+      "journal": "Cogitare Enfermagem",
+      "year": 2015,
+      "authors": "Julyane Vasconcelos Oliveira; Flavia Westphal; Anelise Riedel Abrahäo",
+      "abstract": " Este estudo teve por finalidade identificar em puérperas, sinais de estresse decorrentes do processo de enfrentamento da gestação de um feto portador de anomalia congênita. Trata-se de um estudo transversal, realizado no ambulatório de medicina fetal da Universidade Federal de São Paulo, entre janeiro e abril de 2014. Para este estudo foram utilizados dois instrumentos de coleta de dados: um formulário de identificação sociodemográfica e de antecedentes reprodutivos e a Escala do Impacto do Evento- Revisada, aplicados a 24 puérperas. Foram identificados sinais de estresse em 62,5% das puérperas estudadas, sendo que destas, 41,7% gestaram fetos inviáveis. Quanto ao período gestacional do diagnóstico fetal, verificou-se que 75% das mulheres o receberam no 2º trimestre de gestação e do total, 37,5% apresentaram alta probabilidade de ter transtorno de estresse pós-traumático. Assim, podemos supor que o diagnóstico precoce permite assistência de maior qualidade a gestante/casal/família, favorecendo evolução pós-parto com menor estresse. ",
+      "url": "https://doi.org/10.5380/ce.v20i2.39740"
+    },
+    {
+      "doi": "10.5123/s1679-49742014000200010",
+      "title": "Sífilis congênita no Rio Grande do Norte: estudo descritivo do período 2007-2010",
+      "journal": "Epidemiologia e Serviços de Saúde",
+      "year": 2014,
+      "authors": "Isaiane da Silva Carvalho; Rosineide Santana de Brito",
+      "abstract": "",
+      "url": "https://doi.org/10.5123/s1679-49742014000200010"
+    },
+    {
+      "doi": "10.1590/s0034-8910.2013047004713",
+      "title": "Associacao entre exposicao ao material particulado e internacoes por doencas respiratorias em criancas",
+      "journal": "Revista de Saúde Pública",
+      "year": 2013,
+      "authors": "Ana Cristina Gobbo Cesar; Luiz Fernando C Nascimento; Joao Andrade de Carvalho Jr",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0034-8910.2013047004713"
+    },
+    {
+      "doi": "10.1590/1984-0462/2025/43/2025073",
+      "title": "Impacts of COVID-19 on pediatric patients with congenital heart disease: a small systematic and integrative literature review",
+      "journal": "Revista Paulista de Pediatria",
+      "year": 2025,
+      "authors": "Avelyn Moreira Oliveira; Alexandre D’Annibale Cartøgenes; Luigi Chermont Berni; LaÀse Maria Barbosa Amaral; Rafael Lobato Machado; Rita de Cøssia Silva de Oliveira",
+      "abstract": " ABSTRACT  Objective The objective of this study was to compile primary studies to understand the impacts of COVID-19 on pediatric patients with congenital heart disease.  Data source A systematic review based on the Preferred Reporting Items for Systematic reviews and Meta-Analyses (PRISMA) method, with searches conducted in the PubMed, Latin American and Caribbean Health Sciences Literature (LILACS), and Scientific Electronic Library Online (SciELO) databases. Studies published in the last 5 years, open access, and addressing the research question, “What are the main impacts of COVID-19 on pediatric patients with congenital heart disease?” were included. The risk of bias was assessed using the Newcastle-Ottawa Scale (NOS) and the Joanna Briggs Institute (JBI) tools.  Data synthesis A total of 377 articles were identified, of which 12 met the inclusion criteria. The NOS tool indicated that two of the eight cohort studies had a risk of bias and lower methodological quality. The JBI tool revealed that three of the four cross-sectional studies had a low risk of bias and good methodological quality. The integrative analysis highlighted three main impacts of COVID-19 on these patients: difficulties in follow-up and treatment, reduced physical activity due to social distancing, and postponement of procedures and surgeries. Infected patients experienced increased complications and hospitalizations, but without a significant change in mortality.  Conclusions The COVID-19 pandemic significantly affected the health and management of congenital heart disease, leading to clinical complications and worsening follow-up. Further primary and secondary studies are needed to strengthen the evidence and improve patient management. ",
+      "url": "https://doi.org/10.1590/1984-0462/2025/43/2025073"
+    },
+    {
+      "doi": "10.1590/0102-311xen050622",
+      "title": "Burden of lung cancer attributable to household air pollution in the Chinese female population: trend analysis from 1990 to 2019 and future predictions",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2022,
+      "authors": "Zhixue Li; Yan Ma; Ying Xu",
+      "abstract": " This study analyzes the long-term trend of the burden of lung cancer attributable to household air pollution in the Chinese female population, from 1990 to 2019, and make predictions for the next decade. Based the data from the 2019 Global Burden of Diseases (GBD 2019), the joinpoint regression model was used to reflect the temporal trend of the burden of lung cancer attributable to household air pollution, and an autoregressive integrated moving average (ARIMA) model was used to predict the burden of disease over the next decade. From 1990 to 2019, the age-standardized mortality and disability-adjusted life years (DALYs) rates of the Chinese female population were higher than the global rates, and the gap due to residential radon increased over time. The burden of lung cancer attributable to solid fuels has shown a significant downward trend while that due to residential radon has increased slightly overall, but remains lower than the former. The burden of lung cancer increased with age, and the peak age of DALYs rates changed from 70 &lt; 75 years in 1990 to 75 &lt; 80 years in 2019. The model predicted that the burden of lung cancer attributable to solid fuels will gradually decrease over the next decade, whereas the burden of lung cancer due to residential radon will gradually increase and surpass the burden due to solid fuels in 2023. Residential radon will become a more important factor of household air pollution than solid fuels in the next decade for the Chinese female population. Future interventions targeted at household air pollution are needed to reduce the burden of lung cancer. ",
+      "url": "https://doi.org/10.1590/0102-311xen050622"
+    },
+    {
+      "doi": "10.1590/010318131010081620210524",
+      "title": "A LINGUAGEM E A DIMENSÃO DO CORPO NA SÍNDROME CONGÊNITA DO ZIKA VÍRUS: UM ESTUDO DE CASO",
+      "journal": "Trabalhos em Linguística Aplicada",
+      "year": 2021,
+      "authors": "Carla Santos Pimentel; Melissa Catrini; Lúcia Arantes",
+      "abstract": " RESUMO Após o surto relacionado ao vírus Zika (ZIKV) no Brasil, entre os anos de 2015 e 2016, gestantes que haviam sido infectadas tiveram bebês com sequelas neurológicas importantes. Na época, foram relatados diversos casos de microcefalia associada a outras desordens neurológicas. Esse episódio se configurou como emergência em saúde pública de caráter mundial e diferentes estudos foram (e têm sido) realizados para acompanhar os bebês que haviam sido expostos a infecção congênita relacionada ao ZIKV. Essas crianças apresentam alterações neurológicas específicas, as quais são descritas na literatura como: microcefalia, desproporções craniofaciais, espasticidade, convulsões, irritabilidade, artrogripose, disfunções de tronco cerebral - disfagia e anormalidades oculares -, alterações auditivas, calcificações cerebrais, desordens corticais e ventriculomegalia. (ARAÚJO, et. al., 2016; FRANÇA, et. al., 2016; MIRANDA, et. al.,2016; MOORE, et. al.,2017) Visto o número reduzido de estudos dedicados a linguagem nesse cenário, o objetivo da pesquisa é refletir sobre a linguagem e a dimensão do corpo em crianças com lesões neurológicas associadas a Síndrome Congênita do Zika Vírus (SCZV). A discussão tomou como referência o momento em que essas crianças começam a frequentar o espaço escolar. Assim, a partir do recorte metodológico de estudo de caso e da observação participante, foram realizadas filmagens de situações dialógicas, ocorridas no ambiente escolar, entre uma criança diagnosticada com a SCZV e seus colegas, professores, a Auxiliar de Desenvolvimento Infantil e uma pesquisadora. Como resultado, evidenciamos a presença de um corpo que, mesmo submetido às limitações impostas pela lesão orgânica, fazia presença no diálogo pedindo por interpretação. A técnica da observação participante possibilitou que essa presença pudesse ser reconhecida no espaço escolar, o que nos mostra a maneira pela qual o encontro interprofissional pode produzir deslocamentos que levem um profissional da educação a ocupar uma posição que dê condições para mudanças serem operadas na relação da criança com a linguagem e com o grupo. ",
+      "url": "https://doi.org/10.1590/010318131010081620210524"
+    },
+    {
+      "doi": "10.1590/1519-6984.301405",
+      "title": "Integrated assessment of air, soil, and water pollution in the Karaganda region of Central Kazakhstan: hotspots, salinization, and ecological risks",
+      "journal": "Brazilian Journal of Biology",
+      "year": 2026,
+      "authors": "R. Salimbayeva; T. Randhir; K. Stamkulova; A. Daulbayeva; G. Satbaeva; Zh. Yessenkulova; Zh. Moldagazyyeva",
+      "abstract": " Abstract Industrial regions of Central Kazakhstan face complex ecological pressures, yet integrated evaluations of multiple environmental compartments remain limited. This study provides a comprehensive assessment of atmospheric air, soils, and surface waters in the Karaganda region, covering five major urban centers. Field campaigns employed standardized national and international protocols for sampling and monitoring, supported by accredited laboratory analyses. Air quality measurements revealed that concentrations of CO, NO2, SO2, H2S, and particulates generally complied with national standards, although discrepancies with stationary monitoring indicated episodic exceedances linked to meteorological conditions. Soil analyses showed that the cities of Temirtau, Saran, Shakhtinsk, and Abai largely remained within sanitary norms, while the city of Balkhash emerged as a critical hotspot: cadmium reached 3.23 mg/kg and lead peaked at 151 mg/kg, exceeding national thresholds more than fivefold. Surface waters displayed distinct stressors: suspended solids in Temirtau and Shakhtinsk consistently exceeded limits (up to 42 mg/L), while Lake Balkhash showed severe ionic enrichment, with sulfates up to 736.5 mg/L and chlorides over 452.6 mg/L, approximately twice WHO guidelines. These findings highlight the dual challenge of controlling industrial emissions and mitigating salinity-driven degradation in a transboundary basin of strategic importance. Results provide evidence for targeted remediation, integrated monitoring, and advancing Kazakhstan’s commitments to the UN Sustainable Development Goals. ",
+      "url": "https://doi.org/10.1590/1519-6984.301405"
+    },
+    {
+      "doi": "10.1590/s1413-41522018168758",
+      "title": "Previsão da concentração de material particulado inalável, na Região da Grande Vitória, ES, Brasil, utilizando o modelo SARIMAX",
+      "journal": "Engenharia Sanitaria e Ambiental",
+      "year": 2018,
+      "authors": "Wanderson de Paula Pinto; Valdério Anselmo Reisen; Edson Zambon Monte",
+      "abstract": " RESUMO Este trabalho objetivou modelar e prever a concentração média diária de material particulado inalável (MP10), na Região da Grande Vitória (RGV), Espírito Santo, Brasil, utilizando o modelo SARIMAX para o período de 01/01/2012 a 30/04/2015. Os dados deste estudo foram do tipo séries temporais de concentrações de MP10 e de variáveis meteorológicas (velocidade do vento, umidade relativa, precipitação pluvial e temperatura), obtidas junto ao Instituto Estadual de Meio Ambiente e Recursos Hídricos (IEMA), sendo escolhida a estação da Enseada do Suá para fazer o estudo de predição e previsão. Baseando-se em indicadores de desempenho de modelagem, verificou-se que o modelo SARIMAX (1,0,2) (0,1,1)7 é o mais acurado entre os estudados, objetivando fazer predições e previsões da qualidade do ar na RGV. Em comparação com os modelos ARMA, o desempenho estatístico do modelo SARIMAX foi superior, no que diz respeito à predição de eventos de qualidade do ar regular. Dentre as variáveis meteorológicas avaliadas, a velocidade do vento e a precipitação pluvial foram significativas e melhoraram o ajuste do modelo. Em termos de previsão da qualidade do ar, os modelos de séries temporais mostraram resultados satisfatórios. ",
+      "url": "https://doi.org/10.1590/s1413-41522018168758"
+    },
+    {
+      "doi": "10.1590/scielopreprints.4639",
+      "title": "Tendência temporal e distribuição espacial das sífilis gestacional e congênita no Estado do Espírito Santo entre 2010 a 2019",
+      "journal": "",
+      "year": 2022,
+      "authors": "Francielle Bosi Rodrigues Veloso; Stefanie Lievore Cruz; Arthur Carvalho; Fábio Ribeiro Braga",
+      "abstract": " Objetivo: Avaliar a tendência temporal e a distribuição espacial da sífilis gestacional e congênita no Estado do Espírito Santo de 2010 a 2019. Materiais e métodos: Trata-se de um estudo ecológico de série temporal com dados sobre sífilis gestacional e congênita obtidos do Sistema Nacional de Agravos e Notificações (SINAN) e de nascidos vivos no Sistema de Informação sobre os Nascidos Vivos (SINASC). Foram calculadas taxas de incidência de sífilis gestacional e congênita, que foram agrupadas conforme as macrorregiões de saúde do IBGE e analisadas em biênios. Resultados: Foram notificados 9.763 casos de sífilis gestacional e 3.912 casos de sífilis congênita. As taxas de sífilis gestacional variaram de 1,46 em 2013 a 31,49 casos por 1.000 nascidos vivos em 2018, as taxas de sífilis congênita, por sua vez, variaram de 0,12 em 2010 a 11,51 casos por 1.000 nascidos vivos em 2017. Quanto às macrorregiões, a região Sul apresentou as menores taxas de incidência (2,32 casos/1.000 nascidos vivos para sífilis gestacional e 0,54/1.000 nascidos vivos para sífilis congênita) e a região Metropolitana as maiores (37,08 casos/1.000 nascidos vivos para sífilis gestacional e 13,74/1.000 nascidos vivos para sífilis congênita). Conclusão: O aumento dos casos da doença sugere deficiência na qualidade do pré-natal. ",
+      "url": "https://doi.org/10.1590/scielopreprints.4639"
+    },
+    {
+      "doi": "10.1590/interface.190888",
+      "title": "Reorganizações familiares no contexto do cuidado ao bebê com Síndrome Congênita do Zika Vírus",
+      "journal": "Interface - Comunicação, Saúde, Educação",
+      "year": 2021,
+      "authors": "Creuza da Silva Azevedo; Imara Moreira Freire; Luana Nogueira de Farias Moura",
+      "abstract": " O artigo trata de experiências de familiares no cuidado de crianças com Síndrome Congênita do Zika Vírus (SCZV) e objetiva analisar o impacto do nascimento do bebê com malformação, as reorganizações psíquicas parentais e seus desdobramentos no cuidado, particularmente o materno. Foi adotada abordagem psicossocial, de base psicanalítica, em diálogo com estudos do campo da Saúde Coletiva. São analisadas narrativas de familiares de 32 encontros grupais realizados em ambulatório de um Instituto de Pesquisa no Rio de Janeiro, Brasil, em 2017. O processo de análise pautou-se na psicossociologia e na análise temática. Angústias, incertezas e sobrecarga marcaram a experiência parental. As dificuldades de desenvolvimento do bebê levaram os pais a um modo singular de lidar com seus filhos e à construção de caminhos de esperança e resistência. O protagonismo materno tornou-se a base para lutas nas áreas social, de saúde e educação. ",
+      "url": "https://doi.org/10.1590/interface.190888"
+    },
+    {
+      "doi": "10.1590/s1982-45132012000200007",
+      "title": "Sociedade e natureza: conflito territorial de poluição industrial da bacia do Rio Gramame-Mumbaba - PB",
+      "journal": "Sociedade &amp; Natureza",
+      "year": 2012,
+      "authors": "Edilon Mendes Nunes; Loreley Gomes Garcia",
+      "abstract": " Este é um estudo de Ecologia Política. Trata-se da análise do Conflito Socioambiental de poluição industrial na Bacia do Rio Gramame, na comunidade de Mumbaba de Baixo, iniciado na década de 1960, mas que só muito recentemente passou a ser entendido como tal. Como buscou-se compreender a complexidade do objeto em estudo, traçamos um caminho metodológico de análise do conflito a partir das partes que o compõem. Desta forma, identificamos os atores, suas atuações, articulações, poderes e influência no conflito. Utilizamos uma metodologia socioantroplógica por meio da observação participante, técnica \"bola de neve\", realização de entrevistas semiestruturadas, modelos mentais, análise de percepções e registros fotográficos. Constatamos que os atores não estão articulados e, em sua maioria não desempenham seu papel definido por legislação, o que compromete as perspectivas de resolução, fazendo com que a situação se perpetue. Este trabalho torna-se relevante por trazer à tona vozes que são silenciadas e, por isso, é um trabalho provocativo. ",
+      "url": "https://doi.org/10.1590/s1982-45132012000200007"
+    },
+    {
+      "doi": "10.1590/1984-0462/2023/41/2022023",
+      "title": "Changes in lifestyle behaviors during the COVID-19 pandemic in children and adolescents with congenital heart disease",
+      "journal": "Revista Paulista de Pediatria",
+      "year": 2023,
+      "authors": "Michele Honicky; Silvia Meyer Cardoso; Luiz Rodrigo Augustemak de Lima; Juliana Nicolodi Souza; Francilene Gracieli Kunradi Vieira; Isabela de Carlos Back; Yara Maria Franco Moreno",
+      "abstract": " Abstract  Objective: To describe the changes in lifestyle behaviors during the COVID-19 pandemic in children and adolescents with congenital heart disease and to investigate the association of congenital heart disease complexity with lifestyle behavior changes.  Methods: Cross-sectional study with 127 children and adolescents with congenital heart disease, who underwent cardiac procedure (mean postoperative time: 10.11±3.13 years), conducted between December 2020 and January 2021. Lifestyle behaviors, such as dietary intake, physical activity, sedentary behavior, and sleep, were assessed through telephone interview based on validated questionnaires. Dietary patterns were identified using principal component analysis. Frequency of general and specific combinations of healthy and unhealthy lifestyle behavior changes was evaluated. Multinomial logistic regressions were used to test the association between congenital heart disease complexity and changes in lifestyle behavior.  Results: The main lifestyle behaviors acquired during pandemic were: 83.5% decreased physical activity; 37.0% increased sedentary behavior; 26.0% slept more than usual; and 23.6% adopted a less-healthy dietary pattern. Almost half of the participants (41.8%) had at least one unhealthy change in lifestyle behavior. Complex congenital heart diseases were associated with increased sedentary behavior (OR 3.49, 95%CI 1.23–9.90).  Conclusions: Children and adolescents with congenital heart disease had unhealthy lifestyle behavior during the pandemic, mainly in the form of reduced physical activity and increased sedentary behavior. ",
+      "url": "https://doi.org/10.1590/1984-0462/2023/41/2022023"
+    },
+    {
+      "doi": "10.1590/1984-0462/2024/42/2023134",
+      "title": "Patients' prognosis with congenital heart disease followed by ten years: survival and associated factors",
+      "journal": "Revista Paulista de Pediatria",
+      "year": 2024,
+      "authors": "Daniélle Bernardi Silveira; Rodrigo da Silva Batisti; Liana Vitória Marchezi; Beatriz Felipe da Rocha; Ernani Bohrer da Rosa; Jamile Dutra Correia; Leonardo Leiria de Moura da Silva; Rafael Fabiano Machado Rosa; Paulo Ricardo Gazzola Zen",
+      "abstract": " ABSTRACT  Objective: To evaluate the prognosis and influence of associated factors in patients with congenital heart disease admitted for the first time to the Intensive Care Unit of the Hospital da Criança Santo Antônio/Irmandade da Santa Casa de Misericórdia de Porto Alegre, especially those factors associated with death.  Methods: Patients were prospectively and consecutively allocated over a period of one year (August 2005 to July 2006). Now, 15 years after the initial selection, we collected data from these patients in the database of the Cytogenetics Laboratory of the Universidade Federal de Ciências da Saúde de Porto Alegre and in the medical records of the hospital.  Results: Of the 96 patients, 11 died and 85 were alive until 20 years old. Four patients died in the Intensive Care Unit. The survival probability up to 365 days of life was 95.8%. The survival assessment identified that the deaths occurred mainly before the patients completed one thousand days of life. We found that complex heart disease was independently associated with an odds ratio of 5.19 (95% confidence interval — CI:1.09–24.71; p=0.038) for death.  Conclusions: Knowledge about the factors that interfere with the prognosis can be crucial in care practice planning, especially considering that congenital heart disease is an important cause of mortality in the first year of life. ",
+      "url": "https://doi.org/10.1590/1984-0462/2024/42/2023134"
+    },
+    {
+      "doi": "10.1590/s0104-12902020200064",
+      "title": "Análise de dimensões do acesso à saúde das crianças com Síndrome Congênita de Zika (SCZ) na Região Metropolitana do Rio de Janeiro",
+      "journal": "Saúde e Sociedade",
+      "year": 2020,
+      "authors": "Paulo Peiter; Rafael Pereira; Isadora França",
+      "abstract": " Resumo Desde 2015 a população brasileira vive com as repercussões da epidemia de Zika, levantando o debate sobre as dificuldades de diagnóstico e acesso aos cuidados para crianças com Síndrome Congênita do Zika. As regiões Nordeste e Sudeste foram as mais atingidas, desafiando-nos a caracterizar o acesso à saúde das crianças portadoras da Síndrome Congênita do Zika nessas regiões. O objetivo deste artigo é analisar a disponibilidade e a acessibilidade dos serviços de saúde para a reabilitação das crianças com Síndrome Congênita do Zika na Região Metropolitana do Rio de Janeiro. A metodologia consistiu no mapeamento dos casos de Síndrome Congênita do Zika entre 2015 e 2017 na Região Metropolitana do Rio de Janeiro por bairros de residência e relacionados com a localização das unidades de reabilitação indicadas no Protocolo da Secretaria de Estado de Saúde do Rio de Janeiro. Como resultado foram identificados 202 casos de Síndrome Congênita do Zika na Região Metropolitana do Rio de Janeiro no período de 2015 a 2017. A região teve 85% de todos os casos do estado do Rio de Janeiro, o município do Rio de Janeiro concentrou 63% dos casos. A acessibilidade nesse município é a melhor se comparada com os demais da região metropolitana, dado que é a capital do estado e concentra grande parte dos serviços especializados em saúde materno-infantil. ",
+      "url": "https://doi.org/10.1590/s0104-12902020200064"
+    },
+    {
+      "doi": "10.1590/0102-311x00082415",
+      "title": "Incidência de sífilis congênita e fatores associados à transmissão vertical da sífilis: dados do estudo Nascer no Brasil",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2016,
+      "authors": "Rosa Maria Soares Madeira Domingues; Maria do Carmo Leal",
+      "abstract": " Resumo: O objetivo foi estimar a incidência de sífilis congênita ao nascimento e verificar os fatores associados à transmissão vertical da sífilis. Estudo nacional, de base hospitalar, realizado em 2011-2012 com 23.894 puérperas, por meio de entrevista hospitalar, dados de prontuário e cartão de pré-natal. Realizada regressão logística univariada para verificar os fatores associados à sífilis congênita. Estimada incidência de sífilis congênita de 3,51 por mil nascidos vivos (IC95% 2,29-5,37) e taxa de transmissão vertical de 34,3% (IC95%: 24,7-45,4). Casos de sífilis congênita estiveram associados à menor escolaridade materna, cor da pele preta e maior proporção de fatores de risco para prematuridade, bem como ao início mais tardio do pré-natal, menor número de consultas e menor realização de exames sorológicos. A mortalidade fetal foi seis vezes superior nos casos de sífilis congênita, e recém-natos com sífilis congênita apresentaram maior frequência de internação. A sífilis congênita persiste como problema de saúde pública, estando associada à maior vulnerabilidade social e falhas na assistência pré-natal. ",
+      "url": "https://doi.org/10.1590/0102-311x00082415"
+    },
+    {
+      "doi": "10.1016/j.rpped.2015.06.009",
+      "title": "Material particulado fino estimado por modelo matemático e internações por pneumonia e asma em crianças",
+      "journal": "Revista Paulista de Pediatria",
+      "year": 2016,
+      "authors": "Ana Cristina Gobbo César; Luiz Fernando Costa Nascimento; Katia Cristina Cota Mantovani; Luciana Cristina Pompeo Vieira",
+      "abstract": "",
+      "url": "https://doi.org/10.1016/j.rpped.2015.06.009"
+    },
+    {
+      "doi": "10.1590/1982-3703003193951",
+      "title": "Ser Mãe de Criança com Microcefalia: Do Ideal ao Real na Síndrome Congênita do Zika Vírus (SCZV)",
+      "journal": "Psicologia: Ciência e Profissão",
+      "year": 2021,
+      "authors": "Jany Helem de Almeida Santos; Aponira Maria de Farias",
+      "abstract": " Resumo A microcefalia é uma condição neurológica que afeta o tamanho do perímetro cefálico. Nesta pesquisa qualitativa e descritiva, buscou-se avaliar como a mãe lida com o bebê real, identificando processos de reconstrução das idealizações maternas. Os instrumentos utilizados foram questionário sociodemográfico e entrevista semiestruturada gravada. A coleta foi realizada em três municípios do interior da Paraíba, nos domicílios de seis mães de microcéfalos com até um ano de idade. Os dados coletados no conteúdo emergente na fala das entrevistadas passaram pela análise temático categorial com suporte teórico psicanalítico. Foram identificadas nove categorias: a) reações ao diagnóstico; b) luto do bebê idealizado; c) elaboração do luto e mecanismos de enfrentamento; d) formas de lidar com o bebê e maternagem; e) dinâmica familiar após a descoberta da microcefalia; f) preconceito; g) atendimento focado em aspectos biológicos e físicos; h) acompanhamento psicológico e acolhimento; i) e suporte social. A mãe é abalada nos aspectos psicológicos e sociais. Os resultados mostram que a espiritualidade, o apoio familiar e de outras mães que vivenciam a mesma situação são formas de enfrentamento. O suporte social mais significativo é exercido pelas mães de outras crianças com microcefalia, com as quais as entrevistadas passaram a conviver em meio ao tratamento interdisciplinar dos filhos. O profissional de psicologia tem um papel fundamental na família que enfrenta a microcefalia, fortalecendo a maternagem, potencializando as forças da mãe para lidar com a desilusão e auxiliando-a na reorganização e adaptação a esse bebê com deficiências múltiplas, o que proporciona a reconstrução de suas idealizações. ",
+      "url": "https://doi.org/10.1590/1982-3703003193951"
+    },
+    {
+      "doi": "10.1590/scielopreprints.7076",
+      "title": "POLUIÇÃO SONORA EM CRIANÇAS E ADOLESCENTES COM TRANSTORNO DO ESPECTRO AUTISTA",
+      "journal": "",
+      "year": 2023,
+      "authors": "Joseane Soares; Ana Cristina de Albuquerque Montenegro; Wanderson dos Santos Souza; Francyelle de Lima Medina; Osíris Luís da Cunha Fernandes; Glauber Pereira de Carvalho Santos",
+      "abstract": " A Organização Mundial da Saúde (OMS) determina que o limite tolerável de som para o ser humano é 65 decibéis. Acima disso, é considerado poluição sonora. Os ruídos urbanos são poluentes invisíveis, afetam a saúde dos homens e animais, podendo causar comprometimentos psicológicos e materiais que alteram o metabolismo do corpo. Em indivíduos com Transtorno do Espectro Autista (TEA), os ruídos podem causar reações adversas e intempestivas. Este trabalho tem como objetivo verificar a influência da poluição sonora em crianças e adolescentes diagnosticadas com TEA, na faixa etária de 0 a 19 anos, residentes na Região Metropolitana do Recife (RMR), Pernambuco, Brasil, através de relatos de familiares. A análise dos dados foi descritiva com variáveis qualitativas e quantitativas, fundamentada no levantamento bibliográfico. Foi aplicado questionário contendo 33 questões com 149 responsáveis por crianças e adolescentes com TEA. O resultado demonstrou que 67,7% delas residiam em bairros barulhentos; 66,4 % possuíam sensibilidade a ruídos urbanos e 47,6% sobreviviam com apenas 1 salário-mínimo. Apenas 36% dos familiares realizaram denúncias de poluição sonora. Os principais ruídos apontados foram respectivamente os eletrodomésticos, fogos de artifícios e construção civil.   ",
+      "url": "https://doi.org/10.1590/scielopreprints.7076"
+    },
+    {
+      "doi": "10.1590/s1415-790x2010000200015",
+      "title": "Material particulado (PM2.5) de queima de biomassa e doenças respiratórias no sul da Amazônia brasileira",
+      "journal": "Revista Brasileira de Epidemiologia",
+      "year": 2010,
+      "authors": "Ageo Mário Cândido da Silva; Inês E. Mattos; Saulo R. Freitas; Karla M. Longo; Sandra S. Hacon",
+      "abstract": " OBJETIVOS: Analisar espacialmente o efeito da exposição ao material particulado (PM2.5) na ocorrência de doenças do aparelho respiratório de crianças de um a quatro anos e de idosos com sessenta e cinco anos ou mais nos municípios do Estado de Mato Grosso em 2004. MÉTODOS: Trata-se de um estudo ecológico em duas etapas. A primeira foi uma investigação da autocorrelação espacial global da prevalência de internações por doenças respiratórias e do percentual de horas críticas de concentração do material particulado nos municípios do estado de Mato Grosso, empregando-se o método bayesiano empírico para minimização das flutuações aleatórias dos indicadores e a estatística Moran \"global\". A segunda, uma regressão múltipla espacial, teve como variáveis resposta a prevalência de internações por doenças respiratórias, e como variável de exposição o percentual de horas críticas anuais. Para ajuste, foram utilizadas variáveis proxies de poluição do ar, variáveis de atenção à saúde e de condições de vida da população. RESULTADOS: Não foram observados padrões espaciais globais de prevalência de doenças respiratórias em grupos sensíveis nos municípios, mas evidenciou-se elevada dependência espacial do percentual de horas críticas anuais de concentração do material particulado. Na regressão múltipla, foram observadas associações estatisticamente significativas entre a prevalência de internações por doenças respiratórias e o percentual de horas críticas anuais de material particulado. CONCLUSÕES: As emissões de material particulado originadas de queimadas na Amazônia Legal estão relacionadas à prevalência de internações por doenças respiratórias em grupos populacionais sensíveis nos municípios do Estado de Mato Grosso. ",
+      "url": "https://doi.org/10.1590/s1415-790x2010000200015"
+    },
+    {
+      "doi": "10.1590/s1413-81232013001100015",
+      "title": "Estudos de séries temporais de poluição atmosférica por queimadas e saúde humana",
+      "journal": "Ciência &amp; Saúde Coletiva",
+      "year": 2013,
+      "authors": "Cleber Nascimento do Carmo; Sandra de Souza Hacon",
+      "abstract": " Queimadas e incêndios florestais de grandes proporções têm sido observados em diversas regiões do planeta. A exposição a altos níveis de poluentes atmosféricos emitidos por queimadas podem causar uma variedade de danos à saúde humana. Neste artigo, sumarizamos a literatura existente sobre estimação de efeitos agudos da poluição atmosférica por queimadas na saúde humana nas regiões em que estas estão concentradas em maior número no planeta, utilizando-se abordagem de séries temporais. Também se buscou identificar lacunas de conhecimento. O estudo consistiu de uma revisão narrativa, em que as características dos estudos selecionados foram agrupadas pelas regiões do planeta em que há maior incidência de queimadas: Amazônia, Estados Unidos, Austrália e Ásia. Os resultados apontaram concentração de estudos na Austrália, poucos estudos realizados na Amazônia e grande heterogeneidade nos resultados sobre efeitos significativos na saúde humana. ",
+      "url": "https://doi.org/10.1590/s1413-81232013001100015"
+    },
+    {
+      "doi": "10.1590/1809-2950/00000024012017",
+      "title": "A síndrome congênita do vírus Zika: importância da abordagem multiprofissional",
+      "journal": "Fisioterapia e Pesquisa",
+      "year": 2017,
+      "authors": "Renata Hydee Hasue; Carolina Y. P. Aizawa; Fernanda F Genovesi",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/1809-2950/00000024012017"
+    },
+    {
+      "doi": "10.1590/0102-311x00105517",
+      "title": "Diferenciais intraurbanos da sífilis congênita: análise preditiva por bairros do Município do Rio de Janeiro, Brasil",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2018,
+      "authors": "Gilson Jácome dos Reis; Christovam Barcellos; Marcel de Moraes Pedroso; Diego Ricardo Xavier",
+      "abstract": " O objetivo deste estudo foi caracterizar os casos notificados de sífilis congênita no período de 2011 a 2014, no Município do Rio de Janeiro, e analisar possíveis associações entre a morbidade por sífilis congênita e as condições de vida das populações residentes nos bairros da cidade. Os casos de sífilis congênita foram caracterizados de acordo com variáveis biológicas, socioeconômicas e de utilização de serviços de saúde. No nível agregado, utilizou-se a árvore de regressão como técnica de análise de dados, tendo a taxa de incidência média (2011-2014) de sífilis congênita como variável dependente, e indicadores relativos à qualidade habitacional, educação, renda, gravidez na adolescência, densidade de pobres, acesso à assistência pré-natal e cor da pele como variáveis independentes. Houve mapeamento da variável dependente para a identificação de padrões espaciais. Utilizaram-se dados do SINAN, SINASC e IBGE. Foram notificados 6.274 casos de sífilis congênita, o que representa uma taxa de incidência de 17,3 casos/mil nascidos vivos. Os casos se distribuem preponderantemente na zona central, norte suburbana e oeste da cidade, com elevada proporção de casos com baixa escolaridade e de cor da pele negra. Observou-se alta proporção de gestantes que tiveram diagnóstico tardio de sífilis e tratamento inadequado. No nível agregado, a variável mais relevante para a explicação dos problemas foi a baixa proporção de gestantes que frequentaram, no mínimo, sete consultas de assistência pré-natal. A análise permitiu a identificação de segmentos de populações marginalizadas, podendo direcionar de maneira efetiva a distribuição de recursos de saúde pública. ",
+      "url": "https://doi.org/10.1590/0102-311x00105517"
+    },
+    {
+      "doi": "10.1590/s0102-261x2010000300008",
+      "title": "Hidrodinâmica e transporte de material particulado em suspensão sazonal em um estuário dominado por maré: Estuário de Caravelas (BA)",
+      "journal": "Revista Brasileira de Geofísica",
+      "year": 2010,
+      "authors": "Marçal D. Pereira; Eduardo Siegle; Luiz B. de Miranda; Carlos A.F. Schettini",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0102-261x2010000300008"
+    },
+    {
+      "doi": "10.1590/2317-6431-2020-2293",
+      "title": "Resultados audiológicos em um grupo de crianças com microcefalia pela síndrome congênita do Zika virus",
+      "journal": "Audiology - Communication Research",
+      "year": 2020,
+      "authors": "Bárbara Cristina da Silva Rosa; Doris Ruthy Lewis",
+      "abstract": " RESUMO  Objetivo investigar a audição de crianças com microcefalia pela síndrome congênita do Zika vírus.  Métodos a amostra foi composta de 11 crianças com microcefalia causada pela síndrome congênita do Zika vírus. A coleta teve início no primeiro semestre de 2017, sendo finalizada no primeiro semestre de 2018. Procedimentos realizados: avaliação otorrinolaringológica e audiológica: observação do comportamento auditivo e audiometria de reforço visual; imitanciometria, emissões otoacústicas evocadas por estímulo transiente, potencial evocado auditivo de tronco encefálico por via áerea e potencial evocado auditivo por estado estável com estímulo narrow band CE-chirp. As respostas comportamentais foram comparadas com as respostas do potencial evocado auditivo de estado estável.  Resultados apresentaram respostas dentro do esperado para idade, na avaliação comportamental 11 crianças, com 20 dB bilateralmente para tons calibrados em campo, nas frequências de 500 Hz, 1 kHz, 2 kHz e 4 kHz, sendo que 2 delas conseguiram realizar a audiometria em campo com fone de inserção bilateralmente. Em relação às emissões otoacústicas, todas tiveram respostas presentes em ambas as orelhas, 10 crianças apresentaram timpanometria tipo A e uma (1) do tipo Ar. Quanto ao potencial evocado auditivo, as 8 crianças avaliadas apresentaram resultados dentro da normalidade, com nível mínimo de respostas em 20 dBNAn bilateralmente. No potencial evocado auditivo de estado estável, 6 crianças avaliadas apresentaram nível mínimo derespostas em 500 Hz, 1 kHz, 2 kHz e 4kHz, em 20 dBNAn, bilateralmente.  Conclusão as crianças avaliadas não apresentaram perda auditiva neurossensorial. ",
+      "url": "https://doi.org/10.1590/2317-6431-2020-2293"
+    },
+    {
+      "doi": "10.1590/2175-3369.011.001.e20180145",
+      "title": "Forma urbana e poluição atmosférica: impactos na cidade do Rio de Janeiro",
+      "journal": "urbe. Revista Brasileira de Gestão Urbana",
+      "year": 2019,
+      "authors": "Juliana Lúcio Motta Maia; Vinicius M. Netto; Bruno Lucian Gonçalves da Costa",
+      "abstract": " Resumo Cidades crescem em importância como polos de concentração de população, assim como em seu papel potencial como fontes de poluição atmosférica. Este artigo investiga possíveis impactos de aspectos da forma urbana nas concentrações desses contaminantes. Dado que esse é um tema ainda incipiente em estudos urbanos no Brasil, a pesquisa traz uma abordagem panorâmica do problema. O artigo discute o estado da arte sobre interações entre poluição, elementos naturais e condições climáticas. Expõe uma série de impactos da poluição do ar para a população e o meio ambiente e as interações entre a qualidade do ar e forma urbana apontando a carência de pesquisas na área. Em seguida, desenvolve uma forma de modelagem e avaliação dessas relações, e apresenta um estudo de caso na cidade do Rio de Janeiro envolvendo métodos estatísticos aplicados aos poluentes monóxido de carbono (CO), dióxido de enxofre (SO2) e partículas inaláveis (PI); a variáveis morfológicas (taxa de ocupação e percentagem de verticalização de quadras); e meteorológicas (direção e velocidade do vento, precipitação pluvial e temperatura do ar). A pesquisa encontra indícios de relações entre forma urbana e poluentes atmosféricos, apontando graus de influência da taxa de ocupação e da verticalização na concentração dos poluentes considerados, e sugere novas frentes de abordagem empírica e metodológica. ",
+      "url": "https://doi.org/10.1590/2175-3369.011.001.e20180145"
+    },
+    {
+      "doi": "10.1590/s0066-782x2011005000112",
+      "title": "Comparação do desfecho entre a cardiopatia chagásica e a miocardiopatia dilatada idiopática",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "year": 2011,
+      "authors": "Amanda Pires Barbosa; Augusto Cardinalli Neto; Ana Paula Otaviano; Bianca Faria Rocha; Reinaldo Bulgarelli Bestetti",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0066-782x2011005000112"
+    },
+    {
+      "doi": "10.1590/1413-81232018238.25422016",
+      "title": "Tendência temporal e distribuição espacial da sífilis congênita no estado do Rio Grande do Sul entre 2001 e 2012",
+      "journal": "Ciência &amp; Saúde Coletiva",
+      "year": 2018,
+      "authors": "Lisiane Ortiz Teixeira; Vanusa Belarmino; Carla Vitola Gonçalves; Raúl Andrés Mendoza-Sassi",
+      "abstract": " Resumo Objetivou-se avaliar a tendência temporal e a distribuição espacial da Sífilis Congênita (SC) no estado do Rio Grande do Sul. Todos os casos notificados pelo Sistema Nacional de Agravos de Notificação entre 2001 e 2012 foram incluídos. Os números de nascidos vivos foram obtidos do SINASC/DATASUS. As taxas de incidência de SC foram agrupados conforme as microrregiões do IBGE e analisados para todo o período e em triênios. A correlação espacial foi analisada pelo índice de Moran global (I) e local. Foram notificados 3.613 casos. Entre 2007 e 2012 morreram 89 neonatos (3,6%). As taxas de SC variaram de 1,03 em 2001 a 5,1 casos por 1.000 nascidos vivos em 2012, com um incremento anual de 0,84 casos por 1.000 nascidos vivos (p &lt; 0,01) e 93,88% da variação explicada. As microrregiões foram espacialmente independentes (I = 0,06; p = 0,25), tendo Porto Alegre a maior incidência (4,19 casos/1.000 nascidos vivos) e Jaguarão a menor (0,23 casos/1.000 nascidos vivos). Observaram-se microrregiões com dependência espacial local significativa. O aumento dos casos de SC salienta um déficit na qualidade do pré-natal. A identificação das microrregiões com maior incidência é essencial para focalizar as políticas públicas sobre esse tema. ",
+      "url": "https://doi.org/10.1590/1413-81232018238.25422016"
+    },
+    {
+      "doi": "10.1590/0101-31572023-3422",
+      "title": "The dilemma of growth: pollution and health impacts in the BRICS countries (Brazil, Russia, India, China, South Africa)",
+      "journal": "Brazilian Journal of Political Economy",
+      "year": 2023,
+      "authors": "Amir Elalouf",
+      "abstract": " ABSTRACT One of our era’s greatest menaces is pollution, particularly air pollution, on account of its negative impact on climate change which has greatly influenced morbidity, mortality, and has a devastating effect on health. Pollution and its impact on health is a major substratum of economic growth because it tends to have a crippling effect on the economy of countries that have overindulged in pollution-causing activities. Pollution-prone countries are countries that are known to dominate the manufacture and supply of goods, services, and raw materials and countries whose growth models are based on the availability of natural resources and their products. A perfect example of these types of countries is the group called the BRICS (Brazil, Russia, India, China, and South Africa). In this study, the mixed-method methodology was utilized in acquiring and analyzing secondary data on the economic growth and pollution in the BRICS countries, and case studies on the impact of pollution in certain parts of these countries were explored. The result of all the investigations showed that the creation of the NDB helped to preclude the “state of dependency” described by Andre Gunder Frank. We discovered that the high growth rate of the BRICS countries has had a negative impact on environmental quality over the years, industrialization and urbanization being the major factors influencing the growth rate. ",
+      "url": "https://doi.org/10.1590/0101-31572023-3422"
+    },
+    {
+      "doi": "10.1590/0102-311xen131422",
+      "title": "Air pollution from forest burning as environmental risk for millions of inhabitants of the Brazilian Amazon: an exposure indicator for human health",
+      "journal": "Cadernos de Saúde Pública",
+      "year": 2023,
+      "authors": "Igor Neves de Oliveira; Beatriz Fátima Alves de Oliveira; Ismael Henrique da Silveira; Lúbia Maieles Gomes Machado; Juliana Wotzasek Rulli Villardi; Eliane Ignotti",
+      "abstract": " Abstract: In this study, we propose an indicator of air pollution exposure to identify potential hazardous areas for human health in the Amazon and Central-West Regions of Brazil from 2010 to 2019. This indicator aggregates both concentrations and time of exposure to fine particulate matter (PM2.5), according to the current limit recommended by the World Health Organization (WHO). We used daily PM2.5 averages obtained from the Brazilian Health Integrated Environmental Information System (SISAM) to calculate the percentages of days with PM2.5 concentrations exceeding the limit of 15µg/m³ per year and per month. From 2010 to 2019, the months from August to October presented the largest areas and the highest percentages of days with unacceptable pollution concentration values, harmful to human health. These areas were concentrated in the Arc of Deforestation. Therefore, 60% of the residents of the Amazon and Central-West regions were subjected to inadequate air quality for approximately six months per year. The proposed indicator is reproducible and appropriate to monitor areas of exposure and risk for human health. ",
+      "url": "https://doi.org/10.1590/0102-311xen131422"
+    },
+    {
+      "doi": "10.1590/2177-9465-ean-2019-0268",
+      "title": "A rosácea do cuidado às crianças com síndrome congênita por zika: atitudes cuidativas dos familiares",
+      "journal": "Escola Anna Nery",
+      "year": 2020,
+      "authors": "Paulo Roberto Lima Falcão do Vale; Deisyane Vitória Alves; Rita da Cruz Amorim; Evanilda Souza de Santana Carvalho",
+      "abstract": " RESUMO  Objetivo Compreender a modelagem do cuidado familiar à criança com Síndrome Congênita por Zika a partir das contribuições teóricas da Rosácea do Cuidado na situação crônica.  Métodos O estudo foi realizado entre outubro e novembro de 2017 com 11 familiares, explorando entrevistas em profundidade e o desenho estória-tema para a produção de dados.  Resultados A Rosácea do Cuidado pode ser disparada a partir do cuidado próprio ou do cuidado familiar, desempenhando atitudes cuidativas construídas por experiências familiares anteriores e interações com o cuidado apreendido nos serviços de saúde. A modelagem do cuidado é sustentada pelo núcleo familiar constituído por mãe, pai e avó, organizando-a em quatro dimensões: Cuidar integralmente, “Tomar conta”, Estimular e, Acessar recursos e serviços. A mãe reconhece as necessidades da criança, julga as habilidades dos familiares e define o responsável pelo cuidado.  Conclusão e implicações para a prática A modelagem do cuidado é personalíssimo devido o cenário de epidemia e de pouco conhecimento científico à época, resultando em inovações das atitudes cuidativas. Cabe às(aos) enfermeiras(os) apoiar os familiares para reconhecimento das necessidades de saúde que emergem da criança, bem como potencializar a divisão de tarefas de cuidado, estimulando, principalmente, a adequação da carga horária de trabalho dos pais. ",
+      "url": "https://doi.org/10.1590/2177-9465-ean-2019-0268"
+    },
+    {
+      "doi": "10.1590/s0066-782x2010001200022",
+      "title": "Caso 4: Mulher de 77 Anos com insuficiência cardíaca, função sistólica normal do ventrículo esquerdo e sinais de cardiopatia restritiva",
+      "journal": "Arquivos Brasileiros de Cardiologia",
+      "year": 2010,
+      "authors": "Mônica Samuel Ávila; André Cogo Dalmaschio; Luiz Alberto Benvenuti",
+      "abstract": "",
+      "url": "https://doi.org/10.1590/s0066-782x2010001200022"
+    },
+    {
+      "doi": "10.1590/1809-2950/18001626022019",
+      "title": "Análise do desempenho funcional de lactentes com síndrome congênita do zika: estudo longitudinal",
+      "journal": "Fisioterapia e Pesquisa",
+      "year": 2019,
+      "authors": "Danielly Laís Pereira Lima; Maria Lucia Galvão Carvalho Dias Correia; Milena Guimarães Monteiro; Karla Mônica Ferraz; Carine Carolina Wiesiolek",
+      "abstract": " RESUMO O objetivo do estudo foi avaliar longitudinalmente o desempenho funcional de lactentes acometidos pela síndrome congênita do zika (SCZ). Realizou-se um estudo com lactentes provenientes do Laboratório de Estudos em Pediatria da Universidade Federal de Pernambuco e da Aliança de Mães e Famílias Raras, com idade entre 6 e 24 meses, de ambos os sexos. O Inventário de Avaliação Pediátrica de Incapacidade (PEDI) foi aplicado para análise do desempenho funcional em duas avaliações, com no mínimo seis meses de intervalo. A análise dos dados foi realizada pelo teste de Wilcoxon. Na amostra de 16 lactentes, observou-se que entre as avaliações houve mudança na classificação de normal para atraso nos domínios de autocuidado e função social, com diminuição significativa dos escores normativos (p=0,001 e p&lt;0,001, respectivamente); na mobilidade, os lactentes inicialmente classificados com atraso também apresentaram redução dos escores normativos (p=0,001), mantendo-se na classificação. Apesar do aumento significativo nos escores brutos do autocuidado (p=0,024) e mobilidade (p=0,001), os lactentes continuaram classificados em atraso. Na assistência do cuidador, 100% dos lactentes se encontraram em atraso nos três domínios do PEDI, recebendo assistência máxima ou total. As principais modificações ambientais encontradas foram as centradas na criança. Em suma, os lactentes com SCZ deste estudo apresentaram atrasos significativos no desempenho funcional, com uma evolução lenta no intervalo de tempo avaliado. ",
+      "url": "https://doi.org/10.1590/1809-2950/18001626022019"
+    },
+    {
+      "doi": "10.5380/ce.v24i0.59316",
+      "title": "SÍFILIS CONGÊNITA: REALIZAÇÃO DO PRÉ-NATAL E TRATAMENTO DA GESTANTE E DE SEU PARCEIRO",
+      "journal": "Cogitare Enfermagem",
+      "year": 2019,
+      "authors": "Jéssica Strube Holztrattner; Graciele Fernanda da Costa Linch; Adriana Aparecida Paz; Helga Geremias Gouveia; Débora Fernandes Coelho",
+      "abstract": " Objetivo: analisar a ocorrência e a associação da sífilis congênita com a realização do pré-natal e tratamento da gestante e do parceiro.Método: estudo retrospectivo do período de 2006 a 2015, observando dados do Brasil, Rio Grande do Sul e Porto Alegre, com base em indicadores do Ministério da Saúde.Resultados: a taxa de sífilis congênita em menores de um ano de idade aumentou de 2 para 6,5 no Brasil, de 1,5 para 11,5 no Rio Grande do Sul e de 4,4 para 30,2 em Porto Alegre. Em torno de 74% de mulheres realizaram o pré-natal nas três esferas. Das gestantes 80% não realizaram o tratamento ou o fizeram de maneira inadequada. O percentual de tratamento do parceiro não ultrapassou 20,5%. Conclusão: esse estudo observou o aumento da ocorrência da sífilis congênita. Ainda, a realização do pré-natal não assegurou tratamento adequado das gestantes e de seus parceiros. ",
+      "url": "https://doi.org/10.5380/ce.v24i0.59316"
+    },
+    {
+      "doi": "10.5123/s1679-49742011000200009",
+      "title": "Perfil epidemiológico da sífilis congênita no Município do Natal, Rio Grande do Norte - 2004 a 2007",
+      "journal": "Epidemiologia e Serviços de Saúde",
+      "year": 2011,
+      "authors": "Maria Tereza Costa Gomes de Holanda; Márcia Araújo Barreto; Katia Maria de Melo Machado; Rute Cândida Pereira",
+      "abstract": "",
+      "url": "https://doi.org/10.5123/s1679-49742011000200009"
+    },
+    {
+      "doi": "10.1590/s1678-86212011000300007",
+      "title": "Poluição difusa urbana por compostos inorgânicos: avaliação da contribuição dos componentes do amianto presente nas telhas de fibrocimento e nos freios de veículos",
+      "journal": "Ambiente Construído",
+      "year": 2011,
+      "authors": "Ellen Mayara Sottoriva; Carlos Mello Garcias",
+      "abstract": " A poluição difusa é caracterizada por impurezas de origem natural ou antrópica. Pela chuva as partículas são carreadas para os corpos hídricos. A quantificação e a caracterização dessa fonte poluidora são dificultadas pela dispersão das partículas nas águas. O amianto é um conjunto de minerais compostos basicamente de silicato de magnésio hidratado, está presente em diversos produtos brasileiros e é considerado altamente cancerígeno em qualquer de suas formas. O presente trabalho consistiu na avaliação da contribuição do mineral nas telhas de fibrocimento e nos freios dos veículos mais antigos na poluição difusa. O estudo foi realizado na Bacia do Rio Belém, onde foram determinados oito pontos amostrais, sendo quatro pontos para a análise do fluxo de veículos e quatro para as coberturas com telhados. Nos resultados não foi possível identificar a concentração das partículas nas águas do rio, sendo sugerido que os procedimentos utilizados não sejam os únicos, mas sim complementados com análises mais específicas. ",
+      "url": "https://doi.org/10.1590/s1678-86212011000300007"
+    },
+    {
+      "doi": "10.1590/s1413-41522019174045",
+      "title": "Avaliação da influência das condições meteorológicas na concentração de material particulado fino (MP2,5) em Belo Horizonte, MG",
+      "journal": "Engenharia Sanitaria e Ambiental",
+      "year": 2019,
+      "authors": "Fábio Soares dos Santos; Janaina Antonino Pinto; Felipe Marinho Maciel; Frederico Silva Horta; Taciana Toledo de Almeida Albuquerque; Maria de Fátima Andrade",
+      "abstract": " RESUMO O agravamento da poluição atmosférica nos centros urbanos devido ao crescimento das instalações industriais e da frota veicular é um problema que causa danos ambientais, afetando também a saúde humana, principalmente pela inalação de material particulado fino (MP2,5). O objetivo deste estudo foi avaliar a influência das condições meteorológicas na concentração de MP2,5 em Belo Horizonte, utilizando dados amostrados entre o inverno de 2007 e o outono de 2008. Além disso, foram avaliadas as diferenças dos dados meteorológicos e da concentração do MP2,5 entre as estações do ano nesse período. Para tanto, foram realizados testes estatísticos de correlação entre os dados meteorológicos e a concentração de MP2,5, além de análises de significância para avaliação das diferenças entre esses dois parâmetros nos períodos seco e chuvoso, característicos da área de estudo. Foi observada diferença significativa entre a concentração do MP2,5 nos períodos seco e chuvoso. Foram também observadas diferenças significativas entre os parâmetros meteorológicos (umidade relativa; temperatura mínima, média e máxima; e direção do vento) para esses períodos. Por meio da análise de correlação de Spearman, observou-se correlação significativa entre a concentração do MP2,5 e os parâmetros meteorológicos precipitação e umidade relativa do ar. ",
+      "url": "https://doi.org/10.1590/s1413-41522019174045"
+    },
+    {
+      "doi": "10.5123/s1679-49742020000100018",
+      "title": "Análise espacial da sífilis em gestantes e sífilis congênita no estado do Espírito Santo, 2011-2018*",
+      "journal": "Epidemiologia e Serviços de Saúde",
+      "year": 2020,
+      "authors": "Karllian Kerlen Simonelli Soares; Thiago Nascimento do Prado; Eliana Zandonade; Sandra Fagundes Moreira-Silva; Angélica Espinosa Miranda",
+      "abstract": "",
+      "url": "https://doi.org/10.5123/s1679-49742020000100018"
+    },
+    {
+      "doi": "10.1590/0034-7167-2024-0454",
+      "title": "Effectiveness of particulate matter filtration: systematic review and meta-analysis",
+      "journal": "Revista Brasileira de Enfermagem",
+      "year": 2026,
+      "authors": "Francieli Faustino; Helenize Ferreira Lima Leachi; Aline Franco da Rocha; Ana Paula Silva; Rosângela Marion da Silva; Renata Perfeito Ribeiro",
+      "abstract": " ABSTRACT  Objectives: to assess the effectiveness of filters in filtering particulate matter.  Methods: a systematic literature review was conducted with the research question: which filters efficiently adsorb chemical and/or biological particles present in the air when tested in scientific interventions? The databases used were Medical Literature Analysis and Retrieval System Online, Web of Science, Scopus, Latin American and Caribbean Literature in Health Sciences, American Chemical Society, Royal Society Chemistry, Sci Finder, and Scientific Electronic Library Online.  Results: forty-seven studies were included in this review. The High Efficiency Particulate Arrestance filter was tested in 36 studies. The seven studies used for the meta-analysis were homogeneous.  Conclusions: filtration performed using the High Efficiency Particulate Arrestance filter reduced particulate matter concentrations by 70% to 80% in the assessments and interventions presented, contributing to the evidence that this filter reduces particulate matter concentrations. ",
+      "url": "https://doi.org/10.1590/0034-7167-2024-0454"
+    }
+  ]
+}

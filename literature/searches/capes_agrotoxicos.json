@@ -1,0 +1,23 @@
+{
+  "database": "CAPES Catálogo de Teses e Dissertações",
+  "query": "agrotóxicos cardiopatia",
+  "retrieved_at": "2026-10-31T15:58:58Z",
+  "total": 1,
+  "n_items": 1,
+  "items": [
+    {
+      "id": "7850222",
+      "instituicao": "UNIVERSIDADE DE CUIABÁ",
+      "nomePrograma": "AMBIENTE E SAÚDE",
+      "municipioPrograma": "Cuiabá",
+      "titulo": "EXPOSIÇÃO MATERNA AOS AGROTÓXICOS E A OCORRÊNCIA DE MALFORMAÇÕES CONGÊNITAS: UMA REVISÃO SISTEMÁTICA",
+      "autor": "VANESSA GAMA FREITAS DE MATOS",
+      "dataDefesa": "2019-03-29T00:00:00.000Z",
+      "volumes": "undefined",
+      "paginas": "undefined",
+      "biblioteca": "",
+      "grauAcademico": "Mestrado",
+      "link": "https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/trabalhoConclusao/viewTrabalhoConclusao.jsf?popup=true&id_trabalho=7850222"
+    }
+  ]
+}

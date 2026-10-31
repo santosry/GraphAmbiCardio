@@ -1,10 +1,13 @@
 node_id,label,type,subtype,identifiers,description,source
 EXP:PM25,Fine particulate matter (PM2.5),Exposure,air_pollutant,,Sugarcane burning and biomass smoke are relevant sources in the Norte Fluminense region; no local PM2.5 monitoring series is available (documented gap).,study_ontology
+EXP:PM10,Coarse particulate matter (PM10),Exposure,air_pollutant,,Same sources as PM2.5; no local monitoring.,study_ontology
+EXP:CO,Carbon monoxide (CO),Exposure,air_pollutant,,Vehicular and biomass-combustion marker; no local monitoring.,study_ontology
 EXP:NO2,Nitrogen dioxide (NO2) / traffic-related air pollution,Exposure,air_pollutant,,Vehicular and industrial emissions; no local monitoring series.,study_ontology
 EXP:O3,Ozone (O3),Exposure,air_pollutant,,Photochemical pollution; no local monitoring series.,study_ontology
 EXP:SO2,Sulfur dioxide (SO2),Exposure,air_pollutant,,Industrial emissions; no local monitoring series.,study_ontology
 EXP:HEAT,Maternal heat exposure / hyperthermia,Exposure,climate,,Daily temperature series available from ERA5-Land reanalysis for the municipality.,study_ontology
 EXP:COLD,Cold exposure,Exposure,climate,,Daily temperature series available from ERA5-Land reanalysis.,study_ontology
+EXP:HUMIDITY,Relative humidity (contextual variable),Exposure,climate_context,,"Available daily from ERA5-Land. Treated as contextual/confounding variable, not as a presumed causal exposure.",study_ontology
 EXP:PEST,Pesticides,Exposure,chemical,,Intensive sugarcane and other agricultural activity in the region.,study_ontology
 EXP:SOLV,"Organic solvents (e.g., trichloroethylene, benzene)",Exposure,chemical,,Industrial and petrochemical activity in the region.,study_ontology
 EXP:METALS,"Heavy metals (arsenic, lead, mercury)",Exposure,chemical,,Occupational and environmental sources; no local biomonitoring.,study_ontology

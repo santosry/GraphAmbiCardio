@@ -8,8 +8,8 @@ Generated: 2026-10-31. Machine-readable: `reports/validation_results.json`; huma
 
 | Level | Check | Result |
 |---|---|---|
-| Bibliographic | 46 curated edges have a PMID and a verbatim quote; 100% verified at build time; 25% (11 edges) re-checked at validation | **Passed** |
-| Bibliographic | 29 anchor PMIDs resolvable via NCBI E-utilities | **Passed** (29/29) |
+| Bibliographic | 54 curated edges have a PMID and a verbatim quote; 100% verified at build time; 25% (13 edges) re-checked at validation | **Passed** |
+| Bibliographic | 33 anchor PMIDs resolvable via NCBI E-utilities | **Passed** (33/33) |
 | Biological | Manual reading of every curated edge for developmental/molecular coherence; layers and caveats recorded | **Passed with documented caveats** |
 | Data | Municipality, period, missingness, duplicates, range checks for SINASC, SIH and climate | **Passed** |
 | Computational | Unique node IDs, unique evidence IDs, edge endpoints exist, no self-loops, valid relation vocabulary, confidence ∈ [0,1], grade ∈ {A–E} | **Passed** |
@@ -21,7 +21,7 @@ Generated: 2026-10-31. Machine-readable: `reports/validation_results.json`; huma
 ## 2. Automated checks
 
 ```
-nodes: 2,234 | relations: 4,100 | evidence rows: 4,596
+nodes: 2,237 | relations: 4,115 | evidence rows: 4,611
 duplicate node IDs: 0
 duplicate evidence IDs: 0
 missing edge endpoints: 0
@@ -72,11 +72,11 @@ Specific corrections made during validation:
 
 | Threshold | Conceptual edges | Exposure→phenotype paths | Direct pairs |
 |---:|---:|---:|---:|
-| 0.40 | 39 | 23 | 13 |
-| 0.50 | 20 | 11 | 11 |
-| 0.55 | 20 | 11 | 11 |
-| 0.70 | 12 | 11 | 11 |
-| 0.85 | 9 | 8 | 8 |
+| 0.40 | 47 | 27 | 17 |
+| 0.50 | 28 | 15 | 15 |
+| 0.55 | 28 | 15 | 15 |
+| 0.70 | 16 | 15 | 15 |
+| 0.85 | 13 | 12 | 12 |
 
 The qualitative conclusion “few direct human links, many mechanism-level gaps” is stable. The *number* of retained links is highly threshold-dependent, which is why the manuscript reports both the full graph and the high-confidence core.
 
@@ -88,7 +88,7 @@ Leave-one-year-out OR per SD: 1.47–1.66; p ranged 0.010–0.056. The direction
 
 ## 6. Manual audit (pending)
 
-`reports/manual_audit_sample.csv` contains 20 randomly selected curated edges with columns for two independent reviewers (`reviewer_1_supports`, `reviewer_2_supports`, `agreement`, `resolution`). Until completed:
+`reports/manual_audit_sample.csv` contains 20 randomly selected curated edges for two independent reviewers. `reports/audit_reviewer1_full.csv` records the study team's reviewer-1 pass for all 54 curated edges (quote + species + design), while reviewer 2 remains blank. Until an independent reviewer completes the sheet:
 
 - the curated layer is **single-reviewer verified**;
 - no kappa is reported;
@@ -98,7 +98,7 @@ Leave-one-year-out OR per SD: 1.47–1.66; p ranged 0.010–0.056. The direction
 
 ## 7. What was not validated
 
-- Full texts of the 29 anchors (only abstracts were verified).
+- Full texts of the 33 anchors (only abstracts were verified).
 - Records not retrieved by the top-N search strategy.
 - Portuguese-language literature (SciELO/BVS blocked).
 - HPO/ClinVar/Reactome annotations against primary sources (treated as curated databases).

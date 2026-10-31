@@ -77,6 +77,20 @@ The weighted sum (rather than a product) avoids double-penalising strong animal 
 
 Grades are **properties of edges for this study’s question**, not a judgement of the biological truth of a textbook statement. A developmental relation can be grade D because no study tested that exact exposure→phenotype chain, even though the embryology is well established.
 
+### 4.1 Evidence tiers used by the CEKP interface
+
+The three-level hierarchy requested by the scientific review is implemented as a derived field (`evidence_tier`):
+
+| Tier | Rule | Interface colour |
+|---|---|---|
+| **Bem sustentada** | observed A/B with direct human evidence, or structured database annotation | green |
+| **Plausível (experimental)** | observed C with experimental human/animal/cell evidence | amber |
+| **Não demonstrada** | observed D/E, indirect review, hypothesis or inferred rule | red |
+| **Contextual** | ecological indicators and humidity | blue |
+| **Inferida (regra)** | pathway→process keyword mapping | grey |
+
+This tier is a **presentation layer** over the same confidence formula; it does not change the underlying evidence rows.
+
 ---
 
 ## 5. Worked examples (values from `outputs/graph/relations.csv`)

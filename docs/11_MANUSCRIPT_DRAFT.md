@@ -17,9 +17,9 @@
 
 **Objective.** To build and analyse a provenance-first knowledge graph connecting environmental exposures, molecular mechanisms, cardiogenesis and CHD phenotypes, and to integrate local epidemiological and environmental data from Campos dos Goytacazes (RJ, Brazil) as ecological context.
 
-**Methods.** We performed a rapid scoping review (PubMed/MEDLINE and Europe PMC; retrieval 2026-10-31) across five pre-registered evidence domains and 196 exposure × phenotype queries. We curated 29 anchor studies (46 edges) with verbatim quotes verified programmatically against PubMed, and integrated structured annotations from HPO, ClinVar, NCBI Gene and Reactome. Local data comprised SINASC live births (2010–2022 and 2025), SIH/SUS hospital admissions (2010–2025) and ERA5-Land daily climate (2010–2025). Exposure was assigned to an estimated cardiac organogenesis window (weeks 3–8 post-conception). Every relation carries evidence type, species, design, window, reference, confidence and limitations; observed, structured, inferred, hypothesis and ecological layers were kept separate.
+**Methods.** We performed a structured, non-systematic search (PubMed/MEDLINE, Europe PMC, SciELO metadata via Crossref, CAPES thesis catalogue; retrieval 2026-10-31) across five pre-registered evidence domains and 196 exposure × phenotype queries. We curated 33 anchor studies (54 edges) with verbatim quotes verified programmatically against PubMed, and integrated structured annotations from HPO, ClinVar, NCBI Gene and Reactome. Local data comprised SINASC live births (2010–2022 and 2025 microdata; 2023–2024 TabNet aggregates), SIH/SUS hospital admissions (2010–2025) and ERA5-Land daily climate (2010–2025). Exposure was assigned to an estimated cardiac organogenesis window (weeks 3–8 post-conception). Every relation carries evidence type, species, design, window, reference, confidence and limitations; observed, structured, inferred, hypothesis and ecological layers were kept separate.
 
-**Results.** Searches returned 1,512 / 8,520 / 6,736 / 7,681 / 992 PubMed records for the five domains; 1,450 records were retrieved and screened (1,095 unique). Of 196 exposure × phenotype pairs, 73 (37%) had no direct literature and only 2 were high-volume. The graph contains 2,234 nodes, 4,100 relations and 4,596 evidence rows; 23 exposure→phenotype paths were found (13 direct, 10 via mechanism/process chains), and 20 explicit gaps were identified. Direct human evidence was concentrated in a few exposure–phenotype pairs (heat→ASD; valproate→CHD; smoking→TOF; alcohol→d-TGA; NO2→coarctation; O3→ASD), whereas most mechanistic links were experimental. Locally, SINASC reported only 59 CHD cases among 98,598 births (5.98 per 10,000), indicating severe under-ascertainment; SIH recorded 549 admissions (55% outside the municipality) and 33 deaths. In exploratory models (56–59 events), gestational-window mean Tmax was associated with reported CHD (OR 1.30 per SD, 95% CI 1.00–1.69; season-adjusted OR 1.65, 1.13–2.42), but the monthly count model was null (RR 1.22, 0.94–1.60) and leave-one-year-out estimates varied (OR 1.47–1.66).
+**Results.** Searches returned 1,512 / 8,520 / 6,736 / 7,681 / 992 PubMed records for the five domains; 1,978 raw records were retrieved, 529 duplicates removed, leaving 1,449 unique records for automated triage. Of 196 exposure × phenotype pairs, 73 (37%) had no direct literature and only 2 were high-volume. The graph contains 2,237 nodes, 4,115 relations and 4,611 evidence rows; 27 exposure→phenotype paths were found (17 direct, 10 via mechanism/process chains), and 20 explicit gaps were identified, plus 5 gene-overlap hypotheses and 7 candidate paths with an explicit missing link. Direct human evidence was concentrated in a few exposure–phenotype pairs (heat→ASD; valproate→CHD; smoking→TOF; alcohol→d-TGA; NO2→coarctation; O3→ASD), whereas most mechanistic links were experimental. Locally, SINASC reported only 59 CHD cases among 98,598 births (5.98 per 10,000), indicating severe under-ascertainment; SIH recorded 549 admissions (55% outside the municipality) and 33 deaths. In exploratory models (56–59 events), gestational-window mean Tmax was associated with reported CHD (OR 1.30 per SD, 95% CI 1.00–1.69; season-adjusted OR 1.65, 1.13–2.42), but the monthly count model was null (RR 1.22, 0.94–1.60) and leave-one-year-out estimates varied (OR 1.47–1.66).
 
 **Conclusions.** A provenance-first graph makes explicit that only a minority of exposure→CHD links have direct human support, that mechanistic chains are largely experimental, and that several plausible exposures and mechanisms remain unconnected. Local routine data cannot support aetiological inference in this municipality, but they quantify an important surveillance gap. The graph is proposed as a reproducible instrument for evidence appraisal and gap prioritisation, not as a causal model.
 
@@ -57,7 +57,7 @@ Exact strings, translations, counts and retrieved records are stored in `literat
 
 ### 2.3 Selection and curation
 
-Records were deduplicated by PMID, DOI and normalised title. Automated triage flagged species, design, exposure-window vocabulary, mechanisms and phenotypes. Twenty-nine anchor studies were read manually and 46 edges encoded with verbatim quotes; a build-time verifier aborts if a quote is not found in the PubMed abstract. No dual independent screening of all records was performed (see Limitations).
+Records were deduplicated by PMID, DOI and normalised title. Automated triage flagged species, design, exposure-window vocabulary, mechanisms and phenotypes. Thirty-three anchor studies were read manually and 54 edges encoded with verbatim quotes; a build-time verifier aborts if a quote is not found in the PubMed abstract. No dual independent screening of all records was performed (see Limitations).
 
 ### 2.4 Structured databases
 
@@ -97,25 +97,32 @@ Integrity checks (unique IDs, endpoints, no self-loops, valid vocabulary), quote
 
 ### 3.1 Evidence base
 
-PubMed returned 1,512 records for exposure→CHD, 8,520 for exposure→mechanism, 6,736 for mechanism→cardiogenesis, 7,681 for cardiogenesis→phenotype and 992 for gene→phenotype. Europe PMC returned 1,599 / 171 / 39 / 593 / 2,387. Across the retrieved top-N records, 1,450 records yielded 1,095 unique records (1,003 with abstracts).
+PubMed returned 1,512 records for exposure→CHD, 8,520 for exposure→mechanism, 6,736 for mechanism→cardiogenesis, 7,681 for cardiogenesis→phenotype and 992 for gene→phenotype. Europe PMC returned 1,599 / 171 / 39 / 593 / 2,387. Across all sources, 1,978 raw records yielded 1,449 unique records after 529 duplicates were removed; 1,003 PubMed/Europe PMC records had abstracts.
 
 The 196-pair matrix showed a sparse evidence landscape: 73 pairs (37%) had no direct literature under the context filter, 66 were sparse (1–2 records), 36 limited (3–7), 19 moderate (8–19) and only 2 high-volume (alcohol→VSD, 32; retinoic acid→TGA, 20). Automated triage over-represented “human” records because it flagged any mention of children or patients, reinforcing that volume is not quality.
 
 ### 3.2 Graph structure
 
-The graph contains 2,234 nodes, 4,100 relations and 4,596 evidence rows. Relations by layer: observed 46, structured 4,040, inferred 4, hypothesis 7, ecological 3. Structured relations include 2,314 gene–phenotype, 649 gene–pathway, 945 variant–gene and 150 variant–phenotype edges.
+The graph contains 2,237 nodes, 4,115 relations and 4,611 evidence rows. Relations by layer: observed 54, structured 4,040, inferred 4, hypothesis 14, ecological 3. Structured relations include 2,314 gene–phenotype, 649 gene–pathway, 945 variant–gene and 150 variant–phenotype edges.
 
 ### 3.3 Exposure→phenotype paths
 
-Twenty-three exposure→phenotype paths were identified in the conceptual core: 13 direct and 10 through mechanism/process chains. Direct human evidence was concentrated in:
+Twenty-seven exposure→phenotype paths were identified in the conceptual core: 17 direct and 10 through mechanism/process chains. Direct human evidence was concentrated in:
 - heat → ASD (PR 1.37, 1.10–1.70; PMID 27494594);
 - valproate → CHD (RR 2.53, 2.16–2.96; PMID 41161707);
 - smoking → TOF (RR 9.84, 2.49–38.84) and → overall CHD (RR 2.65, 1.76–3.98; PMID 35916623);
 - alcohol → d-TGA (OR 1.64, 1.17–2.30; PMID 26110619), with a null overall association;
 - NO2 → coarctation (OR 1.14, 1.02–1.26) and O3 → ASD (OR 1.09 per 10 ppb, 1.02–1.17; PMID 32278917);
-- PM2.5 → VSD (OR 1.34, 0.98–1.83, non-significant; PMID 26705853).
+- PM2.5 → VSD (OR 1.34, 0.98–1.83, non-significant; PMID 26705853);
+- PM10 → ASD (OR 1.04 per 10 µg/m³, 1.00–1.09) and CO → TOF (OR 1.21, 1.04–1.41; PMID 32278917);
+- CO → VSD (PMID 21329916);
+- ambient temperature → circulatory-system defects in Brazil (OR 1.08, 1.01–1.17; PMID 39105774).
 
-Mechanistic chains included heat→neural crest→outflow tract→TOF/TGA/DORV; PM2.5→oxidative stress→neural crest→TOF/TGA; valproate→HDAC→AV cushion→VSD/AVSD; and alcohol→retinoic acid→outflow tract→TOF/TGA/DORV. All mechanistic chains had a minimum edge confidence of 0.44 (grade D), reflecting review/indirect evidence at the process→phenotype step.
+Mechanistic chains included heat→neural crest→outflow tract→TOF/TGA/DORV; PM2.5→oxidative stress→neural crest→TOF/TGA; valproate→HDAC→AV cushion→VSD/AVSD; and alcohol→retinoic acid→outflow tract→TOF/TGA/DORV. The most specific PM2.5 chain was PM2.5→AHR→Wnt/β-catenin→cardiomyocyte differentiation (zebrafish and human organoid evidence; PMIDs 27216425, 33558697), which ends at a process without a curated process→phenotype edge — an explicit gap. All mechanistic chains had a minimum edge confidence of 0.44 (grade D), reflecting review/indirect evidence at the process→phenotype step.
+
+### 3.3b Hypothesis layer (separate from evidence)
+
+Two rules generated the hypothesis layer: composition of observed edges (9 candidates) and gene-set overlap between canonical mechanism sets and HPO phenotype genes (5 candidates, ≥2 genes). Seven candidate paths reached a developmental process but lacked a curated process→phenotype link, including PM2.5→AHR→Wnt→cardiomyocyte differentiation. These hypotheses are reported with the missing link and are excluded from all path and centrality analyses.
 
 ### 3.4 Gene convergence and communities
 
@@ -169,13 +176,13 @@ Provenance-first graphs could complement systematic reviews: they make indirect 
 
 ## 5. Limitations
 
-This is a rapid scoping review, not a full systematic review: 1,095 unique records were triaged automatically, 29 anchor studies were read manually, and no dual independent screening or formal risk-of-bias assessment was performed. Searches retrieved top-N records; SciELO, BVS and CAPES were inaccessible (HTTP 403), so Portuguese-language literature is under-represented. CTD, DisGeNET and OMIM were unavailable. Most mechanistic edges rely on animal/cell models at doses not equivalent to human exposure. HPO and ClinVar are Mendelian/syndromic and over-represent rare disease. Process→phenotype edges are indirect. Local SINASC data are severely under-ascertained; 2023–2024 are missing; 2025 is preliminary. SIH AIHs are not individuals. Exposure is area-level reanalysis, not personal exposure; conception dates are estimated. The local heat model has 56–59 events and is fragile. The graph’s confidence score is a heuristic, not a probability. Two-reviewer audit is pending.
+This is a structured, non-systematic search, not a systematic review: 1,449 unique records were triaged automatically, 33 anchor studies were read manually, and no dual independent screening or formal risk-of-bias assessment was performed. Searches retrieved top-N records. The SciELO search interface and BVS blocked automated access; SciELO metadata were obtained through Crossref (prefix 10.1590) and CAPES through its public thesis catalogue, so Portuguese-language coverage remains partial. CTD, DisGeNET and OMIM were unavailable. Most mechanistic edges rely on animal/cell models at doses not equivalent to human exposure. HPO and ClinVar are Mendelian/syndromic and over-represent rare disease. Process→phenotype edges are indirect. Local SINASC data are severely under-ascertained; 2023–2024 microdata are missing (only TabNet aggregates); 2025 is preliminary. SIH AIHs are not individuals. Exposure is area-level reanalysis, not personal exposure; conception dates are estimated. The local heat model has 56–59 events and is fragile. The graph’s confidence score is a heuristic, not a probability. Two-reviewer audit is pending.
 
 ---
 
 ## 6. Conclusion
 
-A provenance-first knowledge graph shows that the evidence linking environmental exposures to congenital heart defects is narrower and more phenotype-specific than the volume of publications suggests, and that most mechanistic chains remain experimental. In Campos dos Goytacazes, routine data reveal a major surveillance gap rather than an aetiological signal. The graph, code and evidence tables are released to support transparent re-analysis, explicit gap prioritisation and future linkage to better local data.
+A provenance-first knowledge graph shows that the evidence linking environmental exposures to congenital heart defects is narrower and more phenotype-specific than the volume of publications suggests, and that most mechanistic chains remain experimental. In Campos dos Goytacazes, routine data reveal a major surveillance gap rather than an aetiological signal. The graph, code, evidence tables and the CardioEnvironment Knowledge Platform (CEKP) Shiny application are released under FAIR principles to support transparent re-analysis, explicit gap prioritisation and future linkage to better local data. AI use is declared under Portaria CNPq 2.664/2026; humans remain responsible for all scientific content.
 
 ---
 
@@ -226,16 +233,29 @@ A provenance-first knowledge graph shows that the evidence linking environmental
 27. Wang T, et al. Maternal pre-pregnancy/early-pregnancy smoking and risk of congenital heart diseases in offspring: a prospective cohort study in Central China. *J Glob Health.* 2022. PMID 35916623. doi:10.7189/jogh.12.11009.
 28. Hikspoors JPJM, et al. Human cardiac development. *Adv Exp Med Biol.* 2024. PMID 38884703. doi:10.1007/978-3-031-44087-8_1.
 29. Yang X, et al. Safety of valproic acid use in pregnant women: a systematic review and meta-analysis. *J Obstet Gynaecol Res.* 2025. PMID 41161707. doi:10.1111/jog.70121.
+30. Zhang H, et al. Crosstalk between AhR and wnt/β-catenin signal pathways in the cardiac developmental toxicity of PM2.5 in zebrafish embryos. *Toxicology.* 2016. PMID 27216425. doi:10.1016/j.tox.2016.05.014.
+31. Chen J, et al. PM2.5 induces mitochondrial dysfunction via AHR-mediated cyp1a1 overexpression during zebrafish heart development. *Toxicology.* 2023. PMID 36841371. doi:10.1016/j.tox.2023.153466.
+32. Drakhlis L, et al. Human heart-forming organoids recapitulate early heart and foregut development. *Nat Biotechnol.* 2021. PMID 33558697. doi:10.1038/s41587-021-00815-9.
+33. Requia WJ, et al. Maternal exposure to ambient temperature and birth defects in Brazil: a nationwide case-control study of over 11 million newborns. *Int J Biometeorol.* 2024. PMID 39105774. doi:10.1007/s00484-024-02746-x.
 
 ### Databases and data sources
 
-30. Köhler S, et al. The Human Phenotype Ontology in 2021. *Nucleic Acids Res.* 2021;49:D1207–D1217. PMID 33264411.
-31. Landrum MJ, et al. ClinVar: improving access to variant interpretations and supporting evidence. *Nucleic Acids Res.* 2018;46:D1062–D1067. PMID 29165669.
-32. Gillespie M, et al. The Reactome pathway knowledgebase 2022. *Nucleic Acids Res.* 2022;50:D687–D692. PMID 34788843.
-33. Muñoz-Sabater J, et al. ERA5-Land: a state-of-the-art global reanalysis dataset for land applications. *Earth Syst Sci Data.* 2021;13:4349–4383. doi:10.5194/essd-13-4349-2021.
-34. Open-Meteo. Historical Weather API documentation. https://open-meteo.com/en/docs/historical-weather-api (accessed 2026-10-31).
-35. Brasil. Ministério da Saúde. DATASUS. SINASC — Sistema de Informações sobre Nascidos Vivos; SIH/SUS — Sistema de Informações Hospitalares. https://datasus.saude.gov.br (accessed 2026-10-31).
-36. Chen EY, et al. Enrichr: interactive and collaborative HTML5 gene list enrichment analysis tool. *BMC Bioinformatics.* 2013;14:128. PMID 23586463.
+37. Köhler S, et al. The Human Phenotype Ontology in 2021. *Nucleic Acids Res.* 2021;49:D1207–D1217. PMID 33264411.
+38. Landrum MJ, et al. ClinVar: improving access to variant interpretations and supporting evidence. *Nucleic Acids Res.* 2018;46:D1062–D1067. PMID 29165669.
+39. Gillespie M, et al. The Reactome pathway knowledgebase 2022. *Nucleic Acids Res.* 2022;50:D687–D692. PMID 34788843.
+40. Muñoz-Sabater J, et al. ERA5-Land: a state-of-the-art global reanalysis dataset for land applications. *Earth Syst Sci Data.* 2021;13:4349–4383. doi:10.5194/essd-13-4349-2021.
+41. Open-Meteo. Historical Weather API documentation. https://open-meteo.com/en/docs/historical-weather-api (accessed 2026-10-31).
+42. Brasil. Ministério da Saúde. DATASUS. SINASC — Sistema de Informações sobre Nascidos Vivos; SIH/SUS — Sistema de Informações Hospitalares. https://datasus.saude.gov.br (accessed 2026-10-31).
+43. Chen EY, et al. Enrichr: interactive and collaborative HTML5 gene list enrichment analysis tool. *BMC Bioinformatics.* 2013;14:128. PMID 23586463.
+
+---
+
+44. Crossref. REST API for scholarly metadata. https://api.crossref.org/ (accessed 2026-10-31; filter prefix:10.1590 for SciELO records).
+45. Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES). Catálogo de Teses e Dissertações — API pública. https://catalogodeteses.capes.gov.br/ (accessed 2026-10-31).
+46. R Core Team. R: A Language and Environment for Statistical Computing. Vienna: R Foundation; 2026.
+47. Chang W, et al. shiny: Web Application Framework for R. R package; 2026.
+48. Almende BV, et al. visNetwork: Network Visualization using 'vis.js' Library. R package; 2026.
+
 
 ---
 

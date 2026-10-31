@@ -56,6 +56,7 @@ RELATIONS = {
     "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
     "EXPOSURE_MODULATES_MECHANISM",
     "MECHANISM_INTERFERES_WITH_PROCESS",
+    "MECHANISM_MODULATES_MECHANISM",
     "GENE_ASSOCIATED_WITH_PHENOTYPE",
     "GENE_PARTICIPATES_IN_PATHWAY",
     "PATHWAY_REGULATES_PROCESS",
@@ -64,6 +65,7 @@ RELATIONS = {
     "INDICATOR_DESCRIBES_PHENOTYPE",
     "ECOLOGICAL_CONTEXT_FOR",
     "HYPOTHESIS_LINK",
+    "HYPOTHESIS_CANDIDATE",
     "STUDY_DOCUMENTS_RELATION",
     "PROCESS_ORIGINATES_STRUCTURE",
 }
@@ -186,6 +188,39 @@ def edge_confidence(evs: list[dict[str, Any]]) -> tuple[float, str, dict[str, An
     return round(conf, 3), grade, detail
 
 
+TIER_LABELS = {
+    "estabelecida": "Bem sustentada",
+    "plausivel_experimental": "Plausível (experimental)",
+    "nao_demonstrada": "Não demonstrada",
+    "contextual": "Contextual",
+    "inferida": "Inferida (regra)",
+}
+
+
+def evidence_tier(layer: str, grade: str, evidence_types: str) -> str:
+    """Three-level evidence hierarchy required by the study design.
+
+    * estabelecida: direct human association or replicated human genetics (A/B)
+    * plausivel_experimental: experimental support (C) or indirect synthesis of experiments
+    * nao_demonstrada: D/E, hypothesis, or only an inferred rule
+    * contextual: ecological/context variables (humidity, indicators)
+    """
+    types = set((evidence_types or "").split(";"))
+    if layer == "ecological":
+        return "contextual"
+    if layer == "hypothesis":
+        return "nao_demonstrada"
+    if layer == "inferred":
+        return "inferida"
+    if layer == "structured":
+        return "estabelecida" if grade in {"A", "B", "C"} else "nao_demonstrada"
+    if grade in {"A", "B"} and ({"direct_human", "structured_database"} & types):
+        return "estabelecida"
+    if grade == "C" and ({"experimental_human", "experimental_animal", "experimental_cell"} & types):
+        return "plausivel_experimental"
+    return "nao_demonstrada"
+
+
 def aggregate(evidence: list[dict[str, Any]]) -> list[dict[str, Any]]:
     by_edge: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for e in evidence:
@@ -211,6 +246,12 @@ def aggregate(evidence: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "study_designs": ";".join(sorted({e.get("study_design", "") for e in evs if e.get("study_design")})),
                 "confidence": conf,
                 "grade": grade,
+                "evidence_tier": evidence_tier(
+                    first["layer"], grade, ";".join(sorted({e["evidence_type"] for e in evs}))
+                ),
+                "evidence_tier_label": TIER_LABELS[
+                    evidence_tier(first["layer"], grade, ";".join(sorted({e["evidence_type"] for e in evs})))
+                ],
                 "confidence_detail": json.dumps(detail),
                 "references": ";".join(sorted({e.get("reference", "") for e in evs if e.get("reference")})),
                 "source_database": ";".join(sorted({e.get("source_database", "") for e in evs if e.get("source_database")})),
@@ -345,6 +386,7 @@ def build(
             confidence=r["confidence"],
             grade=r["grade"],
             n_evidence=r["n_evidence"],
+            evidence_tier=r["evidence_tier"],
             references=r["references"],
         )
     write_csv(config.GRAPH_OUT / "nodes.csv", list(nodes.values()))

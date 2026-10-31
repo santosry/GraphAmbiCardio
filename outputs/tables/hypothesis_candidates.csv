@@ -1,0 +1,6 @@
+exposure_id,phenotype_id,mechanism_id,n_overlap,gene_set_fraction,overlap_genes,supporting_reference,priority,missing_link
+EXP:PM25,CHD:PDA,MECH:EPIGEN,3,0.333,DNMT3A;EZH2;KMT2A,34253165,média,Nenhuma aresta documentada de MECH:EPIGEN para um processo/fenótipo específico; a sobreposição gênica é apenas priorização.
+EXP:SMOKE,CHD:PDA,MECH:EPIGEN,3,0.333,DNMT3A;EZH2;KMT2A,31556862,média,Nenhuma aresta documentada de MECH:EPIGEN para um processo/fenótipo específico; a sobreposição gênica é apenas priorização.
+EXP:ALCOHOL,CHD:VSD,MECH:RA_SIGNAL,2,0.333,ALDH1A2;RARB,23832875,baixa,Nenhuma aresta documentada de MECH:RA_SIGNAL para um processo/fenótipo específico; a sobreposição gênica é apenas priorização.
+EXP:PM25,CHD:ASD,MECH:EPIGEN,2,0.222,DNMT3A;KMT2A,34253165,baixa,Nenhuma aresta documentada de MECH:EPIGEN para um processo/fenótipo específico; a sobreposição gênica é apenas priorização.
+EXP:SMOKE,CHD:ASD,MECH:EPIGEN,2,0.222,DNMT3A;KMT2A,31556862,baixa,Nenhuma aresta documentada de MECH:EPIGEN para um processo/fenótipo específico; a sobreposição gênica é apenas priorização.

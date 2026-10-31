@@ -142,6 +142,19 @@ Descriptive human embryology (Carnegie stages; PMID 38884703) establishes the ti
 
 ---
 
+### 3.6 Atualização após a revisão científica (PM10, CO, umidade e eixo PM2,5–AHR–Wnt)
+
+A revisão do protocolo acrescentou três variáveis e fortaleceu o eixo principal:
+
+- **PM10 → ASD:** OR 1,04 por 10 µg/m³ (1,00–1,09; meta-análise, PMID 32278917) — associação modesta e heterogênea.
+- **CO → VSD:** associado a defeitos septais em estudo de base populacional (PMID 21329916); **CO → TOF:** OR 1,21 (1,04–1,41; PMID 32278917).
+- **Temperatura no Brasil:** estudo nacional com >11 milhões de nascimentos encontrou OR 1,08 (1,01–1,17) para defeitos do sistema circulatório no primeiro trimestre, ajustado por PM2,5 e umidade (PMID 39105774). Isso reforça a temperatura como **eixo secundário**, não como mecanismo estabelecido.
+- **PM2,5 → AHR → Wnt/β-catenina:** em zebrafish, o extrato orgânico de PM2,5 ativa AHR, reprime alvos de Wnt/β-catenina e causa malformações cardíacas; antagonista de AHR e agonista de β-catenina resgatam o fenótipo (PMID 27216425). Esse é o elo mecanístico mais específico disponível para PM2,5.
+- **PM2,5 → mitocôndria:** disfunção mitocondrial via AHR/cyp1a1, com apoptose e defeitos cardíacos (PMID 36841371).
+- **Wnt → diferenciação de cardiomiócitos:** organoides cardíacos humanos dependem de modulação bifásica de Wnt (PMID 33558697).
+
+**Umidade:** não foi identificada evidência direta de associação com CHD na busca estruturada. Ela permanece como variável contextual/confundidora no modelo local (OR 0,82; IC 0,63–1,07), sem aresta causal no grafo.
+
 ## 4. Conceptual, biological, epidemiological and computational incompatibilities found
 
 | # | Incompatibility | Resolution adopted |
@@ -164,10 +177,10 @@ Descriptive human embryology (Carnegie stages; PMID 38884703) establishes the ti
 **Proceed to graph construction — with a restricted evidence core.**
 
 Included:
-- **14 exposures** as nodes, but only those with verified evidence receive edges.
+- **17 exposures** as nodes (the original 14 plus PM10, CO and relative humidity); only those with verified evidence receive edges. Humidity remains contextual and has no causal edge.
 - **14 phenotypes + `CHD:ALL`**.
 - **16 mechanisms**, **11 developmental processes**, **47-gene panel + 814 HPO genes**.
-- **46 manually curated relations** from 29 anchor studies, every quote verified against PubMed.
+- **54 manually curated relations** from 33 anchor studies, every quote verified against PubMed.
 - Structured gene–phenotype, gene–pathway and variant edges.
 - **Explicit gap layer**: SO2, cold, retinoic acid and dioxins/PCBs had no retained exposure→CHD edge (retinoic acid and dioxins have mechanism-level experimental evidence only).
 

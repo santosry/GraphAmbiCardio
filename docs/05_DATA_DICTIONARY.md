@@ -28,6 +28,12 @@ Daily ERA5-Land series, 2010-01-01 to 2025-12-31 (5,844 rows, no missing Tmax).
 - **Fields:** Tmean, Tmax, Tmin, relative humidity, precipitation, wind; derived heat-wave id (`heatwave_id`), heat days ≥35 °C, cold days ≤15 °C, diurnal range.
 - **Heat wave definition:** ≥3 consecutive days with Tmax above the 2010–2025 90th percentile (34.2 °C).
 
+### 1.3b `data_processed/sinasc_tabnet_aggregates.csv`
+Agregados do TabNet para 2022–2025 (nascidos vivos e casos do grupo “malformações congênitas do aparelho circulatório”).
+- **Fonte:** DATASUS TabNet (`nvrj22.dbf` … `nvrj25.dbf`).
+- **Uso:** preencher 2023–2024, cujos microdados não estavam disponíveis; 2025 serve como validação (9 casos e 5.924 nascidos, idêntico aos microdados).
+- **Aviso:** definição de caso distinta do parser de qualquer código Q20–Q28; não misturar as séries.
+
 ### 1.4 `data_processed/sinasc_campos_with_exposure.csv`
 The birth-level file plus gestational-window area-level exposure:
 `win_temperature_2m_max_mean`, `win_temperature_2m_min_mean`, `win_relative_humidity_2m_mean_mean`, `win_heat_days_35_pct`, `win_covariate_completeness`.
@@ -48,7 +54,9 @@ The birth-level file plus gestational-window area-level exposure:
 | `reactome_gene_summary.csv` | 170 | Per-gene pathway counts |
 | `ncbi_gene_metadata.csv` | 170 | NCBI Gene IDs and descriptions |
 | `enrichr_GO_Biological_Process_2023.csv` | 1,631 | GO BP over-representation for the gene universe |
-| `inferred_pathway_process_map.csv` | 8 | Explicit keyword map from Reactome pathways to developmental processes |
+| `inferred_pathway_process_map.csv` | 4 | Explicit keyword map from Reactome pathways to developmental processes |
+| `hypothesis_candidates.csv` | 5 | Gene-overlap hypotheses (exposure → phenotype), with supporting genes and missing link |
+| `candidate_paths_missing_link.csv` | 7 | Documented chains reaching a process without a curated process → phenotype edge |
 
 ---
 
@@ -58,13 +66,21 @@ The birth-level file plus gestational-window area-level exposure:
 `node_id, label, type, subtype, identifiers, description, source`.
 
 ### `outputs/graph/relations.csv`
-`edge_id, edge_key, source_id, source_type, target_id, target_type, relation, layer, n_evidence, n_references, evidence_types, species, study_designs, confidence, grade, confidence_detail, references, source_database, retrieved_at`.
+`edge_id, edge_key, source_id, source_type, target_id, target_type, relation, layer, n_evidence, n_references, evidence_types, species, study_designs, confidence, grade, evidence_tier, evidence_tier_label, confidence_detail, references, source_database, retrieved_at`.
+
+`evidence_tier` ∈ {`estabelecida`, `plausivel_experimental`, `nao_demonstrada`, `contextual`, `inferida`}.
 
 ### `outputs/graph/evidence.csv`
 One row per evidence item (see `docs/04_ONTOLOGY.md` §4 for the full schema). Key fields: `evidence_id, edge_key, layer, evidence_type, study_design, species, population_or_model, exposure_window, effect_direction, quote, reference, reference_type, source_database, retrieved_at, notes`.
 
 ### `outputs/graph/graph.graphml` / `graph.json`
 Interoperable exports of the aggregated graph; edge attributes include `relation`, `layer`, `confidence`, `grade`, `n_evidence`, `references`.
+
+### `outputs/graph/hypotheses.csv`
+Hipóteses (`HYPOTHESIS_LINK` e `HYPOTHESIS_CANDIDATE`) no mesmo esquema de evidência, com `layer = hypothesis` e `evidence_type = hypothesis`. Nunca usadas em caminhos ou centralidade.
+
+### `app/data/`
+Bundle autocontido do aplicativo Shiny (30 arquivos, ~4 MB), gerado por `scripts/app/01_prepare_data.py`.
 
 ### `reports/feasibility_pair_matrix.csv`
 196 rows: exposure × phenotype, PubMed count, volume class, triage counts, mechanistic terms, provisional class and the exact query.

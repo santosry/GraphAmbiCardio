@@ -25,7 +25,7 @@ import pandas as pd  # noqa: E402
 
 from graphambicardio import config  # noqa: E402
 from graphambicardio.curation import seed_edges  # noqa: E402
-from graphambicardio.graph import build  # noqa: E402
+from graphambicardio.graph import build, hypotheses  # noqa: E402
 from graphambicardio.io_utils import get_logger, read_csv, today, write_csv, write_json  # noqa: E402
 from graphambicardio.literature.pubmed import efetch  # noqa: E402
 
@@ -98,6 +98,7 @@ def curated_evidence() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
         + seed_edges.MECHANISM_PROCESS
         + seed_edges.PROCESS_PHENOTYPE
         + seed_edges.GENE_PHENOTYPE
+        + seed_edges.ADDITIONAL_EDGES
     )
     verify_quotes(edges)
     rows = []
@@ -448,6 +449,12 @@ def main() -> None:
 
     evidence = curated + structured + inferred + hyp
     G, nodes_out, relations = build.build(evidence, nodes)
+
+    # Hypothesis layer: gene-set overlap candidates (explicitly non-evidential).
+    hyp_candidates, _, _ = hypotheses.generate()
+    if hyp_candidates:
+        evidence = evidence + hyp_candidates
+        G, nodes_out, relations = build.build(evidence, nodes)
 
     # exports
     nx.write_graphml(G, config.GRAPH_OUT / "graph.graphml")

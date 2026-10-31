@@ -37,4 +37,4 @@ Total enriched GO terms: 1631
 | Epigenetic regulation of gene expression | 9 |
 | Gastrulation | 8 |
 
-Low-evidence edges (grade D/E): **30** of 4100 relations. See `outputs/tables/low_evidence_edges.csv`.
+Low-evidence edges (grade D/E): **37** of 4115 relations. See `outputs/tables/low_evidence_edges.csv`.

@@ -11,13 +11,13 @@ Period: **2010-01-01 to 2025-12-31**; municipality: Campos dos Goytacazes, RJ (I
 | Year | File | Status | Births (Campos) |
 |---|---|---|---:|
 | 2010–2022 | `DNRJ{year}.dbc` (NOV/DNRES) | consolidated | 6,882–8,229/year |
-| 2023 | — | **not available at DATASUS FTP** | — |
-| 2024 | — | **not available at DATASUS FTP** | — |
+| 2023 | `nvrj23.dbf` (TabNet only) | **aggregate only** | 6,252 |
+| 2024 | `nvrj24.dbf` (TabNet only) | **aggregate only** | 5,870 |
 | 2025 | `DNRJ2025.dbc` (PRELIM/DNRES) | **preliminary** | 5,924 |
 
 Total: **98,598 live births** to resident mothers.
 
-> 2023–2024 are not imputed. 2025 is labelled preliminary in every table.
+> 2023–2024 microdata were not available on the FTP; aggregate counts were obtained from TabNet and are kept in a separate series, because TabNet counts only the “malformações congênitas do aparelho circulatório” group while the microdata parser counts any Q20–Q28 code. 2025 is labelled preliminary. No values were imputed.
 
 ### 1.2 Case definition and `CODANOMAL` parsing
 
@@ -47,9 +47,13 @@ Total: **98,598 live births** to resident mothers.
 | 2020 | 6,849 | 5 | 7.30 | 0.73 | consolidated |
 | 2021 | 6,776 | 4 | 5.90 | 0.59 | consolidated |
 | 2022 | 6,361 | 6 | 9.43 | 0.94 | consolidated |
+| 2023* | 6,252 | 5 | 8.00 | 0.80 | aggregate (TabNet) |
+| 2024* | 5,870 | 5 | 8.52 | 0.85 | aggregate (TabNet) |
 | 2025 | 5,924 | 9 | 15.19 | 1.52 | **preliminary** |
 
-Overall: **5.98 per 10,000 live births** (59/98,598), i.e. **0.6 per 1,000** — roughly **one order of magnitude below** the birth prevalence usually reported for CHD (6–9 per 1,000). The most defensible interpretation is **severe under-ascertainment in SINASC**, not a low CHD burden: the absolute number of anomaly records in Campos is only ~25–80 per year across *all* congenital anomalies.
+\* TabNet group definition; not directly comparable to the microdata any-code definition. 2025 TabNet (9 cases, 5,924 births) matches the microdata exactly, supporting internal consistency.
+
+Overall microdata: **5.98 per 10,000 live births** (59/98,598), i.e. **0.6 per 1,000** — roughly **one order of magnitude below** the birth prevalence usually reported for CHD (6–9 per 1,000). The most defensible interpretation is **severe under-ascertainment in SINASC**, not a low CHD burden: the absolute number of anomaly records in Campos is only ~25–80 per year across *all* congenital anomalies.
 
 ### 1.4 Phenotype distribution (all codes, all years)
 

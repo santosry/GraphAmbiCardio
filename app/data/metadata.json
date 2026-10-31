@@ -1,0 +1,14 @@
+{
+  "titulo": "CardioEnvironment Knowledge Platform (CEKP)",
+  "subtitulo": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas",
+  "versao": "0.2.0",
+  "data": "2026-10-31",
+  "municipio": "Campos dos Goytacazes, RJ, Brasil (IBGE 330100)",
+  "periodo": "2010-2025",
+  "licenca_codigo": "MIT",
+  "licenca_dados": "Dados de terceiros mantêm suas licenças (PubMed/Europe PMC, HPO, ClinVar, Reactome, DATASUS, ERA5-Land/Open-Meteo)",
+  "contato": "research@example.org",
+  "repositorio": "https://github.com/santosry/GraphAmbiCardio",
+  "declaracao_ia": "Portaria CNPq nº 2.664/2026",
+  "nota_revisao": "Busca estruturada não sistemática (não é revisão sistemática)."
+}

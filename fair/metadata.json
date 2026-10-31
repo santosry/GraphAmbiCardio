@@ -1,0 +1,131 @@
+{
+  "@context": "https://www.w3.org/ns/dcat#",
+  "@type": "Dataset",
+  "identifier": "https://github.com/santosry/GraphAmbiCardio#v0.2.0",
+  "name": "CardioEnvironment Knowledge Platform (CEKP)",
+  "description": "Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e fenótipos de cardiopatias congênitas, integrando literatura, bases biológicas curadas e dados ecológicos de Campos dos Goytacazes (2010-2025).",
+  "version": "0.2.0",
+  "issued": "2026-10-31",
+  "modified": "2026-10-31",
+  "creator": {
+    "@type": "Organization",
+    "name": "GraphAmbiCardio study team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GraphAmbiCardio study team"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "research@example.org"
+  },
+  "keywords": [
+    "congenital heart defects",
+    "environmental exposure",
+    "knowledge graph",
+    "evidence grading",
+    "FAIR",
+    "Brazil"
+  ],
+  "theme": [
+    "http://id.nlm.nih.gov/mesh/D006330",
+    "http://id.nlm.nih.gov/mesh/D000086382"
+  ],
+  "spatial": {
+    "@type": "Place",
+    "name": "Campos dos Goytacazes, RJ, Brasil",
+    "identifier": "IBGE:330100"
+  },
+  "temporal": {
+    "@type": "PeriodOfTime",
+    "startDate": "2010-01-01",
+    "endDate": "2025-12-31"
+  },
+  "license": "https://opensource.org/licenses/MIT",
+  "accessRights": "OPEN",
+  "isAccessibleForFree": true,
+  "distribution": [
+    {
+      "@type": "Distribution",
+      "name": "nos_grafo",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/nodes.csv",
+      "format": "csv",
+      "byteSize": 155948,
+      "checksum": "sha256:2ffd43009d8419c37235854e8854a502be93c558e04bd8460d585dc36657235b"
+    },
+    {
+      "@type": "Distribution",
+      "name": "relacoes",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/relations.csv",
+      "format": "csv",
+      "byteSize": 1987840,
+      "checksum": "sha256:2c0214b6d0eaf50c10e380c431311e346d252438197a9b3e3e9cee16c57c2108"
+    },
+    {
+      "@type": "Distribution",
+      "name": "evidencias",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/evidence.csv",
+      "format": "csv",
+      "byteSize": 1595394,
+      "checksum": "sha256:953d44e34b9211a423a4b114ae74f0bc499e5d821a8dc416fb3b0f68a8da58db"
+    },
+    {
+      "@type": "Distribution",
+      "name": "hipoteses",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/hypotheses.csv",
+      "format": "csv",
+      "byteSize": 2799,
+      "checksum": "sha256:c1fbd58fb036e60d103558d64fe40934ba3505db0ac5cb18caa7968510c8d137"
+    },
+    {
+      "@type": "Distribution",
+      "name": "sinasc_anual",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sinasc_annual_complete.csv",
+      "format": "csv",
+      "byteSize": 1415,
+      "checksum": "sha256:9a45598da5f7252ba2d643e0117c26e5683f6a80db0660cc1bb9266e37f079c6"
+    },
+    {
+      "@type": "Distribution",
+      "name": "sih_anual",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sih_annual.csv",
+      "format": "csv",
+      "byteSize": 891,
+      "checksum": "sha256:10cf691aac9747a03b9211294739503391d910efa90a3b539d49a9e7903f887a"
+    },
+    {
+      "@type": "Distribution",
+      "name": "clima_diario",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_processed/climate_daily_campos.csv",
+      "format": "csv",
+      "byteSize": 415466,
+      "checksum": "sha256:b92e4ecd44eafc2007354ba662c1475aee24a75019c39db64da9a30470130f74"
+    },
+    {
+      "@type": "Distribution",
+      "name": "caminhos",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/paths_exposure_phenotype.csv",
+      "format": "csv",
+      "byteSize": 2630,
+      "checksum": "sha256:8fb39bfc6ba78b55ee794c447cca1cc6a3b72b0a0bfb03573522cb64d9b0632a"
+    },
+    {
+      "@type": "Distribution",
+      "name": "lacunas",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/gap_analysis.csv",
+      "format": "csv",
+      "byteSize": 2226,
+      "checksum": "sha256:99865bd737595f759ceed039bb41b11f8f5f6f070bc0ad6d5a1b23ad7c5b1c63"
+    },
+    {
+      "@type": "Distribution",
+      "name": "candidatos_hipoteses",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/hypothesis_candidates.csv",
+      "format": "csv",
+      "byteSize": 1137,
+      "checksum": "sha256:1bf59f15ec462828755b6ca1bc9dd7bc811b8350e3434d49c691991befea8938"
+    }
+  ],
+  "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed.",
+  "note": "Busca estruturada não sistemática. Hipóteses são explicitamente separadas das evidências."
+}

@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-10-31",
+  "graph": {
+    "n_nodes": 2237,
+    "n_relations": 4115,
+    "n_evidence": 4611,
+    "issues": [],
+    "passed": true
+  },
+  "curated": {
+    "n_curated_edges": 54,
+    "n_unique_pmids": 33,
+    "sampled_for_recheck": 13,
+    "issues": [],
+    "passed": true
+  },
+  "pmid_resolution": {
+    "n_pmids": 33,
+    "n_resolved": 33,
+    "missing": [],
+    "passed": true
+  },
+  "local_data": {
+    "sinasc_births": 98598,
+    "sinasc_chd": 59,
+    "sinasc_years": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2025
+    ],
+    "sih_admissions": 561,
+    "climate_days": 5844,
+    "issues": [],
+    "passed": true
+  },
+  "passed": true
+}

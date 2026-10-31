@@ -1,0 +1,8 @@
+exposure_id,process_id,path,n_steps,missing_link
+EXP:PM25,PROC:LOOPING,EXP:PM25 -> MECH:AHR -> PROC:LOOPING,2,PROC:LOOPING -> fenótipo específico (não demonstrado)
+EXP:PM25,PROC:CM_DIFF,EXP:PM25 -> MECH:AHR -> PROC:CM_DIFF,2,PROC:CM_DIFF -> fenótipo específico (não demonstrado)
+EXP:PM25,PROC:CM_DIFF,EXP:PM25 -> MECH:AHR -> MECH:WNT -> PROC:CM_DIFF,3,PROC:CM_DIFF -> fenótipo específico (não demonstrado)
+EXP:ALCOHOL,PROC:LOOPING,EXP:ALCOHOL -> MECH:RA_SIGNAL -> PROC:LOOPING,2,PROC:LOOPING -> fenótipo específico (não demonstrado)
+EXP:DIOXIN,PROC:LOOPING,EXP:DIOXIN -> MECH:AHR -> PROC:LOOPING,2,PROC:LOOPING -> fenótipo específico (não demonstrado)
+EXP:DIOXIN,PROC:CM_DIFF,EXP:DIOXIN -> MECH:AHR -> PROC:CM_DIFF,2,PROC:CM_DIFF -> fenótipo específico (não demonstrado)
+EXP:DIOXIN,PROC:CM_DIFF,EXP:DIOXIN -> MECH:AHR -> MECH:WNT -> PROC:CM_DIFF,3,PROC:CM_DIFF -> fenótipo específico (não demonstrado)

@@ -12,7 +12,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 - PubMed hits: A1 1,512; A2 8,520; A3 6,736; A4 7,681; A5 992.
 - Europe PMC hits: 1,599 / 171 / 39 / 593 / 2,387.
 - 196 pairs: 73 with no direct literature, 66 sparse, 36 limited, 19 moderate, 2 high.
-- 29 anchor studies; 46 curated edges.
+- 33 anchor studies; 54 curated edges.
 
 **Criteria.** Directness of evidence, species, design, exposure window, phenotype specificity, structured-data availability, integration feasibility.
 
@@ -36,13 +36,13 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 ## Phase C — Scoping review and evidence extraction
 
-**Done.** All searches stored with exact query, translation, date, counts and records. Deduplication by PMID → DOI → normalised title. Automated triage; manual reading of 29 anchors; verbatim quotes stored.
+**Done.** All searches stored with exact query, translation, date, counts and records. Deduplication by PMID → DOI → normalised title. Automated triage; manual reading of 33 anchors; verbatim quotes stored.
 
-**Obtained.** 1,450 retrieved records → 355 duplicates → 1,095 unique → 1,003 with abstract → 29 anchors → 46 edges. PRISMA-ScR flow in `reports/prisma_flow.csv`.
+**Obtained.** 1,978 raw records → 529 duplicates → 1,449 unique → 1,003 with abstract (PubMed/Europe PMC subset) → 33 anchors → 54 edges. PRISMA-ScR flow in `reports/prisma_flow.csv`.
 
 **Problems.** No dual screening; no full text; no formal risk-of-bias tool. The audit sheet is ready but not completed.
 
-**Decision.** Label the review as rapid scoping with targeted manual curation; do not claim systematic-review status. **Apt to advance: yes, with limitation.**
+**Decision.** Label the review as a structured, non-systematic search with targeted manual curation; do not claim systematic-review status. **Apt to advance: yes, with limitation.**
 
 ---
 
@@ -59,8 +59,8 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 **Done.** SINASC 2010–2022 + 2025; SIH 2010–2025 (192 monthly files); ERA5-Land 2010–2025; gestational-window linkage; descriptive indicators; exploratory models; leave-one-year-out sensitivity.
 
 **Obtained.**
-- 98,598 births; 59 CHD cases (5.98/10,000); 2023–2024 missing; 2025 preliminary.
-- 549 CHD admissions; 33 deaths; 55% outside municipality; 18 hospitals.
+- 98,598 births; 59 CHD cases in microdata (5.98/10,000); 2023 and 2024 aggregate-only via TabNet (5 cases each); 2025 preliminary (9 cases, matching TabNet).
+- 549 primary-CHD admissions (561 total, 12 secondary-only); 33 deaths; 55% outside municipality; 18 hospitals.
 - 5,844 climate days; heat-wave threshold 34.2 °C; 73 heat waves.
 - 90,008 births with a complete organogenesis window.
 - Logistic OR 1.30/SD (1.00–1.69); season-adjusted 1.65 (1.13–2.42); monthly RR 1.22 (0.94–1.60); LOO 1.47–1.66.
@@ -75,7 +75,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 **Done.** HPO, ClinVar, NCBI Gene, Reactome and Enrichr retrieval; NCBI IDs; pathway over-representation per gene; gene universe (panel + HPO top-150).
 
-**Obtained.** 46 curated molecular/clinical edges, 4,040 structured relations (2,314 gene–phenotype after collapsing, 649 gene–pathway, 945 variant–gene, 150 variant–phenotype).
+**Obtained.** 54 curated molecular/clinical edges, 4,040 structured relations (2,314 gene–phenotype, 649 gene–pathway, 945 variant–gene, 150 variant–phenotype).
 
 **Problems.** 814 HPO genes lack NCBI metadata (only top-150 enriched); single-gene Reactome over-representation is statistically weak; no expression data.
 
@@ -87,7 +87,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 **Done.** Evidence-first build with quote verification; aggregation with pre-registered confidence; GraphML/JSON/CSV export.
 
-**Obtained.** 2,234 nodes; 4,100 relations; 4,596 evidence rows. Layers: observed 46, structured 4,040, inferred 4, hypothesis 7, ecological 3.
+**Obtained.** 2,237 nodes; 4,115 relations; 4,611 evidence rows. Layers: observed 54, structured 4,040, inferred 4, hypothesis 14, ecological 3.
 
 **Problems.** Graph is gene-heavy; pathways are coarse; inferred map is small.
 
@@ -99,7 +99,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 **Done.** Centrality, communities, exposure→phenotype paths, gene convergence/overlap, gap analysis, threshold sensitivity, validation checks and tests.
 
-**Obtained.** 23 paths (13 direct + 10 mechanistic); 20 gaps; 8 communities; validation passed (0 integrity issues); pytest passing.
+**Obtained.** 27 paths (17 direct + 10 mechanistic); 20 gaps; 5 gene-overlap hypotheses; 7 candidate paths; 8 communities; validation passed; 10 tests passing.
 
 **Problems.** Manual two-reviewer audit pending; centrality dominated by HPO annotation density; threshold sensitivity substantial.
 
@@ -119,11 +119,11 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 ## Phase J — Publication and reproducibility
 
-**Done.** Documentation (protocol, feasibility, search strategy, database catalogue, ontology, data dictionary, grading, methods, validation, limitations, phase log, manuscript draft), README, tests, exports, audit sheet.
+**Done.** Documentation (protocol, feasibility, search strategy, database catalogue, ontology, data dictionary, grading, methods, validation, limitations, phase log, manuscript draft, FAIR, AI declaration, app guide), README, tests, exports, audit sheet, **Shiny app (CEKP)**, FAIR metadata, R collectors for SciELO (Crossref) and CAPES.
 
 **Problems.** No DOI/archival release yet; SciELO/BVS gap; two-reviewer audit not completed; exact database release hashes not pinned.
 
-**Decision.** Release v0.1.0 as a reproducible study scaffold with a complete computational pipeline and a manuscript draft. **Apt to advance: yes, to internal review.**
+**Decision.** Release v0.2.0 as a reproducible study scaffold with a complete computational pipeline, an interactive platform (CEKP) and a manuscript draft. **Apt to advance: yes, to internal review.**
 
 ---
 
@@ -140,6 +140,6 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 | INMET unreachable | blocked | ERA5-Land used |
 | PM2.5 no series | not fabricated | air-pollution local analysis impossible |
 | SINASC 2023–2024 | absent | time series gap; no imputation |
-| Full dual review | not performed | rapid scoping label |
+| Full dual review | not performed | structured, non-systematic label |
 
 Every deviation is reflected in the manuscript’s limitations section.

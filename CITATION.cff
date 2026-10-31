@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this study, please cite the repository and the study version."
 title: "GraphAmbiCardio: a provenance-first knowledge graph of environmental exposures, molecular mechanisms, cardiogenesis and congenital heart defects"
-version: 0.1.0
+version: 0.2.0
 date-released: 2026-10-31
 license: MIT
 type: software

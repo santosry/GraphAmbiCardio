@@ -1,9 +1,8 @@
 stage,records,notes
-PubMed domain searches (5),498,top 100 per domain
-PubMed exposure x phenotype searches (196),513,top 15 per pair; total hits=546
-Europe PMC searches (5),439,top 100 per domain
-Total records retrieved,1450,
-Duplicates removed (PMID/DOI/title),355,
-Unique records screened (automated + manual),1095,titles/abstracts
-Unique records with abstract,1003,
-Anchor studies manually curated,29,46 evidence edges
+PubMed (domínios + pares),1011,top 100/domínio e top 15/par
+Europe PMC,439,top 100/domínio
+SciELO (Crossref),500,"5 consultas, 100 registros cada"
+CAPES Teses,28,4 consultas
+Total bruto recuperado,1978,inclui repetições entre as buscas por pares
+Duplicatas removidas,529,repetições entre buscas + PMID/DOI/título normalizado
+Registros únicos,1449,triagem por título/resumo

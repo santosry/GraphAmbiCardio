@@ -11,6 +11,8 @@ setup:
 
 literature:
 	$(PY) scripts/collection/01_literature.py
+	Rscript R/collection/scielo.R
+	Rscript R/collection/capes.R
 
 databases:
 	$(PY) scripts/collection/02_databases.py
@@ -20,6 +22,7 @@ epi:
 	$(PY) scripts/epi/01_sinasc.py
 	$(PY) scripts/epi/02_sih.py
 	$(PY) scripts/epi/03_exposure_models.py
+	$(PY) scripts/epi/04_tabnet_supplement.py
 
 env:
 	$(PY) scripts/env/01_climate.py
@@ -30,6 +33,13 @@ graph:
 	$(PY) scripts/graph/01_export_core.py
 	$(PY) scripts/analysis/01_network.py
 	$(PY) scripts/analysis/02_figures.py
+	$(PY) scripts/analysis/03_enrichment_and_low_evidence.py
+	$(PY) scripts/analysis/04_prisma_flow.py
+	$(PY) scripts/app/01_prepare_data.py
+	$(PY) scripts/app/02_fair_metadata.py
+
+app:
+	Rscript -e 'shiny::runApp("app", port = 3838, launch.browser = TRUE)'
 
 validate:
 	$(PY) scripts/validation/01_validate.py

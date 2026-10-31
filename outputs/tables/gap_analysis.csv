@@ -1,10 +1,13 @@
 entity_type,entity_id,n_curated_outgoing,linked_to,gap_type
 Exposure,EXP:PM25,2,CHD:VSD;CHD:TOF,
+Exposure,EXP:PM10,1,CHD:ASD,
+Exposure,EXP:CO,2,CHD:VSD;CHD:TOF,
 Exposure,EXP:NO2,2,CHD:VSD;CHD:COA,
 Exposure,EXP:O3,1,CHD:ASD,
 Exposure,EXP:SO2,0,,no_retained_exposure_phenotype_evidence
-Exposure,EXP:HEAT,1,CHD:ASD,
+Exposure,EXP:HEAT,2,CHD:ASD;CHD:ALL,
 Exposure,EXP:COLD,0,,no_retained_exposure_phenotype_evidence
+Exposure,EXP:HUMIDITY,0,,no_retained_exposure_phenotype_evidence
 Exposure,EXP:PEST,1,CHD:ALL,
 Exposure,EXP:SOLV,1,CHD:ALL,
 Exposure,EXP:METALS,1,CHD:ALL,
@@ -24,7 +27,7 @@ Mechanism,MECH:PROLIF,0,,no_curated_mechanism_process_edge
 Mechanism,MECH:HEATSHOCK,0,,no_curated_mechanism_process_edge
 Mechanism,MECH:AHR,2,PROC:LOOPING;PROC:CM_DIFF,
 Mechanism,MECH:RA_SIGNAL,2,PROC:LOOPING;PROC:OFT,
-Mechanism,MECH:WNT,0,,no_curated_mechanism_process_edge
+Mechanism,MECH:WNT,1,PROC:CM_DIFF,
 Mechanism,MECH:HDAC,1,PROC:AV_CUSHION,
 Mechanism,MECH:HYPOXIA,0,,no_curated_mechanism_process_edge
 Mechanism,MECH:NEURAL_CREST,1,PROC:OFT,

@@ -15,6 +15,7 @@ import pandas as pd
 
 from .. import config
 from ..io_utils import get_logger, read_csv, today, write_csv, write_json
+from ..graph.build import RELATIONS
 from ..literature.pubmed import efetch
 
 log = get_logger("validation")
@@ -34,13 +35,7 @@ def check_graph() -> dict[str, Any]:
             issues.append(f"edge endpoint missing: {r['edge_key']}")
         if r["source_id"] == r["target_id"]:
             issues.append(f"self-loop: {r['edge_key']}")
-        if r["relation"] not in {
-            "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE", "EXPOSURE_MODULATES_MECHANISM",
-            "MECHANISM_INTERFERES_WITH_PROCESS", "GENE_ASSOCIATED_WITH_PHENOTYPE",
-            "GENE_PARTICIPATES_IN_PATHWAY", "PATHWAY_REGULATES_PROCESS",
-            "VARIANT_IN_GENE", "ALTERATION_ASSOCIATED_WITH_PHENOTYPE",
-            "INDICATOR_DESCRIBES_PHENOTYPE", "ECOLOGICAL_CONTEXT_FOR", "HYPOTHESIS_LINK",
-        }:
+        if r["relation"] not in RELATIONS:
             issues.append(f"unknown relation: {r['relation']}")
     if len({e["evidence_id"] for e in ev}) != len(ev):
         issues.append("duplicate evidence IDs")

@@ -14,7 +14,7 @@ Legend: **Used** = records in the graph; **Probed** = accessed but not used; **B
 - **Coverage:** biomedical literature; no date restriction for biological domains.
 - **Access:** REST/XML; 3 req/s without key, 10 req/s with `NCBI_API_KEY`.
 - **Licence/terms:** NLM terms; abstracts are quoted only as short verbatim fragments for verification.
-- **Used:** 5 domain searches + 196 pair searches + 29 anchor studies.
+- **Used:** 5 domain searches + 196 pair searches + 33 anchor studies.
 - **Limitations:** indexing lags; no full-text; MeSH-only queries have low recall for emergency pollutants.
 
 ### 1.2 Europe PMC
@@ -24,11 +24,20 @@ Legend: **Used** = records in the graph; **Probed** = accessed but not used; **B
 - **Used:** 5 domain searches (independent discovery).
 - **Limitation:** query syntax differs from PubMed; the translation is recorded per search.
 
-### 1.3 SciELO / BVS-LILACS / Portal CAPES
-- **Status: Blocked / not automated.**
-- `search.scielo.org` and `pesquisa.bvsalud.org` returned **HTTP 403** to automated requests on 2026-10-31.
-- Portal CAPES has no public API and requires an institutional session.
-- **Consequence:** Portuguese/Latin-American literature is under-represented. Manual searching is required before publication.
+### 1.3 SciELO
+- **Status: Used via Crossref (DOI prefix 10.1590).**
+- The direct SciELO search interface (`search.scielo.org`) returned **HTTP 403 / Bunny Shield** to automated clients; the R collector therefore queries Crossref, which indexes SciELO articles with the official 10.1590 prefix.
+- **Results:** 100 records per query; 42–60 contained CHD terms plus exposure terms.
+- **Limitation:** Crossref search is metadata-based (title/abstract), not the full SciELO search engine; relevance ranking differs.
+
+### 1.4 CAPES
+- **Status: Used (Catálogo de Teses e Dissertações only).**
+- Public REST endpoint `https://catalogodeteses.capes.gov.br/catalogo-teses/rest/busca` (POST JSON, field `termo`). R collector in `R/collection/capes.R`.
+- **Results:** 552 theses/dissertations for “cardiopatias congênitas” (20 retrieved on the first page); 1 for agrotóxicos; 7 for temperatura; 0 for poluição do ar + cardiopatia.
+- **Limitation:** this is the thesis catalogue, **not** the paywalled Portal de Periódicos full-text collection. The Portal requires institutional authentication and was not used.
+
+### 1.5 BVS/LILACS
+- **Status: Blocked.** `pesquisa.bvsalud.org` returned HTTP 403 (Bunny Shield challenge) to automated requests on 2026-10-31. Manual searching is required before publication.
 
 ---
 
@@ -96,9 +105,16 @@ GEO was evaluated but no dataset was admitted. Rationale: adult myocardial expre
 ### 5.1 SINASC (Live Birth Information System)
 - **URL:** DATASUS FTP `.../SINASC/NOV/DNRES/` and `.../SINASC/PRELIM/DNRES/`
 - **Files:** `DNRJ{year}.dbc` (Rio de Janeiro state), converted with `pyreaddbc` and read with `dbfread`.
-- **Coverage obtained:** 2010–2022 (consolidated) and **2025 (preliminary)**. **2023 and 2024 were absent from the FTP** on 2026-10-31.
+- **Coverage obtained:** 2010–2022 microdata (consolidated) and **2025 (preliminary)**. **2023 and 2024 microdata were absent from the FTP**; aggregate counts were obtained from **TabNet** (`nvrj23.dbf`, `nvrj24.dbf`).
 - **Fields used:** CODMUNRES, DTNASC, SEXO, IDANOMAL, CODANOMAL, IDADEMAE, ESCMAE, GESTACAO, SEMAGESTAC, PESO, APGAR1/5, GRAVIDEZ, PARTO, CONSULTAS, RACACOR.
 - **Limitation:** `CODANOMAL` concatenates 4-character codes; CHD ascertainment at birth is incomplete (59 cases in 98,598 births).
+
+### 5.1b TabNet (SINASC aggregates)
+- **URL:** `http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinasc/cnv/nvRJ.def`
+- **Method:** Latin-1 form POST after session handshake (script `src/graphambicardio/epi/tabnet.py`).
+- **Obtained:** 2022 (control), 2023, 2024 and 2025 births and Q20–Q28 group counts.
+- **Validated:** 2025 TabNet (5.924 births, 9 cases) matches the microdata exactly.
+- **Limitation:** TabNet counts only records whose anomaly group is “malformações congênitas do aparelho circulatório”; the microdata parser counts **any** Q20–Q28 code. The two series are kept separate.
 
 ### 5.2 SIH/SUS (Hospital admissions)
 - **URL:** DATASUS FTP `.../SIHSUS/200801_/Dados/RDRJ{yy}{mm}.dbc`

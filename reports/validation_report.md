@@ -5,22 +5,22 @@ Generated: 2026-10-31
 ## graph
 
 Passed: **True**
-- n_nodes: 2234
-- n_relations: 4100
-- n_evidence: 4596
+- n_nodes: 2237
+- n_relations: 4115
+- n_evidence: 4611
 
 ## curated
 
 Passed: **True**
-- n_curated_edges: 46
-- n_unique_pmids: 29
-- sampled_for_recheck: 11
+- n_curated_edges: 54
+- n_unique_pmids: 33
+- sampled_for_recheck: 13
 
 ## pmid_resolution
 
 Passed: **True**
-- n_pmids: 29
-- n_resolved: 29
+- n_pmids: 33
+- n_resolved: 33
 - missing: []
 
 ## local_data

@@ -11,13 +11,15 @@
 |---|---|---|---|
 | PubMed/MEDLINE | NCBI E-utilities (`esearch`, `efetch`, XML) | Used | 3 req/s without key; 10 req/s with `NCBI_API_KEY` |
 | Europe PMC | REST `/search` (JSON, `resultType=core`) | Used | independent discovery + open access |
-| SciELO | `search.scielo.org` | **HTTP 403** | automated access blocked; not searched |
-| BVS/LILACS | `pesquisa.bvsalud.org` | **HTTP 403** | automated access blocked; not searched |
-| Portal CAPES | web interface only | Not automated | no public API; access requires institutional session |
+| SciELO | `search.scielo.org` (HTML) | **HTTP 403** | direct interface blocked; fallback via Crossref (below) |
+| SciELO (metadados) | Crossref `prefix:10.1590` | **Used** | official DOI metadata for SciELO articles; 100 records/query |
+| BVS/LILACS | `pesquisa.bvsalud.org` | **HTTP 403** | Bunny Shield challenge; not searched |
+| CAPES (Catálogo de Teses) | `catalogodeteses.capes.gov.br` REST | **Used** | 552 theses for “cardiopatias congênitas” |
+| Portal de Periódicos CAPES | web interface | Not automated | full text requires institutional authentication |
 | Google Scholar | — | Not used | not reproducible; no record-level export |
 | Reference lists | manual | Partially used | reviews and anchor papers checked for key references |
 
-The failure of SciELO/BVS is a real limitation: Portuguese-language and Latin American literature is under-represented. It is recorded in `09_LIMITATIONS_AND_GAPS.md`.
+SciELO was ultimately accessed through **Crossref metadata restricted to the SciELO DOI prefix (10.1590)**, because the direct search interface returned HTTP 403/Bunny Shield to automated clients. CAPES was accessed through the **public Catálogo de Teses e Dissertações API**. BVS/LILACS remained inaccessible. These routes and their limitations are recorded in `09_LIMITATIONS_AND_GAPS.md`.
 
 ---
 
@@ -122,6 +124,27 @@ Each phenotype uses its label and accepted variants in `[tiab]` (e.g. VSD: `"ven
 
 ---
 
+## 4.1 Buscas em R (SciELO e CAPES)
+
+```bash
+Rscript R/collection/scielo.R   # Crossref, prefixo 10.1590
+Rscript R/collection/capes.R    # Catálogo de Teses e Dissertações
+```
+
+Resultados em `literature/searches/scielo_*.json` e `capes_*.json`:
+
+| Busca | Fonte | Resultado |
+|---|---|---:|
+| cardiopatia congênita + exposição ambiental | SciELO/Crossref | 100 recuperados; 50 com termos de CHD |
+| cardiopatia congênita + poluição do ar/PM | SciELO/Crossref | 100 recuperados; 42 com termos de CHD |
+| cardiopatia congênita + agrotóxicos | SciELO/Crossref | 100 recuperados; 42 com termos de CHD |
+| cardiopatia congênita + temperatura/calor | SciELO/Crossref | 100 recuperados; 60 com termos de CHD |
+| cardiopatia congênita + umidade | SciELO/Crossref | 100 recuperados; 50 com termos de CHD |
+| cardiopatias congênitas | CAPES Teses | 552 registros |
+| poluição do ar + cardiopatia | CAPES Teses | 0 |
+| agrotóxicos + cardiopatia | CAPES Teses | 1 |
+| temperatura + cardiopatia congênita | CAPES Teses | 7 |
+
 ## 5. Deduplication and screening flow (PRISMA-ScR)
 
 Deduplication key precedence: PMID → DOI → normalised title (alphanumeric, lower-case, first 200 characters).
@@ -131,11 +154,13 @@ Deduplication key precedence: PMID → DOI → normalised title (alphanumeric, l
 | PubMed domain searches (5) | 498 | top 100 per domain |
 | PubMed pair searches (196) | 513 | top 15 per pair |
 | Europe PMC searches (5) | 439 | top 100 / all available |
-| **Total retrieved** | **1,450** | |
-| Duplicates removed | 355 | 24.5% of retrieved |
-| **Unique records screened** | **1,095** | title/abstract |
-| Unique with abstract | 1,003 | 91.6% |
-| Manually curated anchor studies | 29 | 46 evidence edges |
+| SciELO via Crossref (5) | 500 | 100 per query |
+| CAPES Teses (4) | 28 | 20 per query; 560 total hits |
+| **Total raw records** | **1,978** | includes repeats across pair searches |
+| Duplicates removed | 529 | within-source repeats + PMID/DOI/title |
+| **Unique records screened** | **1,449** | title/abstract (automated triage) |
+| Unique with abstract (PubMed/Europe PMC subset) | 1,003 | 91.6% of that subset |
+| Manually curated anchor studies | 33 | 54 evidence edges |
 
 Machine-readable: `reports/prisma_flow.csv`.
 
@@ -145,7 +170,7 @@ Machine-readable: `reports/prisma_flow.csv`.
 2. **Manual reading** of anchor studies (29) selected to cover: each exposure with positive human evidence, each mechanism with experimental evidence, each process→phenotype link, and the classic gene discoveries.
 3. **Audit** of quote fidelity at build time (100%) and re-check of a random 25% at validation time.
 
-This is **not** a full dual-reviewer systematic review. No kappa is reported because full-text dual screening was not performed. The manual audit sample (`reports/manual_audit_sample.csv`) is provided for a future two-reviewer reliability assessment.
+This is **not a systematic review**. It is a structured, non-systematic search with targeted manual curation: there was no dual independent screening of all records, no full-text review, no formal risk-of-bias instrument and no kappa. The manual audit sample (`reports/manual_audit_sample.csv`) is provided for a future two-reviewer reliability assessment.
 
 ---
 
