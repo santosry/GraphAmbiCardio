@@ -73,7 +73,12 @@ Há duas camadas integradas e **nunca misturadas**:
 
 ## 3. CEKP: aplicativo Shiny
 
+**Site publicado:** **https://arbovirosescamposiff.shinyapps.io/cekp/**
+
+O plano gratuito do shinyapps.io coloca o aplicativo em repouso após inatividade; a primeira abertura pode levar ~30 segundos.
+
 ```r
+# execução local
 shiny::runApp("app")
 ```
 
@@ -87,6 +92,8 @@ Aplicativo em português brasileiro com oito abas:
 6. **Consulta científica** — pergunta por exposição e recupera mecanismos, fenótipos, genes, caminhos e referências.
 7. **Métodos** — desenho, buscas, bases, gradação e limitações.
 8. **FAIR e uso de IA** — metadados, licenças e declaração de IA (Portaria CNPq 2.664/2026).
+
+Publicação: `Rscript scripts/deploy/deploy_shinyapps.R` (requer conta configurada no `rsconnect`).
 
 Detalhes: `docs/14_CEKP_APP.md`.
 

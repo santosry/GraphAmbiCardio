@@ -4,6 +4,12 @@ O **CardioEnvironment Knowledge Platform (CEKP)** é a interface interativa do e
 
 ---
 
+## 0. Site publicado
+
+**https://arbovirosescamposiff.shinyapps.io/cekp/**
+
+Hospedado no shinyapps.io (conta `arbovirosescamposiff`). O plano gratuito suspende a instância após inatividade; a primeira requisição pode levar ~30 s.
+
 ## 1. Como executar
 
 Requisitos: R ≥ 4.4 com `shiny`, `bslib`, `DT`, `visNetwork`, `plotly`, `dplyr`, `readr`, `jsonlite`, `stringr`, `scales`, `htmltools`, `igraph`.
@@ -52,8 +58,10 @@ python scripts/app/02_fair_metadata.py
 O app é autocontido e pode ser publicado em `shinyapps.io`, Shiny Server ou Posit Connect. Para publicar:
 
 ```r
-rsconnect::deployApp("app", appName = "cekp")
+rsconnect::deployApp("app", appName = "cekp", account = "arbovirosescamposiff", server = "shinyapps.io")
 ```
+
+ou `Rscript scripts/deploy/deploy_shinyapps.R`.
 
 Antes de publicar, verifique:
 1. licenças dos dados de terceiros;
