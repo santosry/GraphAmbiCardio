@@ -28,9 +28,9 @@ crossref_scielo <- function(query, rows = 100, from = "2010-01-01") {
       filter = paste0("prefix:10.1590,from-pub-date:", from),
       rows = rows,
       select = "DOI,title,container-title,issued,author,abstract,URL,type",
-      mailto = "research@example.org"
+      mailto = "ryan.paulo@gsuite.iff.edu.br"
     ),
-    add_headers(`User-Agent` = "GraphAmbiCardio/0.1 (mailto:research@example.org)"),
+    add_headers(`User-Agent` = "GraphAmbiCardio/0.1 (mailto:ryan.paulo@gsuite.iff.edu.br)"),
     timeout(120)
   )
   if (status_code(resp) != 200) stop("Crossref HTTP ", status_code(resp))

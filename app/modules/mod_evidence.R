@@ -48,8 +48,8 @@ mod_evidence_server <- function(id) {
                   Confiança = round(confidence, 2), Grau = grade, `n evidências` = n_evidence,
                   Referências = references)
       datatable(d, rownames = FALSE, selection = "single",
-                options = list(pageLength = 12, scrollX = TRUE, order = list(list(5, "desc")))) %>%
-        formatStyle("Nível", backgroundColor = styleEqual(names(TIER_COLORS), unname(TIER_COLORS)), color = "white")
+                options = list(pageLength = 12, order = list(list(5, "desc")))) %>%
+        formatStyle("Nível", backgroundColor = styleEqual(names(TIER_COLORS), unname(TIER_COLORS)), color = styleEqual(names(TIER_TEXT), unname(TIER_TEXT)))
     }, server = FALSE)
 
     output$download <- downloadHandler(

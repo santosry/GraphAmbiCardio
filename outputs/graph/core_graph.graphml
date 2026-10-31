@@ -1,9 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d18" for="edge" attr.name="retrieved_at" attr.type="string" />
-  <key id="d17" for="edge" attr.name="source_database" attr.type="string" />
-  <key id="d16" for="edge" attr.name="references" attr.type="string" />
-  <key id="d15" for="edge" attr.name="confidence_detail" attr.type="string" />
+  <key id="d20" for="edge" attr.name="retrieved_at" attr.type="string" />
+  <key id="d19" for="edge" attr.name="source_database" attr.type="string" />
+  <key id="d18" for="edge" attr.name="references" attr.type="string" />
+  <key id="d17" for="edge" attr.name="confidence_detail" attr.type="string" />
+  <key id="d16" for="edge" attr.name="evidence_tier_label" attr.type="string" />
+  <key id="d15" for="edge" attr.name="evidence_tier" attr.type="string" />
   <key id="d14" for="edge" attr.name="grade" attr.type="string" />
   <key id="d13" for="edge" attr.name="confidence" attr.type="string" />
   <key id="d12" for="edge" attr.name="study_designs" attr.type="string" />
@@ -28,12 +30,14 @@
     <node id="GENE:NOTCH1" />
     <node id="CHD:AS" />
     <node id="GENE:TBX5" />
+    <node id="EXP:CO" />
     <node id="EXP:HEAT" />
-    <node id="EXP:METALS" />
     <node id="CHD:ALL" />
+    <node id="EXP:METALS" />
     <node id="EXP:NO2" />
     <node id="CHD:COA" />
     <node id="EXP:O3" />
+    <node id="EXP:PM10" />
     <node id="EXP:PM25" />
     <node id="MECH:INFLAM" />
     <node id="EXP:SMOKE" />
@@ -43,8 +47,10 @@
     <node id="EXP:DIOXIN" />
     <node id="MECH:AHR" />
     <node id="PROC:CM_DIFF" />
+    <node id="MECH:WNT" />
     <node id="MECH:RA_SIGNAL" />
     <node id="MECH:NEURAL_CREST" />
+    <node id="MECH:MITO" />
     <node id="MECH:HDAC" />
     <node id="PROC:LOOPING" />
     <node id="PROC:AV_CUSHION" />
@@ -66,10 +72,12 @@
       <data key="d12">case_control;curated_database</data>
       <data key="d13">0.95</data>
       <data key="d14">A</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
-      <data key="d16">12845333;OMIM:607941;OMIM:614429</data>
-      <data key="d17">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
+      <data key="d18">12845333;OMIM:607941;OMIM:614429</data>
+      <data key="d19">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="GENE:GATA4" target="CHD:VSD">
       <data key="d0">EDGE:fafebf50ed3f</data>
@@ -87,10 +95,12 @@
       <data key="d12">case_control;curated_database</data>
       <data key="d13">0.95</data>
       <data key="d14">A</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
-      <data key="d16">12845333;OMIM:607941;OMIM:614429</data>
-      <data key="d17">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
+      <data key="d18">12845333;OMIM:607941;OMIM:614429</data>
+      <data key="d19">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="GENE:NKX2-5" target="CHD:ASD">
       <data key="d0">EDGE:a26223f1fa52</data>
@@ -108,10 +118,12 @@
       <data key="d12">case_control;curated_database</data>
       <data key="d13">0.95</data>
       <data key="d14">A</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.15, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 4}</data>
-      <data key="d16">9651244;OMIM:108900;OMIM:614432;ORPHA:2248</data>
-      <data key="d17">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.15, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 4}</data>
+      <data key="d18">9651244;OMIM:108900;OMIM:614432;ORPHA:2248</data>
+      <data key="d19">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="GENE:NKX2-5" target="CHD:TOF">
       <data key="d0">EDGE:2badc0add480</data>
@@ -129,10 +141,12 @@
       <data key="d12">case_control;curated_database</data>
       <data key="d13">0.95</data>
       <data key="d14">A</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.15, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 4}</data>
-      <data key="d16">10587520;OMIM:108900;OMIM:187500;ORPHA:3303</data>
-      <data key="d17">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.15, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 4}</data>
+      <data key="d18">10587520;OMIM:108900;OMIM:187500;ORPHA:3303</data>
+      <data key="d19">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="GENE:NOTCH1" target="CHD:AS">
       <data key="d0">EDGE:c95e0acd495e</data>
@@ -150,10 +164,12 @@
       <data key="d12">case_control;curated_database</data>
       <data key="d13">0.95</data>
       <data key="d14">A</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
-      <data key="d16">16025100;OMIM:109730;ORPHA:402075</data>
-      <data key="d17">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
+      <data key="d18">16025100;OMIM:109730;ORPHA:402075</data>
+      <data key="d19">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="GENE:TBX5" target="CHD:ASD">
       <data key="d0">EDGE:7cac79171db6</data>
@@ -171,10 +187,12 @@
       <data key="d12">case_control;curated_database</data>
       <data key="d13">0.95</data>
       <data key="d14">A</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
-      <data key="d16">8988165;OMIM:142900;ORPHA:392</data>
-      <data key="d17">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
+      <data key="d18">8988165;OMIM:142900;ORPHA:392</data>
+      <data key="d19">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="GENE:TBX5" target="CHD:VSD">
       <data key="d0">EDGE:ef9575390105</data>
@@ -192,10 +210,81 @@
       <data key="d12">case_control;curated_database</data>
       <data key="d13">0.95</data>
       <data key="d14">A</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
-      <data key="d16">8988165;OMIM:142900;ORPHA:392</data>
-      <data key="d17">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.1, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 3}</data>
+      <data key="d18">8988165;OMIM:142900;ORPHA:392</data>
+      <data key="d19">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
+    </edge>
+    <edge source="EXP:CO" target="CHD:TOF">
+      <data key="d0">EDGE:6b7e04092e3e</data>
+      <data key="d1">EXP:CO|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TOF</data>
+      <data key="d2">EXP:CO</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:TOF</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">meta_analysis</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">32278917</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
+    </edge>
+    <edge source="EXP:CO" target="CHD:VSD">
+      <data key="d0">EDGE:c954e3b3ed62</data>
+      <data key="d1">EXP:CO|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:VSD</data>
+      <data key="d2">EXP:CO</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:VSD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">21329916</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
+    </edge>
+    <edge source="EXP:HEAT" target="CHD:ALL">
+      <data key="d0">EDGE:a2a0c4093376</data>
+      <data key="d1">EXP:HEAT|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:ALL</data>
+      <data key="d2">EXP:HEAT</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:ALL</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">39105774</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:HEAT" target="CHD:ASD">
       <data key="d0">EDGE:fc955d01748b</data>
@@ -213,10 +302,12 @@
       <data key="d12">cohort</data>
       <data key="d13">0.85</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">27494594</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">27494594</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:HEAT" target="MECH:NEURAL_CREST">
       <data key="d0">EDGE:6ac4054ffcfb</data>
@@ -234,10 +325,12 @@
       <data key="d12">animal_in_vivo</data>
       <data key="d13">0.585</data>
       <data key="d14">C</data>
-      <data key="d15">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">29018170</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">29018170</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:METALS" target="CHD:ALL">
       <data key="d0">EDGE:08ffbc4b9560</data>
@@ -255,10 +348,12 @@
       <data key="d12">case_control</data>
       <data key="d13">0.85</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">33135766</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">33135766</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:NO2" target="CHD:COA">
       <data key="d0">EDGE:3a7dcf0e9512</data>
@@ -276,10 +371,12 @@
       <data key="d12">meta_analysis</data>
       <data key="d13">0.85</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">32278917</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">32278917</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:NO2" target="CHD:VSD">
       <data key="d0">EDGE:a4cb85d922d8</data>
@@ -297,10 +394,12 @@
       <data key="d12">case_control</data>
       <data key="d13">0.85</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">21329916</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">21329916</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:O3" target="CHD:ASD">
       <data key="d0">EDGE:5042b42a75cd</data>
@@ -318,10 +417,35 @@
       <data key="d12">meta_analysis</data>
       <data key="d13">0.85</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">32278917</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">32278917</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
+    </edge>
+    <edge source="EXP:PM10" target="CHD:ASD">
+      <data key="d0">EDGE:07029dc61f97</data>
+      <data key="d1">EXP:PM10|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:ASD</data>
+      <data key="d2">EXP:PM10</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:ASD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">meta_analysis</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">32278917</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:PM25" target="MECH:INFLAM">
       <data key="d0">EDGE:ff3655bf49bb</data>
@@ -339,10 +463,12 @@
       <data key="d12">cohort</data>
       <data key="d13">0.85</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">34934889</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">34934889</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:PM25" target="CHD:TOF">
       <data key="d0">EDGE:50e6ff69c29c</data>
@@ -360,10 +486,12 @@
       <data key="d12">meta_analysis</data>
       <data key="d13">0.75</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">32278917</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">32278917</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:PM25" target="CHD:VSD">
       <data key="d0">EDGE:0a9693c08f76</data>
@@ -381,10 +509,58 @@
       <data key="d12">case_control</data>
       <data key="d13">0.75</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">26705853</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">26705853</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
+    </edge>
+    <edge source="EXP:PM25" target="MECH:AHR">
+      <data key="d0">EDGE:e3a03198eabc</data>
+      <data key="d1">EXP:PM25|EXPOSURE_MODULATES_MECHANISM|MECH:AHR</data>
+      <data key="d2">EXP:PM25</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">MECH:AHR</data>
+      <data key="d5">Mechanism</data>
+      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">experimental_animal</data>
+      <data key="d11">zebrafish</data>
+      <data key="d12">animal_in_vivo</data>
+      <data key="d13">0.585</data>
+      <data key="d14">C</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">27216425</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
+    </edge>
+    <edge source="EXP:PM25" target="MECH:MITO">
+      <data key="d0">EDGE:2918dc6ec799</data>
+      <data key="d1">EXP:PM25|EXPOSURE_MODULATES_MECHANISM|MECH:MITO</data>
+      <data key="d2">EXP:PM25</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">MECH:MITO</data>
+      <data key="d5">Mechanism</data>
+      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">experimental_animal</data>
+      <data key="d11">zebrafish</data>
+      <data key="d12">animal_in_vivo</data>
+      <data key="d13">0.585</data>
+      <data key="d14">C</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">36841371</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:SMOKE" target="CHD:ALL">
       <data key="d0">EDGE:1405ed2059aa</data>
@@ -402,10 +578,12 @@
       <data key="d12">cohort</data>
       <data key="d13">0.85</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">35916623</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">35916623</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:SMOKE" target="CHD:TOF">
       <data key="d0">EDGE:7bdf0dca34ec</data>
@@ -423,10 +601,12 @@
       <data key="d12">cohort</data>
       <data key="d13">0.85</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">35916623</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">35916623</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:VPA" target="CHD:ALL">
       <data key="d0">EDGE:4959baa05fd1</data>
@@ -444,10 +624,12 @@
       <data key="d12">meta_analysis</data>
       <data key="d13">0.85</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">41161707</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">41161707</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:VPA" target="MECH:HDAC">
       <data key="d0">EDGE:16b23e3a6f1b</data>
@@ -465,10 +647,12 @@
       <data key="d12">animal_in_vivo</data>
       <data key="d13">0.585</data>
       <data key="d14">C</data>
-      <data key="d15">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">32699959</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">32699959</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:ALCOHOL" target="CHD:TGA">
       <data key="d0">EDGE:ab3b8e795c4c</data>
@@ -486,10 +670,12 @@
       <data key="d12">meta_analysis</data>
       <data key="d13">0.75</data>
       <data key="d14">B</data>
-      <data key="d15">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">26110619</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">26110619</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:ALCOHOL" target="MECH:RA_SIGNAL">
       <data key="d0">EDGE:f949a24767b7</data>
@@ -507,10 +693,12 @@
       <data key="d12">animal_in_vivo</data>
       <data key="d13">0.585</data>
       <data key="d14">C</data>
-      <data key="d15">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">23832875</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">23832875</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="EXP:DIOXIN" target="MECH:AHR">
       <data key="d0">EDGE:da44987612bf</data>
@@ -528,10 +716,12 @@
       <data key="d12">in_vitro</data>
       <data key="d13">0.665</data>
       <data key="d14">C</data>
-      <data key="d15">{"base_strength": 0.715, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">30266049</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.715, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">30266049</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="MECH:AHR" target="PROC:CM_DIFF">
       <data key="d0">EDGE:a907cf715228</data>
@@ -549,10 +739,12 @@
       <data key="d12">in_vitro</data>
       <data key="d13">0.665</data>
       <data key="d14">C</data>
-      <data key="d15">{"base_strength": 0.715, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">30266049</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.715, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">30266049</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="MECH:AHR" target="PROC:LOOPING">
       <data key="d0">EDGE:2e787f7c6279</data>
@@ -570,10 +762,58 @@
       <data key="d12">animal_in_vivo</data>
       <data key="d13">0.585</data>
       <data key="d14">C</data>
-      <data key="d15">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">33662880</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">33662880</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
+    </edge>
+    <edge source="MECH:AHR" target="MECH:WNT">
+      <data key="d0">EDGE:beb16312a278</data>
+      <data key="d1">MECH:AHR|MECHANISM_MODULATES_MECHANISM|MECH:WNT</data>
+      <data key="d2">MECH:AHR</data>
+      <data key="d3">Mechanism</data>
+      <data key="d4">MECH:WNT</data>
+      <data key="d5">Mechanism</data>
+      <data key="d6">MECHANISM_MODULATES_MECHANISM</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">experimental_animal</data>
+      <data key="d11">zebrafish</data>
+      <data key="d12">animal_in_vivo</data>
+      <data key="d13">0.585</data>
+      <data key="d14">C</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">27216425</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
+    </edge>
+    <edge source="MECH:WNT" target="PROC:CM_DIFF">
+      <data key="d0">EDGE:d049da8cd2ec</data>
+      <data key="d1">MECH:WNT|MECHANISM_INTERFERES_WITH_PROCESS|PROC:CM_DIFF</data>
+      <data key="d2">MECH:WNT</data>
+      <data key="d3">Mechanism</data>
+      <data key="d4">PROC:CM_DIFF</data>
+      <data key="d5">Process</data>
+      <data key="d6">MECHANISM_INTERFERES_WITH_PROCESS</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">experimental_human</data>
+      <data key="d11">human</data>
+      <data key="d12">in_vitro</data>
+      <data key="d13">0.665</data>
+      <data key="d14">C</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.715, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">33558697</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="MECH:HDAC" target="PROC:AV_CUSHION">
       <data key="d0">EDGE:7522450a3f9d</data>
@@ -591,10 +831,12 @@
       <data key="d12">animal_in_vivo</data>
       <data key="d13">0.585</data>
       <data key="d14">C</data>
-      <data key="d15">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">22634317</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">22634317</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
     <edge source="MECH:OXSTRESS" target="PROC:NEURAL_CREST_MIGRATION">
       <data key="d0">EDGE:c1a6d5a509fe</data>
@@ -612,10 +854,12 @@
       <data key="d12">animal_in_vivo</data>
       <data key="d13">0.585</data>
       <data key="d14">C</data>
-      <data key="d15">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d16">18435457</data>
-      <data key="d17">PubMed/MEDLINE (manual curation)</data>
-      <data key="d18">2026-10-31</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">18435457</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-10-31</data>
     </edge>
   </graph>
 </graphml>

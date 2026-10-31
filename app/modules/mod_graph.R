@@ -1,30 +1,33 @@
 mod_graph_ui <- function(id) {
   ns <- NS(id)
-  layout_sidebar(
-    sidebar = sidebar(
-      width = 330,
-      radioButtons(ns("mode"), "Modo de visualização",
-                   choices = c("Conceitual" = "conceptual", "Molecular (sem variantes)" = "molecular", "Completo" = "full"),
-                   selected = "conceptual"),
-      checkboxGroupInput(ns("tiers"), "Nível de evidência",
-                         choices = TIER_ORDER, selected = TIER_ORDER),
-      selectInput(ns("exposure"), "Focar em uma exposição",
-                  choices = c("Todas" = "", setNames(hierarchy$exposicao_id, hierarchy$exposicao))),
-      selectInput(ns("phenotype"), "Focar em um fenótipo",
-                  choices = c("Todos" = "", setNames(
-                    nodes$node_id[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"],
-                    nodes$label[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"]))),
-      sliderInput(ns("conf"), "Confiança mínima da aresta", min = 0, max = 0.95, value = 0.40, step = 0.05),
-      textInput(ns("search"), "Buscar rótulo", placeholder = "ex.: PM2.5, Wnt, septação"),
-      actionButton(ns("reset"), "Limpar filtros", class = "btn-outline-secondary btn-sm"),
-      hr(),
-      div(class = "small-muted",
-          "Arraste os nós, use a roda para zoom e clique em um nó para ver as evidências. ",
-          "Arestas tracejadas indicam hipótese ou regra inferida; a cor indica o nível de evidência.")
+  tagList(
+    card(
+      class = "filter-card",
+      card_body(
+        layout_columns(
+          col_widths = c(2, 2, 2, 2, 2, 2),
+          radioButtons(ns("mode"), "Visualização",
+                       choices = c("Conceitual" = "conceptual", "Molecular" = "molecular", "Completo" = "full"),
+                       selected = "conceptual", inline = FALSE),
+          checkboxGroupInput(ns("tiers"), "Nível de evidência",
+                             choices = TIER_ORDER, selected = TIER_ORDER),
+          selectInput(ns("exposure"), "Exposição",
+                      choices = c("Todas" = "", setNames(hierarchy$exposicao_id, hierarchy$exposicao))),
+          selectInput(ns("phenotype"), "Fenótipo",
+                      choices = c("Todos" = "", setNames(
+                        nodes$node_id[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"],
+                        nodes$label[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"]))),
+          sliderInput(ns("conf"), "Confiança mínima", min = 0, max = 0.95, value = 0.40, step = 0.05),
+          div(
+            textInput(ns("search"), "Buscar", placeholder = "PM2.5, Wnt, septação"),
+            actionButton(ns("reset"), "Limpar", class = "btn-outline-secondary btn-sm w-100")
+          )
+        )
+      )
     ),
     card(
       card_header(textOutput(ns("caption"))),
-      card_body(visNetworkOutput(ns("network"), height = "640px"))
+      card_body(class = "graph-body", visNetworkOutput(ns("network"), height = "68vh"))
     ),
     card(
       card_header("Detalhes do nó selecionado"),
@@ -82,10 +85,8 @@ mod_graph_server <- function(id) {
 
     output$caption <- renderText({
       gd <- graph_data()
-      sprintf("%s nós e %s arestas · modo %s · confiança ≥ %.2f",
-              fmt_int(nrow(gd$nodes)), fmt_int(nrow(gd$edges)),
-              switch(input$mode, conceptual = "conceitual", molecular = "molecular", full = "completo"),
-              input$conf)
+      sprintf("%s nós · %s arestas · confiança ≥ %.2f",
+              fmt_int(nrow(gd$nodes)), fmt_int(nrow(gd$edges)), input$conf)
     })
 
     output$network <- renderVisNetwork({
@@ -100,12 +101,12 @@ mod_graph_server <- function(id) {
           group = unname(TYPE_LABELS[type]),
           label = as.character(ifelse(is.na(label), node_id, label)),
           title = as.character(paste0("<b>", label, "</b><br>", TYPE_LABELS[type],
-                         "<br><span style='color:#888'>", node_id, "</span>")),
+                                      "<br><span style='color:#666'>", node_id, "</span>")),
           color = unname(TYPE_COLORS[type]),
           shape = ifelse(type == "Phenotype", "hexagon",
                          ifelse(type == "Exposure", "square",
                                 ifelse(type == "Process", "triangle", "dot"))),
-          size = as.numeric(12 + 2.4 * sqrt(ifelse(is.na(deg[node_id]), 1, as.numeric(deg[node_id]))))
+          size = as.numeric(11 + 2.2 * sqrt(ifelse(is.na(deg[node_id]), 1, as.numeric(deg[node_id]))))
         ) %>%
         select(id = node_id, label, group, title, color, shape, size)
       ed <- gd$edges %>%
@@ -114,8 +115,8 @@ mod_graph_server <- function(id) {
           label = as.character(edge_label(relation)),
           label = ifelse(is.na(label), "", label),
           title = as.character(paste0("<b>", edge_label(relation), "</b><br>", evidence_tier_label,
-                         "<br>confiança: ", round(confidence, 2), " (", grade, ")",
-                         "<br>referências: ", references)),
+                                      "<br>confiança: ", round(confidence, 2), " (", grade, ")",
+                                      "<br>referências: ", references)),
           color = unname(TIER_COLORS[evidence_tier_label]),
           dashes = layer %in% c("hypothesis", "inferred"),
           width = 0.6 + 3.2 * confidence,
@@ -125,9 +126,9 @@ mod_graph_server <- function(id) {
       visNetwork(nd, ed) %>%
         visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
                    nodesIdSelection = FALSE) %>%
-        visInteraction(navigationButtons = TRUE, tooltipDelay = 120) %>%
+        visInteraction(navigationButtons = TRUE, tooltipDelay = 120, hideEdgesOnDrag = TRUE) %>%
         visPhysics(solver = "forceAtlas2Based",
-                   stabilization = list(enabled = TRUE, iterations = 200)) %>%
+                   stabilization = list(enabled = TRUE, iterations = 180)) %>%
         visLegend(useGroups = TRUE, position = "right", ncol = 1, main = "Tipo de nó") %>%
         visEdges(smooth = list(type = "continuous"))
     })
@@ -135,10 +136,10 @@ mod_graph_server <- function(id) {
     output$node_details <- renderUI({
       sel <- input$network_selected
       if (is.null(sel) || !nzchar(sel)) {
-        return(div(class = "small-muted", "Clique em um nó do grafo para ver seus dados, relações e evidências."))
+        return(div(class = "empty-state", "Clique em um nó para ver dados, relações e evidências."))
       }
       n <- nodes %>% filter(node_id == sel)
-      if (nrow(n) == 0) return(div(class = "small-muted", "Nó não encontrado."))
+      if (nrow(n) == 0) return(div(class = "empty-state", "Nó não encontrado."))
       n <- n[1, ]
       tagList(
         div(class = "detail-box",
@@ -148,9 +149,8 @@ mod_graph_server <- function(id) {
             if (nzchar(n$description)) p(n$description),
             DTOutput(session$ns("inc_table"))
         ),
-        br(),
-        card(card_header("Evidências das relações incidentes"),
-             card_body(DTOutput(session$ns("ev_table"))))
+        div(style = "height:1rem;"),
+        card(card_header("Evidências"), card_body(DTOutput(session$ns("ev_table"))))
       )
     })
 
@@ -160,10 +160,11 @@ mod_graph_server <- function(id) {
       inc <- relations %>% filter(source_id == sel | target_id == sel) %>%
         transmute(Origem = node_label(source_id), Relação = edge_label(relation),
                   Destino = node_label(target_id), Nível = evidence_tier_label,
-                  Confiança = round(confidence, 2), Grau = grade, Referências = references) %>%
+                  Confiança = round(confidence, 2), Referências = references) %>%
         arrange(desc(Confiança))
-      datatable(inc, rownames = FALSE, options = list(pageLength = 8, scrollX = TRUE, dom = "tp")) %>%
-        formatStyle("Nível", backgroundColor = styleEqual(names(TIER_COLORS), unname(TIER_COLORS)), color = "white")
+      datatable(inc, rownames = FALSE, options = list(pageLength = 6, dom = "tp", autoWidth = TRUE)) %>%
+        formatStyle("Nível", backgroundColor = styleEqual(names(TIER_COLORS), unname(TIER_COLORS)),
+                    color = styleEqual(names(TIER_TEXT), unname(TIER_TEXT)))
     }, server = FALSE)
 
     output$ev_table <- renderDT({
@@ -172,9 +173,8 @@ mod_graph_server <- function(id) {
       inc <- relations %>% filter(source_id == sel | target_id == sel)
       ev <- evidence %>% filter(edge_key %in% inc$edge_key) %>%
         transmute(Relação = edge_label(relation), Evidência = evidence_type, Desenho = study_design,
-                  Espécie = species, Referência = reference, Contexto = context,
-                  Trecho = substr(quote, 1, 220))
-      datatable(ev, rownames = FALSE, options = list(pageLength = 8, scrollX = TRUE, dom = "tp"))
+                  Espécie = species, Referência = reference, Trecho = substr(quote, 1, 180))
+      datatable(ev, rownames = FALSE, options = list(pageLength = 6, dom = "tp", autoWidth = TRUE))
     }, server = FALSE)
   })
 }

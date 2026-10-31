@@ -208,8 +208,8 @@
       "description": "Uma linha por evidência, com referência, espécie, desenho, citação e limitações",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 1596230,
-      "hash": "sha256:89f41d50113580f693335e76e40982c269a29b51b2735931bbc55f82a4e42457",
+      "bytes": 1596446,
+      "hash": "sha256:445a792437ff269612592ff8270435102d914d1b18729bb4f915b015153487ef",
       "schema": {
         "fields": [
           {
@@ -305,8 +305,8 @@
       "description": "Hipóteses geradas por composição de arestas observadas",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 2799,
-      "hash": "sha256:c1fbd58fb036e60d103558d64fe40934ba3505db0ac5cb18caa7968510c8d137",
+      "bytes": 3015,
+      "hash": "sha256:29e46289d49108ff33d2fd88ee47e4161c6e5c1cbd3d8ee936b0471d27a8d9d7",
       "schema": {
         "fields": [
           {
@@ -713,8 +713,8 @@
       "description": "Hipóteses por sobreposição gênica (não evidenciais)",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 1137,
-      "hash": "sha256:1bf59f15ec462828755b6ca1bc9dd7bc811b8350e3434d49c691991befea8938",
+      "bytes": 1434,
+      "hash": "sha256:06952c306ddaeff85e30de04059c89704b0fbecad48c4d5443f48b00808371f7",
       "schema": {
         "fields": [
           {
@@ -752,6 +752,30 @@
           {
             "name": "missing_link",
             "type": "object"
+          },
+          {
+            "name": "universe_genes",
+            "type": "int64"
+          },
+          {
+            "name": "phenotype_genes",
+            "type": "int64"
+          },
+          {
+            "name": "mechanism_genes",
+            "type": "int64"
+          },
+          {
+            "name": "p_hyper",
+            "type": "float64"
+          },
+          {
+            "name": "q_fdr",
+            "type": "float64"
+          },
+          {
+            "name": "fdr_significant",
+            "type": "bool"
           }
         ]
       }

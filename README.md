@@ -50,7 +50,7 @@ Há duas camadas integradas e **nunca misturadas**:
 - **2.238 nós**, **4.117 relações**, **4.613 linhas de evidência**.
 - Camadas: **observada 54**, **estruturada 4.040**, **inferida 4**, **hipótese 14**, **ecológica 3**.
 - **27 caminhos exposição→fenótipo** (17 diretos, 10 mecanísticos) e **20 lacunas explícitas**.
-- **5 hipóteses por sobreposição gênica** e **7 caminhos candidatos com elo ausente**.
+- **5 hipóteses por sobreposição gênica** (nenhuma significativa após BH-FDR) e **7 caminhos candidatos com elo ausente**.
 - Exportações: `outputs/graph/graph.graphml`, `graph.json`, `nodes.csv`, `relations.csv`, `evidence.csv`.
 
 ### Dados locais
@@ -58,7 +58,7 @@ Há duas camadas integradas e **nunca misturadas**:
 - SINASC: **98.598 nascimentos** (microdados 2010–2022 e 2025; **2023–2024 apenas agregados do TabNet**). **59 casos** nos microdados (5,98/10.000) — subnotificação grave. TabNet: 5 casos em 2023 e 5 em 2024; 2025 = 9 casos, compatível com os microdados.
 - SIH/SUS: **549 internações** por diagnóstico principal Q20–Q28 (**561 no total**, 12 apenas secundárias), **33 óbitos**, **55% fora do município**, 18 hospitais.
 - Clima: **5.844 dias** ERA5-Land; limiar de onda de calor 34,2 °C; **73 ondas / 363 dias**.
-- Modelo exploratório (56–59 eventos): temperatura OR **1,30/SD** (1,00–1,69); ajustado por estação **1,65** (1,13–2,42); modelo mensal **nulo** (RR 1,22; 0,94–1,60). PM2,5 municipal do VIGIAR foi **nulo** (OR 0,91/SD; 0,70–1,18) e permaneceu nulo no ajuste mútuo com temperatura (OR 1,01; 0,77–1,32). **Não é achado causal.**
+- Modelo exploratório (56–59 eventos): temperatura OR **1,30/SD** (1,00–1,69; p = 0,049, q = 0,214); ajustado por estação **1,65** (1,13–2,42; p = 0,010, q = 0,087); modelo mensal **nulo** (RR 1,22; 0,94–1,60). PM2,5 municipal do VIGIAR foi **nulo** (OR 0,91/SD; 0,70–1,18) e permaneceu nulo no ajuste mútuo com temperatura (OR 1,01; 0,77–1,32). **Nenhum modelo sobrevive ao FDR (q < 0,05); não é achado causal.**
 
 ### Hierarquia de exposições
 

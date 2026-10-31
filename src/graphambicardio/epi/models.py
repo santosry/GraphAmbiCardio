@@ -23,6 +23,7 @@ import statsmodels.formula.api as smf
 
 from .. import config
 from ..io_utils import get_logger, write_csv, write_json
+from ..stats.fdr import bh_fdr
 
 log = get_logger("models")
 
@@ -174,6 +175,20 @@ def negative_binomial(births: pd.DataFrame) -> dict[str, Any]:
     return out
 
 
+def add_fdr(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Attach Benjamini-Hochberg q-values to every model p-value."""
+    entries = []
+    for i, r in enumerate(results):
+        for key in ("p_value", "exposure_1_p", "exposure_2_p"):
+            if key in r and r[key] is not None:
+                entries.append((i, key))
+    qs = bh_fdr([results[i][key] for i, key in entries])
+    for (i, key), q in zip(entries, qs):
+        qkey = "q_value" if key == "p_value" else key[:-2] + "_q"
+        results[i][qkey] = round(q, 5)
+    return results
+
+
 def run(births: pd.DataFrame) -> list[dict[str, Any]]:
     exposures = [
         "win_temperature_2m_max_mean",
@@ -193,9 +208,9 @@ def run(births: pd.DataFrame) -> list[dict[str, Any]]:
         loo.append({"excluded_year": int(y), "or_per_sd": r.get("or_per_sd"), "ci_low": (r.get("or_per_sd_ci95") or [None, None])[0], "ci_high": (r.get("or_per_sd_ci95") or [None, None])[1], "p_value": r.get("p_value"), "n_events": r.get("n_events")})
     write_csv(config.TABLES / "sensitivity_leave_one_year_out.csv", loo)
     results.append({"model": "leave_one_year_out", "exposure": "win_temperature_2m_max_mean", "results": loo})
+    results = add_fdr(results)
     write_json(config.TABLES / "exploratory_models.json", results)
-    write_csv(
-        config.TABLES / "exploratory_models.csv",
-        [{k: (v if not isinstance(v, list) else ";".join(map(str, v))) for k, v in r.items()} for r in results],
-    )
+    flat = [{k: (v if not isinstance(v, list) else ";".join(map(str, v))) for k, v in r.items()} for r in results]
+    fields = sorted({k for row in flat for k in row})
+    write_csv(config.TABLES / "exploratory_models.csv", flat, fieldnames=fields)
     return results

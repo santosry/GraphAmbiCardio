@@ -90,7 +90,7 @@ dcat = {
     "modified": "2026-10-31",
     "creator": {"@type": "Organization", "name": "GraphAmbiCardio study team"},
     "publisher": {"@type": "Organization", "name": "GraphAmbiCardio study team"},
-    "contactPoint": {"@type": "ContactPoint", "email": "research@example.org"},
+    "contactPoint": {"@type": "ContactPoint", "email": "ryan.paulo@gsuite.iff.edu.br"},
     "keywords": ["congenital heart defects", "environmental exposure", "knowledge graph", "evidence grading", "FAIR", "Brazil"],
     "theme": ["http://id.nlm.nih.gov/mesh/D006330", "http://id.nlm.nih.gov/mesh/D000086382"],
     "spatial": {"@type": "Place", "name": "Campos dos Goytacazes, RJ, Brasil", "identifier": "IBGE:330100"},

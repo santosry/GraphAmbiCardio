@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libfreetype6-dev libgit2-dev pandoc \
     && rm -rf /var/lib/apt/lists/*
 
-RUN R -q -e "install.packages(c('shiny','bslib','DT','visNetwork','plotly','dplyr','readr','jsonlite','stringr','scales','htmltools','igraph','commonmark'), repos='https://packagemanager.posit.co/cran/2026-10-01', Ncpus=4)"
+RUN R -q -e "install.packages(c('shiny','bslib','DT','visNetwork','plotly','dplyr','readr','jsonlite','stringr','scales','htmltools','igraph','commonmark','viridisLite'), repos='https://packagemanager.posit.co/cran/2026-10-01', Ncpus=4)"
 
 COPY app /srv/graphambicardio
 WORKDIR /srv/graphambicardio

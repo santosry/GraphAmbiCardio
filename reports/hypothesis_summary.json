@@ -1,6 +1,7 @@
 {
   "n_candidates": 5,
+  "n_fdr_significant": 0,
   "n_candidate_paths": 7,
-  "rule": "gene-set overlap >= 5 genes between a canonical mechanism set and HPO phenotype genes; composition of observed edges for candidate paths",
+  "rule": "gene-set overlap >= 2 genes between a canonical mechanism set and HPO phenotype genes, with hypergeometric p and BH-FDR; composition of observed edges for candidate paths",
   "warning": "Hypotheses are not evidence. They are excluded from all path and centrality analyses."
 }

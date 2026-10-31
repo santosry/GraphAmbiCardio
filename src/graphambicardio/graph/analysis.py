@@ -12,9 +12,11 @@ from typing import Any
 
 import networkx as nx
 import pandas as pd
+from scipy.stats import hypergeom
 
 from .. import config
 from ..io_utils import get_logger, read_csv, write_csv, write_json
+from ..stats.fdr import bh_fdr
 
 log = get_logger("analysis")
 
@@ -131,27 +133,36 @@ def molecular_convergence(relations: list[dict[str, Any]]) -> tuple[list[dict[st
     genes_by_pheno: dict[str, set[str]] = defaultdict(set)
     for r in relations:
         if r["relation"] == "GENE_ASSOCIATED_WITH_PHENOTYPE" and r["layer"] in {"structured", "observed"}:
-            genes_by_pheno[r["target_id"]].add(r["source_id"])
+            g = r["source_id"].split(":", 1)[-1].upper()
+            if g and g != "-":
+                genes_by_pheno[r["target_id"]].add(g)
     rows = []
     for ph, genes in genes_by_pheno.items():
         rows.append({"phenotype_id": ph, "n_genes": len(genes), "genes": ";".join(sorted(genes)[:50])})
     rows.sort(key=lambda r: -r["n_genes"])
     pairs = []
+    universe = len(set().union(*genes_by_pheno.values())) if genes_by_pheno else 0
     for a, b in combinations(sorted(genes_by_pheno), 2):
         ga, gb = genes_by_pheno[a], genes_by_pheno[b]
         if not ga or not gb:
             continue
         inter = ga & gb
         jac = len(inter) / len(ga | gb)
+        p_hyper = float(hypergeom.sf(len(inter) - 1, universe, len(ga), len(gb))) if universe and ga and gb else 1.0
         pairs.append(
             {
                 "phenotype_a": a,
                 "phenotype_b": b,
                 "shared_genes": len(inter),
                 "jaccard": round(jac, 4),
+                "p_hyper": p_hyper,
                 "genes": ";".join(sorted(inter)[:30]),
             }
         )
+    qs = bh_fdr([p["p_hyper"] for p in pairs])
+    for p, q in zip(pairs, qs):
+        p["q_fdr"] = round(float(q), 6)
+        p["fdr_significant"] = bool(q < 0.05)
     pairs.sort(key=lambda r: (-r["shared_genes"], -r["jaccard"]))
     return rows, pairs
 

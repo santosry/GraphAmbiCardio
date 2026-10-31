@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-10-31T17:39:34Z",
+  "generated_at": "2026-10-31T18:04:27Z",
   "python": "3.12.13",
   "platform": "Windows-11-10.0.26340-SP0",
-  "rss_start_mb": 102.4,
-  "rss_end_mb": 136.2,
+  "rss_start_mb": 158.3,
+  "rss_end_mb": 192.1,
   "rss_delta_mb": 33.8,
-  "tracemalloc_peak_mb": 15.65,
+  "tracemalloc_peak_mb": 15.73,
   "results": [
     {
       "operation": "read_nodes",
-      "seconds": 0.0171,
+      "seconds": 0.0118,
       "result": 2238
     },
     {
       "operation": "read_relations",
-      "seconds": 0.0361,
+      "seconds": 0.0348,
       "result": 4117
     },
     {
       "operation": "read_evidence",
-      "seconds": 0.0347,
+      "seconds": 0.0299,
       "result": 4613
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "operation": "build_digraph",
-      "seconds": 0.0008,
+      "seconds": 0.0037,
       "result": [
         2217,
         4098
@@ -45,7 +45,7 @@
     },
     {
       "operation": "centrality_table",
-      "seconds": 2.6978,
+      "seconds": 2.2109,
       "result": 1277
     },
     {

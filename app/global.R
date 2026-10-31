@@ -73,30 +73,33 @@ evidence <- evidence %>% mutate(across(where(is.logical), as.character))
 # --------------------------------------------------------------------------
 # Paletas e rótulos
 # --------------------------------------------------------------------------
+# Paleta acessível (viridis) — segura para daltonismo
+VIRIDIS_NODE <- viridisLite::viridis(10, option = "D", begin = 0.05, end = 0.95)
+`%||%` <- function(a, b) if (is.null(a) || length(a) == 0) b else a
+
 TYPE_COLORS <- c(
-  Exposure = "#D95F02", Mechanism = "#7570B3", Process = "#1B9E77",
-  Phenotype = "#E7298A", Gene = "#8C8C8C", Pathway = "#66A61E",
-  Variant = "#BDBDBD", Indicator = "#4D4D4D", Population = "#666666",
-  Period = "#999999"
+  Exposure = VIRIDIS_NODE[1], Mechanism = VIRIDIS_NODE[2], Process = VIRIDIS_NODE[3],
+  Phenotype = VIRIDIS_NODE[4], Gene = VIRIDIS_NODE[5], Pathway = VIRIDIS_NODE[6],
+  Variant = VIRIDIS_NODE[7], Indicator = VIRIDIS_NODE[8], Population = VIRIDIS_NODE[9],
+  Period = VIRIDIS_NODE[10]
 )
 TYPE_LABELS <- c(
   Exposure = "Exposição", Mechanism = "Mecanismo", Process = "Processo",
   Phenotype = "Fenótipo", Gene = "Gene", Pathway = "Via", Variant = "Variante",
   Indicator = "Indicador", Population = "População", Period = "Período"
 )
-TIER_COLORS <- c(
-  "Bem sustentada" = "#1B7837",
-  "Plausível (experimental)" = "#E6A100",
-  "Não demonstrada" = "#B2182B",
-  "Contextual" = "#4A6FA5",
-  "Inferida (regra)" = "#7F7F7F"
-)
 TIER_ORDER <- c("Bem sustentada", "Plausível (experimental)", "Não demonstrada", "Contextual", "Inferida (regra)")
+TIER_COLORS <- setNames(rev(viridisLite::viridis(5, option = "D", begin = 0.15, end = 0.95)), TIER_ORDER)
+TIER_TEXT <- c(
+  "Bem sustentada" = "#101010", "Plausível (experimental)" = "#101010",
+  "Não demonstrada" = "#FFFFFF", "Contextual" = "#FFFFFF", "Inferida (regra)" = "#FFFFFF"
+)
 
 tier_badge <- function(tier) {
   color <- TIER_COLORS[[tier]]
   if (is.null(color)) color <- "#777777"
-  tags$span(class = "badge-tier", style = paste0("background:", color, ";"), tier)
+  txt <- TIER_TEXT[[tier]] %||% "#FFFFFF"
+  tags$span(class = "badge-tier", style = paste0("background:", color, "; color:", txt, ";"), tier)
 }
 
 ref_link <- function(ref, type = "PMID") {

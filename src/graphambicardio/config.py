@@ -437,10 +437,10 @@ CONFIDENCE_CORE_THRESHOLD = 0.55
 # External services
 # --------------------------------------------------------------------------
 NCBI_API_KEY = os.environ.get("NCBI_API_KEY", "")
-NCBI_EMAIL = os.environ.get("NCBI_EMAIL", "research@example.org")
+NCBI_EMAIL = os.environ.get("NCBI_EMAIL", "ryan.paulo@gsuite.iff.edu.br")
 NCBI_TOOL = "GraphAmbiCardio"
 
-USER_AGENT = "GraphAmbiCardio/0.1 (academic research; contact: research@example.org)"
+USER_AGENT = "GraphAmbiCardio/0.1 (academic research; contact: ryan.paulo@gsuite.iff.edu.br)"
 HTTP_TIMEOUT = 60
 HTTP_RETRIES = 3
 

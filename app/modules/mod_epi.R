@@ -45,7 +45,9 @@ mod_epi_ui <- function(id) {
     card(card_header("Modelos exploratórios de exposição no período de organogênese"),
          card_body(
            DTOutput(ns("models")),
-           note_box("<b>Não é um achado causal.</b> Há 56–59 eventos, exposição de área, ",
+           h6("Ajuste mútuo PM2,5 + temperatura", style = "margin-top:1rem;"),
+           DTOutput(ns("models_two")),
+           note_box("<b>Não é um achado causal; todos os p-valores são ajustados por FDR (BH).</b> Há 56–59 eventos, exposição de área, ",
                     "idade gestacional estimada e modelos que discordam entre si (logístico vs. contagem mensal). ",
                     "Ver <i>docs/07_EPI_ENV_METHODS.md</i> e a análise de sensibilidade.", "danger")
          )),
@@ -130,11 +132,11 @@ mod_epi_server <- function(id) {
     output$coverage <- renderDT({
       datatable(sinasc %>% select(Ano = year, Nascidos = live_births, Casos = chd_cases,
                                   `Por 10.000` = chd_per_10000_lb, Status = data_status, Fonte = source),
-                rownames = FALSE, options = list(pageLength = 8, dom = "tp", scrollX = TRUE))
+                rownames = FALSE, options = list(pageLength = 8, dom = "tp"))
     }, server = FALSE)
 
     output$maternal <- renderDT({
-      datatable(maternal, rownames = FALSE, options = list(dom = "t", scrollX = TRUE))
+      datatable(maternal, rownames = FALSE, options = list(dom = "t"))
     }, server = FALSE)
 
     output$models <- renderDT({
@@ -145,7 +147,22 @@ mod_epi_server <- function(id) {
       if ("rr_per_sd_ci95" %in% names(d)) ic <- ifelse(is.na(ic) | ic == "", d$rr_per_sd_ci95, ic)
       out <- data.frame(Modelo = d$model, Exposição = d$exposure, n = d$n, Eventos = d$n_events,
                         OR_RR = est, IC95 = ic, p = d$p_value, check.names = FALSE)
-      datatable(out, rownames = FALSE, options = list(dom = "t", scrollX = TRUE))
+      datatable(out, rownames = FALSE, options = list(dom = "t"))
+    }, server = FALSE)
+
+    output$models_two <- renderDT({
+      d <- models[models$model == "logistic_two_exposures", , drop = FALSE]
+      if (nrow(d) == 0) return(datatable(data.frame(Mensagem = "Sem modelo de ajuste mútuo."), rownames = FALSE, options = list(dom = "t")))
+      out <- data.frame(
+        Exposição = c(d$exposure_1, d$exposure_2),
+        OR_por_SD = c(d$exposure_1_or_per_sd, d$exposure_2_or_per_sd),
+        IC95 = c(d$exposure_1_ci95, d$exposure_2_ci95),
+        p = c(d$exposure_1_p, d$exposure_2_p),
+        q_FDR = c(d$exposure_1_q, d$exposure_2_q),
+        check.names = FALSE
+      )
+      datatable(out, rownames = FALSE, options = list(dom = "t", autoWidth = TRUE)) %>%
+        formatSignif(columns = c("p", "q_FDR"), digits = 3)
     }, server = FALSE)
 
     output$codes <- renderDT({

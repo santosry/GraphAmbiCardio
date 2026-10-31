@@ -104,7 +104,7 @@ meta = {
     "periodo": "2010-2025",
     "licenca_codigo": "MIT",
     "licenca_dados": "Dados de terceiros mantêm suas licenças (PubMed/Europe PMC, SciELO/Crossref, CAPES, HPO, ClinVar, Reactome, DATASUS, ERA5-Land/Open-Meteo, VIGIAR)",
-    "contato": "research@example.org",
+    "contato": "ryan.paulo@gsuite.iff.edu.br",
     "repositorio": "https://github.com/santosry/GraphAmbiCardio",
     "declaracao_ia": "Portaria CNPq nº 2.664/2026",
     "nota_revisao": "Busca estruturada não sistemática (não é revisão sistemática).",

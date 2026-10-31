@@ -81,7 +81,7 @@ mod_home_server <- function(id) {
     output$tiers <- renderDT({
       datatable(tier_counts %>% select(Nível = evidence_tier_label, `Relações observadas` = n),
                 rownames = FALSE, options = list(dom = "t", pageLength = 10)) |>
-        formatStyle("Nível", backgroundColor = styleEqual(names(TIER_COLORS), unname(TIER_COLORS)), color = "white", fontWeight = "600")
+        formatStyle("Nível", backgroundColor = styleEqual(names(TIER_COLORS), unname(TIER_COLORS)), color = styleEqual(names(TIER_TEXT), unname(TIER_TEXT)), fontWeight = "600")
     }, server = FALSE)
 
     output$hierarchy <- renderDT({

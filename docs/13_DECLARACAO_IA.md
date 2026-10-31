@@ -50,4 +50,4 @@ Nenhum modelo foi usado como autor ou coautor. A responsabilidade científica pe
 
 **Data:** 2026-10-31
 **Versão:** 0.2.0
-**Contato:** research@example.org
+**Contato:** ryan.paulo@gsuite.iff.edu.br

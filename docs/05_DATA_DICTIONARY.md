@@ -40,6 +40,13 @@ The birth-level file plus gestational-window area-level exposure:
 - Exposure assigned to days 21–56 after estimated conception.
 - 90,008 of 98,598 births (91.3%) have a complete window; window coverage is 100% where dates exist.
 
+### 1.5 `data_processed/pm25_campos_anual.csv` and `pm25_campos_mensal.csv`
+Municipal PM2.5 for Campos dos Goytacazes (IBGE 330100), from the VIGIAR dashboard (Ministério da Saúde) via the R package `vigiar`.
+- **Rows:** 16 annual values (2010–2025) and 192 monthly values (2010-01 to 2025-12).
+- **Fields:** `cod_municipio`, `uf`, `ano`, `mes` (monthly file), `pm25_ug_m3`.
+- **Instrument:** area-level municipal series, not a local monitoring station; cannot represent personal exposure.
+- **Provenance:** `data_processed/pm25_vigiar_metadata.json` (retrieval date, package version and SHA-256).
+
 ---
 
 ## 2. Biological datasets
@@ -55,7 +62,7 @@ The birth-level file plus gestational-window area-level exposure:
 | `ncbi_gene_metadata.csv` | 170 | NCBI Gene IDs and descriptions |
 | `enrichr_GO_Biological_Process_2023.csv` | 1,631 | GO BP over-representation for the gene universe |
 | `inferred_pathway_process_map.csv` | 4 | Explicit keyword map from Reactome pathways to developmental processes |
-| `hypothesis_candidates.csv` | 5 | Gene-overlap hypotheses (exposure → phenotype), with supporting genes and missing link |
+| `hypothesis_candidates.csv` | 5 | Gene-overlap hypotheses (exposure → phenotype), with supporting genes, missing link, hypergeometric p and BH-FDR q |
 | `candidate_paths_missing_link.csv` | 7 | Documented chains reaching a process without a curated process → phenotype edge |
 
 ---
@@ -80,7 +87,10 @@ Interoperable exports of the aggregated graph; edge attributes include `relation
 Hipóteses (`HYPOTHESIS_LINK` e `HYPOTHESIS_CANDIDATE`) no mesmo esquema de evidência, com `layer = hypothesis` e `evidence_type = hypothesis`. Nunca usadas em caminhos ou centralidade.
 
 ### `app/data/`
-Bundle autocontido do aplicativo Shiny (30 arquivos, ~4 MB), gerado por `scripts/app/01_prepare_data.py`.
+Bundle autocontido do aplicativo Shiny (33 arquivos, ~4 MB), gerado por `scripts/app/01_prepare_data.py`.
+
+### `outputs/tables/exploratory_models.csv` / `.json`
+Modelos exploratórios ao nível do nascimento, de contagem mensal, de ajuste mútuo e de sensibilidade. Colunas `p_value`, `exposure_1_p` e `exposure_2_p` trazem o p nominal; `q_value`, `exposure_1_q` e `exposure_2_q` trazem o valor ajustado por Benjamini–Hochberg.
 
 ### `reports/feasibility_pair_matrix.csv`
 196 rows: exposure × phenotype, PubMed count, volume class, triage counts, mechanistic terms, provisional class and the exact query.

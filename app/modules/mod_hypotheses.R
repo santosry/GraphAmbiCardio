@@ -52,7 +52,7 @@ mod_hypotheses_server <- function(id) {
       d <- candidate_paths %>%
         transmute(Exposição = node_label(exposure_id), Processo = node_label(process_id),
                   Caminho = path, Passos = n_steps, `Elo ausente` = missing_link)
-      datatable(d, rownames = FALSE, options = list(pageLength = 8, scrollX = TRUE))
+      datatable(d, rownames = FALSE, options = list(pageLength = 8))
     }, server = FALSE)
 
     output$cands <- renderDT({
@@ -60,15 +60,16 @@ mod_hypotheses_server <- function(id) {
         transmute(Exposição = node_label(exposure_id), Fenótipo = node_label(phenotype_id),
                   Mecanismo = node_label(mechanism_id), `Genes em comum` = n_overlap,
                   `Fração do conjunto` = round(gene_set_fraction, 2), Prioridade = priority,
+                  `p (hipergeom.)` = signif(p_hyper, 3), `q FDR` = signif(q_fdr, 3),
                   `Genes` = overlap_genes, `Elo ausente` = missing_link)
-      datatable(d, rownames = FALSE, options = list(pageLength = 8, scrollX = TRUE))
+      datatable(d, rownames = FALSE, options = list(pageLength = 8))
     }, server = FALSE)
 
     output$gaps <- renderDT({
       d <- gaps %>% filter(nzchar(gap_type)) %>%
         transmute(Tipo = entity_type, Entidade = node_label(entity_id),
                   `Arestas curadas` = n_curated_outgoing, Lacuna = gap_type)
-      datatable(d, rownames = FALSE, options = list(pageLength = 10, scrollX = TRUE))
+      datatable(d, rownames = FALSE, options = list(pageLength = 10))
     }, server = FALSE)
 
     output$dl_paths <- downloadHandler(

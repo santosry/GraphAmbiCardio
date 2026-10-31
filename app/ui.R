@@ -8,12 +8,12 @@ ui <- bslib::page_navbar(
   window_title = "GraphAmbiCardio — exposições, mecanismos e cardiopatias congênitas",
   theme = bslib::bs_theme(
     version = 5,
-    primary = "#0B3C5D",
-    secondary = "#1D7874",
-    success = "#1B7837",
-    warning = "#E6A100",
-    danger = "#B2182B",
-    bg = "#F7F9FB",
+    primary = "#440154",
+    secondary = "#31688E",
+    success = "#35B779",
+    warning = "#B5DE2B",
+    danger = "#463480",
+    bg = "#FAFAFC",
     fg = "#1F2A36",
     base_font = "system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
     heading_font = "system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
@@ -34,6 +34,8 @@ ui <- bslib::page_navbar(
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "Repositório"),
         " · ",
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio/tree/main/docs", target = "_blank", "Documentação"),
+        HTML(" · Contato: "),
+        tags$a(href = "mailto:ryan.paulo@gsuite.iff.edu.br", "ryan.paulo@gsuite.iff.edu.br"),
         HTML(" · Busca estruturada não sistemática.")
     )
   ),

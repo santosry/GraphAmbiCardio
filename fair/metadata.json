@@ -17,7 +17,7 @@
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "email": "research@example.org"
+    "email": "ryan.paulo@gsuite.iff.edu.br"
   },
   "keywords": [
     "congenital heart defects",
@@ -66,16 +66,16 @@
       "name": "evidencias",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/evidence.csv",
       "format": "csv",
-      "byteSize": 1596230,
-      "checksum": "sha256:89f41d50113580f693335e76e40982c269a29b51b2735931bbc55f82a4e42457"
+      "byteSize": 1596446,
+      "checksum": "sha256:445a792437ff269612592ff8270435102d914d1b18729bb4f915b015153487ef"
     },
     {
       "@type": "Distribution",
       "name": "hipoteses",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/hypotheses.csv",
       "format": "csv",
-      "byteSize": 2799,
-      "checksum": "sha256:c1fbd58fb036e60d103558d64fe40934ba3505db0ac5cb18caa7968510c8d137"
+      "byteSize": 3015,
+      "checksum": "sha256:29e46289d49108ff33d2fd88ee47e4161c6e5c1cbd3d8ee936b0471d27a8d9d7"
     },
     {
       "@type": "Distribution",
@@ -138,8 +138,8 @@
       "name": "candidatos_hipoteses",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/hypothesis_candidates.csv",
       "format": "csv",
-      "byteSize": 1137,
-      "checksum": "sha256:1bf59f15ec462828755b6ca1bc9dd7bc811b8350e3434d49c691991befea8938"
+      "byteSize": 1434,
+      "checksum": "sha256:06952c306ddaeff85e30de04059c89704b0fbecad48c4d5443f48b00808371f7"
     }
   ],
   "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed.",

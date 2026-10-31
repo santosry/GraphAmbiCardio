@@ -22,9 +22,11 @@ from typing import Any
 
 import networkx as nx
 import pandas as pd
+from scipy.stats import hypergeom
 
 from .. import config
 from ..io_utils import get_logger, read_csv, write_csv, write_json
+from ..stats.fdr import bh_fdr
 from . import build
 
 log = get_logger("hypotheses")
@@ -116,6 +118,21 @@ def generate() -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[st
     candidates.sort(key=lambda c: (-c["n_overlap"], -c["gene_set_fraction"]))
     candidates = candidates[:MAX_CANDIDATES]
 
+    # Hypergeometric test of the overlap, with BH-FDR across candidates.
+    universe = len(set().union(*pheno_genes.values())) if pheno_genes else 0
+    for c in candidates:
+        seed = {g.upper() for g in MECH_GENES.get(c["mechanism_id"], [])}
+        n_pheno = len(pheno_genes.get(c["phenotype_id"], set()))
+        k = c["n_overlap"]
+        c["universe_genes"] = universe
+        c["phenotype_genes"] = n_pheno
+        c["mechanism_genes"] = len(seed)
+        c["p_hyper"] = float(hypergeom.sf(k - 1, universe, n_pheno, len(seed))) if universe and n_pheno and seed else 1.0
+    qvals = bh_fdr([c["p_hyper"] for c in candidates])
+    for c, q in zip(candidates, qvals):
+        c["q_fdr"] = round(float(q), 6)
+        c["fdr_significant"] = bool(q < 0.05)
+
     for c in candidates:
         ev = build.make_evidence(
             c["exposure_id"], "Exposure", c["phenotype_id"], "Phenotype",
@@ -129,7 +146,7 @@ def generate() -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[st
             reference="GraphAmbiCardio gene-overlap rule",
             reference_type="rule",
             source_database="GraphAmbiCardio",
-            notes=c["missing_link"] + f" Supporting documented edge references: {c['supporting_reference']}",
+            notes=c["missing_link"] + f" Overlap hypergeometric p={c['p_hyper']:.3g}; BH q={c['q_fdr']:.3g}. Supporting documented edge references: {c['supporting_reference']}",
         )
         evidence_rows.append(ev)
 
@@ -161,8 +178,9 @@ def generate() -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[st
     write_csv(config.TABLES / "candidate_paths_missing_link.csv", path_rows)
     write_json(config.REPORTS / "hypothesis_summary.json", {
         "n_candidates": len(candidates),
+        "n_fdr_significant": int(sum(1 for c in candidates if c.get("fdr_significant"))),
         "n_candidate_paths": len(path_rows),
-        "rule": "gene-set overlap >= 5 genes between a canonical mechanism set and HPO phenotype genes; composition of observed edges for candidate paths",
+        "rule": "gene-set overlap >= 2 genes between a canonical mechanism set and HPO phenotype genes, with hypergeometric p and BH-FDR; composition of observed edges for candidate paths",
         "warning": "Hypotheses are not evidence. They are excluded from all path and centrality analyses.",
     })
     log.info("hypothesis candidates: %s; candidate paths with missing link: %s", len(candidates), len(path_rows))

@@ -72,7 +72,7 @@ mod_query_server <- function(id) {
                   Referências = references, `Direção` = "")
       if (nrow(d) == 0) return(datatable(data.frame(Mensagem = "Nenhuma evidência direta curada para esta exposição."), rownames = FALSE, options = list(dom = "t")))
       datatable(d, rownames = FALSE, options = list(dom = "tp", pageLength = 6)) %>%
-        formatStyle("Nível", backgroundColor = styleEqual(names(TIER_COLORS), unname(TIER_COLORS)), color = "white")
+        formatStyle("Nível", backgroundColor = styleEqual(names(TIER_COLORS), unname(TIER_COLORS)), color = styleEqual(names(TIER_TEXT), unname(TIER_TEXT)))
     }, server = FALSE)
 
     output$mech <- renderDT({
@@ -80,7 +80,7 @@ mod_query_server <- function(id) {
         transmute(Mecanismo = node_label(target_id), Nível = evidence_tier_label,
                   Espécie = species, Desenho = study_designs, Confiança = round(confidence, 2),
                   Referências = references)
-      datatable(d, rownames = FALSE, options = list(dom = "tp", pageLength = 6, scrollX = TRUE))
+      datatable(d, rownames = FALSE, options = list(dom = "tp", pageLength = 6))
     }, server = FALSE)
 
     output$paths <- renderDT({
@@ -89,15 +89,17 @@ mod_query_server <- function(id) {
       d <- d %>% transmute(Fenótipo = node_label(target), Caminho = path, Passos = n_steps,
                            `Confiança mínima` = path_confidence_min, Camadas = layers)
       if (nrow(d) == 0) return(datatable(data.frame(Mensagem = "Nenhum caminho documentado."), rownames = FALSE, options = list(dom = "t")))
-      datatable(d, rownames = FALSE, options = list(dom = "tp", pageLength = 6, scrollX = TRUE))
+      datatable(d, rownames = FALSE, options = list(dom = "tp", pageLength = 6))
     }, server = FALSE)
 
     output$hyp <- renderDT({
       d <- hyp_candidates %>% filter(exposure_id == input$exposure)
       d <- d %>% transmute(Fenótipo = node_label(phenotype_id), Mecanismo = node_label(mechanism_id),
-                           `Genes em comum` = n_overlap, Prioridade = priority, Genes = overlap_genes)
+                           `Genes em comum` = n_overlap, Prioridade = priority,
+                           `p (hipergeom.)` = signif(p_hyper, 3), `q FDR` = signif(q_fdr, 3),
+                           Genes = overlap_genes)
       if (nrow(d) == 0) return(datatable(data.frame(Mensagem = "Nenhuma hipótese candidata para esta exposição."), rownames = FALSE, options = list(dom = "t")))
-      datatable(d, rownames = FALSE, options = list(dom = "tp", pageLength = 6, scrollX = TRUE))
+      datatable(d, rownames = FALSE, options = list(dom = "tp", pageLength = 6))
     }, server = FALSE)
 
     output$genes <- renderDT({
@@ -110,7 +112,7 @@ mod_query_server <- function(id) {
         transmute(Fenótipo = node_label(phenotype_id), `Nº de genes` = n_genes,
                   `Genes (amostra)` = substr(genes, 1, 800))
       if (nrow(d) == 0) return(datatable(data.frame(Mensagem = "Sem genes anotados para os fenótipos relacionados."), rownames = FALSE, options = list(dom = "t")))
-      datatable(d, rownames = FALSE, options = list(dom = "tp", pageLength = 6, scrollX = TRUE))
+      datatable(d, rownames = FALSE, options = list(dom = "tp", pageLength = 6))
     }, server = FALSE)
 
     output$refs <- renderUI({
@@ -136,7 +138,7 @@ mod_query_server <- function(id) {
         transmute(Tipo = "Relação", Rótulo = paste(node_label(source_id), "→", node_label(target_id)),
                   ID = relation, Identificadores = references)
       d <- bind_rows(n, r) %>% head(80)
-      datatable(d, rownames = FALSE, options = list(pageLength = 8, scrollX = TRUE))
+      datatable(d, rownames = FALSE, options = list(pageLength = 8))
     }, server = FALSE)
   })
 }
