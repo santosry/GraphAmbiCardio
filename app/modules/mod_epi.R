@@ -14,22 +14,22 @@ mod_epi_ui <- function(id) {
     layout_columns(
       col_widths = c(7,5),
       card(card_header("SINASC — casos e taxa por 10.000 nascidos vivos"),
-           card_body(plotlyOutput(ns("sinasc_plot"), height = "360px"))),
+           card_body(plotlyOutput(ns("sinasc_plot"), height = "440px"))),
       card(card_header("SIH/SUS — internações e óbitos"),
-           card_body(plotlyOutput(ns("sih_plot"), height = "360px")))
+           card_body(plotlyOutput(ns("sih_plot"), height = "440px")))
     ),
     layout_columns(
       col_widths = c(6,6),
       card(card_header("Clima — temperatura máxima mensal (ERA5-Land)"),
-           card_body(plotlyOutput(ns("climate_plot"), height = "340px"))),
+           card_body(plotlyOutput(ns("climate_plot"), height = "400px"))),
       card(card_header("Dias de calor e ondas de calor por ano"),
-           card_body(plotlyOutput(ns("heat_plot"), height = "340px")))
+           card_body(plotlyOutput(ns("heat_plot"), height = "400px")))
     ),
     br(),
     card(
       card_header("PM2,5 — série municipal do VIGIAR (Ministério da Saúde)"),
       card_body(
-        plotlyOutput(ns("pm25_plot"), height = "340px"),
+        plotlyOutput(ns("pm25_plot"), height = "400px"),
         htmlOutput(ns("pm25_note"))
       )
     ),
@@ -77,8 +77,10 @@ mod_epi_server <- function(id) {
                   type = "scatter", mode = "lines+markers", line = list(color = "#0B3C5D"),
                   hovertemplate = "Ano %{x}<br>Taxa: %{y:.2f}/10.000<extra></extra>") %>%
         layout(yaxis = list(title = "Casos"), yaxis2 = list(title = "Por 10.000 NV", overlaying = "y", side = "right"),
-               legend = list(orientation = "h"), margin = list(l = 50, r = 50, t = 10, b = 40),
-               xaxis = list(title = "Ano", dtick = 1))
+               legend = list(orientation = "h", y = -0.28), margin = list(l = 60, r = 60, t = 20, b = 70),
+               hovermode = "x unified", font = list(size = 12),
+               xaxis = list(title = "Ano", dtick = 1, tickangle = -45)) %>%
+        plotly::config(displaylogo = FALSE, responsive = TRUE)
     })
 
     output$sih_plot <- renderPlotly({
@@ -86,8 +88,10 @@ mod_epi_server <- function(id) {
         add_bars(y = ~admissions_primary_chd, name = "Internações", marker = list(color = "#1D7874")) %>%
         add_trace(y = ~deaths, name = "Óbitos", type = "scatter", mode = "lines+markers",
                   line = list(color = "#B2182B")) %>%
-        layout(yaxis = list(title = "Registros"), xaxis = list(title = "Ano", dtick = 1),
-               legend = list(orientation = "h"), margin = list(l = 50, r = 20, t = 10, b = 40))
+        layout(yaxis = list(title = "Registros"), xaxis = list(title = "Ano", dtick = 1, tickangle = -45),
+               legend = list(orientation = "h", y = -0.28), margin = list(l = 60, r = 30, t = 20, b = 70),
+               hovermode = "x unified", font = list(size = 12)) %>%
+        plotly::config(displaylogo = FALSE, responsive = TRUE)
     })
 
     output$climate_plot <- renderPlotly({
@@ -95,7 +99,9 @@ mod_epi_server <- function(id) {
       plot_ly(d, x = ~period, y = ~tmax_mean, type = "scatter", mode = "lines",
               line = list(color = "#D95F02", width = 1.4), name = "Tmax média mensal") %>%
         layout(xaxis = list(title = "", tickangle = -45, nticks = 12),
-               yaxis = list(title = "°C"), margin = list(l = 50, r = 20, t = 10, b = 60))
+               yaxis = list(title = "°C"), margin = list(l = 60, r = 30, t = 20, b = 80),
+               hovermode = "x unified", font = list(size = 12)) %>%
+        plotly::config(displaylogo = FALSE, responsive = TRUE)
     })
 
     output$heat_plot <- renderPlotly({
@@ -103,8 +109,10 @@ mod_epi_server <- function(id) {
         add_bars(y = ~heat_days_35, name = "Dias ≥ 35 °C", marker = list(color = "#E6A100")) %>%
         add_trace(y = ~heatwave_days, name = "Dias em onda de calor", type = "scatter", mode = "lines+markers",
                   line = list(color = "#B2182B")) %>%
-        layout(yaxis = list(title = "Dias"), xaxis = list(title = "Ano", dtick = 1),
-               legend = list(orientation = "h"), margin = list(l = 50, r = 20, t = 10, b = 40))
+        layout(yaxis = list(title = "Dias"), xaxis = list(title = "Ano", dtick = 1, tickangle = -45),
+               legend = list(orientation = "h", y = -0.28), margin = list(l = 60, r = 30, t = 20, b = 70),
+               hovermode = "x unified", font = list(size = 12)) %>%
+        plotly::config(displaylogo = FALSE, responsive = TRUE)
     })
 
     output$pm25_plot <- renderPlotly({
@@ -117,8 +125,11 @@ mod_epi_server <- function(id) {
         add_trace(data = a, x = ~as.Date(sprintf("%d-01-01", ano)), y = ~pm25_ug_m3,
                   type = "scatter", mode = "lines+markers", name = "Anual",
                   line = list(color = "#08519C", width = 2.5)) %>%
-        layout(xaxis = list(title = ""), yaxis = list(title = "µg/m³"),
-               legend = list(orientation = "h"), margin = list(l = 50, r = 20, t = 10, b = 40))
+        layout(xaxis = list(title = "", tickangle = -45),
+               yaxis = list(title = "µg/m³"),
+               legend = list(orientation = "h", y = -0.28), margin = list(l = 60, r = 30, t = 20, b = 70),
+               hovermode = "x unified", font = list(size = 12)) %>%
+        plotly::config(displaylogo = FALSE, responsive = TRUE)
     })
 
     output$pm25_note <- renderUI({

@@ -104,8 +104,17 @@ table.dataTable thead th { color: var(--v1); border-bottom: 1px solid rgba(68,1,
 }
 .blockquote { border-left: 3px solid var(--v3); padding-left: .8rem; color: #3A3744; }
 
-.graph-body { padding: .4rem; }
+.graph-body { padding: .35rem; }
 .vis-network { outline: none; }
+.graph-body .vis-network {
+  min-height: 620px; background: #FFFFFF; border-radius: 14px;
+  border: 1px solid rgba(68, 1, 84, .08);
+}
+.js-plotly-plot, .plot-container, .svg-container { width: 100% !important; }
+.card-body { overflow: visible; }
+@media (max-width: 992px) {
+  .graph-body .vis-network { min-height: 520px; }
+}
 div.vis-tooltip {
   border-radius: 10px !important; border: 1px solid rgba(68,1,84,.15) !important;
   box-shadow: 0 10px 26px rgba(68,1,84,.16) !important; font-size: .82rem !important;

@@ -18,6 +18,7 @@ mod_graph_ui <- function(id) {
                         nodes$node_id[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"],
                         nodes$label[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"]))),
           sliderInput(ns("conf"), "Confiança mínima", min = 0, max = 0.95, value = 0.40, step = 0.05),
+          checkboxInput(ns("edge_labels"), "Rótulos das arestas", value = FALSE),
           div(
             textInput(ns("search"), "Buscar", placeholder = "PM2.5, Wnt, septação"),
             actionButton(ns("reset"), "Limpar", class = "btn-outline-secondary btn-sm w-100")
@@ -30,7 +31,7 @@ mod_graph_ui <- function(id) {
       card_body(
         class = "graph-body",
         div(role = "img", `aria-label` = "Grafo interativo de exposições, mecanismos, processos e fenótipos; use os filtros acima e a aba Evidências para uma tabela equivalente.",
-            visNetworkOutput(ns("network"), height = "68vh")),
+            visNetworkOutput(ns("network"), height = "78vh")),
         div(class = "small-muted", style = "padding:.4rem .6rem 0;",
             "Visualização interativa. Se o grafo não carregar ou para leitura por teclado, consulte a aba Evidências.")
       )
@@ -50,6 +51,7 @@ mod_graph_server <- function(id) {
       updateSelectInput(session, "exposure", selected = "")
       updateSelectInput(session, "phenotype", selected = "")
       updateSliderInput(session, "conf", value = 0.40)
+      updateCheckboxInput(session, "edge_labels", value = FALSE)
       updateTextInput(session, "search", value = "")
     })
 
@@ -102,23 +104,28 @@ mod_graph_server <- function(id) {
                           data.frame(from = character(), to = character())))
       }
       deg <- table(c(gd$edges$source_id, gd$edges$target_id))
+      full_label <- as.character(ifelse(is.na(gd$nodes$label), gd$nodes$node_id, gd$nodes$label))
       nd <- gd$nodes %>%
         mutate(
           group = unname(TYPE_LABELS[type]),
-          label = as.character(ifelse(is.na(label), node_id, label)),
-          title = as.character(paste0("<b>", label, "</b><br>", TYPE_LABELS[type],
+          label = ifelse(nchar(full_label) > 32, paste0(substr(full_label, 1, 30), "…"), full_label),
+          title = as.character(paste0("<b>", full_label, "</b><br>", TYPE_LABELS[type],
                                       "<br><span style='color:#666'>", node_id, "</span>")),
           color = unname(TYPE_COLORS[type]),
           shape = ifelse(type == "Phenotype", "hexagon",
                          ifelse(type == "Exposure", "square",
                                 ifelse(type == "Process", "triangle", "dot"))),
-          size = as.numeric(11 + 2.2 * sqrt(ifelse(is.na(deg[node_id]), 1, as.numeric(deg[node_id]))))
+          level = ifelse(type == "Exposure", 0,
+                         ifelse(type %in% c("Mechanism", "Gene"), 1,
+                                ifelse(type %in% c("Process", "Pathway"), 2, 3))),
+          size = as.numeric(12 + 2.4 * sqrt(ifelse(is.na(deg[node_id]), 1, as.numeric(deg[node_id]))))
         ) %>%
-        select(id = node_id, label, group, title, color, shape, size)
+        select(id = node_id, label, group, title, color, shape, size, level)
+      show_labels <- isTRUE(input$edge_labels)
       ed <- gd$edges %>%
         mutate(
           from = source_id, to = target_id,
-          label = as.character(edge_label(relation)),
+          label = if (show_labels) as.character(edge_label(relation)) else "",
           label = ifelse(is.na(label), "", label),
           title = as.character(paste0("<b>", edge_label(relation), "</b><br>", evidence_tier_label,
                                       "<br>confiança: ", round(confidence, 2), " (", grade, ")",
@@ -129,14 +136,39 @@ mod_graph_server <- function(id) {
           arrows = ifelse(layer == "hypothesis", "to;from", "to")
         ) %>%
         select(from, to, label, title, color, dashes, width, arrows)
-      visNetwork(nd, ed) %>%
+      p <- visNetwork(nd, ed) %>%
         visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
                    nodesIdSelection = FALSE) %>%
-        visInteraction(navigationButtons = TRUE, tooltipDelay = 120, hideEdgesOnDrag = TRUE) %>%
-        visPhysics(solver = "forceAtlas2Based",
-                   stabilization = list(enabled = TRUE, iterations = 180)) %>%
-        visLegend(useGroups = TRUE, position = "right", ncol = 1, main = "Tipo de nó") %>%
-        visEdges(smooth = list(type = "continuous"))
+        visInteraction(navigationButtons = TRUE, tooltipDelay = 100, hideEdgesOnDrag = TRUE) %>%
+        visNodes(font = list(size = 17, face = "Arial"), borderWidth = 1.5) %>%
+        visEdges(arrows = list(to = list(enabled = TRUE, scaleFactor = 0.6)),
+                 color = list(opacity = 0.7)) %>%
+        visLegend(useGroups = TRUE, position = "right", ncol = 1, main = "Tipo de nó")
+      if (identical(input$mode, "conceptual")) {
+        p <- p %>%
+          visHierarchicalLayout(direction = "LR", levelSeparation = 240,
+                                nodeSpacing = 170, treeSpacing = 220,
+                                blockShifting = TRUE, edgeMinimization = TRUE,
+                                parentCentralization = TRUE, sortMethod = "directed") %>%
+          visPhysics(enabled = FALSE) %>%
+          visEdges(smooth = list(type = "cubicBezier", forceDirection = "horizontal", roundness = 0.45),
+                   arrows = list(to = list(enabled = TRUE, scaleFactor = 0.6)),
+                   color = list(opacity = 0.7))
+      } else {
+        p <- p %>%
+          visPhysics(solver = "forceAtlas2Based",
+                     stabilization = list(enabled = TRUE, iterations = 250),
+                     forceAtlas2Based = list(gravitationalConstant = -80,
+                                             centralGravity = 0.01,
+                                             springLength = 180,
+                                             springConstant = 0.08,
+                                             damping = 0.4,
+                                             avoidOverlap = 0.6)) %>%
+          visEdges(smooth = list(type = "continuous"),
+                   arrows = list(to = list(enabled = TRUE, scaleFactor = 0.6)),
+                   color = list(opacity = 0.7))
+      }
+      p
     })
 
     output$node_details <- renderUI({
