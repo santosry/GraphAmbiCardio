@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-11-01",
+  "status": "screened candidates; NOT evidence",
+  "n_studies": 3963,
+  "n_relations": 13723,
+  "n_studies_with_chd_phenotype": 638,
+  "by_source": {
+    "Europe PMC": 465,
+    "SciELO (Crossref 10.1590)": 2,
+    "PubMed/MEDLINE (domínios)": 3761,
+    "PubMed/MEDLINE (pares)": 136
+  },
+  "note": "Study nodes are automatically screened retrieved records. They are kept separate from the manually curated evidence graph."
+}

@@ -34,3 +34,10 @@ dist/
 .Renviron
 .env
 rsconnect/
+
+# heavy generated graph exports (regenerate with `make screened`)
+outputs/graph/screened_studies.json
+outputs/graph/screened_studies.graphml
+
+# local full-text reading folder (download with scripts/collection/05_download_anchor_fulltext.py)
+data_raw/anchor_fulltext/

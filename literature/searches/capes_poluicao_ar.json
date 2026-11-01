@@ -1,8 +1,9 @@
 {
   "database": "CAPES Catálogo de Teses e Dissertações",
   "query": "poluição do ar cardiopatia",
-  "retrieved_at": "2026-10-31T15:58:57Z",
+  "retrieved_at": "2026-11-01T16:12:31Z",
   "total": 0,
-  "n_items": {},
+  "n_items": 0,
+  "n_pages": 1,
   "items": []
 }

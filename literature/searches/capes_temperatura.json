@@ -1,9 +1,10 @@
 {
   "database": "CAPES Catálogo de Teses e Dissertações",
   "query": "temperatura cardiopatia congênita",
-  "retrieved_at": "2026-10-31T15:58:58Z",
+  "retrieved_at": "2026-11-01T16:12:32Z",
   "total": 7,
   "n_items": 7,
+  "n_pages": 1,
   "items": [
     {
       "id": "7657339",

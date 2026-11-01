@@ -33,7 +33,9 @@ def edge(
     design: str,
     species: str,
     quote: str,
-    pmid: str,
+    pmid: str = "",
+    reference: str = "",
+    reference_type: str = "PMID",
     population: str = "",
     window: str = "",
     direction: str = "",
@@ -51,8 +53,8 @@ def edge(
         study_design=design,
         species=species,
         quote=quote,
-        reference=pmid,
-        reference_type="PMID",
+        reference=reference or pmid,
+        reference_type=reference_type,
         population_or_model=population,
         exposure_window=window,
         effect_direction=direction,
@@ -692,5 +694,27 @@ ADDITIONAL_EDGES = [
         pmid="33558697",
         context="Human heart-forming organoids",
         notes="Supports Wnt dependence of cardiomyocyte differentiation; the organoid is a model, not an embryo.",
+    ),
+]
+
+# --------------------------------------------------------------------------
+# 7. CAPES Catálogo de Teses: manually screened and curated
+#    Only one of the 28 retrieved records was eligible for an evidence edge.
+#    Its quote is verified against the local abstract saved from Plataforma
+#    Sucupira; see literature/curated/capes_abstracts/ and
+#    literature/screening/capes_triage.csv.
+# --------------------------------------------------------------------------
+CAPES_THESIS_EDGES = [
+    edge(
+        "EXP:PEST", "Exposure", "CHD:ALL", "Phenotype",
+        "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+        ev="indirect", design="systematic_review", species="human",
+        population="systematic review of epidemiological studies on maternal pesticide exposure and congenital malformations (master's thesis, Universidade de Cuiabá, 2019)",
+        window="prenatal", direction="association reported in most included studies; no pooled estimate; CHD among the most prevalent malformations",
+        quote="Na maioria dos estudos selecionados os autores concluíram que houve algum tipo de associação à malformação congênita em decorrência do uso direto ou indireto de agrotóxicos.",
+        reference="CAPES:7850222",
+        reference_type="CAPES thesis",
+        context="Maternal exposure to agricultural pesticides; systematic review (JBI method) of PubMed, Cochrane, CINAHL, Web of Science, Scopus, a Latin American and Caribbean literature database, and Embase",
+        notes="Thesis abstract; review-level conclusion without pooled estimate. The included primary studies overlap with the journal literature and are not independent replication. CHD was reported among the most prevalent malformations.",
     ),
 ]

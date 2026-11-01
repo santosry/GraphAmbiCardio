@@ -66,6 +66,7 @@ def _ncbi_params(extra: dict[str, Any]) -> dict[str, Any]:
 def esearch(
     query: str,
     retmax: int = 100,
+    retstart: int = 0,
     mindate: str | None = None,
     maxdate: str | None = None,
     datetype: str = "pdat",
@@ -78,6 +79,7 @@ def esearch(
             "term": query,
             "retmode": "json",
             "retmax": retmax,
+            "retstart": retstart,
             "sort": sort,
         }
     )
@@ -91,6 +93,8 @@ def esearch(
     return {
         "count": int(res.get("count", 0)),
         "pmids": res.get("idlist", []),
+        "retstart": retstart,
+        "retmax": retmax,
         "query_translation": res.get("querytranslation", ""),
         "query": query,
         "retrieved_at": today(),
