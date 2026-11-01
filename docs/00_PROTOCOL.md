@@ -45,7 +45,7 @@ Live births and hospital admissions of residents of Campos dos Goytacazes (IBGE 
 
 ### 4.2 Phenotypes
 
-Local core case definition: CID-10 **Q20–Q26** (Q27–Q28 are kept as a separate non-CHD group). Fourteen sentinel phenotypes are represented with HPO cross-references: VSD (Q21.0), ASD (Q21.1), AVSD (Q21.2), TOF (Q21.3), DORV (Q20.1), TGA (Q20.3), HLHS (Q23.4), coarctation (Q25.1), PDA (Q25.0), pulmonary stenosis (Q25.6), aortic stenosis (Q23.0), TAPVC (Q26.2), truncus arteriosus (Q20.0), Ebstein anomaly (Q22.5). An aggregate node `CHD:ALL` is used when a study reports overall CHD.
+Local case group: CID-10 **Q20–Q26** (malformations of cardiac chambers and connections, septa, valves and great vessels); Q27–Q28 are kept as a separate group of other circulatory malformations. Fourteen sentinel phenotypes are represented with HPO cross-references: VSD (Q21.0), ASD (Q21.1), AVSD (Q21.2), TOF (Q21.3), DORV (Q20.1), TGA (Q20.3), HLHS (Q23.4), coarctation (Q25.1), PDA (Q25.0), pulmonary stenosis (Q25.6), aortic stenosis (Q23.0), TAPVC (Q26.2), truncus arteriosus (Q20.0), Ebstein anomaly (Q22.5). An aggregate node `CHD:ALL` is used when a study reports overall CHD.
 
 ### 4.3 Exposures
 
@@ -158,7 +158,7 @@ Full weights and rationale: `docs/06_EVIDENCE_GRADING.md`.
 
 - Case = any CID-10 code **Q20–Q26** in `CODANOMAL`, parsed as blocks of four characters (multiple codes per record are preserved). Q27–Q28 are classified separately and never added to the CHD count.
 - Denominator = live births to resident mothers (SINASC).
-- Indicators: annual counts, proportion per 1,000, rate per 10,000, phenotype distribution, maternal/neonatal characteristics, completeness indicators.
+- Indicators: annual counts, rate per 1,000 live births, phenotype distribution, maternal/neonatal characteristics, completeness indicators.
 - SIH: AIH counts, never individuals; residence (MUNIC_RES) and admission municipality (MUNIC_MOV) kept separate; primary and secondary diagnoses kept separate.
 - 2025 flagged preliminary; 2023–2024 SINASC absent and not imputed.
 - Gestational window: conception estimated as birth date − (gestational age × 7 − 14 days), because gestational age is measured from LMP; for 40 weeks this is 266 days before birth. Cardiac organogenesis window = days 21–56 after conception (weeks 3–8). Early/late ±7-day windows are sensitivity analyses. Area-level daily climate averaged over the window.

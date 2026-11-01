@@ -17,53 +17,53 @@ Period: **2010-01-01 to 2025-12-31**; municipality: Campos dos Goytacazes, RJ (I
 
 Total: **98,598 live births** to resident mothers.
 
-> 2023–2024 microdata were not available on the FTP. TabNet counts the broad group “malformações congênitas do aparelho circulatório” (Q20–Q28), which is **not** the core CHD definition (Q20–Q26). TabNet values are therefore kept in dedicated columns and are **not** imputed into the core CHD series. 2025 is labelled preliminary. No values were imputed.
+> 2023–2024 microdata were not available on the FTP. TabNet counts the broad group “malformações congênitas do aparelho circulatório” (Q20–Q28), which is **not** the Q20–Q26 group definition (Q20–Q26). TabNet values are therefore kept in dedicated columns and are **not** imputed into the Q20–Q26 group series. 2025 is labelled preliminary. No values were imputed.
 
 ### 1.2 Case definition and `CODANOMAL` parsing
 
 `CODANOMAL` can contain several 4-character ICD-10 codes concatenated (e.g. `Q339Q652`, `Q179Q189Q740Q749`). The parser removes separators, splits into blocks of four and separates two groups:
 
-- **CHD core:** Q20–Q26;
+- **Q20–Q26 group:** cardiac chambers and connections, septa, valves and great vessels;
 - **Other circulatory malformations:** Q27–Q28 (not CHD).
 
 Results:
 
 - 697 records had at least one ICD code;
-- 7 core CHD records had **more than one** core CHD code;
-- **52 records** met the core CHD case definition;
+- 7 Q20–Q26 records had **more than one** Q20–Q26 code;
+- **52 records** met the Q20–Q26 case definition;
 - **8 records** had a Q27–Q28 code; 1 of them also had a Q20–Q26 code;
-- **0** core CHD records had `IDANOMAL ≠ 1`; 3 records had `IDANOMAL = 1` with no code (kept out of the case count but flagged).
+- **0** Q20–Q26 records had `IDANOMAL ≠ 1`; 3 records had `IDANOMAL = 1` with no code (kept out of the case count but flagged).
 
 `IDANOMAL` is therefore **not** used as the inclusion criterion, the prompt’s concern about losing records through concatenated/missing codes is addressed by parsing all codes.
 
 ### 1.3 Annual indicators
 
-| Year | Live births | CHD Q20–Q26 | per 10,000 | Q27–Q28 | per 10,000 | TabNet Q20–Q28 | Status |
+| Year | Live births | Q20–Q26 | per 1,000 | Q27–Q28 | per 1,000 | TabNet Q20–Q28 | Status |
 |---|---:|---:|---:|---:|---:|---:|---|
-| 2010 | 6,882 | 5 | 7.27 | 1 | 1.45 |  | consolidated |
+| 2010 | 6,882 | 5 | 0.73 | 1 | 0.14 |  | consolidated |
 | 2011 | 6,021 | 0 | 0.00 | 0 | 0.00 |  | consolidated |
-| 2012 | 6,612 | 2 | 3.02 | 0 | 0.00 |  | consolidated |
-| 2013 | 7,424 | 1 | 1.35 | 0 | 0.00 |  | consolidated |
-| 2014 | 7,891 | 1 | 1.27 | 0 | 0.00 |  | consolidated |
-| 2015 | 8,229 | 3 | 3.65 | 1 | 1.22 |  | consolidated |
-| 2016 | 7,516 | 4 | 5.32 | 0 | 0.00 |  | consolidated |
-| 2017 | 7,498 | 8 | 10.67 | 0 | 0.00 |  | consolidated |
-| 2018 | 7,449 | 2 | 2.68 | 0 | 0.00 |  | consolidated |
-| 2019 | 7,166 | 6 | 8.37 | 1 | 1.40 |  | consolidated |
-| 2020 | 6,849 | 5 | 7.30 | 0 | 0.00 |  | consolidated |
-| 2021 | 6,776 | 4 | 5.90 | 0 | 0.00 |  | consolidated |
-| 2022 | 6,361 | 5 | 7.86 | 1 | 1.57 | 5 | consolidated |
-| 2023* | 6,252 |  |  |  |  | 5 | aggregate only (broad Q20–Q28) |
-| 2024* | 5,870 |  |  |  |  | 5 | aggregate only (broad Q20–Q28) |
-| 2025 | 5,924 | 6 | 10.13 | 4 | 6.75 | 9 | **preliminary** |
+| 2012 | 6,612 | 2 | 0.30 | 0 | 0.00 |  | consolidated |
+| 2013 | 7,424 | 1 | 0.13 | 0 | 0.00 |  | consolidated |
+| 2014 | 7,891 | 1 | 0.13 | 0 | 0.00 |  | consolidated |
+| 2015 | 8,229 | 3 | 0.36 | 1 | 0.12 |  | consolidated |
+| 2016 | 7,516 | 4 | 0.53 | 0 | 0.00 |  | consolidated |
+| 2017 | 7,498 | 8 | 1.07 | 0 | 0.00 |  | consolidated |
+| 2018 | 7,449 | 2 | 0.27 | 0 | 0.00 |  | consolidated |
+| 2019 | 7,166 | 6 | 0.84 | 1 | 0.14 |  | consolidated |
+| 2020 | 6,849 | 5 | 0.73 | 0 | 0.00 |  | consolidated |
+| 2021 | 6,776 | 4 | 0.59 | 0 | 0.00 |  | consolidated |
+| 2022 | 6,361 | 5 | 0.79 | 1 | 0.16 | 5 | consolidated |
+| 2023* | 6,252 |  |  |  |  | 5 | aggregate only (broad Q20-Q28) |
+| 2024* | 5,870 |  |  |  |  | 5 | aggregate only (broad Q20-Q28) |
+| 2025 | 5,924 | 6 | 1.01 | 4 | 0.68 | 9 | **preliminary** |
 
-\* TabNet broad Q20–Q28 group; not directly comparable to the core microdata definition. For 2023–2024 the core CHD cell is left missing. 2025 TabNet (9 broad-group cases) and core microdata (6 Q20–Q26; 4 Q27–Q28) are shown separately.
+\* TabNet broad Q20–Q28 group; not directly comparable to the Q20–Q26 microdata definition. For 2023–2024 the Q20–Q26 cell is left missing. 2025 TabNet (9 broad-group cases) and core microdata (6 Q20–Q26; 4 Q27–Q28) are shown separately.
 
-Overall core microdata: **5.27 per 10,000 live births** (52/98,598), i.e. **0.53 per 1,000**: roughly **one order of magnitude below** the birth prevalence usually reported for CHD (6–9 per 1,000). The most defensible interpretation is **severe under-ascertainment in SINASC**, not a low CHD burden: the absolute number of anomaly records in Campos is only ~25–80 per year across *all* congenital anomalies.
+Overall Q20–Q26 microdata: **0.53 per 1,000 live births** (52/98,598), roughly **one order of magnitude below** the birth prevalence usually reported for congenital heart defects (6–9 per 1,000). The most defensible interpretation is **severe under-ascertainment in SINASC**, not a low burden of congenital heart and great-vessel malformations: the absolute number of anomaly records in Campos is only ~25–80 per year across *all* congenital anomalies.
 
 ### 1.4 Phenotype distribution (all codes, all years)
 
-**Core CHD (Q20–Q26):**
+**Q20–Q26 group (cardiac chambers and connections, septa, valves and great vessels):**
 
 | Code | n | Typical meaning |
 |---|---:|---|
@@ -94,11 +94,11 @@ The dominance of **unspecified** codes (Q249, Q248, Q219) further limits phenoty
 
 | Group | n | Maternal age (mean) | Birth weight (g) | Preterm % | Male % | Caesarean % | Multiple % |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| CHD core Q20–Q26 | 52 | 28.1 | 2,798 | 21.7 | 51.9 | 86.5 | 3.9 |
+| Q20–Q26 | 52 | 28.1 | 2,798 | 21.7 | 51.9 | 86.5 | 3.9 |
 | Q27–Q28 (not CHD) | 8 | 32.0 | 3,166 | 0.0 | 62.5 | 75.0 | 12.5 |
 | Non-circulatory | 98,539 | 26.3 | 3,165 | 12.1 | 46.9 | 63.4 | 2.2 |
 
-These are descriptive only. With 52 core cases, differences are imprecise and potentially confounded (e.g. caesarean indication, diagnosis at birth). One record had both a core CHD and a Q27–Q28 code and appears in both groups.
+These are descriptive only. With 52 Q20–Q26 cases, differences are imprecise and potentially confounded (e.g. caesarean indication, diagnosis at birth). One record had both a Q20–Q26 group and a Q27–Q28 code and appears in both groups.
 
 ---
 
@@ -106,11 +106,11 @@ These are descriptive only. With 52 core cases, differences are imprecise and po
 
 ### 2.1 Extraction
 
-192 monthly files (`RDRJ1001.dbc` … `RDRJ2512.dbc`), converted with `pyreaddbc`, parsed in parallel, filtered to `MUNIC_RES = 330100` and primary diagnosis in Q20–Q28. Q20–Q26 (core CHD) and Q27–Q28 (other circulatory) are summarised separately. Large DBF files were deleted after filtering.
+192 monthly files (`RDRJ1001.dbc` … `RDRJ2512.dbc`), converted with `pyreaddbc`, parsed in parallel, filtered to `MUNIC_RES = 330100` and primary diagnosis in Q20–Q28. Q20–Q26 (Q20–Q26 group) and Q27–Q28 (other circulatory) are summarised separately. Large DBF files were deleted after filtering.
 
-- **474 admissions** with primary core CHD diagnosis (Q20–Q26);
+- **474 admissions** with primary diagnosis in Q20–Q26;
 - **75 admissions** with primary Q27–Q28 (not CHD), reported separately;
-- **12 additional admissions** had core CHD only as a secondary/associated diagnosis; they were evaluated separately and are not included in the 474 primary-diagnosis admissions;
+- **12 additional admissions** had Q20–Q26 only as a secondary/associated diagnosis; they were evaluated separately and are not included in the 474 primary-diagnosis admissions;
 - **16 hospitals**;
 - **30 in-hospital deaths (6.33%)**;
 - mean length of stay **12.7 days** (median 8);
@@ -198,7 +198,7 @@ Conception date was estimated as birth date minus **gestational age minus 14 day
 | Group | n | Mean Tmax in window | SD | Mean Tmin | RH | Heat days ≥35 °C (proportion) | PM2.5 window mean |
 |---|---:|---:|---:|---:|---:|---:|
 | All | 98,598 | 28.57 | 2.28 | 20.62 | 75.9 | 3.7% | 7.73 |
-| CHD core Q20–Q26 | 52 | 28.91 | 2.55 | 20.85 | 75.3 | 5.9% | 7.69 |
+| Q20–Q26 | 52 | 28.91 | 2.55 | 20.85 | 75.3 | 5.9% | 7.69 |
 | Non-CHD | 98,546 | 28.57 | 2.28 | 20.62 | 75.9 | 3.7% | 7.73 |
 
 ---
@@ -209,7 +209,7 @@ All inferential p-values reported below and in the app are adjusted for multiple
 
 ### 4.1 Birth-level logistic regression
 
-Outcome: **CHD core Q20–Q26** (0/1). Exposure: area-level mean Tmax during the organogenesis window (z-score). Adjustment: year (linear), maternal age (linear), infant sex. n = 83,040; events = 47.
+Outcome: **Q20–Q26** (0/1). Exposure: area-level mean Tmax during the organogenesis window (z-score). Adjustment: year (linear), maternal age (linear), infant sex. n = 83,040; events = 47.
 
 | Exposure | OR per SD | 95% CI | p | q (FDR) | OR per IQR |
 |---|---:|---|---:|---:|---:|
@@ -237,7 +237,7 @@ Leave-one-year-out: OR per SD ranged **1.136–1.608**; p ranged 0.024–0.546 a
 
 ### 4.2 Monthly count model
 
-CHD core counts by month of conception (165 months with ≥30 births; 50 cases), Poisson with log(live births) offset, adjusted for year. Dispersion 1.236 (Poisson selected). **RR 1.211 per SD (0.918–1.599), p = 0.176, q = 0.509**; RR 1.333 per IQR. The monthly model does not support a heat effect.
+Q20–Q26 counts by month of conception (165 months with ≥30 births; 50 cases), Poisson with log(live births) offset, adjusted for year. Dispersion 1.236 (Poisson selected). **RR 1.211 per SD (0.918–1.599), p = 0.176, q = 0.509**; RR 1.333 per IQR. The monthly model does not support a heat effect.
 
 ### 4.3 Julia measurement-error simulation
 

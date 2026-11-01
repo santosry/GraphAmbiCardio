@@ -4319,7 +4319,7 @@
     </node>
     <node id="IND:SINASC_CHD">
       <data key="d0">IND:SINASC_CHD</data>
-      <data key="d1">SINASC CHD cases / 10,000 live births</data>
+      <data key="d1">SINASC Q20–Q26 cases / 1,000 live births</data>
       <data key="d2">Indicator</data>
       <data key="d3">prevalence_at_birth</data>
       <data key="d4" />
@@ -11681,7 +11681,7 @@
     </node>
     <node id="CHD:ALL">
       <data key="d0">CHD:ALL</data>
-      <data key="d1">Congenital heart defects (all Q20-Q28, aggregate)</data>
+      <data key="d1">Malformações congênitas do aparelho circulatório (agregado de estudos)</data>
       <data key="d2">Phenotype</data>
       <data key="d3">aggregate</data>
       <data key="d4">ICD10:Q20-Q28</data>

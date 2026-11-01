@@ -186,10 +186,12 @@ PHENOTYPES = [
     },
 ]
 
-# Local case definition: congenital heart defects (Q20-Q26).
-# Q27 (peripheral vascular malformations) and Q28 (other circulatory
-# malformations) are kept as a separate, explicitly non-CHD group.
+# Local case group: congenital malformations of cardiac chambers and
+# connections, septa, valves and great vessels (Q20-Q26). Q27 and Q28 are
+# other circulatory malformations and are kept as a separate group.
 CID10_CHAPTER_CHD = [f"Q2{i}" for i in range(0, 7)]  # Q20 .. Q26
+CASE_GROUP_NAME = "Malformações congênitas das câmaras cardíacas e conexões, septos, válvulas e grandes vasos"
+CASE_GROUP_CID10 = "Q20–Q26"
 CID10_OTHER_CIRCULATORY = ["Q27", "Q28"]
 CID10_CIRCULATORY_ALL = CID10_CHAPTER_CHD + CID10_OTHER_CIRCULATORY
 

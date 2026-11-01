@@ -1,6 +1,6 @@
 # GraphAmbiCardio
 
-**Um grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas.**
+**Um grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e malformações congênitas do aparelho circulatório (CID-10 Q20–Q26).**
 Campos dos Goytacazes, RJ, 2010 a 2025.
 
 [![Versão](https://img.shields.io/badge/vers%C3%A3o-0.4.0-1f6feb)](CHANGELOG.md)
@@ -14,7 +14,7 @@ Campos dos Goytacazes, RJ, 2010 a 2025.
 [![Não é revisão sistemática](https://img.shields.io/badge/n%C3%A3o%20%C3%A9-revis%C3%A3o%20sistem%C3%A1tica-lightgrey)](#11-limitações-honestas)
 [![Testes](https://img.shields.io/badge/testes-pytest%20%2B%20Julia-2ea44f)](tests)
 
-> **Em uma frase:** o GraphAmbiCardio organiza, em um só lugar, o que a ciência sabe sobre como o ambiente (calor, poluição do ar, agrotóxicos, metais, álcool, tabaco e outros fatores) pode influenciar o desenvolvimento do coração do bebê, e mostra onde ainda faltam evidências.
+> **Em uma frase:** o GraphAmbiCardio organiza, em um só lugar, o que a ciência sabe sobre como o ambiente (calor, poluição do ar, agrotóxicos, metais, álcool, tabaco e outros fatores) pode influenciar o desenvolvimento do coração e dos grandes vasos do bebê, e mostra onde ainda faltam evidências.
 
 > **Este estudo não é uma revisão sistemática.** É uma busca organizada, com curadoria documentada, bases biológicas públicas e análise de dados de saúde de Campos dos Goytacazes. Não prova causalidade.
 
@@ -250,12 +250,17 @@ flowchart TB
 
 ## 5. Dados locais e modelos exploratórios
 
+> **Grupo de doenças analisado.** O desfecho local principal é o grupo CID-10 **Q20–Q26**: malformações congênitas das câmaras cardíacas e conexões (Q20), dos septos (Q21), das válvulas pulmonar e tricúspide (Q22), das válvulas aórtica e mitral (Q23), outras malformações do coração (Q24), grandes artérias (Q25) e grandes veias (Q26). Q27–Q28 (outras malformações congênitas do aparelho circulatório) são reportadas separadamente e não entram no numerador principal. O termo "cardiopatia congênita" é usado apenas quando o estudo de origem trata do coração; o grupo local é mais amplo porque inclui os grandes vasos.
+>
+> Fenótipos sentinela no grafo: comunicação interventricular (VSD), comunicação interatrial (ASD), defeito do septo atrioventricular (AVSD), tetralogia de Fallot (TOF), dupla via de saída do ventrículo direito (DORV), transposição das grandes artérias (TGA), síndrome do coração esquerdo hipoplásico (HLHS), coarctação da aorta (CoA), persistência do canal arterial (PDA), estenose valvar pulmonar (PS), estenose valvar aórtica (AS), drenagem anômala total de veias pulmonares (TAPVC), tronco arterial comum (truncus) e anomalia de Ebstein. Quando um estudo relata o conjunto, usa-se o nó agregado `CHD:ALL`.
+
+
 ### SINASC
 
 - **98.598 nascimentos** (microdados de 2010 a 2022 e 2025; 2023 e 2024 apenas agregados do TabNet).
-- **52 casos de cardiopatia congênita core** (Q20 a Q26), **5,27 por 10.000** nascidos vivos, o que indica subnotificação grave.
-- **8 registros Q27 a Q28** (não são cardiopatia congênita core; 1 também tinha código Q20 a Q26).
-- TabNet 2023 e 2024: **5 e 5 casos** no grupo amplo Q20 a Q28, mantidos em colunas separadas e **não imputados** como core.
+- **52 casos do grupo Q20–Q26**, **0,53 por 1.000** nascidos vivos, o que indica subnotificação grave.
+- **8 registros Q27 a Q28** (não pertencem ao grupo principal Q20–Q26; 1 também tinha código Q20 a Q26).
+- TabNet 2023 e 2024: **5 e 5 casos** no grupo amplo Q20 a Q28, mantidos em colunas separadas e **não imputados** no grupo Q20–Q26.
 
 ### SIH/SUS
 
@@ -309,7 +314,7 @@ Todas as figuras do site são exportadas com fonte, período e SHA-256 em `outpu
 
 | Grafo interativo | SINASC |
 |---|---|
-| ![Grafo interativo de exposições, mecanismos, processos e fenótipos](outputs/figures/site/01_grafo_interativo.png) | ![SINASC: casos e taxa por 10.000 nascidos vivos](outputs/figures/site/02_sinasc.png) |
+| ![Grafo interativo de exposições, mecanismos, processos e fenótipos](outputs/figures/site/01_grafo_interativo.png) | ![SINASC: casos e taxa por 1.000 nascidos vivos](outputs/figures/site/02_sinasc.png) |
 
 | SIH/SUS | Clima (ERA5-Land) |
 |---|---|
@@ -498,7 +503,7 @@ O workflow `.github/workflows/ci.yml` roda em cada push e pull request:
 - **SciELO** foi acessado por metadados Crossref, porque a interface de busca bloqueou automação.
 - **CAPES** cobre o Catálogo de Teses, não o Portal de Periódicos.
 - **SINASC** tem subnotificação grave; 2023 e 2024 não têm microdados, e 2025 é preliminar.
-- **CHD core** é definido como Q20 a Q26; Q27 e Q28 são reportados separadamente e não entram no numerador principal.
+- **Grupo Q20–Q26** é definido como malformações das câmaras cardíacas e conexões, septos, válvulas e grandes vasos; Q27 e Q28 são reportados separadamente e não entram no numerador principal.
 - **SIH**: AIH não são pessoas e a maioria das internações ocorre fora do município.
 - **Exposição de área.** Clima e PM2,5 são séries de área, não exposição individual. A estação INMET A607 serve para validar a reanálise, não para representar exposição pessoal.
 - **Idade gestacional.** A concepção é estimada como 40 semanas obstétricas menos 14 dias; janelas de ±7 dias são analisadas como sensibilidade.

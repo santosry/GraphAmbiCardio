@@ -3,7 +3,7 @@
   "@type": "Dataset",
   "identifier": "https://github.com/santosry/GraphAmbiCardio#v0.4.0",
   "name": "GraphAmbiCardio",
-  "description": "Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e fenótipos de cardiopatias congênitas, integrando literatura, bases biológicas curadas e dados ecológicos de Campos dos Goytacazes (2010-2025).",
+  "description": "Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e fenótipos de malformações congênitas do aparelho circulatório (Q20–Q26), integrando literatura, bases biológicas curadas e dados ecológicos de Campos dos Goytacazes (2010-2025).",
   "version": "0.4.0",
   "issued": "2026-11-01",
   "modified": "2026-11-01",
@@ -58,8 +58,8 @@
       "name": "nos_grafo",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/nodes.csv",
       "format": "csv",
-      "byteSize": 156159,
-      "checksum": "sha256:d687d92c7b25cdb3b4d87071acb3a62b55e88d7024575b26d9bc72226f8b062f"
+      "byteSize": 156187,
+      "checksum": "sha256:f088e7ba95d54539af96e8b8b40cbc62a1e14cce295d4d86c4de36c16b652420"
     },
     {
       "@type": "Distribution",
@@ -90,8 +90,8 @@
       "name": "sinasc_anual",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sinasc_annual_complete.csv",
       "format": "csv",
-      "byteSize": 3252,
-      "checksum": "sha256:6a8cbf3af4c9eb53fedc5e817c08b10af8d471365c9fb4a36087cfdaf17750fa"
+      "byteSize": 3224,
+      "checksum": "sha256:f0c55e7c24c16a9132669021b9cd9f0bbb0d753a1ffd8b22cb652cd0c9e10462"
     },
     {
       "@type": "Distribution",
@@ -266,8 +266,8 @@
       "name": "figuras_site",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/figures/site/manifest.json",
       "format": "json",
-      "byteSize": 4030,
-      "checksum": "sha256:da5006dac8b9fe888da5d209633140241dbd8de78c7be6b756e028405f3f42d4"
+      "byteSize": 4059,
+      "checksum": "sha256:2b8a6818604b78d4d92633f87eb13059d922ac6c4f2bd568062d6f91a4442abc"
     },
     {
       "@type": "Distribution",

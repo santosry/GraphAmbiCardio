@@ -112,7 +112,7 @@ pd.DataFrame(hierarchy).to_csv(APP / "hierarchy.csv", index=False)
 # compact metadata for the app and FAIR layer
 meta = {
     "titulo": "GraphAmbiCardio",
-    "subtitulo": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas",
+    "subtitulo": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e malformações congênitas do aparelho circulatório (Q20–Q26)",
     "versao": "0.4.0",
     "data": "2026-11-01",
     "municipio": "Campos dos Goytacazes, RJ, Brasil (IBGE 330100)",

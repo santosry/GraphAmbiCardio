@@ -58,8 +58,8 @@ Specific corrections made during validation:
 
 ## 4. Data validation details
 
-- SINASC: 98,598 births; all `CODMUNRES` = 330100; years 2010–2022 + 2025; 2023–2024 explicitly absent; 52 core CHD (Q20–Q26) and 8 Q27–Q28 records; 7 with multiple core CHD codes; 3 records with `IDANOMAL=1` and no code.
-- SIH: 474 primary core-CHD admissions (Q20–Q26), 75 primary Q27–Q28; all `MUNIC_RES` = 330100; years 2010–2025; 16 hospitals; 51.9% outside municipality; 30 deaths.
+- SINASC: 98,598 births; all `CODMUNRES` = 330100; years 2010–2022 + 2025; 2023–2024 explicitly absent; 52 Q20–Q26 cases and 8 Q27–Q28 records; 7 with multiple Q20–Q26 codes; 3 records with `IDANOMAL=1` and no code.
+- SIH: 474 primary Q20–Q26 admissions (Q20–Q26), 75 primary Q27–Q28; all `MUNIC_RES` = 330100; years 2010–2025; 16 hospitals; 51.9% outside municipality; 30 deaths.
 - Climate: 5,844 days; zero missing Tmax; model fixed to `era5_land`; P90 threshold 33.3 °C; 68 heat waves.
 - Exposure linkage: 90,258/98,598 births with a complete main organogenesis window (91.5%); completeness 100% among linked births; ±7-day windows stored.
 - Cross-checks: counts in `outputs/tables/*` reconcile with the processed CSVs (no manual edits).

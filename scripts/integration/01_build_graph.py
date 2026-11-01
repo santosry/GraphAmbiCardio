@@ -481,7 +481,7 @@ def local_indicators(evidence: list[dict[str, Any]]) -> list[dict[str, Any]]:
         },
         {
             "node_id": "IND:SINASC_CHD",
-            "label": "SINASC CHD cases / 10,000 live births",
+            "label": "SINASC Q20–Q26 cases / 1,000 live births",
             "type": "Indicator",
             "subtype": "prevalence_at_birth",
             "identifiers": "",
@@ -650,7 +650,7 @@ def main() -> None:
     node_map = {n["node_id"]: n for n in nodes}
     node_map["CHD:ALL"] = {
         "node_id": "CHD:ALL",
-        "label": "Congenital heart defects (all Q20-Q28, aggregate)",
+        "label": "Malformações congênitas do aparelho circulatório (agregado de estudos)",
         "type": "Phenotype",
         "subtype": "aggregate",
         "identifiers": "ICD10:Q20-Q28",

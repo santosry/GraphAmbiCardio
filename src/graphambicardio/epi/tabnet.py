@@ -67,7 +67,7 @@ def fetch_year(year: int) -> dict[str, Any]:
         "year": year,
         "live_births": births,
         "circulatory_cases": cases,
-        "per_10000_lb": round(10000 * cases / births, 2) if cases is not None and births else "",
+        "per_1000_lb": round(1000 * cases / births, 2) if cases is not None and births else "",
         "source": "DATASUS TabNet (SINASC, nvRJ)",
         "data_status": status,
         "case_definition": "anomaly group 'malformações congênitas do aparelho circulatório' (Q20-Q28)",

@@ -4,20 +4,20 @@ mod_epi_ui <- function(id) {
     note_box("<b>Leia antes de interpretar.</b> Os dados locais são apresentados como contexto ecológico. ",
              "SINASC não é incidência (há subnotificação importante); SIH não representa indivíduos únicos; ",
              "a exposição climática é de área (ERA5-Land), não individual. ",
-             "CHD = Q20–Q26; Q27–Q28 são analisadas separadamente e não entram no numerador de CHD. ", "warning"),
+             "Grupo principal: malformações congênitas das câmaras cardíacas e conexões, septos, válvulas e grandes vasos (CID-10 Q20–Q26). Q27–Q28 (outras malformações do aparelho circulatório) são analisadas separadamente e não entram no numerador principal. ", "warning"),
     layout_columns(
       col_widths = c(4,4,4),
       kpi_card("Nascidos vivos (SINASC)", textOutput(ns("kpi_births")), "microdados 2010–2022 e 2025", "#0B3C5D", source = "Fonte: SINASC/DATASUS (microdados 2010–2022 e 2025; TabNet 2023–2024)."),
-      kpi_card("Casos de cardiopatia", textOutput(ns("kpi_cases")), "CHD core Q20–Q26", "#E7298A", source = "Fonte: SINASC/DATASUS; CID-10 Q20–Q26. Q27–Q28 são reportadas à parte."),
+      kpi_card("Casos Q20–Q26", textOutput(ns("kpi_cases")), "malformações cardíacas e grandes vasos", "#E7298A", source = "Fonte: SINASC/DATASUS; CID-10 Q20–Q26. Q27–Q28 são reportadas à parte."),
       kpi_card("Internações (SIH)", textOutput(ns("kpi_sih")), "diagnóstico principal Q20–Q26", "#1D7874", source = "Fonte: SIH/SUS; AIH com diagnóstico principal Q20–Q26.")
     ),
     br(),
     layout_columns(
       col_widths = c(7,5),
       div(class = "figure-block",
-          h5("SINASC: casos e taxa por 10.000 nascidos vivos"),
+          h5("SINASC: casos e taxa por 1.000 nascidos vivos"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sinasc_plot"), height = "100%")),
-          source_note("Fonte: SINASC/DATASUS. Casos = CHD core Q20–Q26; 2023–2024 sem microdados (TabNet Q20–Q28 mostrado separadamente); ver docs/07 e docs/09.")),
+          source_note("Fonte: SINASC/DATASUS. Casos = Q20–Q26; 2023–2024 sem microdados (TabNet Q20–Q28 mostrado separadamente); ver docs/07 e docs/09.")),
       div(class = "figure-block",
           h5("SIH/SUS: internações e óbitos"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sih_plot"), height = "100%")),
@@ -91,9 +91,9 @@ mod_epi_ui <- function(id) {
     br(),
     card(card_header("Distribuição dos códigos CID-10 registrados"),
          card_body(
-           h6("CHD core Q20–Q26"),
+           h6("Grupo Q20–Q26"),
            DTOutput(ns("codes")),
-           h6("Q27–Q28 (não CHD)", style = "margin-top:1rem;"),
+           h6("Q27–Q28 (outras malformações do aparelho circulatório)", style = "margin-top:1rem;"),
            DTOutput(ns("other_codes")),
            source_note("Fonte: SINASC/DATASUS; CODANOMAL.")
          ))
@@ -109,17 +109,17 @@ mod_epi_server <- function(id) {
     output$sinasc_plot <- renderPlotly({
       d <- sinasc %>% mutate(ano = as.integer(year))
       plot_ly(d, x = ~ano) %>%
-        add_bars(y = ~chd_cases, name = "CHD core Q20–Q26",
+        add_bars(y = ~chd_cases, name = "Q20–Q26",
                  marker = list(color = "#E7298A"),
-                 hovertemplate = "Ano %{x}<br>CHD core: %{y}<extra></extra>") %>%
+                 hovertemplate = "Ano %{x}<br>Q20–Q26: %{y}<extra></extra>") %>%
         add_bars(y = ~tabnet_circulatory_cases, name = "TabNet Q20–Q28 (amplo)",
                  marker = list(color = "#BDBDBD"),
                  hovertemplate = "Ano %{x}<br>TabNet Q20–Q28: %{y}<extra></extra>") %>%
-        add_trace(y = ~chd_per_10000_lb, name = "CHD por 10.000 NV", yaxis = "y2",
+        add_trace(y = ~chd_per_1000_lb, name = "Q20–Q26 por 1.000 NV", yaxis = "y2",
                   type = "scatter", mode = "lines+markers", line = list(color = "#0B3C5D"),
-                  hovertemplate = "Ano %{x}<br>Taxa core: %{y:.2f}/10.000<extra></extra>") %>%
+                  hovertemplate = "Ano %{x}<br>Taxa Q20–Q26: %{y:.2f}/1.000<extra></extra>") %>%
         layout(barmode = "group",
-               yaxis = list(title = "Casos"), yaxis2 = list(title = "Por 10.000 NV", overlaying = "y", side = "right"),
+               yaxis = list(title = "Casos"), yaxis2 = list(title = "Por 1.000 NV", overlaying = "y", side = "right"),
                legend = list(orientation = "h", y = -0.28), margin = list(l = 60, r = 60, t = 20, b = 70),
                hovermode = "x unified", font = list(size = 12),
                xaxis = list(title = "Ano", dtick = 1, tickangle = -45)) %>%
@@ -268,8 +268,8 @@ mod_epi_server <- function(id) {
     output$coverage <- renderDT({
       datatable(sinasc %>% select(
         Ano = year, Nascidos = live_births,
-        `CHD Q20–Q26` = chd_cases, `CHD/10.000` = chd_per_10000_lb,
-        `Q27–Q28` = other_circulatory_cases, `Q27–Q28/10.000` = other_circulatory_per_10000_lb,
+        `Q20–Q26` = chd_cases, `Q20–Q26/1.000` = chd_per_1000_lb,
+        `Q27–Q28` = other_circulatory_cases, `Q27–Q28/1.000` = other_circulatory_per_1000_lb,
         `TabNet Q20–Q28` = tabnet_circulatory_cases,
         Status = data_status, Fonte = source
       ), rownames = FALSE, options = list(pageLength = 8, dom = "tp", scrollX = TRUE))
@@ -288,12 +288,12 @@ mod_epi_server <- function(id) {
     }, server = FALSE)
 
     output$other_circulatory <- renderDT({
-      a <- sinasc %>% select(year, other_circulatory_cases, other_circulatory_per_10000_lb)
+      a <- sinasc %>% select(year, other_circulatory_cases, other_circulatory_per_1000_lb)
       b <- sih_other %>% select(year, admissions_primary_other_circulatory)
       d <- full_join(a, b, by = "year") %>% arrange(year)
       out <- d %>% transmute(
         Ano = year, `SINASC Q27–Q28` = other_circulatory_cases,
-        `SINASC/10.000` = other_circulatory_per_10000_lb,
+        `SINASC/1.000` = other_circulatory_per_1000_lb,
         `SIH Q27–Q28` = admissions_primary_other_circulatory
       )
       datatable(out, rownames = FALSE, options = list(pageLength = 8, dom = "tp"))

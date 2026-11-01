@@ -20,11 +20,11 @@ mod_methods_ui <- function(id) {
         card_body(
           p("O estudo combina:"),
           tags$ul(
-            tags$li("cinco domínios de busca pré-registrados (exposição→CHD, exposição→mecanismo, mecanismo→cardiogênese, cardiogênese→fenótipo, gene→fenótipo);"),
-            tags$li("196 pares exposição × fenótipo para mapear densidade e lacunas;"),
+            tags$li("desfecho local definido como grupo CID-10 Q20–Q26 (câmaras cardíacas e conexões, septos, válvulas e grandes vasos); Q27–Q28 são reportados separadamente;"),
+            tags$li("cinco domínios de busca pré-registrados (exposição→fenótipo, exposição→mecanismo, mecanismo→cardiogênese, cardiogênese→fenótipo, gene→fenótipo) e 196 pares exposição × fenótipo;"),
             tags$li("curadoria de 67 estudos-âncora (66 PMIDs + 1 tese CAPES): 54 linhas lidas manualmente e 49 linhas promovidas em lote com revisão registrada; trechos verbatim verificados contra o PubMed e contra o resumo arquivado da tese;"),
             tags$li("integração de HPO, ClinVar, NCBI Gene, Reactome e Enrichr;"),
-            tags$li("dados locais de SINASC, SIH/SUS e ERA5-Land (2010–2025).")
+            tags$li("dados locais de SINASC, SIH/SUS e ERA5-Land (2010–2025), com 14 fenótipos sentinela de cardiopatia congênita no grafo.")
           ),
           source_note("Referências: docs/00_PROTOCOL.md e docs/02_SEARCH_STRATEGY.md."),
           note_box("<b>Não é revisão sistemática.</b> Não houve triagem dupla de todos os registros, revisão de texto completo ou aplicação de instrumentos formais de risco de viés. É uma busca estruturada com curadoria dirigida.", "warning")
@@ -64,7 +64,7 @@ mod_methods_ui <- function(id) {
         card_header("Limitações principais"),
         card_body(
           tags$ul(
-            tags$li("Subnotificação grave no SINASC: 52 casos de CHD core (Q20–Q26) em 98.598 nascimentos (0,53/1.000), além de 8 registros Q27–Q28."),
+            tags$li("Subnotificação grave no SINASC: 52 casos do grupo Q20–Q26 em 98.598 nascimentos (0,53/1.000), além de 8 registros Q27–Q28."),
             tags$li("2023–2024 sem microdados; usados apenas agregados do TabNet."),
             tags$li("SIH: AIH ≠ pessoa; 55% das internações fora do município."),
             tags$li("Exposição de área (ERA5-Land para clima; PM2,5 do VIGIAR), não individual."),

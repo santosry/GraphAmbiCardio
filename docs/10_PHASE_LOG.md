@@ -61,12 +61,12 @@ All work was executed on **2026-10-31** (America/Sao_Paulo), with the CAPES tria
 **Done.** SINASC 2010–2022 + 2025; SIH 2010–2025 (192 monthly files); ERA5-Land 2010–2025; gestational-window linkage; descriptive indicators; exploratory models; leave-one-year-out sensitivity.
 
 **Obtained.**
-- 98,598 births; 52 core CHD cases (Q20–Q26; 5.27/10,000) and 8 Q27–Q28; 2023 and 2024 aggregate-only via TabNet (5 broad Q20–Q28 cases each); 2025 preliminary.
+- 98,598 births; 52 Q20–Q26 cases (0.53/1,000) and 8 Q27–Q28; 2023 and 2024 aggregate-only via TabNet (5 broad Q20–Q28 cases each); 2025 preliminary.
 - PM2.5 municipal 2010–2025 from VIGIAR via `vigiar` (annual 6.50–9.04 µg/m³; monthly 3.83–13.84 µg/m³).
-- 474 primary core-CHD admissions (Q20–Q26), 75 primary Q27–Q28, 12 secondary-only; 30 deaths; 51.9% outside municipality; 16 hospitals.
+- 474 primary Q20–Q26 admissions (Q20–Q26), 75 primary Q27–Q28, 12 secondary-only; 30 deaths; 51.9% outside municipality; 16 hospitals.
 - 5,844 climate days with model fixed to `era5_land`; heat-wave threshold 33.3 °C; 68 heat waves.
 - Gestational window corrected: conception = birth date − (gestational age × 7 − 14 days); ±7-day sensitivity.
-- SINASC: 52 core CHD (Q20–Q26) and 8 Q27–Q28 among 98,598 births.
+- SINASC: 52 Q20–Q26 cases and 8 Q27–Q28 among 98,598 births.
 - 90,258 births with a complete main organogenesis window; ±7-day sensitivity windows stored.
 - Logistic OR 1.30/SD (1.00–1.69); season-adjusted 1.65 (1.13–2.42); monthly RR 1.22 (0.94–1.60); LOO 1.47–1.66.
 
@@ -163,9 +163,9 @@ Every deviation is reflected in the manuscript’s limitations section.
 
 ## Phase L: Methodological correction and v0.4.0
 
-**Done.** Corrected the obstetric conception estimate (LMP-to-conception lag of 14 days; 40 weeks = 266 days before birth) and added ±7-day gestational-window sensitivity. Split the local case definition into core CHD Q20–Q26 and separate Q27–Q28. Fixed the Open-Meteo request to `models=era5_land` and recorded model, resolution, returned grid cell, elevation, units and retrieval timestamp. Rebuilt the gene-overlap hypothesis family before selection, applied BH-FDR across all 89 tests, added a size-matched permutation sensitivity and documented mechanism gene-set provenance. Corrected the sex recoding so unknown codes are missing rather than female.
+**Done.** Corrected the obstetric conception estimate (LMP-to-conception lag of 14 days; 40 weeks = 266 days before birth) and added ±7-day gestational-window sensitivity. Split the local case definition into Q20–Q26 group and separate Q27–Q28. Fixed the Open-Meteo request to `models=era5_land` and recorded model, resolution, returned grid cell, elevation, units and retrieval timestamp. Rebuilt the gene-overlap hypothesis family before selection, applied BH-FDR across all 89 tests, added a size-matched permutation sensitivity and documented mechanism gene-set provenance. Corrected the sex recoding so unknown codes are missing rather than female.
 
-**Obtained.** SINASC: 52 core CHD and 8 Q27–Q28 among 98,598 births. SIH: 474 primary core-CHD admissions and 75 Q27–Q28. Climate: P90 33.3 °C; 68 heat waves. Models: Tmax OR 1.155 (0.87–1.54; p=0.318); no result survives FDR. Hypotheses: 89 tests, 5 with overlap ≥2, none significant after BH-FDR; permutation also non-significant. INMET comparison against the fixed ERA5-Land series: Tmax r=0.937; RH r=0.787.
+**Obtained.** SINASC: 52 Q20–Q26 cases and 8 Q27–Q28 among 98,598 births. SIH: 474 primary Q20–Q26 admissions and 75 Q27–Q28. Climate: P90 33.3 °C; 68 heat waves. Models: Tmax OR 1.155 (0.87–1.54; p=0.318); no result survives FDR. Hypotheses: 89 tests, 5 with overlap ≥2, none significant after BH-FDR; permutation also non-significant. INMET comparison against the fixed ERA5-Land series: Tmax r=0.937; RH r=0.787.
 
 **Decision.** Release v0.4.0 as a methodologically corrected, more conservative version. **Apt to advance: yes, to review; not to causal claims.**
 

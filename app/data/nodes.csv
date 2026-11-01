@@ -477,7 +477,7 @@ PATH:R-HSA-2173791,TGF-beta receptor signaling in EMT (epithelial to mesenchymal
 PATH:R-HSA-3642279,TGFBR2 MSI Frameshift Mutants in Cancer,Pathway,Reactome,Reactome:R-HSA-3642279,,Reactome
 POP:CAMPOS,"Resident population, Campos dos Goytacazes",Population,,IBGE:330100,Municipality of residence; ecological exposure assignment.,study
 PERIOD:2010-2025,2010-2025,Period,,,Epidemiological study period.,study
-IND:SINASC_CHD,"SINASC CHD cases / 10,000 live births",Indicator,prevalence_at_birth,,Annual CHD cases reported in SINASC for resident live births; severe under-ascertainment documented.,SINASC
+IND:SINASC_CHD,"SINASC Q20–Q26 cases / 1,000 live births",Indicator,prevalence_at_birth,,Annual CHD cases reported in SINASC for resident live births; severe under-ascertainment documented.,SINASC
 IND:SIH_CHD,SIH CHD admissions (primary diagnosis),Indicator,hospital_admissions,,AIHs of residents with primary diagnosis Q20-Q28; not incidence and not unique individuals.,SIH/SUS
 IND:PM25_VIGIAR,PM2.5 anual (VIGIAR/MS),Indicator,area_level_air_quality,,Série anual de PM2.5 para Campos dos Goytacazes obtida do VIGIAR (Ministério da Saúde) via pacote vigiar; 2010-2025.,VIGIAR / vigiar
 IND:ERA5_TMAX,ERA5-Land daily maximum temperature (Campos),Indicator,area_level_climate,,"Gridded reanalysis for the municipality, 2010-2025.",Open-Meteo / ERA5-Land
@@ -1295,7 +1295,7 @@ GENE:ZNF341,ZNF341,Gene,,NCBI:84905,,HPO genes_to_phenotype.txt
 GENE:ZNF462,ZNF462,Gene,,NCBI:58499,,HPO genes_to_phenotype.txt
 GENE:ZNF699,ZNF699,Gene,,NCBI:374879,,HPO genes_to_phenotype.txt
 GENE:ZRSR2,ZRSR2,Gene,,NCBI:8233,,HPO genes_to_phenotype.txt
-CHD:ALL,"Congenital heart defects (all Q20-Q28, aggregate)",Phenotype,aggregate,ICD10:Q20-Q28,Aggregate phenotype used when a study reports overall CHD rather than a subtype.,study_ontology
+CHD:ALL,Malformações congênitas do aparelho circulatório (agregado de estudos),Phenotype,aggregate,ICD10:Q20-Q28,Aggregate phenotype used when a study reports overall CHD rather than a subtype.,study_ontology
 VAR:VCV004924099,VCV004924099,Variant,,VCV004924099,,ClinVar
 VAR:VCV004924093,VCV004924093,Variant,,VCV004924093,,ClinVar
 VAR:VCV004891001,VCV004891001,Variant,,VCV004891001,,ClinVar

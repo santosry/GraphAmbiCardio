@@ -11,7 +11,7 @@ mod_about_ui <- function(id) {
         p("O GraphAmbiCardio é desenvolvido por uma equipe de bacharelandos em Enfermagem pelo ",
           tags$b("Instituto Federal Fluminense, Campus Campos Guarus"), ".
 ",
-          "A proposta integra formação em saúde, vigilância epidemiológica, ciência de dados e comunicação científica aplicada às cardiopatias congênitas."),
+          "A proposta integra formação em saúde, vigilância epidemiológica, ciência de dados e comunicação científica aplicada às malformações congênitas do aparelho circulatório (CID-10 Q20–Q26)."),
         div(
           class = "team-grid",
           div(

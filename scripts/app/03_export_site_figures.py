@@ -42,10 +42,10 @@ FIGURES = [
         "file": "02_sinasc.png",
         "tab": "Painel epidemiológico",
         "selector": "[id$='sinasc_plot']",
-        "title": "SINASC: casos e taxa por 10.000 nascidos vivos",
+        "title": "SINASC: casos e taxa por 1.000 nascidos vivos",
         "source": "SINASC/DATASUS (microdados 2010–2022 e 2025; TabNet 2023–2024 em série separada)",
         "period": "2010–2025",
-        "note": "Casos = CHD core Q20–Q26; TabNet Q20–Q28 em colunas separadas; ver docs/07_EPI_ENV_METHODS.md.",
+        "note": "Casos = Q20–Q26 (malformações cardíacas e dos grandes vasos); TabNet Q20–Q28 em colunas separadas; ver docs/07_EPI_ENV_METHODS.md.",
         "data": ["sinasc_annual.csv"],
     },
     {
@@ -53,7 +53,7 @@ FIGURES = [
         "tab": "Painel epidemiológico",
         "selector": "[id$='sih_plot']",
         "title": "SIH/SUS: internações e óbitos",
-        "source": "SIH/SUS (AIH com diagnóstico principal core CHD Q20–Q26)",
+        "source": "SIH/SUS (AIH com diagnóstico principal Q20–Q26)",
         "period": "2010–2025",
         "note": "AIH não são pessoas; ver docs/07 e docs/09.",
         "data": ["sih_annual.csv"],
@@ -124,15 +124,29 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
+PARENT_TABS = {
+    "Grafo interativo": "Grafo e painel",
+    "Painel epidemiológico": "Grafo e painel",
+    "Evidências": "Evidências e métodos",
+    "Hipóteses e lacunas": "Evidências e métodos",
+    "Consulta científica": "Evidências e métodos",
+    "Métodos": "Evidências e métodos",
+}
+
+
+def click_link(page, name: str) -> None:
+    link = page.locator(f"a[data-value='{name}']").first
+    link.wait_for(state="visible", timeout=20000)
+    link.click()
+
+
 def click_tab(page, name: str) -> None:
-    page.evaluate(
-        """(name) => {
-            const link = [...document.querySelectorAll('nav a')]
-              .find(a => a.innerText.trim().includes(name));
-            if (link) link.click();
-        }""",
-        name,
-    )
+    parent = PARENT_TABS.get(name)
+    if parent:
+        click_link(page, parent)
+        page.wait_for_timeout(2500)
+    click_link(page, name)
+    page.wait_for_timeout(2500)
 
 
 def main() -> None:

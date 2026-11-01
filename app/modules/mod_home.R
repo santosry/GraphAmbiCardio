@@ -3,7 +3,7 @@ mod_home_ui <- function(id) {
   tagList(
     div(class = "hero",
         h1("GraphAmbiCardio"),
-        p("Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e cardiopatias congênitas."),
+        p("Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e malformações congênitas do aparelho circulatório (CID-10 Q20–Q26)."),
         p(class = "small-muted", style = "color:#D8EEEA;",
           "Campos dos Goytacazes, RJ · 2010–2025 · Camadas de evidência e hipótese separadas · Busca estruturada não sistemática."),
         div(style = "margin-top:.8rem;",
@@ -14,9 +14,10 @@ mod_home_ui <- function(id) {
     card(
       card_header("Sobre o projeto"),
       card_body(
-        p("O GraphAmbiCardio organiza, em um único ambiente, o que a literatura e as bases biológicas curadas documentam sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e cardiopatias congênitas."),
+        p("O GraphAmbiCardio organiza, em um único ambiente, o que a literatura e as bases biológicas curadas documentam sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e malformações congênitas do aparelho circulatório (CID-10 Q20–Q26)."),
         p("O painel também reúne dados ecológicos de Campos dos Goytacazes (SINASC, SIH/SUS, ERA5-Land, INMET e VIGIAR) e mantém, de forma explícita, a separação entre evidência observada, anotação estruturada, inferência, hipótese e contexto ecológico. O objetivo é apoiar leitura crítica, auditoria e geração de perguntas: não substituir avaliação clínica nem provar causalidade."),
         p("O projeto é desenvolvido por uma equipe de bacharelandos em Enfermagem do Instituto Federal Fluminense, Campus Campos Guarus, com compromisso de ciência aberta: código, metadados, figuras, tabelas e instruções de reprodução são públicos; dados individuais de saúde não são redistribuídos."),
+        note_box("<b>Grupo de doenças analisado:</b> malformações congênitas das câmaras cardíacas e conexões, septos, válvulas e grandes vasos (CID-10 Q20–Q26). Q27–Q28 (outras malformações do aparelho circulatório) são reportadas separadamente. O grafo cobre 14 fenótipos sentinela: VSD, ASD, AVSD, TOF, DORV, TGA, HLHS, CoA, PDA, PS, AS, TAPVC, tronco arterial comum e anomalia de Ebstein.", "info"),
         source_note("Fontes: docs/00_PROTOCOL.md, docs/04_ONTOLOGY.md, docs/12_FAIR.md e docs/15_DATA_GOVERNANCE.md.")
       )
     ),

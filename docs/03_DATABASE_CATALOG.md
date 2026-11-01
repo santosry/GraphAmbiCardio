@@ -105,14 +105,14 @@ GEO was evaluated but no dataset was admitted. Rationale: adult myocardial expre
 - **Files:** `DNRJ{year}.dbc` (Rio de Janeiro state), converted with `pyreaddbc` and read with `dbfread`.
 - **Coverage obtained:** 2010–2022 microdata (consolidated) and **2025 (preliminary)**. **2023 and 2024 microdata were absent from the FTP**; aggregate counts were obtained from **TabNet** (`nvrj23.dbf`, `nvrj24.dbf`).
 - **Fields used:** CODMUNRES, DTNASC, SEXO, IDANOMAL, CODANOMAL, IDADEMAE, ESCMAE, GESTACAO, SEMAGESTAC, PESO, APGAR1/5, GRAVIDEZ, PARTO, CONSULTAS, RACACOR.
-- **Limitation:** `CODANOMAL` concatenates 4-character codes; CHD ascertainment at birth is incomplete (52 core Q20–Q26 cases plus 8 Q27–Q28 in 98,598 births).
+- **Limitation:** `CODANOMAL` concatenates 4-character codes; CHD ascertainment at birth is incomplete (52 Q20–Q26 cases plus 8 Q27–Q28 in 98,598 births).
 
 ### 5.1b TabNet (SINASC aggregates)
 - **URL:** `http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinasc/cnv/nvRJ.def`
 - **Method:** Latin-1 form POST after session handshake (script `src/graphambicardio/epi/tabnet.py`).
 - **Obtained:** 2022 (control), 2023, 2024 and 2025 births and Q20–Q28 group counts.
 - **Validated:** 2025 TabNet (5.924 births, 9 cases) matches the microdata exactly.
-- **Limitation:** TabNet counts the broad group “malformações congênitas do aparelho circulatório” (Q20–Q28); the microdata parser uses core CHD Q20–Q26 and keeps Q27–Q28 separate. The two series are never mixed; 2023–2024 core CHD is left missing.
+- **Limitation:** TabNet counts the broad group “malformações congênitas do aparelho circulatório” (Q20–Q28); the microdata parser uses Q20–Q26 group and keeps Q27–Q28 separate. The two series are never mixed; 2023–2024 Q20–Q26 group is left missing.
 
 ### 5.2 SIH/SUS (Hospital admissions)
 - **URL:** DATASUS FTP `.../SIHSUS/200801_/Dados/RDRJ{yy}{mm}.dbc`

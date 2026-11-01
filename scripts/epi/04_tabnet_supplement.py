@@ -25,7 +25,7 @@ def main() -> None:
         columns={
             "live_births": "live_births_tabnet",
             "circulatory_cases": "tabnet_circulatory_cases",
-            "per_10000_lb": "tabnet_circulatory_per_10000_lb",
+            "per_1000_lb": "tabnet_circulatory_per_1000_lb",
             "data_status": "tabnet_data_status",
             "case_definition": "tabnet_case_definition",
             "source": "tabnet_source",
@@ -42,20 +42,19 @@ def main() -> None:
     out.loc[missing_microdata, "data_status"] = "aggregate only (broad Q20-Q28)"
     out.loc[missing_microdata, "source"] = "SINASC via TabNet (broad Q20-Q28; not CHD core)"
     out.loc[missing_microdata, "chd_cases"] = pd.NA
-    out.loc[missing_microdata, "chd_per_10000_lb"] = pd.NA
-    out.loc[missing_microdata, "chd_proportion_per_1000_lb"] = pd.NA
+    out.loc[missing_microdata, "chd_per_1000_lb"] = pd.NA
     out.loc[missing_microdata, "other_circulatory_cases"] = pd.NA
-    out.loc[missing_microdata, "other_circulatory_per_10000_lb"] = pd.NA
+    out.loc[missing_microdata, "other_circulatory_per_1000_lb"] = pd.NA
     out.loc[missing_microdata, "circulatory_cases_total"] = pd.NA
-    out.loc[missing_microdata, "circulatory_per_10000_lb"] = pd.NA
+    out.loc[missing_microdata, "circulatory_per_1000_lb"] = pd.NA
 
     out = out.sort_values("year")
     out.to_csv(config.TABLES / "sinasc_annual_complete.csv", index=False)
     coverage = out[
         [
-            "year", "live_births", "chd_cases", "chd_per_10000_lb",
+            "year", "live_births", "chd_cases", "chd_per_1000_lb",
             "other_circulatory_cases", "tabnet_circulatory_cases",
-            "tabnet_circulatory_per_10000_lb", "data_status", "source",
+            "tabnet_circulatory_per_1000_lb", "data_status", "source",
         ]
     ].copy()
     coverage.to_csv(config.REPORTS / "sinasc_coverage.csv", index=False)

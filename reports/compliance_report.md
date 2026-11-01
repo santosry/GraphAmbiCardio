@@ -1,6 +1,6 @@
 # Relatório de conformidade e higiene
 
-Gerado: 2026-11-01T20:38:30Z
+Gerado: 2026-11-01T21:12:24Z
 
 **Resultado: APROVADO**
 
@@ -10,7 +10,7 @@ Gerado: 2026-11-01T20:38:30Z
 - Segredos: 0 arquivo(s)
 - Arquivos obrigatórios ausentes: 0
 - Recursos FAIR com checksum inválido: 0
-- Arquivos versionados: 621
+- Arquivos versionados: 620
 - `data_raw/` versionado: 0
 - Dados individuais versionados: 0
 - Rótulo de não revisão sistemática: True
