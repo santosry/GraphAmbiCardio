@@ -2,9 +2,47 @@ mod_about_ui <- function(id) {
   ns <- NS(id)
   tagList(
     div(class = "hero", style = "padding:1.4rem 1.6rem;",
-        h1("FAIR, licenças e uso de inteligência artificial", style = "font-size:1.5rem;"),
-        p("Transparência sobre dados, metadados, reprodutibilidade e o papel da IA neste estudo.")
+        h1("Transparência, FAIR e equipe", style = "font-size:1.5rem;"),
+        p("Transparência sobre dados, metadados, reprodutibilidade, equipe e o papel da IA neste estudo.")
     ),
+    card(
+      card_header("Equipe"),
+      card_body(
+        tags$ul(
+          tags$li(tags$b("Ryan de Paulo Santos"), " — ",
+                  tags$a(href = "http://lattes.cnpq.br/7503796642571978", target = "_blank", "Currículo Lattes"),
+                  " · ",
+                  tags$a(href = "https://orcid.org/0009-0005-6770-2001", target = "_blank", "ORCID")),
+          tags$li(tags$b("Letícia"), " — ",
+                  tags$a(href = "http://lattes.cnpq.br/4004634244195808", target = "_blank", "Currículo Lattes"))
+        ),
+        source_note("Links para os currículos Lattes; nomes completos, formação e produção estão nesses currículos.")
+      )
+    ),
+    br(),
+    card(
+      card_header("Ciência aberta — compromisso verificável"),
+      card_body(
+        p("Código, dados derivados, metadados, figuras, tabelas e instruções de reprodução são públicos. ",
+          "Dados individuais de saúde (SINASC/SIH) não são redistribuídos; o site publica apenas agregados e produtos derivados."),
+        tags$ul(
+          tags$li(tags$b("Código:"), " MIT, com pipeline modular, testes e validação automatizada."),
+          tags$li(tags$b("Metadados:"), " DCAT e Frictionless Data Package com SHA-256 por recurso."),
+          tags$li(tags$b("Figuras:"), " PNGs, dados de origem e manifesto com fonte, período e SHA-256."),
+          tags$li(tags$b("Privacidade:"), " microdados individuais ficam fora do Git; ver docs/15_DATA_GOVERNANCE.md."),
+          tags$li(tags$b("Reprodutibilidade:"), " versões fixadas (uv.lock, renv.lock), cache HTTP e comandos documentados.")
+        ),
+        p(
+          tags$a(class = "btn btn-sm btn-outline-primary", href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "Repositório"),
+          tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "metadata.json", target = "_blank", "Metadados DCAT"),
+          tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "datapackage.json", target = "_blank", "Data Package"),
+          tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/figures/site/manifest.json", target = "_blank", "Manifesto das figuras"),
+          tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "https://github.com/santosry/GraphAmbiCardio/blob/main/docs/15_DATA_GOVERNANCE.md", target = "_blank", "Governança de dados")
+        ),
+        source_note("Verificação: scripts/compliance/01_check.py, scripts/validation/02_schema.py e pytest. Documentação: docs/12_FAIR.md.")
+      )
+    ),
+    br(),
     layout_columns(
       col_widths = c(6,6),
       card(
@@ -30,7 +68,7 @@ mod_about_ui <- function(id) {
         card_body(
           p(tags$b("Software e dados:")),
           tags$blockquote(style = "font-size:.88rem;",
-            "GraphAmbiCardio study team. GraphAmbiCardio, v0.3.0. 2026. ",
+            "Ryan de Paulo Santos; Letícia; GraphAmbiCardio study team. GraphAmbiCardio, v0.3.0. 2026. ",
             tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "https://github.com/santosry/GraphAmbiCardio")
           ),
           p(tags$b("Estudos-âncora:")),

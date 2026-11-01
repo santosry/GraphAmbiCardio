@@ -30,15 +30,18 @@ RESOURCES = [
     ("correlacao_exposicoes", "outputs/tables/exposure_correlation.csv", "Matriz de correlação das exposições de janela"),
     ("vif_exposicoes", "outputs/tables/exposure_vif.csv", "Fatores de inflação de variância das exposições de janela"),
     ("figuras_site", "outputs/figures/site/manifest.json", "Manifesto das figuras do site com fonte, período, dados e SHA-256"),
+    ("inmet_diario", "data_processed/inmet_campos_daily.csv", "INMET A607 (Campos dos Goytacazes): temperatura, umidade, chuva e vento, 2010-2025"),
+    ("inmet_metadados", "data_processed/inmet_campos_metadata.json", "Metadados e checksum da estação INMET A607"),
+    ("inmet_comparacao", "outputs/tables/inmet_era5_comparison.csv", "Comparação descritiva INMET A607 vs ERA5-Land"),
+    ("inmet_relatorio", "reports/inmet_comparison.json", "Relatório legível por máquina da comparação INMET A607 vs ERA5-Land"),
+    ("dicionario_dados", "data_dictionary/data_dictionary.csv", "Dicionário de dados legível por máquina (variáveis, tipos, fontes e unidades)"),
 ]
 
 
 def sha256(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as fh:
-        for chunk in iter(lambda: fh.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()
+    # Normalise line endings so Windows (CRLF) and CI (LF) agree.
+    data = path.read_bytes().replace(bytes((13, 10)), bytes((10)))
+    return hashlib.sha256(data).hexdigest()
 
 
 resources = []
@@ -55,7 +58,7 @@ for name, rel, desc in RESOURCES:
         "path": rel,
         "description": desc,
         "format": p.suffix.lstrip("."),
-        "mediatype": "text/csv" if p.suffix == ".csv" else "application/octet-stream",
+        "mediatype": {".csv": "text/csv", ".json": "application/json", ".graphml": "application/xml", ".md": "text/markdown"}.get(p.suffix.lower(), "application/octet-stream"),
         "bytes": p.stat().st_size,
         "hash": "sha256:" + sha256(p),
         "schema": {"fields": fields} if fields else None,
@@ -68,7 +71,10 @@ datapackage = {
     "version": "0.3.0",
     "created": "2026-10-31",
     "licenses": [{"name": "MIT", "path": "https://opensource.org/licenses/MIT", "title": "Código sob MIT; dados de terceiros mantêm suas licenças"}],
-    "contributors": [{"title": "GraphAmbiCardio study team", "role": "author"}],
+    "contributors": [
+        {"title": "Ryan de Paulo Santos", "role": "author", "path": "https://orcid.org/0009-0005-6770-2001"},
+        {"title": "Letícia", "role": "author", "path": "http://lattes.cnpq.br/4004634244195808"},
+    ],
     "keywords": ["congenital heart defects", "environmental exposure", "knowledge graph", "cardiogenesis", "Brazil", "FAIR"],
     "sources": [
         {"title": "PubMed/MEDLINE", "path": "https://pubmed.ncbi.nlm.nih.gov/"},
@@ -78,6 +84,8 @@ datapackage = {
         {"title": "Reactome", "path": "https://reactome.org/"},
         {"title": "DATASUS/SINASC/SIH", "path": "https://datasus.saude.gov.br/"},
         {"title": "ERA5-Land via Open-Meteo", "path": "https://open-meteo.com/en/docs/historical-weather-api"},
+        {"title": "INMET A607 via BrazilMet", "path": "https://portal.inmet.gov.br/uploads/dadoshistoricos/"},
+        {"title": "VIGIAR/MS via pacote vigiar", "path": "https://github.com/santosry/vigiar"},
         {"title": "SciELO via Crossref (prefixo 10.1590)", "path": "https://api.crossref.org/"},
         {"title": "CAPES Catálogo de Teses e Dissertações", "path": "https://catalogodeteses.capes.gov.br/"},
     ],
@@ -94,7 +102,10 @@ dcat = {
     "version": "0.3.0",
     "issued": "2026-10-31",
     "modified": "2026-10-31",
-    "creator": {"@type": "Organization", "name": "GraphAmbiCardio study team"},
+    "creator": [
+        {"@type": "Person", "name": "Ryan de Paulo Santos", "identifier": "https://orcid.org/0009-0005-6770-2001"},
+        {"@type": "Person", "name": "Letícia", "identifier": "http://lattes.cnpq.br/4004634244195808"},
+    ],
     "publisher": {"@type": "Organization", "name": "GraphAmbiCardio study team"},
     "contactPoint": {"@type": "ContactPoint", "email": "ryan.paulo@gsuite.iff.edu.br"},
     "keywords": ["congenital heart defects", "environmental exposure", "knowledge graph", "evidence grading", "FAIR", "Brazil"],
@@ -108,7 +119,8 @@ dcat = {
         {"@type": "Distribution", "name": r["name"], "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/" + r["path"], "format": r["format"], "byteSize": r["bytes"], "checksum": r["hash"]}
         for r in resources
     ],
-    "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed.",
+    "conformsTo": "https://specs.frictionlessdata.io/data-package/",
+    "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed. A validação climática usa a estação INMET A607 (latitude -21,7167; longitude -41,3500; altitude 25 m) e ERA5-Land.",
     "note": "Busca estruturada não sistemática. Hipóteses são explicitamente separadas das evidências.",
 }
 (FAIR / "metadata.json").write_text(json.dumps(dcat, ensure_ascii=False, indent=2), encoding="utf-8")

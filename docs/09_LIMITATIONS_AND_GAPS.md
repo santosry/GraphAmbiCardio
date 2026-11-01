@@ -44,7 +44,7 @@ This document lists limitations that materially affect interpretation. They are 
 ## 4. Environmental exposure
 
 1. **PM2.5 is an area-level series, not a local monitor.** The VIGIAR annual/monthly series (via `vigiar`) is available for 2010–2025, but it is a municipal estimate and cannot represent street-level, indoor or personal exposure.
-2. **Reanalysis ≠ station.** ERA5-Land is a ~9 km grid cell; it does not represent street-level or indoor exposure, urban heat islands, or the full municipality.
+2. **Reanalysis ≠ station.** ERA5-Land is a ~9 km grid cell; it does not represent street-level or indoor exposure, urban heat islands, or the full municipality. INMET station A607 was used to validate the reanalysis (Tmax r=0.94; RH r=0.81), but a single station also cannot represent the whole municipality.
 3. **Ecological exposure.** All births in the same window receive the same exposure value; this is not personal exposure and cannot support individual risk statements.
 4. **Gestational age misclassification.** Conception dates are estimated from gestational age at birth (and from category midpoints when missing), producing window misclassification.
 5. **No exposure mixture analysis.** Real exposures are correlated (heat, ozone, PM2.5, season); single-exposure models cannot separate them.

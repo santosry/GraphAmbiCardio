@@ -10,7 +10,7 @@
   "readme": "https://github.com/santosry/GraphAmbiCardio/blob/main/README.md",
   "license": "https://spdx.org/licenses/MIT",
   "programmingLanguage": ["Python", "R"],
-  "runtimePlatform": ["Python 3.10+", "R 4.6"],
+  "runtimePlatform": ["Python 3.12+", "R 4.6"],
   "developmentStatus": "active",
   "dateCreated": "2026-10-31",
   "dateModified": "2026-10-31",
@@ -25,8 +25,15 @@
   ],
   "author": [
     {
-      "@type": "Organization",
-      "name": "GraphAmbiCardio study team"
+      "@type": "Person",
+      "givenName": "Ryan de Paulo",
+      "familyName": "Santos",
+      "identifier": "https://orcid.org/0009-0005-6770-2001"
+    },
+    {
+      "@type": "Person",
+      "name": "Letícia",
+      "identifier": "http://lattes.cnpq.br/4004634244195808"
     }
   ],
   "contIntegration": "https://github.com/santosry/GraphAmbiCardio/actions",

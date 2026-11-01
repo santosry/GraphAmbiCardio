@@ -1,6 +1,6 @@
 # Schema validation
 
-Generated: 2026-11-01T01:46:31Z
+Generated: 2026-11-01T02:30:11Z
 
 **Result: PASSED**
 
@@ -15,8 +15,17 @@ Generated: 2026-11-01T01:46:31Z
 - OK — `columns:outputs/tables/sensitivity_leave_one_year_out.csv` — 14 rows
 - OK — `columns:outputs/tables/exposure_correlation.csv` — 5 rows
 - OK — `columns:outputs/tables/exposure_vif.csv` — 5 rows
+- OK — `columns:data_processed/inmet_campos_daily.csv` — 5754 rows
+- OK — `columns:outputs/tables/inmet_era5_comparison.csv` — 4 rows
+- OK — `columns:app/data/inmet_daily.csv` — 5754 rows
+- OK — `columns:app/data/inmet_comparison.csv` — 4 rows
 - OK — `fdr:outputs/tables/exploratory_models.csv` — ok
 - OK — `fdr:outputs/tables/hypothesis_candidates.csv` — ok
+- OK — `inmet:rows` — 5754 days
+- OK — `inmet:unique_dates` — ok
+- OK — `inmet:station` — {'A607'}
+- OK — `inmet:tmax_range` — -10 to 55 C
+- OK — `inmet:rh_range` — 0-100 %
 - OK — `pm25:monthly_rows` — 192 rows
 - OK — `pm25:monthly_unique` — ok
 - OK — `pm25:monthly_range` — 0-500 µg/m3

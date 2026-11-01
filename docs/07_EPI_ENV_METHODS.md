@@ -166,6 +166,8 @@ Costs are nominal (no deflation); 2025 is a complete year of processing files at
 | Heat waves (≥3 consecutive days > P90) | **73** |
 | Heat-wave days | **363** |
 
+INMET: **station A607** (Campos dos Goytacazes; latitude −21,7167; longitude −41,3500; altitude 25 m; 2010–2025) was downloaded with `BrazilMet` 0.5.0 and used only to validate the ERA5-Land series. It is a station series, not individual exposure. Daily comparison: Tmax r=0.94 (bias +0.53 °C; RMSE 1.43), Tmin r=0.94 (−0.62 °C; 1.12), Tmean r=0.97 (−0.35 °C; 0.72), RH r=0.81 (+1.43 pp; 4.51). The app shows the scatter plots and the comparison table.
+
 PM2.5: **municipal series from VIGIAR** (Ministry of Health), obtained with the R package `vigiar` 0.7.2 (annual 2010–2025 and monthly 2010–2025). The series is area-level: annual values ranged 6.50–9.04 µg/m³ (mean 7.72) and monthly values 3.83–13.84 µg/m³. It is not a local monitoring station and cannot represent personal exposure.
 
 ### 3.2 Exposure window

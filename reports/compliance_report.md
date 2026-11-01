@@ -1,6 +1,6 @@
 # Relatório de conformidade e higiene
 
-Gerado: 2026-11-01T01:46:30Z
+Gerado: 2026-11-01T02:31:23Z
 
 **Resultado: APROVADO**
 
@@ -10,11 +10,12 @@ Gerado: 2026-11-01T01:46:30Z
 - Segredos: 0 arquivo(s)
 - Arquivos obrigatórios ausentes: 0
 - Recursos FAIR com checksum inválido: 0
-- Arquivos versionados: 385
+- Arquivos versionados: 403
 - `data_raw/` versionado: 0
 - Dados individuais versionados: 0
 - Rótulo de não revisão sistemática: True
 - Declaração de IA (Portaria 2.664/2026): True
+- Compromisso de ciência aberta (README/docs/12/app): 3/3
 - Série PM2,5 local: True
 - Auditoria pySUS: True
 - Bundle do app incompleto: 0

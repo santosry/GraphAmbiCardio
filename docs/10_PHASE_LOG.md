@@ -28,7 +28,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 
 **Obtained.** HPO (2,803 annotations / 814 genes), ClinVar (945 pathogenic/likely pathogenic variants after CNV exclusion), NCBI Gene (170), Reactome (1,956 gene–pathway results; 649 after developmental filter), Enrichr GO BP (1,631 terms).
 
-**Blocked.** CTD (captcha), DisGeNET (API key), OMIM (licence), SciELO search interface (HTTP 403; Crossref used), INMET (unreachable), GEO (no dataset met criteria).
+**Blocked.** CTD (captcha), DisGeNET (API key), OMIM (licence), SciELO search interface (HTTP 403; Crossref used), INMET (later obtained via BrazilMet), GEO (no dataset met criteria).
 
 **Decision.** Restrict the structured layer to accessible, licensed resources; document every exclusion. **Apt to advance: yes.**
 
@@ -148,7 +148,7 @@ All work was executed on **2026-10-31** (America/Sao_Paulo). Each phase records 
 | OMIM licence | blocked | no OMIM edge-level provenance |
 | SciELO search interface 403 | Crossref used | Portuguese coverage partial |
 | CAPES no API | not automated | institutional search needed |
-| INMET unreachable | blocked | ERA5-Land used |
+| INMET | BrazilMet 0.5.0, station A607 | used for ERA5-Land validation; not personal exposure |
 | PM2.5 local | VIGIAR via `vigiar` | annual/monthly 2010–2025, area-level |
 | SINASC 2023–2024 | absent | time series gap; no imputation |
 | Full dual review | not performed | structured, non-systematic label |

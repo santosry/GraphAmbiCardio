@@ -16,7 +16,7 @@ O GraphAmbiCardio foi desenhado para ser **Findable, Accessible, Interoperable a
 - Código, dados derivados, metadados e documentação estão em repositório público, sem autenticação.
 - O aplicativo Shiny é executável localmente e pode ser publicado em `shinyapps.io`.
 - Formatos abertos: CSV, JSON, GraphML, Markdown.
-- **Dados de terceiros:** os microdados brutos do DATASUS não são redistribuídos; scripts de download são fornecidos. **Registros individuais de SINASC/SIH não são versionados** (ver `docs/15_DATA_GOVERNANCE.md`); o app usa apenas agregados. PubMed/Europe PMC, HPO, ClinVar, Reactome, Open-Meteo/ERA5-Land e Crossref mantêm suas próprias licenças e termos.
+- **Dados de terceiros:** os microdados brutos do DATASUS não são redistribuídos; scripts de download são fornecidos. **Registros individuais de SINASC/SIH não são versionados** (ver `docs/15_DATA_GOVERNANCE.md`); o app usa apenas agregados. PubMed/Europe PMC, HPO, ClinVar, Reactome, Open-Meteo/ERA5-Land, INMET (via BrazilMet), VIGIAR e Crossref mantêm suas próprias licenças e termos.
 - Credenciais e tokens não são armazenados no repositório.
 
 ## I — Interoperable (interoperável)
@@ -31,9 +31,33 @@ O GraphAmbiCardio foi desenhado para ser **Findable, Accessible, Interoperable a
 - **Proveniência por evidência:** cada linha de `evidence.csv` tem referência, tipo de evidência, espécie, desenho, janela de exposição, direção do efeito, contexto, citação e limitações.
 - **Camadas separadas:** observada, estruturada, inferida, hipótese e ecológica. Hipóteses nunca são misturadas às evidências.
 - **Documentação:** protocolo, estratégia de busca, catálogo de bases, ontologia, dicionário, gradação, métodos, validação, limitações e manuscrito.
-- **Reprodutibilidade:** pipeline modular, cache de respostas HTTP, logs, testes automatizados, versões de dados e data de extração; coletores R para SciELO (Crossref), CAPES e VIGIAR PM2.5; bundle autocontido do app; Dockerfile com R e snapshot do CRAN.
+- **Reprodutibilidade:** pipeline modular, cache de respostas HTTP, logs, testes automatizados, versões de dados e data de extração; coletores R para SciELO (Crossref), CAPES, VIGIAR PM2.5 e INMET A607; bundle autocontido do app; Dockerfile com R e snapshot do CRAN.
 - **Licença:** código MIT; dados de terceiros sob suas licenças. Citação em `CITATION.cff`.
 - **Controle de qualidade:** validação de integridade, verificação de citações e análise de sensibilidade.
+
+---
+
+## Ciência aberta — compromissos verificáveis
+
+O projeto trata ciência aberta como requisito, não como declaração retórica:
+
+1. **Código aberto:** MIT, com pipeline modular, testes e validação automatizada.
+2. **Dados derivados abertos:** CSV, JSON e GraphML; microdados individuais de SINASC/SIH nunca são redistribuídos.
+3. **Metadados abertos:** DCAT e Frictionless Data Package com SHA-256 por recurso; manifesto de figuras com fonte, período e SHA-256.
+4. **Proveniência:** cada aresta e cada figura rastreiam arquivo, fonte, período e referência.
+5. **Reprodutibilidade:** `uv.lock`, `renv.lock`, `run_all.sh`, Makefile, cache HTTP e comandos documentados.
+6. **Auditoria:** `scripts/compliance/01_check.py`, `scripts/validation/02_schema.py` e `pytest` verificam checksums, privacidade, schemas e integridade.
+7. **Transparência sobre IA:** declaração em `docs/13_DECLARACAO_IA.md`, com verificação verbatim de citações e responsabilidade humana.
+
+**Como verificar:**
+
+```bash
+.venv/Scripts/python.exe scripts/validation/02_schema.py
+.venv/Scripts/python.exe scripts/compliance/01_check.py
+.venv/Scripts/python.exe -m pytest -q
+```
+
+Os resultados ficam em `reports/`. Nenhuma hipótese é apresentada como evidência e nenhum resultado ecológico é apresentado como causal.
 
 ---
 

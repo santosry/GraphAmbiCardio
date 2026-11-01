@@ -31,6 +31,10 @@ REQUIRED = {
     "outputs/tables/sensitivity_leave_one_year_out.csv": ["excluded_year", "p_value", "q_value"],
     "outputs/tables/exposure_correlation.csv": ["exposure"],
     "outputs/tables/exposure_vif.csv": ["exposure", "vif"],
+    "data_processed/inmet_campos_daily.csv": ["station_code", "date", "tair_max_c", "rh_mean_porc"],
+    "outputs/tables/inmet_era5_comparison.csv": ["variable", "n", "pearson_r", "rmse"],
+    "app/data/inmet_daily.csv": ["station_code", "date", "tair_max_c", "rh_mean_porc"],
+    "app/data/inmet_comparison.csv": ["variable", "pearson_r", "rmse"],
 }
 
 INDIVIDUAL_DATA = {
@@ -77,6 +81,16 @@ def main() -> None:
             if (sub[qcol] + 1e-6 < sub[pcol]).any():
                 bad.append(f"{qcol} < {pcol}")
         add(checks, f"fdr:{rel}", not bad, "; ".join(bad) if bad else "ok")
+
+    # INMET completeness and plausible ranges.
+    inmet = ROOT / "data_processed/inmet_campos_daily.csv"
+    if inmet.exists():
+        df = pd.read_csv(inmet)
+        add(checks, "inmet:rows", len(df) >= 5000, f"{len(df)} days")
+        add(checks, "inmet:unique_dates", not df.duplicated(["date"]).any(), "duplicates" if df.duplicated(["date"]).any() else "ok")
+        add(checks, "inmet:station", set(df["station_code"]) == {"A607"}, str(set(df["station_code"])))
+        add(checks, "inmet:tmax_range", bool(df["tair_max_c"].dropna().between(-10, 55).all()), "-10 to 55 C")
+        add(checks, "inmet:rh_range", bool(df["rh_mean_porc"].dropna().between(0, 100).all()), "0-100 %")
 
     # PM2.5 completeness.
     monthly = ROOT / "data_processed/pm25_campos_mensal.csv"

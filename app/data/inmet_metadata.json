@@ -1,0 +1,18 @@
+{
+  "source": "INMET — estação automática A607 (Campos dos Goytacazes/RJ), dados históricos",
+  "url": "https://portal.inmet.gov.br/uploads/dadoshistoricos/",
+  "package": "BrazilMet",
+  "package_version": "0.5.0",
+  "station_code": "A607",
+  "station_name": "CAMPOS",
+  "latitude": -21.7167,
+  "longitude": -41.35,
+  "altitude_m": 25,
+  "period": ["2010-01-01", "2025-12-31"],
+  "n_days": 5754,
+  "missing_tmax": 138,
+  "missing_rh": 153,
+  "retrieved_at": "2026-11-01T02:06:55Z",
+  "checksum_md5": "afb9a5d8c6147d25700117168673820f",
+  "note": "Série de estação automática; pode ter falhas de sensor. Usada para validação do ERA5-Land, não como exposição individual."
+}

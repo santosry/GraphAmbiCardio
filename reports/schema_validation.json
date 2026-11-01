@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T01:46:31Z",
+  "generated_at": "2026-11-01T02:30:11Z",
   "passed": true,
   "checks": [
     {
@@ -58,6 +58,26 @@
       "detail": "5 rows"
     },
     {
+      "check": "columns:data_processed/inmet_campos_daily.csv",
+      "ok": true,
+      "detail": "5754 rows"
+    },
+    {
+      "check": "columns:outputs/tables/inmet_era5_comparison.csv",
+      "ok": true,
+      "detail": "4 rows"
+    },
+    {
+      "check": "columns:app/data/inmet_daily.csv",
+      "ok": true,
+      "detail": "5754 rows"
+    },
+    {
+      "check": "columns:app/data/inmet_comparison.csv",
+      "ok": true,
+      "detail": "4 rows"
+    },
+    {
       "check": "fdr:outputs/tables/exploratory_models.csv",
       "ok": true,
       "detail": "ok"
@@ -66,6 +86,31 @@
       "check": "fdr:outputs/tables/hypothesis_candidates.csv",
       "ok": true,
       "detail": "ok"
+    },
+    {
+      "check": "inmet:rows",
+      "ok": true,
+      "detail": "5754 days"
+    },
+    {
+      "check": "inmet:unique_dates",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "check": "inmet:station",
+      "ok": true,
+      "detail": "{'A607'}"
+    },
+    {
+      "check": "inmet:tmax_range",
+      "ok": true,
+      "detail": "-10 to 55 C"
+    },
+    {
+      "check": "inmet:rh_range",
+      "ok": true,
+      "detail": "0-100 %"
     },
     {
       "check": "pm25:monthly_rows",

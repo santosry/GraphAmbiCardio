@@ -101,3 +101,18 @@ sinasc_campos_with_exposure.csv,win_covariate_completeness,float64,Proportion of
 sinasc_campos_with_exposure.csv,win_temperature_2m_mean_mean,float64,Mean daily Tmean over the window,DATASUS SINASC,
 sinasc_campos_with_exposure.csv,win_temperature_2m_min_mean,float64,Mean daily Tmin over the window,DATASUS SINASC,
 sinasc_campos_with_exposure.csv,win_relative_humidity_2m_mean_mean,float64,Mean daily relative humidity over the window,DATASUS SINASC,
+inmet_campos_daily.csv,station_code,string,INMET station code,INMET/BrazilMet,
+inmet_campos_daily.csv,station,string,Station name,INMET/BrazilMet,
+inmet_campos_daily.csv,uf,string,State abbreviation,INMET/BrazilMet,
+inmet_campos_daily.csv,date,date,Observation date (YYYY-MM-DD),INMET/BrazilMet,
+inmet_campos_daily.csv,tair_mean_c,float64,Daily mean air temperature,INMET/BrazilMet,°C
+inmet_campos_daily.csv,tair_min_c,float64,Daily minimum air temperature,INMET/BrazilMet,°C
+inmet_campos_daily.csv,tair_max_c,float64,Daily maximum air temperature,INMET/BrazilMet,°C
+inmet_campos_daily.csv,rh_mean_porc,float64,Daily mean relative humidity,INMET/BrazilMet,%
+inmet_campos_daily.csv,rh_min_porc,float64,Daily minimum relative humidity,INMET/BrazilMet,%
+inmet_campos_daily.csv,rh_max_porc,float64,Daily maximum relative humidity,INMET/BrazilMet,%
+inmet_campos_daily.csv,rainfall_mm,float64,Daily rainfall,INMET/BrazilMet,mm
+inmet_campos_daily.csv,ws_2_m_s,float64,Daily mean wind speed at 2 m,INMET/BrazilMet,m/s
+inmet_campos_daily.csv,latitude_degrees,float64,Station latitude,INMET/BrazilMet,degrees
+inmet_campos_daily.csv,longitude_degrees,float64,Station longitude,INMET/BrazilMet,degrees
+inmet_campos_daily.csv,altitude_m,float64,Station altitude,INMET/BrazilMet,m

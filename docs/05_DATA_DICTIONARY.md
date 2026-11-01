@@ -1,6 +1,6 @@
 # 05 — Data dictionary
 
-The machine-readable dictionary is `data_dictionary/data_dictionary.csv` (102 variables across four processed datasets). This document summarises the datasets, their provenance and the graph tables.
+The machine-readable dictionary is `data_dictionary/data_dictionary.csv` (117 variables across five processed datasets, including INMET A607). This document summarises the datasets, their provenance and the graph tables.
 
 ---
 
@@ -46,6 +46,14 @@ Municipal PM2.5 for Campos dos Goytacazes (IBGE 330100), from the VIGIAR dashboa
 - **Fields:** `cod_municipio`, `uf`, `ano`, `mes` (monthly file), `pm25_ug_m3`.
 - **Instrument:** area-level municipal series, not a local monitoring station; cannot represent personal exposure.
 - **Provenance:** `data_processed/pm25_vigiar_metadata.json` (retrieval date, package version and SHA-256).
+
+### 1.6 `data_processed/inmet_campos_daily.csv`
+Daily observations from INMET automatic station **A607** (Campos dos Goytacazes/RJ), downloaded with `BrazilMet` 0.5.0.
+- **Rows:** 5,754 days (2010-01-01 to 2025-12-31).
+- **Fields:** `station_code`, `station`, `uf`, `date`, `tair_mean_c`, `tair_min_c`, `tair_max_c`, `rh_mean_porc`, `rh_min_porc`, `rh_max_porc`, `rainfall_mm`, `ws_2_m_s`, `latitude_degrees` (−21,7167), `longitude_degrees` (−41,3500) and `altitude_m` (25 m).
+- **Missing:** 138 Tmax and 153 RH values; no imputation.
+- **Role:** validation of ERA5-Land (`outputs/tables/inmet_era5_comparison.csv`), not individual exposure.
+- **Provenance:** `data_processed/inmet_campos_metadata.json` (station, period, package version, checksum).
 
 ---
 

@@ -38,12 +38,12 @@ python scripts/app/02_fair_metadata.py
 |---|---|
 | **Início** | visão geral, KPIs, hierarquia de evidências e eixos de exposição |
 | **Grafo interativo** | exploração por tipo de nó, nível de evidência, exposição e fenótipo; clique para ver evidências |
-| **Painel epidemiológico** | SINASC (microdados + TabNet 2023–2024), SIH/SUS, clima ERA5-Land, PM2,5 VIGIAR e modelos exploratórios (logístico, Firth, cluster-robusto) com p e q (BH-FDR) |
+| **Painel epidemiológico** | SINASC (microdados + TabNet 2023–2024), SIH/SUS, clima ERA5-Land, validação INMET A607 (com latitude, longitude e altitude da estação), PM2,5 VIGIAR e modelos exploratórios (logístico, Firth, cluster-robusto) com p e q (BH-FDR) |
 | **Evidências** | tabela filtrável de relações; seleção mostra todas as evidências, trechos e referências |
 | **Hipóteses e lacunas** | caminhos candidatos, hipóteses por sobreposição gênica e lacunas explícitas |
 | **Consulta científica** | pergunta por exposição: mecanismos, fenótipos, genes, caminhos, hipóteses e referências |
 | **Métodos** | desenho, buscas, bases, gradação e limitações |
-| **FAIR e uso de IA** | princípios FAIR, metadados, licenças e declaração de IA (Portaria CNPq 2.664/2026) |
+| **Transparência e equipe** | princípios FAIR, metadados, licenças, autores com Lattes e declaração de IA (Portaria CNPq 2.664/2026) |
 
 ## 3. Legendas de fonte e figuras exportadas
 

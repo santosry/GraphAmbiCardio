@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-01T01:44:27Z",
+  "generated_at": "2026-11-01T02:29:19Z",
   "app_url": "http://127.0.0.1:3850/",
   "viewport": [
-    1440,
-    1000
+    1600,
+    1200
   ],
   "figures": [
     {
@@ -18,7 +18,7 @@
         "evidence.csv"
       ],
       "path": "outputs\\figures\\site\\01_grafo_interativo.png",
-      "sha256": "b7474bc7ecdb5fcd106d9d86c9c83bcd3e848483ac58305031bb887d95275bac"
+      "sha256": "9879c6638a29f4ff2d4c5b6e1454797ba8cca91a277bfb7b29375e99fe98650d"
     },
     {
       "file": "02_sinasc.png",
@@ -30,7 +30,7 @@
         "sinasc_annual.csv"
       ],
       "path": "outputs\\figures\\site\\02_sinasc.png",
-      "sha256": "f37e382a8e289375fb49ffbd6cefa0be5f749e876ea5b76c2b453950f542646e"
+      "sha256": "7b7e819051cbc8e11b3ec519b3a3cfd7686d72a8154d4533c1431d4e68ea4d1f"
     },
     {
       "file": "03_sih.png",
@@ -42,7 +42,7 @@
         "sih_annual.csv"
       ],
       "path": "outputs\\figures\\site\\03_sih.png",
-      "sha256": "c29fcb0bdb31801c711e763798ee927503a0b0c471f8304fded204054da8d76f"
+      "sha256": "850735dba1b207f0f47a11bd177ca964c9035635bcdc29016c4feaabae37da7d"
     },
     {
       "file": "04_clima.png",
@@ -54,7 +54,7 @@
         "climate_monthly.csv"
       ],
       "path": "outputs\\figures\\site\\04_clima.png",
-      "sha256": "9b5a6b7043015cb98a213e0b1ccc993938738fee59ebc818c06837ad0fc89c09"
+      "sha256": "24193b139f8e923b57abd0d9ca88518856305cb53c8c60759a0ecd2093ffb264"
     },
     {
       "file": "05_calor.png",
@@ -66,7 +66,7 @@
         "climate_annual.csv"
       ],
       "path": "outputs\\figures\\site\\05_calor.png",
-      "sha256": "82be3434b20a249717d3ebb028b0b95da3c93462d3a8f034daeddbfcd4c0e0ef"
+      "sha256": "662f8c60feda1f336d3b15c46e2ad81688083df29a1c703fb34a5eab7fc7baec"
     },
     {
       "file": "06_pm25.png",
@@ -79,7 +79,21 @@
         "pm25_annual.csv"
       ],
       "path": "outputs\\figures\\site\\06_pm25.png",
-      "sha256": "b35219cdf96fc6ca11825db772cc746891b2867b0533b3234c0154d2a3cbd43a"
+      "sha256": "b718138cad72a529e51ed5f76bbdef68ce38df4d9f14c6a2958b624de0e48abe"
+    },
+    {
+      "file": "07_inmet_validacao.png",
+      "title": "Validação da exposição climática — INMET A607 vs ERA5-Land",
+      "source": "INMET estação A607 (lat −21,7167; lon −41,3500; alt 25 m) via BrazilMet 0.5.0; ERA5-Land via Open-Meteo",
+      "period": "2010–2025",
+      "note": "Dispersão diária; latitude, longitude, altitude, correlação, viés e RMSE nas tabelas do site. Ver docs/07.",
+      "data": [
+        "inmet_daily.csv",
+        "climate_daily.csv",
+        "inmet_comparison.csv"
+      ],
+      "path": "outputs\\figures\\site\\07_inmet_validacao.png",
+      "sha256": "f0db765d89e50af93b9811800825cd1364f3a7ad15cd44396ff003813495deba"
     }
   ]
 }

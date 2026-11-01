@@ -31,7 +31,9 @@ REQUIRED = [
     "docs/14_APP.md", "fair/metadata.json", "fair/datapackage.json",
     "app/global.R", "app/ui.R", "app/server.R", "app/data/nodes.csv",
     "outputs/graph/relations.csv", "data_processed/pm25_campos_mensal.csv",
-    "reports/pysus_sinasc_audit.json", "docs/15_DATA_GOVERNANCE.md",
+    "reports/pysus_sinasc_audit.json", "data_processed/inmet_campos_daily.csv",
+    "data_processed/inmet_campos_metadata.json", "reports/inmet_comparison.json",
+    "docs/15_DATA_GOVERNANCE.md",
     "codemeta.json", "CHANGELOG.md", "RELEASE.md", "uv.lock", "renv.lock",
     ".github/workflows/ci.yml", "scripts/validation/02_schema.py",
 ]
@@ -45,11 +47,9 @@ INDIVIDUAL_DATA = [
 
 
 def sha256(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as fh:
-        for chunk in iter(lambda: fh.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()
+    # Normalise line endings so Windows (CRLF) and CI (LF) agree.
+    data = path.read_bytes().replace(bytes((13, 10)), bytes((10)))
+    return hashlib.sha256(data).hexdigest()
 
 
 def iter_text_files():
@@ -150,6 +150,17 @@ def main() -> None:
     if not checks["ai_declaration"]:
         issues.append("declaração de IA ausente ou sem referência à portaria")
 
+    # 6b. open-science commitment is explicit in the public surfaces
+    docs12 = (ROOT / "docs/12_FAIR.md").read_text(encoding="utf-8")
+    about = (ROOT / "app/modules/mod_about.R").read_text(encoding="utf-8")
+    checks["open_science"] = {
+        "readme": "ciência aberta" in readme.lower(),
+        "fair_doc": "ciência aberta" in docs12.lower(),
+        "app": "ciência aberta" in about.lower(),
+    }
+    if not all(checks["open_science"].values()):
+        issues.append("compromisso de ciência aberta ausente em README, docs/12 ou app")
+
     # 7. local PM2.5 and pySUS audit
     checks["pm25_series"] = (ROOT / "data_processed/pm25_campos_mensal.csv").exists()
     checks["pysus_audit"] = (ROOT / "reports/pysus_sinasc_audit.json").exists()
@@ -180,6 +191,7 @@ def main() -> None:
               f"- Dados individuais versionados: {checks['individual_data']['n_tracked']}",
               f"- Rótulo de não revisão sistemática: {checks['non_systematic_label']}",
               f"- Declaração de IA (Portaria 2.664/2026): {checks['ai_declaration']}",
+              f"- Compromisso de ciência aberta (README/docs/12/app): {sum(checks['open_science'].values())}/3",
               f"- Série PM2,5 local: {checks['pm25_series']}",
               f"- Auditoria pySUS: {checks['pysus_audit']}",
               f"- Bundle do app incompleto: {len(checks['app_bundle']['missing'])}"]

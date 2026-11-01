@@ -10,6 +10,7 @@ Rscript R/collection/capes.R
 Rscript R/collection/pm25_vigiar.R
 $PY scripts/collection/02_databases.py
 $PY scripts/collection/03_clinvar_enrichr.py
+Rscript R/collection/inmet.R
 $PY scripts/env/01_climate.py
 $PY scripts/epi/01_sinasc.py
 $PY scripts/epi/02_sih.py

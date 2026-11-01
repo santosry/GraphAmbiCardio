@@ -41,6 +41,18 @@ mod_epi_ui <- function(id) {
       htmlOutput(ns("pm25_note"))
     ),
     br(),
+    div(
+      class = "figure-block",
+      h5("Validação da exposição climática — INMET A607 vs ERA5-Land"),
+      div(class = "figure-canvas html-fill-container chart-canvas-wide",
+          plotlyOutput(ns("inmet_plot"), height = "100%")),
+      h6("Estação e coordenadas", style = "margin-top:1rem;"),
+      DTOutput(ns("inmet_station")),
+      h6("Comparação diária com ERA5-Land", style = "margin-top:1rem;"),
+      DTOutput(ns("inmet_table")),
+      uiOutput(ns("inmet_note"))
+    ),
+    br(),
     layout_columns(
       col_widths = c(6,6),
       card(card_header("Cobertura e status dos dados SINASC"),
@@ -147,6 +159,76 @@ mod_epi_server <- function(id) {
       HTML(sprintf(
         "<span class='small-muted'>Fonte: %s (pacote vigiar %s), filtro municipal 330100, extração %s. Série de área; não é estação local nem exposição individual.</span>",
         pm25_meta$source, pm25_meta$package_version, pm25_meta$retrieved_at
+      ))
+    })
+
+    output$inmet_plot <- renderPlotly({
+      d <- inmet_daily %>%
+        transmute(date = as.Date(date), inmet_tmax = tair_max_c, inmet_rh = rh_mean_porc)
+      e <- climate_daily %>%
+        transmute(date = as.Date(date), era5_tmax = temperature_2m_max,
+                  era5_rh = relative_humidity_2m_mean)
+      m <- inner_join(d, e, by = "date") %>% filter(!is.na(era5_tmax), !is.na(inmet_tmax), !is.na(era5_rh), !is.na(inmet_rh))
+      if (nrow(m) == 0) return(plotly_empty(type = "scatter", mode = "markers") %>% layout(title = "Sem dados INMET/ERA5 para comparar"))
+      p1 <- plot_ly(m, x = ~era5_tmax, y = ~inmet_tmax, type = "scatter", mode = "markers",
+                    marker = list(size = 3, color = "#440154", opacity = .35),
+                    hovertemplate = "ERA5 %{x:.1f} °C<br>INMET %{y:.1f} °C<extra></extra>") %>%
+        layout(xaxis = list(title = "ERA5-Land Tmax (°C)"), yaxis = list(title = "INMET Tmax (°C)"))
+      p1 <- p1 %>% add_trace(x = range(m$era5_tmax), y = range(m$era5_tmax), type = "scatter",
+                             mode = "lines", line = list(dash = "dash", color = "#999"), showlegend = FALSE)
+      p2 <- plot_ly(m, x = ~era5_rh, y = ~inmet_rh, type = "scatter", mode = "markers",
+                    marker = list(size = 3, color = "#31688E", opacity = .35),
+                    hovertemplate = "ERA5 %{x:.0f} %<br>INMET %{y:.0f} %<extra></extra>") %>%
+        layout(xaxis = list(title = "ERA5-Land UR (%)"), yaxis = list(title = "INMET UR (%)"))
+      p2 <- p2 %>% add_trace(x = range(m$era5_rh), y = range(m$era5_rh), type = "scatter",
+                             mode = "lines", line = list(dash = "dash", color = "#999"), showlegend = FALSE)
+      subplot(p1, p2, nrows = 1, titleX = TRUE, titleY = TRUE, margin = 0.08) %>%
+        layout(showlegend = FALSE, margin = list(l = 55, r = 25, t = 20, b = 55),
+               font = list(size = 12)) %>%
+        plotly::config(displaylogo = FALSE, responsive = TRUE)
+    })
+
+    output$inmet_station <- renderDT({
+      if (length(inmet_meta) == 0) {
+        return(datatable(data.frame(Mensagem = "Metadados da estação não disponíveis."),
+                         rownames = FALSE, options = list(dom = "t")))
+      }
+      d <- data.frame(
+        Estação = inmet_meta$station_code,
+        Nome = inmet_meta$station_name,
+        Latitude = as.numeric(inmet_meta$latitude),
+        Longitude = as.numeric(inmet_meta$longitude),
+        `Altitude (m)` = as.numeric(inmet_meta$altitude_m),
+        Início = as.character(inmet_meta$period[1]),
+        Fim = as.character(inmet_meta$period[2]),
+        Dias = as.integer(inmet_meta$n_days),
+        Pacote = paste(inmet_meta$package, inmet_meta$package_version),
+        check.names = FALSE
+      )
+      datatable(d, rownames = FALSE, options = list(dom = "t", autoWidth = TRUE)) %>%
+        formatRound(columns = c("Latitude", "Longitude", "Altitude (m)"), digits = 4)
+    }, server = FALSE)
+
+    output$inmet_table <- renderDT({
+      d <- inmet_comparison
+      if (nrow(d) == 0) return(datatable(data.frame(Mensagem = "Comparação INMET/ERA5 não disponível."), rownames = FALSE, options = list(dom = "t")))
+      out <- d %>% transmute(Variável = variable, n, `r de Pearson` = pearson_r,
+                             `Viés médio (INMET − ERA5)` = mean_bias_inmet_minus_era5,
+                             `RMSE` = rmse)
+      datatable(out, rownames = FALSE, options = list(dom = "t", autoWidth = TRUE)) %>%
+        formatSignif(columns = c("r de Pearson", "Viés médio (INMET − ERA5)", "RMSE"), digits = 3)
+    }, server = FALSE)
+
+    output$inmet_note <- renderUI({
+      if (length(inmet_meta) == 0) return(source_note("Fonte: INMET A607 via BrazilMet; ERA5-Land via Open-Meteo."))
+      source_note(sprintf(
+        "Fonte: INMET estação %s (%s), lat %s, lon %s, altitude %s m; %s a %s, %s dias; pacote BrazilMet %s. ERA5-Land via Open-Meteo (célula −21,757/−41,354, 12 m). Série de estação vs reanálise; não é exposição individual. Ver docs/07.",
+        inmet_meta$station_code, inmet_meta$station_name,
+        format(as.numeric(inmet_meta$latitude), nsmall = 4, decimal.mark = ","),
+        format(as.numeric(inmet_meta$longitude), nsmall = 4, decimal.mark = ","),
+        format(as.numeric(inmet_meta$altitude_m), trim = TRUE, decimal.mark = ","),
+        inmet_meta$period[[1]], inmet_meta$period[[2]],
+        fmt_int(inmet_meta$n_days), inmet_meta$package_version
       ))
     })
 

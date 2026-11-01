@@ -149,14 +149,14 @@ mod_graph_server <- function(id) {
         visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
                    nodesIdSelection = FALSE) %>%
         visInteraction(navigationButtons = TRUE, tooltipDelay = 100, hideEdgesOnDrag = TRUE) %>%
-        visNodes(font = list(size = 17, face = "Arial"), borderWidth = 1.5) %>%
+        visNodes(font = list(size = 18, face = "Arial"), borderWidth = 1.5) %>%
         visEdges(arrows = list(to = list(enabled = TRUE, scaleFactor = 0.6)),
                  color = list(opacity = 0.7)) %>%
         visLegend(useGroups = TRUE, position = "right", ncol = 1, main = "Tipo de nó")
       if (identical(input$mode, "conceptual")) {
         p <- p %>%
-          visHierarchicalLayout(direction = "LR", levelSeparation = 240,
-                                nodeSpacing = 170, treeSpacing = 220,
+          visHierarchicalLayout(direction = "LR", levelSeparation = 270,
+                                nodeSpacing = 190, treeSpacing = 250,
                                 blockShifting = TRUE, edgeMinimization = TRUE,
                                 parentCentralization = TRUE, sortMethod = "directed") %>%
           visPhysics(enabled = FALSE) %>%

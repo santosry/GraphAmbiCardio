@@ -13,8 +13,14 @@
   ],
   "contributors": [
     {
-      "title": "GraphAmbiCardio study team",
-      "role": "author"
+      "title": "Ryan de Paulo Santos",
+      "role": "author",
+      "path": "https://orcid.org/0009-0005-6770-2001"
+    },
+    {
+      "title": "Letícia",
+      "role": "author",
+      "path": "http://lattes.cnpq.br/4004634244195808"
     }
   ],
   "keywords": [
@@ -55,6 +61,14 @@
       "path": "https://open-meteo.com/en/docs/historical-weather-api"
     },
     {
+      "title": "INMET A607 via BrazilMet",
+      "path": "https://portal.inmet.gov.br/uploads/dadoshistoricos/"
+    },
+    {
+      "title": "VIGIAR/MS via pacote vigiar",
+      "path": "https://github.com/santosry/vigiar"
+    },
+    {
       "title": "SciELO via Crossref (prefixo 10.1590)",
       "path": "https://api.crossref.org/"
     },
@@ -71,7 +85,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 156159,
-      "hash": "sha256:9bc38af4dc3efb67c08069c01fbe399173178dbc34704b71d1328ac625db37b6",
+      "hash": "sha256:d687d92c7b25cdb3b4d87071acb3a62b55e88d7024575b26d9bc72226f8b062f",
       "schema": {
         "fields": [
           {
@@ -112,7 +126,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 1988772,
-      "hash": "sha256:42f23b64fae415e229352bc652e82aa35ac22404f6a2756a5c2d082fccb56e1a",
+      "hash": "sha256:4706527382b2d353169b948703de0f86b89c3a4cdb04357425b3da8c761adc11",
       "schema": {
         "fields": [
           {
@@ -209,7 +223,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 1596446,
-      "hash": "sha256:445a792437ff269612592ff8270435102d914d1b18729bb4f915b015153487ef",
+      "hash": "sha256:8b4c9c530cac5b7f66e22813db299565df28fa5dcfd19c99760dc51e310cbc19",
       "schema": {
         "fields": [
           {
@@ -306,7 +320,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 3015,
-      "hash": "sha256:29e46289d49108ff33d2fd88ee47e4161c6e5c1cbd3d8ee936b0471d27a8d9d7",
+      "hash": "sha256:f4cbe0497963aeb8aded04e30503a28e35d37a05e04a9b711cec7b574596917a",
       "schema": {
         "fields": [
           {
@@ -403,7 +417,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 1415,
-      "hash": "sha256:9a45598da5f7252ba2d643e0117c26e5683f6a80db0660cc1bb9266e37f079c6",
+      "hash": "sha256:bdeaebf4a455e8b3f74c4f79216e607508038dfe0517524bf69f6f31936a188f",
       "schema": {
         "fields": [
           {
@@ -452,7 +466,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 891,
-      "hash": "sha256:10cf691aac9747a03b9211294739503391d910efa90a3b539d49a9e7903f887a",
+      "hash": "sha256:36a9dce8db90c4ef4d3790253b29b62428c8427c7a5812e4a97a4d86dfa91e17",
       "schema": {
         "fields": [
           {
@@ -501,7 +515,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 415466,
-      "hash": "sha256:b92e4ecd44eafc2007354ba662c1475aee24a75019c39db64da9a30470130f74",
+      "hash": "sha256:85c17525d6a19b7b0a0eff7f2bd5947ff606934e7f0b266817508891dad27607",
       "schema": {
         "fields": [
           {
@@ -570,7 +584,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 424,
-      "hash": "sha256:126317ed6ea55a5a31019beb221e890ef86ca4ff2742877f588c82093d0e5fd9",
+      "hash": "sha256:f5698250b4bea50d3e10c5f305cdd23efb7fb092ec2cf376c9c670c068d2ccf9",
       "schema": {
         "fields": [
           {
@@ -599,7 +613,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 5078,
-      "hash": "sha256:1139796c6ec9a9205ad285d89af62797f766c46beafa1cdbd272e061d0a9147d",
+      "hash": "sha256:fc3e1815d7bc3273cff4ffd260685fa842c52467342a8fe97587ff7ea792d419",
       "schema": {
         "fields": [
           {
@@ -632,7 +646,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 2630,
-      "hash": "sha256:8fb39bfc6ba78b55ee794c447cca1cc6a3b72b0a0bfb03573522cb64d9b0632a",
+      "hash": "sha256:ace9ab89f4edcbb95f1b8f094448d95157dff7c9ce03f6ed9dc05ec5c85698b8",
       "schema": {
         "fields": [
           {
@@ -681,7 +695,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 2226,
-      "hash": "sha256:99865bd737595f759ceed039bb41b11f8f5f6f070bc0ad6d5a1b23ad7c5b1c63",
+      "hash": "sha256:f88c77fcf9d00a657d62495f1932e9760d0abf4dc8c29fb53d520bdf879af6f9",
       "schema": {
         "fields": [
           {
@@ -714,7 +728,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 1434,
-      "hash": "sha256:06952c306ddaeff85e30de04059c89704b0fbecad48c4d5443f48b00808371f7",
+      "hash": "sha256:26c501db5eb74c811c1456257b1de2ce35265892393bd0680cc44548a76d5a34",
       "schema": {
         "fields": [
           {
@@ -787,7 +801,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 4701,
-      "hash": "sha256:49eed86ffca54352c89eb273abcca6b4e28eda40204ea37528ff3908d031df83",
+      "hash": "sha256:ff37ffc096a66da162f529362cb99c339dfb408aeb4a5fd53c9ded2d5223856a",
       "schema": {
         "fields": [
           {
@@ -932,7 +946,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 642,
-      "hash": "sha256:1906c2ae1efc5277c77f2d3bc1ab875c37c45c7f925434f77caaa28c421f65ce",
+      "hash": "sha256:fd7c2e1be5bd64f4328ff4992bcd372d2858f5ef87274237b4e018117f55521f",
       "schema": {
         "fields": [
           {
@@ -973,7 +987,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 421,
-      "hash": "sha256:c8ac52e9c7eda5a3dc81e96f5955c03ae592cd2e2453dd06b2034df0a7162e2b",
+      "hash": "sha256:e189ac1b528e3bfef8bc3d56a203c6aeacb42d2b656d86ed778d05cea7fd3a39",
       "schema": {
         "fields": [
           {
@@ -1010,7 +1024,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 176,
-      "hash": "sha256:9a9d0a085128ca2ed58c3aa7aaa78969c45c66a15957545864877b9284cef3f0",
+      "hash": "sha256:25cb02785d3937b0104b61f1004fdc23d7ba7f8957e14a6bb0909a5271aea4c8",
       "schema": {
         "fields": [
           {
@@ -1029,10 +1043,173 @@
       "path": "outputs/figures/site/manifest.json",
       "description": "Manifesto das figuras do site com fonte, período, dados e SHA-256",
       "format": "json",
-      "mediatype": "application/octet-stream",
-      "bytes": 3220,
-      "hash": "sha256:67d1dbd744ce5d9b137a945a48f6de6f069efd91b7c977874b3f4f78a9d04c78",
+      "mediatype": "application/json",
+      "bytes": 3919,
+      "hash": "sha256:4cfa56f410bbf243f49b792797955b2dc0d4051d5d64c87e3256296b5d0abec8",
       "schema": null
+    },
+    {
+      "name": "inmet_diario",
+      "path": "data_processed/inmet_campos_daily.csv",
+      "description": "INMET A607 (Campos dos Goytacazes): temperatura, umidade, chuva e vento, 2010-2025",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 704486,
+      "hash": "sha256:1c7e8c99d1b51b9c8ff7e0ebe740145e743b11e0289a2bbec151d18d53624ee0",
+      "schema": {
+        "fields": [
+          {
+            "name": "station_code",
+            "type": "object"
+          },
+          {
+            "name": "station",
+            "type": "object"
+          },
+          {
+            "name": "uf",
+            "type": "object"
+          },
+          {
+            "name": "date",
+            "type": "object"
+          },
+          {
+            "name": "tair_mean_c",
+            "type": "float64"
+          },
+          {
+            "name": "tair_min_c",
+            "type": "float64"
+          },
+          {
+            "name": "tair_max_c",
+            "type": "float64"
+          },
+          {
+            "name": "rh_mean_porc",
+            "type": "float64"
+          },
+          {
+            "name": "rh_min_porc",
+            "type": "int64"
+          },
+          {
+            "name": "rh_max_porc",
+            "type": "int64"
+          },
+          {
+            "name": "rainfall_mm",
+            "type": "int64"
+          },
+          {
+            "name": "ws_2_m_s",
+            "type": "float64"
+          },
+          {
+            "name": "latitude_degrees",
+            "type": "float64"
+          },
+          {
+            "name": "longitude_degrees",
+            "type": "float64"
+          },
+          {
+            "name": "altitude_m",
+            "type": "int64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "inmet_metadados",
+      "path": "data_processed/inmet_campos_metadata.json",
+      "description": "Metadados e checksum da estação INMET A607",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 705,
+      "hash": "sha256:7a550573ec3474bbcb5cbe3f8c87d355527bb74f0e076e114d6a96784d9c05a6",
+      "schema": null
+    },
+    {
+      "name": "inmet_comparacao",
+      "path": "outputs/tables/inmet_era5_comparison.csv",
+      "description": "Comparação descritiva INMET A607 vs ERA5-Land",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 180,
+      "hash": "sha256:05c83a0aff75d87443da17833aff8b5ad91e2b5093819c2e04ad1a3e4b05cb12",
+      "schema": {
+        "fields": [
+          {
+            "name": "variable",
+            "type": "object"
+          },
+          {
+            "name": "n",
+            "type": "int64"
+          },
+          {
+            "name": "pearson_r",
+            "type": "float64"
+          },
+          {
+            "name": "mean_bias_inmet_minus_era5",
+            "type": "float64"
+          },
+          {
+            "name": "rmse",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "inmet_relatorio",
+      "path": "reports/inmet_comparison.json",
+      "description": "Relatório legível por máquina da comparação INMET A607 vs ERA5-Land",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 1045,
+      "hash": "sha256:41c3913d11254d8df64ca03469adf7b7ee1410e7f03d41ad92622ae47ffdb1aa",
+      "schema": null
+    },
+    {
+      "name": "dicionario_dados",
+      "path": "data_dictionary/data_dictionary.csv",
+      "description": "Dicionário de dados legível por máquina (variáveis, tipos, fontes e unidades)",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 11574,
+      "hash": "sha256:049e31c94d616c7083e71d927bd3e2f3b6f0fc070e1351faef954a843b10203d",
+      "schema": {
+        "fields": [
+          {
+            "name": "dataset",
+            "type": "object"
+          },
+          {
+            "name": "variable",
+            "type": "object"
+          },
+          {
+            "name": "dtype",
+            "type": "object"
+          },
+          {
+            "name": "description",
+            "type": "object"
+          },
+          {
+            "name": "source",
+            "type": "object"
+          },
+          {
+            "name": "unit_or_codes",
+            "type": "float64"
+          }
+        ]
+      }
     }
   ]
 }

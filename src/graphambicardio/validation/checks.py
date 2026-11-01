@@ -99,9 +99,21 @@ def check_pmid_resolution() -> dict[str, Any]:
 
 def check_local_data() -> dict[str, Any]:
     issues = []
-    sinasc = pd.read_csv(config.DATA_PROCESSED / "sinasc_campos_births.csv", low_memory=False)
-    sih = pd.read_csv(config.DATA_PROCESSED / "sih_campos_chd_admissions.csv", low_memory=False)
+    sinasc_path = config.DATA_PROCESSED / "sinasc_campos_births.csv"
+    sih_path = config.DATA_PROCESSED / "sih_campos_chd_admissions.csv"
     climate = pd.read_csv(config.DATA_PROCESSED / "climate_daily_campos.csv")
+    climate_ok = not climate["temperature_2m_max"].isna().any()
+    if not sinasc_path.exists() or not sih_path.exists():
+        # Individual-level files are intentionally not redistributed (docs/15).
+        return {
+            "status": "skipped",
+            "reason": "individual-level SINASC/SIH files are not versioned",
+            "climate_days": int(len(climate)),
+            "issues": [] if climate_ok else ["missing daily Tmax in climate series"],
+            "passed": climate_ok,
+        }
+    sinasc = pd.read_csv(sinasc_path, low_memory=False)
+    sih = pd.read_csv(sih_path, low_memory=False)
     if sinasc["codmunres"].astype(str).str[:6].ne("330100").any():
         issues.append("SINASC records outside the municipality")
     if (sinasc["year"] < 2010).any() or (sinasc["year"] > 2025).any():

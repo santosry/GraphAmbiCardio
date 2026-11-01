@@ -2,6 +2,18 @@
 
 ## v0.3.0 — 2026-10-31
 
+### Validação climática e ciência aberta
+- INMET A607 (Campos dos Goytacazes) baixado com `BrazilMet` 0.5.0 e comparado
+  ao ERA5-Land: 5.754 dias (2010–2025), Tmax r=0,94, Tmin r=0,94, Tmean
+  r=0,97, umidade r=0,81. A estação entra como validação, não como exposição
+  individual.
+- Latitude, longitude e altitude da estação exibidas no app e nos metadados.
+- `fair/` passa a incluir INMET, o relatório de comparação, o dicionário de
+  dados e o manifesto de figuras; autores e fontes atualizados.
+- Seção de ciência aberta no README e na aba Transparência e equipe, com links
+  para código, metadados, figuras, governança e verificação automatizada.
+- Grafo interativo ampliado e exportação de figuras em viewport maior.
+
 ### Privacidade e governança
 - Remoção dos registros individuais de SINASC e SIH do versionamento e do
   histórico Git. Apenas agregados são publicados.
@@ -33,6 +45,7 @@
 - Versão 0.3.0 em `pyproject.toml`, `CITATION.cff`, `codemeta.json` e metadados.
 
 ### Pendências conhecidas
+- Nome completo de Letícia depende do currículo Lattes; o link está publicado.
 - Microdados de 2023–2024 do SINASC indisponíveis no DATASUS.
 - Desfecho com subnotificação grave; resultados de exposição são
   exploratórios e nenhum sobrevive ao FDR.

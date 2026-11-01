@@ -8,7 +8,45 @@
 [![R](https://img.shields.io/badge/R-%E2%89%A54.4-276DC3)]()
 [![CI](https://github.com/santosry/GraphAmbiCardio/actions/workflows/ci.yml/badge.svg)](https://github.com/santosry/GraphAmbiCardio/actions/workflows/ci.yml)
 
-> **Este estudo não é uma revisão sistemática.** É uma busca estruturada com curadoria dirigida, bases biológicas curadas e análise ecológica de dados secundários. Não estima efeitos causais.
+> **Em uma frase:** o GraphAmbiCardio organiza, em um só lugar, o que a ciência sabe sobre como o ambiente (calor, poluição do ar, umidade) pode influenciar o desenvolvimento do coração do bebê — e mostra onde ainda faltam evidências.
+
+> **Este estudo não é uma revisão sistemática.** É uma busca organizada, com curadoria feita por pessoas, bases biológicas públicas e análise de dados de saúde de Campos dos Goytacazes. Não prova causalidade.
+
+---
+
+## Em linguagem simples
+
+- **O problema:** cardiopatias congênitas são alterações no coração que aparecem antes do nascimento. Fatores ambientais podem contribuir, mas a ciência ainda tem muitas lacunas.
+- **O que o projeto faz:** junta estudos científicos, genes, fenótipos (sinais clínicos), dados de nascimentos e dados de clima/poluição em um mapa visual chamado **grafo**. Cada ligação mostra de onde veio a informação e quão forte ela é.
+- **O que ele não faz:** não diz que uma exposição “causa” cardiopatia em uma pessoa; não substitui avaliação médica; não usa dados individuais no site.
+- **Para que serve:** ajudar pesquisadores, gestores e o público a ver o que está bem sustentado, o que é apenas hipótese e onde faltam estudos.
+- **Ciência aberta:** código, metadados, figuras, tabelas e instruções de reprodução são públicos. Dados individuais de saúde não são redistribuídos; o site mostra apenas agregados.
+
+---
+
+## Ciência aberta — compromisso verificável
+
+O GraphAmbiCardio adota **ciência aberta por padrão**, com um limite explícito: dados individuais de saúde não são redistribuídos.
+
+| Artefato | Onde está | Verificação |
+|---|---|---|
+| Código e pipeline | repositório público, licença MIT | `LICENSE`, `Makefile`, `.github/workflows/ci.yml` |
+| Dados derivados e agregados | `data_processed/`, `outputs/`, `app/data/` | schemas em `scripts/validation/02_schema.py` |
+| Metadados FAIR | `fair/metadata.json`, `fair/datapackage.json` | SHA-256 por recurso; `scripts/compliance/01_check.py` |
+| Figuras e tabelas | `outputs/figures/site/`, `outputs/tables/` | `manifest.json` com fonte, período e SHA-256 |
+| Documentação | `docs/` | protocolo, métodos, limitações, governança e declaração de IA |
+| Privacidade | `docs/15_DATA_GOVERNANCE.md` | microdados individuais fora do Git; app só com agregados |
+| Reprodutibilidade | `uv.lock`, `renv.lock`, `run_all.sh` | versões fixadas, cache HTTP, testes e validação |
+
+**Como verificar localmente:**
+
+```bash
+.venv/Scripts/python.exe scripts/validation/02_schema.py
+.venv/Scripts/python.exe scripts/compliance/01_check.py
+.venv/Scripts/python.exe -m pytest -q
+```
+
+Os resultados ficam em `reports/schema_validation.md`, `reports/compliance_report.md` e `reports/validation_report.md`. Nenhum resultado é apresentado como causal; hipóteses permanecem separadas das evidências.
 
 ---
 
@@ -19,7 +57,7 @@ O GraphAmbiCardio integra cinco camadas:
 1. **Literatura** — PubMed/MEDLINE, Europe PMC, SciELO (metadados via Crossref, prefixo DOI 10.1590) e CAPES (Catálogo de Teses e Dissertações).
 2. **Bases biológicas curadas** — HPO, ClinVar, NCBI Gene, Reactome e Enrichr.
 3. **Dados epidemiológicos locais** — SINASC (nascidos vivos) e SIH/SUS (internações), 2010–2025.
-4. **Exposição ambiental de área** — ERA5-Land via Open-Meteo para clima e **PM2,5 municipal do VIGIAR/Ministério da Saúde via pacote `vigiar`** (2010–2025). Séries de área, não exposição individual.
+4. **Exposição ambiental de área** — ERA5-Land via Open-Meteo, **INMET estação A607** (temperatura e umidade) e **PM2,5 municipal do VIGIAR/Ministério da Saúde via pacote `vigiar`** (2010–2025). Séries de área, não exposição individual.
 5. **Grafo com proveniência** — cada relação carrega tipo de evidência, espécie, desenho, janela de exposição, referência, confiança, limitações e **nível de evidência** (bem sustentada / plausível experimental / não demonstrada / contextual).
 
 Há duas camadas integradas e **nunca misturadas**:
@@ -58,7 +96,7 @@ Há duas camadas integradas e **nunca misturadas**:
 
 - SINASC: **98.598 nascimentos** (microdados 2010–2022 e 2025; **2023–2024 apenas agregados do TabNet**). **59 casos** nos microdados (5,98/10.000) — subnotificação grave. TabNet: 5 casos em 2023 e 5 em 2024; 2025 = 9 casos, compatível com os microdados.
 - SIH/SUS: **549 internações** por diagnóstico principal Q20–Q28 (**561 no total**, 12 apenas secundárias), **33 óbitos**, **55% fora do município**, 18 hospitais.
-- Clima: **5.844 dias** ERA5-Land; limiar de onda de calor 34,2 °C; **73 ondas / 363 dias**.
+- Clima: **5.844 dias** ERA5-Land; limiar de onda de calor 34,2 °C; **73 ondas / 363 dias**. Validação com a estação **INMET A607** (2010–2025): Tmax r=0,94; Tmin r=0,94; Tmean r=0,97; umidade r=0,81. Série de estação, distinta da reanálise.
 - Modelo exploratório (56–59 eventos): temperatura OR **1,30/SD** (1,00–1,69; p = 0,048, q = 0,153); Firth **1,31** (1,00–1,69; p = 0,047); modelo com erros clusterizados por mês **1,30** (0,98–1,72; p = 0,065); ajuste socioeconômico Firth **1,33** (1,02–1,73; p = 0,033, q = 0,153); ajustado por estação **1,65** (1,13–2,42; p = 0,009, q = 0,122); modelo mensal **nulo** (RR 1,22; 0,94–1,60). PM2,5 municipal do VIGIAR foi **nulo** (OR 0,91/SD; 0,70–1,18) e permaneceu nulo no ajuste mútuo com temperatura (OR 1,01; 0,77–1,32). **Nenhum modelo sobrevive ao FDR (q < 0,05); não é achado causal.**
 
 ### Hierarquia de exposições
@@ -92,7 +130,7 @@ Aplicativo em português brasileiro com oito abas:
 5. **Hipóteses e lacunas** — caminhos candidatos, hipóteses por genes e lacunas.
 6. **Consulta científica** — pergunta por exposição e recupera mecanismos, fenótipos, genes, caminhos e referências.
 7. **Métodos** — desenho, buscas, bases, gradação e limitações.
-8. **FAIR e uso de IA** — metadados, licenças e declaração de IA (Portaria CNPq 2.664/2026).
+8. **Transparência e equipe** — metadados FAIR, licenças, autores com Lattes e declaração de IA (Portaria CNPq 2.664/2026).
 
 Publicação: `Rscript scripts/deploy/deploy_shinyapps.R` (requer conta configurada no `rsconnect`).
 
@@ -107,7 +145,7 @@ Detalhes: `docs/14_APP.md`.
 ### Requisitos
 
 - Python **3.12** (decodificador DBC do DATASUS).
-- R **≥ 4.4** com `shiny`, `bslib`, `DT`, `visNetwork`, `plotly`, `dplyr`, `readr`, `jsonlite`, `stringr`, `scales`, `htmltools`, `igraph`, `commonmark`, `viridisLite`, `vigiar` e `rsconnect`. As versões exatas estão em `renv.lock`.
+- R **≥ 4.4** com `shiny`, `bslib`, `DT`, `visNetwork`, `plotly`, `dplyr`, `tidyr`, `readr`, `jsonlite`, `stringr`, `scales`, `htmltools`, `igraph`, `commonmark`, `viridisLite`, `vigiar` e `rsconnect`. As versões exatas estão em `renv.lock`.
 - Internet para NCBI, Europe PMC, Crossref, HPO, Reactome, Enrichr, Open-Meteo e DATASUS.
 
 ```bash
@@ -121,6 +159,7 @@ uv sync --extra dev --extra datasus   # usa uv.lock
 .venv/Scripts/python.exe scripts/collection/02_databases.py
 .venv/Scripts/python.exe scripts/collection/03_clinvar_enrichr.py
 .venv/Scripts/python.exe scripts/env/01_climate.py
+Rscript R/collection/inmet.R
 .venv/Scripts/python.exe scripts/epi/01_sinasc.py
 .venv/Scripts/python.exe scripts/epi/02_sih.py
 .venv/Scripts/python.exe scripts/epi/03_exposure_models.py
@@ -136,9 +175,11 @@ uv sync --extra dev --extra datasus   # usa uv.lock
 .venv/Scripts/python.exe scripts/app/02_fair_metadata.py
 .venv/Scripts/python.exe -m pytest -q
 
-# buscas em R (SciELO via Crossref e CAPES Catálogo de Teses)
+# coletores em R (SciELO via Crossref, CAPES, INMET e VIGIAR)
 Rscript R/collection/scielo.R
 Rscript R/collection/capes.R
+Rscript R/collection/inmet.R
+Rscript R/collection/pm25_vigiar.R
 ```
 
 Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pelo git); toda resposta usada no grafo é rastreável. **Dados individuais de SINASC/SIH não são versionados** — ver `docs/15_DATA_GOVERNANCE.md`.
@@ -155,7 +196,7 @@ Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pel
 .venv/Scripts/python.exe -m pytest -q
 ```
 
-Resultados em `reports/validation_report.md`, `reports/schema_validation.md`, `reports/benchmark.md` e `reports/compliance_report.md`. A conformidade verifica termos proibidos, segredos, checksums FAIR, ausência de `data_raw/` e de dados individuais no git, declaração de IA e bundle do app.
+Resultados em `reports/validation_report.md`, `reports/schema_validation.md`, `reports/benchmark.md` e `reports/compliance_report.md`. A conformidade verifica termos proibidos, segredos, checksums FAIR, ausência de `data_raw/` e de dados individuais no git, declaração de IA, compromisso de ciência aberta e bundle do app.
 
 ## 6. Docker
 
@@ -171,7 +212,7 @@ docker compose up --build
 | Caminho | Conteúdo |
 |---|---|
 | `src/graphambicardio/` | pacote Python (coleta, limpeza, integração, grafo, análise, validação) |
-| `R/collection/` | coletores R para SciELO (Crossref) e CAPES |
+| `R/collection/` | coletores R para SciELO (Crossref), CAPES, INMET A607 e VIGIAR PM2,5 |
 | `app/` | aplicativo Shiny GraphAmbiCardio (PT-BR) e bundle de dados |
 | `docs/` | protocolo, viabilidade, busca, catálogo, ontologia, dicionário, gradação, métodos, validação, limitações, fases, manuscrito, FAIR, IA, app e governança de dados |
 | `fair/` | metadados DCAT e Frictionless Data Package com checksums |
@@ -181,11 +222,12 @@ docker compose up --build
 | `outputs/` | grafo, tabelas e figuras |
 | `tests/` | testes unitários e de integridade |
 | `codemeta.json`, `CITATION.cff` | metadados de citação e software |
+| `outputs/figures/site/` | figuras do site em PNG, dados e manifesto com SHA-256 |
 | `CHANGELOG.md`, `RELEASE.md` | histórico e checklist de release |
 
 ---
 
-## 8. FAIR e uso de IA
+## 8. Transparência, FAIR e uso de IA
 
 - **Findable/Accessible/Interoperable/Reusable:** identificadores persistentes por entidade, metadados DCAT/Data Package, CSV/JSON/GraphML, proveniência por evidência, licença MIT para código e licenças de terceiros preservadas. Ver `docs/12_FAIR.md` e `fair/`.
 - **Declaração de IA:** em conformidade com a **Portaria CNPq nº 2.664/2026**, em `docs/13_DECLARACAO_IA.md`. A IA apoiou código, triagem e redação; não gerou dados/referências, não decidiu a classificação final e não é autora. Toda citação curada foi verificada contra o PubMed.
@@ -199,7 +241,7 @@ docker compose up --build
 - SciELO acessado por metadados Crossref (a interface de busca bloqueou automação); CAPES limitado ao Catálogo de Teses.
 - SINASC com subnotificação grave; 2023–2024 sem microdados (apenas TabNet); 2025 preliminar.
 - SIH: AIH ≠ pessoa; 55% das internações fora do município.
-- Exposição de área (clima e PM2,5 do VIGIAR), não individual; não há monitoramento de estação local.
+- Exposição de área (clima e PM2,5 do VIGIAR), não individual. A estação INMET A607 é usada para validação da reanálise; não representa exposição pessoal.
 - Maioria das cadeias mecanísticas é experimental, em doses não equivalentes às humanas.
 - HPO/ClinVar são orientados a doenças mendelianas/sindrômicas.
 
@@ -207,7 +249,18 @@ Ver `docs/09_LIMITATIONS_AND_GAPS.md`.
 
 ---
 
-## 10. Licença e citação
+## 10. Equipe
+
+- **Ryan de Paulo Santos** — [Currículo Lattes](http://lattes.cnpq.br/7503796642571978) · [ORCID](https://orcid.org/0009-0005-6770-2001)
+- **Letícia** — [Currículo Lattes](http://lattes.cnpq.br/4004634244195808)
+
+Nomes completos, formação e produção estão nos currículos Lattes.
+
+---
+
+## 11. Licença e citação
 
 Código: MIT (`LICENSE`). Dados de terceiros mantêm suas licenças. Citação em `CITATION.cff`.
 Repositório: https://github.com/santosry/GraphAmbiCardio
+
+**Ciência aberta:** todo o código, metadados, figuras, tabelas e instruções de reprodução estão públicos. Dados individuais de saúde não são redistribuídos.

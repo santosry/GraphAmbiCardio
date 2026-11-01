@@ -127,7 +127,13 @@ Not fetched in v0.1.0. The birth-level models use SINASC live births as the deno
 
 ## 6. Environmental data
 
-### 6.1 INMET — **Blocked/unreachable.** `portal.inmet.gov.br` did not return data to automated requests; no station series was obtained.
+### 6.1 INMET — **Used for validation.**
+- **Station:** A607 (Campos dos Goytacazes/RJ; latitude −21,7167; longitude −41,3500; altitude 25 m; automatic station).
+- **Access:** R package `BrazilMet` 0.5.0 (`download_AWS_INMET_daily`), historical files at `https://portal.inmet.gov.br/uploads/dadoshistoricos/`.
+- **Variables:** Tmean, Tmax, Tmin, relative humidity (mean/min/max), rainfall, wind.
+- **Coverage:** 5,754 days, 2010-01-01 to 2025-12-31; 138 missing Tmax and 153 missing RH.
+- **Role:** validation/comparison with ERA5-Land (Tmax r=0.94; Tmin r=0.94; Tmean r=0.97; RH r=0.81), not personal exposure.
+- **Limitation:** automatic station; sensor gaps and local siting; does not represent the whole municipality.
 ### 6.2 ERA5 / ERA5-Land via Open-Meteo — **Used.**
 - **URL:** https://archive-api.open-meteo.com/v1/archive
 - **Variables:** Tmean, Tmax, Tmin, relative humidity, precipitation, wind.
@@ -162,7 +168,7 @@ Not fetched in v0.1.0. The birth-level models use SINASC live births as the deno
 
 ## 8. What was deliberately not used, and why
 
-- **CTD** (captcha), **DisGeNET** (key), **OMIM** (licence), **SciELO search interface** (403), **INMET** (unreachable): access barriers, all documented.
+- **CTD** (captcha), **DisGeNET** (key), **OMIM** (licence), **SciELO search interface** (403): access barriers, all documented. **INMET** was initially unreachable through the portal but was later obtained via `BrazilMet` and is used for validation (section 6.1).
 - **GEO**: no dataset met the stage/species/tissue criteria.
 - **KEGG**: Reactome covered the pathway layer.
 - **ToxCast/PubChem**: exposure classes, not individual chemicals, were the unit of analysis.

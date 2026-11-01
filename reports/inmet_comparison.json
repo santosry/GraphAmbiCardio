@@ -1,0 +1,45 @@
+{
+  "station": "A607",
+  "period": [
+    "2010-01-01",
+    "2025-12-31"
+  ],
+  "n_days": 5601,
+  "comparison": [
+    {
+      "variable": "Tmax",
+      "n": 5601,
+      "pearson_r": 0.939,
+      "mean_bias_inmet_minus_era5": 0.53,
+      "rmse": 1.43
+    },
+    {
+      "variable": "Tmin",
+      "n": 5601,
+      "pearson_r": 0.943,
+      "mean_bias_inmet_minus_era5": -0.62,
+      "rmse": 1.12
+    },
+    {
+      "variable": "Tmean",
+      "n": 5601,
+      "pearson_r": 0.973,
+      "mean_bias_inmet_minus_era5": -0.35,
+      "rmse": 0.72
+    },
+    {
+      "variable": "RH",
+      "n": 5601,
+      "pearson_r": 0.81,
+      "mean_bias_inmet_minus_era5": 1.43,
+      "rmse": 4.51
+    }
+  ],
+  "note": "INMET A607 vs ERA5-Land; correlação e viés descritivos. Latitude, longitude e altitude identificam a estação, não a exposição individual.",
+  "station_name": "CAMPOS",
+  "latitude": -21.7167,
+  "longitude": -41.35,
+  "altitude_m": 25,
+  "package": "BrazilMet",
+  "package_version": "0.5.0"
+}

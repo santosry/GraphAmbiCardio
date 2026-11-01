@@ -6,7 +6,7 @@ Usage (with the app running locally):
 Environment:
     APP_URL      default http://127.0.0.1:3850/
     CHROME_PATH  optional path to Chrome/Chromium (defaults to Playwright's browser)
-    VIEWPORT     default 1440x1000
+    VIEWPORT     default 1600x1200
 """
 
 from __future__ import annotations
@@ -25,7 +25,7 @@ OUT = ROOT / "outputs" / "figures" / "site"
 DATA_OUT = OUT / "data"
 APP_URL = os.environ.get("APP_URL", "http://127.0.0.1:3850/")
 CHROME_PATH = os.environ.get("CHROME_PATH") or r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-VIEWPORT_W, VIEWPORT_H = (int(x) for x in os.environ.get("VIEWPORT", "1440x1000").split("x"))
+VIEWPORT_W, VIEWPORT_H = (int(x) for x in os.environ.get("VIEWPORT", "1600x1200").split("x"))
 
 FIGURES = [
     {
@@ -88,6 +88,16 @@ FIGURES = [
         "note": "Série de área; não é estação local nem exposição individual. Ver docs/07.",
         "data": ["pm25_monthly.csv", "pm25_annual.csv"],
     },
+    {
+        "file": "07_inmet_validacao.png",
+        "tab": "Painel epidemiológico",
+        "selector": "[id$='inmet_plot']",
+        "title": "Validação da exposição climática — INMET A607 vs ERA5-Land",
+        "source": "INMET estação A607 (lat −21,7167; lon −41,3500; alt 25 m) via BrazilMet 0.5.0; ERA5-Land via Open-Meteo",
+        "period": "2010–2025",
+        "note": "Dispersão diária; latitude, longitude, altitude, correlação, viés e RMSE nas tabelas do site. Ver docs/07.",
+        "data": ["inmet_daily.csv", "climate_daily.csv", "inmet_comparison.csv"],
+    },
 ]
 
 APP_DATA = {
@@ -100,6 +110,9 @@ APP_DATA = {
     "climate_annual.csv": "app/data/climate_annual.csv",
     "pm25_monthly.csv": "app/data/pm25_monthly.csv",
     "pm25_annual.csv": "app/data/pm25_annual.csv",
+    "inmet_daily.csv": "app/data/inmet_daily.csv",
+    "inmet_comparison.csv": "app/data/inmet_comparison.csv",
+    "climate_daily.csv": "app/data/climate_daily.csv",
 }
 
 

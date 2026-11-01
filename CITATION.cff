@@ -18,6 +18,10 @@ keywords:
   - evidence grading
   - Brazil
 authors:
-  - family-names: "GraphAmbiCardio study team"
-    given-names: ""
+  - family-names: "Santos"
+    given-names: "Ryan de Paulo"
+    orcid: "https://orcid.org/0009-0005-6770-2001"
+  - family-names: "Letícia"
+    website: "http://lattes.cnpq.br/4004634244195808"
+  - name: "GraphAmbiCardio study team"
 repository-code: "https://github.com/santosry/GraphAmbiCardio"

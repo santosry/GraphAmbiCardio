@@ -38,6 +38,11 @@ agregados (`app/data/sinasc_annual.csv`, `app/data/sih_annual.csv`,
 - `data_processed/sinasc_tabnet_aggregates.csv` — agregados do TabNet.
 - `data_processed/pm25_campos_anual.csv` e `pm25_campos_mensal.csv` — série
   municipal de PM2,5, sem informação individual.
+- `data_processed/inmet_campos_daily.csv` — série diária da estação automática
+  INMET A607 (latitude −21,7167; longitude −41,3500; altitude 25 m), usada para
+  validar o ERA5-Land; não é exposição individual.
+- `data_processed/inmet_campos_metadata.json` — metadados, período, versão do
+  pacote e checksum MD5 da série INMET.
 
 ## 4. Controles automáticos
 

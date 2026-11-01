@@ -113,9 +113,14 @@ table.dataTable thead th { color: var(--v1); border-bottom: 1px solid rgba(68,1,
 }
 .figure-head { font-weight: 600; color: var(--v0); margin: 0 0 .45rem; font-size: .95rem; }
 .figure-canvas { width: 100%; min-width: 0; }
-.figure-canvas.graph-canvas { height: clamp(700px, 94vh, 1200px); }
-.figure-canvas.chart-canvas { height: clamp(380px, 46vh, 600px); }
-.figure-canvas.chart-canvas-wide { height: clamp(400px, 52vh, 680px); }
+.figure-canvas.graph-canvas { height: clamp(900px, 105vh, 1500px); }
+.figure-canvas.chart-canvas { height: clamp(400px, 50vh, 640px); }
+.figure-canvas.chart-canvas-wide { height: clamp(460px, 58vh, 760px); }
+
+@media (max-width: 768px) {
+  .figure-canvas.graph-canvas { height: 72vh; min-height: 520px; }
+  .figure-canvas.chart-canvas-wide { height: 60vh; min-height: 380px; }
+}
 .figure-canvas > .plotly,
 .figure-canvas > .shiny-plot-output,
 .figure-canvas > .visNetwork {

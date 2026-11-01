@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T01:46:30Z",
+  "generated_at": "2026-11-01T02:31:23Z",
   "passed": true,
   "issues": [],
   "checks": {
@@ -13,14 +13,14 @@
     },
     "required_files": {
       "missing": [],
-      "n_required": 26
+      "n_required": 29
     },
     "fair_checksums": {
-      "n_resources": 17,
+      "n_resources": 22,
       "bad": []
     },
     "git": {
-      "tracked_files": 385,
+      "tracked_files": 403,
       "data_raw_tracked": [],
       "venv_tracked": []
     },
@@ -30,6 +30,11 @@
     },
     "non_systematic_label": true,
     "ai_declaration": true,
+    "open_science": {
+      "readme": true,
+      "fair_doc": true,
+      "app": true
+    },
     "pm25_series": true,
     "pysus_audit": true,
     "app_bundle": {

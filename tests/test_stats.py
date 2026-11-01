@@ -100,5 +100,5 @@ def test_fair_checksums_match():
     for r in dp["resources"]:
         p = ROOT / r["path"]
         assert p.exists(), r["path"]
-        digest = hashlib.sha256(p.read_bytes()).hexdigest()
+        digest = hashlib.sha256(p.read_bytes().replace(bytes((13, 10)), bytes((10)))).hexdigest()
         assert digest == r["hash"].replace("sha256:", ""), r["path"]

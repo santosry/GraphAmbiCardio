@@ -7,10 +7,18 @@
   "version": "0.3.0",
   "issued": "2026-10-31",
   "modified": "2026-10-31",
-  "creator": {
-    "@type": "Organization",
-    "name": "GraphAmbiCardio study team"
-  },
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Ryan de Paulo Santos",
+      "identifier": "https://orcid.org/0009-0005-6770-2001"
+    },
+    {
+      "@type": "Person",
+      "name": "Letícia",
+      "identifier": "http://lattes.cnpq.br/4004634244195808"
+    }
+  ],
   "publisher": {
     "@type": "Organization",
     "name": "GraphAmbiCardio study team"
@@ -51,7 +59,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/nodes.csv",
       "format": "csv",
       "byteSize": 156159,
-      "checksum": "sha256:9bc38af4dc3efb67c08069c01fbe399173178dbc34704b71d1328ac625db37b6"
+      "checksum": "sha256:d687d92c7b25cdb3b4d87071acb3a62b55e88d7024575b26d9bc72226f8b062f"
     },
     {
       "@type": "Distribution",
@@ -59,7 +67,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/relations.csv",
       "format": "csv",
       "byteSize": 1988772,
-      "checksum": "sha256:42f23b64fae415e229352bc652e82aa35ac22404f6a2756a5c2d082fccb56e1a"
+      "checksum": "sha256:4706527382b2d353169b948703de0f86b89c3a4cdb04357425b3da8c761adc11"
     },
     {
       "@type": "Distribution",
@@ -67,7 +75,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/evidence.csv",
       "format": "csv",
       "byteSize": 1596446,
-      "checksum": "sha256:445a792437ff269612592ff8270435102d914d1b18729bb4f915b015153487ef"
+      "checksum": "sha256:8b4c9c530cac5b7f66e22813db299565df28fa5dcfd19c99760dc51e310cbc19"
     },
     {
       "@type": "Distribution",
@@ -75,7 +83,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/hypotheses.csv",
       "format": "csv",
       "byteSize": 3015,
-      "checksum": "sha256:29e46289d49108ff33d2fd88ee47e4161c6e5c1cbd3d8ee936b0471d27a8d9d7"
+      "checksum": "sha256:f4cbe0497963aeb8aded04e30503a28e35d37a05e04a9b711cec7b574596917a"
     },
     {
       "@type": "Distribution",
@@ -83,7 +91,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sinasc_annual_complete.csv",
       "format": "csv",
       "byteSize": 1415,
-      "checksum": "sha256:9a45598da5f7252ba2d643e0117c26e5683f6a80db0660cc1bb9266e37f079c6"
+      "checksum": "sha256:bdeaebf4a455e8b3f74c4f79216e607508038dfe0517524bf69f6f31936a188f"
     },
     {
       "@type": "Distribution",
@@ -91,7 +99,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sih_annual.csv",
       "format": "csv",
       "byteSize": 891,
-      "checksum": "sha256:10cf691aac9747a03b9211294739503391d910efa90a3b539d49a9e7903f887a"
+      "checksum": "sha256:36a9dce8db90c4ef4d3790253b29b62428c8427c7a5812e4a97a4d86dfa91e17"
     },
     {
       "@type": "Distribution",
@@ -99,7 +107,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_processed/climate_daily_campos.csv",
       "format": "csv",
       "byteSize": 415466,
-      "checksum": "sha256:b92e4ecd44eafc2007354ba662c1475aee24a75019c39db64da9a30470130f74"
+      "checksum": "sha256:85c17525d6a19b7b0a0eff7f2bd5947ff606934e7f0b266817508891dad27607"
     },
     {
       "@type": "Distribution",
@@ -107,7 +115,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_processed/pm25_campos_anual.csv",
       "format": "csv",
       "byteSize": 424,
-      "checksum": "sha256:126317ed6ea55a5a31019beb221e890ef86ca4ff2742877f588c82093d0e5fd9"
+      "checksum": "sha256:f5698250b4bea50d3e10c5f305cdd23efb7fb092ec2cf376c9c670c068d2ccf9"
     },
     {
       "@type": "Distribution",
@@ -115,7 +123,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_processed/pm25_campos_mensal.csv",
       "format": "csv",
       "byteSize": 5078,
-      "checksum": "sha256:1139796c6ec9a9205ad285d89af62797f766c46beafa1cdbd272e061d0a9147d"
+      "checksum": "sha256:fc3e1815d7bc3273cff4ffd260685fa842c52467342a8fe97587ff7ea792d419"
     },
     {
       "@type": "Distribution",
@@ -123,7 +131,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/paths_exposure_phenotype.csv",
       "format": "csv",
       "byteSize": 2630,
-      "checksum": "sha256:8fb39bfc6ba78b55ee794c447cca1cc6a3b72b0a0bfb03573522cb64d9b0632a"
+      "checksum": "sha256:ace9ab89f4edcbb95f1b8f094448d95157dff7c9ce03f6ed9dc05ec5c85698b8"
     },
     {
       "@type": "Distribution",
@@ -131,7 +139,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/gap_analysis.csv",
       "format": "csv",
       "byteSize": 2226,
-      "checksum": "sha256:99865bd737595f759ceed039bb41b11f8f5f6f070bc0ad6d5a1b23ad7c5b1c63"
+      "checksum": "sha256:f88c77fcf9d00a657d62495f1932e9760d0abf4dc8c29fb53d520bdf879af6f9"
     },
     {
       "@type": "Distribution",
@@ -139,7 +147,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/hypothesis_candidates.csv",
       "format": "csv",
       "byteSize": 1434,
-      "checksum": "sha256:06952c306ddaeff85e30de04059c89704b0fbecad48c4d5443f48b00808371f7"
+      "checksum": "sha256:26c501db5eb74c811c1456257b1de2ce35265892393bd0680cc44548a76d5a34"
     },
     {
       "@type": "Distribution",
@@ -147,7 +155,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/exploratory_models.csv",
       "format": "csv",
       "byteSize": 4701,
-      "checksum": "sha256:49eed86ffca54352c89eb273abcca6b4e28eda40204ea37528ff3908d031df83"
+      "checksum": "sha256:ff37ffc096a66da162f529362cb99c339dfb408aeb4a5fd53c9ded2d5223856a"
     },
     {
       "@type": "Distribution",
@@ -155,7 +163,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sensitivity_leave_one_year_out.csv",
       "format": "csv",
       "byteSize": 642,
-      "checksum": "sha256:1906c2ae1efc5277c77f2d3bc1ab875c37c45c7f925434f77caaa28c421f65ce"
+      "checksum": "sha256:fd7c2e1be5bd64f4328ff4992bcd372d2858f5ef87274237b4e018117f55521f"
     },
     {
       "@type": "Distribution",
@@ -163,7 +171,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/exposure_correlation.csv",
       "format": "csv",
       "byteSize": 421,
-      "checksum": "sha256:c8ac52e9c7eda5a3dc81e96f5955c03ae592cd2e2453dd06b2034df0a7162e2b"
+      "checksum": "sha256:e189ac1b528e3bfef8bc3d56a203c6aeacb42d2b656d86ed778d05cea7fd3a39"
     },
     {
       "@type": "Distribution",
@@ -171,17 +179,58 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/exposure_vif.csv",
       "format": "csv",
       "byteSize": 176,
-      "checksum": "sha256:9a9d0a085128ca2ed58c3aa7aaa78969c45c66a15957545864877b9284cef3f0"
+      "checksum": "sha256:25cb02785d3937b0104b61f1004fdc23d7ba7f8957e14a6bb0909a5271aea4c8"
     },
     {
       "@type": "Distribution",
       "name": "figuras_site",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/figures/site/manifest.json",
       "format": "json",
-      "byteSize": 3220,
-      "checksum": "sha256:67d1dbd744ce5d9b137a945a48f6de6f069efd91b7c977874b3f4f78a9d04c78"
+      "byteSize": 3919,
+      "checksum": "sha256:4cfa56f410bbf243f49b792797955b2dc0d4051d5d64c87e3256296b5d0abec8"
+    },
+    {
+      "@type": "Distribution",
+      "name": "inmet_diario",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_processed/inmet_campos_daily.csv",
+      "format": "csv",
+      "byteSize": 704486,
+      "checksum": "sha256:1c7e8c99d1b51b9c8ff7e0ebe740145e743b11e0289a2bbec151d18d53624ee0"
+    },
+    {
+      "@type": "Distribution",
+      "name": "inmet_metadados",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_processed/inmet_campos_metadata.json",
+      "format": "json",
+      "byteSize": 705,
+      "checksum": "sha256:7a550573ec3474bbcb5cbe3f8c87d355527bb74f0e076e114d6a96784d9c05a6"
+    },
+    {
+      "@type": "Distribution",
+      "name": "inmet_comparacao",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/inmet_era5_comparison.csv",
+      "format": "csv",
+      "byteSize": 180,
+      "checksum": "sha256:05c83a0aff75d87443da17833aff8b5ad91e2b5093819c2e04ad1a3e4b05cb12"
+    },
+    {
+      "@type": "Distribution",
+      "name": "inmet_relatorio",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/reports/inmet_comparison.json",
+      "format": "json",
+      "byteSize": 1045,
+      "checksum": "sha256:41c3913d11254d8df64ca03469adf7b7ee1410e7f03d41ad92622ae47ffdb1aa"
+    },
+    {
+      "@type": "Distribution",
+      "name": "dicionario_dados",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_dictionary/data_dictionary.csv",
+      "format": "csv",
+      "byteSize": 11574,
+      "checksum": "sha256:049e31c94d616c7083e71d927bd3e2f3b6f0fc070e1351faef954a843b10203d"
     }
   ],
-  "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed.",
+  "conformsTo": "https://specs.frictionlessdata.io/data-package/",
+  "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed. A validação climática usa a estação INMET A607 (latitude -21,7167; longitude -41,3500; altitude 25 m) e ERA5-Land.",
   "note": "Busca estruturada não sistemática. Hipóteses são explicitamente separadas das evidências."
 }

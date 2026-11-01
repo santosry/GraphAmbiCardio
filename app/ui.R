@@ -48,7 +48,7 @@ ui <- bslib::page_navbar(
   bslib::nav_panel("Hipóteses e lacunas", mod_hypotheses_ui("hyp")),
   bslib::nav_panel("Consulta científica", mod_query_ui("query")),
   bslib::nav_panel("Métodos", mod_methods_ui("methods")),
-  bslib::nav_panel("FAIR e uso de IA", mod_about_ui("about"))
+  bslib::nav_panel("Transparência e equipe", mod_about_ui("about"))
 )
 
 # Overlay de carregamento (some automaticamente)

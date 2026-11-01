@@ -90,7 +90,7 @@ HPO (ontology + gene-to-phenotype annotations), ClinVar, NCBI Gene, Reactome Ana
 SINASC (live births) and SIH/SUS (hospital admissions), DATASUS FTP, extracted via DBC → DBF → records.
 
 ### Environment
-ERA5-Land daily series via Open-Meteo for the municipality grid cell, and annual/monthly municipal PM2.5 from VIGIAR (Ministry of Health) via the `vigiar` R package, 2010–2025. Both are area-level series, not personal exposure.
+ERA5-Land daily series via Open-Meteo for the municipality grid cell, annual/monthly municipal PM2.5 from VIGIAR (Ministry of Health) via the `vigiar` R package, and INMET automatic station A607 (Campos dos Goytacazes; latitude −21,7167, longitude −41,3500, altitude 25 m) via `BrazilMet`, 2010–2025. INMET is used to validate ERA5-Land; all are area/station series, not personal exposure.
 
 ---
 
@@ -203,7 +203,7 @@ Secondary, aggregate, publicly available data; no names, addresses, CPF or dates
 | R as primary language | Python (with R unavailable in the runtime) | R was not installed; Python 3.12 + pysus was the only reproducible route to DATASUS DBC files |
 | CTD, DisGeNET, OMIM | Not used | Captcha / API key / licence restrictions |
 | SciELO search interface | Crossref metadata used instead | HTTP 403 to automated requests |
-| INMET station series | ERA5-Land via Open-Meteo | INMET portal not reachable programmatically |
+| INMET station series | BrazilMet 0.5.0, station A607 | obtained after the initial blocked extraction; used to validate ERA5-Land |
 | Local PM2.5 | Not used | No local monitoring series; no proxy fabricated |
 | Full dual-reviewer systematic review | Rapid scoping + targeted manual curation | Feasibility and traceability prioritised; audit sample provided |
 
