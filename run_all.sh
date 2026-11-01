@@ -16,6 +16,7 @@ $PY scripts/epi/01_sinasc.py
 $PY scripts/epi/02_sih.py
 $PY scripts/epi/03_exposure_models.py
 $PY scripts/epi/04_tabnet_supplement.py
+JULIA_REPS="${JULIA_REPS:-500}" julia --project=julia julia/gestational_window_simulation.jl
 $PY scripts/epi/05_pysus_audit.py
 $PY scripts/integration/01_build_graph.py
 $PY scripts/cleaning/01_normalize_identifiers.py

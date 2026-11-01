@@ -38,7 +38,7 @@ mod_methods_ui <- function(id) {
             tags$li(tags$b("Europe PMC:"), " 1.599 / 171 / 39 / 593 / 2.387."),
             tags$li(tags$b("SciELO:"), " metadados via Crossref (prefixo DOI 10.1590), pois a interface de busca retornou HTTP 403 a clientes automatizados."),
             tags$li(tags$b("CAPES:"), " Catálogo de Teses e Dissertações (API pública); 552 teses para “cardiopatias congênitas”."),
-            tags$li(tags$b("Portal de Periódicos CAPES:"), " acesso ao texto completo exige autenticação institucional; não foi utilizado.")
+            tags$li(tags$b("Portal de Periódicos CAPES:"), " sem API oficial aberta; exige autenticação institucional e não foi utilizado. Servidores MCP comunitários foram avaliados e não adotados (ver docs/16_CAPES_MCP.md).")
           ),
           source_note("Fonte: literature/searches/*.json; detalhes em docs/02_SEARCH_STRATEGY.md e docs/03_DATABASE_CATALOG.md.")
         )

@@ -1,9 +1,10 @@
 PY ?= .venv/Scripts/python.exe
+JULIA_REPS ?= 500
 ifeq ($(OS),)
 PY := .venv/bin/python
 endif
 
-.PHONY: setup literature databases inmet epi env graph analysis validate schema test all clean lock figures
+.PHONY: setup literature databases inmet epi env graph analysis julia validate schema test all clean lock figures
 
 setup:
 	uv venv .venv --python 3.12
@@ -25,6 +26,9 @@ epi:
 	$(PY) scripts/epi/03_exposure_models.py
 	$(PY) scripts/epi/04_tabnet_supplement.py
 	$(PY) scripts/epi/05_pysus_audit.py
+
+julia:
+	JULIA_REPS=$(JULIA_REPS) julia --project=julia julia/gestational_window_simulation.jl
 
 inmet:
 	Rscript R/collection/inmet.R
@@ -64,4 +68,4 @@ lock:
 test:
 	$(PY) -m pytest -q
 
-all: literature databases inmet env epi graph validate test
+all: literature databases inmet env epi julia graph validate test

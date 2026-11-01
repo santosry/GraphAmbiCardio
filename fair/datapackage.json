@@ -1157,6 +1157,91 @@
       }
     },
     {
+      "name": "julia_simulacao",
+      "path": "outputs/tables/julia_gestational_window_simulation.csv",
+      "description": "Simulação Monte Carlo em Julia do erro de medida da janela gestacional",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 26043,
+      "hash": "sha256:a4ef0e0e3b384e30989533fa35089ae1bb4ac8750e744f4785891794922c9ec3",
+      "schema": {
+        "fields": [
+          {
+            "name": "scenario",
+            "type": "object"
+          },
+          {
+            "name": "replicate",
+            "type": "int64"
+          },
+          {
+            "name": "n",
+            "type": "int64"
+          },
+          {
+            "name": "events",
+            "type": "int64"
+          },
+          {
+            "name": "or_per_sd",
+            "type": "float64"
+          },
+          {
+            "name": "ci_low",
+            "type": "float64"
+          },
+          {
+            "name": "ci_high",
+            "type": "float64"
+          },
+          {
+            "name": "ci_excludes_null",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "julia_relatorio",
+      "path": "reports/julia_gestational_window_simulation.json",
+      "description": "Relatório da simulação Julia de erro de medida gestacional",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 2050,
+      "hash": "sha256:d243fa075da425380f6d94721f65c6233c176468e52ba729dc9df5c0f2171910",
+      "schema": null
+    },
+    {
+      "name": "julia_script",
+      "path": "julia/gestational_window_simulation.jl",
+      "description": "Módulo Julia de simulação Monte Carlo da janela gestacional",
+      "format": "jl",
+      "mediatype": "text/x-julia",
+      "bytes": 9773,
+      "hash": "sha256:4a17cb7a3a57a5d9310f800625accb506eb3181a5ef6d8bad160248e78d38eff",
+      "schema": null
+    },
+    {
+      "name": "julia_project",
+      "path": "julia/Project.toml",
+      "description": "Ambiente Julia reprodutível do módulo de simulação",
+      "format": "toml",
+      "mediatype": "text/toml",
+      "bytes": 155,
+      "hash": "sha256:b90d6d754e3a756ef4bc32a9a0f7e1ab7c9115efa6192e404ecc652ae812cea4",
+      "schema": null
+    },
+    {
+      "name": "julia_manifest",
+      "path": "julia/Manifest.toml",
+      "description": "Manifesto de versões do ambiente Julia",
+      "format": "toml",
+      "mediatype": "text/toml",
+      "bytes": 7397,
+      "hash": "sha256:865b852118db4f4e0c211da4817cd1c3188cbdff276e9bd28254638a6f3ad7a0",
+      "schema": null
+    },
+    {
       "name": "hipoteses_familia",
       "path": "outputs/tables/hypothesis_family.csv",
       "description": "Família completa de testes de sobreposição gênica, antes da seleção",
@@ -1343,7 +1428,7 @@
       "format": "json",
       "mediatype": "application/json",
       "bytes": 4045,
-      "hash": "sha256:6b3056f348a64048c115c516e2a91556c1fa074747aaa9c7444d05927a280dcc",
+      "hash": "sha256:faf489f970743d0ee4d5a90ee453525162997340f3b1e138ab994aef0c701211",
       "schema": null
     },
     {

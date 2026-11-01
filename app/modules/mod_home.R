@@ -11,6 +11,16 @@ mod_home_ui <- function(id) {
             tags$a(class = "btn btn-outline-light btn-sm ms-2", href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "Código e dados")
         )
     ),
+    card(
+      card_header("Sobre o projeto"),
+      card_body(
+        p("O GraphAmbiCardio organiza, em um único ambiente, o que a literatura e as bases biológicas curadas documentam sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e cardiopatias congênitas."),
+        p("O painel também reúne dados ecológicos de Campos dos Goytacazes (SINASC, SIH/SUS, ERA5-Land, INMET e VIGIAR) e mantém, de forma explícita, a separação entre evidência observada, anotação estruturada, inferência, hipótese e contexto ecológico. O objetivo é apoiar leitura crítica, auditoria e geração de perguntas — não substituir avaliação clínica nem provar causalidade."),
+        p("O projeto é desenvolvido por uma equipe de bacharelandos em Enfermagem do Instituto Federal Fluminense, Campus Campos Guarus, com compromisso de ciência aberta: código, metadados, figuras, tabelas e instruções de reprodução são públicos; dados individuais de saúde não são redistribuídos."),
+        source_note("Fontes: docs/00_PROTOCOL.md, docs/04_ONTOLOGY.md, docs/12_FAIR.md e docs/15_DATA_GOVERNANCE.md.")
+      )
+    ),
+    br(),
     layout_columns(
       col_widths = c(3,3,3,3),
       kpi_card("Nós", textOutput(ns("kpi_nodes")), "entidades tipadas", "#0B3C5D", source = "Fonte: outputs/graph/nodes.csv."),
@@ -43,8 +53,9 @@ mod_home_ui <- function(id) {
     ),
     br(),
     card(
-      card_header("Como ler este painel"),
+      card_header("Como usar e ler este painel"),
       card_body(
+        p("Use as abas como um roteiro: comece pela visão geral do grafo, confira a evidência por trás de cada aresta, examine as hipóteses e lacunas e, por fim, leia o contexto epidemiológico e ambiental com as ressalvas indicadas."),
         layout_columns(
           col_widths = c(4,4,4),
           div(
@@ -64,6 +75,16 @@ mod_home_ui <- function(id) {
           )
         ),
         source_note("Referências: docs/04_ONTOLOGY.md, docs/06_EVIDENCE_GRADING.md e docs/15_DATA_GOVERNANCE.md.")
+      )
+    ),
+    br(),
+    card(
+      card_header("Sugestões, críticas e contato"),
+      card_body(
+        p("Sugestões de novas visualizações, correções metodológicas, melhorias de interpretação e possibilidades de uso em ensino, pesquisa e vigilância em saúde são bem-vindas."),
+        p("Envie uma mensagem para ", tags$a(href = "mailto:ryan.paulo@gsuite.iff.edu.br?subject=Sugest%C3%A3o%20para%20o%20GraphAmbiCardio", "ryan.paulo@gsuite.iff.edu.br"), "."),
+        tags$a(class = "btn btn-sm btn-primary", href = "mailto:ryan.paulo@gsuite.iff.edu.br?subject=Sugest%C3%A3o%20para%20o%20GraphAmbiCardio", "Enviar sugestão"),
+        tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "https://github.com/santosry/GraphAmbiCardio/issues", target = "_blank", "Abrir issue no GitHub")
       )
     )
   )
@@ -93,5 +114,8 @@ mod_home_server <- function(id) {
     }, server = FALSE)
 
     observeEvent(input$home_go_graph, { bslib::nav_select("main_nav", "Grafo interativo") }, ignoreInit = TRUE)
+    observeEvent(input$home_go_evidence, { bslib::nav_select("main_nav", "Evidências") }, ignoreInit = TRUE)
+    observeEvent(input$home_go_hyp, { bslib::nav_select("main_nav", "Hipóteses e lacunas") }, ignoreInit = TRUE)
+    observeEvent(input$home_go_epi, { bslib::nav_select("main_nav", "Painel epidemiológico") }, ignoreInit = TRUE)
   })
 }

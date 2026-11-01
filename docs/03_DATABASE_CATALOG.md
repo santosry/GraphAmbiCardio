@@ -34,7 +34,7 @@ Legend: **Used** = records in the graph; **Probed** = accessed but not used; **B
 - **Status: Used (Catálogo de Teses e Dissertações only).**
 - Public REST endpoint `https://catalogodeteses.capes.gov.br/catalogo-teses/rest/busca` (POST JSON, field `termo`). R collector in `R/collection/capes.R`.
 - **Results:** 552 theses/dissertations for “cardiopatias congênitas” (20 retrieved on the first page); 1 for agrotóxicos; 7 for temperatura; 0 for poluição do ar + cardiopatia.
-- **Limitation:** this is the thesis catalogue, **not** the paywalled Portal de Periódicos full-text collection. The Portal requires institutional authentication and was not used.
+- **Limitation:** this is the thesis catalogue, **not** the paywalled Portal de Periódicos full-text collection. The Portal requires institutional authentication and was not used. Community MCP servers were evaluated and not adopted; see `docs/16_CAPES_MCP.md`.
 
 
 ---

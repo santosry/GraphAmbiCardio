@@ -1,6 +1,6 @@
 # Figuras do site GraphAmbiCardio
 
-Gerado: 2026-11-01T14:49:47Z
+Gerado: 2026-11-01T15:21:45Z
 
 Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dados usados estão em `data/`; o manifesto com SHA-256 está em `manifest.json`.
 
@@ -12,7 +12,7 @@ Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dado
 **Período:** 2010–2025  
 **Nota:** Camadas/confiança em docs/04_ONTOLOGY.md e docs/06_EVIDENCE_GRADING.md.  
 **Dados:** data/nodes.csv, data/relations.csv, data/evidence.csv  
-**SHA-256:** `42e56e29be50da713f8d0345f43c8a9bf6a2b3e3296d9134bf50316da6c222db`
+**SHA-256:** `bfa27ee57e35f664a2da2aa3819fdb24181cdd90cd01919df389931692335172`
 
 ## SINASC — casos e taxa por 10.000 nascidos vivos
 
@@ -22,7 +22,7 @@ Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dado
 **Período:** 2010–2025  
 **Nota:** Casos = CHD core Q20–Q26; TabNet Q20–Q28 em colunas separadas; ver docs/07_EPI_ENV_METHODS.md.  
 **Dados:** data/sinasc_annual.csv  
-**SHA-256:** `b859a68bfa428dfe72a8fbf197205a51ff454d1d524eb5639d1d459f74e5bc49`
+**SHA-256:** `ed7b84f211a31493dbd970db25bba7af56ea34f2e162215ab4fd70a73db0a1e5`
 
 ## SIH/SUS — internações e óbitos
 
@@ -32,7 +32,7 @@ Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dado
 **Período:** 2010–2025  
 **Nota:** AIH não são pessoas; ver docs/07 e docs/09.  
 **Dados:** data/sih_annual.csv  
-**SHA-256:** `0e08286adbe01c12a4a22d4524ec8afd55eb5aa89535494a52814e52f5425c1d`
+**SHA-256:** `432c892b1255b5822bd78b3d0a2b7128b4d9cef2b4549bcac841504a6b03bef2`
 
 ## Clima — temperatura máxima mensal (ERA5-Land)
 
@@ -42,7 +42,7 @@ Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dado
 **Período:** 2010–2025  
 **Nota:** Série de área; não é estação local. Ver docs/03_DATABASE_CATALOG.md.  
 **Dados:** data/climate_monthly.csv  
-**SHA-256:** `7f67538cad96de9c77c3b45347d7634d8943bfd8413e5c58571323c9547b52c9`
+**SHA-256:** `1997491a469bdd202aea32681ab36ef787ab83203869b9ff6ca1f199f14da564`
 
 ## Dias de calor e ondas de calor por ano
 
@@ -52,7 +52,7 @@ Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dado
 **Período:** 2010–2025  
 **Nota:** Ver docs/07_EPI_ENV_METHODS.md.  
 **Dados:** data/climate_annual.csv  
-**SHA-256:** `84334f993c1f4ca232bcdbea26b89b5e8453a6dc9ea20c53d03b2f046dbe7fa6`
+**SHA-256:** `86b79ff045a2d4d02e77e39b59584b1d787efbf7ce9359bde678082849fcbfbe`
 
 ## PM2,5 — série municipal do VIGIAR (Ministério da Saúde)
 
@@ -62,7 +62,7 @@ Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dado
 **Período:** 2010–2025  
 **Nota:** Série de área; não é estação local nem exposição individual. Ver docs/07.  
 **Dados:** data/pm25_monthly.csv, data/pm25_annual.csv  
-**SHA-256:** `6815eea636232e9477c26d36c81e059388b82fd6ccd83bcacc6b71f43e2997a5`
+**SHA-256:** `70086ca7bdf544e76b7cf4f487a39060264e7d53c57fa8ab5730edb55ca1d632`
 
 ## Validação da exposição climática — INMET A607 vs ERA5-Land
 
@@ -72,4 +72,4 @@ Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dado
 **Período:** 2010–2025  
 **Nota:** Dispersão diária; latitude, longitude, altitude, correlação, viés e RMSE nas tabelas do site. Ver docs/07.  
 **Dados:** data/inmet_daily.csv, data/climate_daily.csv, data/inmet_comparison.csv  
-**SHA-256:** `b928fad67f181b3d7f7cad34be0b2f7371797a6cfc97c9081d0a9aafde24ee13`
+**SHA-256:** `357122c3e35520063ac3b7efe12bef465bdcf5e8eed07b36360f680b29bd0c95`

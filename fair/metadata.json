@@ -191,6 +191,46 @@
     },
     {
       "@type": "Distribution",
+      "name": "julia_simulacao",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/julia_gestational_window_simulation.csv",
+      "format": "csv",
+      "byteSize": 26043,
+      "checksum": "sha256:a4ef0e0e3b384e30989533fa35089ae1bb4ac8750e744f4785891794922c9ec3"
+    },
+    {
+      "@type": "Distribution",
+      "name": "julia_relatorio",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/reports/julia_gestational_window_simulation.json",
+      "format": "json",
+      "byteSize": 2050,
+      "checksum": "sha256:d243fa075da425380f6d94721f65c6233c176468e52ba729dc9df5c0f2171910"
+    },
+    {
+      "@type": "Distribution",
+      "name": "julia_script",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/julia/gestational_window_simulation.jl",
+      "format": "jl",
+      "byteSize": 9773,
+      "checksum": "sha256:4a17cb7a3a57a5d9310f800625accb506eb3181a5ef6d8bad160248e78d38eff"
+    },
+    {
+      "@type": "Distribution",
+      "name": "julia_project",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/julia/Project.toml",
+      "format": "toml",
+      "byteSize": 155,
+      "checksum": "sha256:b90d6d754e3a756ef4bc32a9a0f7e1ab7c9115efa6192e404ecc652ae812cea4"
+    },
+    {
+      "@type": "Distribution",
+      "name": "julia_manifest",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/julia/Manifest.toml",
+      "format": "toml",
+      "byteSize": 7397,
+      "checksum": "sha256:865b852118db4f4e0c211da4817cd1c3188cbdff276e9bd28254638a6f3ad7a0"
+    },
+    {
+      "@type": "Distribution",
       "name": "hipoteses_familia",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/hypothesis_family.csv",
       "format": "csv",
@@ -227,7 +267,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/figures/site/manifest.json",
       "format": "json",
       "byteSize": 4045,
-      "checksum": "sha256:6b3056f348a64048c115c516e2a91556c1fa074747aaa9c7444d05927a280dcc"
+      "checksum": "sha256:faf489f970743d0ee4d5a90ee453525162997340f3b1e138ab994aef0c701211"
     },
     {
       "@type": "Distribution",

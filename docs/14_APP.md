@@ -38,7 +38,7 @@ python scripts/app/02_fair_metadata.py
 |---|---|
 | **Início** | visão geral, KPIs, hierarquia de evidências e eixos de exposição |
 | **Grafo interativo** | exploração por tipo de nó, nível de evidência, exposição e fenótipo; clique para ver evidências |
-| **Painel epidemiológico** | SINASC (microdados + TabNet 2023–2024), SIH/SUS, clima ERA5-Land, validação INMET A607 (com latitude, longitude e altitude da estação), PM2,5 VIGIAR e modelos exploratórios (logístico, Firth, cluster-robusto) com p e q (BH-FDR) |
+| **Painel epidemiológico** | SINASC (microdados + TabNet 2023–2024 em série separada), SIH/SUS, clima ERA5-Land com modelo fixado, validação INMET A607, PM2,5 VIGIAR, modelos exploratórios com p e q (BH-FDR) e simulação Julia de erro de medida da janela gestacional |
 | **Evidências** | tabela filtrável de relações; seleção mostra todas as evidências, trechos e referências |
 | **Hipóteses e lacunas** | caminhos candidatos, hipóteses por sobreposição gênica e lacunas explícitas |
 | **Consulta científica** | pergunta por exposição: mecanismos, fenótipos, genes, caminhos, hipóteses e referências |

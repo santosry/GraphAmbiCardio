@@ -16,10 +16,13 @@ ui <- bslib::page_navbar(
     danger = "#463480",
     bg = "#FAFAFC",
     fg = "#1F2A36",
-    base_font = "system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
-    heading_font = "system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+    base_font = "Montserrat, system-ui, -apple-system, Segoe UI, Roboto, sans-serif",
+    heading_font = "Montserrat, system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
   ),
   header = tags$head(
+    tags$link(rel = "preconnect", href = "https://fonts.googleapis.com"),
+    tags$link(rel = "preconnect", href = "https://fonts.gstatic.com", crossorigin = "anonymous"),
+    tags$link(rel = "stylesheet", href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"),
     tags$link(rel = "stylesheet", href = "styles.css"),
     tags$script(HTML("
       setTimeout(function(){

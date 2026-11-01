@@ -40,6 +40,7 @@ COPY = {
     "outputs/tables/exploratory_models.csv": "models.csv",
     "outputs/tables/sensitivity_leave_one_year_out.csv": "loo.csv",
     "outputs/tables/gestational_window_sensitivity.csv": "ga_sensitivity.csv",
+    "outputs/tables/julia_gestational_window_simulation.csv": "julia_ga_simulation.csv",
     "outputs/tables/hypothesis_family.csv": "hypothesis_family.csv",
     "outputs/tables/mechanism_gene_sets.csv": "mechanism_gene_sets.csv",
     "outputs/tables/paths_exposure_phenotype.csv": "paths.csv",

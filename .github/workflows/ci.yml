@@ -41,6 +41,18 @@ jobs:
         run: |
           Rscript -e 'files <- c(list.files("app", pattern="[.]R$", recursive=TRUE, full.names=TRUE), list.files("R", pattern="[.]R$", recursive=TRUE, full.names=TRUE)); for (f in files) { parse(f); cat("OK", f, "\n") }'
 
+  julia-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.13"
+      - name: Instantiate Julia environment
+        run: julia --project=julia -e 'using Pkg; Pkg.instantiate(); using CSV, JSON; println("Julia deps OK")'
+      - name: Parse Julia module
+        run: julia --project=julia -e 'Meta.parseall(read("julia/gestational_window_simulation.jl", String)); println("Julia syntax OK")'
+
   app-smoke:
     runs-on: ubuntu-latest
     steps:

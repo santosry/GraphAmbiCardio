@@ -97,6 +97,7 @@ Há duas camadas integradas e **nunca misturadas**:
 - SINASC: **98.598 nascimentos** (microdados 2010–2022 e 2025; **2023–2024 apenas agregados do TabNet**). **52 casos de CHD core (Q20–Q26; 5,27/10.000)** e **8 registros Q27–Q28** (não CHD; 1 também tinha código Q20–Q26) — subnotificação grave. TabNet 2023 e 2024: **5 e 5 casos no grupo amplo Q20–Q28**, mantidos em colunas separadas e **não imputados como CHD core**.
 - SIH/SUS: **474 internações** por diagnóstico principal **Q20–Q26** (**75 Q27–Q28** em série separada; 12 apenas secundárias), **30 óbitos**, **51,9% fora do município**, 16 hospitais. AIH não são pessoas.
 - Clima: **5.844 dias** ERA5-Land com modelo **fixado em `era5_land`** (resolução ~9 km; célula retornada −21,800/−41,300; elevação 12 m); limiar de onda de calor **33,3 °C**; **68 ondas / 353 dias**. Validação com **INMET A607** (2010–2025): Tmax r=0,937 (viés +1,20 °C; RMSE 1,78); Tmin r=0,942 (−0,77; 1,20); Tmean r=0,972 (−0,23; 0,67); umidade r=0,787 (+1,61; 4,77). Série de estação, distinta da reanálise.
+- Sensibilidade Julia (Monte Carlo da janela gestacional, 500 réplicas): mediana OR **1,157**; intervalo 95% **1,116–1,202**; cenários fixos de −7 a +7 dias: **1,075–1,224**. O erro individual médio tende a se cancelar; o deslocamento sistemático da janela é o que mais altera a estimativa.
 - Modelo exploratório (52 casos core; **47 eventos** nos modelos completos): temperatura OR **1,155/SD** (0,87–1,535; p = 0,318; q = 0,509); Firth **1,159** (0,869–1,532; p = 0,304); cluster mensal **1,155** (0,829–1,611; p = 0,394); ajuste socioeconômico Firth **1,187** (0,889–1,571; p = 0,236); ajuste sazonal **1,357** (0,914–2,013; p = 0,130); modelo mensal **RR 1,211** (0,918–1,599; p = 0,176). Sensibilidade da janela gestacional: principal **1,155**; −7 dias **1,221** (0,922–1,618; p = 0,164); +7 dias **1,071** (0,803–1,428; p = 0,641). PM2,5 municipal **0,842** (0,625–1,134; p = 0,257) e ajuste mútuo PM2,5 **0,872** / temperatura **1,106**. **Nenhum modelo sobrevive ao FDR (q < 0,05); não é achado causal.**
 
 ### Hierarquia de exposições
@@ -147,6 +148,7 @@ Detalhes: `docs/14_APP.md`.
 - Python **3.12** (decodificador DBC do DATASUS).
 - R **≥ 4.4** com `shiny`, `bslib`, `DT`, `visNetwork`, `plotly`, `dplyr`, `tidyr`, `readr`, `jsonlite`, `stringr`, `scales`, `htmltools`, `igraph`, `commonmark`, `viridisLite`, `vigiar` e `rsconnect`. As versões exatas estão em `renv.lock`.
 - Internet para NCBI, Europe PMC, Crossref, HPO, Reactome, Enrichr, Open-Meteo e DATASUS.
+- **Julia ≥ 1.10** para o módulo de simulação Monte Carlo da janela gestacional (`julia/`).
 
 ```bash
 uv venv .venv --python 3.12
@@ -164,6 +166,7 @@ Rscript R/collection/inmet.R
 .venv/Scripts/python.exe scripts/epi/02_sih.py
 .venv/Scripts/python.exe scripts/epi/03_exposure_models.py
 .venv/Scripts/python.exe scripts/epi/04_tabnet_supplement.py
+JULIA_REPS=500 julia --project=julia julia/gestational_window_simulation.jl
 .venv/Scripts/python.exe scripts/integration/01_build_graph.py
 .venv/Scripts/python.exe scripts/cleaning/01_normalize_identifiers.py
 .venv/Scripts/python.exe scripts/graph/01_export_core.py
@@ -183,6 +186,16 @@ Rscript R/collection/pm25_vigiar.R
 ```
 
 Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pelo git); toda resposta usada no grafo é rastreável. **Dados individuais de SINASC/SIH não são versionados** — ver `docs/15_DATA_GOVERNANCE.md`.
+
+### Módulo Julia
+
+O único módulo em Julia é a simulação Monte Carlo do erro de medida da janela gestacional:
+
+```bash
+JULIA_REPS=500 julia --project=julia julia/gestational_window_simulation.jl
+```
+
+Ele usa `julia/Project.toml`/`Manifest.toml`, lê o arquivo individual local, escreve apenas agregados em `outputs/tables/julia_gestational_window_simulation.csv` e `reports/julia_gestational_window_simulation.json`. Resultado com 500 réplicas: mediana OR **1,157**; intervalo de simulação **1,116–1,202**; cenários fixos de −7 a +7 dias: **1,075–1,224**. Não é um modelo bayesiano completo; é uma análise de sensibilidade de erro de medida. Ver `docs/07_EPI_ENV_METHODS.md`.
 
 ---
 
@@ -213,8 +226,9 @@ docker compose up --build
 |---|---|
 | `src/graphambicardio/` | pacote Python (coleta, limpeza, integração, grafo, análise, validação) |
 | `R/collection/` | coletores R para SciELO (Crossref), CAPES, INMET A607 e VIGIAR PM2,5 |
+| `julia/` | módulo Julia de simulação Monte Carlo do erro de medida da janela gestacional |
 | `app/` | aplicativo Shiny GraphAmbiCardio (PT-BR) e bundle de dados |
-| `docs/` | protocolo, viabilidade, busca, catálogo, ontologia, dicionário, gradação, métodos, validação, limitações, fases, manuscrito, FAIR, IA, app e governança de dados |
+| `docs/` | protocolo, viabilidade, busca, catálogo, ontologia, dicionário, gradação, métodos, validação, limitações, fases, manuscrito, FAIR, IA, app, governança de dados e CAPES/MCP |
 | `fair/` | metadados DCAT e Frictionless Data Package com checksums |
 | `reports/` | matrizes de viabilidade, PRISMA, validação, conformidade, schema e resumos |
 | `literature/` | buscas (JSON), triagem, estudos-âncora |
@@ -238,7 +252,7 @@ docker compose up --build
 ## 9. Limitações principais
 
 - Busca não sistemática; sem triagem dupla de todos os registros nem texto completo.
-- SciELO acessado por metadados Crossref (a interface de busca bloqueou automação); CAPES limitado ao Catálogo de Teses.
+- SciELO acessado por metadados Crossref (a interface de busca bloqueou automação); CAPES limitado ao Catálogo de Teses (o Portal de Periódicos não foi usado; servidores MCP comunitários foram avaliados e não adotados — ver `docs/16_CAPES_MCP.md`).
 - SINASC com subnotificação grave; 2023–2024 sem microdados (apenas TabNet Q20–Q28, não imputado como CHD core); 2025 preliminar.
 - Definição de CHD core = Q20–Q26; Q27–Q28 são reportadas separadamente e não entram no numerador principal.
 - SIH: AIH ≠ pessoa; 55% das internações fora do município.

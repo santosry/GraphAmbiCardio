@@ -31,7 +31,7 @@ O GraphAmbiCardio foi desenhado para ser **Findable, Accessible, Interoperable a
 - **Proveniência por evidência:** cada linha de `evidence.csv` tem referência, tipo de evidência, espécie, desenho, janela de exposição, direção do efeito, contexto, citação e limitações.
 - **Camadas separadas:** observada, estruturada, inferida, hipótese e ecológica. Hipóteses nunca são misturadas às evidências.
 - **Documentação:** protocolo, estratégia de busca, catálogo de bases, ontologia, dicionário, gradação, métodos, validação, limitações e manuscrito.
-- **Reprodutibilidade:** pipeline modular, cache de respostas HTTP, logs, testes automatizados, versões de dados e data de extração; coletores R para SciELO (Crossref), CAPES, VIGIAR PM2.5 e INMET A607; bundle autocontido do app; Dockerfile com R e snapshot do CRAN.
+- **Reprodutibilidade:** pipeline modular, cache de respostas HTTP, logs, testes automatizados, versões de dados e data de extração; coletores R para SciELO (Crossref), CAPES, VIGIAR PM2.5 e INMET A607; módulo Julia com `Project.toml`/`Manifest.toml`; bundle autocontido do app; Dockerfile com R e snapshot do CRAN.
 - **Licença:** código MIT; dados de terceiros sob suas licenças. Citação em `CITATION.cff`.
 - **Controle de qualidade:** validação de integridade, verificação de citações e análise de sensibilidade.
 

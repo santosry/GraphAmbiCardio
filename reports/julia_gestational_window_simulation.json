@@ -1,0 +1,73 @@
+{
+  "delta_range_days": [
+    -7.0,
+    7.0
+  ],
+  "events": 47,
+  "fixed_scenarios": {
+    "fixed_main": {
+      "ci_high": 1.544780569472984,
+      "ci_low": 0.8698587174345425,
+      "delta_days": 0.0,
+      "events": 47,
+      "n": 82911,
+      "or_per_sd": 1.1591983630421379
+    },
+    "fixed_minus_3.5d": {
+      "ci_high": 1.5885436821209953,
+      "ci_low": 0.8964269106217622,
+      "delta_days": -3.5,
+      "events": 47,
+      "n": 82911,
+      "or_per_sd": 1.193320286156002
+    },
+    "fixed_minus_7d": {
+      "ci_high": 1.627784051907638,
+      "ci_low": 0.920612886390117,
+      "delta_days": -7.0,
+      "events": 47,
+      "n": 82911,
+      "or_per_sd": 1.2241564338132978
+    },
+    "fixed_plus_3.5d": {
+      "ci_high": 1.4925107238968898,
+      "ci_low": 0.8373027435437622,
+      "delta_days": 3.5,
+      "events": 47,
+      "n": 82911,
+      "or_per_sd": 1.1178923579161602
+    },
+    "fixed_plus_7d": {
+      "ci_high": 1.4383523798663376,
+      "ci_low": 0.8038326897160021,
+      "delta_days": 7.0,
+      "events": 47,
+      "n": 82911,
+      "or_per_sd": 1.0752649265494392
+    }
+  },
+  "generated_at": "2026-11-01T15:20:31.690",
+  "input": "data_processed/sinasc_campos_with_exposure.csv",
+  "julia_version": "1.13.2",
+  "language": "Julia",
+  "module": "gestational-window Monte Carlo measurement-error simulation",
+  "monte_carlo": {
+    "n_replicates": 500,
+    "or_mean": 1.1567064946452865,
+    "or_median": 1.1566727214023316,
+    "or_q025": 1.1160686563564193,
+    "or_q975": 1.2019315759504945,
+    "proportion_ci_excludes_null": 0.0,
+    "proportion_or_gt_1": 1.0
+  },
+  "n": 82911,
+  "note": "Monte Carlo measurement-error sensitivity, not a full Bayesian hierarchical model. Exposure is interpolated between the main, -7-day and +7-day windows. Outputs contain only aggregate estimates.",
+  "output_csv": "outputs/tables/julia_gestational_window_simulation.csv",
+  "replicates_requested": 500,
+  "seed": 20261101,
+  "sigma_days": {
+    "gestacao_categoria": 7.0,
+    "missing": 7.0,
+    "semagestac": 3.5
+  }
+}

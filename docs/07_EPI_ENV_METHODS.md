@@ -239,7 +239,22 @@ Leave-one-year-out: OR per SD ranged **1.136–1.608**; p ranged 0.024–0.546 a
 
 CHD core counts by month of conception (165 months with ≥30 births; 50 cases), Poisson with log(live births) offset, adjusted for year. Dispersion 1.236 (Poisson selected). **RR 1.211 per SD (0.918–1.599), p = 0.176, q = 0.509**; RR 1.333 per IQR. The monthly model does not support a heat effect.
 
-### 4.3 Interpretation (enforced)
+### 4.3 Julia measurement-error simulation
+
+The gestational-window uncertainty was also propagated with a well-delimited Julia module (`julia/gestational_window_simulation.jl`). For each birth, the module samples a window shift from a normal distribution (`SD = 3.5` days when `SEMAGESTAC` is available; `7` days for the categorical midpoint), interpolates Tmax between the main, −7-day and +7-day windows, and refits the same birth-level logistic model. This is a **Monte Carlo measurement-error sensitivity analysis**, not a full Bayesian hierarchical model.
+
+| Scenario | OR per SD | 95% CI |
+|---|---:|---:|
+| Fixed −7 days | 1.224 | 0.921–1.628 |
+| Fixed −3.5 days | 1.193 | 0.896–1.589 |
+| Main window | 1.159 | 0.870–1.545 |
+| Fixed +3.5 days | 1.118 | 0.837–1.493 |
+| Fixed +7 days | 1.075 | 0.804–1.438 |
+| Monte Carlo, 500 replicates (median) | 1.157 | simulation interval 1.116–1.202 |
+
+None of the fixed scenarios excluded 1, and none of the 500 Monte Carlo replicates produced a 95% CI excluding 1. Individual measurement error tends to average out; the systematic window shift is the dominant source of sensitivity. The module writes `outputs/tables/julia_gestational_window_simulation.csv` and `reports/julia_gestational_window_simulation.json`; individual-level input remains local.
+
+### 4.4 Interpretation (enforced)
 
 - After correcting the conception window, the birth-level Tmax association is **null** (OR 1.155; p = 0.318), and the monthly model is also null (RR 1.211; p = 0.176).
 - The heat-day proportion has a nominal p = 0.043, but it does **not** survive FDR correction (q = 0.509) and is sensitive to the ±7-day gestational window.

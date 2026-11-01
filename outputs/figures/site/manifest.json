@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T14:49:47Z",
+  "generated_at": "2026-11-01T15:21:45Z",
   "app_url": "http://127.0.0.1:3850/",
   "viewport": [
     1600,
@@ -18,7 +18,7 @@
         "evidence.csv"
       ],
       "path": "outputs\\figures\\site\\01_grafo_interativo.png",
-      "sha256": "42e56e29be50da713f8d0345f43c8a9bf6a2b3e3296d9134bf50316da6c222db"
+      "sha256": "bfa27ee57e35f664a2da2aa3819fdb24181cdd90cd01919df389931692335172"
     },
     {
       "file": "02_sinasc.png",
@@ -30,7 +30,7 @@
         "sinasc_annual.csv"
       ],
       "path": "outputs\\figures\\site\\02_sinasc.png",
-      "sha256": "b859a68bfa428dfe72a8fbf197205a51ff454d1d524eb5639d1d459f74e5bc49"
+      "sha256": "ed7b84f211a31493dbd970db25bba7af56ea34f2e162215ab4fd70a73db0a1e5"
     },
     {
       "file": "03_sih.png",
@@ -42,7 +42,7 @@
         "sih_annual.csv"
       ],
       "path": "outputs\\figures\\site\\03_sih.png",
-      "sha256": "0e08286adbe01c12a4a22d4524ec8afd55eb5aa89535494a52814e52f5425c1d"
+      "sha256": "432c892b1255b5822bd78b3d0a2b7128b4d9cef2b4549bcac841504a6b03bef2"
     },
     {
       "file": "04_clima.png",
@@ -54,7 +54,7 @@
         "climate_monthly.csv"
       ],
       "path": "outputs\\figures\\site\\04_clima.png",
-      "sha256": "7f67538cad96de9c77c3b45347d7634d8943bfd8413e5c58571323c9547b52c9"
+      "sha256": "1997491a469bdd202aea32681ab36ef787ab83203869b9ff6ca1f199f14da564"
     },
     {
       "file": "05_calor.png",
@@ -66,7 +66,7 @@
         "climate_annual.csv"
       ],
       "path": "outputs\\figures\\site\\05_calor.png",
-      "sha256": "84334f993c1f4ca232bcdbea26b89b5e8453a6dc9ea20c53d03b2f046dbe7fa6"
+      "sha256": "86b79ff045a2d4d02e77e39b59584b1d787efbf7ce9359bde678082849fcbfbe"
     },
     {
       "file": "06_pm25.png",
@@ -79,7 +79,7 @@
         "pm25_annual.csv"
       ],
       "path": "outputs\\figures\\site\\06_pm25.png",
-      "sha256": "6815eea636232e9477c26d36c81e059388b82fd6ccd83bcacc6b71f43e2997a5"
+      "sha256": "70086ca7bdf544e76b7cf4f487a39060264e7d53c57fa8ab5730edb55ca1d632"
     },
     {
       "file": "07_inmet_validacao.png",
@@ -93,7 +93,7 @@
         "inmet_comparison.csv"
       ],
       "path": "outputs\\figures\\site\\07_inmet_validacao.png",
-      "sha256": "b928fad67f181b3d7f7cad34be0b2f7371797a6cfc97c9081d0a9aafde24ee13"
+      "sha256": "357122c3e35520063ac3b7efe12bef465bdcf5e8eed07b36360f680b29bd0c95"
     }
   ]
 }

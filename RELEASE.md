@@ -8,6 +8,7 @@ Checklist para publicar uma versão reproduzível.
 uv lock
 uv pip install --python .venv -e ".[dev]"
 python scripts/epi/03_exposure_models.py
+JULIA_REPS=500 julia --project=julia julia/gestational_window_simulation.jl
 python scripts/integration/01_build_graph.py
 python scripts/cleaning/01_normalize_identifiers.py
 python scripts/graph/01_export_core.py

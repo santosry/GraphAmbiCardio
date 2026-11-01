@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T14:54:03Z",
+  "generated_at": "2026-11-01T15:22:57Z",
   "passed": true,
   "checks": [
     {
@@ -51,6 +51,16 @@
       "check": "columns:outputs/tables/gestational_window_sensitivity.csv",
       "ok": true,
       "detail": "3 rows"
+    },
+    {
+      "check": "columns:outputs/tables/julia_gestational_window_simulation.csv",
+      "ok": true,
+      "detail": "505 rows"
+    },
+    {
+      "check": "columns:app/data/julia_ga_simulation.csv",
+      "ok": true,
+      "detail": "505 rows"
     },
     {
       "check": "columns:outputs/tables/sinasc_annual_complete.csv",
@@ -211,6 +221,21 @@
       "check": "climate:returned_cell",
       "ok": true,
       "detail": "-21.799995,-41.300003"
+    },
+    {
+      "check": "julia:fixed_scenarios",
+      "ok": true,
+      "detail": "5 fixed rows"
+    },
+    {
+      "check": "julia:monte_carlo",
+      "ok": true,
+      "detail": "500 MC rows"
+    },
+    {
+      "check": "julia:report_language",
+      "ok": true,
+      "detail": "Julia"
     },
     {
       "check": "app:no_individual_data",

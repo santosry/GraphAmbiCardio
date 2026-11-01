@@ -30,6 +30,8 @@ REQUIRED = {
     "app/data/models.csv": ["model", "p_value", "q_value"],
     "outputs/tables/sensitivity_leave_one_year_out.csv": ["excluded_year", "p_value", "q_value"],
     "outputs/tables/gestational_window_sensitivity.csv": ["window", "n", "n_events", "or_per_sd", "p_value"],
+    "outputs/tables/julia_gestational_window_simulation.csv": ["scenario", "replicate", "or_per_sd", "ci_low", "ci_high"],
+    "app/data/julia_ga_simulation.csv": ["scenario", "replicate", "or_per_sd", "ci_low", "ci_high"],
     "outputs/tables/sinasc_annual_complete.csv": ["year", "live_births", "chd_cases", "other_circulatory_cases", "tabnet_circulatory_cases"],
     "outputs/tables/sinasc_other_circulatory_by_code.csv": ["other_code", "n"],
     "outputs/tables/sih_other_circulatory_annual.csv": ["year", "admissions_primary_other_circulatory"],
@@ -143,6 +145,17 @@ def main() -> None:
         meta = json.loads(climate_meta.read_text(encoding="utf-8"))
         add(checks, "climate:model_fixed", meta.get("model_requested") == "era5_land", str(meta.get("model_requested")))
         add(checks, "climate:returned_cell", meta.get("latitude_returned") is not None and meta.get("longitude_returned") is not None, f"{meta.get('latitude_returned')},{meta.get('longitude_returned')}")
+
+    # Julia measurement-error simulation: fixed scenarios + Monte Carlo replicates.
+    julia_sim = ROOT / "outputs/tables/julia_gestational_window_simulation.csv"
+    if julia_sim.exists():
+        df = pd.read_csv(julia_sim)
+        add(checks, "julia:fixed_scenarios", df["scenario"].astype(str).str.startswith("fixed_").sum() >= 5, f"{df['scenario'].astype(str).str.startswith('fixed_').sum()} fixed rows")
+        add(checks, "julia:monte_carlo", (df["scenario"] == "monte_carlo").sum() >= 100, f"{(df['scenario'] == 'monte_carlo').sum()} MC rows")
+    julia_report = ROOT / "reports/julia_gestational_window_simulation.json"
+    if julia_report.exists():
+        meta = json.loads(julia_report.read_text(encoding="utf-8"))
+        add(checks, "julia:report_language", meta.get("language") == "Julia", str(meta.get("language")))
 
     # The app bundle must never contain individual-level records.
     app = ROOT / "app" / "data"

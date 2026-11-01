@@ -18,6 +18,7 @@
   pareada por tamanho como sensibilidade; origem dos conjuntos gênicos
   documentada. Nenhum candidato significativo.
 - **Sexo:** códigos diferentes de 1/2 passam a ser ausentes, não feminino.
+- **Módulo Julia:** simulação Monte Carlo do erro de medida da janela gestacional, com ambiente `Project.toml`/`Manifest.toml`, job de CI e integração no app; não é um modelo bayesiano completo.
 
 ### Resultados atualizados
 - SINASC: 98.598 nascimentos; **52 CHD core Q20–Q26** e **8 Q27–Q28**.

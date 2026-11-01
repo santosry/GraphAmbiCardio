@@ -76,6 +76,13 @@ mod_epi_ui <- function(id) {
                     "Ver <i>docs/07_EPI_ENV_METHODS.md</i> e a análise de sensibilidade.", "danger")
          )),
     br(),
+    card(card_header("Sensibilidade Julia — erro de medida da janela gestacional"),
+         card_body(
+           DTOutput(ns("julia_ga")),
+           uiOutput(ns("julia_note")),
+           source_note("Fonte: julia/gestational_window_simulation.jl; simulação Monte Carlo, não modelo bayesiano completo; ver docs/07.")
+         )),
+    br(),
     card(card_header("Malformações circulatórias Q27–Q28 (não CHD)"),
          card_body(
            DTOutput(ns("other_circulatory")),
@@ -322,6 +329,30 @@ mod_epi_server <- function(id) {
       datatable(out, rownames = FALSE, options = list(dom = "t", autoWidth = TRUE)) %>%
         formatSignif(columns = c("p", "q_FDR"), digits = 3)
     }, server = FALSE)
+
+    output$julia_ga <- renderDT({
+      d <- julia_ga
+      if (nrow(d) == 0) return(datatable(data.frame(Mensagem = "Simulação Julia não disponível."), rownames = FALSE, options = list(dom = "t")))
+      fixed <- d %>% filter(grepl("^fixed_", scenario)) %>%
+        transmute(
+          Cenário = recode(scenario,
+            fixed_minus_7d = "−7 dias", fixed_minus_3.5d = "−3,5 dias",
+            fixed_main = "Principal", fixed_plus_3.5d = "+3,5 dias", fixed_plus_7d = "+7 dias"),
+          `OR/SD` = or_per_sd, `IC95` = sprintf("%.2f–%.2f", ci_low, ci_high),
+          `IC exclui 1` = ifelse(ci_excludes_null, "sim", "não")
+        )
+      datatable(fixed, rownames = FALSE, options = list(dom = "t", autoWidth = TRUE))
+    }, server = FALSE)
+
+    output$julia_note <- renderUI({
+      mc <- julia_ga %>% filter(scenario == "monte_carlo")
+      if (nrow(mc) == 0) return(source_note("Monte Carlo Julia não disponível."))
+      source_note(sprintf(
+        "Monte Carlo (%d réplicas): mediana OR %.3f; intervalo 95%% %.3f–%.3f; proporção de IC95 que exclui 1: %.2f. O erro individual médio tende a se cancelar; o deslocamento sistemático de ±7 dias é o que mais altera a estimativa.",
+        nrow(mc), median(mc$or_per_sd), quantile(mc$or_per_sd, .025), quantile(mc$or_per_sd, .975),
+        mean(mc$ci_excludes_null)
+      ))
+    })
 
     output$codes <- renderDT({
       d <- sinasc_codes %>% arrange(desc(n)) %>% head(20)

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T14:54:02Z",
+  "generated_at": "2026-11-01T15:23:02Z",
   "passed": true,
   "issues": [],
   "checks": {
@@ -16,7 +16,7 @@
       "n_required": 29
     },
     "fair_checksums": {
-      "n_resources": 28,
+      "n_resources": 33,
       "bad": []
     },
     "git": {
