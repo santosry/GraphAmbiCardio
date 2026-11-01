@@ -6,19 +6,38 @@ mod_about_ui <- function(id) {
         p("Transparência sobre dados, metadados, reprodutibilidade, equipe e o papel da IA neste estudo.")
     ),
     card(
-      card_header("Equipe"),
+      card_header("Equipe do projeto"),
       card_body(
-        tags$ul(
-          tags$li(tags$b("Ryan de Paulo Santos"), " — ",
-                  tags$a(href = "http://lattes.cnpq.br/7503796642571978", target = "_blank", "Currículo Lattes"),
-                  " · ",
-                  tags$a(href = "https://orcid.org/0009-0005-6770-2001", target = "_blank", "ORCID")),
-          tags$li(tags$b("Letícia Maria Dias Freitas"), " — ",
-                  tags$a(href = "http://lattes.cnpq.br/4004634244195808", target = "_blank", "Currículo Lattes"),
-                  " · ",
-                  tags$a(href = "https://orcid.org/0009-0009-9930-9588", target = "_blank", "ORCID"))
+        p("O GraphAmbiCardio é desenvolvido por uma equipe de bacharelandos em Enfermagem pelo ",
+          tags$b("Instituto Federal Fluminense, Campus Campos Guarus"), ".
+",
+          "A proposta integra formação em saúde, vigilância epidemiológica, ciência de dados e comunicação científica aplicada às cardiopatias congênitas."),
+        div(
+          class = "team-grid",
+          div(
+            class = "team-card",
+            div(class = "team-avatar", "RS"),
+            h4("Ryan de Paulo Santos"),
+            div(class = "team-role", "Bacharelando em Enfermagem"),
+            p(class = "team-bio", "Atua no desenvolvimento do pipeline em Python e R, integração de bases, construção do grafo de proveniência, aplicativo Shiny e publicação dos resultados."),
+            div(class = "team-links",
+              tags$a(href = "http://lattes.cnpq.br/7503796642571978", target = "_blank", class = "team-link-btn", "Lattes"),
+              tags$a(href = "https://orcid.org/0009-0005-6770-2001", target = "_blank", class = "team-link-btn", "ORCID")
+            )
+          ),
+          div(
+            class = "team-card",
+            div(class = "team-avatar", "LF"),
+            h4("Letícia Maria Dias Freitas"),
+            div(class = "team-role", "Bacharelanda em Enfermagem"),
+            p(class = "team-bio", "Colabora na organização científica dos dados, curadoria bibliográfica, revisão dos indicadores e análise dos resultados do projeto."),
+            div(class = "team-links",
+              tags$a(href = "http://lattes.cnpq.br/4004634244195808", target = "_blank", class = "team-link-btn", "Lattes"),
+              tags$a(href = "https://orcid.org/0009-0009-9930-9588", target = "_blank", class = "team-link-btn", "ORCID")
+            )
+          )
         ),
-        source_note("Links para os currículos Lattes; nomes completos, formação e produção estão nesses currículos.")
+        source_note("Links para os currículos Lattes e ORCID; nomes completos, formação e produção estão nesses currículos.")
       )
     ),
     br(),

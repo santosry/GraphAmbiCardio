@@ -72,6 +72,34 @@ body { font-feature-settings: "ss01"; }
   content: ""; position: absolute; inset: 0 0 auto 0; height: 5px;
   background: linear-gradient(90deg, var(--v0), var(--v3), var(--v7));
 }
+.team-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem; margin-top: 1rem;
+}
+.team-card {
+  background: #FFFFFF; border: 1px solid rgba(68, 1, 84, .10);
+  border-radius: 16px; box-shadow: 0 8px 24px rgba(68, 1, 84, .06);
+  padding: 1.25rem 1.1rem 1rem; text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+}
+.team-avatar {
+  width: 84px; height: 84px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--v0), var(--v2));
+  color: #FFFFFF; font-size: 1.55rem; font-weight: 750;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: .85rem; box-shadow: 0 6px 16px rgba(68, 1, 84, .18);
+}
+.team-card h4 { margin: 0 0 .2rem; color: var(--v0); font-size: 1.02rem; font-weight: 700; }
+.team-role { color: var(--muted); font-size: .8rem; margin-bottom: .65rem; }
+.team-bio { color: #3A3744; font-size: .84rem; line-height: 1.45; margin: 0 0 .85rem; }
+.team-links { margin-top: auto; display: flex; gap: .45rem; flex-wrap: wrap; justify-content: center; }
+.team-link-btn {
+  display: inline-flex; align-items: center; gap: .3rem;
+  border: 1px solid rgba(68, 1, 84, .16); border-radius: 999px;
+  padding: .32rem .75rem; color: var(--v1); background: #FFFFFF;
+  font-size: .76rem; font-weight: 650; text-decoration: none !important;
+}
+.team-link-btn:hover { background: var(--v0); border-color: var(--v0); color: #FFFFFF; }
 .kpi-title { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; font-weight: 650; }
 .kpi-value { font-size: 2rem; font-weight: 750; line-height: 1.1; margin: .35rem 0 .15rem; color: var(--v0); }
 .kpi-sub { color: var(--muted); font-size: .8rem; }
@@ -223,9 +251,19 @@ div.vis-tooltip {
   box-shadow: 0 10px 26px rgba(68,1,84,.16) !important; font-size: .82rem !important;
 }
 
+/* The page must grow with its content; otherwise bslib keeps a viewport-height
+   container and the footer floats in the middle of long pages. */
+body.bslib-page-fill { height: auto !important; min-height: 100vh; }
+body.bslib-page-navbar > .container-fluid {
+  height: auto !important;
+  min-height: calc(100vh - 82px);
+}
+.tab-content, .tab-content > .tab-pane { height: auto !important; }
+
 .graphambicardio-footer {
   background: linear-gradient(90deg, var(--v0), var(--v1), var(--v2));
   color: rgba(255,255,255,.85); padding: 1rem 0; margin-top: 2rem; font-size: .82rem;
+  width: 100%;
 }
 .graphambicardio-footer a { color: #FFFFFF; text-decoration: underline; }
 

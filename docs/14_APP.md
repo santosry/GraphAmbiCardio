@@ -43,7 +43,7 @@ python scripts/app/02_fair_metadata.py
 | **Hipóteses e lacunas** | caminhos candidatos, hipóteses por sobreposição gênica e lacunas explícitas |
 | **Consulta científica** | pergunta por exposição: mecanismos, fenótipos, genes, caminhos, hipóteses e referências |
 | **Métodos** | desenho, buscas, bases, gradação e limitações |
-| **Transparência e equipe** | princípios FAIR, metadados, licenças, autores com Lattes e declaração de IA (Portaria CNPq 2.664/2026) |
+| **Transparência e equipe** | apresentação da equipe em cards (Lattes/ORCID), princípios FAIR, metadados, licenças e declaração de IA (Portaria CNPq 2.664/2026) |
 
 ## 3. Legendas de fonte e figuras exportadas
 

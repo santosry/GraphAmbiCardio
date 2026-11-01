@@ -13,6 +13,8 @@
 - Seção de ciência aberta no README e na aba Transparência e equipe, com links
   para código, metadados, figuras, governança e verificação automatizada.
 - Grafo interativo ampliado: layout de força por padrão, opção hierárquica, legenda própria, botão de tela cheia, nós e rótulos maiores e exportação em viewport maior.
+- Aba Transparência e equipe com cards de apresentação da equipe, descrição do projeto e links Lattes/ORCID.
+- Rodapé reposicionado para o fim real das páginas longas; declaração de IA sem as seções de riscos e de citação.
 
 ### Privacidade e governança
 - Remoção dos registros individuais de SINASC e SIH do versionamento e do

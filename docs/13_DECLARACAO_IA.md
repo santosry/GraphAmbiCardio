@@ -33,21 +33,6 @@ Nenhum modelo foi usado como autor ou coautor. A responsabilidade científica pe
 4. **Conferência da curadoria:** todos os trechos citados foram verificados automaticamente contra o PubMed e lidos pela equipe.
 5. **Responsabilidade final:** integralmente humana. Os autores respondem por todo o conteúdo, incluindo eventuais erros introduzidos com apoio de IA.
 
-## 4. Riscos identificados e mitigação
-
-| Risco | Mitigação adotada |
-|---|---|
-| Citação fabricada | Verificação verbatim contra o PubMed; o build falha se o trecho não for encontrado |
-| Confundir associação com causalidade | Camadas explícitas; linguagem causal proibida nas conclusões |
-| Confundir hipótese com evidência | Camada de hipótese separada e excluída de caminhos, centralidade e conclusões |
-| Viés de linguagem/região | Limitação declarada para SciELO/CAPES |
-| Alucinação em texto | Leitura humana e checagem contra as tabelas geradas pelo pipeline |
-| Exposição de dados sensíveis | Dados individuais de SINASC/SIH não são redistribuídos; o site publica apenas agregados e o código de reprodução |
-
-## 5. Como citar esta declaração
-
-> Ryan de Paulo Santos; Letícia Maria Dias Freitas; GraphAmbiCardio study team. *Declaração de uso de inteligência artificial*. In: GraphAmbiCardio, v0.3.0, 2026. Em conformidade com a Portaria CNPq nº 2.664/2026.
-
 **Data:** 2026-10-31
 **Versão:** 0.3.0
 **Contato:** ryan.paulo@gsuite.iff.edu.br
