@@ -1,4 +1,4 @@
-# 09 — Limitations, biases and knowledge gaps
+# 09: Limitations, biases and knowledge gaps
 
 This document lists limitations that materially affect interpretation. They are not boilerplate.
 
@@ -6,8 +6,8 @@ This document lists limitations that materially affect interpretation. They are 
 
 ## 1. Literature and evidence synthesis
 
-1. **Structured non-systematic search, not a systematic review.** 1,449 unique records were triaged automatically; 33 anchor studies were read manually. There was no dual independent screening of all records, no full-text review and no formal risk-of-bias instrument (ROBINS-I, SYRCLE, Cochrane) applied study-by-study. The evidence grades reflect directness and design, not a full risk-of-bias assessment.
-2. **Top-N retrieval.** Domain searches retrieved the top 100 by relevance; pair searches retrieved the top 15. Counts are total hits, but screening was not exhaustive.
+1. **Structured non-systematic search, not a systematic review.** 1,970 unique records were triaged automatically; 34 anchor studies were read manually (33 PubMed-indexed + 1 CAPES thesis). There was no dual independent screening of all records, no full-text review and no formal risk-of-bias instrument (ROBINS-I, SYRCLE, Cochrane) applied study-by-study. The evidence grades reflect directness and design, not a full risk-of-bias assessment.
+2. **Exhaustive retrieval, but not exhaustive manual screening.** All hits of the pre-registered queries were retrieved: PubMed domains 25,406/25,442, PubMed pairs 663/666, Europe PMC 4,789, SciELO 83,157 and CAPES 560. Automated triage produced 3,963 unique candidates (638 with a detected CHD phenotype), kept in a separate non-evidence layer. Only 34 studies were manually curated as anchors; the other candidates were not read in full. Moreover, 23 of the 33 PubMed anchor PMIDs came from targeted search/reference lists, not from the original top-N retrieval. See `reports/exhaustive_retrieval.md` and `reports/screened_studies.md`.
 3. **Language and regional bias.** PubMed/Europe PMC over-represent English-language, high-income-country research. SciELO was accessed through Crossref metadata (the direct search interface returned HTTP 403) and CAPES through its thesis catalogue; Latin American journal coverage remains partial.
 4. **Query contamination.** Automated triage over-detects “human” studies (any mention of children/patients) and mechanism terms. The pair matrix is therefore a **feasibility screen**, not an evidence map.
 5. **Publication and reporting bias.** Positive associations are more likely published; phenotype-specific subgroup findings are often reported without correction for multiple comparisons (e.g. alcohol → d-TGA in a meta-analysis with a null overall effect).

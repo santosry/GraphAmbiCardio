@@ -42,7 +42,7 @@ mod_about_ui <- function(id) {
     ),
     br(),
     card(
-      card_header("Ciência aberta — compromisso verificável"),
+      card_header("Ciência aberta: compromisso verificável"),
       card_body(
         p("Código, dados derivados, metadados, figuras, tabelas e instruções de reprodução são públicos. ",
           "Dados individuais de saúde (SINASC/SIH) não são redistribuídos; o site publica apenas agregados e produtos derivados."),
@@ -70,7 +70,7 @@ mod_about_ui <- function(id) {
         card_header("Princípios FAIR no GraphAmbiCardio"),
         card_body(
           tags$dl(
-            tags$dt("Findable"), tags$dd("Identificadores persistentes por entidade (PMID, DOI, HPO, CID-10, ClinVar, Reactome, NCBI Gene) e metadados DCAT/Data Package."),
+            tags$dt("Findable"), tags$dd("Identificadores persistentes por entidade (PMID, DOI, CAPES, HPO, CID-10, ClinVar, Reactome, NCBI Gene) e metadados DCAT/Data Package."),
             tags$dt("Accessible"), tags$dd("Repositório público sem autenticação; dados de terceiros mantêm suas licenças; microdados brutos do DATASUS não são redistribuídos."),
             tags$dt("Interoperable"), tags$dd("CSV, JSON e GraphML; vocabulários padronizados; ontologia documentada."),
             tags$dt("Reusable"), tags$dd("Proveniência por evidência, camadas separadas, licença MIT para o código, dicionário de dados, pipeline e testes.")
@@ -93,7 +93,7 @@ mod_about_ui <- function(id) {
             tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "https://github.com/santosry/GraphAmbiCardio")
           ),
           p(tags$b("Estudos-âncora:")),
-          p(class = "small-muted", "As referências PMID/DOI de cada aresta estão na aba Evidências e em literature/curated/anchor_studies.csv."),
+          p(class = "small-muted", "As referências PMID/DOI/CAPES de cada aresta estão na aba Evidências e em literature/curated/anchor_studies.csv."),
           p(tags$b("Licença:")),
           p("Código sob MIT. Dados de terceiros (PubMed/Europe PMC, HPO, ClinVar, Reactome, DATASUS, ERA5-Land/Open-Meteo, Crossref) mantêm suas licenças e termos."),
           source_note("Fonte: CITATION.cff, codemeta.json e LICENSE.")
@@ -102,7 +102,7 @@ mod_about_ui <- function(id) {
     ),
     br(),
     card(
-      card_header("Declaração de uso de inteligência artificial — Portaria CNPq nº 2.664/2026"),
+      card_header("Declaração de uso de inteligência artificial: Portaria CNPq nº 2.664/2026"),
       card_body(
         uiOutput(ns("ai_declaration")),
         source_note("Fonte: docs/13_DECLARACAO_IA.md.")

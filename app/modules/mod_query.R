@@ -3,7 +3,7 @@ mod_query_ui <- function(id) {
   tagList(
     div(class = "hero", style = "padding:1.4rem 1.6rem;",
         h1("Consulta científica", style = "font-size:1.5rem;"),
-        p("Selecione uma exposição para recuperar mecanismos documentados, fenótipos associados, genes, caminhos e hipóteses — sempre com o nível de evidência e as referências.")
+        p("Selecione uma exposição para recuperar mecanismos documentados, fenótipos associados, genes, caminhos e hipóteses: sempre com o nível de evidência e as referências.")
     ),
     layout_columns(
       col_widths = c(4,4,4),
@@ -60,7 +60,7 @@ mod_query_server <- function(id) {
         kpi_card("Hipóteses candidatas", fmt_int(nrow(hyp)), "priorização por genes", "#E6A100", source = "Fonte: outputs/tables/hypothesis_candidates.csv."),
         kpi_card("Nível máximo", {
           tiers <- direct$evidence_tier_label
-          if (length(tiers) == 0) "—" else tiers[1]
+          if (length(tiers) == 0) "n/d" else tiers[1]
         }, "para este eixo", "#0B3C5D", source = "Fonte: outputs/graph/relations.csv e evidence.csv.")
       )
     })
@@ -117,14 +117,12 @@ mod_query_server <- function(id) {
 
     output$refs <- renderUI({
       rel <- relevant()
-      ev <- evidence %>% filter(edge_key %in% rel$edge_key, grepl("^[0-9]+$", reference))
+      ev <- evidence %>% filter(edge_key %in% rel$edge_key, reference_type %in% c("PMID", "CAPES thesis"))
       refs <- unique(ev$reference)
-      if (length(refs) == 0) return(div(class = "small-muted", "Sem referências PMID para este recorte."))
+      if (length(refs) == 0) return(div(class = "small-muted", "Sem referências curadas para este recorte."))
       tagList(
         p(class = "small-muted", sprintf("%s referências únicas.", length(refs))),
-        HTML(paste(vapply(refs, function(r) {
-          sprintf("<a href='https://pubmed.ncbi.nlm.nih.gov/%s/' target='_blank'>PMID %s</a>", r, r)
-        }, character(1)), collapse = " · "))
+        HTML(paste(vapply(refs, ref_link, character(1), type = ""), collapse = " · "))
       )
     })
 

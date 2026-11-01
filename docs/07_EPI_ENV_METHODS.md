@@ -1,4 +1,4 @@
-# 07 — Local epidemiological and environmental methods and results
+# 07: Local epidemiological and environmental methods and results
 
 Period: **2010-01-01 to 2025-12-31**; municipality: Campos dos Goytacazes, RJ (IBGE 330100). Extraction date: **2026-10-31**.
 
@@ -34,7 +34,7 @@ Results:
 - **8 records** had a Q27–Q28 code; 1 of them also had a Q20–Q26 code;
 - **0** core CHD records had `IDANOMAL ≠ 1`; 3 records had `IDANOMAL = 1` with no code (kept out of the case count but flagged).
 
-`IDANOMAL` is therefore **not** used as the inclusion criterion — the prompt’s concern about losing records through concatenated/missing codes is addressed by parsing all codes.
+`IDANOMAL` is therefore **not** used as the inclusion criterion, the prompt’s concern about losing records through concatenated/missing codes is addressed by parsing all codes.
 
 ### 1.3 Annual indicators
 
@@ -59,7 +59,7 @@ Results:
 
 \* TabNet broad Q20–Q28 group; not directly comparable to the core microdata definition. For 2023–2024 the core CHD cell is left missing. 2025 TabNet (9 broad-group cases) and core microdata (6 Q20–Q26; 4 Q27–Q28) are shown separately.
 
-Overall core microdata: **5.27 per 10,000 live births** (52/98,598), i.e. **0.53 per 1,000** — roughly **one order of magnitude below** the birth prevalence usually reported for CHD (6–9 per 1,000). The most defensible interpretation is **severe under-ascertainment in SINASC**, not a low CHD burden: the absolute number of anomaly records in Campos is only ~25–80 per year across *all* congenital anomalies.
+Overall core microdata: **5.27 per 10,000 live births** (52/98,598), i.e. **0.53 per 1,000**: roughly **one order of magnitude below** the birth prevalence usually reported for CHD (6–9 per 1,000). The most defensible interpretation is **severe under-ascertainment in SINASC**, not a low CHD burden: the absolute number of anomaly records in Campos is only ~25–80 per year across *all* congenital anomalies.
 
 ### 1.4 Phenotype distribution (all codes, all years)
 
@@ -174,7 +174,7 @@ Costs are nominal (no deflation); 2025 is a complete year of processing files at
 
 | Property | Value |
 |---|---|
-| Source | Open-Meteo Historical Weather API — **ERA5-Land** |
+| Source | Open-Meteo Historical Weather API: **ERA5-Land** |
 | Model requested | **`era5_land`** (not the API default best-match) |
 | Resolution | ~9 km |
 | Grid cell returned | −21.800, −41.300; 12 m elevation |
@@ -221,7 +221,7 @@ Outcome: **CHD core Q20–Q26** (0/1). Exposure: area-level mean Tmax during the
 
 **Small-sample sensitivity.** Firth penalised logistic regression gave Tmax **OR 1.159 (0.869–1.532), p = 0.304, q = 0.509** and PM2.5 **OR 0.844 (0.622–1.132), p = 0.255, q = 0.509**.
 
-**Clustering.** Cluster-robust standard errors by month of conception (163 clusters) gave Tmax **OR 1.155 (0.829–1.611), p = 0.394, q = 0.524** — the confidence interval includes 1.
+**Clustering.** Cluster-robust standard errors by month of conception (163 clusters) gave Tmax **OR 1.155 (0.829–1.611), p = 0.394, q = 0.524**: the confidence interval includes 1.
 
 **Socio-economic sensitivity.** Firth model additionally adjusted for education (≥8 years), race (white vs non-white), number of prenatal visits and multiple gestation: Tmax **OR 1.187 (0.889–1.571), p = 0.236, q = 0.509**, n = 79,919 and 46 events.
 

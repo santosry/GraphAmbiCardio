@@ -1,5 +1,5 @@
 # ==========================================================================
-# GraphAmbiCardio — dados, paletas e funções auxiliares
+# GraphAmbiCardio: dados, paletas e funções auxiliares
 # global.R: dados, paletas e funções auxiliares
 # ==========================================================================
 suppressPackageStartupMessages({
@@ -60,6 +60,10 @@ paths <- read_data("paths.csv")
 gaps <- read_data("gaps.csv")
 phenotype_genes <- read_data("phenotype_genes.csv")
 feasibility <- read_data("feasibility.csv")
+prisma_flow <- read_data("prisma_flow.csv")
+retrieval_coverage <- read_data("retrieval_coverage.csv")
+exhaustive_retrieval <- read_data("exhaustive_retrieval.csv")
+screened_summary <- tryCatch(jsonlite::fromJSON(file.path(DATA_DIR, "screened_studies.json")), error = function(e) list())
 hyp_candidates <- read_data("hypothesis_candidates.csv")
 candidate_paths <- read_data("candidate_paths.csv")
 centrality <- read_data("centrality.csv")
@@ -84,7 +88,7 @@ evidence <- evidence %>% mutate(across(where(is.logical), as.character))
 # --------------------------------------------------------------------------
 # Paletas e rótulos
 # --------------------------------------------------------------------------
-# Paleta acessível (viridis) — segura para daltonismo
+# Paleta acessível (viridis): segura para daltonismo
 VIRIDIS_NODE <- viridisLite::viridis(10, option = "D", begin = 0.05, end = 0.95)
 `%||%` <- function(a, b) if (is.null(a) || length(a) == 0) b else a
 
@@ -98,6 +102,18 @@ TYPE_LABELS <- c(
   Exposure = "Exposição", Mechanism = "Mecanismo", Process = "Processo",
   Phenotype = "Fenótipo", Gene = "Gene", Pathway = "Via", Variant = "Variante",
   Indicator = "Indicador", Population = "População", Period = "Período"
+)
+# Shape is a redundant channel for colour-blind readers. Keep in sync with
+# mod_graph_server() and with the legend CSS classes.
+TYPE_SHAPES <- c(
+  Exposure = "square", Mechanism = "dot", Process = "triangle",
+  Phenotype = "hexagon", Gene = "diamond", Pathway = "triangleDown",
+  Variant = "star", Indicator = "box", Population = "dot", Period = "dot"
+)
+TYPE_SHAPE_CLASS <- c(
+  Exposure = "shape-square", Mechanism = "shape-dot", Process = "shape-triangle",
+  Phenotype = "shape-hexagon", Gene = "shape-diamond", Pathway = "shape-triangle-down",
+  Variant = "shape-star", Indicator = "shape-box", Population = "shape-dot", Period = "shape-dot"
 )
 TIER_ORDER <- c("Bem sustentada", "Plausível (experimental)", "Não demonstrada", "Contextual", "Inferida (regra)")
 TIER_COLORS <- setNames(rev(viridisLite::viridis(5, option = "D", begin = 0.15, end = 0.95)), TIER_ORDER)
@@ -125,6 +141,9 @@ ref_link <- function(ref, type = "PMID") {
       sprintf("<a href='https://www.ncbi.nlm.nih.gov/clinvar/variation/%s/' target='_blank'>%s</a>", r, r)
     } else if (grepl("^R-HSA", r)) {
       sprintf("<a href='https://reactome.org/content/detail/%s' target='_blank'>%s</a>", r, r)
+    } else if (grepl("^CAPES:", r)) {
+      id <- sub("^CAPES:", "", r)
+      sprintf("<a href='https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/trabalhoConclusao/viewTrabalhoConclusao.jsf?popup=true&id_trabalho=%s' target='_blank'>CAPES %s</a>", id, id)
     } else {
       r
     }

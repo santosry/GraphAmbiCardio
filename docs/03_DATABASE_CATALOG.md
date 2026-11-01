@@ -1,4 +1,4 @@
-# 03 — Catalogue of databases and access status
+# 03: Catalogue of databases and access status
 
 **Probe date:** 2026-10-31. “Status” refers to what the pipeline actually used, not what exists in principle.
 
@@ -14,7 +14,7 @@ Legend: **Used** = records in the graph; **Probed** = accessed but not used; **B
 - **Coverage:** biomedical literature; no date restriction for biological domains.
 - **Access:** REST/XML; 3 req/s without key, 10 req/s with `NCBI_API_KEY`.
 - **Licence/terms:** NLM terms; abstracts are quoted only as short verbatim fragments for verification.
-- **Used:** 5 domain searches + 196 pair searches + 33 anchor studies.
+- **Used:** 5 domain searches + 196 pair searches + 34 anchor studies (33 PMIDs + 1 CAPES thesis).
 - **Limitations:** indexing lags; no full-text; MeSH-only queries have low recall for emergency pollutants.
 
 ### 1.2 Europe PMC
@@ -33,8 +33,8 @@ Legend: **Used** = records in the graph; **Probed** = accessed but not used; **B
 ### 1.4 CAPES
 - **Status: Used (Catálogo de Teses e Dissertações only).**
 - Public REST endpoint `https://catalogodeteses.capes.gov.br/catalogo-teses/rest/busca` (POST JSON, field `termo`). R collector in `R/collection/capes.R`.
-- **Results:** 552 theses/dissertations for “cardiopatias congênitas” (20 retrieved on the first page); 1 for agrotóxicos; 7 for temperatura; 0 for poluição do ar + cardiopatia.
-- **Limitation:** this is the thesis catalogue, **not** the paywalled Portal de Periódicos full-text collection. The Portal requires institutional authentication and was not used. Community MCP servers were evaluated and not adopted; see `docs/16_CAPES_MCP.md`.
+- **Results:** 560 hits across four queries (552 for “cardiopatias congênitas”; 1 for agrotóxicos; 7 for temperatura; 0 for poluição do ar + cardiopatia). All pages were retrieved: **560 records**, corresponding to **552 unique IDs** (8 repeats across queries). After title screening, **1 thesis** (a systematic review of maternal pesticide exposure and congenital malformations) was read at abstract level and included as an **indirect** evidence row for `EXP:PEST → CHD:ALL`; the other **551 unique records** were excluded (clinical, surgical, diagnostic, psychosocial, infectious or non-ambient “temperature” studies). Decisions are in `literature/screening/capes_triage.csv`; the archived abstract is in `literature/curated/capes_abstracts/7850222.json`.
+- **Limitation:** this is the thesis catalogue, **not** the paywalled Portal de Periódicos full-text collection. The Portal requires institutional authentication and was not used. Community MCP servers were evaluated and not adopted; see `docs/16_CAPES_MCP.md`. Search JSONs and the PRISMA flow are registered in the FAIR Data Package with SHA-256.
 
 
 ---
@@ -62,12 +62,12 @@ Legend: **Used** = records in the graph; **Probed** = accessed but not used; **B
 - **Used:** stable NCBI Gene IDs and descriptions for 170 genes (panel + HPO top-150).
 - **Limitation:** HPO genes outside the top-150 lack NCBI metadata in this version.
 
-### 2.4 OMIM — **Not used (licence).** Access requires registration/licence; content was not redistributed.
-### 2.5 Orphanet — **Not used.** No stable programmatic endpoint was required for this version; HPO xrefs to ORPHA IDs are retained where present.
-### 2.6 DisGeNET — **Blocked.** Current API requires a key; not used.
-### 2.7 Monarch Initiative — **Probed**, not used systematically. Its API was reachable and cross-checks NKX2-5, but HPO files provided the needed annotations with simpler provenance.
-### 2.8 GWAS Catalog — **Not used.** No CHD GWAS signal was required for the first graph version; phenotype harmonisation across studies would be needed.
-### 2.9 Ensembl / UniProt — **Not used for nodes.** NCBI Gene IDs are the primary gene key; Reactome accepts gene symbols. A future version should add Ensembl/UniProt accession mapping.
+### 2.4 OMIM: **Not used (licence).** Access requires registration/licence; content was not redistributed.
+### 2.5 Orphanet: **Not used.** No stable programmatic endpoint was required for this version; HPO xrefs to ORPHA IDs are retained where present.
+### 2.6 DisGeNET: **Blocked.** Current API requires a key; not used.
+### 2.7 Monarch Initiative: **Probed**, not used systematically. Its API was reachable and cross-checks NKX2-5, but HPO files provided the needed annotations with simpler provenance.
+### 2.8 GWAS Catalog: **Not used.** No CHD GWAS signal was required for the first graph version; phenotype harmonisation across studies would be needed.
+### 2.9 Ensembl / UniProt: **Not used for nodes.** NCBI Gene IDs are the primary gene key; Reactome accepts gene symbols. A future version should add Ensembl/UniProt accession mapping.
 
 ---
 
@@ -85,15 +85,15 @@ Legend: **Used** = records in the graph; **Probed** = accessed but not used; **B
 - **Used:** descriptive over-representation only; **not** encoded as graph edges (GO term→gene mapping was not resolved per gene in this version).
 - **Limitation:** Enrichr is a third-party service; terms are statistical, not causal.
 
-### 3.3 KEGG — **Not used.** REST access and redistribution terms require care; Reactome covered the pathway layer.
-### 3.4 Comparative Toxicogenomics Database (CTD) — **Blocked.** The batch-query endpoint redirected to a human-verification page (“verify you are a human”) on 2026-10-31; no automated retrieval was possible.
-### 3.5 ToxCast / PubChem — **Not used.** ToxCast does not provide human developmental cardiac outcomes at the required granularity; PubChem was unnecessary because exposures were represented at the class level.
+### 3.3 KEGG: **Not used.** REST access and redistribution terms require care; Reactome covered the pathway layer.
+### 3.4 Comparative Toxicogenomics Database (CTD): **Blocked.** The batch-query endpoint redirected to a human-verification page (“verify you are a human”) on 2026-10-31; no automated retrieval was possible.
+### 3.5 ToxCast / PubChem: **Not used.** ToxCast does not provide human developmental cardiac outcomes at the required granularity; PubChem was unnecessary because exposures were represented at the class level.
 
 ---
 
 ## 4. Expression data
 
-### 4.1 GEO — **Not used in v0.1.0 (deliberate).**
+### 4.1 GEO: **Not used in v0.1.0 (deliberate).**
 GEO was evaluated but no dataset was admitted. Rationale: adult myocardial expression or non-cardiac tissue cannot be interpreted as cardiogenesis; embryonic cardiac datasets require careful stage/species matching that was outside the scope of this version. Adding GEO without that curation would violate the study’s own rules. The pipeline leaves a placeholder for future stage-specific embryonic datasets.
 
 ---
@@ -127,14 +127,14 @@ Not fetched in v0.1.0. The birth-level models use SINASC live births as the deno
 
 ## 6. Environmental data
 
-### 6.1 INMET — **Used for validation.**
+### 6.1 INMET: **Used for validation.**
 - **Station:** A607 (Campos dos Goytacazes/RJ; latitude −21,7167; longitude −41,3500; altitude 25 m; automatic station).
 - **Access:** R package `BrazilMet` 0.5.0 (`download_AWS_INMET_daily`), historical files at `https://portal.inmet.gov.br/uploads/dadoshistoricos/`.
 - **Variables:** Tmean, Tmax, Tmin, relative humidity (mean/min/max), rainfall, wind.
 - **Coverage:** 5,754 days, 2010-01-01 to 2025-12-31; 138 missing Tmax and 153 missing RH.
 - **Role:** validation/comparison with ERA5-Land (Tmax r=0.937; Tmin r=0.942; Tmean r=0.972; RH r=0.787), not personal exposure.
 - **Limitation:** automatic station; sensor gaps and local siting; does not represent the whole municipality.
-### 6.2 ERA5 / ERA5-Land via Open-Meteo — **Used.**
+### 6.2 ERA5 / ERA5-Land via Open-Meteo: **Used.**
 - **URL:** https://archive-api.open-meteo.com/v1/archive
 - **Variables:** Tmean, Tmax, Tmin, relative humidity, precipitation, wind.
 - **Model:** explicitly requested **`era5_land`** (not API best-match); resolution ~9 km.
@@ -143,7 +143,7 @@ Not fetched in v0.1.0. The birth-level models use SINASC live births as the deno
 - **Licence/terms:** Open-Meteo terms; underlying ERA5 data © Copernicus.
 - **Limitation:** reanalysis grid cell, not a station; ~9 km resolution; no personal exposure.
 
-### 6.3 PM2.5 — **Used: VIGIAR via `vigiar`.**
+### 6.3 PM2.5: **Used: VIGIAR via `vigiar`.**
 - **Source:** VIGIAR (Vigilância em Saúde Ambiental, Ministério da Saúde), dashboard público Power BI, accessed with the R package `vigiar` 0.7.2 (`R/collection/pm25_vigiar.R`).
 - **Coverage:** annual 2010–2025 (16 values) and monthly 2010–2025 (192 values) for municipality 330100.
 - **Values:** annual 6.50–9.04 µg/m³ (mean 7.72); monthly 3.83–13.84 µg/m³.

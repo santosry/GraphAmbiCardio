@@ -1,4 +1,4 @@
-# 13 — Declaração de uso de inteligência artificial
+# 13: Declaração de uso de inteligência artificial
 
 **Em conformidade com a Portaria CNPq nº 2.664/2026.**
 
@@ -21,7 +21,7 @@ Nenhum modelo foi usado como autor ou coautor. A responsabilidade científica pe
 - Não gerou dados, referências, identificadores ou resultados.
 - Não inventou citações: todas as citações curadas são trechos verbatim de abstracts indexados no PubMed, verificados automaticamente contra o registro original.
 - Não decidiu a classificação final de evidência nem a interpretação científica.
-- Não substituiu a leitura humana dos 33 estudos-âncora.
+- Não substituiu a leitura humana dos estudos-âncora: 54 linhas foram curadas manualmente pela equipe e 29 linhas foram promovidas em lote com revisão registrada em `literature/curated/batch_chd_review.csv`, sujeitas a confirmação humana independente.
 - Não teve acesso a dados individuais identificáveis (não há tais dados no estudo).
 - Não emitiu recomendações clínicas.
 

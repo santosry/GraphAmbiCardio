@@ -1,32 +1,32 @@
-# 12 — Princípios FAIR no GraphAmbiCardio
+# 12: Princípios FAIR no GraphAmbiCardio
 
 O GraphAmbiCardio foi desenhado para ser **Findable, Accessible, Interoperable and Reusable**. Este documento descreve o que foi efetivamente implementado e o que permanece como limitação.
 
 ---
 
-## F — Findable (localizável)
+## F: Findable (localizável)
 
-- **Identificadores persistentes por entidade:** PMID e DOI para estudos; HPO IDs para fenótipos; CID-10 para a camada epidemiológica; ClinVar VCV para variantes; Reactome stable IDs (`R-HSA-…`) para vias; NCBI Gene IDs para genes.
+- **Identificadores persistentes por entidade:** PMID e DOI para estudos; CAPES ID + URL Sucupira para a tese incluída; HPO IDs para fenótipos; CID-10 para a camada epidemiológica; ClinVar VCV para variantes; Reactome stable IDs (`R-HSA-…`) para vias; NCBI Gene IDs para genes.
 - **Metadados descritivos:** `fair/metadata.json` (perfil DCAT) e `fair/datapackage.json` (Frictionless Data Package), com título, descrição, palavras-chave, cobertura espacial (IBGE 330100) e temporal (2010–2025), fontes e licenças.
 - **Aplicativo de descoberta:** o GraphAmbiCardio (Shiny, PT-BR; https://ryansantospaulo.shinyapps.io/graphambicardio/) permite busca por exposição, fenótipo, gene, via e termo livre, com recuperação das referências; inclui painel epidemiológico, camada de hipóteses e downloads em CSV.
 - **Identificador do conjunto:** URL do repositório + versão (`https://github.com/santosry/GraphAmbiCardio#v0.4.0`).
 
-## A — Accessible (acessível)
+## A: Accessible (acessível)
 
 - Código, dados derivados, metadados e documentação estão em repositório público, sem autenticação.
 - O aplicativo Shiny é executável localmente e pode ser publicado em `shinyapps.io`.
 - Formatos abertos: CSV, JSON, GraphML, Markdown.
-- **Dados de terceiros:** os microdados brutos do DATASUS não são redistribuídos; scripts de download são fornecidos. **Registros individuais de SINASC/SIH não são versionados** (ver `docs/15_DATA_GOVERNANCE.md`); o app usa apenas agregados. PubMed/Europe PMC, HPO, ClinVar, Reactome, Open-Meteo/ERA5-Land, INMET (via BrazilMet), VIGIAR e Crossref mantêm suas próprias licenças e termos.
+- **Dados de terceiros:** os microdados brutos do DATASUS não são redistribuídos; scripts de download são fornecidos. **Registros individuais de SINASC/SIH não são versionados** (ver `docs/15_DATA_GOVERNANCE.md`); o app usa apenas agregados. PubMed/Europe PMC, CAPES/Sucupira, HPO, ClinVar, Reactome, Open-Meteo/ERA5-Land, INMET (via BrazilMet), VIGIAR e Crossref mantêm suas próprias licenças e termos.
 - Credenciais e tokens não são armazenados no repositório.
 
-## I — Interoperable (interoperável)
+## I: Interoperable (interoperável)
 
 - Vocabulários e identificadores padronizados (CID-10, HPO, OMIM, Orphanet, Reactome, NCBI Gene, UniProt quando disponível, PMID, DOI).
 - Esquema de dados explícito (`data_dictionary/data_dictionary.csv`, `docs/04_ONTOLOGY.md`).
 - Exportações em GraphML e JSON, adequadas a NetworkX, igraph, Neo4j e ferramentas de visualização.
 - Ontologia própria documentada, com tipos de nó, tipos de relação, camadas e regras de inferência.
 
-## R — Reusable (reutilizável)
+## R: Reusable (reutilizável)
 
 - **Proveniência por evidência:** cada linha de `evidence.csv` tem referência, tipo de evidência, espécie, desenho, janela de exposição, direção do efeito, contexto, citação e limitações.
 - **Camadas separadas:** observada, estruturada, inferida, hipótese e ecológica. Hipóteses nunca são misturadas às evidências.
@@ -37,14 +37,14 @@ O GraphAmbiCardio foi desenhado para ser **Findable, Accessible, Interoperable a
 
 ---
 
-## Ciência aberta — compromissos verificáveis
+## Ciência aberta: compromissos verificáveis
 
 O projeto trata ciência aberta como requisito, não como declaração retórica:
 
 1. **Código aberto:** MIT, com pipeline modular, testes e validação automatizada.
 2. **Dados derivados abertos:** CSV, JSON e GraphML; microdados individuais de SINASC/SIH nunca são redistribuídos.
 3. **Metadados abertos:** DCAT e Frictionless Data Package com SHA-256 por recurso; manifesto de figuras com fonte, período e SHA-256.
-4. **Proveniência:** cada aresta e cada figura rastreiam arquivo, fonte, período e referência.
+4. **Proveniência:** cada aresta e cada figura rastreiam arquivo, fonte, período e referência. As quatro consultas da CAPES, a triagem dos 552 registros únicos (560 recuperados), o resumo arquivado da tese incluída, o fluxo PRISMA-ScR, o relatório de cobertura por base (`reports/retrieval_coverage.csv`), a recuperação exaustiva (`reports/exhaustive_retrieval.csv`), os 3.963 candidatos (`literature/screening/exhaustive_candidates.csv`) e a camada separada de estudos triados (`outputs/graph/screened_studies.json`) estão no Data Package com SHA-256. Os registros brutos compactados ficam em `data_raw/literature/full/` (não versionado, re-downloadable); a camada de estudos triados é explicitamente não evidencial.
 5. **Reprodutibilidade:** `uv.lock`, `renv.lock`, `run_all.sh`, Makefile, cache HTTP e comandos documentados.
 6. **Auditoria:** `scripts/compliance/01_check.py`, `scripts/validation/02_schema.py` e `pytest` verificam checksums, privacidade, schemas e integridade.
 7. **Transparência sobre IA:** declaração em `docs/13_DECLARACAO_IA.md`, com verificação verbatim de citações e responsabilidade humana.

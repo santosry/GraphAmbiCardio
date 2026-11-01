@@ -1,6 +1,6 @@
-# 00 — Research protocol (pre-registered plan)
+# 00: Research protocol (pre-registered plan)
 
-**Study:** GraphAmbiCardio — knowledge graph of environmental exposures, molecular mechanisms, cardiogenesis and congenital heart defects (CHD) in Campos dos Goytacazes, RJ, 2010–2025.
+**Study:** GraphAmbiCardio, knowledge graph of environmental exposures, molecular mechanisms, cardiogenesis and congenital heart defects (CHD) in Campos dos Goytacazes, RJ, 2010–2025.
 **Version:** 0.1.0 (protocol frozen before graph construction; deviations logged in `10_PHASE_LOG.md`).
 **Date of protocol:** 2026-10-31.
 
@@ -117,7 +117,7 @@ Full strings, translations, dates and counts: `docs/02_SEARCH_STRATEGY.md` and `
 - Deduplication by PMID, DOI and normalised title.
 - Automated triage of titles/abstracts for species, design, exposure window, mechanism and phenotype vocabulary.
 - **Manual curation** of anchor studies: the reviewer read the abstract and extracted (i) the exact claim, (ii) a verbatim quote, (iii) species/design/population/window/direction.
-- A build-time verifier checks that every quote exists in the PubMed abstract; failure aborts the build.
+- A build-time verifier checks that every quote exists in the PubMed abstract or in the archived CAPES/Sucupira abstract; failure aborts the build.
 
 This is a **structured, non-systematic search with targeted manual extraction**, not a full dual-reviewer systematic review. The PRISMA-ScR flow reflects exactly what was done.
 
@@ -182,7 +182,7 @@ Full methods and results: `docs/07_EPI_ENV_METHODS.md`.
 
 ## 12. Validation plan
 
-1. Bibliographic: quote verification against PubMed (100% of curated edges; 25% re-checked at validation).
+1. Bibliographic: quote verification against PubMed and the archived CAPES thesis abstract (100% of curated edges; 25% of PubMed edges re-checked at validation).
 2. Biological: manual review of every curated edge for developmental/molecular coherence.
 3. Data: municipality, period, missingness, range and completeness checks.
 4. Computational: node/edge integrity, unique IDs, no self-loops, valid relation vocabulary, tests.

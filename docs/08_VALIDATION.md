@@ -1,6 +1,6 @@
-# 08 — Validation report
+# 08: Validation report
 
-Generated: 2026-10-31. Machine-readable: `reports/validation_results.json`; human-readable: `reports/validation_report.md`.
+Generated: 2026-11-01. Machine-readable: `reports/validation_results.json`; human-readable: `reports/validation_report.md`.
 
 ---
 
@@ -8,8 +8,8 @@ Generated: 2026-10-31. Machine-readable: `reports/validation_results.json`; huma
 
 | Level | Check | Result |
 |---|---|---|
-| Bibliographic | 54 curated edges have a PMID and a verbatim quote; 100% verified at build time; 25% (13 edges) re-checked at validation | **Passed** |
-| Bibliographic | 33 anchor PMIDs resolvable via NCBI E-utilities | **Passed** (33/33) |
+| Bibliographic | 84 curated evidence rows (76 unique relations; 54 manual, 29 AI-assisted reviewed and 1 CAPES) have a PMID or CAPES reference and a verbatim quote; 100% verified at build time; 25% of PubMed rows re-checked at validation; 100% of CAPES abstracts re-checked locally | **Passed** |
+| Bibliographic | 33 anchor PMIDs resolvable via NCBI E-utilities; 1 CAPES thesis abstract archived locally | **Passed** (33/33 PMIDs; 1/1 CAPES) |
 | Biological | Manual reading of every curated edge for developmental/molecular coherence; layers and caveats recorded | **Passed with documented caveats** |
 | Data | Municipality, period, missingness, duplicates, range checks for SINASC, SIH and climate | **Passed** |
 | Computational | Unique node IDs, unique evidence IDs, edge endpoints exist, no self-loops, valid relation vocabulary, confidence ∈ [0,1], grade ∈ {A–E} | **Passed** |
@@ -21,7 +21,7 @@ Generated: 2026-10-31. Machine-readable: `reports/validation_results.json`; huma
 ## 2. Automated checks
 
 ```
-nodes: 2,238 | relations: 4,117 | evidence rows: 4,613
+nodes: 2,238 | relations: 4,135 | evidence rows: 4,639
 duplicate node IDs: 0
 duplicate evidence IDs: 0
 missing edge endpoints: 0
@@ -88,14 +88,14 @@ After correcting the conception window, the main birth-level model had OR 1.155 
 
 ## 6. Human curation check
 
-All 54 curated edges were read by the study team; quotes are verified automatically against PubMed at build time and 25% are re-checked in validation. The curated layer is described as **manually curated by the study team**, without an independent review step.
+All 84 curated evidence rows (76 unique relations) have a verbatim quote. The 54 manual rows were read by the study team; the 29 batch rows were promoted only after an explicit review entry (including 11 second-pass proposals and one manual addition) and are flagged as AI-assisted, so independent human confirmation is recommended. PubMed quotes are verified automatically at build time and 25% are re-checked in validation; the CAPES thesis quote is checked against the archived Sucupira abstract. The curated layer is described as **team curation plus reviewed batch promotion**, without a dual independent screening step.
 
 ---
 
 ## 7. What was not validated
 
-- Full texts of the 33 anchors (only abstracts were verified).
+- Full texts of the 33 PubMed anchors and the CAPES thesis (only abstracts were verified).
 - Records not retrieved by the top-N search strategy.
-- Portuguese-language coverage is partial (SciELO via Crossref; CAPES thesis catalogue only).
+- Portuguese-language coverage is partial (SciELO via Crossref; CAPES thesis catalogue only, although all 560 hits/552 unique records were now retrieved and title-screened).
 - HPO/ClinVar/Reactome annotations against primary sources (treated as curated databases).
 - Causal claims (none are made).

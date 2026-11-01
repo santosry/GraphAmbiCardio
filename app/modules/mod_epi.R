@@ -15,18 +15,18 @@ mod_epi_ui <- function(id) {
     layout_columns(
       col_widths = c(7,5),
       div(class = "figure-block",
-          h5("SINASC — casos e taxa por 10.000 nascidos vivos"),
+          h5("SINASC: casos e taxa por 10.000 nascidos vivos"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sinasc_plot"), height = "100%")),
           source_note("Fonte: SINASC/DATASUS. Casos = CHD core Q20–Q26; 2023–2024 sem microdados (TabNet Q20–Q28 mostrado separadamente); ver docs/07 e docs/09.")),
       div(class = "figure-block",
-          h5("SIH/SUS — internações e óbitos"),
+          h5("SIH/SUS: internações e óbitos"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sih_plot"), height = "100%")),
           source_note("Fonte: SIH/SUS. AIH não são pessoas; Q20–Q26 no diagnóstico principal; Q27–Q28 em tabela separada."))
     ),
     layout_columns(
       col_widths = c(6,6),
       div(class = "figure-block",
-          h5("Clima — temperatura máxima mensal (ERA5-Land)"),
+          h5("Clima: temperatura máxima mensal (ERA5-Land)"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("climate_plot"), height = "100%")),
           htmlOutput(ns("climate_note"))),
       div(class = "figure-block",
@@ -37,14 +37,14 @@ mod_epi_ui <- function(id) {
     br(),
     div(
       class = "figure-block",
-      h5("PM2,5 — série municipal do VIGIAR (Ministério da Saúde)"),
+      h5("PM2,5: série municipal do VIGIAR (Ministério da Saúde)"),
       div(class = "figure-canvas html-fill-container chart-canvas-wide", plotlyOutput(ns("pm25_plot"), height = "100%")),
       htmlOutput(ns("pm25_note"))
     ),
     br(),
     div(
       class = "figure-block",
-      h5("Validação da exposição climática — INMET A607 vs ERA5-Land"),
+      h5("Validação da exposição climática: INMET A607 vs ERA5-Land"),
       div(class = "figure-canvas html-fill-container chart-canvas-wide",
           plotlyOutput(ns("inmet_plot"), height = "100%")),
       h6("Estação e coordenadas", style = "margin-top:1rem;"),
@@ -76,7 +76,7 @@ mod_epi_ui <- function(id) {
                     "Ver <i>docs/07_EPI_ENV_METHODS.md</i> e a análise de sensibilidade.", "danger")
          )),
     br(),
-    card(card_header("Sensibilidade Julia — erro de medida da janela gestacional"),
+    card(card_header("Sensibilidade Julia: erro de medida da janela gestacional"),
          card_body(
            DTOutput(ns("julia_ga")),
            uiOutput(ns("julia_note")),

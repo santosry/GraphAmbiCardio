@@ -1,4 +1,4 @@
-# 14 — GraphAmbiCardio: aplicativo Shiny
+# 14: GraphAmbiCardio: aplicativo Shiny
 
 O **GraphAmbiCardio** é a interface interativa do estudo. Ele não substitui a documentação metodológica; é uma ferramenta de exploração, auditoria e geração de perguntas.
 

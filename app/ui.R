@@ -6,7 +6,7 @@ ui <- bslib::page_navbar(
     span(class = "brand-mark", "GAC"),
     span(class = "brand-text", "GraphAmbiCardio")
   ),
-  window_title = "GraphAmbiCardio — exposições, mecanismos e cardiopatias congênitas",
+  window_title = "GraphAmbiCardio: exposições, mecanismos e cardiopatias congênitas",
   theme = bslib::bs_theme(
     version = 5,
     primary = "#440154",

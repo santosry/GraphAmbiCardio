@@ -1,4 +1,4 @@
-# Phase A — Feasibility report (executive summary)
+# Phase A: Feasibility report (executive summary)
 
 Date: 2026-10-31. Full report: `docs/01_SCIENTIFIC_VIABILITY.md`. Matrices: `reports/feasibility_*.csv`.
 

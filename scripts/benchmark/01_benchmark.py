@@ -80,7 +80,7 @@ def main() -> None:
     }
     (OUT / "benchmark.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
-    lines = ["# Benchmark — pipeline e consultas", "", f"Gerado: {payload['generated_at']}", "",
+    lines = ["# Benchmark: pipeline e consultas", "", f"Gerado: {payload['generated_at']}", "",
              f"- Python: {payload['python']}", f"- Plataforma: {payload['platform']}",
              f"- RSS: {payload['rss_start_mb']} → {payload['rss_end_mb']} MB (Δ {payload['rss_delta_mb']} MB)",
              f"- Pico tracemalloc: {payload['tracemalloc_peak_mb']} MB", "",

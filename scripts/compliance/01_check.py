@@ -165,6 +165,17 @@ def main() -> None:
     checks["pm25_series"] = (ROOT / "data_processed/pm25_campos_mensal.csv").exists()
     checks["pysus_audit"] = (ROOT / "reports/pysus_sinasc_audit.json").exists()
 
+    # 7b. editorial style: public prose must not use the em dash
+    prose = [ROOT / "README.md", *sorted((ROOT / "docs").glob("*.md"))]
+    em_hits = {
+        str(p.relative_to(ROOT)): p.read_text(encoding="utf-8").count("\u2014")
+        for p in prose
+    }
+    em_hits = {k: v for k, v in em_hits.items() if v}
+    checks["em_dash"] = {"total": sum(em_hits.values()), "files": em_hits}
+    if em_hits:
+        issues.append("travessão (em dash) no texto público: " + ", ".join(f"{k} ({v})" for k, v in em_hits.items()))
+
     # 8. app self-containment
     app_required = ["app/data/nodes.csv", "app/data/relations.csv", "app/data/evidence.csv",
                     "app/data/pm25_annual.csv", "app/data/pm25_monthly.csv",
@@ -194,9 +205,12 @@ def main() -> None:
               f"- Compromisso de ciência aberta (README/docs/12/app): {sum(checks['open_science'].values())}/3",
               f"- Série PM2,5 local: {checks['pm25_series']}",
               f"- Auditoria pySUS: {checks['pysus_audit']}",
-              f"- Bundle do app incompleto: {len(checks['app_bundle']['missing'])}"]
+              f"- Bundle do app incompleto: {len(checks['app_bundle']['missing'])}",
+              f"- Travessão no texto público: {checks['em_dash']['total']}"]
     REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
+    if issues:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

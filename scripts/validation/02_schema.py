@@ -183,7 +183,7 @@ def main() -> None:
     REPORT_JSON.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
     lines = ["# Schema validation", "", f"Generated: {out['generated_at']}", "",
              f"**Result: {'PASSED' if passed else 'FAILED'}**", ""]
-    lines += [f"- {'OK' if c['ok'] else 'FAIL'} — `{c['check']}` — {c['detail']}" for c in checks]
+    lines += [f"- {'OK' if c['ok'] else 'FAIL'} | `{c['check']}` | {c['detail']}" for c in checks]
     REPORT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
     if not passed:

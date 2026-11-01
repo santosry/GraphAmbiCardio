@@ -15,7 +15,7 @@ mod_home_ui <- function(id) {
       card_header("Sobre o projeto"),
       card_body(
         p("O GraphAmbiCardio organiza, em um único ambiente, o que a literatura e as bases biológicas curadas documentam sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e cardiopatias congênitas."),
-        p("O painel também reúne dados ecológicos de Campos dos Goytacazes (SINASC, SIH/SUS, ERA5-Land, INMET e VIGIAR) e mantém, de forma explícita, a separação entre evidência observada, anotação estruturada, inferência, hipótese e contexto ecológico. O objetivo é apoiar leitura crítica, auditoria e geração de perguntas — não substituir avaliação clínica nem provar causalidade."),
+        p("O painel também reúne dados ecológicos de Campos dos Goytacazes (SINASC, SIH/SUS, ERA5-Land, INMET e VIGIAR) e mantém, de forma explícita, a separação entre evidência observada, anotação estruturada, inferência, hipótese e contexto ecológico. O objetivo é apoiar leitura crítica, auditoria e geração de perguntas: não substituir avaliação clínica nem provar causalidade."),
         p("O projeto é desenvolvido por uma equipe de bacharelandos em Enfermagem do Instituto Federal Fluminense, Campus Campos Guarus, com compromisso de ciência aberta: código, metadados, figuras, tabelas e instruções de reprodução são públicos; dados individuais de saúde não são redistribuídos."),
         source_note("Fontes: docs/00_PROTOCOL.md, docs/04_ONTOLOGY.md, docs/12_FAIR.md e docs/15_DATA_GOVERNANCE.md.")
       )
@@ -60,7 +60,7 @@ mod_home_ui <- function(id) {
           col_widths = c(4,4,4),
           div(
             h6("1. Evidência"),
-            p("Cada aresta tem tipo de evidência, espécie, desenho, janela de exposição, referência e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed."),
+            p("Cada aresta tem tipo de evidência, espécie, desenho, janela de exposição, referência e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed ou contra o resumo arquivado da tese CAPES."),
             tags$a(href = "#", onclick = "Shiny.setInputValue('home_go_evidence', Math.random()); return false;", "Ver tabela de evidências →")
           ),
           div(
@@ -95,7 +95,7 @@ mod_home_server <- function(id) {
     output$kpi_nodes <- renderText(fmt_int(nrow(nodes)))
     output$kpi_edges <- renderText(fmt_int(nrow(relations)))
     output$kpi_evidence <- renderText(fmt_int(nrow(evidence)))
-    output$kpi_studies <- renderText(fmt_int(length(unique(evidence$reference[grepl("^[0-9]+$", evidence$reference)]))))
+    output$kpi_studies <- renderText(fmt_int(length(unique(evidence$reference[evidence$reference_type %in% c("PMID", "CAPES thesis")]))))
 
     tier_counts <- relations %>%
       filter(layer == "observed") %>%

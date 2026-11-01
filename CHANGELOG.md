@@ -1,6 +1,26 @@
 # Changelog
 
-## v0.4.0 — 2026-11-01
+## v0.4.0: 2026-11-01
+
+### Revisão da CAPES (2026-11-01)
+- Coletor da CAPES passa a percorrer todas as páginas: 560 registros recuperados (552 IDs únicos) em vez dos 20 primeiros por consulta. Triagem explícita dos 552 registros: 1 tese incluída, 551 excluídas com motivo em `literature/screening/capes_triage.csv`.
+- Tese incluída: revisão sistemática sobre exposição materna a agrotóxicos e malformações congênitas (CAPES 7850222), como evidência **indireta** para `EXP:PEST → CHD:ALL`; resumo arquivado em `literature/curated/capes_abstracts/7850222.json`.
+- Curadoria passa a 34 estudos-âncora (33 PMIDs + 1 tese CAPES), 55 linhas de evidência curada (54 relações únicas) e 4.614 linhas de evidência totais.
+- Verificação de citações e validação estendidas para referências não-PMID; revisões não contam como replicação independente.
+- FAIR Data Package inclui a triagem CAPES, o resumo da tese, `anchor_studies.csv`, `curated_edges.csv`, `reports/retrieval_coverage.csv` e `literature/screening/all_records_triage.csv` com SHA-256.
+- Relatório de cobertura explicita a assimetria original; em seguida, uma recuperação **exaustiva** foi aplicada a todas as bases: PubMed domínios 25.406/25.442, PubMed pares 663/666, Europe PMC 4.789, SciELO 83.157 e CAPES 560. A triagem automática gerou **3.963 candidatos únicos** (638 com fenótipo CHD), exportados como camada separada `screened_studies`, não evidência.
+- Novos artefatos: `reports/exhaustive_retrieval.csv`, `literature/screening/exhaustive_candidates.csv`, `outputs/graph/screened_studies.graphml/json`, `reports/screened_studies.json`.
+
+### Curadoria em lote com camada de revisão (2026-11-01)
+- Fila de promoção dos 635 candidatos CHD com PMID: 23 candidatos automáticos e 11 propostas de segunda passagem revisadas, **29 arestas verificadas**, 5 recusados e 605 registros ainda sem decisão.
+- Extração determinística e testável em `src/graphambicardio/curation/batch_extract.py`; regra de cláusula única exige uma exposição, um fenótipo e um tamanho de efeito explícito. Frases com múltiplos fenótipos e valores de p são rejeitadas.
+- Camada de revisão em `literature/curated/batch_chd_review.csv` (`src/graphambicardio/curation/batch_review.py`). Nenhum candidato entra no grafo sem `review_status=verified`.
+- A construção do grafo rejeita linhas verificadas cuja citação não seja verbatim no resumo do PubMed; a validação audita a revisão contra a tabela de evidências.
+- Recusados: PMID 2091934 (publicação duplicada de PMID 1397217), PMID 37610216 (exposição combinada PM10 + CO), dois candidatos que já existiam na curadoria manual (PMID 32278917 e PMID 35916623), bloqueados por regra automática de duplicidade, e PMID 11745829 (estimativa de solvente para CoA/VSD, não VSD isolado). Achados condicionais de PMID 28520847 e PMID 32091506 entram com ressalva explícita.
+- Grafo atualizado: 2.238 nós, 4.135 relações, 4.639 linhas de evidência, 49 caminhos exposição a fenótipo (39 diretos, 10 mecanísticos) e 20 lacunas.
+- Família de hipóteses gênicas atualizada para **75 testes**, 1 com sobreposição ≥2, nenhuma significativa após BH-FDR.
+- Novo pacote de leitura humana: `reports/batch_chd_review_packet.md`; segunda passagem por proposta (`reports/batch_chd_proposals.md`) e triagem da fila restante (`reports/batch_chd_triage.md`); novo alvo `make curation`.
+- Estilo editorial: travessão removido do README, dos documentos públicos e do texto do app, com verificação automática na conformidade.
 
 ### Correções metodológicas críticas
 - **Janela gestacional:** concepção estimada como data de nascimento menos
@@ -13,8 +33,7 @@
 - **Modelo climático:** Open-Meteo passa a requisitar explicitamente
   `models=era5_land`; metadados registram modelo, resolução, célula retornada,
   elevação, unidades e timestamp. Série recalculada: P90 33,3 °C; 68 ondas.
-- **Hipóteses gênicas:** família completa de 89 testes definida antes da
-  seleção; universo HPO de 978 genes; BH-FDR em toda a família; permutação
+- **Hipóteses gênicas:** família completa definida antes da seleção (75 testes na versão atual); universo HPO de 978 genes; BH-FDR em toda a família; permutação
   pareada por tamanho como sensibilidade; origem dos conjuntos gênicos
   documentada. Nenhum candidato significativo.
 - **Sexo:** códigos diferentes de 1/2 passam a ser ausentes, não feminino.
@@ -30,8 +49,10 @@
 ### Produto
 - App e figuras atualizados para Q20–Q26, TabNet separado, sensibilidade
   gestacional e modelo climático explícito.
+- Aba de métodos passa a ler as contagens do PRISMA e a citar a tese CAPES
+  incluída; a tabela de evidências mostra o link CAPES quando aplicável.
 
-## v0.3.0 — 2026-10-31
+## v0.3.0: 2026-10-31
 
 ### Validação climática e ciência aberta
 - INMET A607 (Campos dos Goytacazes) baixado com `BrazilMet` 0.5.0 e comparado

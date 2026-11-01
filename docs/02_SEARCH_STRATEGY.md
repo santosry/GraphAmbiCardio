@@ -1,4 +1,4 @@
-# 02 — Search strategy, PRISMA-ScR flow and reproducibility
+# 02: Search strategy, PRISMA-ScR flow and reproducibility
 
 **Retrieval date for all searches:** 2026-10-31 (UTC).
 **Study period for local epidemiology:** 2010-01-01 to 2025-12-31. This period was **not** applied to biological literature.
@@ -13,9 +13,9 @@
 | Europe PMC | REST `/search` (JSON, `resultType=core`) | Used | independent discovery + open access |
 | SciELO | `search.scielo.org` (HTML) | **HTTP 403** | direct interface blocked; fallback via Crossref (below) |
 | SciELO (metadados) | Crossref `prefix:10.1590` | **Used** | official DOI metadata for SciELO articles; 100 records/query |
-| CAPES (Catálogo de Teses) | `catalogodeteses.capes.gov.br` REST | **Used** | 552 theses for “cardiopatias congênitas” |
+| CAPES (Catálogo de Teses) | `catalogodeteses.capes.gov.br` REST | **Used** | 560 hits; 560 records retrieved (552 unique); 1 thesis included |
 | Portal de Periódicos CAPES | web interface | Not automated | full text requires institutional authentication |
-| Google Scholar | — | Not used | not reproducible; no record-level export |
+| Google Scholar | n/a | Not used | not reproducible; no record-level export |
 | Reference lists | manual | Partially used | reviews and anchor papers checked for key references |
 
 SciELO was ultimately accessed through **Crossref metadata restricted to the SciELO DOI prefix (10.1590)**, because the direct search interface returned HTTP 403/Bunny Shield to automated clients. CAPES was accessed through the **public Catálogo de Teses e Dissertações API**. These routes and their limitations are recorded in `09_LIMITATIONS_AND_GAPS.md`.
@@ -119,7 +119,7 @@ AND (pregnan*[tiab] OR maternal[tiab] OR prenatal[tiab] OR teratogen*[tiab]
 
 Each phenotype uses its label and accepted variants in `[tiab]` (e.g. VSD: `"ventricular septal defect"`, `"ventricular septal defects"`, `"VSD"`). Abbreviations are only used inside the CHD context block. Full mapping in `src/graphambicardio/config.py` (`PHENOTYPE_QUERY_TERMS`).
 
-**Rationale for the context block:** without it, the matrix retrieved surgical/anaesthetic case reports and adult disease. With it, precision improved but 73 pairs dropped to zero — an honest reflection of the literature, not a search failure.
+**Rationale for the context block:** without it, the matrix retrieved surgical/anaesthetic case reports and adult disease. With it, precision improved but 73 pairs dropped to zero, an honest reflection of the literature, not a search failure.
 
 ---
 
@@ -139,10 +139,12 @@ Resultados em `literature/searches/scielo_*.json` e `capes_*.json`:
 | cardiopatia congênita + agrotóxicos | SciELO/Crossref | 100 recuperados; 42 com termos de CHD |
 | cardiopatia congênita + temperatura/calor | SciELO/Crossref | 100 recuperados; 60 com termos de CHD |
 | cardiopatia congênita + umidade | SciELO/Crossref | 100 recuperados; 50 com termos de CHD |
-| cardiopatias congênitas | CAPES Teses | 552 registros |
+| cardiopatias congênitas | CAPES Teses | 552 hits (todos recuperados) |
 | poluição do ar + cardiopatia | CAPES Teses | 0 |
 | agrotóxicos + cardiopatia | CAPES Teses | 1 |
 | temperatura + cardiopatia congênita | CAPES Teses | 7 |
+
+A API do Catálogo de Teses devolve no máximo 20 itens por página; o coletor agora percorre todas as páginas. Foram recuperados **560 registros** (552 IDs únicos; 8 repetidos entre consultas). Os 552 registros únicos foram triados por título; **1 tese** (revisão sistemática sobre agrotóxicos e malformações congênitas) foi lida em nível de resumo e incluída como evidência indireta para `EXP:PEST → CHD:ALL`. As outras 551 foram excluídas por não avaliarem exposição ambiental específica ou por serem estudos clínicos/cirúrgicos. Decisões em `literature/screening/capes_triage.csv`; ver `docs/16_CAPES_MCP.md`.
 
 ## 5. Deduplication and screening flow (PRISMA-ScR)
 
@@ -154,19 +156,50 @@ Deduplication key precedence: PMID → DOI → normalised title (alphanumeric, l
 | PubMed pair searches (196) | 513 | top 15 per pair |
 | Europe PMC searches (5) | 439 | top 100 / all available |
 | SciELO via Crossref (5) | 500 | 100 per query |
-| CAPES Teses (4) | 28 | 20 per query; 560 total hits |
-| **Total raw records** | **1,978** | includes repeats across pair searches |
-| Duplicates removed | 529 | within-source repeats + PMID/DOI/title |
-| **Unique records screened** | **1,449** | title/abstract (automated triage) |
+| CAPES Teses (4) | 560 | all pages retrieved; 552 unique IDs |
+| **Total raw records** | **2,510** | includes repeats across pair searches |
+| Duplicates removed | 540 | within-source repeats + PMID/DOI/title |
+| **Unique records screened** | **1,970** | title/abstract (automated triage) |
 | Unique with abstract (PubMed/Europe PMC subset) | 1,003 | 91.6% of that subset |
-| Manually curated anchor studies | 33 | 54 evidence edges |
+| Manually curated anchor studies | 34 | 55 evidence rows = 54 unique relations (33 PMIDs + 1 CAPES thesis) |
+| Batch curation from the exhaustive layer | 29 | 23 first-pass candidates plus 11 second-pass proposals and one manual addition; 5 rejected (2 already curated, 1 duplicate publication, 1 combined exposure, 1 combined CoA/VSD) |
 
 Machine-readable: `reports/prisma_flow.csv`.
+
+### Cobertura real por base (o que foi recuperado)
+
+A busca é **top-N** para PubMed, Europe PMC e SciELO; apenas a CAPES foi recuperada em todas as páginas. Isso é uma assimetria deliberada e declarada:
+
+| Base | Hits totais | Registros recuperados | Estratégia |
+|---|---:|---:|---|
+| PubMed (domínios) | 25.441 | 498 | top 100 por domínio |
+| PubMed (pares) | 546 | 513 | top 15 por par (123 pares com hits) |
+| Europe PMC | 4.789 | 439 | top 100 por domínio |
+| SciELO via Crossref | 83.157 | 500 | top 100 por consulta |
+| CAPES Teses | 560 | 560 | todas as páginas (552 IDs únicos) |
+
+Os números de hits do SciELO são altos porque a consulta Crossref é ampla e o filtro de prefixo 10.1590 não é um mecanismo de busca preciso. A cobertura detalhada está em `reports/retrieval_coverage.csv` e `.md`.
+
+### Recuperação exaustiva e camada de estudos triados
+
+Depois da revisão, foi executada uma recuperação **exaustiva** de todas as consultas pré-registradas:
+
+| Base | Hits totais | Recuperados | Candidatos (antes de dedup) |
+|---|---:|---:|---:|
+| PubMed, domínios | 25.442 | 25.406 | 4.181 |
+| PubMed, pares | 666 | 663 | 485 |
+| Europe PMC | 4.789 | 4.789 | 477 |
+| SciELO via Crossref | 83.157 | 83.157 | 2 |
+| CAPES Teses | 560 | 560 | 1 (após triagem manual) |
+
+Após deduplicação, há **3.963 estudos candidatos**; **638** têm fenótipo CHD detectado. Eles foram organizados em uma **camada separada** (`outputs/graph/screened_studies.json`), com **13.723 relações Study→conceito**. Essa camada é gerada por triagem automática, **não é evidência** e não entra em `evidence.csv`, caminhos, centralidade ou conclusões.
+
+A triagem automática de todos os registros recuperados está em `literature/screening/all_records_triage.csv`; os candidatos estão em `literature/screening/exhaustive_candidates.csv`; os resumos com SHA-256 dos arquivos brutos estão em `reports/exhaustive_retrieval.csv`. Os registros brutos compactados ficam em `data_raw/literature/full/` (não versionado, re-downloadable).
 
 ### Screening procedure actually used
 
 1. **Automated triage** of all retrieved records (`literature/screen.py`): species, study design, exposure-window vocabulary, mechanism vocabulary, phenotype vocabulary, review flag.
-2. **Manual reading** of anchor studies (29) selected to cover: each exposure with positive human evidence, each mechanism with experimental evidence, each process→phenotype link, and the classic gene discoveries.
+2. **Manual reading** of 34 anchor studies (33 PMIDs + 1 CAPES thesis) selected to cover: each exposure with positive human evidence, each mechanism with experimental evidence, each process→phenotype link, and the classic gene discoveries. All 552 unique CAPES records were title-screened; one thesis was read at abstract level and included. In addition, 23 first-pass candidates and 11 second-pass proposals from the exhaustive layer were reviewed; 29 became evidence and 5 were rejected.
 3. **Audit** of quote fidelity at build time (100%) and re-check of a random 25% at validation time.
 
 This is **not a systematic review**. It is a structured, non-systematic search with targeted manual curation: there was no dual screening of all records, no full-text review and no formal risk-of-bias instrument.

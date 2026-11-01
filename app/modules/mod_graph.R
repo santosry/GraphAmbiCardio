@@ -44,15 +44,42 @@ mod_graph_ui <- function(id) {
         )
       ),
       div(
-        class = "graph-legend",
-        lapply(names(TYPE_LABELS), function(t) {
-          tags$span(
-            class = "graph-legend-item",
-            tags$span(class = "graph-legend-swatch",
-                      style = paste0("background:", TYPE_COLORS[[t]], ";")),
-            TYPE_LABELS[[t]]
+        class = "graph-legend-panel",
+        div(
+          class = "graph-legend-group",
+          div(class = "graph-legend-title", "Nós: forma e cor"),
+          div(
+            class = "graph-legend-items",
+            lapply(names(TYPE_LABELS), function(t) {
+              tags$span(
+                class = "graph-legend-item",
+                tags$span(class = paste("graph-legend-shape", TYPE_SHAPE_CLASS[[t]]),
+                          style = paste0("background:", TYPE_COLORS[[t]], ";")),
+                TYPE_LABELS[[t]]
+              )
+            })
           )
-        })
+        ),
+        div(
+          class = "graph-legend-group",
+          div(class = "graph-legend-title", "Arestas: nível de evidência"),
+          div(
+            class = "graph-legend-items",
+            lapply(TIER_ORDER, function(t) {
+              tags$span(
+                class = "graph-legend-item",
+                tags$span(class = "graph-legend-line",
+                          style = paste0("border-top-color:", TIER_COLORS[[t]], ";")),
+                t
+              )
+            }),
+            tags$span(class = "graph-legend-item",
+                      tags$span(class = "graph-legend-line graph-legend-line-dashed"),
+                      "Hipótese ou inferida (tracejada)")
+          )
+        ),
+        p(class = "graph-legend-note",
+          "A forma identifica o tipo de nó; a cor reforça o tipo. Nas arestas, a cor indica o nível de evidência e o tracejado indica hipótese ou regra inferida.")
       ),
       div(
         class = "figure-canvas html-fill-container graph-canvas",
@@ -143,9 +170,7 @@ mod_graph_server <- function(id) {
           title = as.character(paste0("<b>", full_label, "</b><br>", TYPE_LABELS[type],
                                       "<br><span style='color:#666'>", node_id, "</span>")),
           color = unname(TYPE_COLORS[type]),
-          shape = ifelse(type == "Phenotype", "hexagon",
-                         ifelse(type == "Exposure", "square",
-                                ifelse(type == "Process", "triangle", "dot"))),
+          shape = unname(TYPE_SHAPES[type]),
           level = ifelse(type == "Exposure", 0,
                          ifelse(type %in% c("Mechanism", "Gene"), 1,
                                 ifelse(type %in% c("Process", "Pathway"), 2, 3))),

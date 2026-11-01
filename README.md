@@ -1,162 +1,391 @@
 # GraphAmbiCardio
 
-**GraphAmbiCardio** — grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas.
-**Campos dos Goytacazes, RJ, 2010–2025.**
+**Um grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas.**
+Campos dos Goytacazes, RJ, 2010 a 2025.
 
-[![status](https://img.shields.io/badge/status-v0.4.0-blue)]()
-[![Python](https://img.shields.io/badge/python-3.12-blue)]()
-[![R](https://img.shields.io/badge/R-%E2%89%A54.4-276DC3)]()
+[![Versão](https://img.shields.io/badge/vers%C3%A3o-0.4.0-1f6feb)](CHANGELOG.md)
+[![Python](https://img.shields.io/badge/python-3.12-3776AB)](pyproject.toml)
+[![R](https://img.shields.io/badge/R-%E2%89%A5%204.4-276DC3)](renv.lock)
+[![Julia](https://img.shields.io/badge/Julia-%E2%89%A5%201.10-9558B2)](julia/Project.toml)
 [![CI](https://github.com/santosry/GraphAmbiCardio/actions/workflows/ci.yml/badge.svg)](https://github.com/santosry/GraphAmbiCardio/actions/workflows/ci.yml)
+[![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-yellow)](LICENSE)
+[![FAIR](https://img.shields.io/badge/metadados-FAIR-2ea44f)](fair/metadata.json)
+[![App](https://img.shields.io/badge/app-online-ff69b4)](https://ryansantospaulo.shinyapps.io/graphambicardio/)
+[![Não é revisão sistemática](https://img.shields.io/badge/n%C3%A3o%20%C3%A9-revis%C3%A3o%20sistem%C3%A1tica-lightgrey)](#11-limitações-honestas)
+[![Testes](https://img.shields.io/badge/testes-pytest%20%2B%20Julia-2ea44f)](tests)
 
-> **Em uma frase:** o GraphAmbiCardio organiza, em um só lugar, o que a ciência sabe sobre como o ambiente (calor, poluição do ar, umidade) pode influenciar o desenvolvimento do coração do bebê — e mostra onde ainda faltam evidências.
+> **Em uma frase:** o GraphAmbiCardio organiza, em um só lugar, o que a ciência sabe sobre como o ambiente (calor, poluição do ar, agrotóxicos, metais, álcool, tabaco e outros fatores) pode influenciar o desenvolvimento do coração do bebê, e mostra onde ainda faltam evidências.
 
-> **Este estudo não é uma revisão sistemática.** É uma busca organizada, com curadoria feita por pessoas, bases biológicas públicas e análise de dados de saúde de Campos dos Goytacazes. Não prova causalidade.
-
----
-
-## Em linguagem simples
-
-- **O problema:** cardiopatias congênitas são alterações no coração que aparecem antes do nascimento. Fatores ambientais podem contribuir, mas a ciência ainda tem muitas lacunas.
-- **O que o projeto faz:** junta estudos científicos, genes, fenótipos (sinais clínicos), dados de nascimentos e dados de clima/poluição em um mapa visual chamado **grafo**. Cada ligação mostra de onde veio a informação e quão forte ela é.
-- **O que ele não faz:** não diz que uma exposição “causa” cardiopatia em uma pessoa; não substitui avaliação médica; não usa dados individuais no site.
-- **Para que serve:** ajudar pesquisadores, gestores e o público a ver o que está bem sustentado, o que é apenas hipótese e onde faltam estudos.
-- **Ciência aberta:** código, metadados, figuras, tabelas e instruções de reprodução são públicos. Dados individuais de saúde não são redistribuídos; o site mostra apenas agregados.
+> **Este estudo não é uma revisão sistemática.** É uma busca organizada, com curadoria documentada, bases biológicas públicas e análise de dados de saúde de Campos dos Goytacazes. Não prova causalidade.
 
 ---
 
-## Ciência aberta — compromisso verificável
+## Comece por aqui
 
-O GraphAmbiCardio adota **ciência aberta por padrão**, com um limite explícito: dados individuais de saúde não são redistribuídos.
+| Se você quer... | Vá para |
+|---|---|
+| Ver o resultado sem instalar nada | [aplicativo publicado](https://ryansantospaulo.shinyapps.io/graphambicardio/) |
+| Entender o projeto em 2 minutos | [seção 1](#1-a-pergunta-em-linguagem-simples) |
+| Saber de onde vem cada estudo | [seção 2](#2-de-onde-vêm-os-estudos-a-trilha-de-proveniência) |
+| Ver os números do grafo | [seção 3](#3-o-que-o-grafo-contém) |
+| Olhar as figuras | [seção 6](#6-figuras) |
+| Reproduzir o pipeline | [seção 8](#8-reprodutibilidade) |
+| Conferir a auditoria | [seção 9](#9-auditoria-e-verificação) |
+| Conhecer os limites | [seção 11](#11-limitações-honestas) |
 
-| Artefato | Onde está | Verificação |
-|---|---|---|
-| Código e pipeline | repositório público, licença MIT | `LICENSE`, `Makefile`, `.github/workflows/ci.yml` |
-| Dados derivados e agregados | `data_processed/`, `outputs/`, `app/data/` | schemas em `scripts/validation/02_schema.py` |
-| Metadados FAIR | `fair/metadata.json`, `fair/datapackage.json` | SHA-256 por recurso; `scripts/compliance/01_check.py` |
-| Figuras e tabelas | `outputs/figures/site/`, `outputs/tables/` | `manifest.json` com fonte, período e SHA-256 |
-| Documentação | `docs/` | protocolo, métodos, limitações, governança e declaração de IA |
-| Privacidade | `docs/15_DATA_GOVERNANCE.md` | microdados individuais fora do Git; app só com agregados |
-| Reprodutibilidade | `uv.lock`, `renv.lock`, `run_all.sh` | versões fixadas, cache HTTP, testes e validação |
+---
 
-**Como verificar localmente:**
+## Como ler este repositório
 
-```bash
-.venv/Scripts/python.exe scripts/validation/02_schema.py
-.venv/Scripts/python.exe scripts/compliance/01_check.py
-.venv/Scripts/python.exe -m pytest -q
+O repositório segue uma linha de raciocínio única: pergunta, busca, triagem, curadoria, grafo, análise, site e limites. Cada etapa tem um artefato verificável.
+
+```mermaid
+flowchart TD
+    A[Pergunta de pesquisa] --> B[17 exposições x 14 fenótipos CHD]
+    B --> C[Buscas registradas em 5 bases]
+    C --> D[Recuperação exaustiva]
+    D --> E[Triagem automática: 3.963 candidatos]
+    E --> F[Camada de estudos triados: nunca é evidência]
+    E --> G[Curadoria: 59 estudos-âncora]
+    E --> H[Promoção em lote com revisão: 29 arestas]
+    G --> I[Grafo com proveniência]
+    H --> I
+    I --> J[Caminhos, lacunas e hipóteses]
+    L[Dados locais: SINASC, SIH, clima e PM2,5] --> K[Site Shiny e painel epidemiológico]
+    J --> K
 ```
 
-Os resultados ficam em `reports/schema_validation.md`, `reports/compliance_report.md` e `reports/validation_report.md`. Nenhum resultado é apresentado como causal; hipóteses permanecem separadas das evidências.
+**Cinco regras que o projeto nunca quebra:**
+
+1. **Toda aresta tem fonte.** Sem referência e trecho verbatim, a aresta não entra.
+2. **Hipótese não é evidência.** A camada de hipóteses fica fora de caminhos, centralidade e conclusões.
+3. **Triagem automática não é curadoria.** Os 3.963 estudos triados vivem em uma camada separada.
+4. **Dado individual não é redistribuído.** O site mostra apenas agregados.
+5. **Nenhum resultado é apresentado como causal.** Modelos locais são exploratórios e passam por correção de multiplicidade.
 
 ---
 
-## 1. O que é o projeto
+## 1. A pergunta, em linguagem simples
 
-O GraphAmbiCardio integra cinco camadas:
+**O problema.** Cardiopatias congênitas são alterações na formação do coração que aparecem antes do nascimento. Fatores ambientais podem contribuir, mas a ciência ainda tem muitas lacunas e a evidência está espalhada entre epidemiologia, toxicologia, biologia do desenvolvimento e genética.
 
-1. **Literatura** — PubMed/MEDLINE, Europe PMC, SciELO (metadados via Crossref, prefixo DOI 10.1590) e CAPES (Catálogo de Teses e Dissertações).
-2. **Bases biológicas curadas** — HPO, ClinVar, NCBI Gene, Reactome e Enrichr.
-3. **Dados epidemiológicos locais** — SINASC (nascidos vivos) e SIH/SUS (internações), 2010–2025.
-4. **Exposição ambiental de área** — ERA5-Land via Open-Meteo com **modelo fixado em `era5_land`**, **INMET estação A607** (temperatura e umidade) e **PM2,5 municipal do VIGIAR/Ministério da Saúde via pacote `vigiar`** (2010–2025). Séries de área, não exposição individual.
-5. **Grafo com proveniência** — cada relação carrega tipo de evidência, espécie, desenho, janela de exposição, referência, confiança, limitações e **nível de evidência** (bem sustentada / plausível experimental / não demonstrada / contextual).
+**A pergunta.** Quais ligações entre exposição ambiental e cardiopatia congênita têm apoio humano direto? Quais cadeias mecanísticas são apenas experimentais? Onde a evidência converge e onde faltam estudos? O que os dados locais acrescentam, e com quais limites?
 
-Há duas camadas integradas e **nunca misturadas**:
+**O que o projeto faz.**
 
-- **Camada de evidências** — relações documentadas e anotadas em bases curadas.
-- **Camada de hipóteses** — caminhos candidatos gerados por composição de arestas e sobreposição gênica, com o **elo ausente explicitado**. Hipóteses não entram em análises de caminhos, centralidade ou conclusões.
+| Faz | Não faz |
+|---|---|
+| Organiza estudos, genes, fenótipos e dados locais em um grafo navegável | Não afirma que uma exposição "causa" cardiopatia em uma pessoa |
+| Mostra a fonte, o trecho e o nível de evidência de cada ligação | Não substitui avaliação médica |
+| Separa evidência observada, anotação estruturada, inferência, hipótese e contexto ecológico | Não usa dados individuais no site |
+| Mede cobertura de busca, lacunas e robustez dos modelos | Não se apresenta como revisão sistemática |
 
 ---
 
-## 2. Resultados principais (v0.4.0)
+## 2. De onde vêm os estudos: a trilha de proveniência
 
-### Base de evidências
+Esta é a parte que mais importa para a credibilidade do grafo. Cada estudo percorre um caminho explícito, e cada etapa deixa um arquivo próprio.
 
-| Domínio | PubMed | Europe PMC |
-|---|---:|---:|
-| Exposição → CHD | 1,512 | 1,599 |
-| Exposição → mecanismo | 8,520 | 171 |
-| Mecanismo → cardiogênese | 6,736 | 39 |
-| Cardiogênese → fenótipo | 7,681 | 593 |
-| Gene → fenótipo | 992 | 2,387 |
+### 2.1 Buscas registradas
 
-- **196 pares exposição × fenótipo**: 73 sem literatura direta, 66 esparsos, 36 limitados, 19 moderados, 2 de alto volume.
-- **1.978 registros brutos → 529 duplicatas → 1.449 únicos** (1.003 com resumo no subconjunto PubMed/Europe PMC).
-- **33 estudos-âncora** lidos manualmente; **54 arestas curadas** com citações verbatim verificadas contra o PubMed.
-- SciELO: 100 registros por consulta via Crossref; 42–60 com termos de CHD. CAPES: 552 teses/dissertações para “cardiopatias congênitas”.
+As consultas foram definidas antes da coleta: 17 exposições, 14 fenótipos de cardiopatia congênita e o cruzamento entre eles.
 
-### Grafo
+| Base | O que foi usado | Como entrar no projeto |
+|---|---|---|
+| PubMed/MEDLINE | 5 buscas por domínio e 123 buscas por par exposição x fenótipo | metadados e resumos via E-utilities |
+| Europe PMC | 5 buscas por domínio, descoberta independente | API REST |
+| SciELO | 5 consultas via Crossref, prefixo DOI 10.1590 | metadados |
+| CAPES | 4 consultas ao Catálogo de Teses e Dissertações | API pública, todas as páginas |
+| Bases biológicas | HPO, ClinVar, NCBI Gene, Reactome, Enrichr | anotações curadas |
 
-- **2.238 nós**, **4.117 relações**, **4.613 linhas de evidência**.
-- Camadas: **observada 54**, **estruturada 4.040**, **inferida 4**, **hipótese 14**, **ecológica 3**.
-- **27 caminhos exposição→fenótipo** (17 diretos, 10 mecanísticos) e **20 lacunas explícitas**.
-- **Hipóteses por sobreposição gênica:** família completa de **89 testes** (exposição × mecanismo × fenótipo), **5 com sobreposição ≥2 genes** e **nenhuma significativa após BH-FDR**; universo HPO de **978 genes**; permutação pareada por tamanho como sensibilidade. **7 caminhos candidatos com elo ausente**.
-- Exportações: `outputs/graph/graph.graphml`, `graph.json`, `nodes.csv`, `relations.csv`, `evidence.csv`.
+Detalhes de cada string, data e contagem: `docs/02_SEARCH_STRATEGY.md` e `literature/searches/*.json`.
 
-### Dados locais
+### 2.2 Recuperação e triagem
 
-- SINASC: **98.598 nascimentos** (microdados 2010–2022 e 2025; **2023–2024 apenas agregados do TabNet**). **52 casos de CHD core (Q20–Q26; 5,27/10.000)** e **8 registros Q27–Q28** (não CHD; 1 também tinha código Q20–Q26) — subnotificação grave. TabNet 2023 e 2024: **5 e 5 casos no grupo amplo Q20–Q28**, mantidos em colunas separadas e **não imputados como CHD core**.
-- SIH/SUS: **474 internações** por diagnóstico principal **Q20–Q26** (**75 Q27–Q28** em série separada; 12 apenas secundárias), **30 óbitos**, **51,9% fora do município**, 16 hospitais. AIH não são pessoas.
-- Clima: **5.844 dias** ERA5-Land com modelo **fixado em `era5_land`** (resolução ~9 km; célula retornada −21,800/−41,300; elevação 12 m); limiar de onda de calor **33,3 °C**; **68 ondas / 353 dias**. Validação com **INMET A607** (2010–2025): Tmax r=0,937 (viés +1,20 °C; RMSE 1,78); Tmin r=0,942 (−0,77; 1,20); Tmean r=0,972 (−0,23; 0,67); umidade r=0,787 (+1,61; 4,77). Série de estação, distinta da reanálise.
-- Sensibilidade Julia (Monte Carlo da janela gestacional, 500 réplicas): mediana OR **1,157**; intervalo 95% **1,116–1,202**; cenários fixos de −7 a +7 dias: **1,075–1,224**. O erro individual médio tende a se cancelar; o deslocamento sistemático da janela é o que mais altera a estimativa.
-- Modelo exploratório (52 casos core; **47 eventos** nos modelos completos): temperatura OR **1,155/SD** (0,87–1,535; p = 0,318; q = 0,509); Firth **1,159** (0,869–1,532; p = 0,304); cluster mensal **1,155** (0,829–1,611; p = 0,394); ajuste socioeconômico Firth **1,187** (0,889–1,571; p = 0,236); ajuste sazonal **1,357** (0,914–2,013; p = 0,130); modelo mensal **RR 1,211** (0,918–1,599; p = 0,176). Sensibilidade da janela gestacional: principal **1,155**; −7 dias **1,221** (0,922–1,618; p = 0,164); +7 dias **1,071** (0,803–1,428; p = 0,641). PM2,5 municipal **0,842** (0,625–1,134; p = 0,257) e ajuste mútuo PM2,5 **0,872** / temperatura **1,106**. **Nenhum modelo sobrevive ao FDR (q < 0,05); não é achado causal.**
+Primeiro foi feita uma busca top-N, que deixou uma assimetria declarada. Depois, todas as consultas foram recuperadas por completo.
+
+| Base | Hits totais | Recuperados na busca original | Recuperados na busca exaustiva |
+|---|---:|---:|---:|
+| PubMed, domínios | 25.442 | 498 | 25.406 |
+| PubMed, pares | 666 | 513 | 663 |
+| Europe PMC | 4.789 | 439 | 4.789 |
+| SciELO via Crossref | 83.157 | 500 | 83.157 |
+| CAPES Teses | 560 | 560 | 560 |
+
+O registro bruto tem **2.510 linhas**, **540 duplicatas** e **1.970 registros únicos**. A triagem automática gerou **3.963 estudos candidatos** e **13.723 relações estudo a conceito**; **638** têm fenótipo de cardiopatia congênita detectado.
+
+> **Importante:** essa camada automática (**Estudos triados**) é uma ferramenta de priorização. Ela não entra em `evidence.csv`, não entra em caminhos e não entra em conclusões. O arquivo é `outputs/graph/screened_studies.json`, descrito em `reports/screened_studies.md`.
+
+### 2.3 Curadoria manual
+
+Os estudos-âncora foram lidos, e cada aresta exige um trecho verbatim do resumo.
+
+| Item | Quantidade |
+|---|---:|
+| Estudos-âncora | **59** (58 PMIDs + 1 tese CAPES) |
+| Linhas de evidência curada | **84** |
+| Relações únicas | **76** |
+| Linhas da curadoria manual anterior | 54 |
+| Linhas promovidas pela curadoria em lote revisada | 29 |
+| Linha da tese CAPES | 1 |
+
+A tese incluída é uma revisão sistemática sobre exposição materna a agrotóxicos e malformações congênitas (CAPES 7850222), tratada como evidência **indireta**.
+
+Os textos completos disponíveis estão em `data_raw/anchor_fulltext/`: 4 PDFs e 6 XML de texto completo, 24 resumos e um `index.html` navegável com o manifesto da pasta. O download é local e não versionado, feito por `scripts/collection/05_download_anchor_fulltext.py`; registros pagos ficam com o resumo e os links canônicos.
+
+### 2.4 Promoção em lote com camada de revisão
+
+Para não perder os 638 candidatos com fenótipo CHD, foi criado um fluxo separado de promoção em lote. Ele é deliberadamente conservador.
+
+| Etapa | Resultado |
+|---|---:|
+| Candidatos CHD com PMID | 635 |
+| Candidatos automáticos revisados (primeira passagem) | **23** |
+| Aprovados pela regra estrita na fila atual | **22** |
+| Propostas de segunda passagem revisadas | **11** (10 verificadas, 1 recusada) |
+| Total de linhas de revisão | **34** (29 verificadas, 5 recusadas) |
+| Registros ainda sem decisão | **605** |
+
+A **primeira passagem** exige, na mesma cláusula: **uma** exposição, **um** fenótipo e **um** tamanho de efeito explícito (OR, RR, HR ou PR). Se a frase cita dois fenótipos, dois resultados ou apenas um valor de p, o candidato vai para revisão e não vira aresta.
+
+A **segunda passagem** trata os 97 resumos humanos que têm tamanho de efeito, mas citam mais de um fenótipo. Ela não promove nada sozinha: mapeia cada efeito para o fenótipo **e** para a exposição mais próximos na mesma cláusula e grava uma proposta em `literature/curated/batch_chd_proposals.csv`. Só vira aresta se o revisor aceitar a proposta, com trecho, efeito, população, janela e desenho explícitos. Isso corrigiu casos como o de PM10 e estenose pulmonar, em que a regra estrita descartava a frase inteira.
+
+A revisão também permite **adição manual** quando a triagem automática não listou um fenótipo que o resumo reporta. A condição é que o PMID já exista na fila e que a linha de revisão traga citação, efeito e desenho. O build continua verificando se a citação é verbatim.
+
+Os 605 registros restantes foram triados por prioridade em `reports/batch_chd_triage.md`: **97** têm tamanho de efeito explícito, 172 são estudos humanos em que a exposição ou o fenótipo candidato não foi confirmado, 165 são animais ou celulares, 60 são cirúrgicos ou diagnósticos, 17 são revisões ou meta-análises, 93 não têm sinal suficiente e 1 não tem resumo. A triagem é heurística e não altera evidência; ela só indica onde a leitura humana rende mais.
+
+A revisão é registrada em `literature/curated/batch_chd_review.csv`, com:
+
+- status `verified` ou `rejected`;
+- trecho verbatim usado como citação;
+- efeito revisado, população e janela de exposição;
+- desenho do estudo corrigido quando a triagem automática errou;
+- nota curta com o motivo, inclusive para achados condicionais (interação).
+
+Os cinco candidatos recusados foram:
+
+1. **PMID 2091934**, publicação duplicada dos mesmos dados finlandeses de 1982 a 1983 já capturados por **PMID 1397217** (mesmo OR 1,9 e mesmo intervalo).
+2. **PMID 37610216**, cujo efeito se refere à exposição **combinada** de PM10 e CO, não ao PM10 isolado.
+3. **PMID 32278917**, redescoberto pela automação, mas já presente na curadoria manual com a mesma exposição, fenótipo e referência (NO2 para coarctação, OR 1,14). Duplicatas são bloqueadas automaticamente.
+4. **PMID 35916623**, também já presente na curadoria manual (tabagismo para tetralogia de Fallot, RR 9,84), pelo mesmo motivo.
+5. **PMID 11745829**, cujo efeito de solvente para VSD se refere a **CoA/VSD** (coarctação associada a VSD), não a VSD isolado. A aresta solvente para coarctação do mesmo estudo foi aceita.
+
+As duas redescobertas são um controle positivo do fluxo: a automação encontrou exatamente as arestas que a curadoria manual já havia aceitado. Elas não entram duas vezes.
+
+Dois achados foram aceitos com ressalva explícita, porque são condicionais: **PMID 28520847** (NO2 apenas no estrato de baixa metionina) e **PMID 32091506** (PM2,5 apenas entre gestantes que tiveram evento de calor extremo). O texto do efeito e a nota dizem isso em cada linha.
+
+### 2.5 Verificação de citações
+
+Todos os trechos curados passam por verificação automática:
+
+| Verificação | Cobertura | Falha |
+|---|---|---|
+| Trecho existe no resumo do PubMed | 100% das arestas PMID | aborta a construção do grafo |
+| Trecho existe no resumo arquivado da tese CAPES | 100% das arestas CAPES | aborta a construção do grafo |
+| Rechecagem independente por amostragem | 25% das arestas curadas | registra no relatório de validação |
+| Revisão em lote contra a fila automática | 100% das linhas verificadas | falha a validação |
+| Duplicata de aresta já curada manualmente | 100% das linhas verificadas | falha a validação |
+
+O verificador de citações está em `scripts/integration/01_build_graph.py`; a auditoria da camada de revisão está em `scripts/validation/01_validate.py`.
+
+---
+
+## 3. O que o grafo contém
+
+O grafo tem **2.238 nós**, **4.135 relações** e **4.639 linhas de evidência**. As camadas nunca são misturadas nas análises.
+
+```mermaid
+flowchart LR
+    OBS[Observada: 76 relações] --> STR[Estruturada: 4.040]
+    INF[Inferida: 4] --> HYP[Hipótese: 10]
+    ECO[Ecológica: 5]
+```
+
+| Camada | Relações | O que significa |
+|---|---:|---|
+| **Observada** | 76 | associações e mecanismos documentados com trecho e referência |
+| **Estruturada** | 4.040 | anotações de HPO, ClinVar, Reactome e NCBI Gene |
+| **Inferida** | 4 | mapeamento por palavra-chave de via para processo, explicitamente marcado |
+| **Hipótese** | 10 | caminhos candidatos com elo ausente, fora das análises |
+| **Ecológica** | 5 | indicadores locais de contexto, sem inferência individual |
 
 ### Hierarquia de exposições
 
 | Exposição | Papel | Evidência epidemiológica | Evidência molecular |
 |---|---|---|---|
 | PM2,5 | **Eixo principal** | Moderada | Relativamente consistente (AHR, ROS, mitocôndria, Wnt) |
-| Temperatura | **Eixo secundário** | Crescente, inclusive no Brasil | Parcial (neural crest/TRPV) |
-| PM10, NO₂, CO, O₃ | Condicional | Específica por fenótipo | Limitada |
+| Temperatura | **Eixo secundário** | Crescente, inclusive no Brasil | Parcial (neural crest e TRPV) |
+| PM10, NO2, CO, O3 | Condicional | Específica por fenótipo | Limitada |
 | Umidade | **Contextual** | Muito limitada | Sem conexão estabelecida |
 
 ---
 
-## 3. GraphAmbiCardio: aplicativo Shiny
+## 4. Resultados principais
 
-**Site publicado:** **https://ryansantospaulo.shinyapps.io/graphambicardio/**
+### Rede
 
-O plano gratuito do shinyapps.io coloca o aplicativo em repouso após inatividade; a primeira abertura pode levar ~30 segundos.
+- **49 caminhos exposição a fenótipo**: 39 diretos e 10 mecanísticos.
+- **20 lacunas explícitas**, ou seja, entidades sem nenhuma aresta curada de saída.
+- **7 caminhos candidatos com elo ausente**, marcados como hipótese.
+- Fenótipos com maior grau: VSD (535), ASD (497), PDA (410), TOF (199), COA (162).
 
-```r
-# execução local
-shiny::runApp("app")
-```
+### Hipóteses por sobreposição gênica
 
-Aplicativo em português brasileiro com oito abas:
+- Família completa de **75 testes** (exposição x mecanismo x fenótipo).
+- **1** hipótese com sobreposição de 2 ou mais genes; **1** reportada.
+- **Nenhuma** significativa após BH-FDR, e nenhuma significativa na permutação pareada por tamanho (1.000 permutações).
+- Universo HPO de **978 genes**.
 
-1. **Início** — visão geral, KPIs e hierarquia.
-2. **Grafo interativo** — filtros por tipo, nível de evidência, exposição e fenótipo; clique para ver evidências.
-3. **Painel epidemiológico** — SINASC, SIH, clima e modelos, com avisos de interpretação.
-4. **Evidências** — tabela filtrável; seleção mostra todas as evidências, trechos e referências.
-5. **Hipóteses e lacunas** — caminhos candidatos, hipóteses por genes e lacunas.
-6. **Consulta científica** — pergunta por exposição e recupera mecanismos, fenótipos, genes, caminhos e referências.
-7. **Métodos** — desenho, buscas, bases, gradação e limitações.
-8. **Transparência e equipe** — metadados FAIR, licenças, autores com Lattes e declaração de IA (Portaria CNPq 2.664/2026).
+> Hipóteses são priorização para pesquisa, não achados. Elas não entram em caminhos, centralidade ou conclusões.
 
-Publicação: `Rscript scripts/deploy/deploy_shinyapps.R` (requer conta configurada no `rsconnect`).
+### Base de evidências por domínio
 
-Detalhes: `docs/14_APP.md`.
+| Domínio | PubMed | Europe PMC |
+|---|---:|---:|
+| Exposição para cardiopatia congênita | 1.512 | 1.599 |
+| Exposição para mecanismo | 8.520 | 171 |
+| Mecanismo para cardiogênese | 6.736 | 39 |
+| Cardiogênese para fenótipo | 7.681 | 593 |
+| Gene para fenótipo | 992 | 2.387 |
 
-**Figuras exportadas:** `outputs/figures/site/` contém PNGs de todas as figuras do site, os dados usados (`data/`), `manifest.json` com fonte/período/SHA-256 e `README.md` com as legendas.
+- **196 pares exposição x fenótipo**: 73 sem literatura direta, 66 esparsos, 36 limitados, 19 moderados e 2 de alto volume.
+- SciELO: 42 a 60 registros com termos de cardiopatia congênita por consulta.
+- CAPES: 560 registros recuperados (552 IDs únicos); após triagem, 1 tese incluída e 551 registros excluídos.
 
 ---
 
-## 4. Reprodutibilidade
+## 5. Dados locais e modelos exploratórios
+
+### SINASC
+
+- **98.598 nascimentos** (microdados de 2010 a 2022 e 2025; 2023 e 2024 apenas agregados do TabNet).
+- **52 casos de cardiopatia congênita core** (Q20 a Q26), **5,27 por 10.000** nascidos vivos, o que indica subnotificação grave.
+- **8 registros Q27 a Q28** (não são cardiopatia congênita core; 1 também tinha código Q20 a Q26).
+- TabNet 2023 e 2024: **5 e 5 casos** no grupo amplo Q20 a Q28, mantidos em colunas separadas e **não imputados** como core.
+
+### SIH/SUS
+
+- **474 internações** com diagnóstico principal Q20 a Q26.
+- **75 internações** com Q27 a Q28 em série separada e **12** apenas com diagnóstico secundário.
+- **30 óbitos**, **51,9%** das internações ocorreram fora do município de residência e **16 hospitais**.
+- AIH não são pessoas; não há identificador estável para readmissão.
+
+### Clima e poluição do ar
+
+- **5.844 dias** de ERA5-Land, com modelo **fixado em `era5_land`** (célula retornada -21,800 e -41,300; elevação 12 m).
+- Limiar de onda de calor de **33,3 °C** (P90): **68 ondas** e **353 dias**.
+- Validação com a estação **INMET A607** (2010 a 2025): Tmax r = 0,937 (viés +1,20 °C; RMSE 1,78); Tmin r = 0,942 (-0,77; 1,20); Tmean r = 0,972 (-0,23; 0,67); umidade r = 0,787 (+1,61; 4,77).
+- **PM2,5 municipal do VIGIAR** (Ministério da Saúde), série de área, não exposição individual.
+
+### Modelos exploratórios
+
+Com **52 casos core** e **47 eventos** nos modelos completos:
+
+| Modelo | Estimativa | IC 95% | p | q |
+|---|---|---:|---:|---:|
+| Temperatura (logístico) | OR 1,155 por DP | 0,87 a 1,535 | 0,318 | 0,509 |
+| Firth | OR 1,159 | 0,869 a 1,532 | 0,304 | 0,509 |
+| Cluster mensal | OR 1,155 | 0,829 a 1,611 | 0,394 | 0,524 |
+| Ajuste socioeconômico (Firth) | OR 1,187 | 0,889 a 1,571 | 0,236 | 0,509 |
+| Ajuste sazonal | OR 1,357 | 0,914 a 2,013 | 0,130 | 0,509 |
+| Modelo mensal (Poisson) | RR 1,211 | 0,918 a 1,599 | 0,176 | 0,509 |
+| Janela principal | OR 1,155 | 0,870 a 1,535 | 0,318 | 0,509 |
+| Janela -7 dias | OR 1,221 | 0,922 a 1,618 | 0,164 | 0,509 |
+| Janela +7 dias | OR 1,071 | 0,803 a 1,428 | 0,641 | 0,641 |
+| PM2,5 municipal | OR 0,842 | 0,625 a 1,134 | 0,257 | 0,509 |
+| PM2,5 e temperatura juntos | OR 0,872 e 1,106 | 0,640 a 1,189 e 0,822 a 1,487 | 0,386 e 0,506 | 0,524 e 0,578 |
+
+**Nenhum modelo sobrevive ao FDR (q < 0,05). Isso não é um achado causal.**
+
+### Sensibilidade Julia
+
+O módulo Julia faz uma simulação Monte Carlo do erro de medida da janela gestacional (500 réplicas):
+
+- mediana do OR: **1,157**;
+- intervalo de simulação de 95%: **1,116 a 1,202**;
+- cenários fixos de -7 a +7 dias: **1,075 a 1,224**.
+
+O erro individual médio tende a se cancelar; o deslocamento sistemático da janela é o que mais altera a estimativa. Não é um modelo bayesiano completo: é análise de sensibilidade.
+
+---
+
+## 6. Figuras
+
+Todas as figuras do site são exportadas com fonte, período e SHA-256 em `outputs/figures/site/manifest.json`. Os dados usados ficam em `outputs/figures/site/data/`.
+
+| Grafo interativo | SINASC |
+|---|---|
+| ![Grafo interativo de exposições, mecanismos, processos e fenótipos](outputs/figures/site/01_grafo_interativo.png) | ![SINASC: casos e taxa por 10.000 nascidos vivos](outputs/figures/site/02_sinasc.png) |
+
+| SIH/SUS | Clima (ERA5-Land) |
+|---|---|
+| ![SIH/SUS: internações e óbitos](outputs/figures/site/03_sih.png) | ![Clima: temperatura máxima mensal](outputs/figures/site/04_clima.png) |
+
+| Dias de calor e ondas de calor | PM2,5 municipal (VIGIAR) |
+|---|---|
+| ![Dias de calor e ondas de calor por ano](outputs/figures/site/05_calor.png) | ![PM2,5: série municipal do VIGIAR](outputs/figures/site/06_pm25.png) |
+
+| Validação INMET A607 vs ERA5-Land |
+|---|
+| ![Validação da exposição climática: INMET A607 vs ERA5-Land](outputs/figures/site/07_inmet_validacao.png) |
+
+Legendas completas: `outputs/figures/site/README.md`.
+
+---
+
+## 7. Aplicativo Shiny
+
+**Site publicado:** https://ryansantospaulo.shinyapps.io/graphambicardio/
+
+O plano gratuito do shinyapps.io coloca o aplicativo em repouso após inatividade; a primeira abertura pode levar cerca de 30 segundos.
+
+| Aba | O que mostra |
+|---|---|
+| **Início** | visão geral, KPIs e hierarquia de exposições |
+| **Grafo interativo** | filtros por tipo, nível de evidência, exposição e fenótipo; legenda com cor **e forma**; clique para ver evidências |
+| **Painel epidemiológico** | SINASC, SIH, clima, PM2,5 e modelos, com avisos de interpretação |
+| **Evidências** | tabela filtrável; a seleção mostra trechos e referências |
+| **Hipóteses e lacunas** | caminhos candidatos, hipóteses por genes e lacunas |
+| **Consulta científica** | pergunta por exposição e recupera mecanismos, fenótipos, genes, caminhos e referências |
+| **Métodos** | desenho, buscas, bases, gradação, cobertura e limitações |
+| **Transparência e equipe** | metadados FAIR, licenças, autores com Lattes e declaração de IA (Portaria CNPq 2.664/2026) |
+
+Execução local:
+
+```r
+shiny::runApp("app")
+```
+
+Publicação:
+
+```bash
+Rscript scripts/deploy/deploy_shinyapps.R
+```
+
+Detalhes: `docs/14_APP.md`.
+
+---
+
+## 8. Reprodutibilidade
 
 ### Requisitos
 
-- Python **3.12** (decodificador DBC do DATASUS).
-- R **≥ 4.4** com `shiny`, `bslib`, `DT`, `visNetwork`, `plotly`, `dplyr`, `tidyr`, `readr`, `jsonlite`, `stringr`, `scales`, `htmltools`, `igraph`, `commonmark`, `viridisLite`, `vigiar` e `rsconnect`. As versões exatas estão em `renv.lock`.
+- Python **3.12** (necessário para o decodificador DBC do DATASUS).
+- R **≥ 4.4** com os pacotes de `renv.lock`.
+- **Julia ≥ 1.10** para a simulação Monte Carlo.
 - Internet para NCBI, Europe PMC, Crossref, HPO, Reactome, Enrichr, Open-Meteo e DATASUS.
-- **Julia ≥ 1.10** para o módulo de simulação Monte Carlo da janela gestacional (`julia/`).
+
+### Instalação
 
 ```bash
 uv venv .venv --python 3.12
-uv sync --extra dev --extra datasus   # usa uv.lock
-# ou: uv pip install --python .venv -e ".[dev,datasus]"
-# R: renv::restore()   # usa renv.lock
+uv sync --extra dev --extra datasus
+# R: renv::restore()
+```
 
-# pipeline Python
+### Pipeline
+
+```bash
 .venv/Scripts/python.exe scripts/collection/01_literature.py
 .venv/Scripts/python.exe scripts/collection/02_databases.py
 .venv/Scripts/python.exe scripts/collection/03_clinvar_enrichr.py
@@ -177,106 +406,131 @@ JULIA_REPS=500 julia --project=julia julia/gestational_window_simulation.jl
 .venv/Scripts/python.exe scripts/app/01_prepare_data.py
 .venv/Scripts/python.exe scripts/app/02_fair_metadata.py
 .venv/Scripts/python.exe -m pytest -q
-
-# coletores em R (SciELO via Crossref, CAPES, INMET e VIGIAR)
-Rscript R/collection/scielo.R
-Rscript R/collection/capes.R
-Rscript R/collection/inmet.R
-Rscript R/collection/pm25_vigiar.R
 ```
 
-Ou `make all`. O cache HTTP e os dados brutos ficam em `data_raw/` (ignorado pelo git); toda resposta usada no grafo é rastreável. **Dados individuais de SINASC/SIH não são versionados** — ver `docs/15_DATA_GOVERNANCE.md`.
+### Alvos do Makefile
 
-### Módulo Julia
+| Alvo | O que faz |
+|---|---|
+| `make all` | pipeline completo de coleta, integração e validação |
+| `make graph` | reconstrói grafo, análises, app, FAIR, benchmark e conformidade |
+| `make curation` | reconstrói a fila de candidatos e o pacote de revisão |
+| `make exhaustive` | recuperação exaustiva e camada de estudos triados |
+| `make julia-test` | testes unitários do módulo Julia |
+| `make audit` | testes Python e Julia, validação, schema, conformidade e parse de R |
+| `make figures` | exporta as figuras do site |
+| `make clean-local` | remove dados brutos e cache que podem ser baixados de novo |
 
-O único módulo em Julia é a simulação Monte Carlo do erro de medida da janela gestacional:
+> O `make` não está instalado no ambiente Windows usado no desenvolvimento. Nesse caso, rode os comandos diretamente, como na lista acima.
+
+### Curadoria em lote
 
 ```bash
-JULIA_REPS=500 julia --project=julia julia/gestational_window_simulation.jl
+.venv/Scripts/python.exe scripts/curation/01_batch_chd_promotion.py
+.venv/Scripts/python.exe scripts/curation/02_export_review_packet.py
+.venv/Scripts/python.exe scripts/curation/03_propose_ambiguous.py
+.venv/Scripts/python.exe scripts/curation/04_triage_remaining.py
 ```
 
-Ele usa `julia/Project.toml`/`Manifest.toml`, lê o arquivo individual local, escreve apenas agregados em `outputs/tables/julia_gestational_window_simulation.csv` e `reports/julia_gestational_window_simulation.json`. Resultado com 500 réplicas: mediana OR **1,157**; intervalo de simulação **1,116–1,202**; cenários fixos de −7 a +7 dias: **1,075–1,224**. Não é um modelo bayesiano completo; é uma análise de sensibilidade de erro de medida. Ver `docs/07_EPI_ENV_METHODS.md`.
+O primeiro comando reconstrói a fila. O segundo gera `reports/batch_chd_review_packet.md` com o resumo de cada candidato. O terceiro gera propostas de segunda passagem em `literature/curated/batch_chd_proposals.csv` e `reports/batch_chd_proposals.md`. O quarto prioriza a fila restante em `literature/curated/batch_chd_triage.csv` e `reports/batch_chd_triage.md`.
 
 ---
 
-## 5. Auditoria, benchmark e conformidade
+## 9. Auditoria e verificação
 
-```bash
-.venv/Scripts/python.exe scripts/validation/01_validate.py   # integridade + citações
-.venv/Scripts/python.exe scripts/validation/02_schema.py     # schema, FDR, PM2,5, versão
-.venv/Scripts/python.exe scripts/benchmark/01_benchmark.py   # tempo/memória
-.venv/Scripts/python.exe scripts/compliance/01_check.py      # higiene, segredos, FAIR, nomes
-.venv/Scripts/python.exe -m pytest -q
-```
+| Verificação | Comando | Relatório |
+|---|---|---|
+| Integridade do grafo e citações | `scripts/validation/01_validate.py` | `reports/validation_report.md` |
+| Revisão da curadoria em lote | incluída em `01_validate.py` | `reports/validation_report.md` |
+| Triagem da fila restante | `scripts/curation/04_triage_remaining.py` | `reports/batch_chd_triage.md` |
+| Propostas de segunda passagem | `scripts/curation/03_propose_ambiguous.py` | `reports/batch_chd_proposals.md` |
+| Schema, FDR, PM2,5 e versão | `scripts/validation/02_schema.py` | `reports/schema_validation.md` |
+| Testes Python | `pytest -q` | saída do terminal |
+| Testes Julia | `julia --project=julia julia/test/runtests.jl` | saída do terminal |
+| Sintaxe de todo o R | `Rscript -e '...'` | alvo `make audit` |
+| Conformidade e privacidade | `scripts/compliance/01_check.py` | `reports/compliance_report.md` |
+| Benchmark de tempo e memória | `scripts/benchmark/01_benchmark.py` | `reports/benchmark.md` |
 
-Resultados em `reports/validation_report.md`, `reports/schema_validation.md`, `reports/benchmark.md` e `reports/compliance_report.md`. A conformidade verifica termos proibidos, segredos, checksums FAIR, ausência de `data_raw/` e de dados individuais no git, declaração de IA, compromisso de ciência aberta e bundle do app.
+A conformidade verifica termos proibidos, segredos, checksums FAIR, ausência de `data_raw/` e de dados individuais no Git, declaração de IA, compromisso de ciência aberta, bundle do app e ausência de travessão no texto público.
 
-## 6. Docker
+### Integração contínua
 
-```bash
-docker compose up --build
-# http://localhost:3838
-```
+O workflow `.github/workflows/ci.yml` roda em cada push e pull request:
 
-`Dockerfile` fixa R 4.6.1 e um snapshot do CRAN; o bundle de dados do app já está incluído. O Docker não estava instalado no ambiente de desenvolvimento, então o build não foi executado localmente — ver `docker/README.md`.
+- testes Python, validação de saída, schema e conformidade;
+- parse de todos os arquivos R;
+- instanciação do ambiente Julia, parse do módulo e testes unitários;
+- carregamento das fontes do app Shiny.
 
-## 7. Estrutura
+---
+
+## 10. Estrutura do repositório
 
 | Caminho | Conteúdo |
 |---|---|
-| `src/graphambicardio/` | pacote Python (coleta, limpeza, integração, grafo, análise, validação) |
-| `R/collection/` | coletores R para SciELO (Crossref), CAPES, INMET A607 e VIGIAR PM2,5 |
-| `julia/` | módulo Julia de simulação Monte Carlo do erro de medida da janela gestacional |
-| `app/` | aplicativo Shiny GraphAmbiCardio (PT-BR) e bundle de dados |
-| `docs/` | protocolo, viabilidade, busca, catálogo, ontologia, dicionário, gradação, métodos, validação, limitações, fases, manuscrito, FAIR, IA, app, governança de dados e CAPES/MCP |
+| `src/graphambicardio/` | pacote Python: coleta, limpeza, integração, grafo, análise, validação e curadoria |
+| `R/collection/` | coletores R para SciELO (Crossref), CAPES, INMET A607 e VIGIAR |
+| `julia/` | simulação Monte Carlo da janela gestacional e testes |
+| `app/` | aplicativo Shiny em português e bundle de dados agregados |
+| `docs/` | protocolo, viabilidade, busca, catálogo, ontologia, dicionário, gradação, métodos, validação, limitações, fases, manuscrito, FAIR, IA, app, governança e CAPES |
 | `fair/` | metadados DCAT e Frictionless Data Package com checksums |
-| `reports/` | matrizes de viabilidade, PRISMA, validação, conformidade, schema e resumos |
-| `literature/` | buscas (JSON), triagem, estudos-âncora |
+| `reports/` | viabilidade, PRISMA, validação, conformidade, schema, benchmark, cobertura e pacote de revisão |
+| `literature/` | buscas, triagem, estudos-âncora e camada de revisão da curadoria em lote |
 | `data_processed/` | dados harmonizados |
 | `outputs/` | grafo, tabelas e figuras |
 | `tests/` | testes unitários e de integridade |
 | `codemeta.json`, `CITATION.cff` | metadados de citação e software |
-| `outputs/figures/site/` | figuras do site em PNG, dados e manifesto com SHA-256 |
-| `CHANGELOG.md`, `RELEASE.md` | histórico e checklist de release |
 
 ---
 
-## 8. Transparência, FAIR e uso de IA
+## 11. Limitações honestas
 
-- **Findable/Accessible/Interoperable/Reusable:** identificadores persistentes por entidade, metadados DCAT/Data Package, CSV/JSON/GraphML, proveniência por evidência, licença MIT para código e licenças de terceiros preservadas. Ver `docs/12_FAIR.md` e `fair/`.
-- **Declaração de IA:** em conformidade com a **Portaria CNPq nº 2.664/2026**, em `docs/13_DECLARACAO_IA.md`. A IA apoiou código, triagem e redação; não gerou dados/referências, não decidiu a classificação final e não é autora. Toda citação curada foi verificada contra o PubMed.
-- **Curadoria:** todos os trechos citados foram lidos pela equipe e verificados automaticamente contra o PubMed.
-
----
-
-## 9. Limitações principais
-
-- Busca não sistemática; sem triagem dupla de todos os registros nem texto completo.
-- SciELO acessado por metadados Crossref (a interface de busca bloqueou automação); CAPES limitado ao Catálogo de Teses (o Portal de Periódicos não foi usado; servidores MCP comunitários foram avaliados e não adotados — ver `docs/16_CAPES_MCP.md`).
-- SINASC com subnotificação grave; 2023–2024 sem microdados (apenas TabNet Q20–Q28, não imputado como CHD core); 2025 preliminar.
-- Definição de CHD core = Q20–Q26; Q27–Q28 são reportadas separadamente e não entram no numerador principal.
-- SIH: AIH ≠ pessoa; 55% das internações fora do município.
-- Exposição de área (clima e PM2,5 do VIGIAR), não individual. A estação INMET A607 é usada para validação da reanálise; não representa exposição pessoal.
-- Idade gestacional: concepção estimada como 40 semanas obstétricas menos 14 dias (266 dias para 40 semanas); janelas ±7 dias avaliadas como sensibilidade.
-- Maioria das cadeias mecanísticas é experimental, em doses não equivalentes às humanas.
-- HPO/ClinVar são orientados a doenças mendelianas/sindrômicas.
+- **Busca não sistemática.** Não houve triagem dupla de todos os registros nem leitura de texto completo de todos os candidatos.
+- **Curadoria em lote assistida por IA.** As 29 arestas promovidas passaram por extração automática, revisão de um único revisor (assistido por IA) e verificação verbatim contra o resumo do PubMed. Confirmação humana independente é recomendada.
+- **605 registros ainda aguardam leitura.** A fila está em `literature/curated/batch_chd_queue.csv`; a priorização está em `reports/batch_chd_triage.md`. Há 97 resumos humanos com tamanho de efeito, 172 humanos sem confirmação da exposição ou do fenótipo candidato, 165 animais ou celulares, 60 cirúrgicos ou diagnósticos, 17 revisões, 93 sem sinal suficiente e 1 sem resumo.
+- **Achados condicionais.** Duas arestas promovidas descrevem efeitos apenas em estratos específicos (interação com metionina e com calor extremo). O texto do efeito e a nota registram isso.
+- **SciELO** foi acessado por metadados Crossref, porque a interface de busca bloqueou automação.
+- **CAPES** cobre o Catálogo de Teses, não o Portal de Periódicos.
+- **SINASC** tem subnotificação grave; 2023 e 2024 não têm microdados, e 2025 é preliminar.
+- **CHD core** é definido como Q20 a Q26; Q27 e Q28 são reportados separadamente e não entram no numerador principal.
+- **SIH**: AIH não são pessoas e a maioria das internações ocorre fora do município.
+- **Exposição de área.** Clima e PM2,5 são séries de área, não exposição individual. A estação INMET A607 serve para validar a reanálise, não para representar exposição pessoal.
+- **Idade gestacional.** A concepção é estimada como 40 semanas obstétricas menos 14 dias; janelas de ±7 dias são analisadas como sensibilidade.
+- **Mecanismos** são majoritariamente experimentais, em doses não equivalentes às humanas.
+- **HPO e ClinVar** são orientados a doenças mendelianas e sindrômicas.
+- **Nenhum achado causal.** Os modelos locais são exploratórios, com 52 casos, e nenhum sobrevive ao FDR.
 
 Ver `docs/09_LIMITATIONS_AND_GAPS.md`.
 
 ---
 
-## 10. Equipe
+## 12. Ciência aberta, FAIR e uso de IA
 
-- **Ryan de Paulo Santos** — [Currículo Lattes](http://lattes.cnpq.br/7503796642571978) · [ORCID](https://orcid.org/0009-0005-6770-2001)
-- **Letícia Maria Dias Freitas** — [Currículo Lattes](http://lattes.cnpq.br/4004634244195808) · [ORCID](https://orcid.org/0009-0009-9930-9588)
+| Artefato | Onde está | Verificação |
+|---|---|---|
+| Código e pipeline | repositório público, licença MIT | `LICENSE`, `Makefile`, `.github/workflows/ci.yml` |
+| Dados derivados e agregados | `data_processed/`, `outputs/`, `app/data/` | schemas em `scripts/validation/02_schema.py` |
+| Metadados FAIR | `fair/metadata.json`, `fair/datapackage.json` | SHA-256 por recurso e `scripts/compliance/01_check.py` |
+| Figuras e tabelas | `outputs/figures/site/`, `outputs/tables/` | `manifest.json` com fonte, período e SHA-256 |
+| Documentação | `docs/` | protocolo, métodos, limitações, governança e declaração de IA |
+| Privacidade | `docs/15_DATA_GOVERNANCE.md` | microdados individuais fora do Git; app só com agregados |
+| Reprodutibilidade | `uv.lock`, `renv.lock`, `run_all.sh` | versões fixadas, cache HTTP, testes e validação |
 
-Nomes completos, formação e produção estão nos currículos Lattes.
+- **Findable, Accessible, Interoperable, Reusable:** identificadores persistentes por entidade, metadados DCAT e Data Package, CSV, JSON e GraphML, proveniência por evidência, licença MIT para código e licenças de terceiros preservadas.
+- **Declaração de IA:** em conformidade com a Portaria CNPq nº 2.664/2026, em `docs/13_DECLARACAO_IA.md`. A IA apoiou código, triagem, extração em lote e redação; não gerou dados ou referências, não decidiu a classificação final de evidência e não é autora.
+- **Curadoria:** todos os trechos citados são verificados automaticamente; a revisão em lote tem registro próprio e rastreável.
 
 ---
 
-## 11. Licença e citação
+## 13. Equipe, licença e citação
 
-Código: MIT (`LICENSE`). Dados de terceiros mantêm suas licenças. Citação em `CITATION.cff`.
+- **Ryan de Paulo Santos**: [Currículo Lattes](http://lattes.cnpq.br/7503796642571978) e [ORCID](https://orcid.org/0009-0005-6770-2001)
+- **Letícia Maria Dias Freitas**: [Currículo Lattes](http://lattes.cnpq.br/4004634244195808) e [ORCID](https://orcid.org/0009-0009-9930-9588)
+
+Nomes completos, formação e produção estão nos currículos Lattes.
+
+Código sob licença MIT (`LICENSE`). Dados de terceiros mantêm suas licenças. Metadados de citação em `CITATION.cff`.
+
 Repositório: https://github.com/santosry/GraphAmbiCardio
 
-**Ciência aberta:** todo o código, metadados, figuras, tabelas e instruções de reprodução estão públicos. Dados individuais de saúde não são redistribuídos.
+**Ciência aberta:** todo o código, metadados, figuras, tabelas e instruções de reprodução são públicos. Dados individuais de saúde não são redistribuídos.

@@ -1,4 +1,4 @@
-# 06 — Evidence grading framework
+# 06: Evidence grading framework
 
 The framework was frozen before graph construction. It is designed to be **transparent and reproducible**, not to produce a single “truth score”. Different study types answer different questions; the graph therefore keeps the evidence type visible and never collapses it.
 
@@ -123,10 +123,23 @@ This tier is a **presentation layer** over the same confidence formula; it does 
 
 ## 7. Human audit
 
-Every observed (curated) edge was read manually by the study team and its quote is re-verified automatically against PubMed at build time and in the validation step.
+Observed (curated) edges follow two routes. The 54 manual rows were read by the study team. The 29 batch rows were promoted from automatic screening after an explicit review entry in `literature/curated/batch_chd_review.csv`; that review was assisted by AI and is flagged as such in `source_database` and in the evidence notes, so independent human confirmation is still recommended. PubMed quotes are re-verified automatically at build time and in the validation step; the CAPES thesis quote is re-verified against the archived Sucupira abstract. Reviews (narrative, systematic, meta-analysis) do not count as independent replication when confidence is aggregated.
 
 ---
 
-## 8. Sensitivity
+## 8. Batch curation rules (AI-assisted)
+
+Automatic extraction is used only to build a candidate queue. A candidate becomes evidence only when all of the following hold:
+
+1. one clause mentions exactly one candidate exposure and exactly one phenotype from the full vocabulary;
+2. the same clause contains an explicit effect size (OR, RR, HR or PR) with a plausible value, and not a p-value or a confidence-interval bound;
+3. a reviewer writes a `verified` row in `literature/curated/batch_chd_review.csv`, with the verbatim quote, the reviewed effect, population, exposure window and study design;
+4. the build re-fetches the PubMed record and checks that the quote is a verbatim substring of the abstract.
+
+A second pass maps each effect size to the nearest phenotype and the nearest exposure in the same clause and writes a proposal; the proposal still needs an explicit review entry. Manual additions are allowed when the screening vocabulary missed a phenotype, provided the PMID is already in the queue and the review supplies quote, effect and design. Multi-phenotype result sentences are never assigned to the first phenotype that matches without that review step. Conditional findings (interaction with a nutrient or with an extreme heat event) are accepted only with a qualifier in `effect_direction` and a note in the evidence row. Duplicate publications of the same data set are rejected to avoid double counting.
+
+---
+
+## 9. Sensitivity
 
 Because the thresholds are conventional, all analyses are repeated at confidence cut-offs 0.40, 0.50, 0.55, 0.70 and 0.85 (`outputs/tables/sensitivity_evidence_thresholds.csv`). Results are reported as stable only if the qualitative conclusion survives the range. In this version, the set of direct exposure→phenotype links shrinks from 11 to 8 between 0.50 and 0.85, which is why the manuscript reports the high-confidence core separately from the fuller graph.

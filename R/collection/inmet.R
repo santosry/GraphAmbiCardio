@@ -1,5 +1,5 @@
 # ==========================================================================
-# INMET — estação automática A607 (Campos dos Goytacazes/RJ)
+# INMET: estação automática A607 (Campos dos Goytacazes/RJ)
 # ==========================================================================
 # Baixa temperatura, umidade, chuva e vento com o pacote BrazilMet e compara
 # com a série ERA5-Land usada no estudo. Saídas:
@@ -50,7 +50,7 @@ stopifnot(all(is.na(d$rh_mean_porc) | (d$rh_mean_porc >= 0 & d$rh_mean_porc <= 1
 write.csv(d, "data_processed/inmet_campos_daily.csv", row.names = FALSE, fileEncoding = "UTF-8")
 
 meta <- list(
-  source = "INMET — estação automática A607 (Campos dos Goytacazes/RJ), dados históricos",
+  source = "INMET, estação automática A607 (Campos dos Goytacazes/RJ), dados históricos",
   url = "https://portal.inmet.gov.br/uploads/dadoshistoricos/",
   package = "BrazilMet",
   package_version = as.character(packageVersion("BrazilMet")),

@@ -1,4 +1,4 @@
-# 05 — Data dictionary
+# 05: Data dictionary
 
 The machine-readable dictionary is `data_dictionary/data_dictionary.csv` (includes the core CHD/other-circulatory split, gestational sensitivity columns, INMET A607 and the INMET/ERA5 comparison). This document summarises the datasets, their provenance and the graph tables.
 
@@ -58,6 +58,17 @@ Daily observations from INMET automatic station **A607** (Campos dos Goytacazes/
 - **Role:** validation of ERA5-Land (`outputs/tables/inmet_era5_comparison.csv`), not individual exposure.
 - **Provenance:** `data_processed/inmet_campos_metadata.json` (station, period, package version, checksum).
 
+### 1.7 Recuperação exaustiva e estudos triados
+- `reports/exhaustive_retrieval.csv`: uma linha por consulta, com hits totais, recuperados, candidatos, caminho do JSONL bruto e SHA-256.
+- `literature/screening/exhaustive_candidates.csv`: 3.963 candidatos únicos após deduplicação, com exposições, fenótipos, mecanismos, espécie, desenho e fontes. **Não é evidência.**
+- `outputs/graph/screened_studies.json` e `.graphml`: grafo separado com nós `Study` e relações `STUDY_DOCUMENTS_RELATION` para exposição/fenótipo/mecanismo. Camada automática, fora das análises.
+- `reports/screened_studies.json` / `.md`: contagens e aviso de não evidencialidade.
+
+### 1.8 CAPES thesis triage and archived abstract
+- `literature/screening/capes_triage.csv`: one row per unique CAPES record (552 rows; 560 retrieved across queries), with `queries`, `decision` (`Included`/`Excluded`), `screening_level` (`title`/`abstract`), `reason` and `evidence_target`.
+- `literature/curated/capes_abstracts/7850222.json`: archived Sucupira abstract for the single included thesis, with `source_url`, `retrieved_at`, `study_design`, Portuguese/English abstracts and keywords.
+- **Role:** one **indirect** evidence row for `EXP:PEST → CHD:ALL`; it is a systematic review and is not counted as independent replication. The other 27 records were excluded for not assessing environmental exposure or for being clinical/surgical/diagnostic studies.
+
 ---
 
 ## 2. Biological datasets
@@ -89,7 +100,7 @@ Daily observations from INMET automatic station **A607** (Campos dos Goytacazes/
 `evidence_tier` ∈ {`estabelecida`, `plausivel_experimental`, `nao_demonstrada`, `contextual`, `inferida`}.
 
 ### `outputs/graph/evidence.csv`
-One row per evidence item (see `docs/04_ONTOLOGY.md` §4 for the full schema). Key fields: `evidence_id, edge_key, layer, evidence_type, study_design, species, population_or_model, exposure_window, effect_direction, quote, reference, reference_type, source_database, retrieved_at, notes`.
+One row per evidence item (see `docs/04_ONTOLOGY.md` §4 for the full schema). Key fields: `evidence_id, edge_key, layer, evidence_type, study_design, species, population_or_model, exposure_window, effect_direction, quote, reference, reference_type, source_database, retrieved_at, notes`. `reference_type` is `PMID` for journal papers and `CAPES thesis` for the single included thesis.
 
 ### `outputs/graph/graph.graphml` / `graph.json`
 Interoperable exports of the aggregated graph; edge attributes include `relation`, `layer`, `confidence`, `grade`, `n_evidence`, `references`.
@@ -98,7 +109,7 @@ Interoperable exports of the aggregated graph; edge attributes include `relation
 Hipóteses (`HYPOTHESIS_LINK` e `HYPOTHESIS_CANDIDATE`) no mesmo esquema de evidência, com `layer = hypothesis` e `evidence_type = hypothesis`. Nunca usadas em caminhos ou centralidade.
 
 ### `app/data/`
-Bundle autocontido do aplicativo Shiny (33 arquivos, ~4 MB), gerado por `scripts/app/01_prepare_data.py`.
+Bundle autocontido do aplicativo Shiny (49 arquivos, ~5 MB), gerado por `scripts/app/01_prepare_data.py`.
 
 ### `outputs/tables/exploratory_models.csv` / `.json`
 Modelos exploratórios ao nível do nascimento (logístico, Firth, cluster-robusto, ajuste socioeconômico), de contagem mensal, de ajuste mútuo e de sensibilidade. Colunas `p_value`, `exposure_1_p` e `exposure_2_p` trazem o p nominal; `q_value`, `exposure_1_q` e `exposure_2_q` trazem o valor ajustado por Benjamini–Hochberg. `sensitivity_leave_one_year_out.csv` contém p e q por ano excluído.

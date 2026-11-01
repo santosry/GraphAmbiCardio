@@ -1,4 +1,4 @@
-# 01 — Scientific viability assessment (Phase A)
+# 01: Scientific viability assessment (Phase A)
 
 **Decision document.** Date of retrieval: 2026-10-31.
 All counts below were produced by the pipeline (`reports/feasibility_*.csv`, `literature/searches/*.json`) and are reproducible.
@@ -104,12 +104,12 @@ Anchors verified by reading (see `literature/curated/`):
 **Verdict: viable for a subset; human evidence is mostly biomarker-based.**
 
 - PM2.5 → inflammation: human pregnancy cohort, CRP increase (PMID 34934889).
-- PM2.5 → oxidative stress / epigenetic change: review-level synthesis only (PMID 34253165) — graded **indirect**.
-- Heat → neural crest perturbation: chick/zebrafish TRPV1/TRPV4 mechanism (PMID 29018170) — **experimental animal**.
+- PM2.5 → oxidative stress / epigenetic change: review-level synthesis only (PMID 34253165), graded **indirect**.
+- Heat → neural crest perturbation: chick/zebrafish TRPV1/TRPV4 mechanism (PMID 29018170): **experimental animal**.
 - Valproate → HDAC inhibition: zebrafish heart malformation with HDAC-inhibitor rationale (PMID 32699959); HDAC requirement in valve formation (PMID 22634317).
-- Dioxin → AHR: human ESC cardiomyocyte differentiation (PMID 30266049) — **human experimental**.
+- Dioxin → AHR: human ESC cardiomyocyte differentiation (PMID 30266049): **human experimental**.
 - Alcohol → retinoic-acid-sensitive cardiogenesis: zebrafish rescue experiment (PMID 23832875).
-- Smoking → epigenetic (miRNA) mechanisms: review only (PMID 31556862) — **indirect**.
+- Smoking → epigenetic (miRNA) mechanisms: review only (PMID 31556862): **indirect**.
 
 **Limitations:** animal/cell mechanisms cannot be assumed to operate at human environmental doses; biomarker associations in late pregnancy are not developmental mechanisms.
 
@@ -138,7 +138,7 @@ Descriptive human embryology (Carnegie stages; PMID 38884703) establishes the ti
 - Reactome: **649 developmental/cardiac gene–pathway edges** (FDR < 0.05) for 170 genes.
 - Classic human genetics anchors: NKX2-5 (PMID 9651244, 10587520), GATA4 (12845333), TBX5 (8988165), NOTCH1 (16025100).
 
-**Limitations:** HPO/ClinVar are phenotype- and syndrome-oriented and over-represent Mendelian/syndromic disease; they do not establish population-attributable risk. NOTCH1 is mapped to aortic valve stenosis (Q23.0) although the primary phenotype is bicuspid aortic valve/calcification — an explicit mapping caveat.
+**Limitations:** HPO/ClinVar are phenotype- and syndrome-oriented and over-represent Mendelian/syndromic disease; they do not establish population-attributable risk. NOTCH1 is mapped to aortic valve stenosis (Q23.0) although the primary phenotype is bicuspid aortic valve/calcification, an explicit mapping caveat.
 
 ---
 
@@ -146,7 +146,7 @@ Descriptive human embryology (Carnegie stages; PMID 38884703) establishes the ti
 
 A revisão do protocolo acrescentou três variáveis e fortaleceu o eixo principal:
 
-- **PM10 → ASD:** OR 1,04 por 10 µg/m³ (1,00–1,09; meta-análise, PMID 32278917) — associação modesta e heterogênea.
+- **PM10 → ASD:** OR 1,04 por 10 µg/m³ (1,00–1,09; meta-análise, PMID 32278917), associação modesta e heterogênea.
 - **CO → VSD:** associado a defeitos septais em estudo de base populacional (PMID 21329916); **CO → TOF:** OR 1,21 (1,04–1,41; PMID 32278917).
 - **Temperatura no Brasil:** estudo nacional com >11 milhões de nascimentos encontrou OR 1,08 (1,01–1,17) para defeitos do sistema circulatório no primeiro trimestre, ajustado por PM2,5 e umidade (PMID 39105774). Isso reforça a temperatura como **eixo secundário**, não como mecanismo estabelecido.
 - **PM2,5 → AHR → Wnt/β-catenina:** em zebrafish, o extrato orgânico de PM2,5 ativa AHR, reprime alvos de Wnt/β-catenina e causa malformações cardíacas; antagonista de AHR e agonista de β-catenina resgatam o fenótipo (PMID 27216425). Esse é o elo mecanístico mais específico disponível para PM2,5.
@@ -174,13 +174,13 @@ A revisão do protocolo acrescentou três variáveis e fortaleceu o eixo princip
 
 ## 5. Decision on the first graph version
 
-**Proceed to graph construction — with a restricted evidence core.**
+**Proceed to graph construction, with a restricted evidence core.**
 
 Included:
 - **17 exposures** as nodes (the original 14 plus PM10, CO and relative humidity); only those with verified evidence receive edges. Humidity remains contextual and has no causal edge.
 - **14 phenotypes + `CHD:ALL`**.
 - **16 mechanisms**, **11 developmental processes**, **47-gene panel + 814 HPO genes**.
-- **54 manually curated relations** from 33 anchor studies, every quote verified against PubMed.
+- **54 unique manually curated relations** from **55 evidence rows** across 34 anchor studies (33 PubMed-indexed + 1 CAPES thesis), every quote verified against PubMed or the archived thesis abstract.
 - Structured gene–phenotype, gene–pathway and variant edges.
 - **Explicit gap layer**: SO2, cold, retinoic acid and dioxins/PCBs had no retained exposure→CHD edge (retinoic acid and dioxins have mechanism-level experimental evidence only).
 
