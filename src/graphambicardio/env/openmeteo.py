@@ -52,7 +52,7 @@ def fetch_daily(start: str = "2010-01-01", end: str = "2025-12-31") -> pd.DataFr
     df["year"] = df["date"].dt.year
     df["month"] = df["date"].dt.month
     meta = {
-        "source": f"Open-Meteo Historical Weather API — {config.OPEN_METEO_MODEL_LABEL}",
+        "source": f"Open-Meteo Historical Weather API: {config.OPEN_METEO_MODEL_LABEL}",
         "api_url": config.OPEN_METEO_ARCHIVE,
         "model_requested": config.OPEN_METEO_MODEL,
         "model_label": config.OPEN_METEO_MODEL_LABEL,

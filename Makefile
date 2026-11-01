@@ -1,10 +1,9 @@
-PY ?= .venv/Scripts/python.exe
 JULIA_REPS ?= 500
-ifeq ($(OS),)
-PY := .venv/bin/python
-endif
+# Windows virtualenvs use Scripts/, Unix virtualenvs use bin/. Detect by path so
+# the Makefile works whether or not OS is exported to make.
+PY ?= $(if $(wildcard .venv/Scripts/python.exe),.venv/Scripts/python.exe,.venv/bin/python)
 
-.PHONY: setup literature databases inmet epi env graph analysis julia validate schema test all clean lock figures
+.PHONY: setup literature databases inmet epi env graph analysis julia julia-test validate schema test audit all clean clean-local lock figures exhaustive screened curation
 
 setup:
 	uv venv .venv --python 3.12
@@ -44,6 +43,7 @@ graph:
 	$(PY) scripts/analysis/02_figures.py
 	$(PY) scripts/analysis/03_enrichment_and_low_evidence.py
 	$(PY) scripts/analysis/04_prisma_flow.py
+	$(PY) scripts/analysis/05_retrieval_coverage.py
 	$(PY) scripts/app/01_prepare_data.py
 	$(PY) scripts/app/02_fair_metadata.py
 	$(PY) scripts/benchmark/01_benchmark.py
@@ -62,10 +62,34 @@ schema:
 figures:
 	$(PY) scripts/app/03_export_site_figures.py
 
+screened:
+	$(PY) scripts/integration/02_build_screened_graph.py
+
+curation:
+	$(PY) scripts/curation/01_batch_chd_promotion.py
+	$(PY) scripts/curation/02_export_review_packet.py
+	$(PY) scripts/curation/03_propose_ambiguous.py
+	$(PY) scripts/curation/04_triage_remaining.py
+
+exhaustive:
+	$(PY) scripts/collection/04_exhaustive_literature.py
+	$(PY) scripts/analysis/06_rescreen_exhaustive.py
+	$(PY) scripts/integration/02_build_screened_graph.py
+
+clean-local:
+	$(PY) scripts/maintenance/clean_local.py --yes
+
 lock:
 	uv lock
 
 test:
 	$(PY) -m pytest -q
+
+julia-test:
+	julia --project=julia julia/test/runtests.jl
+
+audit: test julia-test validate schema
+	$(PY) scripts/compliance/01_check.py
+	Rscript -e 'files <- c(list.files("app", pattern="[.]R$$", recursive=TRUE, full.names=TRUE), list.files("R", pattern="[.]R$$", recursive=TRUE, full.names=TRUE)); for (f in files) { parse(f); cat("OK", f, sep=" ") }'
 
 all: literature databases inmet env epi julia graph validate test

@@ -66,24 +66,24 @@
       "name": "relacoes",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/relations.csv",
       "format": "csv",
-      "byteSize": 1988772,
-      "checksum": "sha256:61e8e7181caf58caac95c55bdc2aa41bfa3f6adcff23bb5074d4ff13e80dbc44"
+      "byteSize": 1998496,
+      "checksum": "sha256:fb46c8b5b23c0af9e7c93d9aa9d6fc1e3f02f8fcb1f25011f1e8077b7da36132"
     },
     {
       "@type": "Distribution",
       "name": "evidencias",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/evidence.csv",
       "format": "csv",
-      "byteSize": 1596684,
-      "checksum": "sha256:327dd90488b7ddd826a81f834f89368afdb41fbe42fb9eec2f7196cc6b82f975"
+      "byteSize": 1624635,
+      "checksum": "sha256:ee3c8c18649e494863760ab1932cf1f28b00fd9504517519c27f7c54341bf587"
     },
     {
       "@type": "Distribution",
       "name": "hipoteses",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/hypotheses.csv",
       "format": "csv",
-      "byteSize": 3253,
-      "checksum": "sha256:6fa803762c9e6616a7897ab06c8b439901b6c39f4115b3fc3ff8a554bb90f535"
+      "byteSize": 847,
+      "checksum": "sha256:204b8f546cb1670a5c86777b5edad6026ebd34cc4372fd7bb26a10e33132461f"
     },
     {
       "@type": "Distribution",
@@ -146,24 +146,24 @@
       "name": "caminhos",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/paths_exposure_phenotype.csv",
       "format": "csv",
-      "byteSize": 2630,
-      "checksum": "sha256:ace9ab89f4edcbb95f1b8f094448d95157dff7c9ce03f6ed9dc05ec5c85698b8"
+      "byteSize": 4358,
+      "checksum": "sha256:5fa7f50d29b19ac5557b2ef8daadc4579f934b0d91a6b69f7c7da15ba80e702a"
     },
     {
       "@type": "Distribution",
       "name": "lacunas",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/gap_analysis.csv",
       "format": "csv",
-      "byteSize": 2226,
-      "checksum": "sha256:f88c77fcf9d00a657d62495f1932e9760d0abf4dc8c29fb53d520bdf879af6f9"
+      "byteSize": 2407,
+      "checksum": "sha256:926f12bae090e4a67753390c93562cdde07b0405c08158d1f04f61955709616e"
     },
     {
       "@type": "Distribution",
       "name": "candidatos_hipoteses",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/hypothesis_candidates.csv",
       "format": "csv",
-      "byteSize": 2127,
-      "checksum": "sha256:2506644a2dcd5c24420ce74fdb6fb1e8eacb30c5bcb4c87e9b3d097ffc7763b2"
+      "byteSize": 666,
+      "checksum": "sha256:ef3f8c0d1dbde63ca43de407f3fdd222065e47fdb4223eadd2481d9d54133cd3"
     },
     {
       "@type": "Distribution",
@@ -210,8 +210,8 @@
       "name": "julia_script",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/julia/gestational_window_simulation.jl",
       "format": "jl",
-      "byteSize": 9773,
-      "checksum": "sha256:4a17cb7a3a57a5d9310f800625accb506eb3181a5ef6d8bad160248e78d38eff"
+      "byteSize": 9821,
+      "checksum": "sha256:caf0d8694dead660b3286d0423f219908ff63adc195f3fe5d69f922e4c7c912a"
     },
     {
       "@type": "Distribution",
@@ -234,8 +234,8 @@
       "name": "hipoteses_familia",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/hypothesis_family.csv",
       "format": "csv",
-      "byteSize": 28237,
-      "checksum": "sha256:ed61896f9c541338be061ec98d4d0ea84c1d9fd4fd76d6e37193cb178aad5ede"
+      "byteSize": 23655,
+      "checksum": "sha256:e6e92ef81b28b3d4430ecc73c58b1517ed6c32f91147003371953d6ff8ab1408"
     },
     {
       "@type": "Distribution",
@@ -266,8 +266,8 @@
       "name": "figuras_site",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/figures/site/manifest.json",
       "format": "json",
-      "byteSize": 4045,
-      "checksum": "sha256:faf489f970743d0ee4d5a90ee453525162997340f3b1e138ab994aef0c701211"
+      "byteSize": 4030,
+      "checksum": "sha256:9def83eedc409c271a01fe71360867926fd188df88d3f6440cba362a13078cb9"
     },
     {
       "@type": "Distribution",
@@ -316,9 +316,169 @@
       "format": "csv",
       "byteSize": 14093,
       "checksum": "sha256:3a6d158606b91e6f0f60148fda7c3f235224c42044e16fc4b8fe3ce60b1767f9"
+    },
+    {
+      "@type": "Distribution",
+      "name": "capes_cardiopatias",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/searches/capes_cardiopatias_congenitas.json",
+      "format": "json",
+      "byteSize": 373000,
+      "checksum": "sha256:c77ab5ac4a9a7559f0e2055f5adf09d30cc1e2e0ccc69f26e0ee0f69f8bcd82b"
+    },
+    {
+      "@type": "Distribution",
+      "name": "capes_poluicao_ar",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/searches/capes_poluicao_ar.json",
+      "format": "json",
+      "byteSize": 217,
+      "checksum": "sha256:ecbec01dd4f2338816371315f193fc8197e2ebe3a9cfa9a964cc38e6c9a0a8cc"
+    },
+    {
+      "@type": "Distribution",
+      "name": "capes_agrotoxicos",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/searches/capes_agrotoxicos.json",
+      "format": "json",
+      "byteSize": 893,
+      "checksum": "sha256:b081c79a812722972f31128691abe1758cdba73372d493650c1bf343e415ce26"
+    },
+    {
+      "@type": "Distribution",
+      "name": "capes_temperatura",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/searches/capes_temperatura.json",
+      "format": "json",
+      "byteSize": 5050,
+      "checksum": "sha256:94c19690140ca831d07ec053511684071867500516103454a6c834885ab0c6c3"
+    },
+    {
+      "@type": "Distribution",
+      "name": "prisma_fluxo",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/reports/prisma_flow.csv",
+      "format": "csv",
+      "byteSize": 412,
+      "checksum": "sha256:2f07bd73b088b6cbc84dd6b23779637511281e208869f2e4d87d1b23428b041a"
+    },
+    {
+      "@type": "Distribution",
+      "name": "cobertura_recuperacao",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/reports/retrieval_coverage.csv",
+      "format": "csv",
+      "byteSize": 72428,
+      "checksum": "sha256:445224a3ad252490e47db75cf7fb3d469f3150ec019aa54d6437ff40f0539389"
+    },
+    {
+      "@type": "Distribution",
+      "name": "triagem_todas_bases",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/screening/all_records_triage.csv",
+      "format": "csv",
+      "byteSize": 832824,
+      "checksum": "sha256:fb2c8e4c5870d60a8232071b29679bbc378e2bf31a92149846aea42dd07574bf"
+    },
+    {
+      "@type": "Distribution",
+      "name": "recuperacao_exaustiva",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/reports/exhaustive_retrieval.csv",
+      "format": "csv",
+      "byteSize": 160203,
+      "checksum": "sha256:acf2a95d3e44ad13dd4a6fbdeb0274998b4653cb6dae86c17979d86a9cd0c2e6"
+    },
+    {
+      "@type": "Distribution",
+      "name": "candidatos_exaustivos",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/screening/exhaustive_candidates.csv",
+      "format": "csv",
+      "byteSize": 1390641,
+      "checksum": "sha256:f1f2f8cc61c3f9173cf0e603e3c5ab9fd5871d42e91bbd81a9a934cc087d38ad"
+    },
+    {
+      "@type": "Distribution",
+      "name": "estudos_triados_nos",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/screened_study_nodes.csv",
+      "format": "csv",
+      "byteSize": 1286615,
+      "checksum": "sha256:ffbd659eb144d5d00f870e9421a6384a877e2718b4c292b10df9e529d84b2cc6"
+    },
+    {
+      "@type": "Distribution",
+      "name": "estudos_triados_relacoes",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/screened_study_relations.csv",
+      "format": "csv",
+      "byteSize": 3414232,
+      "checksum": "sha256:5a14bbd697d960634603fa33a6502f71241fc4cc19601d7cde5f72c6ae7ce338"
+    },
+    {
+      "@type": "Distribution",
+      "name": "relatorio_estudos_triados",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/reports/screened_studies.json",
+      "format": "json",
+      "byteSize": 471,
+      "checksum": "sha256:220ef7d5ff08ffd593d3ebf3d87cb2080b5aff79720b1da58ea0dd480fee8564"
+    },
+    {
+      "@type": "Distribution",
+      "name": "capes_triagem",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/screening/capes_triage.csv",
+      "format": "csv",
+      "byteSize": 193650,
+      "checksum": "sha256:81d5a6629e16623f6a3e1b6679e134f336b9f093e2fa6014ca322513b9e7e167"
+    },
+    {
+      "@type": "Distribution",
+      "name": "capes_resumo_tese",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/capes_abstracts/7850222.json",
+      "format": "json",
+      "byteSize": 5931,
+      "checksum": "sha256:3c63f95051335bbe794176aa8f009ec2d2cda8f288ceb5771ca5d5d313228089"
+    },
+    {
+      "@type": "Distribution",
+      "name": "estudos_ancora",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/anchor_studies.csv",
+      "format": "csv",
+      "byteSize": 21104,
+      "checksum": "sha256:e5913baabb83766b4859a6755a2cecb216369bb9e2e2f05fd00bd6a4d1345db9"
+    },
+    {
+      "@type": "Distribution",
+      "name": "evidencias_curadas",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/curated_edges.csv",
+      "format": "csv",
+      "byteSize": 63284,
+      "checksum": "sha256:763b744fe1fd56967c6489cc578dee1a10a68866b7aabe0c58ab8c70919e3a71"
+    },
+    {
+      "@type": "Distribution",
+      "name": "fila_curadoria_lote",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/batch_chd_queue.csv",
+      "format": "csv",
+      "byteSize": 197060,
+      "checksum": "sha256:893056162d0730bcee5b4c374a7ed4237ab6422829eb054d065a2376d8f29ff4"
+    },
+    {
+      "@type": "Distribution",
+      "name": "revisao_curadoria_lote",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/batch_chd_review.csv",
+      "format": "csv",
+      "byteSize": 18751,
+      "checksum": "sha256:3b896624c8e8ff656a766fd1f3c37dfbf1a3cdd9f5ef8a31df8ecaba39d971f4"
+    },
+    {
+      "@type": "Distribution",
+      "name": "propostas_segunda_passagem",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/batch_chd_proposals.csv",
+      "format": "csv",
+      "byteSize": 723,
+      "checksum": "sha256:643e6190d524dbd887c611540ba50f4ff5b86887a01cee760d8e18a792f9ceb3"
+    },
+    {
+      "@type": "Distribution",
+      "name": "triagem_fila",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/batch_chd_triage.csv",
+      "format": "csv",
+      "byteSize": 168600,
+      "checksum": "sha256:41f7af026a081b7acc0b91bd0fada083228f832b3dd7985c8159ded728f5c25a"
     }
   ],
   "conformsTo": "https://specs.frictionlessdata.io/data-package/",
-  "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed. A validação climática usa a estação INMET A607 (latitude -21,7167; longitude -41,3500; altitude 25 m) e ERA5-Land.",
+  "provenance": "Cada aresta carrega referência (PMID/DOI/CAPES/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed ou contra o resumo arquivado da tese CAPES (ID 7850222). A camada curada tem 59 estudos-âncora: 58 PMIDs + 1 tese CAPES; 29 linhas vieram de curadoria em lote revisada. A validação climática usa a estação INMET A607 (latitude -21,7167; longitude -41,3500; altitude 25 m) e ERA5-Land.",
   "note": "Busca estruturada não sistemática. Hipóteses são explicitamente separadas das evidências."
 }

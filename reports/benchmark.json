@@ -1,56 +1,56 @@
 {
-  "generated_at": "2026-10-31T18:28:44Z",
+  "generated_at": "2026-11-01T18:20:09Z",
   "python": "3.12.13",
   "platform": "Windows-11-10.0.26340-SP0",
-  "rss_start_mb": 149.6,
-  "rss_end_mb": 183.3,
-  "rss_delta_mb": 33.7,
-  "tracemalloc_peak_mb": 15.74,
+  "rss_start_mb": 158.4,
+  "rss_end_mb": 192.2,
+  "rss_delta_mb": 33.8,
+  "tracemalloc_peak_mb": 15.82,
   "results": [
     {
       "operation": "read_nodes",
-      "seconds": 0.0196,
+      "seconds": 0.0115,
       "result": 2238
     },
     {
       "operation": "read_relations",
-      "seconds": 0.0704,
-      "result": 4117
+      "seconds": 0.0297,
+      "result": 4135
     },
     {
       "operation": "read_evidence",
-      "seconds": 0.0572,
-      "result": 4613
+      "seconds": 0.0287,
+      "result": 4639
     },
     {
       "operation": "load_layers",
       "seconds": 0.0,
       "result": [
         2238,
-        4117
+        4135
       ]
     },
     {
       "operation": "build_digraph",
-      "seconds": 0.0018,
+      "seconds": 0.001,
       "result": [
         2217,
-        4098
+        4120
       ]
     },
     {
       "operation": "conceptual_paths",
       "seconds": 0.0,
-      "result": 27
+      "result": 49
     },
     {
       "operation": "centrality_table",
-      "seconds": 3.8143,
+      "seconds": 1.7512,
       "result": 1277
     },
     {
       "operation": "1000_node_lookups",
-      "seconds": 0.0002,
+      "seconds": 0.0001,
       "result": 1000
     }
   ]

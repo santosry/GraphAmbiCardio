@@ -2,7 +2,8 @@
 
 Steps
 -----
-1. Verify every manually curated quote against the PubMed abstract (hard fail).
+1. Verify every curated quote against the PubMed abstract or the archived CAPES
+   abstract (hard fail), including the reviewed batch rows.
 2. Add structured database evidence (HPO, ClinVar, Reactome).
 3. Add local epidemiological/environmental indicator nodes and context edges.
 4. Add an explicitly separated inferred layer (pathway -> process keyword map)
@@ -24,7 +25,7 @@ import networkx as nx  # noqa: E402
 import pandas as pd  # noqa: E402
 
 from graphambicardio import config  # noqa: E402
-from graphambicardio.curation import seed_edges  # noqa: E402
+from graphambicardio.curation import batch_review, seed_edges  # noqa: E402
 from graphambicardio.graph import build, hypotheses  # noqa: E402
 from graphambicardio.io_utils import get_logger, read_csv, today, write_csv, write_json  # noqa: E402
 from graphambicardio.literature.pubmed import efetch  # noqa: E402
@@ -64,31 +65,129 @@ def _norm(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
+def _capes_abstract(reference: str) -> dict[str, Any]:
+    """Load the locally archived CAPES/Sucupira abstract for a thesis."""
+    capes_id = reference.split(":")[-1]
+    path = config.CURATED / "capes_abstracts" / f"{capes_id}.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def verify_quotes(edges: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    pmids = sorted({e["reference"] for e in edges})
-    studies = {s.pmid: s for s in efetch(pmids)}
+    pmids = sorted({e["reference"] for e in edges if e.get("reference_type") == "PMID"})
+    studies = {s.pmid: s for s in efetch(pmids)} if pmids else {}
     missing = []
     for e in edges:
-        s = studies.get(e["reference"])
-        if not s:
-            missing.append((e["reference"], "PMID not retrieved"))
+        ref_type = e.get("reference_type", "PMID")
+        if ref_type == "PMID":
+            s = studies.get(e["reference"])
+            abstract = s.abstract if s else ""
+            meta = {
+                "pmid": s.pmid if s else "",
+                "title": s.title if s else "",
+                "journal": s.journal if s else "",
+                "year": s.year if s else "",
+                "doi": s.doi if s else "",
+                "first_author": s.first_author if s else "",
+                "url": f"https://pubmed.ncbi.nlm.nih.gov/{s.pmid}/" if s else "",
+                "source_database": "PubMed/MEDLINE (manual curation)",
+            }
+        elif ref_type == "CAPES thesis":
+            try:
+                local = _capes_abstract(e["reference"])
+                abstract = local["abstract"]
+                meta = {
+                    "pmid": "",
+                    "title": local["title"],
+                    "journal": f"{local['degree']}, {local['institution']}",
+                    "year": local["year"],
+                    "doi": "",
+                    "first_author": local["author"],
+                    "url": local["source_url"],
+                    "source_database": "CAPES Catálogo de Teses e Dissertações",
+                }
+            except (OSError, KeyError, json.JSONDecodeError) as exc:
+                abstract = ""
+                meta = {}
+                log.error("CAPES abstract unavailable for %s: %s", e["reference"], exc)
+        else:
+            abstract = ""
+            meta = {}
+            log.error("unsupported reference type: %s", ref_type)
+        if not abstract:
+            missing.append((e["reference"], "source abstract not retrieved"))
             continue
-        if _norm(e["quote"]) not in _norm(s.abstract):
+        if _norm(e["quote"]) not in _norm(abstract):
             missing.append((e["reference"], e["quote"][:80]))
+            continue
         e["_study"] = {
-            "pmid": s.pmid,
-            "title": s.title,
-            "journal": s.journal,
-            "year": s.year,
-            "doi": s.doi,
-            "first_author": s.first_author,
+            **meta,
+            "reference": e["reference"],
+            "reference_type": ref_type,
         }
     if missing:
         for m in missing:
             log.error("quote verification failed: %s | %s", m[0], m[1])
         raise SystemExit(f"quote verification failed for {len(missing)} edge(s)")
-    log.info("verified %s curated quotes across %s PMIDs", len(edges), len(pmids))
+    n_non_pmid = sum(1 for e in edges if e.get("reference_type") != "PMID")
+    log.info("verified %s curated quotes across %s PMIDs and %s non-PMID edges", len(edges), len(pmids), n_non_pmid)
     return studies
+
+
+EXPOSURE_LABEL = {e["id"]: e["label"] for e in config.EXPOSURES}
+PHENOTYPE_LABEL = {p["id"]: p["label"] for p in config.PHENOTYPES}
+
+
+def batch_evidence() -> list[dict[str, Any]]:
+    """Evidence promoted from the exhaustive screening via reviewed batch curation.
+
+    Automatic extraction only produces candidates. This function accepts rows
+    that a reviewer marked ``verified`` in ``batch_chd_review.csv`` and rejects
+    the run when the review file is inconsistent. Every quote is still verified
+    verbatim against the PubMed abstract by :func:`verify_quotes`.
+    """
+    queue_path = config.CURATED / "batch_chd_queue.csv"
+    review_path = config.CURATED / "batch_chd_review.csv"
+    if not queue_path.exists() or not review_path.exists():
+        log.warning("batch curation files not found; skipping")
+        return []
+    queue = read_csv(queue_path)
+    reviews = batch_review.load_reviews(review_path)
+    issues = batch_review.review_issues(reviews.values(), queue)
+    if issues:
+        for issue in issues:
+            log.error("batch review: %s", issue)
+        raise SystemExit(f"batch review failed with {len(issues)} issue(s)")
+
+    edges: list[dict[str, Any]] = []
+    for row in batch_review.resolved_rows(reviews, queue):
+        evidence = seed_edges.edge(
+            row["exposure_id"], "Exposure", row["phenotype_id"], "Phenotype",
+            "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+            ev=row.get("evidence_type") or "direct_human",
+            design=row.get("study_design") or "unknown",
+            species=row.get("species") or "human",
+            quote=row["quote"],
+            reference=row["pmid"],
+            reference_type="PMID",
+            population=row.get("population_or_model", ""),
+            window=row.get("exposure_window", ""),
+            direction=row.get("effect_direction", ""),
+            context=(
+                "Batch CHD curation (AI-assisted extraction, reviewed): "
+                f"{row.get('exposure_label') or EXPOSURE_LABEL.get(row['exposure_id'], row['exposure_id'])} and "
+                f"{row.get('phenotype_label') or PHENOTYPE_LABEL.get(row['phenotype_id'], row['phenotype_id'])}"
+            ),
+            notes=(
+                "AI-assisted extraction from the PubMed abstract; reviewed by "
+                f"{row.get('reviewed_by', 'a reviewer')} on {row.get('reviewed_at', '')}. "
+                f"Review note: {row.get('review_note', '')}"
+            ),
+        )
+        evidence["source_database"] = "PubMed/MEDLINE (AI-assisted batch curation, reviewed)"
+        edges.append(evidence)
+    n_rejected = sum(1 for item in reviews.values() if item.get("review_status") == "rejected")
+    log.info("batch curation: %s verified edges, %s rejected candidates", len(edges), n_rejected)
+    return edges
 
 
 def curated_evidence() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -99,13 +198,15 @@ def curated_evidence() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
         + seed_edges.PROCESS_PHENOTYPE
         + seed_edges.GENE_PHENOTYPE
         + seed_edges.ADDITIONAL_EDGES
+        + seed_edges.CAPES_THESIS_EDGES
+        + batch_evidence()
     )
     verify_quotes(edges)
     rows = []
     studies = {}
     for e in edges:
         st = e.pop("_study")
-        studies[st["pmid"]] = st
+        studies[st["reference"]] = st
         rows.append(
             build.make_evidence(
                 e["source_id"], e["source_type"], e["target_id"], e["target_type"],
@@ -120,24 +221,28 @@ def curated_evidence() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
                 context=e["context"],
                 quote=e["quote"],
                 reference=e["reference"],
-                reference_type="PMID",
-                source_database="PubMed/MEDLINE (manual curation)",
+                reference_type=e["reference_type"],
+                source_database=e.get("source_database") or st["source_database"],
                 retrieved_at=today(),
                 notes=e.get("notes", ""),
             )
         )
     anchor_rows = []
-    for p, s in sorted(studies.items()):
+    for ref, s in sorted(studies.items()):
         anchor_rows.append(
             {
-                "pmid": p,
+                "pmid": s["pmid"],
                 "title": s["title"],
                 "year": s["year"],
                 "journal": s["journal"],
                 "first_author": s["first_author"],
                 "doi": s["doi"],
                 "doi_url": f"https://doi.org/{s['doi']}" if s["doi"] else "",
-                "pubmed_url": f"https://pubmed.ncbi.nlm.nih.gov/{p}/",
+                "pubmed_url": s["url"] if s["reference_type"] == "PMID" else "",
+                "reference": ref,
+                "reference_type": s["reference_type"],
+                "url": s["url"],
+                "source_database": s["source_database"],
             }
         )
     write_csv(config.CURATED / "anchor_studies.csv", anchor_rows)

@@ -261,4 +261,6 @@ function main()
     println("written: ", OUT_JSON)
 end
 
-main()
+if abspath(PROGRAM_FILE) == @__FILE__
+    main()
+end

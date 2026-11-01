@@ -1,7 +1,7 @@
 {
-  "n_family_tests": 89,
-  "n_overlap_ge2": 5,
-  "n_candidates_reported": 5,
+  "n_family_tests": 75,
+  "n_overlap_ge2": 1,
+  "n_candidates_reported": 1,
   "n_fdr_significant": 0,
   "n_fdr_significant_in_family": 0,
   "n_perm_significant_in_eligible": 0,

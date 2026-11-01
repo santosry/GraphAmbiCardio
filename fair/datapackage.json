@@ -1,6 +1,6 @@
 {
   "name": "graphambicardio-graphambicardio",
-  "title": "GraphAmbiCardio — grafo de conhecimento e dados derivados",
+  "title": "GraphAmbiCardio: grafo de conhecimento e dados derivados",
   "description": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas, com dados locais de Campos dos Goytacazes (RJ) e proveniência por evidência.",
   "version": "0.4.0",
   "created": "2026-11-01",
@@ -125,8 +125,8 @@
       "description": "Relações agregadas com camada, confiança, grau e nível de evidência",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 1988772,
-      "hash": "sha256:61e8e7181caf58caac95c55bdc2aa41bfa3f6adcff23bb5074d4ff13e80dbc44",
+      "bytes": 1998496,
+      "hash": "sha256:fb46c8b5b23c0af9e7c93d9aa9d6fc1e3f02f8fcb1f25011f1e8077b7da36132",
       "schema": {
         "fields": [
           {
@@ -222,8 +222,8 @@
       "description": "Uma linha por evidência, com referência, espécie, desenho, citação e limitações",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 1596684,
-      "hash": "sha256:327dd90488b7ddd826a81f834f89368afdb41fbe42fb9eec2f7196cc6b82f975",
+      "bytes": 1624635,
+      "hash": "sha256:ee3c8c18649e494863760ab1932cf1f28b00fd9504517519c27f7c54341bf587",
       "schema": {
         "fields": [
           {
@@ -319,8 +319,8 @@
       "description": "Hipóteses geradas por composição de arestas observadas",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 3253,
-      "hash": "sha256:6fa803762c9e6616a7897ab06c8b439901b6c39f4115b3fc3ff8a554bb90f535",
+      "bytes": 847,
+      "hash": "sha256:204b8f546cb1670a5c86777b5edad6026ebd34cc4372fd7bb26a10e33132461f",
       "schema": {
         "fields": [
           {
@@ -752,8 +752,8 @@
       "description": "Caminhos exposição-fenótipo com confiança mínima",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 2630,
-      "hash": "sha256:ace9ab89f4edcbb95f1b8f094448d95157dff7c9ce03f6ed9dc05ec5c85698b8",
+      "bytes": 4358,
+      "hash": "sha256:5fa7f50d29b19ac5557b2ef8daadc4579f934b0d91a6b69f7c7da15ba80e702a",
       "schema": {
         "fields": [
           {
@@ -786,7 +786,7 @@
           },
           {
             "name": "references",
-            "type": "int64"
+            "type": "object"
           },
           {
             "name": "direct",
@@ -801,8 +801,8 @@
       "description": "Lacunas explícitas por exposição, mecanismo e processo",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 2226,
-      "hash": "sha256:f88c77fcf9d00a657d62495f1932e9760d0abf4dc8c29fb53d520bdf879af6f9",
+      "bytes": 2407,
+      "hash": "sha256:926f12bae090e4a67753390c93562cdde07b0405c08158d1f04f61955709616e",
       "schema": {
         "fields": [
           {
@@ -834,8 +834,8 @@
       "description": "Hipóteses por sobreposição gênica (não evidenciais)",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 2127,
-      "hash": "sha256:2506644a2dcd5c24420ce74fdb6fb1e8eacb30c5bcb4c87e9b3d097ffc7763b2",
+      "bytes": 666,
+      "hash": "sha256:ef3f8c0d1dbde63ca43de407f3fdd222065e47fdb4223eadd2481d9d54133cd3",
       "schema": {
         "fields": [
           {
@@ -1217,8 +1217,8 @@
       "description": "Módulo Julia de simulação Monte Carlo da janela gestacional",
       "format": "jl",
       "mediatype": "text/x-julia",
-      "bytes": 9773,
-      "hash": "sha256:4a17cb7a3a57a5d9310f800625accb506eb3181a5ef6d8bad160248e78d38eff",
+      "bytes": 9821,
+      "hash": "sha256:caf0d8694dead660b3286d0423f219908ff63adc195f3fe5d69f922e4c7c912a",
       "schema": null
     },
     {
@@ -1247,8 +1247,8 @@
       "description": "Família completa de testes de sobreposição gênica, antes da seleção",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 28237,
-      "hash": "sha256:ed61896f9c541338be061ec98d4d0ea84c1d9fd4fd76d6e37193cb178aad5ede",
+      "bytes": 23655,
+      "hash": "sha256:e6e92ef81b28b3d4430ecc73c58b1517ed6c32f91147003371953d6ff8ab1408",
       "schema": {
         "fields": [
           {
@@ -1289,7 +1289,7 @@
           },
           {
             "name": "overlap_genes",
-            "type": "object"
+            "type": "float64"
           },
           {
             "name": "supporting_reference",
@@ -1321,7 +1321,7 @@
           },
           {
             "name": "perm_significant",
-            "type": "object"
+            "type": "float64"
           },
           {
             "name": "mechanism_gene_source",
@@ -1427,8 +1427,8 @@
       "description": "Manifesto das figuras do site com fonte, período, dados e SHA-256",
       "format": "json",
       "mediatype": "application/json",
-      "bytes": 4045,
-      "hash": "sha256:faf489f970743d0ee4d5a90ee453525162997340f3b1e138ab994aef0c701211",
+      "bytes": 4030,
+      "hash": "sha256:9def83eedc409c271a01fe71360867926fd188df88d3f6440cba362a13078cb9",
       "schema": null
     },
     {
@@ -1611,6 +1611,980 @@
           {
             "name": "unit_or_codes",
             "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "capes_cardiopatias",
+      "path": "literature/searches/capes_cardiopatias_congenitas.json",
+      "description": "CAPES Catálogo de Teses: consulta 'cardiopatias congênitas' (552 hits; 552 registros recuperados em todas as páginas)",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 373000,
+      "hash": "sha256:c77ab5ac4a9a7559f0e2055f5adf09d30cc1e2e0ccc69f26e0ee0f69f8bcd82b",
+      "schema": null
+    },
+    {
+      "name": "capes_poluicao_ar",
+      "path": "literature/searches/capes_poluicao_ar.json",
+      "description": "CAPES Catálogo de Teses: consulta 'poluição do ar cardiopatia' (0 hits)",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 217,
+      "hash": "sha256:ecbec01dd4f2338816371315f193fc8197e2ebe3a9cfa9a964cc38e6c9a0a8cc",
+      "schema": null
+    },
+    {
+      "name": "capes_agrotoxicos",
+      "path": "literature/searches/capes_agrotoxicos.json",
+      "description": "CAPES Catálogo de Teses: consulta 'agrotóxicos cardiopatia' (1 hit; 1 registro)",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 893,
+      "hash": "sha256:b081c79a812722972f31128691abe1758cdba73372d493650c1bf343e415ce26",
+      "schema": null
+    },
+    {
+      "name": "capes_temperatura",
+      "path": "literature/searches/capes_temperatura.json",
+      "description": "CAPES Catálogo de Teses: consulta 'temperatura cardiopatia congênita' (7 hits; 7 registros)",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 5050,
+      "hash": "sha256:94c19690140ca831d07ec053511684071867500516103454a6c834885ab0c6c3",
+      "schema": null
+    },
+    {
+      "name": "prisma_fluxo",
+      "path": "reports/prisma_flow.csv",
+      "description": "Fluxo PRISMA-ScR com contagens por fonte, incluindo CAPES Teses; não é revisão sistemática",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 412,
+      "hash": "sha256:2f07bd73b088b6cbc84dd6b23779637511281e208869f2e4d87d1b23428b041a",
+      "schema": {
+        "fields": [
+          {
+            "name": "stage",
+            "type": "object"
+          },
+          {
+            "name": "records",
+            "type": "int64"
+          },
+          {
+            "name": "notes",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "cobertura_recuperacao",
+      "path": "reports/retrieval_coverage.csv",
+      "description": "Hits totais, registros recuperados e escopo de recuperação por busca e por base",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 72428,
+      "hash": "sha256:445224a3ad252490e47db75cf7fb3d469f3150ec019aa54d6437ff40f0539389",
+      "schema": {
+        "fields": [
+          {
+            "name": "search_file",
+            "type": "object"
+          },
+          {
+            "name": "source",
+            "type": "object"
+          },
+          {
+            "name": "query",
+            "type": "object"
+          },
+          {
+            "name": "total_hits",
+            "type": "int64"
+          },
+          {
+            "name": "retrieved",
+            "type": "int64"
+          },
+          {
+            "name": "retrieval_scope",
+            "type": "object"
+          },
+          {
+            "name": "retrieval_cap",
+            "type": "object"
+          },
+          {
+            "name": "coverage_fraction",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triagem_todas_bases",
+      "path": "literature/screening/all_records_triage.csv",
+      "description": "Registro unificado dos 2.510 registros recuperados: triagem automática, status de âncora e decisão CAPES",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 832824,
+      "hash": "sha256:fb2c8e4c5870d60a8232071b29679bbc378e2bf31a92149846aea42dd07574bf",
+      "schema": {
+        "fields": [
+          {
+            "name": "source",
+            "type": "object"
+          },
+          {
+            "name": "search_file",
+            "type": "object"
+          },
+          {
+            "name": "record_id",
+            "type": "int64"
+          },
+          {
+            "name": "pmid",
+            "type": "int64"
+          },
+          {
+            "name": "doi",
+            "type": "object"
+          },
+          {
+            "name": "title",
+            "type": "object"
+          },
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "has_abstract",
+            "type": "bool"
+          },
+          {
+            "name": "species_human",
+            "type": "bool"
+          },
+          {
+            "name": "species_animal",
+            "type": "bool"
+          },
+          {
+            "name": "species_cell",
+            "type": "bool"
+          },
+          {
+            "name": "design",
+            "type": "object"
+          },
+          {
+            "name": "window_terms",
+            "type": "object"
+          },
+          {
+            "name": "mechanisms",
+            "type": "object"
+          },
+          {
+            "name": "phenotypes",
+            "type": "float64"
+          },
+          {
+            "name": "is_review",
+            "type": "bool"
+          },
+          {
+            "name": "status",
+            "type": "object"
+          },
+          {
+            "name": "screening_level",
+            "type": "object"
+          },
+          {
+            "name": "reason",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "recuperacao_exaustiva",
+      "path": "reports/exhaustive_retrieval.csv",
+      "description": "Recuperação exaustiva por busca: hits, recuperados, candidatos, arquivo bruto e SHA-256",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 160203,
+      "hash": "sha256:acf2a95d3e44ad13dd4a6fbdeb0274998b4653cb6dae86c17979d86a9cd0c2e6",
+      "schema": {
+        "fields": [
+          {
+            "name": "source",
+            "type": "object"
+          },
+          {
+            "name": "search_id",
+            "type": "object"
+          },
+          {
+            "name": "query",
+            "type": "object"
+          },
+          {
+            "name": "total_hits",
+            "type": "int64"
+          },
+          {
+            "name": "retrieved",
+            "type": "int64"
+          },
+          {
+            "name": "candidates_before_dedup",
+            "type": "int64"
+          },
+          {
+            "name": "retrieval_scope",
+            "type": "object"
+          },
+          {
+            "name": "raw_file",
+            "type": "object"
+          },
+          {
+            "name": "sha256",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "candidatos_exaustivos",
+      "path": "literature/screening/exhaustive_candidates.csv",
+      "description": "Estudos candidatos após deduplicação; triagem automática, não evidência",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 1390641,
+      "hash": "sha256:f1f2f8cc61c3f9173cf0e603e3c5ab9fd5871d42e91bbd81a9a934cc087d38ad",
+      "schema": {
+        "fields": [
+          {
+            "name": "candidate_key",
+            "type": "object"
+          },
+          {
+            "name": "record_id",
+            "type": "object"
+          },
+          {
+            "name": "pmid",
+            "type": "float64"
+          },
+          {
+            "name": "doi",
+            "type": "object"
+          },
+          {
+            "name": "title",
+            "type": "object"
+          },
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "journal",
+            "type": "float64"
+          },
+          {
+            "name": "first_author",
+            "type": "object"
+          },
+          {
+            "name": "species_human",
+            "type": "bool"
+          },
+          {
+            "name": "species_animal",
+            "type": "bool"
+          },
+          {
+            "name": "species_cell",
+            "type": "bool"
+          },
+          {
+            "name": "design",
+            "type": "object"
+          },
+          {
+            "name": "window_terms",
+            "type": "object"
+          },
+          {
+            "name": "is_review",
+            "type": "bool"
+          },
+          {
+            "name": "sources",
+            "type": "object"
+          },
+          {
+            "name": "search_ids",
+            "type": "object"
+          },
+          {
+            "name": "exposures",
+            "type": "object"
+          },
+          {
+            "name": "phenotypes",
+            "type": "object"
+          },
+          {
+            "name": "mechanisms",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "estudos_triados_nos",
+      "path": "outputs/graph/screened_study_nodes.csv",
+      "description": "Nós Study da camada de estudos triados",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 1286615,
+      "hash": "sha256:ffbd659eb144d5d00f870e9421a6384a877e2718b4c292b10df9e529d84b2cc6",
+      "schema": {
+        "fields": [
+          {
+            "name": "node_id",
+            "type": "object"
+          },
+          {
+            "name": "label",
+            "type": "object"
+          },
+          {
+            "name": "type",
+            "type": "object"
+          },
+          {
+            "name": "subtype",
+            "type": "object"
+          },
+          {
+            "name": "identifiers",
+            "type": "object"
+          },
+          {
+            "name": "description",
+            "type": "object"
+          },
+          {
+            "name": "source",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "estudos_triados_relacoes",
+      "path": "outputs/graph/screened_study_relations.csv",
+      "description": "Relações Study → conceito da camada de estudos triados",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 3414232,
+      "hash": "sha256:5a14bbd697d960634603fa33a6502f71241fc4cc19601d7cde5f72c6ae7ce338",
+      "schema": {
+        "fields": [
+          {
+            "name": "source_id",
+            "type": "object"
+          },
+          {
+            "name": "source_type",
+            "type": "object"
+          },
+          {
+            "name": "target_id",
+            "type": "object"
+          },
+          {
+            "name": "target_type",
+            "type": "object"
+          },
+          {
+            "name": "relation",
+            "type": "object"
+          },
+          {
+            "name": "layer",
+            "type": "object"
+          },
+          {
+            "name": "confidence",
+            "type": "float64"
+          },
+          {
+            "name": "grade",
+            "type": "object"
+          },
+          {
+            "name": "evidence_type",
+            "type": "object"
+          },
+          {
+            "name": "study_design",
+            "type": "float64"
+          },
+          {
+            "name": "species",
+            "type": "object"
+          },
+          {
+            "name": "reference",
+            "type": "object"
+          },
+          {
+            "name": "reference_type",
+            "type": "object"
+          },
+          {
+            "name": "source_database",
+            "type": "object"
+          },
+          {
+            "name": "retrieved_at",
+            "type": "object"
+          },
+          {
+            "name": "notes",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "relatorio_estudos_triados",
+      "path": "reports/screened_studies.json",
+      "description": "Resumo da camada de estudos triados e contagens por base",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 471,
+      "hash": "sha256:220ef7d5ff08ffd593d3ebf3d87cb2080b5aff79720b1da58ea0dd480fee8564",
+      "schema": null
+    },
+    {
+      "name": "capes_triagem",
+      "path": "literature/screening/capes_triage.csv",
+      "description": "Triagem dos 552 registros CAPES: decisão, nível de triagem e motivo; 1 incluído, 551 excluídos",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 193650,
+      "hash": "sha256:81d5a6629e16623f6a3e1b6679e134f336b9f093e2fa6014ca322513b9e7e167",
+      "schema": {
+        "fields": [
+          {
+            "name": "capes_id",
+            "type": "int64"
+          },
+          {
+            "name": "queries",
+            "type": "object"
+          },
+          {
+            "name": "title",
+            "type": "object"
+          },
+          {
+            "name": "author",
+            "type": "object"
+          },
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "degree",
+            "type": "object"
+          },
+          {
+            "name": "institution",
+            "type": "object"
+          },
+          {
+            "name": "decision",
+            "type": "object"
+          },
+          {
+            "name": "screening_level",
+            "type": "object"
+          },
+          {
+            "name": "reason",
+            "type": "object"
+          },
+          {
+            "name": "evidence_target",
+            "type": "float64"
+          },
+          {
+            "name": "screened_at",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "capes_resumo_tese",
+      "path": "literature/curated/capes_abstracts/7850222.json",
+      "description": "Resumo arquivado da tese CAPES incluída (ID 7850222), com URL Sucupira e data de recuperação",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 5931,
+      "hash": "sha256:3c63f95051335bbe794176aa8f009ec2d2cda8f288ceb5771ca5d5d313228089",
+      "schema": null
+    },
+    {
+      "name": "estudos_ancora",
+      "path": "literature/curated/anchor_studies.csv",
+      "description": "Estudos-âncora curados: 58 PMIDs + 1 tese CAPES, com referência, DOI/URL e fonte",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 21104,
+      "hash": "sha256:e5913baabb83766b4859a6755a2cecb216369bb9e2e2f05fd00bd6a4d1345db9",
+      "schema": {
+        "fields": [
+          {
+            "name": "pmid",
+            "type": "int64"
+          },
+          {
+            "name": "title",
+            "type": "object"
+          },
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "journal",
+            "type": "object"
+          },
+          {
+            "name": "first_author",
+            "type": "object"
+          },
+          {
+            "name": "doi",
+            "type": "object"
+          },
+          {
+            "name": "doi_url",
+            "type": "object"
+          },
+          {
+            "name": "pubmed_url",
+            "type": "object"
+          },
+          {
+            "name": "reference",
+            "type": "int64"
+          },
+          {
+            "name": "reference_type",
+            "type": "object"
+          },
+          {
+            "name": "url",
+            "type": "object"
+          },
+          {
+            "name": "source_database",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "evidencias_curadas",
+      "path": "literature/curated/curated_edges.csv",
+      "description": "Uma linha por aresta curada (84 linhas), com trecho verbatim, referência, tipo de referência e fonte",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 63284,
+      "hash": "sha256:763b744fe1fd56967c6489cc578dee1a10a68866b7aabe0c58ab8c70919e3a71",
+      "schema": {
+        "fields": [
+          {
+            "name": "evidence_id",
+            "type": "object"
+          },
+          {
+            "name": "edge_key",
+            "type": "object"
+          },
+          {
+            "name": "source_id",
+            "type": "object"
+          },
+          {
+            "name": "source_type",
+            "type": "object"
+          },
+          {
+            "name": "target_id",
+            "type": "object"
+          },
+          {
+            "name": "target_type",
+            "type": "object"
+          },
+          {
+            "name": "relation",
+            "type": "object"
+          },
+          {
+            "name": "layer",
+            "type": "object"
+          },
+          {
+            "name": "evidence_type",
+            "type": "object"
+          },
+          {
+            "name": "study_design",
+            "type": "object"
+          },
+          {
+            "name": "species",
+            "type": "object"
+          },
+          {
+            "name": "population_or_model",
+            "type": "object"
+          },
+          {
+            "name": "exposure_window",
+            "type": "object"
+          },
+          {
+            "name": "effect_direction",
+            "type": "object"
+          },
+          {
+            "name": "context",
+            "type": "object"
+          },
+          {
+            "name": "quote",
+            "type": "object"
+          },
+          {
+            "name": "reference",
+            "type": "int64"
+          },
+          {
+            "name": "reference_type",
+            "type": "object"
+          },
+          {
+            "name": "source_database",
+            "type": "object"
+          },
+          {
+            "name": "retrieved_at",
+            "type": "object"
+          },
+          {
+            "name": "notes",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fila_curadoria_lote",
+      "path": "literature/curated/batch_chd_queue.csv",
+      "description": "635 candidatos CHD com PMID; fila automática, não evidência",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 197060,
+      "hash": "sha256:893056162d0730bcee5b4c374a7ed4237ab6422829eb054d065a2376d8f29ff4",
+      "schema": {
+        "fields": [
+          {
+            "name": "candidate_key",
+            "type": "object"
+          },
+          {
+            "name": "pmid",
+            "type": "int64"
+          },
+          {
+            "name": "doi",
+            "type": "object"
+          },
+          {
+            "name": "title",
+            "type": "object"
+          },
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "journal",
+            "type": "object"
+          },
+          {
+            "name": "exposure_id",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_label",
+            "type": "float64"
+          },
+          {
+            "name": "phenotype_id",
+            "type": "float64"
+          },
+          {
+            "name": "phenotype_label",
+            "type": "float64"
+          },
+          {
+            "name": "candidate_exposures",
+            "type": "object"
+          },
+          {
+            "name": "candidate_phenotypes",
+            "type": "object"
+          },
+          {
+            "name": "study_design",
+            "type": "float64"
+          },
+          {
+            "name": "species",
+            "type": "float64"
+          },
+          {
+            "name": "evidence_type",
+            "type": "float64"
+          },
+          {
+            "name": "quote",
+            "type": "float64"
+          },
+          {
+            "name": "effect_direction",
+            "type": "float64"
+          },
+          {
+            "name": "population_or_model",
+            "type": "float64"
+          },
+          {
+            "name": "exposure_window",
+            "type": "float64"
+          },
+          {
+            "name": "status",
+            "type": "object"
+          },
+          {
+            "name": "reason",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "revisao_curadoria_lote",
+      "path": "literature/curated/batch_chd_review.csv",
+      "description": "34 linhas de revisão (29 verificadas, 5 recusadas) com citação, efeito, população, janela e desenho",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 18751,
+      "hash": "sha256:3b896624c8e8ff656a766fd1f3c37dfbf1a3cdd9f5ef8a31df8ecaba39d971f4",
+      "schema": {
+        "fields": [
+          {
+            "name": "pmid",
+            "type": "int64"
+          },
+          {
+            "name": "exposure_id",
+            "type": "object"
+          },
+          {
+            "name": "phenotype_id",
+            "type": "object"
+          },
+          {
+            "name": "review_status",
+            "type": "object"
+          },
+          {
+            "name": "review_quote",
+            "type": "object"
+          },
+          {
+            "name": "review_effect",
+            "type": "object"
+          },
+          {
+            "name": "review_population",
+            "type": "object"
+          },
+          {
+            "name": "review_window",
+            "type": "object"
+          },
+          {
+            "name": "review_design",
+            "type": "object"
+          },
+          {
+            "name": "review_note",
+            "type": "object"
+          },
+          {
+            "name": "reviewed_by",
+            "type": "object"
+          },
+          {
+            "name": "reviewed_at",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "propostas_segunda_passagem",
+      "path": "literature/curated/batch_chd_proposals.csv",
+      "description": "Propostas de atribuição por proximidade fenótipo-efeito; não evidência até revisão",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 723,
+      "hash": "sha256:643e6190d524dbd887c611540ba50f4ff5b86887a01cee760d8e18a792f9ceb3",
+      "schema": {
+        "fields": [
+          {
+            "name": "pmid",
+            "type": "int64"
+          },
+          {
+            "name": "exposure_id",
+            "type": "object"
+          },
+          {
+            "name": "phenotype_id",
+            "type": "object"
+          },
+          {
+            "name": "quote",
+            "type": "object"
+          },
+          {
+            "name": "effect",
+            "type": "object"
+          },
+          {
+            "name": "gap_chars",
+            "type": "int64"
+          },
+          {
+            "name": "orientation",
+            "type": "object"
+          },
+          {
+            "name": "n_phenotypes",
+            "type": "int64"
+          },
+          {
+            "name": "n_effects",
+            "type": "int64"
+          },
+          {
+            "name": "title",
+            "type": "object"
+          },
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "journal",
+            "type": "object"
+          },
+          {
+            "name": "status",
+            "type": "object"
+          },
+          {
+            "name": "reason",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "triagem_fila",
+      "path": "literature/curated/batch_chd_triage.csv",
+      "description": "Triagem heurística de prioridade dos registros restantes da fila de curadoria",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 168600,
+      "hash": "sha256:41f7af026a081b7acc0b91bd0fada083228f832b3dd7985c8159ded728f5c25a",
+      "schema": {
+        "fields": [
+          {
+            "name": "pmid",
+            "type": "int64"
+          },
+          {
+            "name": "title",
+            "type": "object"
+          },
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "journal",
+            "type": "object"
+          },
+          {
+            "name": "candidate_exposures",
+            "type": "object"
+          },
+          {
+            "name": "candidate_phenotypes",
+            "type": "object"
+          },
+          {
+            "name": "triage_class",
+            "type": "object"
+          },
+          {
+            "name": "triage_reason",
+            "type": "object"
+          },
+          {
+            "name": "has_effect_size",
+            "type": "bool"
+          },
+          {
+            "name": "has_association_language",
+            "type": "bool"
           }
         ]
       }

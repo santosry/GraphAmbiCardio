@@ -22,28 +22,35 @@
   <key id="d1" for="edge" attr.name="edge_key" attr.type="string" />
   <key id="d0" for="edge" attr.name="edge_id" attr.type="string" />
   <graph edgedefault="directed">
-    <node id="GENE:GATA4" />
-    <node id="CHD:ASD" />
+    <node id="EXP:METALS" />
     <node id="CHD:VSD" />
+    <node id="EXP:NO2" />
+    <node id="EXP:PM25" />
+    <node id="CHD:ASD" />
+    <node id="GENE:GATA4" />
     <node id="GENE:NKX2-5" />
     <node id="CHD:TOF" />
     <node id="GENE:NOTCH1" />
     <node id="CHD:AS" />
     <node id="GENE:TBX5" />
+    <node id="EXP:ALCOHOL" />
     <node id="EXP:CO" />
     <node id="EXP:HEAT" />
     <node id="CHD:ALL" />
-    <node id="EXP:METALS" />
-    <node id="EXP:NO2" />
     <node id="CHD:COA" />
     <node id="EXP:O3" />
+    <node id="EXP:PEST" />
+    <node id="CHD:PDA" />
+    <node id="CHD:TGA" />
     <node id="EXP:PM10" />
-    <node id="EXP:PM25" />
+    <node id="CHD:PS" />
     <node id="MECH:INFLAM" />
     <node id="EXP:SMOKE" />
+    <node id="CHD:AVSD" />
+    <node id="CHD:EBSTEIN" />
+    <node id="CHD:TRUNCUS" />
+    <node id="EXP:SOLV" />
     <node id="EXP:VPA" />
-    <node id="EXP:ALCOHOL" />
-    <node id="CHD:TGA" />
     <node id="EXP:DIOXIN" />
     <node id="MECH:AHR" />
     <node id="PROC:CM_DIFF" />
@@ -56,6 +63,305 @@
     <node id="PROC:AV_CUSHION" />
     <node id="MECH:OXSTRESS" />
     <node id="PROC:NEURAL_CREST_MIGRATION" />
+    <edge source="EXP:METALS" target="CHD:VSD">
+      <data key="d0">EDGE:b2abd8669ade</data>
+      <data key="d1">EXP:METALS|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:VSD</data>
+      <data key="d2">EXP:METALS</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:VSD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">2</data>
+      <data key="d9">2</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control;cohort</data>
+      <data key="d13">0.95</data>
+      <data key="d14">A</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.05, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 2}</data>
+      <data key="d18">25628158;27224896</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:METALS" target="CHD:ALL">
+      <data key="d0">EDGE:08ffbc4b9560</data>
+      <data key="d1">EXP:METALS|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:ALL</data>
+      <data key="d2">EXP:METALS</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:ALL</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">33135766</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:METALS" target="CHD:ASD">
+      <data key="d0">EDGE:96558ce24f45</data>
+      <data key="d1">EXP:METALS|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:ASD</data>
+      <data key="d2">EXP:METALS</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:ASD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">25628158</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:METALS" target="CHD:COA">
+      <data key="d0">EDGE:9948a73583db</data>
+      <data key="d1">EXP:METALS|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:COA</data>
+      <data key="d2">EXP:METALS</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:COA</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">3209340</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:NO2" target="CHD:VSD">
+      <data key="d0">EDGE:a4cb85d922d8</data>
+      <data key="d1">EXP:NO2|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:VSD</data>
+      <data key="d2">EXP:NO2</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:VSD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">2</data>
+      <data key="d9">2</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.95</data>
+      <data key="d14">A</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.05, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 2}</data>
+      <data key="d18">21329916;28520847</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed);PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:NO2" target="CHD:COA">
+      <data key="d0">EDGE:3a7dcf0e9512</data>
+      <data key="d1">EXP:NO2|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:COA</data>
+      <data key="d2">EXP:NO2</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:COA</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">meta_analysis</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">32278917</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PM25" target="CHD:ASD">
+      <data key="d0">EDGE:198b712404b0</data>
+      <data key="d1">EXP:PM25|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:ASD</data>
+      <data key="d2">EXP:PM25</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:ASD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">2</data>
+      <data key="d9">2</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.95</data>
+      <data key="d14">A</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.05, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.0, "n_references": 2}</data>
+      <data key="d18">30481714;40742883</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PM25" target="CHD:PDA">
+      <data key="d0">EDGE:24236f82a8e3</data>
+      <data key="d1">EXP:PM25|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:PDA</data>
+      <data key="d2">EXP:PM25</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:PDA</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">2</data>
+      <data key="d9">2</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control;cohort</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.05, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.0, "n_references": 2}</data>
+      <data key="d18">23623715;26705853</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PM25" target="CHD:VSD">
+      <data key="d0">EDGE:0a9693c08f76</data>
+      <data key="d1">EXP:PM25|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:VSD</data>
+      <data key="d2">EXP:PM25</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:VSD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">2</data>
+      <data key="d9">2</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.05, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.0, "n_references": 2}</data>
+      <data key="d18">26705853;32091506</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed);PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PM25" target="MECH:INFLAM">
+      <data key="d0">EDGE:ff3655bf49bb</data>
+      <data key="d1">EXP:PM25|EXPOSURE_MODULATES_MECHANISM|MECH:INFLAM</data>
+      <data key="d2">EXP:PM25</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">MECH:INFLAM</data>
+      <data key="d5">Mechanism</data>
+      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">cohort</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">34934889</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PM25" target="CHD:TOF">
+      <data key="d0">EDGE:50e6ff69c29c</data>
+      <data key="d1">EXP:PM25|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TOF</data>
+      <data key="d2">EXP:PM25</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:TOF</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">meta_analysis</data>
+      <data key="d13">0.75</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">32278917</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PM25" target="MECH:AHR">
+      <data key="d0">EDGE:e3a03198eabc</data>
+      <data key="d1">EXP:PM25|EXPOSURE_MODULATES_MECHANISM|MECH:AHR</data>
+      <data key="d2">EXP:PM25</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">MECH:AHR</data>
+      <data key="d5">Mechanism</data>
+      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">experimental_animal</data>
+      <data key="d11">zebrafish</data>
+      <data key="d12">animal_in_vivo</data>
+      <data key="d13">0.585</data>
+      <data key="d14">C</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">27216425</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PM25" target="MECH:MITO">
+      <data key="d0">EDGE:2918dc6ec799</data>
+      <data key="d1">EXP:PM25|EXPOSURE_MODULATES_MECHANISM|MECH:MITO</data>
+      <data key="d2">EXP:PM25</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">MECH:MITO</data>
+      <data key="d5">Mechanism</data>
+      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">experimental_animal</data>
+      <data key="d11">zebrafish</data>
+      <data key="d12">animal_in_vivo</data>
+      <data key="d13">0.585</data>
+      <data key="d14">C</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">36841371</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
     <edge source="GENE:GATA4" target="CHD:ASD">
       <data key="d0">EDGE:39a4974a28a6</data>
       <data key="d1">GENE:GATA4|GENE_ASSOCIATED_WITH_PHENOTYPE|CHD:ASD</data>
@@ -217,6 +523,121 @@
       <data key="d19">HPO genes_to_phenotype.txt;PubMed/MEDLINE (manual curation)</data>
       <data key="d20">2026-11-01</data>
     </edge>
+    <edge source="EXP:ALCOHOL" target="CHD:ASD">
+      <data key="d0">EDGE:74fa0560c6d6</data>
+      <data key="d1">EXP:ALCOHOL|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:ASD</data>
+      <data key="d2">EXP:ALCOHOL</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:ASD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">1397217</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:ALCOHOL" target="CHD:TOF">
+      <data key="d0">EDGE:3751c962981d</data>
+      <data key="d1">EXP:ALCOHOL|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TOF</data>
+      <data key="d2">EXP:ALCOHOL</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:TOF</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">2</data>
+      <data key="d9">2</data>
+      <data key="d10">direct_human;indirect</data>
+      <data key="d11">human</data>
+      <data key="d12">cohort;meta_analysis</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">31578093;35065976</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:ALCOHOL" target="CHD:VSD">
+      <data key="d0">EDGE:e12370e6d728</data>
+      <data key="d1">EXP:ALCOHOL|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:VSD</data>
+      <data key="d2">EXP:ALCOHOL</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:VSD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">registry</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">29937526</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:ALCOHOL" target="CHD:TGA">
+      <data key="d0">EDGE:ab3b8e795c4c</data>
+      <data key="d1">EXP:ALCOHOL|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TGA</data>
+      <data key="d2">EXP:ALCOHOL</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:TGA</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">meta_analysis</data>
+      <data key="d13">0.75</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">26110619</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:ALCOHOL" target="MECH:RA_SIGNAL">
+      <data key="d0">EDGE:f949a24767b7</data>
+      <data key="d1">EXP:ALCOHOL|EXPOSURE_MODULATES_MECHANISM|MECH:RA_SIGNAL</data>
+      <data key="d2">EXP:ALCOHOL</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">MECH:RA_SIGNAL</data>
+      <data key="d5">Mechanism</data>
+      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">experimental_animal</data>
+      <data key="d11">zebrafish</data>
+      <data key="d12">animal_in_vivo</data>
+      <data key="d13">0.585</data>
+      <data key="d14">C</data>
+      <data key="d15">plausivel_experimental</data>
+      <data key="d16">Plausível (experimental)</data>
+      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">23832875</data>
+      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
     <edge source="EXP:CO" target="CHD:TOF">
       <data key="d0">EDGE:6b7e04092e3e</data>
       <data key="d1">EXP:CO|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TOF</data>
@@ -226,9 +647,9 @@
       <data key="d5">Phenotype</data>
       <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d7">observed</data>
-      <data key="d8">1</data>
-      <data key="d9">1</data>
-      <data key="d10">direct_human</data>
+      <data key="d8">2</data>
+      <data key="d9">2</data>
+      <data key="d10">direct_human;indirect</data>
       <data key="d11">human</data>
       <data key="d12">meta_analysis</data>
       <data key="d13">0.85</data>
@@ -236,8 +657,8 @@
       <data key="d15">estabelecida</data>
       <data key="d16">Bem sustentada</data>
       <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">32278917</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d18">32278917;37268121</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed);PubMed/MEDLINE (manual curation)</data>
       <data key="d20">2026-11-01</data>
     </edge>
     <edge source="EXP:CO" target="CHD:VSD">
@@ -332,75 +753,6 @@
       <data key="d19">PubMed/MEDLINE (manual curation)</data>
       <data key="d20">2026-11-01</data>
     </edge>
-    <edge source="EXP:METALS" target="CHD:ALL">
-      <data key="d0">EDGE:08ffbc4b9560</data>
-      <data key="d1">EXP:METALS|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:ALL</data>
-      <data key="d2">EXP:METALS</data>
-      <data key="d3">Exposure</data>
-      <data key="d4">CHD:ALL</data>
-      <data key="d5">Phenotype</data>
-      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
-      <data key="d7">observed</data>
-      <data key="d8">1</data>
-      <data key="d9">1</data>
-      <data key="d10">direct_human</data>
-      <data key="d11">human</data>
-      <data key="d12">case_control</data>
-      <data key="d13">0.85</data>
-      <data key="d14">B</data>
-      <data key="d15">estabelecida</data>
-      <data key="d16">Bem sustentada</data>
-      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">33135766</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
-      <data key="d20">2026-11-01</data>
-    </edge>
-    <edge source="EXP:NO2" target="CHD:COA">
-      <data key="d0">EDGE:3a7dcf0e9512</data>
-      <data key="d1">EXP:NO2|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:COA</data>
-      <data key="d2">EXP:NO2</data>
-      <data key="d3">Exposure</data>
-      <data key="d4">CHD:COA</data>
-      <data key="d5">Phenotype</data>
-      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
-      <data key="d7">observed</data>
-      <data key="d8">1</data>
-      <data key="d9">1</data>
-      <data key="d10">direct_human</data>
-      <data key="d11">human</data>
-      <data key="d12">meta_analysis</data>
-      <data key="d13">0.85</data>
-      <data key="d14">B</data>
-      <data key="d15">estabelecida</data>
-      <data key="d16">Bem sustentada</data>
-      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">32278917</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
-      <data key="d20">2026-11-01</data>
-    </edge>
-    <edge source="EXP:NO2" target="CHD:VSD">
-      <data key="d0">EDGE:a4cb85d922d8</data>
-      <data key="d1">EXP:NO2|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:VSD</data>
-      <data key="d2">EXP:NO2</data>
-      <data key="d3">Exposure</data>
-      <data key="d4">CHD:VSD</data>
-      <data key="d5">Phenotype</data>
-      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
-      <data key="d7">observed</data>
-      <data key="d8">1</data>
-      <data key="d9">1</data>
-      <data key="d10">direct_human</data>
-      <data key="d11">human</data>
-      <data key="d12">case_control</data>
-      <data key="d13">0.85</data>
-      <data key="d14">B</data>
-      <data key="d15">estabelecida</data>
-      <data key="d16">Bem sustentada</data>
-      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">21329916</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
-      <data key="d20">2026-11-01</data>
-    </edge>
     <edge source="EXP:O3" target="CHD:ASD">
       <data key="d0">EDGE:5042b42a75cd</data>
       <data key="d1">EXP:O3|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:ASD</data>
@@ -422,6 +774,75 @@
       <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
       <data key="d18">32278917</data>
       <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PEST" target="CHD:ASD">
+      <data key="d0">EDGE:ac7b3d8cf841</data>
+      <data key="d1">EXP:PEST|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:ASD</data>
+      <data key="d2">EXP:PEST</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:ASD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">26033688</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PEST" target="CHD:PDA">
+      <data key="d0">EDGE:7fcfb9fd448a</data>
+      <data key="d1">EXP:PEST|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:PDA</data>
+      <data key="d2">EXP:PEST</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:PDA</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">33140474</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:PEST" target="CHD:TGA">
+      <data key="d0">EDGE:3fa502fb74e3</data>
+      <data key="d1">EXP:PEST|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TGA</data>
+      <data key="d2">EXP:PEST</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:TGA</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">11257060</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
       <data key="d20">2026-11-01</data>
     </edge>
     <edge source="EXP:PM10" target="CHD:ASD">
@@ -447,35 +868,12 @@
       <data key="d19">PubMed/MEDLINE (manual curation)</data>
       <data key="d20">2026-11-01</data>
     </edge>
-    <edge source="EXP:PM25" target="MECH:INFLAM">
-      <data key="d0">EDGE:ff3655bf49bb</data>
-      <data key="d1">EXP:PM25|EXPOSURE_MODULATES_MECHANISM|MECH:INFLAM</data>
-      <data key="d2">EXP:PM25</data>
+    <edge source="EXP:PM10" target="CHD:PS">
+      <data key="d0">EDGE:45f7efd132cc</data>
+      <data key="d1">EXP:PM10|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:PS</data>
+      <data key="d2">EXP:PM10</data>
       <data key="d3">Exposure</data>
-      <data key="d4">MECH:INFLAM</data>
-      <data key="d5">Mechanism</data>
-      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
-      <data key="d7">observed</data>
-      <data key="d8">1</data>
-      <data key="d9">1</data>
-      <data key="d10">direct_human</data>
-      <data key="d11">human</data>
-      <data key="d12">cohort</data>
-      <data key="d13">0.85</data>
-      <data key="d14">B</data>
-      <data key="d15">estabelecida</data>
-      <data key="d16">Bem sustentada</data>
-      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">34934889</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
-      <data key="d20">2026-11-01</data>
-    </edge>
-    <edge source="EXP:PM25" target="CHD:TOF">
-      <data key="d0">EDGE:50e6ff69c29c</data>
-      <data key="d1">EXP:PM25|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TOF</data>
-      <data key="d2">EXP:PM25</data>
-      <data key="d3">Exposure</data>
-      <data key="d4">CHD:TOF</data>
+      <data key="d4">CHD:PS</data>
       <data key="d5">Phenotype</data>
       <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d7">observed</data>
@@ -483,20 +881,20 @@
       <data key="d9">1</data>
       <data key="d10">direct_human</data>
       <data key="d11">human</data>
-      <data key="d12">meta_analysis</data>
-      <data key="d13">0.75</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
       <data key="d14">B</data>
       <data key="d15">estabelecida</data>
       <data key="d16">Bem sustentada</data>
-      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">32278917</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">23772934</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
       <data key="d20">2026-11-01</data>
     </edge>
-    <edge source="EXP:PM25" target="CHD:VSD">
-      <data key="d0">EDGE:0a9693c08f76</data>
-      <data key="d1">EXP:PM25|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:VSD</data>
-      <data key="d2">EXP:PM25</data>
+    <edge source="EXP:PM10" target="CHD:VSD">
+      <data key="d0">EDGE:a4e5cabb4859</data>
+      <data key="d1">EXP:PM10|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:VSD</data>
+      <data key="d2">EXP:PM10</data>
       <data key="d3">Exposure</data>
       <data key="d4">CHD:VSD</data>
       <data key="d5">Phenotype</data>
@@ -507,59 +905,13 @@
       <data key="d10">direct_human</data>
       <data key="d11">human</data>
       <data key="d12">case_control</data>
-      <data key="d13">0.75</data>
+      <data key="d13">0.85</data>
       <data key="d14">B</data>
       <data key="d15">estabelecida</data>
       <data key="d16">Bem sustentada</data>
-      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">26705853</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
-      <data key="d20">2026-11-01</data>
-    </edge>
-    <edge source="EXP:PM25" target="MECH:AHR">
-      <data key="d0">EDGE:e3a03198eabc</data>
-      <data key="d1">EXP:PM25|EXPOSURE_MODULATES_MECHANISM|MECH:AHR</data>
-      <data key="d2">EXP:PM25</data>
-      <data key="d3">Exposure</data>
-      <data key="d4">MECH:AHR</data>
-      <data key="d5">Mechanism</data>
-      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
-      <data key="d7">observed</data>
-      <data key="d8">1</data>
-      <data key="d9">1</data>
-      <data key="d10">experimental_animal</data>
-      <data key="d11">zebrafish</data>
-      <data key="d12">animal_in_vivo</data>
-      <data key="d13">0.585</data>
-      <data key="d14">C</data>
-      <data key="d15">plausivel_experimental</data>
-      <data key="d16">Plausível (experimental)</data>
-      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">27216425</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
-      <data key="d20">2026-11-01</data>
-    </edge>
-    <edge source="EXP:PM25" target="MECH:MITO">
-      <data key="d0">EDGE:2918dc6ec799</data>
-      <data key="d1">EXP:PM25|EXPOSURE_MODULATES_MECHANISM|MECH:MITO</data>
-      <data key="d2">EXP:PM25</data>
-      <data key="d3">Exposure</data>
-      <data key="d4">MECH:MITO</data>
-      <data key="d5">Mechanism</data>
-      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
-      <data key="d7">observed</data>
-      <data key="d8">1</data>
-      <data key="d9">1</data>
-      <data key="d10">experimental_animal</data>
-      <data key="d11">zebrafish</data>
-      <data key="d12">animal_in_vivo</data>
-      <data key="d13">0.585</data>
-      <data key="d14">C</data>
-      <data key="d15">plausivel_experimental</data>
-      <data key="d16">Plausível (experimental)</data>
-      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">36841371</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">42825890</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
       <data key="d20">2026-11-01</data>
     </edge>
     <edge source="EXP:SMOKE" target="CHD:ALL">
@@ -585,6 +937,75 @@
       <data key="d19">PubMed/MEDLINE (manual curation)</data>
       <data key="d20">2026-11-01</data>
     </edge>
+    <edge source="EXP:SMOKE" target="CHD:AVSD">
+      <data key="d0">EDGE:9555203143c1</data>
+      <data key="d1">EXP:SMOKE|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:AVSD</data>
+      <data key="d2">EXP:SMOKE</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:AVSD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">22903798</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:SMOKE" target="CHD:EBSTEIN">
+      <data key="d0">EDGE:27f2f277b2af</data>
+      <data key="d1">EXP:SMOKE|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:EBSTEIN</data>
+      <data key="d2">EXP:SMOKE</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:EBSTEIN</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">31159903</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:SMOKE" target="CHD:PS">
+      <data key="d0">EDGE:e55b20dc05d9</data>
+      <data key="d1">EXP:SMOKE|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:PS</data>
+      <data key="d2">EXP:SMOKE</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:PS</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">21357347</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
     <edge source="EXP:SMOKE" target="CHD:TOF">
       <data key="d0">EDGE:7bdf0dca34ec</data>
       <data key="d1">EXP:SMOKE|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TOF</data>
@@ -606,6 +1027,121 @@
       <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
       <data key="d18">35916623</data>
       <data key="d19">PubMed/MEDLINE (manual curation)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:SMOKE" target="CHD:TRUNCUS">
+      <data key="d0">EDGE:978898603d0e</data>
+      <data key="d1">EXP:SMOKE|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TRUNCUS</data>
+      <data key="d2">EXP:SMOKE</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:TRUNCUS</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">21357347</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:SOLV" target="CHD:AS">
+      <data key="d0">EDGE:5c4e5b93b9ee</data>
+      <data key="d1">EXP:SOLV|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:AS</data>
+      <data key="d2">EXP:SOLV</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:AS</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">22811060</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:SOLV" target="CHD:COA">
+      <data key="d0">EDGE:d8188fdeeaad</data>
+      <data key="d1">EXP:SOLV|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:COA</data>
+      <data key="d2">EXP:SOLV</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:COA</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">11745829</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:SOLV" target="CHD:PS">
+      <data key="d0">EDGE:44842fc0fe09</data>
+      <data key="d1">EXP:SOLV|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:PS</data>
+      <data key="d2">EXP:SOLV</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:PS</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">22811060</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
+      <data key="d20">2026-11-01</data>
+    </edge>
+    <edge source="EXP:SOLV" target="CHD:VSD">
+      <data key="d0">EDGE:25ac123a780f</data>
+      <data key="d1">EXP:SOLV|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:VSD</data>
+      <data key="d2">EXP:SOLV</data>
+      <data key="d3">Exposure</data>
+      <data key="d4">CHD:VSD</data>
+      <data key="d5">Phenotype</data>
+      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d7">observed</data>
+      <data key="d8">1</data>
+      <data key="d9">1</data>
+      <data key="d10">direct_human</data>
+      <data key="d11">human</data>
+      <data key="d12">case_control</data>
+      <data key="d13">0.85</data>
+      <data key="d14">B</data>
+      <data key="d15">estabelecida</data>
+      <data key="d16">Bem sustentada</data>
+      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
+      <data key="d18">3407644</data>
+      <data key="d19">PubMed/MEDLINE (AI-assisted batch curation, reviewed)</data>
       <data key="d20">2026-11-01</data>
     </edge>
     <edge source="EXP:VPA" target="CHD:ALL">
@@ -651,52 +1187,6 @@
       <data key="d16">Plausível (experimental)</data>
       <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
       <data key="d18">32699959</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
-      <data key="d20">2026-11-01</data>
-    </edge>
-    <edge source="EXP:ALCOHOL" target="CHD:TGA">
-      <data key="d0">EDGE:ab3b8e795c4c</data>
-      <data key="d1">EXP:ALCOHOL|EXPOSURE_ASSOCIATED_WITH_PHENOTYPE|CHD:TGA</data>
-      <data key="d2">EXP:ALCOHOL</data>
-      <data key="d3">Exposure</data>
-      <data key="d4">CHD:TGA</data>
-      <data key="d5">Phenotype</data>
-      <data key="d6">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
-      <data key="d7">observed</data>
-      <data key="d8">1</data>
-      <data key="d9">1</data>
-      <data key="d10">direct_human</data>
-      <data key="d11">human</data>
-      <data key="d12">meta_analysis</data>
-      <data key="d13">0.75</data>
-      <data key="d14">B</data>
-      <data key="d15">estabelecida</data>
-      <data key="d16">Bem sustentada</data>
-      <data key="d17">{"base_strength": 0.9, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.1, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">26110619</data>
-      <data key="d19">PubMed/MEDLINE (manual curation)</data>
-      <data key="d20">2026-11-01</data>
-    </edge>
-    <edge source="EXP:ALCOHOL" target="MECH:RA_SIGNAL">
-      <data key="d0">EDGE:f949a24767b7</data>
-      <data key="d1">EXP:ALCOHOL|EXPOSURE_MODULATES_MECHANISM|MECH:RA_SIGNAL</data>
-      <data key="d2">EXP:ALCOHOL</data>
-      <data key="d3">Exposure</data>
-      <data key="d4">MECH:RA_SIGNAL</data>
-      <data key="d5">Mechanism</data>
-      <data key="d6">EXPOSURE_MODULATES_MECHANISM</data>
-      <data key="d7">observed</data>
-      <data key="d8">1</data>
-      <data key="d9">1</data>
-      <data key="d10">experimental_animal</data>
-      <data key="d11">zebrafish</data>
-      <data key="d12">animal_in_vivo</data>
-      <data key="d13">0.585</data>
-      <data key="d14">C</data>
-      <data key="d15">plausivel_experimental</data>
-      <data key="d16">Plausível (experimental)</data>
-      <data key="d17">{"base_strength": 0.635, "replication_bonus": 0.0, "species_concordance_bonus": 0.0, "contradiction_penalty": 0.0, "non_significance_penalty": 0.0, "single_study_penalty": 0.05, "n_references": 1}</data>
-      <data key="d18">23832875</data>
       <data key="d19">PubMed/MEDLINE (manual curation)</data>
       <data key="d20">2026-11-01</data>
     </edge>

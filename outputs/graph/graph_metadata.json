@@ -3,13 +3,13 @@
   "ontology_version": "0.4.0",
   "built_at": "2026-11-01",
   "n_nodes": 2238,
-  "n_relations": 4117,
-  "n_evidence_rows": 4613,
+  "n_relations": 4135,
+  "n_evidence_rows": 4639,
   "layers": {
     "ecological": 5,
-    "hypothesis": 14,
+    "hypothesis": 10,
     "inferred": 4,
-    "observed": 54,
+    "observed": 76,
     "structured": 4040
   }
 }

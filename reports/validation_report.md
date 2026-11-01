@@ -6,21 +6,30 @@ Generated: 2026-11-01
 
 Passed: **True**
 - n_nodes: 2238
-- n_relations: 4117
-- n_evidence: 4613
+- n_relations: 4135
+- n_evidence: 4639
 
 ## curated
 
 Passed: **True**
-- n_curated_edges: 54
-- n_unique_pmids: 33
-- sampled_for_recheck: 13
+- n_curated_edges: 84
+- n_unique_references: 59
+- n_capes_theses: 1
+- sampled_for_recheck: 20
+
+## batch_curation
+
+Passed: **True**
+- n_queue: 635
+- n_verified: 29
+- n_rejected: 5
+- n_batch_evidence: 29
 
 ## pmid_resolution
 
 Passed: **True**
-- n_pmids: 33
-- n_resolved: 33
+- n_pmids: 58
+- n_resolved: 58
 - missing: []
 
 ## local_data
@@ -34,4 +43,4 @@ Passed: **True**
 - sih_admissions: 561
 - climate_days: 5844
 
-All curated quotes were verified automatically against PubMed; the study team read every anchor abstract.
+All curated quotes were verified automatically against PubMed abstracts and the archived CAPES thesis abstract. The 54 manual rows were read by the study team; the 19 batch rows were promoted only after an explicit review entry, are flagged as AI-assisted in the evidence table, and remain subject to independent human confirmation. The review layer is audited against the evidence table.

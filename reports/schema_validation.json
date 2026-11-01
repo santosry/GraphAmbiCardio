@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T15:22:57Z",
+  "generated_at": "2026-11-01T18:22:09Z",
   "passed": true,
   "checks": [
     {
@@ -10,12 +10,12 @@
     {
       "check": "columns:outputs/graph/relations.csv",
       "ok": true,
-      "detail": "4117 rows"
+      "detail": "4135 rows"
     },
     {
       "check": "columns:outputs/graph/evidence.csv",
       "ok": true,
-      "detail": "4613 rows"
+      "detail": "4639 rows"
     },
     {
       "check": "columns:outputs/tables/exploratory_models.csv",
@@ -25,7 +25,7 @@
     {
       "check": "columns:outputs/tables/hypothesis_candidates.csv",
       "ok": true,
-      "detail": "5 rows"
+      "detail": "1 rows"
     },
     {
       "check": "columns:data_processed/pm25_campos_anual.csv",
@@ -80,7 +80,7 @@
     {
       "check": "columns:outputs/tables/hypothesis_family.csv",
       "ok": true,
-      "detail": "89 rows"
+      "detail": "75 rows"
     },
     {
       "check": "columns:outputs/tables/mechanism_gene_sets.csv",

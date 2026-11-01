@@ -22398,30 +22398,6 @@
       "key": "EDGE:71a9452b046d"
     },
     {
-      "relation": "HYPOTHESIS_CANDIDATE",
-      "layer": "hypothesis",
-      "confidence": 0.08,
-      "grade": "E",
-      "n_evidence": 1,
-      "evidence_tier": "nao_demonstrada",
-      "references": "GraphAmbiCardio gene-overlap rule",
-      "source": "EXP:PM25",
-      "target": "CHD:ASD",
-      "key": "EDGE:b623fe5f79ac"
-    },
-    {
-      "relation": "HYPOTHESIS_CANDIDATE",
-      "layer": "hypothesis",
-      "confidence": 0.08,
-      "grade": "E",
-      "n_evidence": 1,
-      "evidence_tier": "nao_demonstrada",
-      "references": "GraphAmbiCardio gene-overlap rule",
-      "source": "EXP:PM25",
-      "target": "CHD:PDA",
-      "key": "EDGE:bca885c3f513"
-    },
-    {
       "relation": "HYPOTHESIS_LINK",
       "layer": "hypothesis",
       "confidence": 0.08,
@@ -22458,6 +22434,42 @@
       "key": "EDGE:8666f8373c0d"
     },
     {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.95,
+      "grade": "A",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "30481714;40742883",
+      "source": "EXP:PM25",
+      "target": "CHD:ASD",
+      "key": "EDGE:198b712404b0"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "23623715;26705853",
+      "source": "EXP:PM25",
+      "target": "CHD:PDA",
+      "key": "EDGE:24236f82a8e3"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "26705853;32091506",
+      "source": "EXP:PM25",
+      "target": "CHD:VSD",
+      "key": "EDGE:0a9693c08f76"
+    },
+    {
       "relation": "EXPOSURE_MODULATES_MECHANISM",
       "layer": "observed",
       "confidence": 0.85,
@@ -22480,18 +22492,6 @@
       "source": "EXP:PM25",
       "target": "CHD:TOF",
       "key": "EDGE:50e6ff69c29c"
-    },
-    {
-      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
-      "layer": "observed",
-      "confidence": 0.75,
-      "grade": "B",
-      "n_evidence": 1,
-      "evidence_tier": "estabelecida",
-      "references": "26705853",
-      "source": "EXP:PM25",
-      "target": "CHD:VSD",
-      "key": "EDGE:0a9693c08f76"
     },
     {
       "relation": "EXPOSURE_MODULATES_MECHANISM",
@@ -22560,7 +22560,31 @@
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
-      "references": "32278917",
+      "references": "23772934",
+      "source": "EXP:PM10",
+      "target": "CHD:PS",
+      "key": "EDGE:45f7efd132cc"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "42825890",
+      "source": "EXP:PM10",
+      "target": "CHD:VSD",
+      "key": "EDGE:a4e5cabb4859"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "32278917;37268121",
       "source": "EXP:CO",
       "target": "CHD:TOF",
       "key": "EDGE:6b7e04092e3e"
@@ -22580,14 +22604,14 @@
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
       "layer": "observed",
-      "confidence": 0.85,
-      "grade": "B",
-      "n_evidence": 1,
+      "confidence": 0.95,
+      "grade": "A",
+      "n_evidence": 2,
       "evidence_tier": "estabelecida",
-      "references": "32278917",
+      "references": "21329916;28520847",
       "source": "EXP:NO2",
-      "target": "CHD:COA",
-      "key": "EDGE:3a7dcf0e9512"
+      "target": "CHD:VSD",
+      "key": "EDGE:a4cb85d922d8"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22596,10 +22620,10 @@
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
-      "references": "21329916",
+      "references": "32278917",
       "source": "EXP:NO2",
-      "target": "CHD:VSD",
-      "key": "EDGE:a4cb85d922d8"
+      "target": "CHD:COA",
+      "key": "EDGE:3a7dcf0e9512"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22664,14 +22688,98 @@
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
       "layer": "observed",
-      "confidence": 0.44,
-      "grade": "D",
+      "confidence": 0.85,
+      "grade": "B",
       "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "26033688",
+      "source": "EXP:PEST",
+      "target": "CHD:ASD",
+      "key": "EDGE:ac7b3d8cf841"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "33140474",
+      "source": "EXP:PEST",
+      "target": "CHD:PDA",
+      "key": "EDGE:7fcfb9fd448a"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "11257060",
+      "source": "EXP:PEST",
+      "target": "CHD:TGA",
+      "key": "EDGE:3fa502fb74e3"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.47,
+      "grade": "D",
+      "n_evidence": 2,
       "evidence_tier": "nao_demonstrada",
-      "references": "30257432",
+      "references": "30257432;CAPES:7850222",
       "source": "EXP:PEST",
       "target": "CHD:ALL",
       "key": "EDGE:3ad595086aac"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "22811060",
+      "source": "EXP:SOLV",
+      "target": "CHD:AS",
+      "key": "EDGE:5c4e5b93b9ee"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "11745829",
+      "source": "EXP:SOLV",
+      "target": "CHD:COA",
+      "key": "EDGE:d8188fdeeaad"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "22811060",
+      "source": "EXP:SOLV",
+      "target": "CHD:PS",
+      "key": "EDGE:44842fc0fe09"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "3407644",
+      "source": "EXP:SOLV",
+      "target": "CHD:VSD",
+      "key": "EDGE:25ac123a780f"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22688,6 +22796,18 @@
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
       "layer": "observed",
+      "confidence": 0.95,
+      "grade": "A",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "25628158;27224896",
+      "source": "EXP:METALS",
+      "target": "CHD:VSD",
+      "key": "EDGE:b2abd8669ade"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
       "confidence": 0.85,
       "grade": "B",
       "n_evidence": 1,
@@ -22698,16 +22818,28 @@
       "key": "EDGE:08ffbc4b9560"
     },
     {
-      "relation": "HYPOTHESIS_CANDIDATE",
-      "layer": "hypothesis",
-      "confidence": 0.08,
-      "grade": "E",
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
       "n_evidence": 1,
-      "evidence_tier": "nao_demonstrada",
-      "references": "GraphAmbiCardio gene-overlap rule",
-      "source": "EXP:SMOKE",
+      "evidence_tier": "estabelecida",
+      "references": "25628158",
+      "source": "EXP:METALS",
       "target": "CHD:ASD",
-      "key": "EDGE:b4a29b0adcde"
+      "key": "EDGE:96558ce24f45"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "3209340",
+      "source": "EXP:METALS",
+      "target": "CHD:COA",
+      "key": "EDGE:9948a73583db"
     },
     {
       "relation": "HYPOTHESIS_CANDIDATE",
@@ -22740,10 +22872,70 @@
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
+      "references": "22903798",
+      "source": "EXP:SMOKE",
+      "target": "CHD:AVSD",
+      "key": "EDGE:9555203143c1"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "31159903",
+      "source": "EXP:SMOKE",
+      "target": "CHD:EBSTEIN",
+      "key": "EDGE:27f2f277b2af"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "21357347",
+      "source": "EXP:SMOKE",
+      "target": "CHD:PS",
+      "key": "EDGE:e55b20dc05d9"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
       "references": "35916623",
       "source": "EXP:SMOKE",
       "target": "CHD:TOF",
       "key": "EDGE:7bdf0dca34ec"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "21357347",
+      "source": "EXP:SMOKE",
+      "target": "CHD:TRUNCUS",
+      "key": "EDGE:978898603d0e"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.5,
+      "grade": "D",
+      "n_evidence": 1,
+      "evidence_tier": "nao_demonstrada",
+      "references": "30905164",
+      "source": "EXP:SMOKE",
+      "target": "CHD:ASD",
+      "key": "EDGE:f8a422d4a274"
     },
     {
       "relation": "EXPOSURE_MODULATES_MECHANISM",
@@ -22756,18 +22948,6 @@
       "source": "EXP:SMOKE",
       "target": "MECH:EPIGEN",
       "key": "EDGE:3e5cd65026ee"
-    },
-    {
-      "relation": "HYPOTHESIS_CANDIDATE",
-      "layer": "hypothesis",
-      "confidence": 0.08,
-      "grade": "E",
-      "n_evidence": 1,
-      "evidence_tier": "nao_demonstrada",
-      "references": "GraphAmbiCardio gene-overlap rule",
-      "source": "EXP:ALCOHOL",
-      "target": "CHD:VSD",
-      "key": "EDGE:a97766108100"
     },
     {
       "relation": "HYPOTHESIS_LINK",
@@ -22792,6 +22972,42 @@
       "source": "EXP:ALCOHOL",
       "target": "PROC:OFT",
       "key": "EDGE:0fae74132ed7"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "1397217",
+      "source": "EXP:ALCOHOL",
+      "target": "CHD:ASD",
+      "key": "EDGE:74fa0560c6d6"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "31578093;35065976",
+      "source": "EXP:ALCOHOL",
+      "target": "CHD:TOF",
+      "key": "EDGE:3751c962981d"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "29937526",
+      "source": "EXP:ALCOHOL",
+      "target": "CHD:VSD",
+      "key": "EDGE:e12370e6d728"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",

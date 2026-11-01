@@ -1,7 +1,8 @@
 """Validation: bibliographic, biological, data and computational checks.
 
-The checks are intentionally explicit and fail loudly.  Every curated quote was
-read by the study team and is re-verified automatically against PubMed.
+The checks are intentionally explicit and fail loudly. Every curated quote is
+re-verified automatically against PubMed. Manual rows and AI-assisted reviewed
+rows are distinguished in the evidence table and in the reports.
 """
 
 from __future__ import annotations
@@ -14,6 +15,8 @@ from typing import Any
 import pandas as pd
 
 from .. import config
+from ..curation import batch_review
+from ..curation.batch_extract import normalise
 from ..io_utils import get_logger, read_csv, today, write_csv, write_json
 from ..graph.build import RELATIONS
 from ..literature.pubmed import efetch
@@ -50,34 +53,55 @@ def check_graph() -> dict[str, Any]:
 
 def check_curated() -> dict[str, Any]:
     edges = read_csv(config.CURATED / "curated_edges.csv")
-    anchors = {r["pmid"] for r in read_csv(config.CURATED / "anchor_studies.csv")}
+    anchor_rows = read_csv(config.CURATED / "anchor_studies.csv")
+    anchors = {r.get("reference") or r["pmid"] for r in anchor_rows}
     issues = []
     refs = set()
+    allowed_types = {"PMID", "CAPES thesis"}
     for e in edges:
         if not e["reference"]:
             issues.append(f"missing reference: {e['edge_key']}")
-        if e["reference_type"] != "PMID":
-            issues.append(f"non-PMID reference: {e['edge_key']}")
+        if e["reference_type"] not in allowed_types:
+            issues.append(f"unsupported reference type: {e['edge_key']} ({e['reference_type']})")
         refs.add(e["reference"])
         if not e.get("quote"):
             issues.append(f"missing quote: {e['edge_key']}")
     missing = refs - anchors
     if missing:
         issues.append(f"references without anchor record: {sorted(missing)}")
-    # re-verify a random sample of 25% of quotes against PubMed
-    random.seed(20261031)
-    sample = random.sample(edges, max(1, len(edges) // 4))
-    studies = {s.pmid: s for s in efetch([e["reference"] for e in sample])}
+
     def norm(x: str) -> str:
         import re
         return re.sub(r"\s+", " ", x).strip().lower()
+
+    # Re-verify a random 25% sample of PubMed quotes.
+    random.seed(20261031)
+    pmid_edges = [e for e in edges if e["reference_type"] == "PMID"]
+    sample = random.sample(pmid_edges, max(1, len(pmid_edges) // 4))
+    studies = {s.pmid: s for s in efetch([e["reference"] for e in sample])}
     for e in sample:
         s = studies.get(e["reference"])
         if not s or norm(e["quote"]) not in norm(s.abstract):
-            issues.append(f"quote not found on re-check: {e['reference']}")
+            issues.append(f"quote not found on PubMed re-check: {e['reference']}")
+
+    # Re-verify every non-PMID quote against its archived local abstract.
+    for e in edges:
+        if e["reference_type"] == "PMID":
+            continue
+        capes_id = e["reference"].split(":")[-1]
+        path = config.CURATED / "capes_abstracts" / f"{capes_id}.json"
+        try:
+            abstract = json.loads(path.read_text(encoding="utf-8"))["abstract"]
+        except (OSError, KeyError, json.JSONDecodeError):
+            issues.append(f"archived abstract missing: {e['reference']}")
+            continue
+        if norm(e["quote"]) not in norm(abstract):
+            issues.append(f"quote not found on local re-check: {e['reference']}")
+
     return {
         "n_curated_edges": len(edges),
-        "n_unique_pmids": len(refs),
+        "n_unique_references": len(refs),
+        "n_capes_theses": sum(1 for r in refs if not str(r).isdigit()),
         "sampled_for_recheck": len(sample),
         "issues": issues,
         "passed": not issues,
@@ -86,7 +110,7 @@ def check_curated() -> dict[str, Any]:
 
 def check_pmid_resolution() -> dict[str, Any]:
     anchors = read_csv(config.CURATED / "anchor_studies.csv")
-    pmids = [r["pmid"] for r in anchors]
+    pmids = [r["pmid"] for r in anchors if str(r.get("pmid", "")).strip()]
     studies = {s.pmid: s for s in efetch(pmids)}
     missing = [p for p in pmids if p not in studies]
     return {
@@ -152,18 +176,74 @@ def check_local_data() -> dict[str, Any]:
     }
 
 
+def check_batch_curation() -> dict[str, Any]:
+    """Audit the review layer that promotes screening candidates to evidence.
+
+    Offline and deterministic: it checks the review file against the queue and
+    checks that the evidence table contains exactly the verified review rows.
+    """
+    queue_path = config.CURATED / "batch_chd_queue.csv"
+    review_path = config.CURATED / "batch_chd_review.csv"
+    if not queue_path.exists() or not review_path.exists():
+        return {
+            "status": "skipped",
+            "reason": "batch curation files are not present",
+            "issues": [],
+            "passed": True,
+        }
+    queue = read_csv(queue_path)
+    reviews = batch_review.load_reviews(review_path)
+    issues = batch_review.review_issues(reviews.values(), queue)
+    verified = {
+        batch_review.key_of(row)
+        for row in reviews.values()
+        if row.get("review_status") == "verified"
+    }
+    evidence = read_csv(config.GRAPH_OUT / "evidence.csv")
+    batch_rows = [
+        row for row in evidence
+        if "AI-assisted batch curation" in row.get("source_database", "")
+    ]
+    def evidence_key(row: dict[str, Any]) -> tuple[str, str, str]:
+        return (row.get("reference", ""), row.get("source_id", ""), row.get("target_id", ""))
+
+    in_evidence = {evidence_key(row) for row in batch_rows}
+    for key in sorted(verified - in_evidence):
+        issues.append(f"verified review row missing from evidence.csv: {'|'.join(key)}")
+    for key in sorted(in_evidence - verified):
+        issues.append(f"batch evidence row without verified review: {'|'.join(key)}")
+
+    quotes = {evidence_key(row): normalise(row.get("quote", "")) for row in batch_rows}
+    for row in reviews.values():
+        if row.get("review_status") != "verified":
+            continue
+        key = batch_review.key_of(row)
+        quote = normalise(row.get("review_quote") or "")
+        if key in quotes and quote and quotes[key] != quote:
+            issues.append(f"review quote differs from evidence quote: {'|'.join(key)}")
+    return {
+        "n_queue": len(queue),
+        "n_verified": len(verified),
+        "n_rejected": sum(1 for r in reviews.values() if r.get("review_status") == "rejected"),
+        "n_batch_evidence": len(batch_rows),
+        "issues": issues,
+        "passed": not issues,
+    }
+
+
 def run() -> dict[str, Any]:
     results = {
         "generated_at": today(),
         "graph": check_graph(),
         "curated": check_curated(),
+        "batch_curation": check_batch_curation(),
         "pmid_resolution": check_pmid_resolution(),
         "local_data": check_local_data(),
     }
     results["passed"] = all(v["passed"] for k, v in results.items() if isinstance(v, dict) and "passed" in v)
     write_json(config.REPORTS / "validation_results.json", results)
     lines = ["# Validation report", "", f"Generated: {today()}", ""]
-    for k in ("graph", "curated", "pmid_resolution", "local_data"):
+    for k in ("graph", "curated", "batch_curation", "pmid_resolution", "local_data"):
         v = results[k]
         lines.append(f"## {k}")
         lines.append("")
@@ -178,7 +258,7 @@ def run() -> dict[str, Any]:
             for i in v["issues"]:
                 lines.append(f"- {i}")
         lines.append("")
-    lines.append("All curated quotes were verified automatically against PubMed; the study team read every anchor abstract.")
+    lines.append("All curated quotes were verified automatically against PubMed abstracts and the archived CAPES thesis abstract. The 54 manual rows were read by the study team; the 19 batch rows were promoted only after an explicit review entry, are flagged as AI-assisted in the evidence table, and remain subject to independent human confirmation. The review layer is audited against the evidence table.")
     (config.REPORTS / "validation_report.md").write_text("\n".join(lines), encoding="utf-8")
     log.info("validation passed=%s", results["passed"])
     return results

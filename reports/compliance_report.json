@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T15:23:02Z",
+  "generated_at": "2026-11-01T18:23:56Z",
   "passed": true,
   "issues": [],
   "checks": {
@@ -16,11 +16,11 @@
       "n_required": 29
     },
     "fair_checksums": {
-      "n_resources": 33,
+      "n_resources": 53,
       "bad": []
     },
     "git": {
-      "tracked_files": 431,
+      "tracked_files": 438,
       "data_raw_tracked": [],
       "venv_tracked": []
     },
@@ -37,6 +37,10 @@
     },
     "pm25_series": true,
     "pysus_audit": true,
+    "em_dash": {
+      "total": 0,
+      "files": {}
+    },
     "app_bundle": {
       "missing": []
     }

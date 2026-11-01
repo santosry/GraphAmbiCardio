@@ -2,21 +2,30 @@
   "generated_at": "2026-11-01",
   "graph": {
     "n_nodes": 2238,
-    "n_relations": 4117,
-    "n_evidence": 4613,
+    "n_relations": 4135,
+    "n_evidence": 4639,
     "issues": [],
     "passed": true
   },
   "curated": {
-    "n_curated_edges": 54,
-    "n_unique_pmids": 33,
-    "sampled_for_recheck": 13,
+    "n_curated_edges": 84,
+    "n_unique_references": 59,
+    "n_capes_theses": 1,
+    "sampled_for_recheck": 20,
+    "issues": [],
+    "passed": true
+  },
+  "batch_curation": {
+    "n_queue": 635,
+    "n_verified": 29,
+    "n_rejected": 5,
+    "n_batch_evidence": 29,
     "issues": [],
     "passed": true
   },
   "pmid_resolution": {
-    "n_pmids": 33,
-    "n_resolved": 33,
+    "n_pmids": 58,
+    "n_resolved": 58,
     "missing": [],
     "passed": true
   },

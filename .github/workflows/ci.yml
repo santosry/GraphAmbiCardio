@@ -52,6 +52,8 @@ jobs:
         run: julia --project=julia -e 'using Pkg; Pkg.instantiate(); using CSV, JSON; println("Julia deps OK")'
       - name: Parse Julia module
         run: julia --project=julia -e 'Meta.parseall(read("julia/gestational_window_simulation.jl", String)); println("Julia syntax OK")'
+      - name: Julia unit tests
+        run: julia --project=julia julia/test/runtests.jl
 
   app-smoke:
     runs-on: ubuntu-latest

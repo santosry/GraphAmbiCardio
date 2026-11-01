@@ -151,6 +151,9 @@ def make_evidence(
     }
 
 
+REVIEW_DESIGNS = {"narrative_review", "systematic_review", "systematic_review_meta_analysis", "meta_analysis"}
+
+
 def edge_confidence(evs: list[dict[str, Any]]) -> tuple[float, str, dict[str, Any]]:
     """Pre-registered confidence aggregation (see docs/06_EVIDENCE_GRADING.md)."""
     if not evs:
@@ -162,8 +165,9 @@ def edge_confidence(evs: list[dict[str, Any]]) -> tuple[float, str, dict[str, An
     # experiments and is not used.
     strengths = [0.7 * t + 0.3 * d for t, d in zip(type_w, design_w)]
     base = min(0.9, max(strengths))
-    # independent references (a reference is counted once per edge)
-    refs = {e.get("reference") for e in evs if e.get("reference")}
+    # Independent references: reviews synthesise the same primary studies and
+    # must not inflate replication confidence.
+    refs = {e.get("reference") for e in evs if e.get("reference") and e.get("study_design") not in REVIEW_DESIGNS}
     n_refs = len(refs) if refs else 1
     replication = min(0.15, 0.05 * max(0, n_refs - 1))
     single_study_penalty = 0.05 if n_refs <= 1 else 0.0

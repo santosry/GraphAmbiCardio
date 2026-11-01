@@ -2,7 +2,7 @@ stage,records,notes
 PubMed (domínios + pares),1011,top 100/domínio e top 15/par
 Europe PMC,439,top 100/domínio
 SciELO (Crossref),500,"5 consultas, 100 registros cada"
-CAPES Teses,28,4 consultas
-Total bruto recuperado,1978,inclui repetições entre as buscas por pares
-Duplicatas removidas,529,repetições entre buscas + PMID/DOI/título normalizado
-Registros únicos,1449,triagem por título/resumo
+CAPES Teses,560,4 consultas
+Total bruto recuperado,2510,inclui repetições entre as buscas por pares
+Duplicatas removidas,540,repetições entre buscas + PMID/DOI/título normalizado
+Registros únicos,1970,triagem por título/resumo

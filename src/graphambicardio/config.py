@@ -420,6 +420,7 @@ EVIDENCE_TYPES = {
 
 STUDY_DESIGN_WEIGHTS = {
     "systematic_review_meta_analysis": 0.9,
+    "systematic_review": 0.8,
     "meta_analysis": 0.9,
     "cohort": 0.9,
     "case_control": 0.8,
