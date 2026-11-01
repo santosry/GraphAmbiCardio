@@ -74,18 +74,35 @@ def check_curated() -> dict[str, Any]:
         import re
         return re.sub(r"\s+", " ", x).strip().lower()
 
-    # Re-verify a random 25% sample of PubMed quotes.
+    # Re-verify a random 25% sample of PubMed abstract quotes.
     random.seed(20261031)
-    pmid_edges = [e for e in edges if e["reference_type"] == "PMID"]
-    sample = random.sample(pmid_edges, max(1, len(pmid_edges) // 4))
+    pmid_edges = [
+        e for e in edges
+        if e["reference_type"] == "PMID" and e.get("quote_source", "abstract") != "full_text"
+    ]
+    sample = random.sample(pmid_edges, max(1, len(pmid_edges) // 4)) if pmid_edges else []
     studies = {s.pmid: s for s in efetch([e["reference"] for e in sample])}
     for e in sample:
         s = studies.get(e["reference"])
         if not s or norm(e["quote"]) not in norm(s.abstract):
             issues.append(f"quote not found on PubMed re-check: {e['reference']}")
 
+    # Re-verify every full-text quote against its archived short quotation.
+    fulltext_edges = [e for e in edges if e.get("quote_source") == "full_text"]
+    for e in fulltext_edges:
+        path = config.CURATED / (e.get("quote_archive") or "")
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            issues.append(f"full-text archive missing: {e['reference']}")
+            continue
+        if norm(e["quote"]) != norm(payload.get("quote", "")):
+            issues.append(f"full-text quote differs from archive: {e['reference']}")
+
     # Re-verify every non-PMID quote against its archived local abstract.
     for e in edges:
+        if e.get("quote_source") == "full_text":
+            continue
         if e["reference_type"] == "PMID":
             continue
         capes_id = e["reference"].split(":")[-1]
@@ -103,6 +120,7 @@ def check_curated() -> dict[str, Any]:
         "n_unique_references": len(refs),
         "n_capes_theses": sum(1 for r in refs if not str(r).isdigit()),
         "sampled_for_recheck": len(sample),
+        "n_fulltext_recheck": len(fulltext_edges),
         "issues": issues,
         "passed": not issues,
     }
@@ -202,7 +220,8 @@ def check_batch_curation() -> dict[str, Any]:
     evidence = read_csv(config.GRAPH_OUT / "evidence.csv")
     batch_rows = [
         row for row in evidence
-        if "AI-assisted batch curation" in row.get("source_database", "")
+        if "batch curation" in row.get("source_database", "")
+        or "full-text curation" in row.get("source_database", "")
     ]
     def evidence_key(row: dict[str, Any]) -> tuple[str, str, str]:
         return (row.get("reference", ""), row.get("source_id", ""), row.get("target_id", ""))
@@ -258,7 +277,7 @@ def run() -> dict[str, Any]:
             for i in v["issues"]:
                 lines.append(f"- {i}")
         lines.append("")
-    lines.append("All curated quotes were verified automatically against PubMed abstracts and the archived CAPES thesis abstract. The 54 manual rows were read by the study team; the 19 batch rows were promoted only after an explicit review entry, are flagged as AI-assisted in the evidence table, and remain subject to independent human confirmation. The review layer is audited against the evidence table.")
+    lines.append("All curated quotes were verified automatically against PubMed abstracts, the archived CAPES thesis abstract, or the archived full-text quotation. The 54 manual rows were read by the study team; the 49 batch rows were promoted only after an explicit review entry, are flagged as AI-assisted, and remain subject to independent human confirmation. Full-text quotations are rechecked against their archived short quotation; the review layer is audited against the evidence table.")
     (config.REPORTS / "validation_report.md").write_text("\n".join(lines), encoding="utf-8")
     log.info("validation passed=%s", results["passed"])
     return results

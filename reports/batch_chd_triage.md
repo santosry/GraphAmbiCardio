@@ -8,7 +8,7 @@ motivo está na coluna `triage_reason` do CSV.
 
 | Classe | Registros | O que significa |
 |---|---:|---|
-| human_numeric | 97 | estudo humano com tamanho de efeito explícito |
+| human_numeric | 88 | estudo humano com tamanho de efeito explícito |
 | human_qualitative | 0 | estudo humano com associação descrita sem número |
 | human_no_effect | 0 | estudo humano sem linguagem de associação no resumo |
 | human_unconfirmed | 172 | estudo humano; exposição ou fenótipo candidato não confirmado no resumo |
@@ -17,13 +17,12 @@ motivo está na coluna `triage_reason` do CSV.
 | clinical | 60 | estudo cirúrgico, diagnóstico ou de dispositivo |
 | unclassified | 93 | sem sinal suficiente para classificar |
 | no_abstract | 1 | resumo indisponível no PubMed |
-| reviewed | 8 | já possui decisão de revisão |
+| reviewed | 17 | já possui decisão de revisão |
 
-## human_numeric (97)
+## human_numeric (88)
 
 | PMID | Título | Exposições candidatas | Fenótipos candidatos |
 |---|---|---|---|
-| 10230836 | Maternal risk factors and major associated defects in infants with Down syndrome. | EXP:ALCOHOL;EXP:SMOKE | CHD:TOF;CHD:VSD |
 | 10555617 | Maternal smoking and congenital heart defects. | EXP:SMOKE | CHD:PDA |
 | 11517521 | [Long-term results of valve-retaining homograft and xenograft patch for transannular reconstruction of the right ventric | EXP:ALCOHOL | CHD:TOF |
 | 12797457 | Population-based study of l-transposition of the great arteries: possible associations with environmental factors. | EXP:SMOKE | CHD:TGA |
@@ -53,8 +52,6 @@ motivo está na coluna `triage_reason` do CSV.
 | 23832875 | Complex cardiac defects after ethanol exposure during discrete cardiogenic events in zebrafish: prevention with folic ac | EXP:ALCOHOL;EXP:METALS | CHD:AVSD |
 | 24135485 | Valproic acid silencing of ascl1b/Ascl1 results in the failure of serotonergic differentiation in a zebrafish model of f | EXP:VPA | CHD:ASD |
 | 24185815 | Prenatal unilateral cerebellar hypoplasia in a series of 26 cases: significance and implications for prenatal diagnosis. | EXP:ALCOHOL | CHD:COA |
-| 24727555 | Maternal exposure to criteria air pollutants and congenital heart defects in offspring: results from the national birth  | EXP:ALCOHOL;EXP:CO;EXP:NO2;EXP:O3;EXP:PM10;EXP:PM25;EXP:SMOKE | CHD:COA;CHD:HLHS;CHD:PS |
-| 24916166 | Arsenic in drinking water and congenital heart anomalies in Hungary. | EXP:METALS | CHD:ASD |
 | 24920293 | First-trimester exposure to bupropion and risk of cardiac malformations. | EXP:SMOKE | CHD:VSD |
 | 25002319 | Durability of large diameter right ventricular outflow tract conduits in adults with congenital heart disease. | EXP:SMOKE | CHD:TOF;CHD:TRUNCUS |
 | 2525370 | [Extracardiac malformations in tetralogy of Fallot]. | EXP:ALCOHOL | CHD:TOF;CHD:VSD |
@@ -62,14 +59,11 @@ motivo está na coluna `triage_reason` do CSV.
 | 2583071 | Congenital anomalies associated with maternal exposure to oxydemeton-methyl. | EXP:PEST | CHD:PDA |
 | 26118863 | Maternal periconceptional alcohol consumption and congenital heart defects. | EXP:ALCOHOL;EXP:METALS | CHD:TOF |
 | 26196779 | Associations between exposure to ambient benzene and PM(2.5) during pregnancy and the risk of selected birth defects in  | EXP:PM10;EXP:PM25 | CHD:COA;CHD:TAPVC;CHD:TRUNCUS |
-| 26554783 | Air Pollution and the Risk of Cardiac Defects: A Population-Based Case-Control Study. | EXP:CO;EXP:NO2;EXP:O3;EXP:PM10 | CHD:ASD;CHD:PDA;CHD:VSD |
 | 26853919 | Bayesian multinomial probit modeling of daily windows of susceptibility for maternal PM2.5 exposure and congenital heart | EXP:PM10;EXP:PM25 | CHD:PS;CHD:TOF |
 | 26883477 | Maternal exposure to air pollutant PM2.5 and PM10 during pregnancy and risk of congenital heart defects. | EXP:PM10;EXP:PM25 | CHD:VSD |
 | 26987204 | [Study on congenital cardiac anomalies induced by arsenic exposure before and during maternal pregnancy in fetal rats]. | EXP:METALS | CHD:ASD;CHD:TOF;CHD:VSD |
-| 27752048 | Ozone and Other Air Pollutants and the Risk of Congenital Heart Defects. | EXP:CO;EXP:NO2;EXP:O3 | CHD:TOF;CHD:VSD |
 | 2787814 | Risk factors for conotruncal cardiac defects in Atlanta. | EXP:ALCOHOL;EXP:SMOKE | CHD:TOF;CHD:TRUNCUS |
 | 28373593 | Maternal Antihypertensive Medication Use and Congenital Heart Defects: Updated Results From the National Birth Defects P | EXP:SMOKE | CHD:ASD;CHD:COA;CHD:PS;CHD:VSD |
-| 28557713 | Effects of Prenatal PM10 Exposure on Fetal Cardiovascular Malformations in Fuzhou, China: A Retrospective Case-Control S | EXP:PM10 | CHD:ASD;CHD:PDA;CHD:TOF;CHD:VSD |
 | 28988253 | Prevalence of congenital heart diseases in children with Down syndrome in Mansoura, Egypt: a retrospective descriptive s | EXP:SMOKE | CHD:ASD;CHD:AVSD;CHD:VSD |
 | 29544375 | Obstetric and perinatal outcomes in pregnancies with isolated foetal congenital heart abnormalities. | EXP:ALCOHOL;EXP:SMOKE | CHD:TGA |
 | 29859881 | Is post exposure prevention of teratogenic damage possible: Studies on diabetes, valproic acid, alcohol and anti folates | EXP:ALCOHOL;EXP:CO;EXP:VPA | CHD:ASD |
@@ -89,13 +83,10 @@ motivo está na coluna `triage_reason` do CSV.
 | 34097890 | Association between maternal exposure to gaseous pollutants and atrial septal defect in China: A nationwide population-b | EXP:CO;EXP:NO2;EXP:O3;EXP:PM10;EXP:PM25 | CHD:ASD |
 | 34361990 | Seasonality of Hypoplastic Left Heart Syndrome and Single Ventricle Heart in Poland in the Context of Air Pollution. | EXP:PM10 | CHD:HLHS |
 | 34476711 | Associations between ambient heat exposure early in pregnancy and risk of congenital heart defects: a large population-b | EXP:HEAT | CHD:ASD;CHD:PDA |
-| 34508749 | Maternal Smoking and Congenital Heart Defects, National Birth Defects Prevention Study, 1997-2011. | EXP:SMOKE | CHD:DORV |
 | 34892371 | Effect of Valproic Acid on Maternal - Fetal Heart Rates and Coupling in Mice on Embryonic day 15.5 (E15.5). | EXP:VPA | CHD:ASD |
 | 34920182 | Maternal exposure to air pollution and congenital heart diseases in Henan, China: A register-based case-control study. | EXP:CO;EXP:NO2;EXP:O3;EXP:PM10;EXP:PM25 | CHD:ASD;CHD:TOF |
-| 35014860 | Association of Alcohol Use Diagnostic Codes in Pregnancy and Offspring Conotruncal and Endocardial Cushion Heart Defects | EXP:ALCOHOL | CHD:AVSD |
 | 35521669 | Maternal nicotine exposure induces congenital heart defects in the offspring of mice. | EXP:SMOKE | CHD:DORV |
 | 35991008 | Relationship between maternal exposure to heavy metal titanium and offspring congenital heart defects in Lanzhou, China: | EXP:METALS | CHD:PDA |
-| 36341763 | Prepregnancy exposure to dietary arsenic and congenital heart defects. | EXP:METALS | CHD:DORV;CHD:TGA;CHD:VSD |
 | 36369789 | Influenza vaccination during pregnancy and risk of selected major structural congenital heart defects, National Birth De | EXP:ALCOHOL;EXP:SMOKE | CHD:HLHS;CHD:TAPVC |
 | 37551363 | Parental risk factors associated with congenital heart disease in a Thai population: multivariable analysis. | EXP:SMOKE | CHD:TOF;CHD:VSD |
 | 38394684 | Epidemiology studies on effects of lithium salts in pregnancy are confounded by the inability to control for other poten | EXP:ALCOHOL;EXP:SMOKE | CHD:EBSTEIN |

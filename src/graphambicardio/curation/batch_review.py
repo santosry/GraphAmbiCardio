@@ -17,6 +17,7 @@ verbatim.
 from __future__ import annotations
 
 import csv
+import json
 import re
 from pathlib import Path
 from typing import Any, Iterable
@@ -54,6 +55,8 @@ REVIEW_FIELDS = [
     "review_population",
     "review_window",
     "review_design",
+    "review_source",
+    "review_archive",
     "review_note",
     "reviewed_by",
     "reviewed_at",
@@ -117,23 +120,45 @@ def review_issues(
             issues.append(f"unsupported review status: {label} ({status or 'empty'})")
             continue
         queue_row = queue.get(key)
+        source = str(row.get("review_source") or "abstract").strip().lower()
+        archive_path = config.CURATED / (row.get("review_archive") or "")
+        has_archive = bool(row.get("review_archive")) and archive_path.exists()
         manual_addition = queue_row is None
-        if manual_addition:
-            if key[0] not in by_pmid:
-                issues.append(f"review row without any queue record for the PMID: {label}")
-                continue
-            if status == "verified" and not row.get("review_effect"):
+        if manual_addition and status == "verified":
+            # The build re-verifies the quote against PubMed or the archived
+            # full-text quotation, so a queue record is not mandatory here.
+            if not row.get("review_effect"):
                 issues.append(f"manual addition without reviewed effect: {label}")
-            if status == "verified" and not row.get("review_design"):
+            if not row.get("review_design"):
                 issues.append(f"manual addition without reviewed study design: {label}")
         design = str(row.get("review_design", "")).strip()
         if design and design not in config.STUDY_DESIGN_WEIGHTS:
             issues.append(f"verified row with unknown study design: {label} ({design})")
         if status != "verified":
             continue
+        if source == "full_text":
+            archive = archive_path
+            if not has_archive:
+                issues.append(f"verified full-text row without archive: {label}")
+                continue
+            try:
+                payload = json.loads(archive.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                issues.append(f"unreadable full-text archive: {label}")
+                continue
+            if normalise(payload.get("quote", "")) != normalise(row.get("review_quote", "")):
+                issues.append(f"full-text quote differs from archive: {label}")
+                continue
+            if (
+                str(payload.get("exposure_id", "")) != key[1]
+                or str(payload.get("phenotype_id", "")) != key[2]
+            ):
+                issues.append(f"full-text archive pair mismatch: {label}")
+                continue
         if key in MANUAL_KEYS:
             issues.append(f"verified row duplicates manual curation: {label}")
             continue
+        queue_row = queue_row or {}
         quote = normalise(row.get("review_quote") or queue_row.get("quote", ""))
         if not _quote_is_specific(quote):
             issues.append(f"verified row without a usable quote: {label}")
@@ -175,7 +200,18 @@ def resolved_rows(
         if queue_row is None:
             base = by_pmid.get(key[0])
             if base is None:
-                continue
+                source = str(review.get("review_source") or "abstract").strip().lower()
+                archive_path = config.CURATED / (review.get("review_archive") or "")
+                if source != "full_text" or not archive_path.exists():
+                    continue
+                payload = json.loads(archive_path.read_text(encoding="utf-8"))
+                base = {
+                    "pmid": key[0],
+                    "title": payload.get("title", ""),
+                    "year": str(payload.get("year", "")),
+                    "journal": payload.get("journal", ""),
+                    "doi": payload.get("doi", ""),
+                }
             queue_row = {
                 **base,
                 "exposure_id": key[1],
@@ -200,6 +236,8 @@ def resolved_rows(
                 or queue_row.get("population_or_model", ""),
                 "exposure_window": review.get("review_window") or queue_row.get("exposure_window", ""),
                 "study_design": review.get("review_design") or queue_row.get("study_design", ""),
+                "quote_source": review.get("review_source") or "abstract",
+                "quote_archive": review.get("review_archive", ""),
                 "review_note": review.get("review_note", ""),
                 "reviewed_by": review.get("reviewed_by", ""),
                 "reviewed_at": review.get("reviewed_at", ""),

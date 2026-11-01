@@ -78,6 +78,30 @@ def verify_quotes(edges: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     missing = []
     for e in edges:
         ref_type = e.get("reference_type", "PMID")
+        if e.get("quote_source") == "full_text":
+            archive_path = config.CURATED / (e.get("quote_archive") or "")
+            try:
+                payload = json.loads(archive_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as exc:
+                missing.append((e.get("reference", ""), f"full-text archive unavailable: {exc}"))
+                continue
+            if _norm(e.get("quote", "")) != _norm(payload.get("quote", "")):
+                missing.append((e.get("reference", ""), "full-text quote differs from archive"))
+                continue
+            authors = str(payload.get("authors", ""))
+            e["_study"] = {
+                "pmid": e.get("reference", ""),
+                "title": payload.get("title", ""),
+                "journal": payload.get("journal", ""),
+                "year": str(payload.get("year", "")),
+                "doi": payload.get("doi", ""),
+                "first_author": authors.split(",")[0].strip() if authors else "",
+                "url": payload.get("pubmed_url", "") or f"https://pubmed.ncbi.nlm.nih.gov/{e.get('reference', '')}/",
+                "source_database": "PubMed/MEDLINE (full-text curation, reviewed)",
+                "reference": e.get("reference", ""),
+                "reference_type": ref_type,
+            }
+            continue
         if ref_type == "PMID":
             s = studies.get(e["reference"])
             abstract = s.abstract if s else ""
@@ -152,6 +176,32 @@ def batch_evidence() -> list[dict[str, Any]]:
         return []
     queue = read_csv(queue_path)
     reviews = batch_review.load_reviews(review_path)
+    # Verified rows may come from anchor studies that are not in the candidate
+    # queue, or from full-text reading. Add minimal metadata rows for them so the
+    # generic resolver can attach title, journal, year and DOI.
+    known = {str(row.get("pmid", "")).strip() for row in queue}
+    missing = sorted({
+        key[0] for key, review in reviews.items()
+        if review.get("review_status") == "verified" and key[0] and key[0] not in known
+    })
+    if missing:
+        anchors = {str(row.get("pmid", "")).strip(): row for row in read_csv(config.CURATED / "anchor_studies.csv")}
+        metadata_path = config.CURATED / "fulltext_metadata.csv"
+        metadata = {row["pmid"]: row for row in read_csv(metadata_path)} if metadata_path.exists() else {}
+        studies = {s.pmid: s for s in efetch(missing)}
+        for pmid in missing:
+            anchor = anchors.get(pmid, {})
+            meta = metadata.get(pmid, {})
+            study = studies.get(pmid)
+            queue.append({
+                "pmid": pmid,
+                "title": anchor.get("title") or meta.get("title") or (study.title if study else ""),
+                "journal": anchor.get("journal") or meta.get("journal") or (study.journal if study else ""),
+                "year": str(anchor.get("year") or meta.get("year") or (study.year if study else "")),
+                "doi": anchor.get("doi") or meta.get("doi") or (study.doi if study else ""),
+                "candidate_exposures": "",
+                "candidate_phenotypes": "",
+            })
     issues = batch_review.review_issues(reviews.values(), queue)
     if issues:
         for issue in issues:
@@ -183,7 +233,21 @@ def batch_evidence() -> list[dict[str, Any]]:
                 f"Review note: {row.get('review_note', '')}"
             ),
         )
-        evidence["source_database"] = "PubMed/MEDLINE (AI-assisted batch curation, reviewed)"
+        source = row.get("quote_source") or "abstract"
+        evidence["quote_source"] = source
+        evidence["quote_archive"] = row.get("quote_archive", "")
+        evidence["source_database"] = (
+            "PubMed/MEDLINE (full-text curation, reviewed)"
+            if source == "full_text"
+            else "PubMed/MEDLINE (AI-assisted batch curation, reviewed)"
+        )
+        if source == "full_text":
+            evidence["notes"] = (
+                "AI-assisted full-text extraction; complete article not retained. "
+                f"Reviewed by {row.get('reviewed_by', 'a reviewer')} on {row.get('reviewed_at', '')}. "
+                f"Quote archive: {row.get('quote_archive', '')}. "
+                f"Review note: {row.get('review_note', '')}"
+            )
         edges.append(evidence)
     n_rejected = sum(1 for item in reviews.values() if item.get("review_status") == "rejected")
     log.info("batch curation: %s verified edges, %s rejected candidates", len(edges), n_rejected)
@@ -225,6 +289,8 @@ def curated_evidence() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
                 source_database=e.get("source_database") or st["source_database"],
                 retrieved_at=today(),
                 notes=e.get("notes", ""),
+                quote_source=e.get("quote_source", "abstract"),
+                quote_archive=e.get("quote_archive", ""),
             )
         )
     anchor_rows = []

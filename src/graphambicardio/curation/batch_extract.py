@@ -41,6 +41,7 @@ EXPOSURE_PATTERNS: dict[str, str] = {
     "EXP:PEST": r"pesticid|agrochemical|agricultural chemical|organophosphate|herbicide|insecticide",
     "EXP:SOLV": r"\bsolvents?\b",
     "EXP:METALS": (
+        r"\barsenic\b|"
         r"\bmetals?\b(?:[^.;]{0,40}\b(?:exposure|level|levels|concentration|"
         r"concentrations|mixture|mixtures|burden)\b)?|"
         r"\b(?:lead|mercury|arsenic|cadmium|manganese|chromium)\b"
@@ -74,7 +75,8 @@ PHENOTYPE_PATTERNS_EXTRA: dict[str, str] = {
     "CHD:VSD": r"pmvsd|perimembranous vsd",
     "CHD:ASD": r"s-asd|secundum asd",
     "CHD:PS": r"pulmonary (?:artery and )?(?:valve )?stenosis|pulmonary artery and valve defect|pulmonic stenosis",
-    "CHD:AVSD": r"\bavsd\b|atrioventricular septal|av canal",
+    "CHD:PDA": r"ductus botalli|botalli persistens|persistent ductus arteriosus",
+    "CHD:AVSD": r"\bavsd\b|atrioventricular septal|av canal|atrioventricular canal",
     "CHD:TAPVC": r"\btapvc\b|total anomalous pulmonary venous",
     "CHD:TRUNCUS": r"truncus arteriosus|common arterial trunk",
 }
@@ -147,6 +149,21 @@ def split_clauses(text: str) -> list[str]:
     return [part.strip() for part in _CLAUSE_SPLIT.split(text) if len(part.strip()) >= 30]
 
 
+_SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9(\[]|À-Ü])")
+
+
+def split_sentences(text: str) -> list[str]:
+    """Split text at sentence boundaries only, keeping CI lists intact.
+
+    Semicolons are not split here because they usually separate an effect size
+    from its confidence interval, and cutting them loses the exposure that was
+    stated earlier in the sentence.
+    """
+    text = _TAG_RE.sub(" ", text or "")
+    text = _WS_RE.sub(" ", text).strip()
+    return [part.strip() for part in _SENTENCE_SPLIT.split(text) if len(part.strip()) >= 30]
+
+
 def _gap_ok(gap: str) -> bool:
     if _GAP_FORBIDDEN.search(gap):
         return False
@@ -210,6 +227,14 @@ def phenotypes_in_clause(
 ) -> list[str]:
     """All phenotypes of the vocabulary mentioned in the clause."""
     return [pid for pid in vocabulary if _phenotype_present(pid, clause, patterns)]
+
+
+NEGATION = re.compile(r"\b(without|free of|no evidence of|absence of)\s*$", re.I)
+
+
+def is_negated_mention(clause: str, start: int) -> bool:
+    """True when a phenotype mention is preceded by a negation."""
+    return bool(NEGATION.search(clause[max(0, start - 24):start]))
 
 
 def exposures_in_clause(clause: str, candidates: Iterable[str]) -> list[str]:

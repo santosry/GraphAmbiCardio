@@ -91,6 +91,7 @@ def http_get(
             r.raise_for_status()
             text = r.text
             if cache:
+                path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(text, encoding="utf-8")
             return text
         except Exception as exc:  # noqa: BLE001 - retry any transport error
@@ -120,6 +121,7 @@ def http_post(
             r.raise_for_status()
             text = r.text
             if cache:
+                path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(text, encoding="utf-8")
             return text
         except Exception as exc:  # noqa: BLE001

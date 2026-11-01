@@ -92,6 +92,8 @@ EVIDENCE_FIELDS = [
     "source_database",
     "retrieved_at",
     "notes",
+    "quote_source",
+    "quote_archive",
 ]
 
 
@@ -120,6 +122,8 @@ def make_evidence(
     source_database: str = "",
     retrieved_at: str | None = None,
     notes: str = "",
+    quote_source: str = "abstract",
+    quote_archive: str = "",
 ) -> dict[str, Any]:
     assert source_type in NODE_TYPES, source_type
     assert target_type in NODE_TYPES, target_type
@@ -148,6 +152,8 @@ def make_evidence(
         "source_database": source_database,
         "retrieved_at": retrieved_at or today(),
         "notes": notes,
+        "quote_source": quote_source,
+        "quote_archive": quote_archive,
     }
 
 

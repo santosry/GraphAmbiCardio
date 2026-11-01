@@ -70,6 +70,7 @@ curation:
 	$(PY) scripts/curation/02_export_review_packet.py
 	$(PY) scripts/curation/03_propose_ambiguous.py
 	$(PY) scripts/curation/04_triage_remaining.py
+	$(PY) scripts/curation/06_fulltext_report.py
 
 exhaustive:
 	$(PY) scripts/collection/04_exhaustive_literature.py

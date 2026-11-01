@@ -180,9 +180,15 @@ def test_review_layer_accepts_a_verified_row():
     assert resolved[0]["effect_direction"] == "reviewed effect"
 
 
-def test_review_layer_rejects_unknown_status_and_missing_candidate():
+def test_review_layer_rejects_unknown_status_and_requires_manual_metadata():
     assert any("status" in i for i in review_issues([_review(review_status="maybe")], [_queue_row()]))
-    assert any("queue" in i for i in review_issues([_review(pmid="999")], [_queue_row()]))
+    manual = _review(
+        pmid="999",
+        review_quote="Maternal smoking was associated with ventricular septal defect (OR = 1.5).",
+        review_effect="OR 1.5",
+        review_design="case_control",
+    )
+    assert review_issues([manual], [_queue_row()]) == []
 
 
 def test_review_layer_checks_the_quote():
