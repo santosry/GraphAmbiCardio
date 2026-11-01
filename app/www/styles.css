@@ -112,8 +112,15 @@ table.dataTable thead th { color: var(--v1); border-bottom: 1px solid rgba(68,1,
   font-size: clamp(.95rem, 1.6vw, 1.15rem);
 }
 .figure-head { font-weight: 600; color: var(--v0); margin: 0 0 .45rem; font-size: .95rem; }
-.figure-canvas { width: 100%; min-width: 0; min-height: 280px; }
-.figure-canvas .shiny-plot-output,
+.figure-canvas { width: 100%; min-width: 0; }
+.figure-canvas.graph-canvas { height: clamp(560px, 78vh, 900px); }
+.figure-canvas.chart-canvas { height: clamp(380px, 46vh, 600px); }
+.figure-canvas.chart-canvas-wide { height: clamp(400px, 52vh, 680px); }
+.figure-canvas > .plotly,
+.figure-canvas > .shiny-plot-output,
+.figure-canvas > .visNetwork {
+  width: 100% !important; height: 100% !important;
+}
 .figure-canvas .vis-network,
 .figure-canvas .js-plotly-plot,
 .figure-canvas .plot-container,
@@ -131,8 +138,21 @@ table.dataTable thead th { color: var(--v1); border-bottom: 1px solid rgba(68,1,
 }
 .section-block { margin-top: .5rem; }
 .vis-network { outline: none; }
+@media (max-width: 576px) {
+  .visNetwork [id^="legend_main"] { display: none !important; }
+  .visNetwork [id^="graphgraph"] { width: 100% !important; }
+  .figure-block { margin-bottom: 1rem; }
+  .figure-block h5 { font-size: 1rem; }
+}
 .js-plotly-plot, .plot-container, .svg-container { width: 100% !important; }
-.card-body { overflow: visible; }
+/* Cards must size to their content; never create internal scrollbars. */
+.card, .bslib-card {
+  flex: 0 0 auto !important; height: auto !important;
+}
+.card-body, .bslib-card .card-body {
+  flex: 0 0 auto !important; height: auto !important;
+  min-height: 0 !important; overflow: visible !important;
+}
 div.vis-tooltip {
   border-radius: 10px !important; border: 1px solid rgba(68,1,84,.15) !important;
   box-shadow: 0 10px 26px rgba(68,1,84,.16) !important; font-size: .82rem !important;

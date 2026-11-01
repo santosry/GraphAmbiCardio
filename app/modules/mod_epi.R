@@ -15,30 +15,25 @@ mod_epi_ui <- function(id) {
       col_widths = c(7,5),
       div(class = "figure-block",
           h5("SINASC — casos e taxa por 10.000 nascidos vivos"),
-          div(class = "figure-canvas", style = "height:clamp(340px, 42vh, 560px);",
-              plotlyOutput(ns("sinasc_plot"), height = "100%"))),
+          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sinasc_plot"), height = "100%"))),
       div(class = "figure-block",
           h5("SIH/SUS — internações e óbitos"),
-          div(class = "figure-canvas", style = "height:clamp(340px, 42vh, 560px);",
-              plotlyOutput(ns("sih_plot"), height = "100%")))
+          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sih_plot"), height = "100%")))
     ),
     layout_columns(
       col_widths = c(6,6),
       div(class = "figure-block",
           h5("Clima — temperatura máxima mensal (ERA5-Land)"),
-          div(class = "figure-canvas", style = "height:clamp(320px, 40vh, 520px);",
-              plotlyOutput(ns("climate_plot"), height = "100%"))),
+          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("climate_plot"), height = "100%"))),
       div(class = "figure-block",
           h5("Dias de calor e ondas de calor por ano"),
-          div(class = "figure-canvas", style = "height:clamp(320px, 40vh, 520px);",
-              plotlyOutput(ns("heat_plot"), height = "100%")))
+          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("heat_plot"), height = "100%")))
     ),
     br(),
     div(
       class = "figure-block",
       h5("PM2,5 — série municipal do VIGIAR (Ministério da Saúde)"),
-      div(class = "figure-canvas", style = "height:clamp(340px, 44vh, 580px);",
-          plotlyOutput(ns("pm25_plot"), height = "100%")),
+      div(class = "figure-canvas html-fill-container chart-canvas-wide", plotlyOutput(ns("pm25_plot"), height = "100%")),
       htmlOutput(ns("pm25_note"))
     ),
     br(),
