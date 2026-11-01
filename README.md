@@ -41,17 +41,17 @@ O repositório segue uma linha de raciocínio única: pergunta, busca, triagem, 
 
 ```mermaid
 flowchart TD
-    A[Pergunta de pesquisa] --> B[17 exposições x 14 fenótipos CHD]
-    B --> C[Buscas registradas em 5 bases]
-    C --> D[Recuperação exaustiva]
-    D --> E[Triagem automática: 3.963 candidatos]
-    E --> F[Camada de estudos triados: nunca é evidência]
-    E --> G[Curadoria: 67 estudos-âncora]
-    E --> H[Promoção em lote com revisão: 49 arestas]
-    G --> I[Grafo com proveniência]
+    A["Pergunta de pesquisa"] --> B["17 exposições<br/>14 fenótipos CHD"]
+    B --> C["Buscas registradas<br/>4 bases bibliográficas"]
+    C --> D["Recuperação exaustiva"]
+    D --> E["Triagem automática<br/>3.963 candidatos"]
+    E --> F["Estudos triados<br/>nunca evidência"]
+    E --> G["Curadoria<br/>67 estudos-âncora"]
+    E --> H["Promoção em lote<br/>49 arestas revisadas"]
+    G --> I["Grafo com proveniência"]
     H --> I
-    I --> J[Caminhos, lacunas e hipóteses]
-    L[Dados locais: SINASC, SIH, clima e PM2,5] --> K[Site Shiny e painel epidemiológico]
+    I --> J["Caminhos, lacunas<br/>e hipóteses"]
+    L["Dados locais<br/>SINASC, SIH, clima, PM2,5"] --> K["Site Shiny<br/>e painel epidemiológico"]
     J --> K
 ```
 
@@ -186,10 +186,13 @@ O verificador de citações está em `scripts/integration/01_build_graph.py`; a 
 O grafo tem **2.238 nós**, **4.146 relações** e **4.659 linhas de evidência**. As camadas nunca são misturadas nas análises.
 
 ```mermaid
-flowchart LR
-    OBS[Observada: 87 relações] --> STR[Estruturada: 4.040]
-    INF[Inferida: 4] --> HYP[Hipótese: 10]
-    ECO[Ecológica: 5]
+flowchart TB
+    G["Grafo com proveniência"]
+    G --- OBS["Observada<br/>87 relações"]
+    G --- STR["Estruturada<br/>4.040 relações"]
+    G --- INF["Inferida<br/>4 relações"]
+    G --- HYP["Hipótese<br/>10 relações"]
+    G --- ECO["Ecológica<br/>5 relações"]
 ```
 
 | Camada | Relações | O que significa |
@@ -333,10 +336,14 @@ O plano gratuito do shinyapps.io coloca o aplicativo em repouso após inatividad
 | Aba | O que mostra |
 |---|---|
 | **Início** | visão geral, KPIs e hierarquia de exposições |
-| **Grafo interativo** | filtros por tipo, nível de evidência, exposição e fenótipo; legenda com cor **e forma**; clique para ver evidências |
-| **Painel epidemiológico** | SINASC, SIH, clima, PM2,5 e modelos, com avisos de interpretação |
+| **Grafo e painel** | seção única com duas sub-abas: **Grafo interativo** e **Painel epidemiológico** |
 | **Evidências e métodos** | seção única com quatro sub-abas: **Evidências**, **Hipóteses e lacunas**, **Consulta científica** e **Métodos** |
-| **Transparência e equipe** | metadados FAIR, licenças, autores com Lattes e declaração de IA (Portaria CNPq 2.664/2026) |
+| **Transparência e equipe** | metadados FAIR, licenças e autores com Lattes |
+
+Sub-abas de **Grafo e painel**:
+
+- **Grafo interativo:** filtros por tipo, nível de evidência, exposição e fenótipo; legenda com cor **e forma**; clique para ver evidências.
+- **Painel epidemiológico:** SINASC, SIH, clima, PM2,5 e modelos, com avisos de interpretação.
 
 Sub-abas de **Evidências e métodos**:
 

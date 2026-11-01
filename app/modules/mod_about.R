@@ -99,25 +99,11 @@ mod_about_ui <- function(id) {
           source_note("Fonte: CITATION.cff, codemeta.json e LICENSE.")
         )
       )
-    ),
-    br(),
-    card(
-      card_header("Declaração de uso de inteligência artificial: Portaria CNPq nº 2.664/2026"),
-      card_body(
-        uiOutput(ns("ai_declaration")),
-        source_note("Fonte: docs/13_DECLARACAO_IA.md.")
-      )
     )
   )
 }
 
 mod_about_server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    output$ai_declaration <- renderUI({
-      path <- file.path("data", "ai_declaration.md")
-      if (!file.exists(path)) return(div(class = "small-muted", "Declaração não encontrada no bundle."))
-      html <- commonmark::markdown_html(paste(readLines(path, encoding = "UTF-8", warn = FALSE), collapse = "\n"))
-      HTML(html)
-    })
   })
 }

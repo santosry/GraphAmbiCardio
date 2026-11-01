@@ -79,12 +79,9 @@ mod_home_ui <- function(id) {
     ),
     br(),
     card(
-      card_header("Sugestões, críticas e contato"),
+      card_header("Contato"),
       card_body(
-        p("Sugestões de novas visualizações, correções metodológicas, melhorias de interpretação e possibilidades de uso em ensino, pesquisa e vigilância em saúde são bem-vindas."),
-        p("Envie uma mensagem para ", tags$a(href = "mailto:ryan.paulo@gsuite.iff.edu.br?subject=Sugest%C3%A3o%20para%20o%20GraphAmbiCardio", "ryan.paulo@gsuite.iff.edu.br"), "."),
-        tags$a(class = "btn btn-sm btn-primary", href = "mailto:ryan.paulo@gsuite.iff.edu.br?subject=Sugest%C3%A3o%20para%20o%20GraphAmbiCardio", "Enviar sugestão"),
-        tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "https://github.com/santosry/GraphAmbiCardio/issues", target = "_blank", "Abrir issue no GitHub")
+        p("Contato: ", tags$a(href = "mailto:ryan.paulo@gsuite.iff.edu.br", "ryan.paulo@gsuite.iff.edu.br"), ".")
       )
     )
   )
@@ -113,7 +110,10 @@ mod_home_server <- function(id) {
                 rownames = FALSE, options = list(dom = "t", pageLength = 10, columnDefs = list(list(width = "30%", targets = 3))))
     }, server = FALSE)
 
-    observeEvent(input$home_go_graph, { bslib::nav_select("main_nav", "Grafo interativo") }, ignoreInit = TRUE)
+    observeEvent(input$home_go_graph, {
+      bslib::nav_select("main_nav", "Grafo e painel")
+      bslib::nav_select("graph_epi_nav", "Grafo interativo")
+    }, ignoreInit = TRUE)
     observeEvent(input$home_go_evidence, {
       bslib::nav_select("main_nav", "Evidências e métodos")
       bslib::nav_select("evidence_nav", "Evidências")
@@ -122,6 +122,9 @@ mod_home_server <- function(id) {
       bslib::nav_select("main_nav", "Evidências e métodos")
       bslib::nav_select("evidence_nav", "Hipóteses e lacunas")
     }, ignoreInit = TRUE)
-    observeEvent(input$home_go_epi, { bslib::nav_select("main_nav", "Painel epidemiológico") }, ignoreInit = TRUE)
+    observeEvent(input$home_go_epi, {
+      bslib::nav_select("main_nav", "Grafo e painel")
+      bslib::nav_select("graph_epi_nav", "Painel epidemiológico")
+    }, ignoreInit = TRUE)
   })
 }

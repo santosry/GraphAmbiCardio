@@ -179,7 +179,7 @@ def main() -> None:
     # 8. app self-containment
     app_required = ["app/data/nodes.csv", "app/data/relations.csv", "app/data/evidence.csv",
                     "app/data/pm25_annual.csv", "app/data/pm25_monthly.csv",
-                    "app/data/ai_declaration.md", "app/www/metadata.json"]
+                    "app/www/metadata.json"]
     checks["app_bundle"] = {"missing": [f for f in app_required if not (ROOT / f).exists()]}
     if checks["app_bundle"]["missing"]:
         issues.append("bundle do app incompleto")

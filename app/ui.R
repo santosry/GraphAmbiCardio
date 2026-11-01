@@ -45,8 +45,14 @@ ui <- bslib::page_navbar(
   ),
 
   bslib::nav_panel("Início", mod_home_ui("home")),
-  bslib::nav_panel("Grafo interativo", mod_graph_ui("graph")),
-  bslib::nav_panel("Painel epidemiológico", mod_epi_ui("epi")),
+  bslib::nav_panel(
+    "Grafo e painel",
+    bslib::navset_tab(
+      id = "graph_epi_nav",
+      bslib::nav_panel("Grafo interativo", mod_graph_ui("graph")),
+      bslib::nav_panel("Painel epidemiológico", mod_epi_ui("epi"))
+    )
+  ),
   bslib::nav_panel(
     "Evidências e métodos",
     bslib::navset_tab(

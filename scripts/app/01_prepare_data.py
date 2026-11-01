@@ -70,7 +70,6 @@ for src, dst in COPY.items():
 for src, dst in {
     "fair/datapackage.json": "app/www/datapackage.json",
     "fair/metadata.json": "app/www/metadata.json",
-    "docs/13_DECLARACAO_IA.md": "app/data/ai_declaration.md",
 }.items():
     p = ROOT / src
     if p.exists():

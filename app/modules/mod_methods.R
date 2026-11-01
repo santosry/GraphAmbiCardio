@@ -110,8 +110,7 @@ mod_methods_ui <- function(id) {
           tags$li(tags$a(href = "https://github.com/santosry/GraphAmbiCardio/blob/main/docs/01_SCIENTIFIC_VIABILITY.md", target = "_blank", "Viabilidade científica (Fase A)")),
           tags$li(tags$a(href = "https://github.com/santosry/GraphAmbiCardio/blob/main/docs/02_SEARCH_STRATEGY.md", target = "_blank", "Estratégia de busca e PRISMA-ScR")),
           tags$li(tags$a(href = "https://github.com/santosry/GraphAmbiCardio/blob/main/docs/06_EVIDENCE_GRADING.md", target = "_blank", "Gradação de evidência")),
-          tags$li(tags$a(href = "https://github.com/santosry/GraphAmbiCardio/blob/main/docs/09_LIMITATIONS_AND_GAPS.md", target = "_blank", "Limitações e lacunas")),
-          tags$li(tags$a(href = "https://github.com/santosry/GraphAmbiCardio/blob/main/docs/13_DECLARACAO_IA.md", target = "_blank", "Declaração de uso de IA"))
+          tags$li(tags$a(href = "https://github.com/santosry/GraphAmbiCardio/blob/main/docs/09_LIMITATIONS_AND_GAPS.md", target = "_blank", "Limitações e lacunas"))
         )
       )
     )
