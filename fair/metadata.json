@@ -267,7 +267,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/figures/site/manifest.json",
       "format": "json",
       "byteSize": 4030,
-      "checksum": "sha256:35c7305bb487a8967cb7f493ee34b9c6bab98c38e7801e80962a05bf461e6686"
+      "checksum": "sha256:da5006dac8b9fe888da5d209633140241dbd8de78c7be6b756e028405f3f42d4"
     },
     {
       "@type": "Distribution",
@@ -482,16 +482,16 @@
       "name": "leitura_integral",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/fulltext_metadata.csv",
       "format": "csv",
-      "byteSize": 61484,
-      "checksum": "sha256:53a3b33d4046e26f528d4685f18ac1d1f5fa545104db784c09b466e13c13886f"
+      "byteSize": 283625,
+      "checksum": "sha256:5816de4a9b3e8c6c8b5411d16c0a5d66cc2cce7c9be0810bf5a649f24acd6070"
     },
     {
       "@type": "Distribution",
       "name": "registro_leitura",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/reports/fulltext_reading_log.md",
       "format": "md",
-      "byteSize": 29062,
-      "checksum": "sha256:b41bf637e199f9c0513a8fbfc33b56de38e71f4c7683d755f0265a8f553f593b"
+      "byteSize": 126891,
+      "checksum": "sha256:3010d1a5f0f953f16b624690d6ef7c9711ee129b6bc17dfeb7e142232f60ee3d"
     }
   ],
   "conformsTo": "https://specs.frictionlessdata.io/data-package/",

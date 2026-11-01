@@ -141,9 +141,9 @@ Os artigos completos não ficam no notebook. Cada estudo passa por uma pasta tem
 | Candidatos automáticos revisados (primeira passagem) | **23** |
 | Aprovados pela regra estrita na fila atual | **22** |
 | Propostas de segunda passagem revisadas | **11** (10 verificadas, 1 recusada) |
-| Estudos com leitura integral registrada | **152** |
-| Com texto completo (PDF ou XML) | **35** (11 PDF + 24 XML) |
-| Somente com resumo | **117** |
+| Estudos com leitura registrada (texto completo ou resumo) | **660** |
+| Com texto completo (PDF ou XML) | **98** (43 PDF + 55 XML) |
+| Somente com resumo | **562** |
 | Total de linhas de revisão | **64** (49 verificadas, 15 recusadas) |
 | Registros da fila ainda sem decisão | **596** |
 
@@ -151,7 +151,7 @@ A **primeira passagem** exige, na mesma cláusula: **uma** exposição, **um** f
 
 A **segunda passagem** trata os resumos humanos que têm tamanho de efeito, mas citam mais de um fenótipo. Ela não promove nada sozinha: mapeia cada efeito para o fenótipo e para a exposição mais próximos na mesma cláusula e grava uma proposta em `literature/curated/batch_chd_proposals.csv`. Só vira aresta se o revisor aceitar a proposta, com trecho, efeito, população, janela e desenho explícitos.
 
-A **leitura integral** foi feita em lotes de 10. Para cada estudo, o pipeline tenta PDF de acesso aberto (Europe PMC, Unpaywall, OpenAlex, Semantic Scholar), depois texto completo XML, e por fim o resumo. Foram lidos 35 textos completos e 117 resumos. A extração usa frases com efeito explícito, atribuição ao fenótipo e à exposição mais próximos, e arquiva apenas a citação curta com contexto. Nenhum PDF ou XML permanece no disco.
+A **leitura em lotes** foi feita de 10 em 10. Para cada estudo, o pipeline tenta PDF de acesso aberto (Europe PMC, Unpaywall, OpenAlex, Semantic Scholar), depois texto completo XML, e por fim o resumo. Foram lidos 98 textos completos e 562 resumos. A extração usa frases com efeito explícito, atribuição ao fenótipo e à exposição mais próximos, e arquiva apenas a citação curta com contexto. Nenhum PDF ou XML permanece no disco.
 
 Desta rodada saíram **20 arestas verificadas** adicionais, incluindo PM10 para ASD, PDA, TOF e VSD, metais para VSD/ASD, solventes para TGA e VSD, tabagismo para L-TGA, DORV e AVSD e PM2,5 para estenose pulmonar e defeito de coxim endocárdico. Foram recusados 15 candidatos, entre eles:
 
@@ -482,7 +482,7 @@ O workflow `.github/workflows/ci.yml` roda em cada push e pull request:
 
 - **Busca não sistemática.** Não houve triagem dupla de todos os registros nem leitura de texto completo de todos os candidatos.
 - **Curadoria em lote e leitura integral assistidas por IA.** As 49 arestas promovidas passaram por extração automática, revisão de um único revisor (assistido por IA) e verificação verbatim contra o resumo do PubMed ou o trecho de texto completo arquivado. Confirmação humana independente é recomendada.
-- **596 registros da fila ainda aguardam decisão.** A fila está em `literature/curated/batch_chd_queue.csv`; a priorização está em `reports/batch_chd_triage.md`. Há 88 resumos humanos com tamanho de efeito, 172 humanos sem confirmação da exposição ou do fenótipo candidato, 165 animais ou celulares, 60 cirúrgicos ou diagnósticos, 17 revisões, 93 sem sinal suficiente e 1 sem resumo. Dos 152 estudos com leitura registrada, 35 tinham texto completo e 117 apenas resumo.
+- **596 registros da fila ainda aguardam decisão.** A fila está em `literature/curated/batch_chd_queue.csv`; a priorização está em `reports/batch_chd_triage.md`. Há 88 resumos humanos com tamanho de efeito, 172 humanos sem confirmação da exposição ou do fenótipo candidato, 165 animais ou celulares, 60 cirúrgicos ou diagnósticos, 17 revisões, 93 sem sinal suficiente e 1 sem resumo. Dos 660 estudos com leitura registrada, 98 tinham texto completo e 562 apenas resumo.
 - **Achados condicionais.** Duas arestas promovidas descrevem efeitos apenas em estratos específicos (interação com metionina e com calor extremo). O texto do efeito e a nota registram isso.
 - **SciELO** foi acessado por metadados Crossref, porque a interface de busca bloqueou automação.
 - **CAPES** cobre o Catálogo de Teses, não o Portal de Periódicos.

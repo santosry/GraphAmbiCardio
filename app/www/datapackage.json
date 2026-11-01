@@ -1444,7 +1444,7 @@
       "format": "json",
       "mediatype": "application/json",
       "bytes": 4030,
-      "hash": "sha256:35c7305bb487a8967cb7f493ee34b9c6bab98c38e7801e80962a05bf461e6686",
+      "hash": "sha256:da5006dac8b9fe888da5d209633140241dbd8de78c7be6b756e028405f3f42d4",
       "schema": null
     },
     {
@@ -2624,11 +2624,11 @@
     {
       "name": "leitura_integral",
       "path": "literature/curated/fulltext_metadata.csv",
-      "description": "Metadados dos 152 estudos lidos em texto completo ou resumo; artigos completos não são mantidos",
+      "description": "Metadados dos 660 estudos lidos em texto completo, resumo ou metadados; artigos completos não são mantidos",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 61484,
-      "hash": "sha256:53a3b33d4046e26f528d4685f18ac1d1f5fa545104db784c09b466e13c13886f",
+      "bytes": 283625,
+      "hash": "sha256:5816de4a9b3e8c6c8b5411d16c0a5d66cc2cce7c9be0810bf5a649f24acd6070",
       "schema": {
         "fields": [
           {
@@ -2744,8 +2744,8 @@
       "description": "Registro legível da leitura em lotes, com acesso, páginas, candidatos e decisões",
       "format": "md",
       "mediatype": "text/markdown",
-      "bytes": 29062,
-      "hash": "sha256:b41bf637e199f9c0513a8fbfc33b56de38e71f4c7683d755f0265a8f553f593b",
+      "bytes": 126891,
+      "hash": "sha256:3010d1a5f0f953f16b624690d6ef7c9711ee129b6bc17dfeb7e142232f60ee3d",
       "schema": null
     }
   ]

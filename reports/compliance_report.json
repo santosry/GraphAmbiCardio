@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T19:05:58Z",
+  "generated_at": "2026-11-01T20:08:39Z",
   "passed": true,
   "issues": [],
   "checks": {
@@ -20,7 +20,7 @@
       "bad": []
     },
     "git": {
-      "tracked_files": 476,
+      "tracked_files": 565,
       "data_raw_tracked": [],
       "venv_tracked": []
     },

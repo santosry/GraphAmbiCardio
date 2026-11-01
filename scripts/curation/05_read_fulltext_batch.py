@@ -226,6 +226,8 @@ def main() -> None:
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--max-bytes", type=int, default=30_000_000)
     parser.add_argument("--max-pages", type=int, default=80)
+    parser.add_argument("--metadata-only", action="store_true",
+                        help="record metadata and abstract only; do not download or extract")
     args = parser.parse_args()
 
     if args.source == "anchors":
@@ -269,8 +271,8 @@ def main() -> None:
             source_url = record.pubmed_url
             pdf_sha = ""
             pages: list[str] = []
-            notes = ""
-            cached = cache.get(pmid, {})
+            notes = "metadata only (class not eligible for extraction)" if args.metadata_only else ""
+            cached = cache.get(pmid, {}) if not args.metadata_only else {}
             if "pdf" in cached:
                 file_path = cached["pdf"]
                 access = "pdf"
@@ -281,7 +283,7 @@ def main() -> None:
                 access = "xml"
                 source_url = record.pubmed_url
                 audit["bytes"] += file_path.stat().st_size
-            else:
+            elif not args.metadata_only:
                 dest = temp / f"{pmid}.pdf"
                 urls = fulltext.pdf_candidates(record)
                 ok, used = fulltext.download_pdf(urls, dest, max_bytes=args.max_bytes)
@@ -325,7 +327,7 @@ def main() -> None:
                 else:
                     access = "unavailable"
 
-            candidates = fulltext.candidate_sentences(
+            candidates = [] if args.metadata_only else fulltext.candidate_sentences(
                 pages, exposures, ALL_PHENOTYPES, max_candidates=15
             ) if pages else []
             archived = []

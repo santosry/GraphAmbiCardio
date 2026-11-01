@@ -199,7 +199,7 @@ A triagem automática de todos os registros recuperados está em `literature/scr
 ### Screening procedure actually used
 
 1. **Automated triage** of all retrieved records (`literature/screen.py`): species, study design, exposure-window vocabulary, mechanism vocabulary, phenotype vocabulary, review flag.
-2. **Manual reading** of 34 anchor studies (33 PMIDs + 1 CAPES thesis) selected to cover: each exposure with positive human evidence, each mechanism with experimental evidence, each process→phenotype link, and the classic gene discoveries. All 552 unique CAPES records were title-screened; one thesis was read at abstract level and included. In addition, 23 first-pass candidates, 11 second-pass proposals and 152 full-text/abstract readings from the exhaustive layer were reviewed; 49 became evidence and 15 were rejected.
+2. **Manual reading** of 34 anchor studies (33 PMIDs + 1 CAPES thesis) selected to cover: each exposure with positive human evidence, each mechanism with experimental evidence, each process→phenotype link, and the classic gene discoveries. All 552 unique CAPES records were title-screened; one thesis was read at abstract level and included. In addition, 23 first-pass candidates, 11 second-pass proposals and 660 full-text/abstract readings from the exhaustive layer were reviewed; 49 became evidence and 15 were rejected.
 3. **Audit** of quote fidelity at build time (100%) and re-check of a random 25% at validation time.
 
 This is **not a systematic review**. It is a structured, non-systematic search with targeted manual curation: there was no dual screening of all records, no full-text review and no formal risk-of-bias instrument.

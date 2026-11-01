@@ -24,7 +24,7 @@
 
 ### Leitura integral em lotes (2026-11-01)
 - Pipeline `scripts/curation/05_read_fulltext_batch.py`: PDF de acesso aberto, XML JATS e resumo, em lotes de 10; o arquivo completo é apagado depois da extração.
-- 152 estudos com leitura registrada: 35 com texto completo (11 PDF + 24 XML) e 117 apenas com resumo; 68 trechos curtos arquivados em `literature/curated/fulltext_quotes/`.
+- 660 estudos com leitura registrada: 98 com texto completo (43 PDF + 55 XML) e 562 apenas com resumo; 319 estudos não elegíveis foram registrados em nível de metadados; 68 trechos curtos arquivados em `literature/curated/fulltext_quotes/`.
 - 20 arestas verificadas adicionais (49 no total) e 15 candidatos recusados, incluindo duplicatas, estimativas nulas, citações de revisão narrativa e atribuições erradas.
 - Tabela de metadados em `literature/curated/fulltext_metadata.csv`; log em `reports/fulltext_reading_log.md`; nenhum artigo completo permanece no notebook.
 - Esquema de evidência ganhou `quote_source` e `quote_archive`; a validação recheca 100% dos trechos de texto completo contra o trecho arquivado.
