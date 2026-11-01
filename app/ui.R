@@ -47,10 +47,16 @@ ui <- bslib::page_navbar(
   bslib::nav_panel("Início", mod_home_ui("home")),
   bslib::nav_panel("Grafo interativo", mod_graph_ui("graph")),
   bslib::nav_panel("Painel epidemiológico", mod_epi_ui("epi")),
-  bslib::nav_panel("Evidências", mod_evidence_ui("evidence")),
-  bslib::nav_panel("Hipóteses e lacunas", mod_hypotheses_ui("hyp")),
-  bslib::nav_panel("Consulta científica", mod_query_ui("query")),
-  bslib::nav_panel("Métodos", mod_methods_ui("methods")),
+  bslib::nav_panel(
+    "Evidências e métodos",
+    bslib::navset_tab(
+      id = "evidence_nav",
+      bslib::nav_panel("Evidências", mod_evidence_ui("evidence")),
+      bslib::nav_panel("Hipóteses e lacunas", mod_hypotheses_ui("hyp")),
+      bslib::nav_panel("Consulta científica", mod_query_ui("query")),
+      bslib::nav_panel("Métodos", mod_methods_ui("methods"))
+    )
+  ),
   bslib::nav_panel("Transparência e equipe", mod_about_ui("about"))
 )
 

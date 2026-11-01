@@ -335,11 +335,15 @@ O plano gratuito do shinyapps.io coloca o aplicativo em repouso após inatividad
 | **Início** | visão geral, KPIs e hierarquia de exposições |
 | **Grafo interativo** | filtros por tipo, nível de evidência, exposição e fenótipo; legenda com cor **e forma**; clique para ver evidências |
 | **Painel epidemiológico** | SINASC, SIH, clima, PM2,5 e modelos, com avisos de interpretação |
-| **Evidências** | tabela filtrável; a seleção mostra trechos e referências |
-| **Hipóteses e lacunas** | caminhos candidatos, hipóteses por genes e lacunas |
-| **Consulta científica** | pergunta por exposição e recupera mecanismos, fenótipos, genes, caminhos e referências |
-| **Métodos** | desenho, buscas, bases, gradação, cobertura e limitações |
+| **Evidências e métodos** | seção única com quatro sub-abas: **Evidências**, **Hipóteses e lacunas**, **Consulta científica** e **Métodos** |
 | **Transparência e equipe** | metadados FAIR, licenças, autores com Lattes e declaração de IA (Portaria CNPq 2.664/2026) |
+
+Sub-abas de **Evidências e métodos**:
+
+- **Evidências:** tabela filtrável; a seleção mostra todas as evidências, trechos e referências.
+- **Hipóteses e lacunas:** caminhos candidatos, hipóteses por sobreposição gênica e lacunas explícitas.
+- **Consulta científica:** pergunta por exposição e recupera mecanismos, fenótipos, genes, caminhos e referências.
+- **Métodos:** desenho, buscas, bases, gradação, cobertura, leitura em lotes e limitações.
 
 Execução local:
 

@@ -114,8 +114,14 @@ mod_home_server <- function(id) {
     }, server = FALSE)
 
     observeEvent(input$home_go_graph, { bslib::nav_select("main_nav", "Grafo interativo") }, ignoreInit = TRUE)
-    observeEvent(input$home_go_evidence, { bslib::nav_select("main_nav", "Evidências") }, ignoreInit = TRUE)
-    observeEvent(input$home_go_hyp, { bslib::nav_select("main_nav", "Hipóteses e lacunas") }, ignoreInit = TRUE)
+    observeEvent(input$home_go_evidence, {
+      bslib::nav_select("main_nav", "Evidências e métodos")
+      bslib::nav_select("evidence_nav", "Evidências")
+    }, ignoreInit = TRUE)
+    observeEvent(input$home_go_hyp, {
+      bslib::nav_select("main_nav", "Evidências e métodos")
+      bslib::nav_select("evidence_nav", "Hipóteses e lacunas")
+    }, ignoreInit = TRUE)
     observeEvent(input$home_go_epi, { bslib::nav_select("main_nav", "Painel epidemiológico") }, ignoreInit = TRUE)
   })
 }
