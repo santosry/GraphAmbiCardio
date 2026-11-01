@@ -40,19 +40,7 @@ git tag -a v0.3.0 -m "GraphAmbiCardio 0.3.0"
 git push origin main --tags
 ```
 
-## 4. DOI persistente (Zenodo/Software Heritage)
-
-O DOI ainda não foi emitido. Para emitir:
-
-1. criar conta no Zenodo e autorizar o GitHub;
-2. publicar um release `v0.3.0`;
-3. copiar o DOI para `CITATION.cff`, `codemeta.json` e `fair/metadata.json`;
-4. reexecutar `python scripts/app/02_fair_metadata.py` e o compliance.
-
-Enquanto o DOI não existir, o identificador do conjunto é a URL do repositório
-com a tag (`https://github.com/santosry/GraphAmbiCardio#v0.3.0`).
-
-## 5. Deploy do app
+## 4. Deploy do app
 
 ```bash
 Rscript scripts/deploy/deploy_shinyapps.R

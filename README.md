@@ -178,7 +178,7 @@ docker compose up --build
 | `data_processed/` | dados harmonizados |
 | `outputs/` | grafo, tabelas e figuras |
 | `tests/` | testes unitários e de integridade |
-| `codemeta.json`, `CITATION.cff`, `.zenodo.json` | metadados de citação, software e arquivamento |
+| `codemeta.json`, `CITATION.cff` | metadados de citação e software |
 | `CHANGELOG.md`, `RELEASE.md` | histórico e checklist de release |
 
 ---

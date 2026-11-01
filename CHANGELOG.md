@@ -33,7 +33,6 @@
 - Versão 0.3.0 em `pyproject.toml`, `CITATION.cff`, `codemeta.json` e metadados.
 
 ### Pendências conhecidas
-- DOI persistente (Zenodo/Software Heritage) (Zenodo/Software Heritage) ainda não emitido.
 - Microdados de 2023–2024 do SINASC indisponíveis no DATASUS.
 - Desfecho com subnotificação grave; resultados de exposição são
   exploratórios e nenhum sobrevive ao FDR.

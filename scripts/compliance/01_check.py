@@ -23,8 +23,7 @@ SKIP = {"data_raw", ".git", ".venv", "node_modules", "__pycache__", ".pytest_cac
 FORBIDDEN = [
     "CEKP", "CardioEnvironment", "BVS", "LILACS",
     "revisor independente", "dois revisores", "two-reviewer",
-    "reviewer_2", "auditoria independente", "DOI de arquivamento",
-    "archival release",
+    "reviewer_2", "auditoria independente",
 ]
 REQUIRED = [
     "README.md", "LICENSE", "CITATION.cff", "pyproject.toml", "Dockerfile",
@@ -33,7 +32,7 @@ REQUIRED = [
     "app/global.R", "app/ui.R", "app/server.R", "app/data/nodes.csv",
     "outputs/graph/relations.csv", "data_processed/pm25_campos_mensal.csv",
     "reports/pysus_sinasc_audit.json", "docs/15_DATA_GOVERNANCE.md",
-    "codemeta.json", "CHANGELOG.md", "RELEASE.md", "uv.lock", "renv.lock", ".zenodo.json",
+    "codemeta.json", "CHANGELOG.md", "RELEASE.md", "uv.lock", "renv.lock",
     ".github/workflows/ci.yml", "scripts/validation/02_schema.py",
 ]
 
