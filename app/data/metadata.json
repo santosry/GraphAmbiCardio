@@ -1,8 +1,8 @@
 {
   "titulo": "GraphAmbiCardio",
   "subtitulo": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas",
-  "versao": "0.3.0",
-  "data": "2026-10-31",
+  "versao": "0.4.0",
+  "data": "2026-11-01",
   "municipio": "Campos dos Goytacazes, RJ, Brasil (IBGE 330100)",
   "periodo": "2010-2025",
   "licenca_codigo": "MIT",

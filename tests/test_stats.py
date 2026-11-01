@@ -46,8 +46,17 @@ def test_add_fdr_attaches_q_values():
 
 
 def test_male_indicator_accepts_string_and_numeric():
-    assert models._male(pd.Series(["1", "2", None])).tolist() == [1, 0, 0]
-    assert models._male(pd.Series([1, 2, None])).tolist() == [1, 0, 0]
+    out_str = models._male(pd.Series(["1", "2", None]))
+    out_num = models._male(pd.Series([1, 2, None]))
+    assert out_str.iloc[0] == 1 and out_str.iloc[1] == 0 and pd.isna(out_str.iloc[2])
+    assert out_num.iloc[0] == 1 and out_num.iloc[1] == 0 and pd.isna(out_num.iloc[2])
+
+
+def test_male_indicator_unknown_is_missing_not_female():
+    out = models._male(pd.Series(["1", "2", "9", "", None, "0"]))
+    assert out.iloc[0] == 1
+    assert out.iloc[1] == 0
+    assert out.iloc[2:].isna().all()
 
 
 def test_model_frame_rejects_missing_exposure():

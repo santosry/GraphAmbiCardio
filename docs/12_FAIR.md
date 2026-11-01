@@ -9,7 +9,7 @@ O GraphAmbiCardio foi desenhado para ser **Findable, Accessible, Interoperable a
 - **Identificadores persistentes por entidade:** PMID e DOI para estudos; HPO IDs para fenótipos; CID-10 para a camada epidemiológica; ClinVar VCV para variantes; Reactome stable IDs (`R-HSA-…`) para vias; NCBI Gene IDs para genes.
 - **Metadados descritivos:** `fair/metadata.json` (perfil DCAT) e `fair/datapackage.json` (Frictionless Data Package), com título, descrição, palavras-chave, cobertura espacial (IBGE 330100) e temporal (2010–2025), fontes e licenças.
 - **Aplicativo de descoberta:** o GraphAmbiCardio (Shiny, PT-BR; https://ryansantospaulo.shinyapps.io/graphambicardio/) permite busca por exposição, fenótipo, gene, via e termo livre, com recuperação das referências; inclui painel epidemiológico, camada de hipóteses e downloads em CSV.
-- **Identificador do conjunto:** URL do repositório + versão (`https://github.com/santosry/GraphAmbiCardio#v0.3.0`).
+- **Identificador do conjunto:** URL do repositório + versão (`https://github.com/santosry/GraphAmbiCardio#v0.4.0`).
 
 ## A — Accessible (acessível)
 

@@ -3,9 +3,9 @@
 The DBC microdata for 2023 and 2024 are not exposed in the SINASC FTP tree,
 but TabNet serves the consolidated files (`nvrj23.dbf`, `nvrj24.dbf`).  TabNet
 counts records in the "malformações congênitas do aparelho circulatório" group
-(Q20-Q28), which is slightly narrower than this study's microdata definition
-(any Q20-Q28 code in CODANOMAL).  The aggregate is therefore stored separately
-and never merged into the microdata series without this caveat.
+(Q20-Q28), which is broader than this study's core CHD definition (Q20-Q26).
+The aggregate is therefore stored separately and is never imputed into the core
+CHD series.
 
 TabNet requires Latin-1 form encoding and a session handshake; both are
 handled here.

@@ -1,11 +1,10 @@
 """Meteorological series for Campos dos Goytacazes.
 
-Source: ERA5 / ERA5-Land reanalysis distributed by the Open-Meteo Historical
-Weather API (open, no credential).  Reanalysis is **not** a local weather
-station: it represents a grid cell (~9 km for ERA5-Land) and is used as an
-area-level exposure proxy.  The INMET portal was probed during this study but
-no station series could be retrieved programmatically; this is documented as a
-limitation and the pipeline keeps a pluggable interface for INMET/ERA5 via CDS.
+Source: ERA5-Land reanalysis distributed by the Open-Meteo Historical Weather
+API (open, no credential).  The model is requested explicitly
+(``models=era5_land``); the API default "best match" is not used.  Reanalysis
+is **not** a local weather station: it represents a ~9 km grid cell and is used
+as an area-level exposure proxy.  INMET A607 is used separately for validation.
 
 PM2.5 has no local monitoring series in the municipality; no series is
 fabricated.  See docs/09_LIMITATIONS_AND_GAPS.md.
@@ -20,7 +19,7 @@ import numpy as np
 import pandas as pd
 
 from .. import config
-from ..io_utils import get_json, get_logger, today, write_csv, write_json
+from ..io_utils import get_json, get_logger, today, utc_now, write_csv, write_json
 
 log = get_logger("climate")
 
@@ -42,6 +41,8 @@ def fetch_daily(start: str = "2010-01-01", end: str = "2025-12-31") -> pd.DataFr
         "end_date": end,
         "daily": ",".join(DAILY_VARS),
         "timezone": config.MUNICIPALITY["timezone"],
+        # Explicit model: do not rely on the API's "best_match" default.
+        "models": config.OPEN_METEO_MODEL,
     }
     data = get_json(config.OPEN_METEO_ARCHIVE, params)
     daily = data.get("daily", {})
@@ -51,21 +52,33 @@ def fetch_daily(start: str = "2010-01-01", end: str = "2025-12-31") -> pd.DataFr
     df["year"] = df["date"].dt.year
     df["month"] = df["date"].dt.month
     meta = {
-        "source": "Open-Meteo Historical Weather API (ERA5/ERA5-Land)",
+        "source": f"Open-Meteo Historical Weather API — {config.OPEN_METEO_MODEL_LABEL}",
+        "api_url": config.OPEN_METEO_ARCHIVE,
+        "model_requested": config.OPEN_METEO_MODEL,
+        "model_label": config.OPEN_METEO_MODEL_LABEL,
+        "model_resolution_km": config.OPEN_METEO_RESOLUTION_KM,
         "latitude_requested": config.MUNICIPALITY["latitude"],
         "longitude_requested": config.MUNICIPALITY["longitude"],
         "latitude_returned": data.get("latitude"),
         "longitude_returned": data.get("longitude"),
         "elevation_m": data.get("elevation"),
         "timezone": data.get("timezone"),
+        "utc_offset_seconds": data.get("utc_offset_seconds"),
+        "timezone_abbreviation": data.get("timezone_abbreviation"),
         "start": start,
         "end": end,
         "n_days": len(df),
-        "retrieved_at": today(),
+        "daily_units": data.get("daily_units", {}),
+        "retrieved_at": utc_now(),
         "documentation": "https://open-meteo.com/en/docs/historical-weather-api",
+        "note": "Model fixed explicitly to era5_land; returned grid cell may differ from the requested coordinates.",
     }
     write_json(config.DATA_RAW / "external" / "climate_source_metadata.json", meta)
-    log.info("climate: %s days, %s..%s", len(df), df["date"].min().date(), df["date"].max().date())
+    log.info(
+        "climate: %s days, %s..%s, model=%s, returned cell=(%s,%s), elevation=%s m",
+        len(df), df["date"].min().date(), df["date"].max().date(),
+        config.OPEN_METEO_MODEL, data.get("latitude"), data.get("longitude"), data.get("elevation"),
+    )
     return df
 
 
@@ -142,6 +155,9 @@ def build() -> tuple[pd.DataFrame, pd.DataFrame]:
     ann = annual(daily)
     ann.to_csv(config.TABLES / "climate_annual_campos.csv", index=False)
     qa: dict[str, Any] = {
+        "model": config.OPEN_METEO_MODEL,
+        "model_label": config.OPEN_METEO_MODEL_LABEL,
+        "model_resolution_km": config.OPEN_METEO_RESOLUTION_KM,
         "n_days": int(len(daily)),
         "n_missing_tmax": int(daily["temperature_2m_max"].isna().sum()),
         "heatwave_threshold_p90_tmax": daily.attrs.get("heatwave_threshold_p90"),

@@ -30,12 +30,16 @@ def _cum(arr: np.ndarray) -> np.ndarray:
     return out
 
 
-def attach(daily: pd.DataFrame, births: pd.DataFrame) -> pd.DataFrame:
-    daily = daily.sort_values("date").reset_index(drop=True)
-    dates = pd.to_datetime(daily["date"]).to_numpy(dtype="datetime64[D]")
-    births = births.copy()
-    starts = pd.to_datetime(births["organogenesis_start_est"], errors="coerce")
-    ends = pd.to_datetime(births["organogenesis_end_est"], errors="coerce")
+def _attach_window(
+    births: pd.DataFrame,
+    daily: pd.DataFrame,
+    dates: np.ndarray,
+    start_col: str,
+    end_col: str,
+    suffix: str = "",
+) -> pd.DataFrame:
+    starts = pd.to_datetime(births[start_col], errors="coerce")
+    ends = pd.to_datetime(births[end_col], errors="coerce")
     valid_window = starts.notna() & ends.notna()
     starts_np = starts.to_numpy(dtype="datetime64[D]")
     ends_np = ends.to_numpy(dtype="datetime64[D]")
@@ -53,19 +57,38 @@ def attach(daily: pd.DataFrame, births: pd.DataFrame) -> pd.DataFrame:
         with np.errstate(invalid="ignore", divide="ignore"):
             mean = np.where(n > 0, (cs[hi] - cs[lo]) / np.maximum(n, 1), np.nan)
             frac_valid = np.where(n > 0, (csv[hi] - csv[lo]) / np.maximum(n, 1), np.nan)
-        births[f"win_{col}_mean"] = mean
+        births[f"win_{col}_mean{suffix}"] = mean
         if col == "temperature_2m_max":
             hot = (vals >= 35).astype(float)
             hot[np.isnan(vals)] = np.nan
             ch = _cum(hot)
-            births["win_heat_days_35_pct"] = np.where(
+            births[f"win_heat_days_35_pct{suffix}"] = np.where(
                 n > 0, (ch[hi] - ch[lo]) / np.maximum(n, 1), np.nan
             )
-            births["win_covariate_completeness"] = frac_valid
+            births[f"win_covariate_completeness{suffix}"] = frac_valid
+    return births
+
+
+def attach(daily: pd.DataFrame, births: pd.DataFrame) -> pd.DataFrame:
+    daily = daily.sort_values("date").reset_index(drop=True)
+    dates = pd.to_datetime(daily["date"]).to_numpy(dtype="datetime64[D]")
+    births = births.copy()
+    births = _attach_window(
+        births, daily, dates, "organogenesis_start_est", "organogenesis_end_est", ""
+    )
+    # Sensitivity windows: gestational age uncertainty of +/- 7 days.
+    for suffix, start_col, end_col in (
+        ("_early", "organogenesis_start_early", "organogenesis_end_early"),
+        ("_late", "organogenesis_start_late", "organogenesis_end_late"),
+    ):
+        if start_col in births.columns and end_col in births.columns:
+            births = _attach_window(births, daily, dates, start_col, end_col, suffix)
     log.info(
-        "exposure attached to %s births (%s with window)",
+        "exposure attached to %s births (%s with main window; %s early; %s late)",
         len(births),
         int(births["win_temperature_2m_max_mean"].notna().sum()),
+        int(births.get("win_temperature_2m_max_mean_early", pd.Series(dtype=float)).notna().sum()),
+        int(births.get("win_temperature_2m_max_mean_late", pd.Series(dtype=float)).notna().sum()),
     )
     return births
 

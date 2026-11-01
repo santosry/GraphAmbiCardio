@@ -29,6 +29,15 @@ REQUIRED = {
     "data_processed/pm25_campos_mensal.csv": ["cod_municipio", "uf", "ano", "mes", "pm25_ug_m3"],
     "app/data/models.csv": ["model", "p_value", "q_value"],
     "outputs/tables/sensitivity_leave_one_year_out.csv": ["excluded_year", "p_value", "q_value"],
+    "outputs/tables/gestational_window_sensitivity.csv": ["window", "n", "n_events", "or_per_sd", "p_value"],
+    "outputs/tables/sinasc_annual_complete.csv": ["year", "live_births", "chd_cases", "other_circulatory_cases", "tabnet_circulatory_cases"],
+    "outputs/tables/sinasc_other_circulatory_by_code.csv": ["other_code", "n"],
+    "outputs/tables/sih_other_circulatory_annual.csv": ["year", "admissions_primary_other_circulatory"],
+    "outputs/tables/hypothesis_family.csv": ["exposure_id", "phenotype_id", "mechanism_id", "p_hyper", "q_fdr"],
+    "outputs/tables/mechanism_gene_sets.csv": ["mechanism_id", "gene_symbol", "source"],
+    "app/data/ga_sensitivity.csv": ["window", "or_per_sd", "p_value"],
+    "app/data/sinasc_other_by_code.csv": ["other_code", "n"],
+    "app/data/sih_other_annual.csv": ["year", "admissions_primary_other_circulatory"],
     "outputs/tables/exposure_correlation.csv": ["exposure"],
     "outputs/tables/exposure_vif.csv": ["exposure", "vif"],
     "data_processed/inmet_campos_daily.csv": ["station_code", "date", "tair_max_c", "rh_mean_porc"],
@@ -65,6 +74,7 @@ def main() -> None:
         ("outputs/tables/exploratory_models.csv", ["p_value", "exposure_1_p", "exposure_2_p"],
          ["q_value", "exposure_1_q", "exposure_2_q"]),
         ("outputs/tables/hypothesis_candidates.csv", ["p_hyper"], ["q_fdr"]),
+        ("outputs/tables/hypothesis_family.csv", ["p_hyper"], ["q_fdr"]),
     ]:
         path = ROOT / rel
         if not path.exists():
@@ -110,6 +120,30 @@ def main() -> None:
         add(checks, "pm25:annual_years", len(df) == 16 and set(df["ano"]) == set(range(2010, 2026)),
             f"{len(df)} rows")
 
+    # Case-definition separation: Q27/Q28 must not enter the core CHD table.
+    chd_codes_path = ROOT / "outputs/tables/sinasc_chd_by_code.csv"
+    if chd_codes_path.exists():
+        df = pd.read_csv(chd_codes_path)
+        bad = df["chd_code"].astype(str).str[:3].isin(["Q27", "Q28"]).any() if "chd_code" in df.columns else False
+        add(checks, "case_definition:no_q27_q28_in_chd", not bad, "Q27/Q28 found" if bad else "ok")
+
+    annual_complete = ROOT / "outputs/tables/sinasc_annual_complete.csv"
+    if annual_complete.exists():
+        df = pd.read_csv(annual_complete)
+        miss = df[df["year"].isin([2023, 2024])]
+        ok = bool(miss["chd_cases"].isna().all())
+        add(checks, "case_definition:2023_2024_core_missing", ok, "core CHD not imputed from TabNet" if ok else "core CHD filled with non-comparable TabNet")
+        if "tabnet_circulatory_cases" in df.columns:
+            ok2 = bool(miss["tabnet_circulatory_cases"].notna().all())
+            add(checks, "case_definition:tabnet_separate", ok2, "TabNet kept in its own columns" if ok2 else "TabNet missing")
+
+    # Climate model must be explicit and reproducible.
+    climate_meta = ROOT / "data_raw/external/climate_source_metadata.json"
+    if climate_meta.exists():
+        meta = json.loads(climate_meta.read_text(encoding="utf-8"))
+        add(checks, "climate:model_fixed", meta.get("model_requested") == "era5_land", str(meta.get("model_requested")))
+        add(checks, "climate:returned_cell", meta.get("latitude_returned") is not None and meta.get("longitude_returned") is not None, f"{meta.get('latitude_returned')},{meta.get('longitude_returned')}")
+
     # The app bundle must never contain individual-level records.
     app = ROOT / "app" / "data"
     found = [p.name for p in app.glob("*") if p.name in {Path(x).name for x in INDIVIDUAL_DATA}]
@@ -125,7 +159,7 @@ def main() -> None:
     unique = {v for v in versions.values() if v}
     add(checks, "metadata:version_consistent", len(unique) <= 1, f"{versions}")
     add(checks, "lockfiles:present", (ROOT / "uv.lock").exists() and (ROOT / "renv.lock").exists(), "uv.lock + renv.lock")
-    add(checks, "release:changelog", "0.3.0" in (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"), "CHANGELOG has 0.3.0")
+    add(checks, "release:changelog", "0.4.0" in (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"), "CHANGELOG has 0.4.0")
 
     passed = all(c["ok"] for c in checks)
     out = {

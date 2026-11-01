@@ -1,0 +1,30 @@
+{
+  "source": "Open-Meteo Historical Weather API — ERA5-Land",
+  "api_url": "https://archive-api.open-meteo.com/v1/archive",
+  "model_requested": "era5_land",
+  "model_label": "ERA5-Land",
+  "model_resolution_km": 9,
+  "latitude_requested": -21.7545,
+  "longitude_requested": -41.3245,
+  "latitude_returned": -21.799995,
+  "longitude_returned": -41.300003,
+  "elevation_m": 12.0,
+  "timezone": "America/Sao_Paulo",
+  "utc_offset_seconds": -10800,
+  "timezone_abbreviation": "GMT-3",
+  "start": "2010-01-01",
+  "end": "2025-12-31",
+  "n_days": 5844,
+  "daily_units": {
+    "time": "iso8601",
+    "temperature_2m_mean": "°C",
+    "temperature_2m_max": "°C",
+    "temperature_2m_min": "°C",
+    "relative_humidity_2m_mean": "%",
+    "precipitation_sum": "mm",
+    "wind_speed_10m_max": "km/h"
+  },
+  "retrieved_at": "2026-11-01T14:28:03Z",
+  "documentation": "https://open-meteo.com/en/docs/historical-weather-api",
+  "note": "Model fixed explicitly to era5_land; returned grid cell may differ from the requested coordinates."
+}

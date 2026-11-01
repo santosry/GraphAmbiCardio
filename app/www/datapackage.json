@@ -2,8 +2,8 @@
   "name": "graphambicardio-graphambicardio",
   "title": "GraphAmbiCardio — grafo de conhecimento e dados derivados",
   "description": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas, com dados locais de Campos dos Goytacazes (RJ) e proveniência por evidência.",
-  "version": "0.3.0",
-  "created": "2026-10-31",
+  "version": "0.4.0",
+  "created": "2026-11-01",
   "licenses": [
     {
       "name": "MIT",
@@ -57,7 +57,7 @@
       "path": "https://datasus.saude.gov.br/"
     },
     {
-      "title": "ERA5-Land via Open-Meteo",
+      "title": "ERA5-Land via Open-Meteo (model fixed: era5_land)",
       "path": "https://open-meteo.com/en/docs/historical-weather-api"
     },
     {
@@ -126,7 +126,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 1988772,
-      "hash": "sha256:4706527382b2d353169b948703de0f86b89c3a4cdb04357425b3da8c761adc11",
+      "hash": "sha256:61e8e7181caf58caac95c55bdc2aa41bfa3f6adcff23bb5074d4ff13e80dbc44",
       "schema": {
         "fields": [
           {
@@ -222,8 +222,8 @@
       "description": "Uma linha por evidência, com referência, espécie, desenho, citação e limitações",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 1596446,
-      "hash": "sha256:8b4c9c530cac5b7f66e22813db299565df28fa5dcfd19c99760dc51e310cbc19",
+      "bytes": 1596684,
+      "hash": "sha256:327dd90488b7ddd826a81f834f89368afdb41fbe42fb9eec2f7196cc6b82f975",
       "schema": {
         "fields": [
           {
@@ -319,8 +319,8 @@
       "description": "Hipóteses geradas por composição de arestas observadas",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 3015,
-      "hash": "sha256:f4cbe0497963aeb8aded04e30503a28e35d37a05e04a9b711cec7b574596917a",
+      "bytes": 3253,
+      "hash": "sha256:6fa803762c9e6616a7897ab06c8b439901b6c39f4115b3fc3ff8a554bb90f535",
       "schema": {
         "fields": [
           {
@@ -416,8 +416,8 @@
       "description": "Série anual SINASC (microdados + agregados TabNet 2023-2024)",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 1415,
-      "hash": "sha256:bdeaebf4a455e8b3f74c4f79216e607508038dfe0517524bf69f6f31936a188f",
+      "bytes": 3252,
+      "hash": "sha256:6a8cbf3af4c9eb53fedc5e817c08b10af8d471365c9fb4a36087cfdaf17750fa",
       "schema": {
         "fields": [
           {
@@ -426,11 +426,11 @@
           },
           {
             "name": "live_births",
-            "type": "int64"
+            "type": "float64"
           },
           {
             "name": "chd_cases",
-            "type": "int64"
+            "type": "float64"
           },
           {
             "name": "chd_per_10000_lb",
@@ -441,12 +441,28 @@
             "type": "float64"
           },
           {
+            "name": "other_circulatory_cases",
+            "type": "float64"
+          },
+          {
+            "name": "other_circulatory_per_10000_lb",
+            "type": "float64"
+          },
+          {
+            "name": "circulatory_cases_total",
+            "type": "float64"
+          },
+          {
+            "name": "circulatory_per_10000_lb",
+            "type": "float64"
+          },
+          {
             "name": "anomaly_flag_1",
-            "type": "int64"
+            "type": "float64"
           },
           {
             "name": "any_q_code",
-            "type": "int64"
+            "type": "float64"
           },
           {
             "name": "data_status",
@@ -455,6 +471,38 @@
           {
             "name": "source",
             "type": "object"
+          },
+          {
+            "name": "live_births_tabnet",
+            "type": "float64"
+          },
+          {
+            "name": "tabnet_circulatory_cases",
+            "type": "float64"
+          },
+          {
+            "name": "tabnet_circulatory_per_10000_lb",
+            "type": "float64"
+          },
+          {
+            "name": "tabnet_source",
+            "type": "float64"
+          },
+          {
+            "name": "tabnet_data_status",
+            "type": "float64"
+          },
+          {
+            "name": "tabnet_case_definition",
+            "type": "float64"
+          },
+          {
+            "name": "note",
+            "type": "float64"
+          },
+          {
+            "name": "retrieved_at",
+            "type": "float64"
           }
         ]
       }
@@ -462,19 +510,15 @@
     {
       "name": "sih_anual",
       "path": "outputs/tables/sih_annual.csv",
-      "description": "Internações SIH/SUS por ano (Q20-Q28, diagnóstico principal)",
+      "description": "Internações SIH/SUS por ano (CHD core Q20-Q26, diagnóstico principal)",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 891,
-      "hash": "sha256:36a9dce8db90c4ef4d3790253b29b62428c8427c7a5812e4a97a4d86dfa91e17",
+      "bytes": 894,
+      "hash": "sha256:ddce5efd69b88462f634ddacd8988f8e7ca3598d347f0f2f6e701a07080fd2b6",
       "schema": {
         "fields": [
           {
             "name": "year",
-            "type": "int64"
-          },
-          {
-            "name": "admissions_primary_chd",
             "type": "int64"
           },
           {
@@ -504,6 +548,59 @@
           {
             "name": "elective_pct",
             "type": "float64"
+          },
+          {
+            "name": "admissions_primary_chd",
+            "type": "int64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sih_outras_circulatorias",
+      "path": "outputs/tables/sih_other_circulatory_annual.csv",
+      "description": "Internações SIH/SUS por ano para Q27-Q28 (não CHD)",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 805,
+      "hash": "sha256:1628dbc48ad16f9b537172fb0006c0d124e63acf342e865e6b85775081a5500d",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "int64"
+          },
+          {
+            "name": "deaths",
+            "type": "int64"
+          },
+          {
+            "name": "hospital_mortality_pct",
+            "type": "float64"
+          },
+          {
+            "name": "mean_length_of_stay_days",
+            "type": "float64"
+          },
+          {
+            "name": "total_cost_brl",
+            "type": "float64"
+          },
+          {
+            "name": "mean_cost_brl",
+            "type": "float64"
+          },
+          {
+            "name": "hospitals",
+            "type": "int64"
+          },
+          {
+            "name": "elective_pct",
+            "type": "float64"
+          },
+          {
+            "name": "admissions_primary_other_circulatory",
+            "type": "int64"
           }
         ]
       }
@@ -511,11 +608,11 @@
     {
       "name": "clima_diario",
       "path": "data_processed/climate_daily_campos.csv",
-      "description": "Série diária ERA5-Land para Campos dos Goytacazes",
+      "description": "Série diária ERA5-Land (modelo fixado) para Campos dos Goytacazes",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 415466,
-      "hash": "sha256:85c17525d6a19b7b0a0eff7f2bd5947ff606934e7f0b266817508891dad27607",
+      "bytes": 375489,
+      "hash": "sha256:e08005ad64435dc5707a03691937b954727ff32ad5032f8412d6645d82fe0007",
       "schema": {
         "fields": [
           {
@@ -576,6 +673,16 @@
           }
         ]
       }
+    },
+    {
+      "name": "clima_qualidade",
+      "path": "data_processed/climate_quality_report.json",
+      "description": "QA e modelo explícito da série climática (era5_land)",
+      "format": "json",
+      "mediatype": "application/json",
+      "bytes": 448,
+      "hash": "sha256:6e6168f64c231ee604d9080821c196035048572e01b28e6ee4f7d30c7c1d9e7a",
+      "schema": null
     },
     {
       "name": "pm25_anual",
@@ -727,8 +834,8 @@
       "description": "Hipóteses por sobreposição gênica (não evidenciais)",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 1434,
-      "hash": "sha256:26c501db5eb74c811c1456257b1de2ce35265892393bd0680cc44548a76d5a34",
+      "bytes": 2127,
+      "hash": "sha256:2506644a2dcd5c24420ce74fdb6fb1e8eacb30c5bcb4c87e9b3d097ffc7763b2",
       "schema": {
         "fields": [
           {
@@ -748,6 +855,22 @@
             "type": "int64"
           },
           {
+            "name": "phenotype_genes",
+            "type": "int64"
+          },
+          {
+            "name": "mechanism_genes",
+            "type": "int64"
+          },
+          {
+            "name": "mechanism_genes_seed_total",
+            "type": "int64"
+          },
+          {
+            "name": "universe_genes",
+            "type": "int64"
+          },
+          {
             "name": "gene_set_fraction",
             "type": "float64"
           },
@@ -760,28 +883,16 @@
             "type": "int64"
           },
           {
-            "name": "priority",
+            "name": "mechanism_gene_source",
             "type": "object"
-          },
-          {
-            "name": "missing_link",
-            "type": "object"
-          },
-          {
-            "name": "universe_genes",
-            "type": "int64"
-          },
-          {
-            "name": "phenotype_genes",
-            "type": "int64"
-          },
-          {
-            "name": "mechanism_genes",
-            "type": "int64"
           },
           {
             "name": "p_hyper",
             "type": "float64"
+          },
+          {
+            "name": "missing_link",
+            "type": "object"
           },
           {
             "name": "q_fdr",
@@ -790,6 +901,26 @@
           {
             "name": "fdr_significant",
             "type": "bool"
+          },
+          {
+            "name": "family_size",
+            "type": "int64"
+          },
+          {
+            "name": "p_perm",
+            "type": "float64"
+          },
+          {
+            "name": "q_perm_bh",
+            "type": "float64"
+          },
+          {
+            "name": "perm_significant",
+            "type": "bool"
+          },
+          {
+            "name": "priority",
+            "type": "object"
           }
         ]
       }
@@ -800,8 +931,8 @@
       "description": "Modelos logísticos, Firth, cluster-robusto, contagem mensal e ajuste mútuo, com p e q (BH-FDR)",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 4701,
-      "hash": "sha256:ff37ffc096a66da162f529362cb99c339dfb408aeb4a5fd53c9ded2d5223856a",
+      "bytes": 5286,
+      "hash": "sha256:342833751c6f1a9d984ef5d534aa9387b4c500ed5345c44dc57ca174b95e2f08",
       "schema": {
         "fields": [
           {
@@ -946,7 +1077,7 @@
       "format": "csv",
       "mediatype": "text/csv",
       "bytes": 642,
-      "hash": "sha256:fd7c2e1be5bd64f4328ff4992bcd372d2858f5ef87274237b4e018117f55521f",
+      "hash": "sha256:5def9ec1d3b0d6864312688314ba3520a6036966c4c2744cb301b2816c03386a",
       "schema": {
         "fields": [
           {
@@ -981,13 +1112,180 @@
       }
     },
     {
+      "name": "sensibilidade_gestacional",
+      "path": "outputs/tables/gestational_window_sensitivity.csv",
+      "description": "Sensibilidade da janela de organogênese a ±7 dias de idade gestacional",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 289,
+      "hash": "sha256:ac85b485185404dc9709afd8005c9cb9254c2a3cffc5b42d4ac9f7ee4b5c64bb",
+      "schema": {
+        "fields": [
+          {
+            "name": "window",
+            "type": "object"
+          },
+          {
+            "name": "exposure_column",
+            "type": "object"
+          },
+          {
+            "name": "n",
+            "type": "int64"
+          },
+          {
+            "name": "n_events",
+            "type": "int64"
+          },
+          {
+            "name": "or_per_sd",
+            "type": "float64"
+          },
+          {
+            "name": "ci_low",
+            "type": "float64"
+          },
+          {
+            "name": "ci_high",
+            "type": "float64"
+          },
+          {
+            "name": "p_value",
+            "type": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "hipoteses_familia",
+      "path": "outputs/tables/hypothesis_family.csv",
+      "description": "Família completa de testes de sobreposição gênica, antes da seleção",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 28237,
+      "hash": "sha256:ed61896f9c541338be061ec98d4d0ea84c1d9fd4fd76d6e37193cb178aad5ede",
+      "schema": {
+        "fields": [
+          {
+            "name": "exposure_id",
+            "type": "object"
+          },
+          {
+            "name": "phenotype_id",
+            "type": "object"
+          },
+          {
+            "name": "mechanism_id",
+            "type": "object"
+          },
+          {
+            "name": "n_overlap",
+            "type": "int64"
+          },
+          {
+            "name": "phenotype_genes",
+            "type": "int64"
+          },
+          {
+            "name": "mechanism_genes",
+            "type": "int64"
+          },
+          {
+            "name": "mechanism_genes_seed_total",
+            "type": "int64"
+          },
+          {
+            "name": "universe_genes",
+            "type": "int64"
+          },
+          {
+            "name": "gene_set_fraction",
+            "type": "float64"
+          },
+          {
+            "name": "overlap_genes",
+            "type": "object"
+          },
+          {
+            "name": "supporting_reference",
+            "type": "int64"
+          },
+          {
+            "name": "p_hyper",
+            "type": "float64"
+          },
+          {
+            "name": "q_fdr",
+            "type": "float64"
+          },
+          {
+            "name": "fdr_significant",
+            "type": "bool"
+          },
+          {
+            "name": "family_size",
+            "type": "int64"
+          },
+          {
+            "name": "p_perm",
+            "type": "float64"
+          },
+          {
+            "name": "q_perm_bh",
+            "type": "float64"
+          },
+          {
+            "name": "perm_significant",
+            "type": "object"
+          },
+          {
+            "name": "mechanism_gene_source",
+            "type": "object"
+          },
+          {
+            "name": "missing_link",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
+      "name": "genes_mecanismos",
+      "path": "outputs/tables/mechanism_gene_sets.csv",
+      "description": "Conjuntos gênicos canônicos por mecanismo, com origem e presença no universo HPO",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 12251,
+      "hash": "sha256:c17478f430603ae0f30855f568bcea95c826ab7afc084a90a260519b2b2a27e2",
+      "schema": {
+        "fields": [
+          {
+            "name": "mechanism_id",
+            "type": "object"
+          },
+          {
+            "name": "gene_symbol",
+            "type": "object"
+          },
+          {
+            "name": "in_hpo_universe",
+            "type": "bool"
+          },
+          {
+            "name": "source",
+            "type": "object"
+          }
+        ]
+      }
+    },
+    {
       "name": "correlacao_exposicoes",
       "path": "outputs/tables/exposure_correlation.csv",
       "description": "Matriz de correlação das exposições de janela",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 421,
-      "hash": "sha256:e189ac1b528e3bfef8bc3d56a203c6aeacb42d2b656d86ed778d05cea7fd3a39",
+      "bytes": 417,
+      "hash": "sha256:0a87fbad9458bf8c55f22557c64c4d518d261a5e1609100f603012851f5caf0a",
       "schema": {
         "fields": [
           {
@@ -1023,8 +1321,8 @@
       "description": "Fatores de inflação de variância das exposições de janela",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 176,
-      "hash": "sha256:25cb02785d3937b0104b61f1004fdc23d7ba7f8957e14a6bb0909a5271aea4c8",
+      "bytes": 177,
+      "hash": "sha256:6d6d50e013551a0d979fae58095744a3b4c4cdd7946ffbcdb44209dfaae6e22d",
       "schema": {
         "fields": [
           {
@@ -1044,8 +1342,8 @@
       "description": "Manifesto das figuras do site com fonte, período, dados e SHA-256",
       "format": "json",
       "mediatype": "application/json",
-      "bytes": 3919,
-      "hash": "sha256:86e5c1f495abe9ea93b9569de60feb34236cc79dd3f1c6257e958db78119247b",
+      "bytes": 4045,
+      "hash": "sha256:6b3056f348a64048c115c516e2a91556c1fa074747aaa9c7444d05927a280dcc",
       "schema": null
     },
     {
@@ -1137,8 +1435,8 @@
       "description": "Comparação descritiva INMET A607 vs ERA5-Land",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 180,
-      "hash": "sha256:05c83a0aff75d87443da17833aff8b5ad91e2b5093819c2e04ad1a3e4b05cb12",
+      "bytes": 161,
+      "hash": "sha256:88259b655d40100c1845285c06134beb30d8f106bd1e65b045b2f5361e1c5159",
       "schema": {
         "fields": [
           {
@@ -1170,9 +1468,30 @@
       "description": "Relatório legível por máquina da comparação INMET A607 vs ERA5-Land",
       "format": "json",
       "mediatype": "application/json",
-      "bytes": 1045,
-      "hash": "sha256:41c3913d11254d8df64ca03469adf7b7ee1410e7f03d41ad92622ae47ffdb1aa",
+      "bytes": 1162,
+      "hash": "sha256:4c3fee53517df51e1f3869ec793e9ffae1c91cc7bf43d95031bd2d3ed1d7c4e6",
       "schema": null
+    },
+    {
+      "name": "sinasc_outras_circulatorias",
+      "path": "outputs/tables/sinasc_other_circulatory_by_code.csv",
+      "description": "SINASC: códigos Q27-Q28 mantidos separados do CHD core",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 30,
+      "hash": "sha256:a57ecdcf46fca0df73adec2020590b080429758a036aac7827b48b4273a62572",
+      "schema": {
+        "fields": [
+          {
+            "name": "other_code",
+            "type": "object"
+          },
+          {
+            "name": "n",
+            "type": "int64"
+          }
+        ]
+      }
     },
     {
       "name": "dicionario_dados",
@@ -1180,8 +1499,8 @@
       "description": "Dicionário de dados legível por máquina (variáveis, tipos, fontes e unidades)",
       "format": "csv",
       "mediatype": "text/csv",
-      "bytes": 11574,
-      "hash": "sha256:049e31c94d616c7083e71d927bd3e2f3b6f0fc070e1351faef954a843b10203d",
+      "bytes": 14093,
+      "hash": "sha256:3a6d158606b91e6f0f60148fda7c3f235224c42044e16fc4b8fe3ce60b1767f9",
       "schema": {
         "fields": [
           {

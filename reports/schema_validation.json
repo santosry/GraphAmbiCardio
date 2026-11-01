@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T14:16:54Z",
+  "generated_at": "2026-11-01T14:52:50Z",
   "passed": true,
   "checks": [
     {
@@ -20,7 +20,7 @@
     {
       "check": "columns:outputs/tables/exploratory_models.csv",
       "ok": true,
-      "detail": "13 rows"
+      "detail": "16 rows"
     },
     {
       "check": "columns:outputs/tables/hypothesis_candidates.csv",
@@ -40,12 +40,57 @@
     {
       "check": "columns:app/data/models.csv",
       "ok": true,
-      "detail": "13 rows"
+      "detail": "16 rows"
     },
     {
       "check": "columns:outputs/tables/sensitivity_leave_one_year_out.csv",
       "ok": true,
       "detail": "14 rows"
+    },
+    {
+      "check": "columns:outputs/tables/gestational_window_sensitivity.csv",
+      "ok": true,
+      "detail": "3 rows"
+    },
+    {
+      "check": "columns:outputs/tables/sinasc_annual_complete.csv",
+      "ok": true,
+      "detail": "16 rows"
+    },
+    {
+      "check": "columns:outputs/tables/sinasc_other_circulatory_by_code.csv",
+      "ok": true,
+      "detail": "2 rows"
+    },
+    {
+      "check": "columns:outputs/tables/sih_other_circulatory_annual.csv",
+      "ok": true,
+      "detail": "15 rows"
+    },
+    {
+      "check": "columns:outputs/tables/hypothesis_family.csv",
+      "ok": true,
+      "detail": "89 rows"
+    },
+    {
+      "check": "columns:outputs/tables/mechanism_gene_sets.csv",
+      "ok": true,
+      "detail": "103 rows"
+    },
+    {
+      "check": "columns:app/data/ga_sensitivity.csv",
+      "ok": true,
+      "detail": "3 rows"
+    },
+    {
+      "check": "columns:app/data/sinasc_other_by_code.csv",
+      "ok": true,
+      "detail": "2 rows"
+    },
+    {
+      "check": "columns:app/data/sih_other_annual.csv",
+      "ok": true,
+      "detail": "15 rows"
     },
     {
       "check": "columns:outputs/tables/exposure_correlation.csv",
@@ -84,6 +129,11 @@
     },
     {
       "check": "fdr:outputs/tables/hypothesis_candidates.csv",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "check": "fdr:outputs/tables/hypothesis_family.csv",
       "ok": true,
       "detail": "ok"
     },
@@ -138,6 +188,31 @@
       "detail": "16 rows"
     },
     {
+      "check": "case_definition:no_q27_q28_in_chd",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "check": "case_definition:2023_2024_core_missing",
+      "ok": true,
+      "detail": "core CHD not imputed from TabNet"
+    },
+    {
+      "check": "case_definition:tabnet_separate",
+      "ok": true,
+      "detail": "TabNet kept in its own columns"
+    },
+    {
+      "check": "climate:model_fixed",
+      "ok": true,
+      "detail": "era5_land"
+    },
+    {
+      "check": "climate:returned_cell",
+      "ok": true,
+      "detail": "-21.799995,-41.300003"
+    },
+    {
       "check": "app:no_individual_data",
       "ok": true,
       "detail": "ok"
@@ -145,7 +220,7 @@
     {
       "check": "metadata:version_consistent",
       "ok": true,
-      "detail": "{'fair/metadata.json': '0.3.0', 'fair/datapackage.json': '0.3.0', 'app/data/metadata.json': '0.3.0', 'codemeta.json': '0.3.0'}"
+      "detail": "{'fair/metadata.json': '0.4.0', 'fair/datapackage.json': '0.4.0', 'app/data/metadata.json': '0.4.0', 'codemeta.json': '0.4.0'}"
     },
     {
       "check": "lockfiles:present",
@@ -155,7 +230,7 @@
     {
       "check": "release:changelog",
       "ok": true,
-      "detail": "CHANGELOG has 0.3.0"
+      "detail": "CHANGELOG has 0.4.0"
     }
   ]
 }

@@ -8,8 +8,8 @@ sinasc_campos_births.csv,sexo,int64,"Sex (1 male, 2 female)",DATASUS SINASC,
 sinasc_campos_births.csv,idanomal,int64,"Congenital anomaly flag as recorded (1 yes, 2 no, 9 ignored)",DATASUS SINASC,
 sinasc_campos_births.csv,codanomal,float64,Raw CODANOMAL string (concatenated 4-character ICD-10 codes),DATASUS SINASC,
 sinasc_campos_births.csv,n_icd_codes,int64,Number of parsed ICD-10 codes in CODANOMAL,DATASUS SINASC,
-sinasc_campos_births.csv,chd_codes,float64,"CHD ICD-10 codes (Q20-Q28) parsed from CODANOMAL, semicolon-separated",DATASUS SINASC,
-sinasc_campos_births.csv,is_chd,bool,Case definition: any Q20-Q28 code present (TRUE/FALSE),DATASUS SINASC,
+sinasc_campos_births.csv,chd_codes,float64,"Core CHD ICD-10 codes (Q20-Q26) parsed from CODANOMAL, semicolon-separated",DATASUS SINASC,
+sinasc_campos_births.csv,is_chd,bool,Core CHD case definition: any Q20-Q26 code present (TRUE/FALSE),DATASUS SINASC,
 sinasc_campos_births.csv,idademae,int64,Maternal age in years,DATASUS SINASC,
 sinasc_campos_births.csv,escmae,int64,Maternal schooling category (SINASC),DATASUS SINASC,
 sinasc_campos_births.csv,estcivmae,int64,Maternal marital status category,DATASUS SINASC,
@@ -22,7 +22,7 @@ sinasc_campos_births.csv,apgar5,float64,Apgar at 5 minutes,DATASUS SINASC,
 sinasc_campos_births.csv,tipo_gravidez,int64,"Pregnancy type (1 singleton, 2 multiple)",DATASUS SINASC,
 sinasc_campos_births.csv,parto,int64,"Delivery type (1 vaginal, 2 caesarean)",DATASUS SINASC,
 sinasc_campos_births.csv,consultas,int64,Number of prenatal consultations category,DATASUS SINASC,
-sinasc_campos_births.csv,conception_date_est,object,Estimated conception date = birth date - gestational age (NA if unavailable),DATASUS SINASC,
+sinasc_campos_births.csv,conception_date_est,object,Estimated conception date = birth date - (gestational age x 7 - 14 days),DATASUS SINASC,
 sinasc_campos_births.csv,organogenesis_start_est,object,Estimated start of cardiac organogenesis (conception + 21 days),DATASUS SINASC,
 sinasc_campos_births.csv,organogenesis_end_est,object,Estimated end of cardiac organogenesis (conception + 56 days),DATASUS SINASC,
 sih_campos_chd_admissions.csv,ANO_CMPT,int64,Admission processing year,DATASUS SIH/SUS,
@@ -49,8 +49,8 @@ sih_campos_chd_admissions.csv,IDENT,int64,AIH identifier type,DATASUS SIH/SUS,
 sih_campos_chd_admissions.csv,PROC_REA,int64,Performed procedure code,DATASUS SIH/SUS,
 sih_campos_chd_admissions.csv,UTI_MES_TO,int64,ICU days,DATASUS SIH/SUS,
 sih_campos_chd_admissions.csv,source_file,object,Source monthly DBC file,DATASUS SIH/SUS,
-sih_campos_chd_admissions.csv,diag_princ_chd,bool,Primary diagnosis is Q20-Q28,DATASUS SIH/SUS,
-sih_campos_chd_admissions.csv,diag_sec_chd,bool,Secondary/associated diagnosis is Q20-Q28 (only when collected),DATASUS SIH/SUS,
+sih_campos_chd_admissions.csv,diag_princ_chd,bool,Primary diagnosis is core CHD Q20-Q26,DATASUS SIH/SUS,
+sih_campos_chd_admissions.csv,diag_sec_chd,bool,Secondary/associated diagnosis is core CHD Q20-Q26 (only when collected),DATASUS SIH/SUS,
 sih_campos_chd_admissions.csv,chd_group,object,ICD-10 3-character group used for aggregation,DATASUS SIH/SUS,
 sih_campos_chd_admissions.csv,year,int64,Processing year,DATASUS SIH/SUS,
 sih_campos_chd_admissions.csv,age_years,float64,Age converted to years,DATASUS SIH/SUS,
@@ -116,3 +116,22 @@ inmet_campos_daily.csv,ws_2_m_s,float64,Daily mean wind speed at 2 m,INMET/Brazi
 inmet_campos_daily.csv,latitude_degrees,float64,Station latitude,INMET/BrazilMet,degrees
 inmet_campos_daily.csv,longitude_degrees,float64,Station longitude,INMET/BrazilMet,degrees
 inmet_campos_daily.csv,altitude_m,float64,Station altitude,INMET/BrazilMet,m
+sinasc_campos_births.csv,other_circulatory_codes,object,"Q27-Q28 ICD-10 codes parsed from CODANOMAL, kept separate from CHD",DATASUS SINASC,
+sinasc_campos_births.csv,is_other_circulatory,bool,Q27-Q28 present (TRUE/FALSE); never added to CHD,DATASUS SINASC,
+sinasc_campos_births.csv,gestation_weeks_used,float64,Gestational age used for conception estimate (SEMAGESTAC or category midpoint),DATASUS SINASC,weeks
+sinasc_campos_births.csv,gestation_source,object,"Source of gestational age: semagestac, gestacao_categoria or missing",DATASUS SINASC,
+sinasc_campos_births.csv,conception_date_early,object,Conception date shifted -7 days (sensitivity),DATASUS SINASC,
+sinasc_campos_births.csv,organogenesis_start_early,object,Organogenesis start for the -7-day window,DATASUS SINASC,
+sinasc_campos_births.csv,organogenesis_end_early,object,Organogenesis end for the -7-day window,DATASUS SINASC,
+sinasc_campos_births.csv,conception_date_late,object,Conception date shifted +7 days (sensitivity),DATASUS SINASC,
+sinasc_campos_births.csv,organogenesis_start_late,object,Organogenesis start for the +7-day window,DATASUS SINASC,
+sinasc_campos_births.csv,organogenesis_end_late,object,Organogenesis end for the +7-day window,DATASUS SINASC,
+sih_campos_chd_admissions.csv,diag_princ_other_circulatory,bool,Primary diagnosis is Q27-Q28 (not CHD),DATASUS SIH/SUS,
+sih_campos_chd_admissions.csv,diag_sec_other_circulatory,bool,Secondary/associated diagnosis is Q27-Q28,DATASUS SIH/SUS,
+sih_campos_chd_admissions.csv,other_circulatory_group,object,Q27/Q28 3-character group,DATASUS SIH/SUS,
+sinasc_campos_with_exposure.csv,win_temperature_2m_max_mean_early,float64,Mean Tmax over the -7-day organogenesis window,DATASUS SINASC/ERA5-Land,C
+sinasc_campos_with_exposure.csv,win_heat_days_35_pct_early,float64,Proportion of days >=35 C in the -7-day window,DATASUS SINASC/ERA5-Land,proportion
+sinasc_campos_with_exposure.csv,win_covariate_completeness_early,float64,Climate completeness in the -7-day window,DATASUS SINASC/ERA5-Land,proportion
+sinasc_campos_with_exposure.csv,win_temperature_2m_max_mean_late,float64,Mean Tmax over the +7-day organogenesis window,DATASUS SINASC/ERA5-Land,C
+sinasc_campos_with_exposure.csv,win_heat_days_35_pct_late,float64,Proportion of days >=35 C in the +7-day window,DATASUS SINASC/ERA5-Land,proportion
+sinasc_campos_with_exposure.csv,win_covariate_completeness_late,float64,Climate completeness in the +7-day window,DATASUS SINASC/ERA5-Land,proportion

@@ -105,14 +105,14 @@ GEO was evaluated but no dataset was admitted. Rationale: adult myocardial expre
 - **Files:** `DNRJ{year}.dbc` (Rio de Janeiro state), converted with `pyreaddbc` and read with `dbfread`.
 - **Coverage obtained:** 2010–2022 microdata (consolidated) and **2025 (preliminary)**. **2023 and 2024 microdata were absent from the FTP**; aggregate counts were obtained from **TabNet** (`nvrj23.dbf`, `nvrj24.dbf`).
 - **Fields used:** CODMUNRES, DTNASC, SEXO, IDANOMAL, CODANOMAL, IDADEMAE, ESCMAE, GESTACAO, SEMAGESTAC, PESO, APGAR1/5, GRAVIDEZ, PARTO, CONSULTAS, RACACOR.
-- **Limitation:** `CODANOMAL` concatenates 4-character codes; CHD ascertainment at birth is incomplete (59 cases in 98,598 births).
+- **Limitation:** `CODANOMAL` concatenates 4-character codes; CHD ascertainment at birth is incomplete (52 core Q20–Q26 cases plus 8 Q27–Q28 in 98,598 births).
 
 ### 5.1b TabNet (SINASC aggregates)
 - **URL:** `http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinasc/cnv/nvRJ.def`
 - **Method:** Latin-1 form POST after session handshake (script `src/graphambicardio/epi/tabnet.py`).
 - **Obtained:** 2022 (control), 2023, 2024 and 2025 births and Q20–Q28 group counts.
 - **Validated:** 2025 TabNet (5.924 births, 9 cases) matches the microdata exactly.
-- **Limitation:** TabNet counts only records whose anomaly group is “malformações congênitas do aparelho circulatório”; the microdata parser counts **any** Q20–Q28 code. The two series are kept separate.
+- **Limitation:** TabNet counts the broad group “malformações congênitas do aparelho circulatório” (Q20–Q28); the microdata parser uses core CHD Q20–Q26 and keeps Q27–Q28 separate. The two series are never mixed; 2023–2024 core CHD is left missing.
 
 ### 5.2 SIH/SUS (Hospital admissions)
 - **URL:** DATASUS FTP `.../SIHSUS/200801_/Dados/RDRJ{yy}{mm}.dbc`
@@ -132,12 +132,13 @@ Not fetched in v0.1.0. The birth-level models use SINASC live births as the deno
 - **Access:** R package `BrazilMet` 0.5.0 (`download_AWS_INMET_daily`), historical files at `https://portal.inmet.gov.br/uploads/dadoshistoricos/`.
 - **Variables:** Tmean, Tmax, Tmin, relative humidity (mean/min/max), rainfall, wind.
 - **Coverage:** 5,754 days, 2010-01-01 to 2025-12-31; 138 missing Tmax and 153 missing RH.
-- **Role:** validation/comparison with ERA5-Land (Tmax r=0.94; Tmin r=0.94; Tmean r=0.97; RH r=0.81), not personal exposure.
+- **Role:** validation/comparison with ERA5-Land (Tmax r=0.937; Tmin r=0.942; Tmean r=0.972; RH r=0.787), not personal exposure.
 - **Limitation:** automatic station; sensor gaps and local siting; does not represent the whole municipality.
 ### 6.2 ERA5 / ERA5-Land via Open-Meteo — **Used.**
 - **URL:** https://archive-api.open-meteo.com/v1/archive
 - **Variables:** Tmean, Tmax, Tmin, relative humidity, precipitation, wind.
-- **Grid cell returned:** latitude −21.757, longitude −41.354, elevation 12 m (requested −21.7545, −41.3245).
+- **Model:** explicitly requested **`era5_land`** (not API best-match); resolution ~9 km.
+- **Grid cell returned:** latitude −21.800, longitude −41.300, elevation 12 m (requested −21.7545, −41.3245).
 - **Coverage:** 5,844 days, 2010-01-01 to 2025-12-31, no missing Tmax.
 - **Licence/terms:** Open-Meteo terms; underlying ERA5 data © Copernicus.
 - **Limitation:** reanalysis grid cell, not a station; ~9 km resolution; no personal exposure.

@@ -3,7 +3,7 @@
 **GraphAmbiCardio** — grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas.
 **Campos dos Goytacazes, RJ, 2010–2025.**
 
-[![status](https://img.shields.io/badge/status-v0.3.0-blue)]()
+[![status](https://img.shields.io/badge/status-v0.4.0-blue)]()
 [![Python](https://img.shields.io/badge/python-3.12-blue)]()
 [![R](https://img.shields.io/badge/R-%E2%89%A54.4-276DC3)]()
 [![CI](https://github.com/santosry/GraphAmbiCardio/actions/workflows/ci.yml/badge.svg)](https://github.com/santosry/GraphAmbiCardio/actions/workflows/ci.yml)
@@ -57,7 +57,7 @@ O GraphAmbiCardio integra cinco camadas:
 1. **Literatura** — PubMed/MEDLINE, Europe PMC, SciELO (metadados via Crossref, prefixo DOI 10.1590) e CAPES (Catálogo de Teses e Dissertações).
 2. **Bases biológicas curadas** — HPO, ClinVar, NCBI Gene, Reactome e Enrichr.
 3. **Dados epidemiológicos locais** — SINASC (nascidos vivos) e SIH/SUS (internações), 2010–2025.
-4. **Exposição ambiental de área** — ERA5-Land via Open-Meteo, **INMET estação A607** (temperatura e umidade) e **PM2,5 municipal do VIGIAR/Ministério da Saúde via pacote `vigiar`** (2010–2025). Séries de área, não exposição individual.
+4. **Exposição ambiental de área** — ERA5-Land via Open-Meteo com **modelo fixado em `era5_land`**, **INMET estação A607** (temperatura e umidade) e **PM2,5 municipal do VIGIAR/Ministério da Saúde via pacote `vigiar`** (2010–2025). Séries de área, não exposição individual.
 5. **Grafo com proveniência** — cada relação carrega tipo de evidência, espécie, desenho, janela de exposição, referência, confiança, limitações e **nível de evidência** (bem sustentada / plausível experimental / não demonstrada / contextual).
 
 Há duas camadas integradas e **nunca misturadas**:
@@ -67,7 +67,7 @@ Há duas camadas integradas e **nunca misturadas**:
 
 ---
 
-## 2. Resultados principais (v0.3.0)
+## 2. Resultados principais (v0.4.0)
 
 ### Base de evidências
 
@@ -89,15 +89,15 @@ Há duas camadas integradas e **nunca misturadas**:
 - **2.238 nós**, **4.117 relações**, **4.613 linhas de evidência**.
 - Camadas: **observada 54**, **estruturada 4.040**, **inferida 4**, **hipótese 14**, **ecológica 3**.
 - **27 caminhos exposição→fenótipo** (17 diretos, 10 mecanísticos) e **20 lacunas explícitas**.
-- **5 hipóteses por sobreposição gênica** (nenhuma significativa após BH-FDR) e **7 caminhos candidatos com elo ausente**.
+- **Hipóteses por sobreposição gênica:** família completa de **89 testes** (exposição × mecanismo × fenótipo), **5 com sobreposição ≥2 genes** e **nenhuma significativa após BH-FDR**; universo HPO de **978 genes**; permutação pareada por tamanho como sensibilidade. **7 caminhos candidatos com elo ausente**.
 - Exportações: `outputs/graph/graph.graphml`, `graph.json`, `nodes.csv`, `relations.csv`, `evidence.csv`.
 
 ### Dados locais
 
-- SINASC: **98.598 nascimentos** (microdados 2010–2022 e 2025; **2023–2024 apenas agregados do TabNet**). **59 casos** nos microdados (5,98/10.000) — subnotificação grave. TabNet: 5 casos em 2023 e 5 em 2024; 2025 = 9 casos, compatível com os microdados.
-- SIH/SUS: **549 internações** por diagnóstico principal Q20–Q28 (**561 no total**, 12 apenas secundárias), **33 óbitos**, **55% fora do município**, 18 hospitais.
-- Clima: **5.844 dias** ERA5-Land; limiar de onda de calor 34,2 °C; **73 ondas / 363 dias**. Validação com a estação **INMET A607** (2010–2025): Tmax r=0,94; Tmin r=0,94; Tmean r=0,97; umidade r=0,81. Série de estação, distinta da reanálise.
-- Modelo exploratório (56–59 eventos): temperatura OR **1,30/SD** (1,00–1,69; p = 0,048, q = 0,153); Firth **1,31** (1,00–1,69; p = 0,047); modelo com erros clusterizados por mês **1,30** (0,98–1,72; p = 0,065); ajuste socioeconômico Firth **1,33** (1,02–1,73; p = 0,033, q = 0,153); ajustado por estação **1,65** (1,13–2,42; p = 0,009, q = 0,122); modelo mensal **nulo** (RR 1,22; 0,94–1,60). PM2,5 municipal do VIGIAR foi **nulo** (OR 0,91/SD; 0,70–1,18) e permaneceu nulo no ajuste mútuo com temperatura (OR 1,01; 0,77–1,32). **Nenhum modelo sobrevive ao FDR (q < 0,05); não é achado causal.**
+- SINASC: **98.598 nascimentos** (microdados 2010–2022 e 2025; **2023–2024 apenas agregados do TabNet**). **52 casos de CHD core (Q20–Q26; 5,27/10.000)** e **8 registros Q27–Q28** (não CHD; 1 também tinha código Q20–Q26) — subnotificação grave. TabNet 2023 e 2024: **5 e 5 casos no grupo amplo Q20–Q28**, mantidos em colunas separadas e **não imputados como CHD core**.
+- SIH/SUS: **474 internações** por diagnóstico principal **Q20–Q26** (**75 Q27–Q28** em série separada; 12 apenas secundárias), **30 óbitos**, **51,9% fora do município**, 16 hospitais. AIH não são pessoas.
+- Clima: **5.844 dias** ERA5-Land com modelo **fixado em `era5_land`** (resolução ~9 km; célula retornada −21,800/−41,300; elevação 12 m); limiar de onda de calor **33,3 °C**; **68 ondas / 353 dias**. Validação com **INMET A607** (2010–2025): Tmax r=0,937 (viés +1,20 °C; RMSE 1,78); Tmin r=0,942 (−0,77; 1,20); Tmean r=0,972 (−0,23; 0,67); umidade r=0,787 (+1,61; 4,77). Série de estação, distinta da reanálise.
+- Modelo exploratório (52 casos core; **47 eventos** nos modelos completos): temperatura OR **1,155/SD** (0,87–1,535; p = 0,318; q = 0,509); Firth **1,159** (0,869–1,532; p = 0,304); cluster mensal **1,155** (0,829–1,611; p = 0,394); ajuste socioeconômico Firth **1,187** (0,889–1,571; p = 0,236); ajuste sazonal **1,357** (0,914–2,013; p = 0,130); modelo mensal **RR 1,211** (0,918–1,599; p = 0,176). Sensibilidade da janela gestacional: principal **1,155**; −7 dias **1,221** (0,922–1,618; p = 0,164); +7 dias **1,071** (0,803–1,428; p = 0,641). PM2,5 municipal **0,842** (0,625–1,134; p = 0,257) e ajuste mútuo PM2,5 **0,872** / temperatura **1,106**. **Nenhum modelo sobrevive ao FDR (q < 0,05); não é achado causal.**
 
 ### Hierarquia de exposições
 
@@ -239,9 +239,11 @@ docker compose up --build
 
 - Busca não sistemática; sem triagem dupla de todos os registros nem texto completo.
 - SciELO acessado por metadados Crossref (a interface de busca bloqueou automação); CAPES limitado ao Catálogo de Teses.
-- SINASC com subnotificação grave; 2023–2024 sem microdados (apenas TabNet); 2025 preliminar.
+- SINASC com subnotificação grave; 2023–2024 sem microdados (apenas TabNet Q20–Q28, não imputado como CHD core); 2025 preliminar.
+- Definição de CHD core = Q20–Q26; Q27–Q28 são reportadas separadamente e não entram no numerador principal.
 - SIH: AIH ≠ pessoa; 55% das internações fora do município.
 - Exposição de área (clima e PM2,5 do VIGIAR), não individual. A estação INMET A607 é usada para validação da reanálise; não representa exposição pessoal.
+- Idade gestacional: concepção estimada como 40 semanas obstétricas menos 14 dias (266 dias para 40 semanas); janelas ±7 dias avaliadas como sensibilidade.
 - Maioria das cadeias mecanísticas é experimental, em doses não equivalentes às humanas.
 - HPO/ClinVar são orientados a doenças mendelianas/sindrômicas.
 

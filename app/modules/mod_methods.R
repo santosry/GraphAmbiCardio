@@ -64,7 +64,7 @@ mod_methods_ui <- function(id) {
         card_header("Limitações principais"),
         card_body(
           tags$ul(
-            tags$li("Subnotificação grave no SINASC: 59 casos em 98.598 nascimentos (0,6/1.000)."),
+            tags$li("Subnotificação grave no SINASC: 52 casos de CHD core (Q20–Q26) em 98.598 nascimentos (0,53/1.000), além de 8 registros Q27–Q28."),
             tags$li("2023–2024 sem microdados; usados apenas agregados do TabNet."),
             tags$li("SIH: AIH ≠ pessoa; 55% das internações fora do município."),
             tags$li("Exposição de área (ERA5-Land para clima; PM2,5 do VIGIAR), não individual."),

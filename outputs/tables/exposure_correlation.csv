@@ -1,6 +1,6 @@
 exposure,win_temperature_2m_max_mean,win_temperature_2m_min_mean,win_heat_days_35_pct,win_relative_humidity_2m_mean_mean,win_pm25_mean
-win_temperature_2m_max_mean,1.0,0.881,0.751,-0.342,-0.256
-win_temperature_2m_min_mean,0.881,1.0,0.579,-0.026,-0.376
-win_heat_days_35_pct,0.751,0.579,1.0,-0.426,-0.221
-win_relative_humidity_2m_mean_mean,-0.342,-0.026,-0.426,1.0,-0.186
-win_pm25_mean,-0.256,-0.376,-0.221,-0.186,1.0
+win_temperature_2m_max_mean,1.0,0.904,0.675,-0.285,-0.283
+win_temperature_2m_min_mean,0.904,1.0,0.501,0.072,-0.361
+win_heat_days_35_pct,0.675,0.501,1.0,-0.399,-0.16
+win_relative_humidity_2m_mean_mean,-0.285,0.072,-0.399,1.0,-0.231
+win_pm25_mean,-0.283,-0.361,-0.16,-0.231,1.0

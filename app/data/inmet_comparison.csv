@@ -1,5 +1,5 @@
-"variable","n","pearson_r","mean_bias_inmet_minus_era5","rmse"
-"Tmax",5601,0.939,0.53,1.43
-"Tmin",5601,0.943,-0.62,1.12
-"Tmean",5601,0.973,-0.35,0.72
-"RH",5601,0.81,1.43,4.51
+variable,n,pearson_r,mean_bias_inmet_minus_era5,rmse
+Tmax,5601,0.937,1.2,1.78
+Tmin,5601,0.942,-0.77,1.2
+Tmean,5601,0.972,-0.23,0.67
+RH,5601,0.787,1.61,4.77

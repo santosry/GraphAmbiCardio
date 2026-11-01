@@ -1,11 +1,22 @@
 {
   "n_births": 98598,
-  "n_chd": 59,
+  "n_chd_core_q20_q26": 52,
+  "n_other_circulatory_q27_q28": 8,
+  "n_circulatory_total_q20_q28": 59,
+  "n_records_in_both_groups": 1,
+  "n_non_circulatory": 98539,
   "n_records_with_any_icd_code": 697,
-  "n_chd_with_multiple_chd_codes": 8,
+  "n_chd_with_multiple_chd_codes": 7,
   "idanomal_1_but_no_code": 3,
   "chd_with_idanomal_not_1": 0,
   "conception_estimated_pct": 95.45,
+  "conception_lag_days": 14,
+  "ga_uncertainty_days": 7,
+  "gestation_source_counts": {
+    "semagestac": 83095,
+    "gestacao_categoria": 11012,
+    "missing": 4491
+  },
   "years_available": [
     2010,
     2011,
@@ -26,5 +37,5 @@
     2023,
     2024
   ],
-  "retrieved_at": "2026-10-31"
+  "retrieved_at": "2026-11-01"
 }

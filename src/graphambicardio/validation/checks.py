@@ -103,6 +103,11 @@ def check_local_data() -> dict[str, Any]:
     sih_path = config.DATA_PROCESSED / "sih_campos_chd_admissions.csv"
     climate = pd.read_csv(config.DATA_PROCESSED / "climate_daily_campos.csv")
     climate_ok = not climate["temperature_2m_max"].isna().any()
+    climate_meta_path = config.DATA_RAW / "external" / "climate_source_metadata.json"
+    climate_model_ok = False
+    if climate_meta_path.exists():
+        climate_meta = json.loads(climate_meta_path.read_text(encoding="utf-8"))
+        climate_model_ok = climate_meta.get("model_requested") == "era5_land"
     if not sinasc_path.exists() or not sih_path.exists():
         # Individual-level files are intentionally not redistributed (docs/15).
         return {
@@ -119,9 +124,15 @@ def check_local_data() -> dict[str, Any]:
     if (sinasc["year"] < 2010).any() or (sinasc["year"] > 2025).any():
         issues.append("SINASC year outside 2010-2025")
     if sinasc["is_chd"].sum() == 0:
-        issues.append("no CHD cases in SINASC")
+        issues.append("no core CHD cases in SINASC")
+    if "is_other_circulatory" not in sinasc.columns:
+        issues.append("SINASC lacks the separate Q27-Q28 flag")
+    if not climate_model_ok:
+        issues.append("climate model is not explicitly fixed to era5_land")
     if sih["year"].min() < 2010 or sih["year"].max() > 2025:
         issues.append("SIH year outside 2010-2025")
+    if "diag_princ_other_circulatory" not in sih.columns:
+        issues.append("SIH lacks the separate Q27-Q28 flag")
     if sih["MUNIC_RES"].astype(str).str[:6].ne("330100").any():
         issues.append("SIH records outside the municipality")
     if climate["temperature_2m_max"].isna().any():
@@ -130,8 +141,10 @@ def check_local_data() -> dict[str, Any]:
         issues.append("climate series does not cover 2010-2025")
     return {
         "sinasc_births": int(len(sinasc)),
-        "sinasc_chd": int(sinasc["is_chd"].sum()),
+        "sinasc_chd_core": int(sinasc["is_chd"].sum()),
+        "sinasc_other_circulatory": int(sinasc["is_other_circulatory"].sum()) if "is_other_circulatory" in sinasc.columns else None,
         "sinasc_years": sorted(int(y) for y in sinasc["year"].unique()),
+        "climate_model": "era5_land" if climate_model_ok else "unverified",
         "sih_admissions": int(len(sih)),
         "climate_days": int(len(climate)),
         "issues": issues,

@@ -1,17 +1,17 @@
-year,live_births,chd_cases,chd_per_10000_lb,chd_proportion_per_1000_lb,anomaly_flag_1,any_q_code,data_status,source
-2010,6882,6,8.72,0.87,39,39,consolidated,SINASC microdata (any Q20-Q28 code)
-2011,6021,0,0.0,0.0,28,27,consolidated,SINASC microdata (any Q20-Q28 code)
-2012,6612,2,3.02,0.3,25,25,consolidated,SINASC microdata (any Q20-Q28 code)
-2013,7424,1,1.35,0.13,16,16,consolidated,SINASC microdata (any Q20-Q28 code)
-2014,7891,1,1.27,0.13,19,17,consolidated,SINASC microdata (any Q20-Q28 code)
-2015,8229,4,4.86,0.49,34,34,consolidated,SINASC microdata (any Q20-Q28 code)
-2016,7516,4,5.32,0.53,53,53,consolidated,SINASC microdata (any Q20-Q28 code)
-2017,7498,8,10.67,1.07,55,55,consolidated,SINASC microdata (any Q20-Q28 code)
-2018,7449,2,2.68,0.27,63,62,consolidated,SINASC microdata (any Q20-Q28 code)
-2019,7166,7,9.77,0.98,70,69,consolidated,SINASC microdata (any Q20-Q28 code)
-2020,6849,5,7.3,0.73,78,78,consolidated,SINASC microdata (any Q20-Q28 code)
-2021,6776,4,5.9,0.59,75,75,consolidated,SINASC microdata (any Q20-Q28 code)
-2022,6361,6,9.43,0.94,80,80,consolidated,SINASC microdata (any Q20-Q28 code)
-2023,6252,5,8.0,0.8,,,aggregate only (microdata unavailable),SINASC via DATASUS TabNet (group Q20-Q28)
-2024,5870,5,8.52,0.85,,,aggregate only (microdata unavailable),SINASC via DATASUS TabNet (group Q20-Q28)
-2025,5924,9,15.19,1.52,65,64,preliminary,SINASC microdata (any Q20-Q28 code)
+year,live_births,chd_cases,chd_per_10000_lb,chd_proportion_per_1000_lb,other_circulatory_cases,other_circulatory_per_10000_lb,circulatory_cases_total,circulatory_per_10000_lb,anomaly_flag_1,any_q_code,data_status,source,live_births_tabnet,tabnet_circulatory_cases,tabnet_circulatory_per_10000_lb,tabnet_source,tabnet_data_status,tabnet_case_definition,note,retrieved_at
+2010,6882.0,5.0,7.27,0.73,1.0,1.45,6.0,8.72,39.0,39.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2011,6021.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,28.0,27.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2012,6612.0,2.0,3.02,0.3,0.0,0.0,2.0,3.02,25.0,25.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2013,7424.0,1.0,1.35,0.13,0.0,0.0,1.0,1.35,16.0,16.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2014,7891.0,1.0,1.27,0.13,0.0,0.0,1.0,1.27,19.0,17.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2015,8229.0,3.0,3.65,0.36,1.0,1.22,4.0,4.86,34.0,34.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2016,7516.0,4.0,5.32,0.53,0.0,0.0,4.0,5.32,53.0,53.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2017,7498.0,8.0,10.67,1.07,0.0,0.0,8.0,10.67,55.0,55.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2018,7449.0,2.0,2.68,0.27,0.0,0.0,2.0,2.68,63.0,62.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2019,7166.0,6.0,8.37,0.84,1.0,1.4,7.0,9.77,70.0,69.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2020,6849.0,5.0,7.3,0.73,0.0,0.0,5.0,7.3,78.0,78.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2021,6776.0,4.0,5.9,0.59,0.0,0.0,4.0,5.9,75.0,75.0,consolidated,SINASC microdata (core CHD Q20-Q26),,,,,,,,
+2022,6361.0,5.0,7.86,0.79,1.0,1.57,6.0,9.43,80.0,80.0,consolidated,SINASC microdata (core CHD Q20-Q26),6361.0,5.0,7.86,"DATASUS TabNet (SINASC, nvRJ)",consolidated (aggregate only),anomaly group 'malformações congênitas do aparelho circulatório' (Q20-Q28),Aggregate only; microdata not available on the DATASUS FTP. Different case definition from the any-code microdata parser.,2026-11-01
+2023,6252.0,,,,,,,,,,aggregate only (broad Q20-Q28),SINASC via TabNet (broad Q20-Q28; not CHD core),6252.0,5.0,8.0,"DATASUS TabNet (SINASC, nvRJ)",consolidated (aggregate only),anomaly group 'malformações congênitas do aparelho circulatório' (Q20-Q28),Aggregate only; microdata not available on the DATASUS FTP. Different case definition from the any-code microdata parser.,2026-11-01
+2024,5870.0,,,,,,,,,,aggregate only (broad Q20-Q28),SINASC via TabNet (broad Q20-Q28; not CHD core),5870.0,5.0,8.52,"DATASUS TabNet (SINASC, nvRJ)",consolidated (aggregate only),anomaly group 'malformações congênitas do aparelho circulatório' (Q20-Q28),Aggregate only; microdata not available on the DATASUS FTP. Different case definition from the any-code microdata parser.,2026-11-01
+2025,5924.0,6.0,10.13,1.01,4.0,6.75,9.0,15.19,65.0,64.0,preliminary,SINASC microdata (core CHD Q20-Q26),5924.0,9.0,15.19,"DATASUS TabNet (SINASC, nvRJ)",preliminary,anomaly group 'malformações congênitas do aparelho circulatório' (Q20-Q28),Aggregate only; microdata not available on the DATASUS FTP. Different case definition from the any-code microdata parser.,2026-11-01

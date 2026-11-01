@@ -22,7 +22,8 @@
   },
   "local_data": {
     "sinasc_births": 98598,
-    "sinasc_chd": 59,
+    "sinasc_chd_core": 52,
+    "sinasc_other_circulatory": 8,
     "sinasc_years": [
       2010,
       2011,
@@ -39,6 +40,7 @@
       2022,
       2025
     ],
+    "climate_model": "era5_land",
     "sih_admissions": 561,
     "climate_days": 5844,
     "issues": [],

@@ -1,6 +1,6 @@
 # 05 — Data dictionary
 
-The machine-readable dictionary is `data_dictionary/data_dictionary.csv` (117 variables across five processed datasets, including INMET A607). This document summarises the datasets, their provenance and the graph tables.
+The machine-readable dictionary is `data_dictionary/data_dictionary.csv` (includes the core CHD/other-circulatory split, gestational sensitivity columns, INMET A607 and the INMET/ERA5 comparison). This document summarises the datasets, their provenance and the graph tables.
 
 ---
 
@@ -8,37 +8,40 @@ The machine-readable dictionary is `data_dictionary/data_dictionary.csv` (117 va
 
 ### 1.1 `data_processed/sinasc_campos_births.csv`
 One row per live birth to a resident mother (municipality 330100), 2010–2022 and 2025.
-- **Rows:** 98,598 (59 with a Q20–Q28 code).
+- **Rows:** 98,598 (**52 with a core Q20–Q26 CHD code; 8 with Q27–Q28**; 1 record has both).
 - **Source:** DATASUS SINASC `DNRJ{year}.dbc` (state file), converted with `pyreaddbc`.
 - **Key fields:** `codmunres`, `dtnasc`, `is_chd`, `chd_codes`, `codanomal`, `idanomal`, `semagestac`, `peso`, `idademae`, `sexo`, `parto`, `tipo_gravidez`.
-- **Derived:** `n_icd_codes`, `conception_date_est`, `organogenesis_start_est`, `organogenesis_end_est`.
-- **Case definition:** `is_chd = TRUE` when at least one parsed code in `CODANOMAL` is in Q20–Q28. `CODANOMAL` is parsed in blocks of four characters (e.g. `Q339Q211` → `Q339`, `Q211`).
+- **Derived:** `n_icd_codes`, `conception_date_est`, `organogenesis_start_est`, `organogenesis_end_est`, `conception_date_early/late`, `organogenesis_start_early/late`, `organogenesis_end_early/late`, `gestation_weeks_used`, `gestation_source`.
+- **Case definition:** `is_chd = TRUE` when at least one parsed code in `CODANOMAL` is in **Q20–Q26** (core CHD). `is_other_circulatory = TRUE` for **Q27–Q28**, kept separate and never added to `chd_cases`. `CODANOMAL` is parsed in blocks of four characters (e.g. `Q339Q211` → `Q339`, `Q211`).
+- **Gestational age:** conception = birth date minus (`SEMAGESTAC` × 7 − 14) days; category midpoint used when `SEMAGESTAC` is missing; ±7-day windows stored for sensitivity.
 - **Missing years:** 2023, 2024 (not available at DATASUS on the extraction date).
 
 ### 1.2 `data_processed/sih_campos_chd_admissions.csv`
 One row per AIH of a resident with a primary diagnosis in Q20–Q28 (secondary-only records are retained in the raw extraction but not used in the main tables).
-- **Rows:** 549.
+- **Rows:** 561 total: **474 primary core CHD (Q20–Q26)**, **75 primary Q27–Q28**, and 12 with core CHD only as secondary/associated diagnosis.
 - **Source:** 192 monthly `RDRJ{yy}{mm}.dbc` files (2010–2025).
-- **Key fields:** `N_AIH`, `MUNIC_RES`, `MUNIC_MOV`, `DIAG_PRINC`, `DIAG_SECUN`, `DIAS_PERM`, `MORTE`, `VAL_TOT`, `CAR_INT`, `IDADE`, `COD_IDADE`, `age_years`, `age_group`.
+- **Key fields:** `N_AIH`, `MUNIC_RES`, `MUNIC_MOV`, `DIAG_PRINC`, `DIAG_SECUN`, `DIAS_PERM`, `MORTE`, `VAL_TOT`, `CAR_INT`, `IDADE`, `COD_IDADE`, `age_years`, `age_group`, `diag_princ_chd`, `diag_princ_other_circulatory`.
 - **Warning:** AIH ≠ person; no stable patient identifier exists, so readmissions and unique individuals cannot be derived.
 
 ### 1.3 `data_processed/climate_daily_campos.csv`
 Daily ERA5-Land series, 2010-01-01 to 2025-12-31 (5,844 rows, no missing Tmax).
-- **Source:** Open-Meteo Historical Weather API (ERA5/ERA5-Land), grid cell −21.757 / −41.354.
+- **Source:** Open-Meteo Historical Weather API with **model fixed to `era5_land`** (not best-match); returned grid cell −21.800 / −41.300, elevation 12 m, ~9 km resolution.
 - **Fields:** Tmean, Tmax, Tmin, relative humidity, precipitation, wind; derived heat-wave id (`heatwave_id`), heat days ≥35 °C, cold days ≤15 °C, diurnal range.
-- **Heat wave definition:** ≥3 consecutive days with Tmax above the 2010–2025 90th percentile (34.2 °C).
+- **Heat wave definition:** ≥3 consecutive days with Tmax above the 2010–2025 90th percentile (**33.3 °C**).
+- **Provenance:** `data_raw/external/climate_source_metadata.json` (API URL, requested model, returned cell, elevation, units and retrieval timestamp) and `data_processed/climate_quality_report.json`.
 
 ### 1.3b `data_processed/sinasc_tabnet_aggregates.csv`
 Agregados do TabNet para 2022–2025 (nascidos vivos e casos do grupo “malformações congênitas do aparelho circulatório”).
 - **Fonte:** DATASUS TabNet (`nvrj22.dbf` … `nvrj25.dbf`).
-- **Uso:** preencher 2023–2024, cujos microdados não estavam disponíveis; 2025 serve como validação (9 casos e 5.924 nascidos, idêntico aos microdados).
-- **Aviso:** definição de caso distinta do parser de qualquer código Q20–Q28; não misturar as séries.
+- **Uso:** 2023–2024 não têm microdados; os valores TabNet do grupo **amplo Q20–Q28** ficam em colunas próprias e **não preenchem** o CHD core. 2025 serve como comparação descritiva.
+- **Aviso:** definição de caso distinta do CHD core Q20–Q26; nunca misturar as séries.
 
 ### 1.4 `data_processed/sinasc_campos_with_exposure.csv`
 The birth-level file plus gestational-window area-level exposure:
 `win_temperature_2m_max_mean`, `win_temperature_2m_min_mean`, `win_relative_humidity_2m_mean_mean`, `win_heat_days_35_pct`, `win_covariate_completeness`.
 - Exposure assigned to days 21–56 after estimated conception.
-- 90,008 of 98,598 births (91.3%) have a complete window; window coverage is 100% where dates exist.
+- Early and late windows (±7 days) are also stored (`*_early`, `*_late`).
+- 90,258 of 98,598 births (91.5%) have a complete main window; window coverage is 100% where dates exist.
 
 ### 1.5 `data_processed/pm25_campos_anual.csv` and `pm25_campos_mensal.csv`
 Municipal PM2.5 for Campos dos Goytacazes (IBGE 330100), from the VIGIAR dashboard (Ministério da Saúde) via the R package `vigiar`.

@@ -1,7 +1,10 @@
 {
-  "n_admissions_with_primary_chd": 549,
+  "chd_definition": "primary diagnosis Q20-Q26 (core CHD)",
+  "other_circulatory_definition": "primary diagnosis Q27-Q28 (not CHD)",
+  "n_admissions_with_primary_chd": 474,
+  "n_admissions_primary_other_circulatory": 75,
   "n_admissions_secondary_only_chd": 12,
-  "n_unique_hospitals": 18,
+  "n_unique_hospitals": 16,
   "years": [
     2010,
     2011,
@@ -20,11 +23,12 @@
     2024,
     2025
   ],
-  "pct_admitted_outside_residence": 55.01,
-  "n_deaths": 33,
-  "mean_age_years": 13.53,
-  "age_unknown_pct": 0.18,
+  "pct_admitted_outside_residence": 51.9,
+  "n_deaths": 30,
+  "mean_age_years": 10.86,
+  "age_unknown_pct": 0.21,
   "n_with_secondary_chd_only": 12,
+  "n_with_secondary_other_only": 0,
   "readmission_analysis": "not performed: SIH/AIH has no stable patient identifier",
-  "retrieved_at": "2026-10-31"
+  "retrieved_at": "2026-11-01"
 }

@@ -1,4 +1,4 @@
-# Release 0.3.0
+# Release 0.4.0
 
 Checklist para publicar uma versão reproduzível.
 
@@ -36,7 +36,7 @@ python -m pytest -q
 ## 3. Tag e GitHub
 
 ```bash
-git tag -a v0.3.0 -m "GraphAmbiCardio 0.3.0"
+git tag -a v0.4.0 -m "GraphAmbiCardio 0.4.0"
 git push origin main --tags
 ```
 

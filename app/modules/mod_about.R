@@ -89,7 +89,7 @@ mod_about_ui <- function(id) {
         card_body(
           p(tags$b("Software e dados:")),
           tags$blockquote(style = "font-size:.88rem;",
-            "Ryan de Paulo Santos; Letícia Maria Dias Freitas; GraphAmbiCardio study team. GraphAmbiCardio, v0.3.0. 2026. ",
+            "Ryan de Paulo Santos; Letícia Maria Dias Freitas; GraphAmbiCardio study team. GraphAmbiCardio, v0.4.0. 2026. ",
             tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "https://github.com/santosry/GraphAmbiCardio")
           ),
           p(tags$b("Estudos-âncora:")),

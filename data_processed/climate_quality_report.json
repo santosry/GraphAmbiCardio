@@ -1,9 +1,12 @@
 {
+  "model": "era5_land",
+  "model_label": "ERA5-Land",
+  "model_resolution_km": 9,
   "n_days": 5844,
   "n_missing_tmax": 0,
-  "heatwave_threshold_p90_tmax": 34.2,
-  "n_heatwave_days": 363,
-  "n_heatwaves": 73,
+  "heatwave_threshold_p90_tmax": 33.3,
+  "n_heatwave_days": 353,
+  "n_heatwaves": 68,
   "years": [
     2010,
     2011,
@@ -22,5 +25,5 @@
     2024,
     2025
   ],
-  "retrieved_at": "2026-10-31"
+  "retrieved_at": "2026-11-01"
 }

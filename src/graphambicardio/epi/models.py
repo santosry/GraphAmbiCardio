@@ -43,8 +43,8 @@ def _z(s: pd.Series) -> pd.Series:
 
 
 def _male(s: pd.Series) -> pd.Series:
-    """SINASC sex code 1 = male; accept both string and numeric dtypes."""
-    return pd.to_numeric(s, errors="coerce").eq(1).astype(int)
+    """SINASC sex code: 1 = male, 2 = female, anything else = unknown (NaN)."""
+    return pd.to_numeric(s, errors="coerce").map({1: 1.0, 2: 0.0})
 
 
 def logistic(df: pd.DataFrame, exposure: str) -> dict[str, Any]:
@@ -54,6 +54,7 @@ def logistic(df: pd.DataFrame, exposure: str) -> dict[str, Any]:
     d["year_c"] = d["year"] - d["year"].mean()
     d["age_c"] = d["idademae"] - d["idademae"].mean()
     d["male"] = _male(d["sexo"])
+    d = d.dropna(subset=["male"]).copy()
     try:
         m = smf.logit("y ~ z_exp + year_c + age_c + male", data=d).fit(disp=0, maxiter=200)
         coef = m.params["z_exp"]
@@ -91,6 +92,7 @@ def _model_frame(df: pd.DataFrame, exposure: str, confounders: bool = False) -> 
     d["year_c"] = d["year"] - d["year"].mean()
     d["age_c"] = d["idademae"] - d["idademae"].mean()
     d["male"] = _male(d["sexo"])
+    d = d.dropna(subset=["male"]).copy()
     d["conception_month"] = pd.to_datetime(d["conception_date_est"]).dt.to_period("M").astype(str)
     if confounders:
         # Codes 9 mean unknown in SINASC; keep them missing rather than a category.
@@ -198,6 +200,7 @@ def logistic_two_exposures(df: pd.DataFrame, exp1: str, exp2: str) -> dict[str, 
     d["year_c"] = d["year"] - d["year"].mean()
     d["age_c"] = d["idademae"] - d["idademae"].mean()
     d["male"] = _male(d["sexo"])
+    d = d.dropna(subset=["male"]).copy()
     try:
         m = smf.logit("y ~ z1 + z2 + year_c + age_c + male", data=d).fit(disp=0, maxiter=200)
         out = {"model": "logistic_two_exposures", "exposure_1": exp1, "exposure_2": exp2,
@@ -221,6 +224,7 @@ def logistic_season_adjusted(df: pd.DataFrame, exposure: str) -> dict[str, Any]:
     d["year_c"] = d["year"] - d["year"].mean()
     d["age_c"] = d["idademae"] - d["idademae"].mean()
     d["male"] = _male(d["sexo"])
+    d = d.dropna(subset=["male"]).copy()
     month = pd.to_datetime(d["conception_date_est"]).dt.month
     d["quarter"] = ((month - 1) // 3 + 1).astype(str)
     try:
@@ -329,6 +333,32 @@ def run(births: pd.DataFrame) -> list[dict[str, Any]]:
     results.append(logistic_two_exposures(births, "win_pm25_mean", "win_temperature_2m_max_mean"))
     results.append(logistic_season_adjusted(births, "win_temperature_2m_max_mean"))
     results.append(negative_binomial(births))
+
+    # Gestational-age uncertainty: shift the organogenesis window by +/- 7 days.
+    sens_rows = []
+    for label, col in (
+        ("main", "win_temperature_2m_max_mean"),
+        ("early_7d", "win_temperature_2m_max_mean_early"),
+        ("late_7d", "win_temperature_2m_max_mean_late"),
+    ):
+        if col not in births.columns or births[col].notna().sum() == 0:
+            continue
+        r = logistic(births, col)
+        r["model"] = f"logistic_ga_{label}"
+        r["exposure"] = col
+        results.append(r)
+        ci = r.get("or_per_sd_ci95") or [None, None]
+        sens_rows.append({
+            "window": label,
+            "exposure_column": col,
+            "n": r.get("n"),
+            "n_events": r.get("n_events"),
+            "or_per_sd": r.get("or_per_sd"),
+            "ci_low": ci[0],
+            "ci_high": ci[1],
+            "p_value": r.get("p_value"),
+        })
+    write_csv(config.TABLES / "gestational_window_sensitivity.csv", sens_rows)
     # leave-one-year-out sensitivity for the season-adjusted model
     loo = []
     for y in sorted(births["year"].unique()):

@@ -1,0 +1,104 @@
+mechanism_id,gene_symbol,in_hpo_universe,source
+MECH:OXSTRESS,NFE2L2,True,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:OXSTRESS,KEAP1,False,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:OXSTRESS,HMOX1,False,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:OXSTRESS,SOD1,False,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:OXSTRESS,SOD2,False,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:OXSTRESS,CAT,False,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:OXSTRESS,GPX1,False,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:OXSTRESS,TXN,False,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:OXSTRESS,TXNRD1,False,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:OXSTRESS,NQO1,False,Canonical NRF2/ARE oxidative-stress response genes (GO:0006979; KEGG/Reactome antioxidant pathways).
+MECH:INFLAM,IL6,False,Canonical inflammatory cytokines and inflammasome genes (GO:0006954; KEGG cytokine signalling).
+MECH:INFLAM,TNF,False,Canonical inflammatory cytokines and inflammasome genes (GO:0006954; KEGG cytokine signalling).
+MECH:INFLAM,IL1B,False,Canonical inflammatory cytokines and inflammasome genes (GO:0006954; KEGG cytokine signalling).
+MECH:INFLAM,CRP,False,Canonical inflammatory cytokines and inflammasome genes (GO:0006954; KEGG cytokine signalling).
+MECH:INFLAM,NFKB1,False,Canonical inflammatory cytokines and inflammasome genes (GO:0006954; KEGG cytokine signalling).
+MECH:INFLAM,NLRP3,False,Canonical inflammatory cytokines and inflammasome genes (GO:0006954; KEGG cytokine signalling).
+MECH:INFLAM,IL10,False,Canonical inflammatory cytokines and inflammasome genes (GO:0006954; KEGG cytokine signalling).
+MECH:INFLAM,CCL2,False,Canonical inflammatory cytokines and inflammasome genes (GO:0006954; KEGG cytokine signalling).
+MECH:EPIGEN,DNMT1,False,"Canonical DNA-methylation and histone-modification enzymes (GO:0006306, GO:0016570)."
+MECH:EPIGEN,DNMT3A,True,"Canonical DNA-methylation and histone-modification enzymes (GO:0006306, GO:0016570)."
+MECH:EPIGEN,DNMT3B,False,"Canonical DNA-methylation and histone-modification enzymes (GO:0006306, GO:0016570)."
+MECH:EPIGEN,HDAC1,False,"Canonical DNA-methylation and histone-modification enzymes (GO:0006306, GO:0016570)."
+MECH:EPIGEN,HDAC2,False,"Canonical DNA-methylation and histone-modification enzymes (GO:0006306, GO:0016570)."
+MECH:EPIGEN,KMT2A,True,"Canonical DNA-methylation and histone-modification enzymes (GO:0006306, GO:0016570)."
+MECH:EPIGEN,EZH2,True,"Canonical DNA-methylation and histone-modification enzymes (GO:0006306, GO:0016570)."
+MECH:EPIGEN,TET1,False,"Canonical DNA-methylation and histone-modification enzymes (GO:0006306, GO:0016570)."
+MECH:EPIGEN,TET2,False,"Canonical DNA-methylation and histone-modification enzymes (GO:0006306, GO:0016570)."
+MECH:MITO,SIRT3,False,Canonical mitochondrial biogenesis and respiratory-chain genes (GO:0007005; Reactome respiratory electron transport).
+MECH:MITO,PPARGC1A,False,Canonical mitochondrial biogenesis and respiratory-chain genes (GO:0007005; Reactome respiratory electron transport).
+MECH:MITO,TFAM,False,Canonical mitochondrial biogenesis and respiratory-chain genes (GO:0007005; Reactome respiratory electron transport).
+MECH:MITO,NDUFS1,False,Canonical mitochondrial biogenesis and respiratory-chain genes (GO:0007005; Reactome respiratory electron transport).
+MECH:MITO,SDHA,False,Canonical mitochondrial biogenesis and respiratory-chain genes (GO:0007005; Reactome respiratory electron transport).
+MECH:MITO,UQCRC2,True,Canonical mitochondrial biogenesis and respiratory-chain genes (GO:0007005; Reactome respiratory electron transport).
+MECH:MITO,ATP5F1A,False,Canonical mitochondrial biogenesis and respiratory-chain genes (GO:0007005; Reactome respiratory electron transport).
+MECH:WNT,CTNNB1,True,Canonical Wnt/beta-catenin signalling genes (GO:0016055; Reactome Wnt signalling).
+MECH:WNT,AXIN2,False,Canonical Wnt/beta-catenin signalling genes (GO:0016055; Reactome Wnt signalling).
+MECH:WNT,LEF1,True,Canonical Wnt/beta-catenin signalling genes (GO:0016055; Reactome Wnt signalling).
+MECH:WNT,TCF7L2,False,Canonical Wnt/beta-catenin signalling genes (GO:0016055; Reactome Wnt signalling).
+MECH:WNT,GSK3B,False,Canonical Wnt/beta-catenin signalling genes (GO:0016055; Reactome Wnt signalling).
+MECH:WNT,APC,False,Canonical Wnt/beta-catenin signalling genes (GO:0016055; Reactome Wnt signalling).
+MECH:WNT,RSPO2,True,Canonical Wnt/beta-catenin signalling genes (GO:0016055; Reactome Wnt signalling).
+MECH:WNT,WNT3A,False,Canonical Wnt/beta-catenin signalling genes (GO:0016055; Reactome Wnt signalling).
+MECH:AHR,AHR,False,Canonical aryl-hydrocarbon receptor signalling genes (GO:0001666; Reactome AHR pathway).
+MECH:AHR,ARNT,False,Canonical aryl-hydrocarbon receptor signalling genes (GO:0001666; Reactome AHR pathway).
+MECH:AHR,CYP1A1,False,Canonical aryl-hydrocarbon receptor signalling genes (GO:0001666; Reactome AHR pathway).
+MECH:AHR,CYP1B1,False,Canonical aryl-hydrocarbon receptor signalling genes (GO:0001666; Reactome AHR pathway).
+MECH:AHR,AHRR,False,Canonical aryl-hydrocarbon receptor signalling genes (GO:0001666; Reactome AHR pathway).
+MECH:RA_SIGNAL,RARA,False,"Canonical retinoic-acid synthesis, transport and receptor genes (GO:0002138; Reactome retinoid metabolism)."
+MECH:RA_SIGNAL,RARB,True,"Canonical retinoic-acid synthesis, transport and receptor genes (GO:0002138; Reactome retinoid metabolism)."
+MECH:RA_SIGNAL,ALDH1A2,True,"Canonical retinoic-acid synthesis, transport and receptor genes (GO:0002138; Reactome retinoid metabolism)."
+MECH:RA_SIGNAL,CYP26A1,False,"Canonical retinoic-acid synthesis, transport and receptor genes (GO:0002138; Reactome retinoid metabolism)."
+MECH:RA_SIGNAL,RBP1,False,"Canonical retinoic-acid synthesis, transport and receptor genes (GO:0002138; Reactome retinoid metabolism)."
+MECH:RA_SIGNAL,CRABP2,False,"Canonical retinoic-acid synthesis, transport and receptor genes (GO:0002138; Reactome retinoid metabolism)."
+MECH:HDAC,HDAC1,False,Canonical histone deacetylase genes (GO:0016575; Reactome HDAC activity).
+MECH:HDAC,HDAC2,False,Canonical histone deacetylase genes (GO:0016575; Reactome HDAC activity).
+MECH:HDAC,HDAC3,False,Canonical histone deacetylase genes (GO:0016575; Reactome HDAC activity).
+MECH:HDAC,HDAC4,True,Canonical histone deacetylase genes (GO:0016575; Reactome HDAC activity).
+MECH:HDAC,HDAC5,False,Canonical histone deacetylase genes (GO:0016575; Reactome HDAC activity).
+MECH:HYPOXIA,HIF1A,False,Canonical hypoxia-inducible factor and oxygen-sensing genes (GO:0001666; Reactome HIF signalling).
+MECH:HYPOXIA,EPAS1,False,Canonical hypoxia-inducible factor and oxygen-sensing genes (GO:0001666; Reactome HIF signalling).
+MECH:HYPOXIA,VHL,False,Canonical hypoxia-inducible factor and oxygen-sensing genes (GO:0001666; Reactome HIF signalling).
+MECH:HYPOXIA,EGLN1,False,Canonical hypoxia-inducible factor and oxygen-sensing genes (GO:0001666; Reactome HIF signalling).
+MECH:HYPOXIA,EGLN2,False,Canonical hypoxia-inducible factor and oxygen-sensing genes (GO:0001666; Reactome HIF signalling).
+MECH:NEURAL_CREST,SOX10,False,Canonical neural-crest specification and migration genes (GO:0014032; Reactome neural crest development).
+MECH:NEURAL_CREST,PAX3,True,Canonical neural-crest specification and migration genes (GO:0014032; Reactome neural crest development).
+MECH:NEURAL_CREST,SNAI2,False,Canonical neural-crest specification and migration genes (GO:0014032; Reactome neural crest development).
+MECH:NEURAL_CREST,TWIST1,True,Canonical neural-crest specification and migration genes (GO:0014032; Reactome neural crest development).
+MECH:NEURAL_CREST,FOXD3,False,Canonical neural-crest specification and migration genes (GO:0014032; Reactome neural crest development).
+MECH:NEURAL_CREST,TFAP2A,False,Canonical neural-crest specification and migration genes (GO:0014032; Reactome neural crest development).
+MECH:NEURAL_CREST,EDNRB,False,Canonical neural-crest specification and migration genes (GO:0014032; Reactome neural crest development).
+MECH:HEATSHOCK,HSPA1A,False,Canonical heat-shock protein and HSF1 response genes (GO:0009408; Reactome HSF1 activation).
+MECH:HEATSHOCK,HSPA1B,False,Canonical heat-shock protein and HSF1 response genes (GO:0009408; Reactome HSF1 activation).
+MECH:HEATSHOCK,HSP90AA1,False,Canonical heat-shock protein and HSF1 response genes (GO:0009408; Reactome HSF1 activation).
+MECH:HEATSHOCK,HSF1,False,Canonical heat-shock protein and HSF1 response genes (GO:0009408; Reactome HSF1 activation).
+MECH:HEATSHOCK,HSPB1,False,Canonical heat-shock protein and HSF1 response genes (GO:0009408; Reactome HSF1 activation).
+MECH:APOPTOSIS,BAX,False,Canonical intrinsic/extrinsic apoptosis genes (GO:0006915; Reactome apoptosis).
+MECH:APOPTOSIS,BCL2,False,Canonical intrinsic/extrinsic apoptosis genes (GO:0006915; Reactome apoptosis).
+MECH:APOPTOSIS,CASP3,False,Canonical intrinsic/extrinsic apoptosis genes (GO:0006915; Reactome apoptosis).
+MECH:APOPTOSIS,CASP8,False,Canonical intrinsic/extrinsic apoptosis genes (GO:0006915; Reactome apoptosis).
+MECH:APOPTOSIS,TP53,False,Canonical intrinsic/extrinsic apoptosis genes (GO:0006915; Reactome apoptosis).
+MECH:APOPTOSIS,BAK1,False,Canonical intrinsic/extrinsic apoptosis genes (GO:0006915; Reactome apoptosis).
+MECH:PROLIF,CCND1,False,Canonical cell-cycle and proliferation genes (GO:0008283; Reactome cell cycle).
+MECH:PROLIF,CDKN1A,False,Canonical cell-cycle and proliferation genes (GO:0008283; Reactome cell cycle).
+MECH:PROLIF,MYC,False,Canonical cell-cycle and proliferation genes (GO:0008283; Reactome cell cycle).
+MECH:PROLIF,MKI67,False,Canonical cell-cycle and proliferation genes (GO:0008283; Reactome cell cycle).
+MECH:PROLIF,CDK4,False,Canonical cell-cycle and proliferation genes (GO:0008283; Reactome cell cycle).
+MECH:CELLSIG,NOTCH1,True,"Canonical Notch/BMP/FGF/TGF-beta developmental signalling genes (GO:0007219, GO:0030509)."
+MECH:CELLSIG,JAG1,True,"Canonical Notch/BMP/FGF/TGF-beta developmental signalling genes (GO:0007219, GO:0030509)."
+MECH:CELLSIG,BMP4,False,"Canonical Notch/BMP/FGF/TGF-beta developmental signalling genes (GO:0007219, GO:0030509)."
+MECH:CELLSIG,FGF8,True,"Canonical Notch/BMP/FGF/TGF-beta developmental signalling genes (GO:0007219, GO:0030509)."
+MECH:CELLSIG,TGFB1,False,"Canonical Notch/BMP/FGF/TGF-beta developmental signalling genes (GO:0007219, GO:0030509)."
+MECH:CELLSIG,SMAD4,True,"Canonical Notch/BMP/FGF/TGF-beta developmental signalling genes (GO:0007219, GO:0030509)."
+MECH:GENE_EXPR,GATA4,True,Canonical cardiac transcription factors (GO:0045165; Reactome heart development).
+MECH:GENE_EXPR,NKX2-5,True,Canonical cardiac transcription factors (GO:0045165; Reactome heart development).
+MECH:GENE_EXPR,TBX5,True,Canonical cardiac transcription factors (GO:0045165; Reactome heart development).
+MECH:GENE_EXPR,MEF2C,False,Canonical cardiac transcription factors (GO:0045165; Reactome heart development).
+MECH:GENE_EXPR,HAND2,False,Canonical cardiac transcription factors (GO:0045165; Reactome heart development).
+MECH:GENE_EXPR,TBX20,True,Canonical cardiac transcription factors (GO:0045165; Reactome heart development).
+MECH:ENDOTHELIAL,VEGFA,False,Canonical endothelial and angiogenic genes (GO:0001525; Reactome VEGF signalling).
+MECH:ENDOTHELIAL,FLT4,True,Canonical endothelial and angiogenic genes (GO:0001525; Reactome VEGF signalling).
+MECH:ENDOTHELIAL,KDR,True,Canonical endothelial and angiogenic genes (GO:0001525; Reactome VEGF signalling).
+MECH:ENDOTHELIAL,PECAM1,False,Canonical endothelial and angiogenic genes (GO:0001525; Reactome VEGF signalling).
+MECH:ENDOTHELIAL,CDH5,False,Canonical endothelial and angiogenic genes (GO:0001525; Reactome VEGF signalling).

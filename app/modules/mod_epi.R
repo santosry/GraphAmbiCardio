@@ -3,12 +3,13 @@ mod_epi_ui <- function(id) {
   tagList(
     note_box("<b>Leia antes de interpretar.</b> Os dados locais são apresentados como contexto ecológico. ",
              "SINASC não é incidência (há subnotificação importante); SIH não representa indivíduos únicos; ",
-             "a exposição climática é de área (ERA5-Land), não individual. O período é 2010–2025.", "warning"),
+             "a exposição climática é de área (ERA5-Land), não individual. ",
+             "CHD = Q20–Q26; Q27–Q28 são analisadas separadamente e não entram no numerador de CHD. ", "warning"),
     layout_columns(
       col_widths = c(4,4,4),
-      kpi_card("Nascidos vivos (SINASC)", textOutput(ns("kpi_births")), "2010–2025", "#0B3C5D", source = "Fonte: SINASC/DATASUS (microdados 2010–2022 e 2025; TabNet 2023–2024)."),
-      kpi_card("Casos de cardiopatia", textOutput(ns("kpi_cases")), "definição do estudo", "#E7298A", source = "Fonte: SINASC/DATASUS; CID-10 Q20–Q28."),
-      kpi_card("Internações (SIH)", textOutput(ns("kpi_sih")), "diagnóstico principal Q20–Q28", "#1D7874", source = "Fonte: SIH/SUS; AIH com diagnóstico principal Q20–Q28.")
+      kpi_card("Nascidos vivos (SINASC)", textOutput(ns("kpi_births")), "microdados 2010–2022 e 2025", "#0B3C5D", source = "Fonte: SINASC/DATASUS (microdados 2010–2022 e 2025; TabNet 2023–2024)."),
+      kpi_card("Casos de cardiopatia", textOutput(ns("kpi_cases")), "CHD core Q20–Q26", "#E7298A", source = "Fonte: SINASC/DATASUS; CID-10 Q20–Q26. Q27–Q28 são reportadas à parte."),
+      kpi_card("Internações (SIH)", textOutput(ns("kpi_sih")), "diagnóstico principal Q20–Q26", "#1D7874", source = "Fonte: SIH/SUS; AIH com diagnóstico principal Q20–Q26.")
     ),
     br(),
     layout_columns(
@@ -16,22 +17,22 @@ mod_epi_ui <- function(id) {
       div(class = "figure-block",
           h5("SINASC — casos e taxa por 10.000 nascidos vivos"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sinasc_plot"), height = "100%")),
-          source_note("Fonte: SINASC/DATASUS. Casos = CID-10 Q20–Q28; 2023–2024 via TabNet; ver docs/07 e docs/09.")),
+          source_note("Fonte: SINASC/DATASUS. Casos = CHD core Q20–Q26; 2023–2024 sem microdados (TabNet Q20–Q28 mostrado separadamente); ver docs/07 e docs/09.")),
       div(class = "figure-block",
           h5("SIH/SUS — internações e óbitos"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sih_plot"), height = "100%")),
-          source_note("Fonte: SIH/SUS. AIH não são pessoas; ver docs/07 e docs/09."))
+          source_note("Fonte: SIH/SUS. AIH não são pessoas; Q20–Q26 no diagnóstico principal; Q27–Q28 em tabela separada."))
     ),
     layout_columns(
       col_widths = c(6,6),
       div(class = "figure-block",
           h5("Clima — temperatura máxima mensal (ERA5-Land)"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("climate_plot"), height = "100%")),
-          source_note("Fonte: ERA5-Land via Open-Meteo, célula −21,757/−41,354; ver docs/03.")),
+          htmlOutput(ns("climate_note"))),
       div(class = "figure-block",
           h5("Dias de calor e ondas de calor por ano"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("heat_plot"), height = "100%")),
-          source_note("Fonte: ERA5-Land via Open-Meteo; limiar P90 34,2 °C; ver docs/07."))
+          source_note("Fonte: ERA5-Land via Open-Meteo; limiar P90 recalculado na série fixada; ver docs/07."))
     ),
     br(),
     div(
@@ -67,42 +68,67 @@ mod_epi_ui <- function(id) {
            DTOutput(ns("models")),
            h6("Ajuste mútuo PM2,5 + temperatura", style = "margin-top:1rem;"),
            DTOutput(ns("models_two")),
-           source_note("Fonte: outputs/tables/exploratory_models.csv; p e q (BH-FDR); ver docs/07."),
-           note_box("<b>Não é um achado causal; todos os p-valores são ajustados por FDR (BH).</b> Há 56–59 eventos, exposição de área, ",
+           h6("Sensibilidade à incerteza da idade gestacional (±7 dias)", style = "margin-top:1rem;"),
+           DTOutput(ns("ga_sensitivity")),
+           source_note("Fonte: outputs/tables/exploratory_models.csv e gestational_window_sensitivity.csv; p e q (BH-FDR); ver docs/07."),
+           note_box("<b>Não é um achado causal; todos os p-valores são ajustados por FDR (BH).</b> Há 47 eventos nos modelos completos, exposição de área, ",
                     "idade gestacional estimada e modelos que discordam entre si (logístico vs. contagem mensal). ",
                     "Ver <i>docs/07_EPI_ENV_METHODS.md</i> e a análise de sensibilidade.", "danger")
          )),
     br(),
+    card(card_header("Malformações circulatórias Q27–Q28 (não CHD)"),
+         card_body(
+           DTOutput(ns("other_circulatory")),
+           source_note("Fonte: SINASC/DATASUS (microdados) e SIH/SUS; Q27–Q28 são mantidas fora do numerador de CHD.")
+         )),
+    br(),
     card(card_header("Distribuição dos códigos CID-10 registrados"),
-         card_body(DTOutput(ns("codes")),
-                   source_note("Fonte: SINASC/DATASUS; CODANOMAL (Q20–Q28).")))
+         card_body(
+           h6("CHD core Q20–Q26"),
+           DTOutput(ns("codes")),
+           h6("Q27–Q28 (não CHD)", style = "margin-top:1rem;"),
+           DTOutput(ns("other_codes")),
+           source_note("Fonte: SINASC/DATASUS; CODANOMAL.")
+         ))
   )
 }
 
 mod_epi_server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    output$kpi_births <- renderText(fmt_int(sum(sinasc$live_births, na.rm = TRUE)))
+    output$kpi_births <- renderText(fmt_int(sum(sinasc$live_births[!is.na(sinasc$chd_cases)], na.rm = TRUE)))
     output$kpi_cases <- renderText(fmt_int(sum(sinasc$chd_cases, na.rm = TRUE)))
     output$kpi_sih <- renderText(fmt_int(sum(sih$admissions_primary_chd, na.rm = TRUE)))
 
     output$sinasc_plot <- renderPlotly({
-      d <- sinasc %>% mutate(
-        fonte = ifelse(grepl("TabNet", source), "TabNet (agregado)", "Microdados"),
-        status = ifelse(grepl("preliminary|preliminar", data_status), "preliminar", "consolidado"),
-        ano = as.integer(year)
-      )
+      d <- sinasc %>% mutate(ano = as.integer(year))
       plot_ly(d, x = ~ano) %>%
-        add_bars(y = ~chd_cases, name = "Casos", color = ~fonte,
-                 colors = c("Microdados" = "#E7298A", "TabNet (agregado)" = "#F4A6C8"),
-                 hovertemplate = "Ano %{x}<br>Casos: %{y}<extra></extra>") %>%
-        add_trace(y = ~chd_per_10000_lb, name = "Por 10.000 NV", yaxis = "y2",
+        add_bars(y = ~chd_cases, name = "CHD core Q20–Q26",
+                 marker = list(color = "#E7298A"),
+                 hovertemplate = "Ano %{x}<br>CHD core: %{y}<extra></extra>") %>%
+        add_bars(y = ~tabnet_circulatory_cases, name = "TabNet Q20–Q28 (amplo)",
+                 marker = list(color = "#BDBDBD"),
+                 hovertemplate = "Ano %{x}<br>TabNet Q20–Q28: %{y}<extra></extra>") %>%
+        add_trace(y = ~chd_per_10000_lb, name = "CHD por 10.000 NV", yaxis = "y2",
                   type = "scatter", mode = "lines+markers", line = list(color = "#0B3C5D"),
-                  hovertemplate = "Ano %{x}<br>Taxa: %{y:.2f}/10.000<extra></extra>") %>%
-        layout(yaxis = list(title = "Casos"), yaxis2 = list(title = "Por 10.000 NV", overlaying = "y", side = "right"),
+                  hovertemplate = "Ano %{x}<br>Taxa core: %{y:.2f}/10.000<extra></extra>") %>%
+        layout(barmode = "group",
+               yaxis = list(title = "Casos"), yaxis2 = list(title = "Por 10.000 NV", overlaying = "y", side = "right"),
                legend = list(orientation = "h", y = -0.28), margin = list(l = 60, r = 60, t = 20, b = 70),
                hovermode = "x unified", font = list(size = 12),
                xaxis = list(title = "Ano", dtick = 1, tickangle = -45)) %>%
         plotly::config(displaylogo = FALSE, responsive = TRUE)
+    })
+
+    output$climate_note <- renderUI({
+      if (length(climate_meta) == 0) {
+        return(source_note("Fonte: ERA5-Land via Open-Meteo; metadados do modelo não encontrados."))
+      }
+      source_note(sprintf(
+        "Fonte: %s; modelo %s (resolução ~%s km), célula retornada %.4f/%.4f, elevação %s m; extração %s. Série de área, não estação local. Ver docs/03.",
+        climate_meta$source, climate_meta$model_requested, climate_meta$model_resolution_km,
+        as.numeric(climate_meta$latitude_returned), as.numeric(climate_meta$longitude_returned),
+        climate_meta$elevation_m, climate_meta$retrieved_at
+      ))
     })
 
     output$sih_plot <- renderPlotly({
@@ -222,7 +248,7 @@ mod_epi_server <- function(id) {
     output$inmet_note <- renderUI({
       if (length(inmet_meta) == 0) return(source_note("Fonte: INMET A607 via BrazilMet; ERA5-Land via Open-Meteo."))
       source_note(sprintf(
-        "Fonte: INMET estação %s (%s), lat %s, lon %s, altitude %s m; %s a %s, %s dias; pacote BrazilMet %s. ERA5-Land via Open-Meteo (célula −21,757/−41,354, 12 m). Série de estação vs reanálise; não é exposição individual. Ver docs/07.",
+        "Fonte: INMET estação %s (%s), lat %s, lon %s, altitude %s m; %s a %s, %s dias; pacote BrazilMet %s. ERA5-Land fixado em `era5_land` (célula −21,800/−41,300, 12 m). Série de estação vs reanálise; não é exposição individual. Ver docs/07.",
         inmet_meta$station_code, inmet_meta$station_name,
         format(as.numeric(inmet_meta$latitude), nsmall = 4, decimal.mark = ","),
         format(as.numeric(inmet_meta$longitude), nsmall = 4, decimal.mark = ","),
@@ -233,9 +259,37 @@ mod_epi_server <- function(id) {
     })
 
     output$coverage <- renderDT({
-      datatable(sinasc %>% select(Ano = year, Nascidos = live_births, Casos = chd_cases,
-                                  `Por 10.000` = chd_per_10000_lb, Status = data_status, Fonte = source),
-                rownames = FALSE, options = list(pageLength = 8, dom = "tp"))
+      datatable(sinasc %>% select(
+        Ano = year, Nascidos = live_births,
+        `CHD Q20–Q26` = chd_cases, `CHD/10.000` = chd_per_10000_lb,
+        `Q27–Q28` = other_circulatory_cases, `Q27–Q28/10.000` = other_circulatory_per_10000_lb,
+        `TabNet Q20–Q28` = tabnet_circulatory_cases,
+        Status = data_status, Fonte = source
+      ), rownames = FALSE, options = list(pageLength = 8, dom = "tp", scrollX = TRUE))
+    }, server = FALSE)
+
+    output$ga_sensitivity <- renderDT({
+      d <- ga_sensitivity
+      if (nrow(d) == 0) return(datatable(data.frame(Mensagem = "Sensibilidade gestacional não disponível."), rownames = FALSE, options = list(dom = "t")))
+      out <- d %>% transmute(
+        Janela = recode(window, main = "Principal", early_7d = "−7 dias", late_7d = "+7 dias"),
+        n, Eventos = n_events, `OR/SD` = or_per_sd,
+        `IC95` = sprintf("%.2f–%.2f", ci_low, ci_high), p = p_value
+      )
+      datatable(out, rownames = FALSE, options = list(dom = "t", autoWidth = TRUE)) %>%
+        formatSignif(columns = c("OR/SD", "p"), digits = 3)
+    }, server = FALSE)
+
+    output$other_circulatory <- renderDT({
+      a <- sinasc %>% select(year, other_circulatory_cases, other_circulatory_per_10000_lb)
+      b <- sih_other %>% select(year, admissions_primary_other_circulatory)
+      d <- full_join(a, b, by = "year") %>% arrange(year)
+      out <- d %>% transmute(
+        Ano = year, `SINASC Q27–Q28` = other_circulatory_cases,
+        `SINASC/10.000` = other_circulatory_per_10000_lb,
+        `SIH Q27–Q28` = admissions_primary_other_circulatory
+      )
+      datatable(out, rownames = FALSE, options = list(pageLength = 8, dom = "tp"))
     }, server = FALSE)
 
     output$maternal <- renderDT({
@@ -272,6 +326,12 @@ mod_epi_server <- function(id) {
     output$codes <- renderDT({
       d <- sinasc_codes %>% arrange(desc(n)) %>% head(20)
       datatable(d, rownames = FALSE, options = list(pageLength = 8, dom = "tp"))
+    }, server = FALSE)
+
+    output$other_codes <- renderDT({
+      d <- sinasc_other_codes
+      if (nrow(d) == 0) return(datatable(data.frame(Mensagem = "Sem códigos Q27–Q28 nos microdados."), rownames = FALSE, options = list(dom = "t")))
+      datatable(d %>% arrange(desc(n)), rownames = FALSE, options = list(pageLength = 8, dom = "tp"))
     }, server = FALSE)
   })
 }

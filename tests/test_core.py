@@ -27,15 +27,27 @@ def test_parse_multiple_icd_codes():
     assert sinasc.chd_codes("Q02X") == []
 
 
+def test_q27_q28_are_not_core_chd():
+    assert sinasc.chd_codes("Q270") == []
+    assert sinasc.chd_codes("Q282") == []
+    assert sinasc.other_circulatory_codes("Q270") == ["Q270"]
+    assert sinasc.other_circulatory_codes("Q251Q279") == ["Q279"]
+    assert sinasc.chd_codes("Q251Q279") == ["Q251"]
+    assert sinasc.is_chd_code("Q261")
+    assert not sinasc.is_chd_code("Q271")
+
+
 def test_estimate_conception():
     from datetime import datetime
 
     c = sinasc.estimate_conception(datetime(2020, 1, 1), 40, "5")
     assert c is not None
-    assert (datetime(2020, 1, 1) - c).days == 280
+    # 40 weeks from LMP minus the 14-day conception lag = 266 days before birth
+    assert (datetime(2020, 1, 1) - c).days == 266
     # fall back to the categorical midpoint when SEMAGESTAC is absent
     c2 = sinasc.estimate_conception(datetime(2020, 1, 1), None, "5")
     assert c2 is not None
+    assert (datetime(2020, 1, 1) - c2).days == round(sinasc.GESTACAO_MIDPOINT["5"] * 7) - 14
 
 
 def test_age_groups():

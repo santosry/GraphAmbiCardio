@@ -8,8 +8,9 @@ Important interpretative limits (enforced here and in the reports):
   diagnostic coding.
 * Residence (``MUNIC_RES``) and place of admission (``MUNIC_MOV``) are kept
   separately so that referral flow can be described.
-* ``DIAG_SECUN``/``CID_ASSO`` are searched for Q20-Q28 but reported separately
-  from the primary-diagnosis analysis.
+* Primary CHD is defined as Q20-Q26.  Q27 (peripheral vascular malformations)
+  and Q28 (other circulatory malformations) are extracted and reported as a
+  separate group, never added to the CHD count.
 """
 
 from __future__ import annotations
@@ -26,6 +27,7 @@ from ..io_utils import get_logger, today, write_csv, write_json
 log = get_logger("sih")
 
 CHD_PREFIXES = tuple(config.CID10_CHAPTER_CHD)
+OTHER_CIRCULATORY_PREFIXES = tuple(config.CID10_OTHER_CIRCULATORY)
 KEEP = [
     "ANO_CMPT", "MES_CMPT", "N_AIH", "MUNIC_RES", "MUNIC_MOV", "CNES", "DIAG_PRINC",
     "DIAG_SECUN", "CID_ASSO", "CID_MORTE", "DT_INTER", "DT_SAIDA", "DIAS_PERM",
@@ -46,6 +48,10 @@ def dbc_to_dbf(dbc: Path) -> Path:
 
 def is_chd(code: str) -> bool:
     return bool(code) and str(code).strip()[:3] in CHD_PREFIXES
+
+
+def is_other_circulatory(code: str) -> bool:
+    return bool(code) and str(code).strip()[:3] in OTHER_CIRCULATORY_PREFIXES
 
 
 def download_all(years: list[int] | None = None) -> list[Path]:
@@ -84,13 +90,20 @@ def extract_file(dbc: Path, include_secondary: bool = True) -> list[dict[str, An
         assoc = str(r.get("CID_ASSO", "")).strip().upper()
         prim_chd = is_chd(diag)
         sec_chd = include_secondary and (is_chd(sec) or is_chd(assoc))
-        if not (prim_chd or sec_chd):
+        prim_other = is_other_circulatory(diag)
+        sec_other = include_secondary and (is_other_circulatory(sec) or is_other_circulatory(assoc))
+        if not (prim_chd or sec_chd or prim_other or sec_other):
             continue
         rec = {k: r.get(k, "") for k in KEEP}
         rec["source_file"] = dbc.name
         rec["diag_princ_chd"] = prim_chd
         rec["diag_sec_chd"] = sec_chd
+        rec["diag_princ_other_circulatory"] = prim_other
+        rec["diag_sec_other_circulatory"] = sec_other
         rec["chd_group"] = diag[:3] if prim_chd else (sec[:3] if is_chd(sec) else assoc[:3])
+        rec["other_circulatory_group"] = (
+            diag[:3] if prim_other else (sec[:3] if is_other_circulatory(sec) else assoc[:3])
+        )
         rec["year"] = int(str(r.get("ANO_CMPT", "")).strip() or 0)
         rec["age_years"] = _age_years(r.get("IDADE"), str(r.get("COD_IDADE", "")).strip())
         out.append(rec)
@@ -179,38 +192,65 @@ def summarise(df: pd.DataFrame) -> dict[str, Any]:
     prim["VAL_TOT"] = pd.to_numeric(prim["VAL_TOT"], errors="coerce")
     prim["CAR_INT"] = prim["CAR_INT"].astype(str).str.replace(r"\.0$", "", regex=True).str.zfill(2)
 
-    annual = []
-    for y, sub in prim.groupby("year"):
-        annual.append(
-            {
-                "year": y,
-                "admissions_primary_chd": len(sub),
-                "deaths": int(sub["MORTE"].sum()),
-                "hospital_mortality_pct": round(100 * sub["MORTE"].sum() / len(sub), 2) if len(sub) else "",
-                "mean_length_of_stay_days": round(sub["DIAS_PERM"].mean(), 2) if len(sub) else "",
-                "total_cost_brl": round(sub["VAL_TOT"].sum(), 2),
-                "mean_cost_brl": round(sub["VAL_TOT"].mean(), 2) if len(sub) else "",
-                "hospitals": sub["CNES"].nunique(),
-                "elective_pct": round(100 * (sub["CAR_INT"] == "02").sum() / len(sub), 2) if len(sub) else "",
-            }
-        )
+    other = df[df["diag_princ_other_circulatory"]].copy()
+    other["year"] = other["year"].astype(int)
+    other["MORTE"] = pd.to_numeric(other["MORTE"], errors="coerce").fillna(0).astype(int)
+    other["DIAS_PERM"] = pd.to_numeric(other["DIAS_PERM"], errors="coerce")
+    other["VAL_TOT"] = pd.to_numeric(other["VAL_TOT"], errors="coerce")
+    other["CAR_INT"] = other["CAR_INT"].astype(str).str.replace(r"\.0$", "", regex=True).str.zfill(2)
+
+    def _annual(sub: pd.DataFrame) -> list[dict[str, Any]]:
+        rows = []
+        for y, part in sub.groupby("year"):
+            rows.append(
+                {
+                    "year": int(y),
+                    "admissions_primary": len(part),
+                    "deaths": int(part["MORTE"].sum()),
+                    "hospital_mortality_pct": round(100 * part["MORTE"].sum() / len(part), 2) if len(part) else "",
+                    "mean_length_of_stay_days": round(part["DIAS_PERM"].mean(), 2) if len(part) else "",
+                    "total_cost_brl": round(part["VAL_TOT"].sum(), 2),
+                    "mean_cost_brl": round(part["VAL_TOT"].mean(), 2) if len(part) else "",
+                    "hospitals": part["CNES"].nunique(),
+                    "elective_pct": round(100 * (part["CAR_INT"] == "02").sum() / len(part), 2) if len(part) else "",
+                }
+            )
+        return rows
+
+    annual = _annual(prim)
+    for row in annual:
+        row["admissions_primary_chd"] = row.pop("admissions_primary")
     write_csv(config.TABLES / "sih_annual.csv", annual)
+
+    other_annual = _annual(other)
+    for row in other_annual:
+        row["admissions_primary_other_circulatory"] = row.pop("admissions_primary")
+    write_csv(config.TABLES / "sih_other_circulatory_annual.csv", other_annual)
 
     by_age = prim.groupby(["year", "age_group"]).size().reset_index(name="admissions")
     by_age.to_csv(config.TABLES / "sih_by_age_group.csv", index=False)
+    if len(other):
+        other_by_age = other.groupby(["year", "age_group"]).size().reset_index(name="admissions")
+        other_by_age.to_csv(config.TABLES / "sih_other_circulatory_by_age_group.csv", index=False)
 
     by_group = prim.groupby(["year", "chd_group"]).size().reset_index(name="admissions")
     by_group.to_csv(config.TABLES / "sih_by_chd_group_year.csv", index=False)
+    if len(other):
+        other_by_group = (
+            other.groupby(["year", "other_circulatory_group"]).size().reset_index(name="admissions")
+        )
+        other_by_group.to_csv(config.TABLES / "sih_other_circulatory_by_group_year.csv", index=False)
 
-    # referral flow: municipality of admission for Campos residents
     flow = prim.groupby("MUNIC_MOV").size().reset_index(name="admissions").sort_values("admissions", ascending=False)
     flow.to_csv(config.TABLES / "sih_admission_municipality_flow.csv", index=False)
 
-    # residents admitted outside the municipality of residence, and diagnoses
     outside = prim[prim["MUNIC_MOV"].astype(str).str[:6] != config.MUNICIPALITY["ibge6"]]
     qa = {
+        "chd_definition": "primary diagnosis Q20-Q26 (core CHD)",
+        "other_circulatory_definition": "primary diagnosis Q27-Q28 (not CHD)",
         "n_admissions_with_primary_chd": int(len(prim)),
-        "n_admissions_secondary_only_chd": int(len(df) - len(prim)),
+        "n_admissions_primary_other_circulatory": int(len(other)),
+        "n_admissions_secondary_only_chd": int(len(df) - len(prim) - len(other)),
         "n_unique_hospitals": int(prim["CNES"].nunique()),
         "years": sorted(int(y) for y in prim["year"].unique()),
         "pct_admitted_outside_residence": round(100 * len(outside) / len(prim), 2) if len(prim) else "",
@@ -218,6 +258,9 @@ def summarise(df: pd.DataFrame) -> dict[str, Any]:
         "mean_age_years": round(prim["age_years"].mean(), 2) if prim["age_years"].notna().any() else "",
         "age_unknown_pct": round(100 * prim["age_years"].isna().mean(), 2),
         "n_with_secondary_chd_only": int((~df["diag_princ_chd"] & df["diag_sec_chd"]).sum()),
+        "n_with_secondary_other_only": int(
+            (~df["diag_princ_other_circulatory"] & df["diag_sec_other_circulatory"]).sum()
+        ),
         "readmission_analysis": "not performed: SIH/AIH has no stable patient identifier",
         "retrieved_at": today(),
     }

@@ -33,6 +33,6 @@ Nenhum modelo foi usado como autor ou coautor. A responsabilidade científica pe
 4. **Conferência da curadoria:** todos os trechos citados foram verificados automaticamente contra o PubMed e lidos pela equipe.
 5. **Responsabilidade final:** integralmente humana. Os autores respondem por todo o conteúdo, incluindo eventuais erros introduzidos com apoio de IA.
 
-**Data:** 2026-10-31
-**Versão:** 0.3.0
+**Data:** 2026-11-01
+**Versão:** 0.4.0
 **Contato:** ryan.paulo@gsuite.iff.edu.br

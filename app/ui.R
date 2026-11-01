@@ -31,7 +31,7 @@ ui <- bslib::page_navbar(
   footer = div(
     class = "graphambicardio-footer",
     div(class = "container",
-        HTML("GraphAmbiCardio v0.3.0 · Dados de 2026-10-31 · Código MIT · Dados de terceiros mantêm suas licenças · "),
+        HTML("GraphAmbiCardio v0.4.0 · Dados de 2026-11-01 · Código MIT · Dados de terceiros mantêm suas licenças · "),
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "Repositório"),
         " · ",
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio/tree/main/docs", target = "_blank", "Documentação"),
