@@ -13,25 +13,33 @@ mod_epi_ui <- function(id) {
     br(),
     layout_columns(
       col_widths = c(7,5),
-      card(card_header("SINASC — casos e taxa por 10.000 nascidos vivos"),
-           card_body(plotlyOutput(ns("sinasc_plot"), height = "440px"))),
-      card(card_header("SIH/SUS — internações e óbitos"),
-           card_body(plotlyOutput(ns("sih_plot"), height = "440px")))
+      div(class = "figure-block",
+          h5("SINASC — casos e taxa por 10.000 nascidos vivos"),
+          div(class = "figure-canvas", style = "height:clamp(340px, 42vh, 560px);",
+              plotlyOutput(ns("sinasc_plot"), height = "100%"))),
+      div(class = "figure-block",
+          h5("SIH/SUS — internações e óbitos"),
+          div(class = "figure-canvas", style = "height:clamp(340px, 42vh, 560px);",
+              plotlyOutput(ns("sih_plot"), height = "100%")))
     ),
     layout_columns(
       col_widths = c(6,6),
-      card(card_header("Clima — temperatura máxima mensal (ERA5-Land)"),
-           card_body(plotlyOutput(ns("climate_plot"), height = "400px"))),
-      card(card_header("Dias de calor e ondas de calor por ano"),
-           card_body(plotlyOutput(ns("heat_plot"), height = "400px")))
+      div(class = "figure-block",
+          h5("Clima — temperatura máxima mensal (ERA5-Land)"),
+          div(class = "figure-canvas", style = "height:clamp(320px, 40vh, 520px);",
+              plotlyOutput(ns("climate_plot"), height = "100%"))),
+      div(class = "figure-block",
+          h5("Dias de calor e ondas de calor por ano"),
+          div(class = "figure-canvas", style = "height:clamp(320px, 40vh, 520px);",
+              plotlyOutput(ns("heat_plot"), height = "100%")))
     ),
     br(),
-    card(
-      card_header("PM2,5 — série municipal do VIGIAR (Ministério da Saúde)"),
-      card_body(
-        plotlyOutput(ns("pm25_plot"), height = "400px"),
-        htmlOutput(ns("pm25_note"))
-      )
+    div(
+      class = "figure-block",
+      h5("PM2,5 — série municipal do VIGIAR (Ministério da Saúde)"),
+      div(class = "figure-canvas", style = "height:clamp(340px, 44vh, 580px);",
+          plotlyOutput(ns("pm25_plot"), height = "100%")),
+      htmlOutput(ns("pm25_note"))
     ),
     br(),
     layout_columns(

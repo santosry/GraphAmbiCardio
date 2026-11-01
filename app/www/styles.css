@@ -104,17 +104,35 @@ table.dataTable thead th { color: var(--v1); border-bottom: 1px solid rgba(68,1,
 }
 .blockquote { border-left: 3px solid var(--v3); padding-left: .8rem; color: #3A3744; }
 
-.graph-body { padding: .35rem; }
-.vis-network { outline: none; }
-.graph-body .vis-network {
-  min-height: 620px; background: #FFFFFF; border-radius: 14px;
+.figure-block {
+  margin: 0 0 1.4rem; padding: 0; background: transparent; min-width: 0;
+}
+.figure-block h5 {
+  color: var(--v0); font-weight: 650; margin: .1rem 0 .6rem;
+  font-size: clamp(.95rem, 1.6vw, 1.15rem);
+}
+.figure-head { font-weight: 600; color: var(--v0); margin: 0 0 .45rem; font-size: .95rem; }
+.figure-canvas { width: 100%; min-width: 0; min-height: 280px; }
+.figure-canvas .shiny-plot-output,
+.figure-canvas .vis-network,
+.figure-canvas .js-plotly-plot,
+.figure-canvas .plot-container,
+.figure-canvas .svg-container {
+  width: 100% !important; height: 100% !important;
+}
+.figure-canvas .vis-network {
+  background: #FFFFFF; border-radius: 14px;
   border: 1px solid rgba(68, 1, 84, .08);
 }
+.figure-note { margin-top: .35rem; }
+.filter-bar {
+  background: #FFFFFF; border: 1px solid rgba(68, 1, 84, .08);
+  border-radius: 14px; padding: .8rem 1rem .4rem; margin-bottom: 1rem;
+}
+.section-block { margin-top: .5rem; }
+.vis-network { outline: none; }
 .js-plotly-plot, .plot-container, .svg-container { width: 100% !important; }
 .card-body { overflow: visible; }
-@media (max-width: 992px) {
-  .graph-body .vis-network { min-height: 520px; }
-}
 div.vis-tooltip {
   border-radius: 10px !important; border: 1px solid rgba(68,1,84,.15) !important;
   box-shadow: 0 10px 26px rgba(68,1,84,.16) !important; font-size: .82rem !important;

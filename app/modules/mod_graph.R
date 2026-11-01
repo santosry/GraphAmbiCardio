@@ -1,44 +1,45 @@
 mod_graph_ui <- function(id) {
   ns <- NS(id)
   tagList(
-    card(
-      class = "filter-card",
-      card_body(
-        layout_columns(
-          col_widths = c(2, 2, 2, 2, 2, 2),
-          radioButtons(ns("mode"), "Visualização",
-                       choices = c("Conceitual" = "conceptual", "Molecular" = "molecular", "Completo" = "full"),
-                       selected = "conceptual", inline = FALSE),
-          checkboxGroupInput(ns("tiers"), "Nível de evidência",
-                             choices = TIER_ORDER, selected = TIER_ORDER),
-          selectInput(ns("exposure"), "Exposição",
-                      choices = c("Todas" = "", setNames(hierarchy$exposicao_id, hierarchy$exposicao))),
-          selectInput(ns("phenotype"), "Fenótipo",
-                      choices = c("Todos" = "", setNames(
-                        nodes$node_id[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"],
-                        nodes$label[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"]))),
-          sliderInput(ns("conf"), "Confiança mínima", min = 0, max = 0.95, value = 0.40, step = 0.05),
-          checkboxInput(ns("edge_labels"), "Rótulos das arestas", value = FALSE),
-          div(
-            textInput(ns("search"), "Buscar", placeholder = "PM2.5, Wnt, septação"),
-            actionButton(ns("reset"), "Limpar", class = "btn-outline-secondary btn-sm w-100")
-          )
+    div(
+      class = "filter-bar",
+      layout_columns(
+        col_widths = c(2, 2, 2, 2, 2, 2),
+        radioButtons(ns("mode"), "Visualização",
+                     choices = c("Conceitual" = "conceptual", "Molecular" = "molecular", "Completo" = "full"),
+                     selected = "conceptual", inline = FALSE),
+        checkboxGroupInput(ns("tiers"), "Nível de evidência",
+                           choices = TIER_ORDER, selected = TIER_ORDER),
+        selectInput(ns("exposure"), "Exposição",
+                    choices = c("Todas" = "", setNames(hierarchy$exposicao_id, hierarchy$exposicao))),
+        selectInput(ns("phenotype"), "Fenótipo",
+                    choices = c("Todos" = "", setNames(
+                      nodes$node_id[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"],
+                      nodes$label[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"]))),
+        sliderInput(ns("conf"), "Confiança mínima", min = 0, max = 0.95, value = 0.40, step = 0.05),
+        checkboxInput(ns("edge_labels"), "Rótulos das arestas", value = FALSE),
+        div(
+          textInput(ns("search"), "Buscar", placeholder = "PM2.5, Wnt, septação"),
+          actionButton(ns("reset"), "Limpar", class = "btn-outline-secondary btn-sm w-100")
         )
       )
     ),
-    card(
-      card_header(textOutput(ns("caption"))),
-      card_body(
-        class = "graph-body",
+    div(
+      class = "figure-block",
+      div(class = "figure-head", textOutput(ns("caption"))),
+      div(
+        class = "figure-canvas",
+        style = "height:clamp(500px, 78vh, 900px);",
         div(role = "img", `aria-label` = "Grafo interativo de exposições, mecanismos, processos e fenótipos; use os filtros acima e a aba Evidências para uma tabela equivalente.",
-            visNetworkOutput(ns("network"), height = "78vh")),
-        div(class = "small-muted", style = "padding:.4rem .6rem 0;",
-            "Visualização interativa. Se o grafo não carregar ou para leitura por teclado, consulte a aba Evidências.")
-      )
+            visNetworkOutput(ns("network"), height = "100%"))
+      ),
+      div(class = "small-muted figure-note",
+          "Visualização interativa. Se o grafo não carregar ou para leitura por teclado, consulte a aba Evidências.")
     ),
-    card(
-      card_header("Detalhes do nó selecionado"),
-      card_body(uiOutput(ns("node_details")))
+    div(
+      class = "section-block",
+      h5("Detalhes do nó selecionado"),
+      uiOutput(ns("node_details"))
     )
   )
 }
