@@ -37,4 +37,4 @@ Total enriched GO terms: 1631
 | TGF-beta receptor signaling activates SMADs | 9 |
 | Signaling by NOTCH | 8 |
 
-Low-evidence edges (grade D/E): **34** of 4135 relations. See `outputs/tables/low_evidence_edges.csv`.
+Low-evidence edges (grade D/E): **33** of 4146 relations. See `outputs/tables/low_evidence_edges.csv`.

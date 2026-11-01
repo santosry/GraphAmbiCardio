@@ -22,7 +22,7 @@ mod_methods_ui <- function(id) {
           tags$ul(
             tags$li("cinco domínios de busca pré-registrados (exposição→CHD, exposição→mecanismo, mecanismo→cardiogênese, cardiogênese→fenótipo, gene→fenótipo);"),
             tags$li("196 pares exposição × fenótipo para mapear densidade e lacunas;"),
-            tags$li("curadoria de 59 estudos-âncora (58 PMIDs + 1 tese CAPES): 54 linhas lidas manualmente e 29 linhas promovidas em lote com revisão registrada; trechos verbatim verificados contra o PubMed e contra o resumo arquivado da tese;"),
+            tags$li("curadoria de 67 estudos-âncora (66 PMIDs + 1 tese CAPES): 54 linhas lidas manualmente e 49 linhas promovidas em lote com revisão registrada; trechos verbatim verificados contra o PubMed e contra o resumo arquivado da tese;"),
             tags$li("integração de HPO, ClinVar, NCBI Gene, Reactome e Enrichr;"),
             tags$li("dados locais de SINASC, SIH/SUS e ERA5-Land (2010–2025).")
           ),

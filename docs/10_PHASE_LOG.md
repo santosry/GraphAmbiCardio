@@ -2,7 +2,7 @@
 
 All work was executed on **2026-10-31** (America/Sao_Paulo), with the CAPES triage and thesis integration added on **2026-11-01**. Each phase records what was done, what was obtained, criteria, results, open problems and whether it was apt to advance. Commands are reproducible; logs are in `logs/`.
 
-> **Nota sobre contagens:** as fases A–G registram os valores da época (33 âncoras / 54 arestas). Após as Fases M, N e O, os valores correntes são **59 âncoras / 84 linhas de evidência curada / 76 relações únicas / 4.639 linhas de evidência totais**.
+> **Nota sobre contagens:** as fases A–G registram os valores da época (33 âncoras / 54 arestas). Após as Fases M, N, O e P, os valores correntes são **67 âncoras / 104 linhas de evidência curada / 87 relações únicas / 4.659 linhas de evidência totais**.
 
 ---
 
@@ -199,8 +199,18 @@ Every deviation is reflected in the manuscript’s limitations section.
 
 **Done.** Implementada a promoção em lote dos 635 candidatos com fenótipo CHD e PMID. A extração automática passou a ser determinística e testável (`src/graphambicardio/curation/batch_extract.py`), com regras estritas de cláusula única. Nenhum candidato entra no grafo diretamente: a revisão fica registrada em `literature/curated/batch_chd_review.csv` (`src/graphambicardio/curation/batch_review.py`), e a construção do grafo rejeita linhas verificadas sem citação verbatim no PubMed. Foi criado também um pacote de leitura humana (`reports/batch_chd_review_packet.md`) e testes unitários para as regras e para a camada de revisão.
 
-**Obtained.** 635 candidatos com PMID; 23 candidatos automáticos revisados; **29 arestas verificadas**; 5 recusados; 605 registros ainda sem decisão. Os recusados foram uma publicação duplicada (PMID 2091934, mesmo dado de PMID 1397217), um efeito de exposição combinada PM10 + CO (PMID 37610216), duas redescobertas de arestas já curadas manualmente (PMID 32278917 e PMID 35916623) e uma estimativa de solvente para CoA/VSD (PMID 11745829), que não é VSD isolado. Dois achados condicionais foram aceitos com ressalva explícita (PMID 28520847 e PMID 32091506). O grafo passou a 2.238 nós, 4.135 relações e 4.639 linhas de evidência; 49 caminhos exposição a fenótipo (39 diretos, 10 mecanísticos).
+**Obtained.** 635 candidatos com PMID; 23 candidatos automáticos revisados; **49 arestas verificadas**; 15 recusados; 596 registros ainda sem decisão. Os recusados foram uma publicação duplicada (PMID 2091934, mesmo dado de PMID 1397217), um efeito de exposição combinada PM10 + CO (PMID 37610216), duas redescobertas de arestas já curadas manualmente (PMID 32278917 e PMID 35916623) e uma estimativa de solvente para CoA/VSD (PMID 11745829), que não é VSD isolado. Dois achados condicionais foram aceitos com ressalva explícita (PMID 28520847 e PMID 32091506). O grafo passou a 2.238 nós, 4.146 relações e 4.659 linhas de evidência; 60 caminhos exposição a fenótipo (50 diretos, 10 mecanísticos).
 
-**Problems.** A revisão foi assistida por IA e feita por um único revisor. A segunda passagem recuperou 11 propostas adicionais e a triagem heurística mostrou que 97 dos registros restantes são estudos humanos com tamanho de efeito, 172 são humanos sem confirmação da exposição ou do fenótipo candidato, 165 são animais ou celulares, 60 são cirúrgicos ou diagnósticos, 17 são revisões, 93 não têm sinal suficiente e 1 não tem resumo. A promoção em lote não substitui leitura humana independente.
+**Problems.** A revisão foi assistida por IA e feita por um único revisor. A segunda passagem recuperou 11 propostas adicionais e a triagem heurística mostrou que 88 dos registros restantes são estudos humanos com tamanho de efeito, 172 são humanos sem confirmação da exposição ou do fenótipo candidato, 165 são animais ou celulares, 60 são cirúrgicos ou diagnósticos, 17 são revisões, 93 não têm sinal suficiente e 1 não tem resumo. A leitura integral em lotes acrescentou 152 estudos com metadados, dos quais 35 tinham texto completo. A promoção em lote não substitui leitura humana independente.
 
 **Decision.** Manter a curadoria em lote como camada separada, auditável e conservadora, sempre marcada em `source_database` e nas notas da evidência, com segunda passagem por proposta e triagem explícita da fila restante. **Apt to advance: yes, as reviewed auxiliary curation; human confirmation remains the final gate.**
+
+---
+
+## Phase P: Leitura integral em lotes (2026-11-01)
+
+**Done.** Criado o pipeline `scripts/curation/05_read_fulltext_batch.py`, que tenta PDF de acesso aberto (Europe PMC, Unpaywall, OpenAlex e Semantic Scholar), texto completo XML e, por último, o resumo. O artigo é baixado em pasta temporária, convertido em texto, tem os metadados e trechos curtos arquivados, e o arquivo é apagado. Foram lidos **152 estudos**: **35 com texto completo** (11 PDF e 24 XML) e **117 apenas com resumo**. Ficaram **68 trechos curtos com contexto** em `literature/curated/fulltext_quotes/`, a tabela completa em `literature/curated/fulltext_metadata.csv` e o log em `reports/fulltext_reading_log.md`. A rodada acrescentou **20 arestas verificadas** (49 no total) e recusou 15 candidatos.
+
+**Problems.** A maioria dos estudos clássicos é paywalled e ficou no resumo. Tabelas e figuras não foram extraídas, apenas frases com efeito explícito. A leitura e a revisão foram assistidas por IA; a confirmação humana independente continua recomendada.
+
+**Decision.** Manter a leitura em lotes, sem reter artigos completos: a proveniência fica nos metadados e nos trechos arquivados. **Apt to advance: yes, as reviewed auxiliary curation; human confirmation remains the final gate.**

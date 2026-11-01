@@ -20202,6 +20202,15 @@
       <data key="d12">estabelecida</data>
       <data key="d13">30481714;40742883</data>
     </edge>
+    <edge source="EXP:PM25" target="CHD:AVSD" id="EDGE:1e31e67bdef3">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.85</data>
+      <data key="d10">B</data>
+      <data key="d11">1</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">30481714</data>
+    </edge>
     <edge source="EXP:PM25" target="CHD:PDA" id="EDGE:24236f82a8e3">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
@@ -20210,6 +20219,15 @@
       <data key="d11">2</data>
       <data key="d12">estabelecida</data>
       <data key="d13">23623715;26705853</data>
+    </edge>
+    <edge source="EXP:PM25" target="CHD:PS" id="EDGE:87683f81f47e">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.85</data>
+      <data key="d10">B</data>
+      <data key="d11">1</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">30481714</data>
     </edge>
     <edge source="EXP:PM25" target="CHD:VSD" id="EDGE:0a9693c08f76">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
@@ -20274,14 +20292,32 @@
       <data key="d12">nao_demonstrada</data>
       <data key="d13">34253165</data>
     </edge>
+    <edge source="EXP:PM10" target="CHD:VSD" id="EDGE:a4e5cabb4859">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.95</data>
+      <data key="d10">A</data>
+      <data key="d11">2</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">28557713;42825890</data>
+    </edge>
     <edge source="EXP:PM10" target="CHD:ASD" id="EDGE:07029dc61f97">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.85</data>
+      <data key="d10">B</data>
+      <data key="d11">2</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">28557713;32278917</data>
+    </edge>
+    <edge source="EXP:PM10" target="CHD:PDA" id="EDGE:69a382d9aeb9">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
       <data key="d9">0.85</data>
       <data key="d10">B</data>
       <data key="d11">1</data>
       <data key="d12">estabelecida</data>
-      <data key="d13">32278917</data>
+      <data key="d13">28557713</data>
     </edge>
     <edge source="EXP:PM10" target="CHD:PS" id="EDGE:45f7efd132cc">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
@@ -20292,14 +20328,14 @@
       <data key="d12">estabelecida</data>
       <data key="d13">23772934</data>
     </edge>
-    <edge source="EXP:PM10" target="CHD:VSD" id="EDGE:a4e5cabb4859">
+    <edge source="EXP:PM10" target="CHD:TOF" id="EDGE:de3c9652fa9a">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
       <data key="d9">0.85</data>
       <data key="d10">B</data>
       <data key="d11">1</data>
       <data key="d12">estabelecida</data>
-      <data key="d13">42825890</data>
+      <data key="d13">28557713</data>
     </edge>
     <edge source="EXP:CO" target="CHD:TOF" id="EDGE:6b7e04092e3e">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
@@ -20345,6 +20381,24 @@
       <data key="d11">1</data>
       <data key="d12">estabelecida</data>
       <data key="d13">32278917</data>
+    </edge>
+    <edge source="EXP:O3" target="CHD:PDA" id="EDGE:f1f56a17d717">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.85</data>
+      <data key="d10">B</data>
+      <data key="d11">1</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">26554783</data>
+    </edge>
+    <edge source="EXP:O3" target="CHD:VSD" id="EDGE:746bc46eb8a1">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.85</data>
+      <data key="d10">B</data>
+      <data key="d11">1</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">27752048</data>
     </edge>
     <edge source="EXP:HEAT" target="PROC:OFT" id="EDGE:9f860fda24e8">
       <data key="d7">HYPOTHESIS_LINK</data>
@@ -20418,6 +20472,15 @@
       <data key="d12">nao_demonstrada</data>
       <data key="d13">30257432;CAPES:7850222</data>
     </edge>
+    <edge source="EXP:SOLV" target="CHD:VSD" id="EDGE:25ac123a780f">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.95</data>
+      <data key="d10">A</data>
+      <data key="d11">2</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">22811060;3407644</data>
+    </edge>
     <edge source="EXP:SOLV" target="CHD:AS" id="EDGE:5c4e5b93b9ee">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
@@ -20445,14 +20508,14 @@
       <data key="d12">estabelecida</data>
       <data key="d13">22811060</data>
     </edge>
-    <edge source="EXP:SOLV" target="CHD:VSD" id="EDGE:25ac123a780f">
+    <edge source="EXP:SOLV" target="CHD:TGA" id="EDGE:70d81a02a81b">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
       <data key="d9">0.85</data>
       <data key="d10">B</data>
       <data key="d11">1</data>
       <data key="d12">estabelecida</data>
-      <data key="d13">3407644</data>
+      <data key="d13">22811060</data>
     </edge>
     <edge source="EXP:SOLV" target="CHD:ALL" id="EDGE:193fe60e7a03">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
@@ -20463,14 +20526,23 @@
       <data key="d12">nao_demonstrada</data>
       <data key="d13">30257432</data>
     </edge>
-    <edge source="EXP:METALS" target="CHD:VSD" id="EDGE:b2abd8669ade">
+    <edge source="EXP:METALS" target="CHD:ASD" id="EDGE:96558ce24f45">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
       <data key="d9">0.95</data>
       <data key="d10">A</data>
       <data key="d11">2</data>
       <data key="d12">estabelecida</data>
-      <data key="d13">25628158;27224896</data>
+      <data key="d13">24916166;25628158</data>
+    </edge>
+    <edge source="EXP:METALS" target="CHD:VSD" id="EDGE:b2abd8669ade">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.95</data>
+      <data key="d10">A</data>
+      <data key="d11">3</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">25628158;27224896;36341763</data>
     </edge>
     <edge source="EXP:METALS" target="CHD:ALL" id="EDGE:08ffbc4b9560">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
@@ -20481,15 +20553,6 @@
       <data key="d12">estabelecida</data>
       <data key="d13">33135766</data>
     </edge>
-    <edge source="EXP:METALS" target="CHD:ASD" id="EDGE:96558ce24f45">
-      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
-      <data key="d8">observed</data>
-      <data key="d9">0.85</data>
-      <data key="d10">B</data>
-      <data key="d11">1</data>
-      <data key="d12">estabelecida</data>
-      <data key="d13">25628158</data>
-    </edge>
     <edge source="EXP:METALS" target="CHD:COA" id="EDGE:9948a73583db">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
@@ -20498,6 +20561,15 @@
       <data key="d11">1</data>
       <data key="d12">estabelecida</data>
       <data key="d13">3209340</data>
+    </edge>
+    <edge source="EXP:METALS" target="CHD:PDA" id="EDGE:79a8f82512a7">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.85</data>
+      <data key="d10">B</data>
+      <data key="d11">1</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">24916166</data>
     </edge>
     <edge source="EXP:SMOKE" target="CHD:PDA" id="EDGE:4ebd593a3307">
       <data key="d7">HYPOTHESIS_CANDIDATE</data>
@@ -20508,6 +20580,33 @@
       <data key="d12">nao_demonstrada</data>
       <data key="d13">GraphAmbiCardio gene-overlap rule</data>
     </edge>
+    <edge source="EXP:SMOKE" target="CHD:ASD" id="EDGE:f8a422d4a274">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.95</data>
+      <data key="d10">A</data>
+      <data key="d11">3</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">10230836;21357347;30905164</data>
+    </edge>
+    <edge source="EXP:SMOKE" target="CHD:AVSD" id="EDGE:9555203143c1">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.95</data>
+      <data key="d10">A</data>
+      <data key="d11">2</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">10230836;22903798</data>
+    </edge>
+    <edge source="EXP:SMOKE" target="CHD:TOF" id="EDGE:7bdf0dca34ec">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.95</data>
+      <data key="d10">A</data>
+      <data key="d11">2</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">10230836;35916623</data>
+    </edge>
     <edge source="EXP:SMOKE" target="CHD:ALL" id="EDGE:1405ed2059aa">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
@@ -20517,14 +20616,14 @@
       <data key="d12">estabelecida</data>
       <data key="d13">35916623</data>
     </edge>
-    <edge source="EXP:SMOKE" target="CHD:AVSD" id="EDGE:9555203143c1">
+    <edge source="EXP:SMOKE" target="CHD:DORV" id="EDGE:7854a3fe642b">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
       <data key="d9">0.85</data>
       <data key="d10">B</data>
       <data key="d11">1</data>
       <data key="d12">estabelecida</data>
-      <data key="d13">22903798</data>
+      <data key="d13">34508749</data>
     </edge>
     <edge source="EXP:SMOKE" target="CHD:EBSTEIN" id="EDGE:27f2f277b2af">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
@@ -20544,14 +20643,14 @@
       <data key="d12">estabelecida</data>
       <data key="d13">21357347</data>
     </edge>
-    <edge source="EXP:SMOKE" target="CHD:TOF" id="EDGE:7bdf0dca34ec">
+    <edge source="EXP:SMOKE" target="CHD:TGA" id="EDGE:c0a89d168a22">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
       <data key="d8">observed</data>
       <data key="d9">0.85</data>
       <data key="d10">B</data>
       <data key="d11">1</data>
       <data key="d12">estabelecida</data>
-      <data key="d13">35916623</data>
+      <data key="d13">21357347</data>
     </edge>
     <edge source="EXP:SMOKE" target="CHD:TRUNCUS" id="EDGE:978898603d0e">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
@@ -20561,15 +20660,6 @@
       <data key="d11">1</data>
       <data key="d12">estabelecida</data>
       <data key="d13">21357347</data>
-    </edge>
-    <edge source="EXP:SMOKE" target="CHD:ASD" id="EDGE:f8a422d4a274">
-      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
-      <data key="d8">observed</data>
-      <data key="d9">0.5</data>
-      <data key="d10">D</data>
-      <data key="d11">1</data>
-      <data key="d12">nao_demonstrada</data>
-      <data key="d13">30905164</data>
     </edge>
     <edge source="EXP:SMOKE" target="MECH:EPIGEN" id="EDGE:3e5cd65026ee">
       <data key="d7">EXPOSURE_MODULATES_MECHANISM</data>
@@ -20606,6 +20696,15 @@
       <data key="d11">1</data>
       <data key="d12">estabelecida</data>
       <data key="d13">1397217</data>
+    </edge>
+    <edge source="EXP:ALCOHOL" target="CHD:AVSD" id="EDGE:4a6be96d59e7">
+      <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>
+      <data key="d8">observed</data>
+      <data key="d9">0.85</data>
+      <data key="d10">B</data>
+      <data key="d11">1</data>
+      <data key="d12">estabelecida</data>
+      <data key="d13">35014860</data>
     </edge>
     <edge source="EXP:ALCOHOL" target="CHD:TOF" id="EDGE:3751c962981d">
       <data key="d7">EXPOSURE_ASSOCIATED_WITH_PHENOTYPE</data>

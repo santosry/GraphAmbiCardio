@@ -66,6 +66,8 @@ RESOURCES = [
     ("revisao_curadoria_lote", "literature/curated/batch_chd_review.csv", "34 linhas de revisão (29 verificadas, 5 recusadas) com citação, efeito, população, janela e desenho"),
     ("propostas_segunda_passagem", "literature/curated/batch_chd_proposals.csv", "Propostas de atribuição por proximidade fenótipo-efeito; não evidência até revisão"),
     ("triagem_fila", "literature/curated/batch_chd_triage.csv", "Triagem heurística de prioridade dos registros restantes da fila de curadoria"),
+    ("leitura_integral", "literature/curated/fulltext_metadata.csv", "Metadados dos 152 estudos lidos em texto completo ou resumo; artigos completos não são mantidos"),
+    ("registro_leitura", "reports/fulltext_reading_log.md", "Registro legível da leitura em lotes, com acesso, páginas, candidatos e decisões"),
 ]
 
 

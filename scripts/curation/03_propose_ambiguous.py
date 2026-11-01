@@ -29,6 +29,7 @@ from graphambicardio.curation.batch_extract import (  # noqa: E402
     COMPETING_EXPOSURES,
     EXPOSURE_PATTERNS,
     PHENOTYPE_PATTERNS_ALL,
+    is_negated_mention,
     iter_effects,
     normalise,
     pluralise,
@@ -120,8 +121,14 @@ def propose(row: dict[str, Any], abstract: str) -> list[dict[str, Any]]:
             )
             if nearest_exposure != exposures[0]:
                 continue
-            left = [m for m in mentions if m[1] <= effect["start"]]
-            right = [m for m in mentions if m[0] >= effect["end"]]
+            left = [
+                m for m in mentions
+                if m[1] <= effect["start"] and not is_negated_mention(clause, m[0])
+            ]
+            right = [
+                m for m in mentions
+                if m[0] >= effect["end"] and not is_negated_mention(clause, m[0])
+            ]
             orientation = "effect_after_phenotype"
             if left:
                 mention = max(left, key=lambda m: m[1])

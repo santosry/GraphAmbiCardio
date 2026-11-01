@@ -123,7 +123,7 @@ This tier is a **presentation layer** over the same confidence formula; it does 
 
 ## 7. Human audit
 
-Observed (curated) edges follow two routes. The 54 manual rows were read by the study team. The 29 batch rows were promoted from automatic screening after an explicit review entry in `literature/curated/batch_chd_review.csv`; that review was assisted by AI and is flagged as such in `source_database` and in the evidence notes, so independent human confirmation is still recommended. PubMed quotes are re-verified automatically at build time and in the validation step; the CAPES thesis quote is re-verified against the archived Sucupira abstract. Reviews (narrative, systematic, meta-analysis) do not count as independent replication when confidence is aggregated.
+Observed (curated) edges follow two routes. The 54 manual rows were read by the study team. The 49 batch rows were promoted from automatic screening after an explicit review entry in `literature/curated/batch_chd_review.csv`; that review was assisted by AI and is flagged as such in `source_database` and in the evidence notes, so independent human confirmation is still recommended. PubMed quotes are re-verified automatically at build time and in the validation step; the CAPES thesis quote is re-verified against the archived Sucupira abstract. Reviews (narrative, systematic, meta-analysis) do not count as independent replication when confidence is aggregated.
 
 ---
 

@@ -15,13 +15,13 @@ A busca é estruturada e não sistemática; a cobertura é assimétrica e declar
 
 | Status | Registros |
 |---|---:|
-| anchor | 106 |
+| anchor | 135 |
 | excluded | 558 |
 | included | 2 |
-| triaged_not_selected | 1,844 |
+| triaged_not_selected | 1,815 |
 
-**Estudos-âncora no grafo:** 58 PMIDs + 1 tese CAPES = 59.
-**Desses, aparecem nos registros top-N recuperados:** 33 PMIDs + 1 tese CAPES. Os outros **25 PMIDs** foram incluídos por busca dirigida/referências e não estão no top-N.
+**Estudos-âncora no grafo:** 66 PMIDs + 1 tese CAPES = 67.
+**Desses, aparecem nos registros top-N recuperados:** 40 PMIDs + 1 tese CAPES. Os outros **26 PMIDs** foram incluídos por busca dirigida/referências e não estão no top-N.
 **CAPES:** 1 ID incluído, 551 IDs excluídos; os 560 registros incluem 8 repetições entre consultas.
 
 ## Política de recuperação

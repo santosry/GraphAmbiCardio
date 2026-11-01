@@ -12,15 +12,23 @@
 - Novos artefatos: `reports/exhaustive_retrieval.csv`, `literature/screening/exhaustive_candidates.csv`, `outputs/graph/screened_studies.graphml/json`, `reports/screened_studies.json`.
 
 ### Curadoria em lote com camada de revisão (2026-11-01)
-- Fila de promoção dos 635 candidatos CHD com PMID: 23 candidatos automáticos e 11 propostas de segunda passagem revisadas, **29 arestas verificadas**, 5 recusados e 605 registros ainda sem decisão.
+- Fila de promoção dos 635 candidatos CHD com PMID: 23 candidatos automáticos, 11 propostas de segunda passagem e leitura integral em lotes; **49 arestas verificadas**, 15 recusados e 596 registros da fila ainda sem decisão.
 - Extração determinística e testável em `src/graphambicardio/curation/batch_extract.py`; regra de cláusula única exige uma exposição, um fenótipo e um tamanho de efeito explícito. Frases com múltiplos fenótipos e valores de p são rejeitadas.
 - Camada de revisão em `literature/curated/batch_chd_review.csv` (`src/graphambicardio/curation/batch_review.py`). Nenhum candidato entra no grafo sem `review_status=verified`.
 - A construção do grafo rejeita linhas verificadas cuja citação não seja verbatim no resumo do PubMed; a validação audita a revisão contra a tabela de evidências.
 - Recusados: PMID 2091934 (publicação duplicada de PMID 1397217), PMID 37610216 (exposição combinada PM10 + CO), dois candidatos que já existiam na curadoria manual (PMID 32278917 e PMID 35916623), bloqueados por regra automática de duplicidade, e PMID 11745829 (estimativa de solvente para CoA/VSD, não VSD isolado). Achados condicionais de PMID 28520847 e PMID 32091506 entram com ressalva explícita.
-- Grafo atualizado: 2.238 nós, 4.135 relações, 4.639 linhas de evidência, 49 caminhos exposição a fenótipo (39 diretos, 10 mecanísticos) e 20 lacunas.
-- Família de hipóteses gênicas atualizada para **75 testes**, 1 com sobreposição ≥2, nenhuma significativa após BH-FDR.
+- Grafo atualizado: 2.238 nós, 4.146 relações, 4.659 linhas de evidência, 60 caminhos exposição a fenótipo (50 diretos, 10 mecanísticos) e 20 lacunas.
+- Família de hipóteses gênicas atualizada para **66 testes**, 1 com sobreposição ≥2, nenhuma significativa após BH-FDR.
 - Novo pacote de leitura humana: `reports/batch_chd_review_packet.md`; segunda passagem por proposta (`reports/batch_chd_proposals.md`) e triagem da fila restante (`reports/batch_chd_triage.md`); novo alvo `make curation`.
 - Estilo editorial: travessão removido do README, dos documentos públicos e do texto do app, com verificação automática na conformidade.
+
+### Leitura integral em lotes (2026-11-01)
+- Pipeline `scripts/curation/05_read_fulltext_batch.py`: PDF de acesso aberto, XML JATS e resumo, em lotes de 10; o arquivo completo é apagado depois da extração.
+- 152 estudos com leitura registrada: 35 com texto completo (11 PDF + 24 XML) e 117 apenas com resumo; 68 trechos curtos arquivados em `literature/curated/fulltext_quotes/`.
+- 20 arestas verificadas adicionais (49 no total) e 15 candidatos recusados, incluindo duplicatas, estimativas nulas, citações de revisão narrativa e atribuições erradas.
+- Tabela de metadados em `literature/curated/fulltext_metadata.csv`; log em `reports/fulltext_reading_log.md`; nenhum artigo completo permanece no notebook.
+- Esquema de evidência ganhou `quote_source` e `quote_archive`; a validação recheca 100% dos trechos de texto completo contra o trecho arquivado.
+- Nova dependência de desenvolvimento: `pypdf`.
 
 ### Correções metodológicas críticas
 - **Janela gestacional:** concepção estimada como data de nascimento menos
@@ -33,7 +41,7 @@
 - **Modelo climático:** Open-Meteo passa a requisitar explicitamente
   `models=era5_land`; metadados registram modelo, resolução, célula retornada,
   elevação, unidades e timestamp. Série recalculada: P90 33,3 °C; 68 ondas.
-- **Hipóteses gênicas:** família completa definida antes da seleção (75 testes na versão atual); universo HPO de 978 genes; BH-FDR em toda a família; permutação
+- **Hipóteses gênicas:** família completa definida antes da seleção (66 testes na versão atual); universo HPO de 978 genes; BH-FDR em toda a família; permutação
   pareada por tamanho como sensibilidade; origem dos conjuntos gênicos
   documentada. Nenhum candidato significativo.
 - **Sexo:** códigos diferentes de 1/2 passam a ser ausentes, não feminino.

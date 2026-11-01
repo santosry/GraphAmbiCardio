@@ -162,7 +162,7 @@ Deduplication key precedence: PMID → DOI → normalised title (alphanumeric, l
 | **Unique records screened** | **1,970** | title/abstract (automated triage) |
 | Unique with abstract (PubMed/Europe PMC subset) | 1,003 | 91.6% of that subset |
 | Manually curated anchor studies | 34 | 55 evidence rows = 54 unique relations (33 PMIDs + 1 CAPES thesis) |
-| Batch curation from the exhaustive layer | 29 | 23 first-pass candidates plus 11 second-pass proposals and one manual addition; 5 rejected (2 already curated, 1 duplicate publication, 1 combined exposure, 1 combined CoA/VSD) |
+| Batch curation from the exhaustive layer | 49 | 23 first-pass candidates, 11 second-pass proposals, manual additions and full-text reading; 15 rejected (duplicates, null estimates, narrative-review citations and misattributed effects) |
 
 Machine-readable: `reports/prisma_flow.csv`.
 
@@ -199,7 +199,7 @@ A triagem automática de todos os registros recuperados está em `literature/scr
 ### Screening procedure actually used
 
 1. **Automated triage** of all retrieved records (`literature/screen.py`): species, study design, exposure-window vocabulary, mechanism vocabulary, phenotype vocabulary, review flag.
-2. **Manual reading** of 34 anchor studies (33 PMIDs + 1 CAPES thesis) selected to cover: each exposure with positive human evidence, each mechanism with experimental evidence, each process→phenotype link, and the classic gene discoveries. All 552 unique CAPES records were title-screened; one thesis was read at abstract level and included. In addition, 23 first-pass candidates and 11 second-pass proposals from the exhaustive layer were reviewed; 29 became evidence and 5 were rejected.
+2. **Manual reading** of 34 anchor studies (33 PMIDs + 1 CAPES thesis) selected to cover: each exposure with positive human evidence, each mechanism with experimental evidence, each process→phenotype link, and the classic gene discoveries. All 552 unique CAPES records were title-screened; one thesis was read at abstract level and included. In addition, 23 first-pass candidates, 11 second-pass proposals and 152 full-text/abstract readings from the exhaustive layer were reviewed; 49 became evidence and 15 were rejected.
 3. **Audit** of quote fidelity at build time (100%) and re-check of a random 25% at validation time.
 
 This is **not a systematic review**. It is a structured, non-systematic search with targeted manual curation: there was no dual screening of all records, no full-text review and no formal risk-of-bias instrument.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T18:22:09Z",
+  "generated_at": "2026-11-01T19:04:58Z",
   "passed": true,
   "checks": [
     {
@@ -10,12 +10,12 @@
     {
       "check": "columns:outputs/graph/relations.csv",
       "ok": true,
-      "detail": "4135 rows"
+      "detail": "4146 rows"
     },
     {
       "check": "columns:outputs/graph/evidence.csv",
       "ok": true,
-      "detail": "4639 rows"
+      "detail": "4659 rows"
     },
     {
       "check": "columns:outputs/tables/exploratory_models.csv",
@@ -80,7 +80,7 @@
     {
       "check": "columns:outputs/tables/hypothesis_family.csv",
       "ok": true,
-      "detail": "75 rows"
+      "detail": "66 rows"
     },
     {
       "check": "columns:outputs/tables/mechanism_gene_sets.csv",

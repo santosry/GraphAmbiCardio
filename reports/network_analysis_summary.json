@@ -1,20 +1,20 @@
 {
   "n_nodes": 2238,
-  "n_relations": 4135,
-  "n_edges_analysis_graph": 4120,
+  "n_relations": 4146,
+  "n_edges_analysis_graph": 4131,
   "n_conceptual_nodes": 44,
-  "n_conceptual_edges": 69,
-  "n_exposure_phenotype_paths": 49,
-  "n_direct_exposure_phenotype_pairs": 39,
+  "n_conceptual_edges": 80,
+  "n_exposure_phenotype_paths": 60,
+  "n_direct_exposure_phenotype_pairs": 50,
   "n_gaps": 20,
   "top_degree": [
     {
       "node_id": "CHD:VSD",
       "node_type": "Phenotype",
-      "degree": 535,
-      "in_degree": 535,
+      "degree": 536,
+      "in_degree": 536,
       "out_degree": 0,
-      "betweenness": 0.378923
+      "betweenness": 0.37982
     },
     {
       "node_id": "CHD:ASD",
@@ -22,23 +22,23 @@
       "degree": 498,
       "in_degree": 498,
       "out_degree": 0,
-      "betweenness": 0.330217
+      "betweenness": 0.330108
     },
     {
       "node_id": "CHD:PDA",
       "node_type": "Phenotype",
-      "degree": 410,
-      "in_degree": 410,
+      "degree": 413,
+      "in_degree": 413,
       "out_degree": 0,
-      "betweenness": 0.223216
+      "betweenness": 0.223703
     },
     {
       "node_id": "CHD:TOF",
       "node_type": "Phenotype",
-      "degree": 199,
-      "in_degree": 199,
+      "degree": 200,
+      "in_degree": 200,
       "out_degree": 0,
-      "betweenness": 0.066447
+      "betweenness": 0.065123
     },
     {
       "node_id": "CHD:COA",
@@ -46,31 +46,31 @@
       "degree": 163,
       "in_degree": 163,
       "out_degree": 0,
-      "betweenness": 0.067446
+      "betweenness": 0.062068
     },
     {
       "node_id": "CHD:PS",
       "node_type": "Phenotype",
-      "degree": 151,
-      "in_degree": 151,
+      "degree": 152,
+      "in_degree": 152,
       "out_degree": 0,
-      "betweenness": 0.050895
+      "betweenness": 0.051491
     },
     {
       "node_id": "CHD:DORV",
       "node_type": "Phenotype",
-      "degree": 97,
-      "in_degree": 97,
+      "degree": 98,
+      "in_degree": 98,
       "out_degree": 0,
-      "betweenness": 0.053614
+      "betweenness": 0.052998
     },
     {
       "node_id": "CHD:TGA",
       "node_type": "Phenotype",
-      "degree": 88,
-      "in_degree": 88,
+      "degree": 90,
+      "in_degree": 90,
       "out_degree": 0,
-      "betweenness": 0.035027
+      "betweenness": 0.035304
     },
     {
       "node_id": "CHD:AS",
@@ -78,15 +78,15 @@
       "degree": 74,
       "in_degree": 74,
       "out_degree": 0,
-      "betweenness": 0.034183
+      "betweenness": 0.033971
     },
     {
-      "node_id": "CHD:HLHS",
+      "node_id": "CHD:AVSD",
       "node_type": "Phenotype",
-      "degree": 54,
-      "in_degree": 54,
+      "degree": 55,
+      "in_degree": 55,
       "out_degree": 0,
-      "betweenness": 0.018074
+      "betweenness": 0.011676
     }
   ]
 }

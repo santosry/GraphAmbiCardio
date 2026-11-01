@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T18:23:56Z",
+  "generated_at": "2026-11-01T19:05:58Z",
   "passed": true,
   "issues": [],
   "checks": {
@@ -16,11 +16,11 @@
       "n_required": 29
     },
     "fair_checksums": {
-      "n_resources": 53,
+      "n_resources": 55,
       "bad": []
     },
     "git": {
-      "tracked_files": 438,
+      "tracked_files": 476,
       "data_raw_tracked": [],
       "venv_tracked": []
     },

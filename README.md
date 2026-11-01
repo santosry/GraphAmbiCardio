@@ -46,8 +46,8 @@ flowchart TD
     C --> D[Recuperação exaustiva]
     D --> E[Triagem automática: 3.963 candidatos]
     E --> F[Camada de estudos triados: nunca é evidência]
-    E --> G[Curadoria: 59 estudos-âncora]
-    E --> H[Promoção em lote com revisão: 29 arestas]
+    E --> G[Curadoria: 67 estudos-âncora]
+    E --> H[Promoção em lote com revisão: 49 arestas]
     G --> I[Grafo com proveniência]
     H --> I
     I --> J[Caminhos, lacunas e hipóteses]
@@ -118,24 +118,22 @@ O registro bruto tem **2.510 linhas**, **540 duplicatas** e **1.970 registros ú
 
 ### 2.3 Curadoria manual
 
-Os estudos-âncora foram lidos, e cada aresta exige um trecho verbatim do resumo.
+Os estudos-âncora foram lidos, e cada aresta exige um trecho verbatim do resumo ou do texto completo.
 
 | Item | Quantidade |
 |---|---:|
-| Estudos-âncora | **59** (58 PMIDs + 1 tese CAPES) |
-| Linhas de evidência curada | **84** |
-| Relações únicas | **76** |
+| Estudos-âncora | **67** (66 PMIDs + 1 tese CAPES) |
+| Linhas de evidência curada | **104** |
+| Relações únicas | **87** |
 | Linhas da curadoria manual anterior | 54 |
-| Linhas promovidas pela curadoria em lote revisada | 29 |
+| Linhas promovidas pela curadoria em lote revisada | 49 |
 | Linha da tese CAPES | 1 |
 
 A tese incluída é uma revisão sistemática sobre exposição materna a agrotóxicos e malformações congênitas (CAPES 7850222), tratada como evidência **indireta**.
 
-Os textos completos disponíveis estão em `data_raw/anchor_fulltext/`: 4 PDFs e 6 XML de texto completo, 24 resumos e um `index.html` navegável com o manifesto da pasta. O download é local e não versionado, feito por `scripts/collection/05_download_anchor_fulltext.py`; registros pagos ficam com o resumo e os links canônicos.
+Os artigos completos não ficam no notebook. Cada estudo passa por uma pasta temporária, tem o texto extraído, e o arquivo é apagado em seguida. A tabela com todos os metadados (PMID, DOI, revista, ano, licença, acesso, páginas, caracteres, candidatos e decisões) está em `literature/curated/fulltext_metadata.csv`; o resumo legível está em `reports/fulltext_reading_log.md`; os trechos curtos com contexto ficam em `literature/curated/fulltext_quotes/`.
 
-### 2.4 Promoção em lote com camada de revisão
-
-Para não perder os 638 candidatos com fenótipo CHD, foi criado um fluxo separado de promoção em lote. Ele é deliberadamente conservador.
+### 2.4 Promoção em lote e leitura integral
 
 | Etapa | Resultado |
 |---|---:|
@@ -143,36 +141,28 @@ Para não perder os 638 candidatos com fenótipo CHD, foi criado um fluxo separa
 | Candidatos automáticos revisados (primeira passagem) | **23** |
 | Aprovados pela regra estrita na fila atual | **22** |
 | Propostas de segunda passagem revisadas | **11** (10 verificadas, 1 recusada) |
-| Total de linhas de revisão | **34** (29 verificadas, 5 recusadas) |
-| Registros ainda sem decisão | **605** |
+| Estudos com leitura integral registrada | **152** |
+| Com texto completo (PDF ou XML) | **35** (11 PDF + 24 XML) |
+| Somente com resumo | **117** |
+| Total de linhas de revisão | **64** (49 verificadas, 15 recusadas) |
+| Registros da fila ainda sem decisão | **596** |
 
 A **primeira passagem** exige, na mesma cláusula: **uma** exposição, **um** fenótipo e **um** tamanho de efeito explícito (OR, RR, HR ou PR). Se a frase cita dois fenótipos, dois resultados ou apenas um valor de p, o candidato vai para revisão e não vira aresta.
 
-A **segunda passagem** trata os 97 resumos humanos que têm tamanho de efeito, mas citam mais de um fenótipo. Ela não promove nada sozinha: mapeia cada efeito para o fenótipo **e** para a exposição mais próximos na mesma cláusula e grava uma proposta em `literature/curated/batch_chd_proposals.csv`. Só vira aresta se o revisor aceitar a proposta, com trecho, efeito, população, janela e desenho explícitos. Isso corrigiu casos como o de PM10 e estenose pulmonar, em que a regra estrita descartava a frase inteira.
+A **segunda passagem** trata os resumos humanos que têm tamanho de efeito, mas citam mais de um fenótipo. Ela não promove nada sozinha: mapeia cada efeito para o fenótipo e para a exposição mais próximos na mesma cláusula e grava uma proposta em `literature/curated/batch_chd_proposals.csv`. Só vira aresta se o revisor aceitar a proposta, com trecho, efeito, população, janela e desenho explícitos.
 
-A revisão também permite **adição manual** quando a triagem automática não listou um fenótipo que o resumo reporta. A condição é que o PMID já exista na fila e que a linha de revisão traga citação, efeito e desenho. O build continua verificando se a citação é verbatim.
+A **leitura integral** foi feita em lotes de 10. Para cada estudo, o pipeline tenta PDF de acesso aberto (Europe PMC, Unpaywall, OpenAlex, Semantic Scholar), depois texto completo XML, e por fim o resumo. Foram lidos 35 textos completos e 117 resumos. A extração usa frases com efeito explícito, atribuição ao fenótipo e à exposição mais próximos, e arquiva apenas a citação curta com contexto. Nenhum PDF ou XML permanece no disco.
 
-Os 605 registros restantes foram triados por prioridade em `reports/batch_chd_triage.md`: **97** têm tamanho de efeito explícito, 172 são estudos humanos em que a exposição ou o fenótipo candidato não foi confirmado, 165 são animais ou celulares, 60 são cirúrgicos ou diagnósticos, 17 são revisões ou meta-análises, 93 não têm sinal suficiente e 1 não tem resumo. A triagem é heurística e não altera evidência; ela só indica onde a leitura humana rende mais.
+Desta rodada saíram **20 arestas verificadas** adicionais, incluindo PM10 para ASD, PDA, TOF e VSD, metais para VSD/ASD, solventes para TGA e VSD, tabagismo para L-TGA, DORV e AVSD e PM2,5 para estenose pulmonar e defeito de coxim endocárdico. Foram recusados 15 candidatos, entre eles:
 
-A revisão é registrada em `literature/curated/batch_chd_review.csv`, com:
+- publicações duplicadas e arestas já presentes na curadoria manual (PMID 2091934, 32278917, 35916623, 26705853 e 32278917 em outros pares);
+- uma revisão narrativa que apenas cita outros estudos (PMID 30257432);
+- estimativas nulas de uma meta-análise (PMID 26110619) e um candidato de nota de rodapé (PMID 26554783);
+- atribuições erradas de efeito, como solvente para CoA/VSD (PMID 11745829), tabagismo para VSD a partir de uma citação secundária (PMID 29937526) e NO2 para coarctação com trecho de extração incompleto (PMID 24727555).
 
-- status `verified` ou `rejected`;
-- trecho verbatim usado como citação;
-- efeito revisado, população e janela de exposição;
-- desenho do estudo corrigido quando a triagem automática errou;
-- nota curta com o motivo, inclusive para achados condicionais (interação).
+Dois achados continuam aceitos com ressalva explícita, porque são condicionais: **PMID 28520847** (NO2 apenas no estrato de baixa metionina) e **PMID 32091506** (PM2,5 apenas entre gestantes que tiveram evento de calor extremo). O texto do efeito e a nota dizem isso em cada linha.
 
-Os cinco candidatos recusados foram:
-
-1. **PMID 2091934**, publicação duplicada dos mesmos dados finlandeses de 1982 a 1983 já capturados por **PMID 1397217** (mesmo OR 1,9 e mesmo intervalo).
-2. **PMID 37610216**, cujo efeito se refere à exposição **combinada** de PM10 e CO, não ao PM10 isolado.
-3. **PMID 32278917**, redescoberto pela automação, mas já presente na curadoria manual com a mesma exposição, fenótipo e referência (NO2 para coarctação, OR 1,14). Duplicatas são bloqueadas automaticamente.
-4. **PMID 35916623**, também já presente na curadoria manual (tabagismo para tetralogia de Fallot, RR 9,84), pelo mesmo motivo.
-5. **PMID 11745829**, cujo efeito de solvente para VSD se refere a **CoA/VSD** (coarctação associada a VSD), não a VSD isolado. A aresta solvente para coarctação do mesmo estudo foi aceita.
-
-As duas redescobertas são um controle positivo do fluxo: a automação encontrou exatamente as arestas que a curadoria manual já havia aceitado. Elas não entram duas vezes.
-
-Dois achados foram aceitos com ressalva explícita, porque são condicionais: **PMID 28520847** (NO2 apenas no estrato de baixa metionina) e **PMID 32091506** (PM2,5 apenas entre gestantes que tiveram evento de calor extremo). O texto do efeito e a nota dizem isso em cada linha.
+A revisão é registrada em `literature/curated/batch_chd_review.csv`, com status `verified` ou `rejected`, trecho verbatim, efeito, população, janela, desenho, fonte da citação (`abstract` ou `full_text`) e caminho do arquivo de citação quando a leitura foi integral.
 
 ### 2.5 Verificação de citações
 
@@ -185,6 +175,7 @@ Todos os trechos curados passam por verificação automática:
 | Rechecagem independente por amostragem | 25% das arestas curadas | registra no relatório de validação |
 | Revisão em lote contra a fila automática | 100% das linhas verificadas | falha a validação |
 | Duplicata de aresta já curada manualmente | 100% das linhas verificadas | falha a validação |
+| Trecho de texto completo confere com o trecho arquivado | 100% das arestas full_text | falha a validação |
 
 O verificador de citações está em `scripts/integration/01_build_graph.py`; a auditoria da camada de revisão está em `scripts/validation/01_validate.py`.
 
@@ -192,18 +183,18 @@ O verificador de citações está em `scripts/integration/01_build_graph.py`; a 
 
 ## 3. O que o grafo contém
 
-O grafo tem **2.238 nós**, **4.135 relações** e **4.639 linhas de evidência**. As camadas nunca são misturadas nas análises.
+O grafo tem **2.238 nós**, **4.146 relações** e **4.659 linhas de evidência**. As camadas nunca são misturadas nas análises.
 
 ```mermaid
 flowchart LR
-    OBS[Observada: 76 relações] --> STR[Estruturada: 4.040]
+    OBS[Observada: 87 relações] --> STR[Estruturada: 4.040]
     INF[Inferida: 4] --> HYP[Hipótese: 10]
     ECO[Ecológica: 5]
 ```
 
 | Camada | Relações | O que significa |
 |---|---:|---|
-| **Observada** | 76 | associações e mecanismos documentados com trecho e referência |
+| **Observada** | 87 | associações e mecanismos documentados com trecho e referência |
 | **Estruturada** | 4.040 | anotações de HPO, ClinVar, Reactome e NCBI Gene |
 | **Inferida** | 4 | mapeamento por palavra-chave de via para processo, explicitamente marcado |
 | **Hipótese** | 10 | caminhos candidatos com elo ausente, fora das análises |
@@ -224,14 +215,14 @@ flowchart LR
 
 ### Rede
 
-- **49 caminhos exposição a fenótipo**: 39 diretos e 10 mecanísticos.
+- **60 caminhos exposição a fenótipo**: 50 diretos e 10 mecanísticos.
 - **20 lacunas explícitas**, ou seja, entidades sem nenhuma aresta curada de saída.
 - **7 caminhos candidatos com elo ausente**, marcados como hipótese.
 - Fenótipos com maior grau: VSD (535), ASD (497), PDA (410), TOF (199), COA (162).
 
 ### Hipóteses por sobreposição gênica
 
-- Família completa de **75 testes** (exposição x mecanismo x fenótipo).
+- Família completa de **66 testes** (exposição x mecanismo x fenótipo).
 - **1** hipótese com sobreposição de 2 ou mais genes; **1** reportada.
 - **Nenhuma** significativa após BH-FDR, e nenhuma significativa na permutação pareada por tamanho (1.000 permutações).
 - Universo HPO de **978 genes**.
@@ -430,9 +421,11 @@ JULIA_REPS=500 julia --project=julia julia/gestational_window_simulation.jl
 .venv/Scripts/python.exe scripts/curation/02_export_review_packet.py
 .venv/Scripts/python.exe scripts/curation/03_propose_ambiguous.py
 .venv/Scripts/python.exe scripts/curation/04_triage_remaining.py
+.venv/Scripts/python.exe scripts/curation/05_read_fulltext_batch.py --source anchors --batch 1
+.venv/Scripts/python.exe scripts/curation/06_fulltext_report.py
 ```
 
-O primeiro comando reconstrói a fila. O segundo gera `reports/batch_chd_review_packet.md` com o resumo de cada candidato. O terceiro gera propostas de segunda passagem em `literature/curated/batch_chd_proposals.csv` e `reports/batch_chd_proposals.md`. O quarto prioriza a fila restante em `literature/curated/batch_chd_triage.csv` e `reports/batch_chd_triage.md`.
+O primeiro comando reconstrói a fila. O segundo gera `reports/batch_chd_review_packet.md` com o resumo de cada candidato. O terceiro gera propostas de segunda passagem em `literature/curated/batch_chd_proposals.csv` e `reports/batch_chd_proposals.md`. O quarto prioriza a fila restante em `literature/curated/batch_chd_triage.csv` e `reports/batch_chd_triage.md`. O quinto lê um lote de 10 em texto completo, apaga os arquivos e registra os metadados. O sexto gera `reports/fulltext_reading_log.md`.
 
 ---
 
@@ -444,6 +437,8 @@ O primeiro comando reconstrói a fila. O segundo gera `reports/batch_chd_review_
 | Revisão da curadoria em lote | incluída em `01_validate.py` | `reports/validation_report.md` |
 | Triagem da fila restante | `scripts/curation/04_triage_remaining.py` | `reports/batch_chd_triage.md` |
 | Propostas de segunda passagem | `scripts/curation/03_propose_ambiguous.py` | `reports/batch_chd_proposals.md` |
+| Leitura integral em lotes | `scripts/curation/05_read_fulltext_batch.py` | `reports/fulltext_reading_log.md` |
+| Tabela de metadados dos textos | `scripts/curation/06_fulltext_report.py` | `literature/curated/fulltext_metadata.csv` |
 | Schema, FDR, PM2,5 e versão | `scripts/validation/02_schema.py` | `reports/schema_validation.md` |
 | Testes Python | `pytest -q` | saída do terminal |
 | Testes Julia | `julia --project=julia julia/test/runtests.jl` | saída do terminal |
@@ -486,8 +481,8 @@ O workflow `.github/workflows/ci.yml` roda em cada push e pull request:
 ## 11. Limitações honestas
 
 - **Busca não sistemática.** Não houve triagem dupla de todos os registros nem leitura de texto completo de todos os candidatos.
-- **Curadoria em lote assistida por IA.** As 29 arestas promovidas passaram por extração automática, revisão de um único revisor (assistido por IA) e verificação verbatim contra o resumo do PubMed. Confirmação humana independente é recomendada.
-- **605 registros ainda aguardam leitura.** A fila está em `literature/curated/batch_chd_queue.csv`; a priorização está em `reports/batch_chd_triage.md`. Há 97 resumos humanos com tamanho de efeito, 172 humanos sem confirmação da exposição ou do fenótipo candidato, 165 animais ou celulares, 60 cirúrgicos ou diagnósticos, 17 revisões, 93 sem sinal suficiente e 1 sem resumo.
+- **Curadoria em lote e leitura integral assistidas por IA.** As 49 arestas promovidas passaram por extração automática, revisão de um único revisor (assistido por IA) e verificação verbatim contra o resumo do PubMed ou o trecho de texto completo arquivado. Confirmação humana independente é recomendada.
+- **596 registros da fila ainda aguardam decisão.** A fila está em `literature/curated/batch_chd_queue.csv`; a priorização está em `reports/batch_chd_triage.md`. Há 88 resumos humanos com tamanho de efeito, 172 humanos sem confirmação da exposição ou do fenótipo candidato, 165 animais ou celulares, 60 cirúrgicos ou diagnósticos, 17 revisões, 93 sem sinal suficiente e 1 sem resumo. Dos 152 estudos com leitura registrada, 35 tinham texto completo e 117 apenas resumo.
 - **Achados condicionais.** Duas arestas promovidas descrevem efeitos apenas em estratos específicos (interação com metionina e com calor extremo). O texto do efeito e a nota registram isso.
 - **SciELO** foi acessado por metadados Crossref, porque a interface de busca bloqueou automação.
 - **CAPES** cobre o Catálogo de Teses, não o Portal de Periódicos.
@@ -515,6 +510,7 @@ Ver `docs/09_LIMITATIONS_AND_GAPS.md`.
 | Documentação | `docs/` | protocolo, métodos, limitações, governança e declaração de IA |
 | Privacidade | `docs/15_DATA_GOVERNANCE.md` | microdados individuais fora do Git; app só com agregados |
 | Reprodutibilidade | `uv.lock`, `renv.lock`, `run_all.sh` | versões fixadas, cache HTTP, testes e validação |
+| Leitura integral | `literature/curated/fulltext_metadata.csv`, `literature/curated/fulltext_quotes/` | metadados, SHA-256 do arquivo lido e trechos com contexto; artigos completos não são mantidos |
 
 - **Findable, Accessible, Interoperable, Reusable:** identificadores persistentes por entidade, metadados DCAT e Data Package, CSV, JSON e GraphML, proveniência por evidência, licença MIT para código e licenças de terceiros preservadas.
 - **Declaração de IA:** em conformidade com a Portaria CNPq nº 2.664/2026, em `docs/13_DECLARACAO_IA.md`. A IA apoiou código, triagem, extração em lote e redação; não gerou dados ou referências, não decidiu a classificação final de evidência e não é autora.

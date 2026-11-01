@@ -8,7 +8,7 @@ Generated: 2026-11-01. Machine-readable: `reports/validation_results.json`; huma
 
 | Level | Check | Result |
 |---|---|---|
-| Bibliographic | 84 curated evidence rows (76 unique relations; 54 manual, 29 AI-assisted reviewed and 1 CAPES) have a PMID or CAPES reference and a verbatim quote; 100% verified at build time; 25% of PubMed rows re-checked at validation; 100% of CAPES abstracts re-checked locally | **Passed** |
+| Bibliographic | 104 curated evidence rows (87 unique relations; 54 manual, 49 AI-assisted reviewed and 1 CAPES) have a PMID or CAPES reference and a verbatim quote; 100% verified at build time; 25% of PubMed rows re-checked at validation; 100% of CAPES abstracts re-checked locally | **Passed** |
 | Bibliographic | 33 anchor PMIDs resolvable via NCBI E-utilities; 1 CAPES thesis abstract archived locally | **Passed** (33/33 PMIDs; 1/1 CAPES) |
 | Biological | Manual reading of every curated edge for developmental/molecular coherence; layers and caveats recorded | **Passed with documented caveats** |
 | Data | Municipality, period, missingness, duplicates, range checks for SINASC, SIH and climate | **Passed** |
@@ -21,7 +21,7 @@ Generated: 2026-11-01. Machine-readable: `reports/validation_results.json`; huma
 ## 2. Automated checks
 
 ```
-nodes: 2,238 | relations: 4,135 | evidence rows: 4,639
+nodes: 2,238 | relations: 4,146 | evidence rows: 4,659
 duplicate node IDs: 0
 duplicate evidence IDs: 0
 missing edge endpoints: 0
@@ -88,7 +88,7 @@ After correcting the conception window, the main birth-level model had OR 1.155 
 
 ## 6. Human curation check
 
-All 84 curated evidence rows (76 unique relations) have a verbatim quote. The 54 manual rows were read by the study team; the 29 batch rows were promoted only after an explicit review entry (including 11 second-pass proposals and one manual addition) and are flagged as AI-assisted, so independent human confirmation is recommended. PubMed quotes are verified automatically at build time and 25% are re-checked in validation; the CAPES thesis quote is checked against the archived Sucupira abstract. The curated layer is described as **team curation plus reviewed batch promotion**, without a dual independent screening step.
+All 104 curated evidence rows (87 unique relations) have a verbatim quote. The 54 manual rows were read by the study team; the 49 batch rows were promoted only after an explicit review entry (including second-pass proposals, manual additions and full-text reading) and are flagged as AI-assisted, so independent human confirmation is recommended. Full-text quotations are re-checked against their archived short quotation, not against the abstract. PubMed quotes are verified automatically at build time and 25% are re-checked in validation; the CAPES thesis quote is checked against the archived Sucupira abstract. The curated layer is described as **team curation plus reviewed batch promotion**, without a dual independent screening step.
 
 ---
 

@@ -66,24 +66,24 @@
       "name": "relacoes",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/relations.csv",
       "format": "csv",
-      "byteSize": 1998496,
-      "checksum": "sha256:fb46c8b5b23c0af9e7c93d9aa9d6fc1e3f02f8fcb1f25011f1e8077b7da36132"
+      "byteSize": 2004341,
+      "checksum": "sha256:4822084b1808a19b54a7fa46d3bbaebbb6706c8765540c998b5ae4c27704de47"
     },
     {
       "@type": "Distribution",
       "name": "evidencias",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/evidence.csv",
       "format": "csv",
-      "byteSize": 1624635,
-      "checksum": "sha256:ee3c8c18649e494863760ab1932cf1f28b00fd9504517519c27f7c54341bf587"
+      "byteSize": 1692952,
+      "checksum": "sha256:4e1c0068240904bf190c8f24fd4771c7c0c5dffb23c850c24cfd012485f86918"
     },
     {
       "@type": "Distribution",
       "name": "hipoteses",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/hypotheses.csv",
       "format": "csv",
-      "byteSize": 847,
-      "checksum": "sha256:204b8f546cb1670a5c86777b5edad6026ebd34cc4372fd7bb26a10e33132461f"
+      "byteSize": 884,
+      "checksum": "sha256:802d1d1fc47a519d180a80302d54488d85d63967fe0f74f082aa108e5897ad42"
     },
     {
       "@type": "Distribution",
@@ -146,16 +146,16 @@
       "name": "caminhos",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/paths_exposure_phenotype.csv",
       "format": "csv",
-      "byteSize": 4358,
-      "checksum": "sha256:5fa7f50d29b19ac5557b2ef8daadc4579f934b0d91a6b69f7c7da15ba80e702a"
+      "byteSize": 5254,
+      "checksum": "sha256:c9593610c6e2fdae20b82179be82570f164dee7c9be26641568f852714a9ae7b"
     },
     {
       "@type": "Distribution",
       "name": "lacunas",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/gap_analysis.csv",
       "format": "csv",
-      "byteSize": 2407,
-      "checksum": "sha256:926f12bae090e4a67753390c93562cdde07b0405c08158d1f04f61955709616e"
+      "byteSize": 2497,
+      "checksum": "sha256:3ddfc10c8ffe7be73036fd9473fc3f255aac6a4cca44ff0650665733f6e39765"
     },
     {
       "@type": "Distribution",
@@ -163,7 +163,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/hypothesis_candidates.csv",
       "format": "csv",
       "byteSize": 666,
-      "checksum": "sha256:ef3f8c0d1dbde63ca43de407f3fdd222065e47fdb4223eadd2481d9d54133cd3"
+      "checksum": "sha256:c0d1ff149133c9996d31021ac8f73c4ac95ee593e8a07f53b7fea9dd9625d2e1"
     },
     {
       "@type": "Distribution",
@@ -234,8 +234,8 @@
       "name": "hipoteses_familia",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/hypothesis_family.csv",
       "format": "csv",
-      "byteSize": 23655,
-      "checksum": "sha256:e6e92ef81b28b3d4430ecc73c58b1517ed6c32f91147003371953d6ff8ab1408"
+      "byteSize": 20860,
+      "checksum": "sha256:00070472e655ba19f89f7f1c8281799899128dcca9feebe9675c5f4c6a2e1e47"
     },
     {
       "@type": "Distribution",
@@ -267,7 +267,7 @@
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/figures/site/manifest.json",
       "format": "json",
       "byteSize": 4030,
-      "checksum": "sha256:9def83eedc409c271a01fe71360867926fd188df88d3f6440cba362a13078cb9"
+      "checksum": "sha256:35c7305bb487a8967cb7f493ee34b9c6bab98c38e7801e80962a05bf461e6686"
     },
     {
       "@type": "Distribution",
@@ -370,8 +370,8 @@
       "name": "triagem_todas_bases",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/screening/all_records_triage.csv",
       "format": "csv",
-      "byteSize": 832824,
-      "checksum": "sha256:fb2c8e4c5870d60a8232071b29679bbc378e2bf31a92149846aea42dd07574bf"
+      "byteSize": 831925,
+      "checksum": "sha256:eaa705eba7ac4befe7d3459323cf7e7955e0284304101d40c00e16543c97898c"
     },
     {
       "@type": "Distribution",
@@ -434,16 +434,16 @@
       "name": "estudos_ancora",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/anchor_studies.csv",
       "format": "csv",
-      "byteSize": 21104,
-      "checksum": "sha256:e5913baabb83766b4859a6755a2cecb216369bb9e2e2f05fd00bd6a4d1345db9"
+      "byteSize": 23794,
+      "checksum": "sha256:544ea063df0b5546cd21ab73c575395e96113a23bc3882ddec417d05db2fc398"
     },
     {
       "@type": "Distribution",
       "name": "evidencias_curadas",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/curated_edges.csv",
       "format": "csv",
-      "byteSize": 63284,
-      "checksum": "sha256:763b744fe1fd56967c6489cc578dee1a10a68866b7aabe0c58ab8c70919e3a71"
+      "byteSize": 86051,
+      "checksum": "sha256:db75d6f33d0afa2e8941e916d5cb4fead09eb639a93b0ea42bf09c0c90706568"
     },
     {
       "@type": "Distribution",
@@ -458,8 +458,8 @@
       "name": "revisao_curadoria_lote",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/batch_chd_review.csv",
       "format": "csv",
-      "byteSize": 18751,
-      "checksum": "sha256:3b896624c8e8ff656a766fd1f3c37dfbf1a3cdd9f5ef8a31df8ecaba39d971f4"
+      "byteSize": 34494,
+      "checksum": "sha256:124953cb63cacadc49705e9e76aece4e08bec37119e0c60d893528141f00e411"
     },
     {
       "@type": "Distribution",
@@ -474,8 +474,24 @@
       "name": "triagem_fila",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/batch_chd_triage.csv",
       "format": "csv",
-      "byteSize": 168600,
-      "checksum": "sha256:41f7af026a081b7acc0b91bd0fada083228f832b3dd7985c8159ded728f5c25a"
+      "byteSize": 168060,
+      "checksum": "sha256:07bddd661f5d441a00006e7f74fec2d65bd8db03eed65367ee151edeceda85d6"
+    },
+    {
+      "@type": "Distribution",
+      "name": "leitura_integral",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/literature/curated/fulltext_metadata.csv",
+      "format": "csv",
+      "byteSize": 61484,
+      "checksum": "sha256:53a3b33d4046e26f528d4685f18ac1d1f5fa545104db784c09b466e13c13886f"
+    },
+    {
+      "@type": "Distribution",
+      "name": "registro_leitura",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/reports/fulltext_reading_log.md",
+      "format": "md",
+      "byteSize": 29062,
+      "checksum": "sha256:b41bf637e199f9c0513a8fbfc33b56de38e71f4c7683d755f0265a8f553f593b"
     }
   ],
   "conformsTo": "https://specs.frictionlessdata.io/data-package/",

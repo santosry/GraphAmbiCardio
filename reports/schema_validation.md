@@ -1,12 +1,12 @@
 # Schema validation
 
-Generated: 2026-11-01T18:22:09Z
+Generated: 2026-11-01T19:04:58Z
 
 **Result: PASSED**
 
 - OK | `columns:outputs/graph/nodes.csv` | 2238 rows
-- OK | `columns:outputs/graph/relations.csv` | 4135 rows
-- OK | `columns:outputs/graph/evidence.csv` | 4639 rows
+- OK | `columns:outputs/graph/relations.csv` | 4146 rows
+- OK | `columns:outputs/graph/evidence.csv` | 4659 rows
 - OK | `columns:outputs/tables/exploratory_models.csv` | 16 rows
 - OK | `columns:outputs/tables/hypothesis_candidates.csv` | 1 rows
 - OK | `columns:data_processed/pm25_campos_anual.csv` | 16 rows
@@ -19,7 +19,7 @@ Generated: 2026-11-01T18:22:09Z
 - OK | `columns:outputs/tables/sinasc_annual_complete.csv` | 16 rows
 - OK | `columns:outputs/tables/sinasc_other_circulatory_by_code.csv` | 2 rows
 - OK | `columns:outputs/tables/sih_other_circulatory_annual.csv` | 15 rows
-- OK | `columns:outputs/tables/hypothesis_family.csv` | 75 rows
+- OK | `columns:outputs/tables/hypothesis_family.csv` | 66 rows
 - OK | `columns:outputs/tables/mechanism_gene_sets.csv` | 103 rows
 - OK | `columns:app/data/ga_sensitivity.csv` | 3 rows
 - OK | `columns:app/data/sinasc_other_by_code.csv` | 2 rows

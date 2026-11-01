@@ -22450,12 +22450,36 @@
       "layer": "observed",
       "confidence": 0.85,
       "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "30481714",
+      "source": "EXP:PM25",
+      "target": "CHD:AVSD",
+      "key": "EDGE:1e31e67bdef3"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
       "n_evidence": 2,
       "evidence_tier": "estabelecida",
       "references": "23623715;26705853",
       "source": "EXP:PM25",
       "target": "CHD:PDA",
       "key": "EDGE:24236f82a8e3"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "30481714",
+      "source": "EXP:PM25",
+      "target": "CHD:PS",
+      "key": "EDGE:87683f81f47e"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22544,14 +22568,38 @@
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
       "layer": "observed",
+      "confidence": 0.95,
+      "grade": "A",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "28557713;42825890",
+      "source": "EXP:PM10",
+      "target": "CHD:VSD",
+      "key": "EDGE:a4e5cabb4859"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "28557713;32278917",
+      "source": "EXP:PM10",
+      "target": "CHD:ASD",
+      "key": "EDGE:07029dc61f97"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
       "confidence": 0.85,
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
-      "references": "32278917",
+      "references": "28557713",
       "source": "EXP:PM10",
-      "target": "CHD:ASD",
-      "key": "EDGE:07029dc61f97"
+      "target": "CHD:PDA",
+      "key": "EDGE:69a382d9aeb9"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22572,10 +22620,10 @@
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
-      "references": "42825890",
+      "references": "28557713",
       "source": "EXP:PM10",
-      "target": "CHD:VSD",
-      "key": "EDGE:a4e5cabb4859"
+      "target": "CHD:TOF",
+      "key": "EDGE:de3c9652fa9a"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22636,6 +22684,30 @@
       "source": "EXP:O3",
       "target": "CHD:ASD",
       "key": "EDGE:5042b42a75cd"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "26554783",
+      "source": "EXP:O3",
+      "target": "CHD:PDA",
+      "key": "EDGE:f1f56a17d717"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "27752048",
+      "source": "EXP:O3",
+      "target": "CHD:VSD",
+      "key": "EDGE:746bc46eb8a1"
     },
     {
       "relation": "HYPOTHESIS_LINK",
@@ -22736,6 +22808,18 @@
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
       "layer": "observed",
+      "confidence": 0.95,
+      "grade": "A",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "22811060;3407644",
+      "source": "EXP:SOLV",
+      "target": "CHD:VSD",
+      "key": "EDGE:25ac123a780f"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
       "confidence": 0.85,
       "grade": "B",
       "n_evidence": 1,
@@ -22776,10 +22860,10 @@
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
-      "references": "3407644",
+      "references": "22811060",
       "source": "EXP:SOLV",
-      "target": "CHD:VSD",
-      "key": "EDGE:25ac123a780f"
+      "target": "CHD:TGA",
+      "key": "EDGE:70d81a02a81b"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22800,7 +22884,19 @@
       "grade": "A",
       "n_evidence": 2,
       "evidence_tier": "estabelecida",
-      "references": "25628158;27224896",
+      "references": "24916166;25628158",
+      "source": "EXP:METALS",
+      "target": "CHD:ASD",
+      "key": "EDGE:96558ce24f45"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.95,
+      "grade": "A",
+      "n_evidence": 3,
+      "evidence_tier": "estabelecida",
+      "references": "25628158;27224896;36341763",
       "source": "EXP:METALS",
       "target": "CHD:VSD",
       "key": "EDGE:b2abd8669ade"
@@ -22824,10 +22920,10 @@
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
-      "references": "25628158",
+      "references": "3209340",
       "source": "EXP:METALS",
-      "target": "CHD:ASD",
-      "key": "EDGE:96558ce24f45"
+      "target": "CHD:COA",
+      "key": "EDGE:9948a73583db"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22836,10 +22932,10 @@
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
-      "references": "3209340",
+      "references": "24916166",
       "source": "EXP:METALS",
-      "target": "CHD:COA",
-      "key": "EDGE:9948a73583db"
+      "target": "CHD:PDA",
+      "key": "EDGE:79a8f82512a7"
     },
     {
       "relation": "HYPOTHESIS_CANDIDATE",
@@ -22852,6 +22948,42 @@
       "source": "EXP:SMOKE",
       "target": "CHD:PDA",
       "key": "EDGE:4ebd593a3307"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.95,
+      "grade": "A",
+      "n_evidence": 3,
+      "evidence_tier": "estabelecida",
+      "references": "10230836;21357347;30905164",
+      "source": "EXP:SMOKE",
+      "target": "CHD:ASD",
+      "key": "EDGE:f8a422d4a274"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.95,
+      "grade": "A",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "10230836;22903798",
+      "source": "EXP:SMOKE",
+      "target": "CHD:AVSD",
+      "key": "EDGE:9555203143c1"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.95,
+      "grade": "A",
+      "n_evidence": 2,
+      "evidence_tier": "estabelecida",
+      "references": "10230836;35916623",
+      "source": "EXP:SMOKE",
+      "target": "CHD:TOF",
+      "key": "EDGE:7bdf0dca34ec"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22872,10 +23004,10 @@
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
-      "references": "22903798",
+      "references": "34508749",
       "source": "EXP:SMOKE",
-      "target": "CHD:AVSD",
-      "key": "EDGE:9555203143c1"
+      "target": "CHD:DORV",
+      "key": "EDGE:7854a3fe642b"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22908,10 +23040,10 @@
       "grade": "B",
       "n_evidence": 1,
       "evidence_tier": "estabelecida",
-      "references": "35916623",
+      "references": "21357347",
       "source": "EXP:SMOKE",
-      "target": "CHD:TOF",
-      "key": "EDGE:7bdf0dca34ec"
+      "target": "CHD:TGA",
+      "key": "EDGE:c0a89d168a22"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
@@ -22924,18 +23056,6 @@
       "source": "EXP:SMOKE",
       "target": "CHD:TRUNCUS",
       "key": "EDGE:978898603d0e"
-    },
-    {
-      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
-      "layer": "observed",
-      "confidence": 0.5,
-      "grade": "D",
-      "n_evidence": 1,
-      "evidence_tier": "nao_demonstrada",
-      "references": "30905164",
-      "source": "EXP:SMOKE",
-      "target": "CHD:ASD",
-      "key": "EDGE:f8a422d4a274"
     },
     {
       "relation": "EXPOSURE_MODULATES_MECHANISM",
@@ -22984,6 +23104,18 @@
       "source": "EXP:ALCOHOL",
       "target": "CHD:ASD",
       "key": "EDGE:74fa0560c6d6"
+    },
+    {
+      "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",
+      "layer": "observed",
+      "confidence": 0.85,
+      "grade": "B",
+      "n_evidence": 1,
+      "evidence_tier": "estabelecida",
+      "references": "35014860",
+      "source": "EXP:ALCOHOL",
+      "target": "CHD:AVSD",
+      "key": "EDGE:4a6be96d59e7"
     },
     {
       "relation": "EXPOSURE_ASSOCIATED_WITH_PHENOTYPE",

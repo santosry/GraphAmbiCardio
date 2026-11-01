@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T18:19:41Z",
+  "generated_at": "2026-11-01T19:00:28Z",
   "app_url": "http://127.0.0.1:3850/",
   "viewport": [
     1600,
@@ -18,7 +18,7 @@
         "evidence.csv"
       ],
       "path": "outputs\\figures\\site\\01_grafo_interativo.png",
-      "sha256": "7d39a4f43048eb4402eb4a076fe8366816db9891e6c39d8eadc893859dd137dd"
+      "sha256": "a3ec675ea408756690a2fbc1b29241300e8fdfa9c466892ab5145ad5e14be394"
     },
     {
       "file": "02_sinasc.png",
