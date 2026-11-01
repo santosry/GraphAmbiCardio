@@ -13,8 +13,10 @@ mod_about_ui <- function(id) {
                   tags$a(href = "http://lattes.cnpq.br/7503796642571978", target = "_blank", "Currículo Lattes"),
                   " · ",
                   tags$a(href = "https://orcid.org/0009-0005-6770-2001", target = "_blank", "ORCID")),
-          tags$li(tags$b("Letícia"), " — ",
-                  tags$a(href = "http://lattes.cnpq.br/4004634244195808", target = "_blank", "Currículo Lattes"))
+          tags$li(tags$b("Letícia Maria Dias Freitas"), " — ",
+                  tags$a(href = "http://lattes.cnpq.br/4004634244195808", target = "_blank", "Currículo Lattes"),
+                  " · ",
+                  tags$a(href = "https://orcid.org/0009-0009-9930-9588", target = "_blank", "ORCID"))
         ),
         source_note("Links para os currículos Lattes; nomes completos, formação e produção estão nesses currículos.")
       )
@@ -68,7 +70,7 @@ mod_about_ui <- function(id) {
         card_body(
           p(tags$b("Software e dados:")),
           tags$blockquote(style = "font-size:.88rem;",
-            "Ryan de Paulo Santos; Letícia; GraphAmbiCardio study team. GraphAmbiCardio, v0.3.0. 2026. ",
+            "Ryan de Paulo Santos; Letícia Maria Dias Freitas; GraphAmbiCardio study team. GraphAmbiCardio, v0.3.0. 2026. ",
             tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "https://github.com/santosry/GraphAmbiCardio")
           ),
           p(tags$b("Estudos-âncora:")),

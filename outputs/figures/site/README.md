@@ -1,6 +1,6 @@
 # Figuras do site GraphAmbiCardio
 
-Gerado: 2026-11-01T02:29:19Z
+Gerado: 2026-11-01T13:52:41Z
 
 Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dados usados estão em `data/`; o manifesto com SHA-256 está em `manifest.json`.
 
@@ -12,7 +12,7 @@ Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dado
 **Período:** 2010–2025  
 **Nota:** Camadas/confiança em docs/04_ONTOLOGY.md e docs/06_EVIDENCE_GRADING.md.  
 **Dados:** data/nodes.csv, data/relations.csv, data/evidence.csv  
-**SHA-256:** `9879c6638a29f4ff2d4c5b6e1454797ba8cca91a277bfb7b29375e99fe98650d`
+**SHA-256:** `f2a24a01a81fc73b40f5925b82d45ccbfa832b41414a67d01a2eb80486c5c859`
 
 ## SINASC — casos e taxa por 10.000 nascidos vivos
 
@@ -22,7 +22,7 @@ Cada figura abaixo traz a fonte, o período e a nota de interpretação. Os dado
 **Período:** 2010–2025  
 **Nota:** Casos = CID-10 Q20–Q28; ver docs/07_EPI_ENV_METHODS.md.  
 **Dados:** data/sinasc_annual.csv  
-**SHA-256:** `7b7e819051cbc8e11b3ec519b3a3cfd7686d72a8154d4533c1431d4e68ea4d1f`
+**SHA-256:** `e459eb8e278d0e3b6e4fb33b780e596067ec15cffd2716e4ba4dce81130b9c02`
 
 ## SIH/SUS — internações e óbitos
 

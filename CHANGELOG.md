@@ -12,7 +12,7 @@
   dados e o manifesto de figuras; autores e fontes atualizados.
 - Seção de ciência aberta no README e na aba Transparência e equipe, com links
   para código, metadados, figuras, governança e verificação automatizada.
-- Grafo interativo ampliado e exportação de figuras em viewport maior.
+- Grafo interativo ampliado: layout de força por padrão, opção hierárquica, legenda própria, botão de tela cheia, nós e rótulos maiores e exportação em viewport maior.
 
 ### Privacidade e governança
 - Remoção dos registros individuais de SINASC e SIH do versionamento e do
@@ -45,7 +45,6 @@
 - Versão 0.3.0 em `pyproject.toml`, `CITATION.cff`, `codemeta.json` e metadados.
 
 ### Pendências conhecidas
-- Nome completo de Letícia depende do currículo Lattes; o link está publicado.
 - Microdados de 2023–2024 do SINASC indisponíveis no DATASUS.
 - Desfecho com subnotificação grave; resultados de exposição são
   exploratórios e nenhum sobrevive ao FDR.

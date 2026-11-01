@@ -22,6 +22,7 @@ mod_graph_ui <- function(id) {
                           nodes$label[nodes$type == "Phenotype" & nodes$node_id != "CHD:ALL"]))),
             sliderInput(ns("conf"), "Confiança mínima", min = 0, max = 0.95, value = 0.40, step = 0.05),
             checkboxInput(ns("edge_labels"), "Rótulos das arestas", value = FALSE),
+            checkboxInput(ns("hierarchical"), "Layout hierárquico", value = FALSE),
             div(
               textInput(ns("search"), "Buscar", placeholder = "PM2.5, Wnt, septação"),
               actionButton(ns("reset"), "Limpar", class = "btn-outline-secondary btn-sm w-100")
@@ -32,7 +33,27 @@ mod_graph_ui <- function(id) {
     ),
     div(
       class = "figure-block",
-      div(class = "figure-head", textOutput(ns("caption"))),
+      div(
+        class = "graph-toolbar",
+        div(class = "figure-head", textOutput(ns("caption"), inline = TRUE)),
+        tags$button(
+          type = "button",
+          class = "btn btn-sm btn-outline-secondary graph-fullscreen",
+          onclick = "var el=this.closest('.figure-block'); if(!document.fullscreenElement){ if(el.requestFullscreen) el.requestFullscreen(); } else { document.exitFullscreen(); } setTimeout(function(){ window.dispatchEvent(new Event('resize')); }, 300);",
+          "Tela cheia"
+        )
+      ),
+      div(
+        class = "graph-legend",
+        lapply(names(TYPE_LABELS), function(t) {
+          tags$span(
+            class = "graph-legend-item",
+            tags$span(class = "graph-legend-swatch",
+                      style = paste0("background:", TYPE_COLORS[[t]], ";")),
+            TYPE_LABELS[[t]]
+          )
+        })
+      ),
       div(
         class = "figure-canvas html-fill-container graph-canvas",
         role = "img",
@@ -61,6 +82,7 @@ mod_graph_server <- function(id) {
       updateSelectInput(session, "phenotype", selected = "")
       updateSliderInput(session, "conf", value = 0.40)
       updateCheckboxInput(session, "edge_labels", value = FALSE)
+      updateCheckboxInput(session, "hierarchical", value = FALSE)
       updateTextInput(session, "search", value = "")
     })
 
@@ -127,7 +149,7 @@ mod_graph_server <- function(id) {
           level = ifelse(type == "Exposure", 0,
                          ifelse(type %in% c("Mechanism", "Gene"), 1,
                                 ifelse(type %in% c("Process", "Pathway"), 2, 3))),
-          size = as.numeric(12 + 2.4 * sqrt(ifelse(is.na(deg[node_id]), 1, as.numeric(deg[node_id]))))
+          size = as.numeric(24 + 5.0 * sqrt(ifelse(is.na(deg[node_id]), 1, as.numeric(deg[node_id]))))
         ) %>%
         select(id = node_id, label, group, title, color, shape, size, level)
       show_labels <- isTRUE(input$edge_labels)
@@ -141,7 +163,7 @@ mod_graph_server <- function(id) {
                                       "<br>referências: ", references)),
           color = unname(TIER_COLORS[evidence_tier_label]),
           dashes = layer %in% c("hypothesis", "inferred"),
-          width = 0.6 + 3.2 * confidence,
+          width = 1.0 + 4.0 * confidence,
           arrows = ifelse(layer == "hypothesis", "to;from", "to")
         ) %>%
         select(from, to, label, title, color, dashes, width, arrows)
@@ -149,14 +171,13 @@ mod_graph_server <- function(id) {
         visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
                    nodesIdSelection = FALSE) %>%
         visInteraction(navigationButtons = TRUE, tooltipDelay = 100, hideEdgesOnDrag = TRUE) %>%
-        visNodes(font = list(size = 18, face = "Arial"), borderWidth = 1.5) %>%
+        visNodes(font = list(size = 26, face = "Arial"), borderWidth = 2) %>%
         visEdges(arrows = list(to = list(enabled = TRUE, scaleFactor = 0.6)),
-                 color = list(opacity = 0.7)) %>%
-        visLegend(useGroups = TRUE, position = "right", ncol = 1, main = "Tipo de nó")
-      if (identical(input$mode, "conceptual")) {
+                 color = list(opacity = 0.7))
+      if (isTRUE(input$hierarchical)) {
         p <- p %>%
-          visHierarchicalLayout(direction = "LR", levelSeparation = 270,
-                                nodeSpacing = 190, treeSpacing = 250,
+          visHierarchicalLayout(direction = "LR", levelSeparation = 180,
+                                nodeSpacing = 110, treeSpacing = 180,
                                 blockShifting = TRUE, edgeMinimization = TRUE,
                                 parentCentralization = TRUE, sortMethod = "directed") %>%
           visPhysics(enabled = FALSE) %>%
@@ -166,13 +187,13 @@ mod_graph_server <- function(id) {
       } else {
         p <- p %>%
           visPhysics(solver = "forceAtlas2Based",
-                     stabilization = list(enabled = TRUE, iterations = 250),
-                     forceAtlas2Based = list(gravitationalConstant = -80,
-                                             centralGravity = 0.01,
-                                             springLength = 180,
-                                             springConstant = 0.08,
+                     stabilization = list(enabled = TRUE, iterations = 350),
+                     forceAtlas2Based = list(gravitationalConstant = -200,
+                                             centralGravity = 0.02,
+                                             springLength = 140,
+                                             springConstant = 0.10,
                                              damping = 0.4,
-                                             avoidOverlap = 0.6)) %>%
+                                             avoidOverlap = 1.0)) %>%
           visEdges(smooth = list(type = "continuous"),
                    arrows = list(to = list(enabled = TRUE, scaleFactor = 0.6)),
                    color = list(opacity = 0.7))

@@ -46,7 +46,7 @@ Nenhum modelo foi usado como autor ou coautor. A responsabilidade científica pe
 
 ## 5. Como citar esta declaração
 
-> Ryan de Paulo Santos; Letícia; GraphAmbiCardio study team. *Declaração de uso de inteligência artificial*. In: GraphAmbiCardio, v0.3.0, 2026. Em conformidade com a Portaria CNPq nº 2.664/2026.
+> Ryan de Paulo Santos; Letícia Maria Dias Freitas; GraphAmbiCardio study team. *Declaração de uso de inteligência artificial*. In: GraphAmbiCardio, v0.3.0, 2026. Em conformidade com a Portaria CNPq nº 2.664/2026.
 
 **Data:** 2026-10-31
 **Versão:** 0.3.0

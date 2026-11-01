@@ -54,7 +54,8 @@ Cada card com dado e cada figura exibe uma legenda de fonte, período e caminho 
 - **Nada é escondido:** toda relação exibe nível, confiança, grau, referências e limitações.
 - **Hipóteses são visualmente distintas:** arestas tracejadas e aviso explícito; não entram nas análises.
 - **Contexto local é separado:** o painel epidemiológico tem avisos sobre subnotificação, AIH ≠ pessoa e exposição de área.
-- **Acessibilidade:** navegação por teclado, contraste alto, textos em português brasileiro.
+- **Acessibilidade:** navegação por teclado, contraste alto, textos em português brasileiro e botão de tela cheia para o grafo.
+- **Legibilidade do grafo:** layout de força por padrão (com opção hierárquica), legenda HTML própria, nós e rótulos maiores; o grafo ocupa 100% da largura do card.
 - **FAIR:** downloads em CSV, metadados DCAT/Data Package e identificadores persistentes.
 
 ## 4. Publicação

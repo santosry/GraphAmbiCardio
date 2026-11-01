@@ -18,9 +18,9 @@
       "path": "https://orcid.org/0009-0005-6770-2001"
     },
     {
-      "title": "Letícia",
+      "title": "Letícia Maria Dias Freitas",
       "role": "author",
-      "path": "http://lattes.cnpq.br/4004634244195808"
+      "path": "https://orcid.org/0009-0009-9930-9588"
     }
   ],
   "keywords": [
@@ -1045,7 +1045,7 @@
       "format": "json",
       "mediatype": "application/json",
       "bytes": 3919,
-      "hash": "sha256:4cfa56f410bbf243f49b792797955b2dc0d4051d5d64c87e3256296b5d0abec8",
+      "hash": "sha256:86e5c1f495abe9ea93b9569de60feb34236cc79dd3f1c6257e958db78119247b",
       "schema": null
     },
     {

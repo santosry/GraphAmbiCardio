@@ -32,8 +32,10 @@
     },
     {
       "@type": "Person",
-      "name": "Letícia",
-      "identifier": "http://lattes.cnpq.br/4004634244195808"
+      "givenName": "Letícia Maria Dias",
+      "familyName": "Freitas",
+      "identifier": "https://orcid.org/0009-0009-9930-9588",
+      "url": "http://lattes.cnpq.br/4004634244195808"
     }
   ],
   "contIntegration": "https://github.com/santosry/GraphAmbiCardio/actions",

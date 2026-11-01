@@ -252,7 +252,7 @@ Ver `docs/09_LIMITATIONS_AND_GAPS.md`.
 ## 10. Equipe
 
 - **Ryan de Paulo Santos** — [Currículo Lattes](http://lattes.cnpq.br/7503796642571978) · [ORCID](https://orcid.org/0009-0005-6770-2001)
-- **Letícia** — [Currículo Lattes](http://lattes.cnpq.br/4004634244195808)
+- **Letícia Maria Dias Freitas** — [Currículo Lattes](http://lattes.cnpq.br/4004634244195808) · [ORCID](https://orcid.org/0009-0009-9930-9588)
 
 Nomes completos, formação e produção estão nos currículos Lattes.
 

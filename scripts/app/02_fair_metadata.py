@@ -73,7 +73,7 @@ datapackage = {
     "licenses": [{"name": "MIT", "path": "https://opensource.org/licenses/MIT", "title": "Código sob MIT; dados de terceiros mantêm suas licenças"}],
     "contributors": [
         {"title": "Ryan de Paulo Santos", "role": "author", "path": "https://orcid.org/0009-0005-6770-2001"},
-        {"title": "Letícia", "role": "author", "path": "http://lattes.cnpq.br/4004634244195808"},
+        {"title": "Letícia Maria Dias Freitas", "role": "author", "path": "https://orcid.org/0009-0009-9930-9588"},
     ],
     "keywords": ["congenital heart defects", "environmental exposure", "knowledge graph", "cardiogenesis", "Brazil", "FAIR"],
     "sources": [
@@ -104,7 +104,7 @@ dcat = {
     "modified": "2026-10-31",
     "creator": [
         {"@type": "Person", "name": "Ryan de Paulo Santos", "identifier": "https://orcid.org/0009-0005-6770-2001"},
-        {"@type": "Person", "name": "Letícia", "identifier": "http://lattes.cnpq.br/4004634244195808"},
+        {"@type": "Person", "name": "Letícia Maria Dias Freitas", "identifier": "https://orcid.org/0009-0009-9930-9588"},
     ],
     "publisher": {"@type": "Organization", "name": "GraphAmbiCardio study team"},
     "contactPoint": {"@type": "ContactPoint", "email": "ryan.paulo@gsuite.iff.edu.br"},

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T02:29:19Z",
+  "generated_at": "2026-11-01T13:52:41Z",
   "app_url": "http://127.0.0.1:3850/",
   "viewport": [
     1600,
@@ -18,7 +18,7 @@
         "evidence.csv"
       ],
       "path": "outputs\\figures\\site\\01_grafo_interativo.png",
-      "sha256": "9879c6638a29f4ff2d4c5b6e1454797ba8cca91a277bfb7b29375e99fe98650d"
+      "sha256": "f2a24a01a81fc73b40f5925b82d45ccbfa832b41414a67d01a2eb80486c5c859"
     },
     {
       "file": "02_sinasc.png",
@@ -30,7 +30,7 @@
         "sinasc_annual.csv"
       ],
       "path": "outputs\\figures\\site\\02_sinasc.png",
-      "sha256": "7b7e819051cbc8e11b3ec519b3a3cfd7686d72a8154d4533c1431d4e68ea4d1f"
+      "sha256": "e459eb8e278d0e3b6e4fb33b780e596067ec15cffd2716e4ba4dce81130b9c02"
     },
     {
       "file": "03_sih.png",
