@@ -13,10 +13,10 @@ mod_home_ui <- function(id) {
     ),
     layout_columns(
       col_widths = c(3,3,3,3),
-      kpi_card("Nós", textOutput(ns("kpi_nodes")), "entidades tipadas", "#0B3C5D"),
-      kpi_card("Relações", textOutput(ns("kpi_edges")), "arestas com proveniência", "#1D7874"),
-      kpi_card("Evidências", textOutput(ns("kpi_evidence")), "linhas de evidência", "#7570B3"),
-      kpi_card("Estudos-âncora", textOutput(ns("kpi_studies")), "curadoria manual verificada", "#D95F02")
+      kpi_card("Nós", textOutput(ns("kpi_nodes")), "entidades tipadas", "#0B3C5D", source = "Fonte: outputs/graph/nodes.csv."),
+      kpi_card("Relações", textOutput(ns("kpi_edges")), "arestas com proveniência", "#1D7874", source = "Fonte: outputs/graph/relations.csv."),
+      kpi_card("Evidências", textOutput(ns("kpi_evidence")), "linhas de evidência", "#7570B3", source = "Fonte: outputs/graph/evidence.csv."),
+      kpi_card("Estudos-âncora", textOutput(ns("kpi_studies")), "curadoria manual verificada", "#D95F02", source = "Fonte: literature/curated/anchor_studies.csv.")
     ),
     br(),
     layout_columns(
@@ -26,6 +26,7 @@ mod_home_ui <- function(id) {
         card_body(
           p("As relações são classificadas em três níveis explícitos. A classificação descreve a sustentação da relação, não a importância biológica do nó."),
           DTOutput(ns("tiers")),
+          source_note("Fonte: outputs/graph/relations.csv. Gradação e limitações em docs/06_EVIDENCE_GRADING.md."),
           div(class = "small-muted", style = "margin-top:.5rem;",
               "Hipóteses e regras inferidas nunca são apresentadas como evidência confirmada.")
         )
@@ -35,6 +36,7 @@ mod_home_ui <- function(id) {
         card_body(
           p("A hierarquia foi definida antes da construção do grafo e orienta a apresentação dos resultados."),
           DTOutput(ns("hierarchy")),
+          source_note("Fonte: hierarquia definida em docs/00_PROTOCOL.md e docs/07_EPI_ENV_METHODS.md."),
           note_box("<b>Umidade</b> é mantida como variável contextual/confundidora, sem conexão molecular presumida.", "info")
         )
       )
@@ -60,7 +62,8 @@ mod_home_ui <- function(id) {
             p("SINASC, SIH/SUS e ERA5-Land são apresentados como contexto ecológico. Internações não são incidência; exposição de área não é exposição individual."),
             tags$a(href = "#", onclick = "Shiny.setInputValue('home_go_epi', Math.random()); return false;", "Abrir painel epidemiológico →")
           )
-        )
+        ),
+        source_note("Referências: docs/04_ONTOLOGY.md, docs/06_EVIDENCE_GRADING.md e docs/15_DATA_GOVERNANCE.md.")
       )
     )
   )

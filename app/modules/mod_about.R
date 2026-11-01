@@ -21,6 +21,7 @@ mod_about_ui <- function(id) {
             tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "datapackage.json", target = "_blank", "Data Package (JSON)"),
             tags$a(class = "btn btn-sm btn-outline-primary ms-2", href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "Repositório")
           ),
+          source_note("Fonte: fair/metadata.json e fair/datapackage.json."),
           note_box("Lacunas FAIR declaradas: releases exatos de HPO/ClinVar/Reactome não estão pinados; o grafo é uma fotografia de 2026-10-31.", "info")
         )
       ),
@@ -35,7 +36,8 @@ mod_about_ui <- function(id) {
           p(tags$b("Estudos-âncora:")),
           p(class = "small-muted", "As referências PMID/DOI de cada aresta estão na aba Evidências e em literature/curated/anchor_studies.csv."),
           p(tags$b("Licença:")),
-          p("Código sob MIT. Dados de terceiros (PubMed/Europe PMC, HPO, ClinVar, Reactome, DATASUS, ERA5-Land/Open-Meteo, Crossref) mantêm suas licenças e termos.")
+          p("Código sob MIT. Dados de terceiros (PubMed/Europe PMC, HPO, ClinVar, Reactome, DATASUS, ERA5-Land/Open-Meteo, Crossref) mantêm suas licenças e termos."),
+          source_note("Fonte: CITATION.cff, codemeta.json e LICENSE.")
         )
       )
     ),
@@ -43,7 +45,8 @@ mod_about_ui <- function(id) {
     card(
       card_header("Declaração de uso de inteligência artificial — Portaria CNPq nº 2.664/2026"),
       card_body(
-        uiOutput(ns("ai_declaration"))
+        uiOutput(ns("ai_declaration")),
+        source_note("Fonte: docs/13_DECLARACAO_IA.md.")
       )
     )
   )

@@ -1023,6 +1023,16 @@
           }
         ]
       }
+    },
+    {
+      "name": "figuras_site",
+      "path": "outputs/figures/site/manifest.json",
+      "description": "Manifesto das figuras do site com fonte, período, dados e SHA-256",
+      "format": "json",
+      "mediatype": "application/octet-stream",
+      "bytes": 3220,
+      "hash": "sha256:67d1dbd744ce5d9b137a945a48f6de6f069efd91b7c977874b3f4f78a9d04c78",
+      "schema": null
     }
   ]
 }

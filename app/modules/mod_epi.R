@@ -6,28 +6,32 @@ mod_epi_ui <- function(id) {
              "a exposição climática é de área (ERA5-Land), não individual. O período é 2010–2025.", "warning"),
     layout_columns(
       col_widths = c(4,4,4),
-      kpi_card("Nascidos vivos (SINASC)", textOutput(ns("kpi_births")), "2010–2025", "#0B3C5D"),
-      kpi_card("Casos de cardiopatia", textOutput(ns("kpi_cases")), "definição do estudo", "#E7298A"),
-      kpi_card("Internações (SIH)", textOutput(ns("kpi_sih")), "diagnóstico principal Q20–Q28", "#1D7874")
+      kpi_card("Nascidos vivos (SINASC)", textOutput(ns("kpi_births")), "2010–2025", "#0B3C5D", source = "Fonte: SINASC/DATASUS (microdados 2010–2022 e 2025; TabNet 2023–2024)."),
+      kpi_card("Casos de cardiopatia", textOutput(ns("kpi_cases")), "definição do estudo", "#E7298A", source = "Fonte: SINASC/DATASUS; CID-10 Q20–Q28."),
+      kpi_card("Internações (SIH)", textOutput(ns("kpi_sih")), "diagnóstico principal Q20–Q28", "#1D7874", source = "Fonte: SIH/SUS; AIH com diagnóstico principal Q20–Q28.")
     ),
     br(),
     layout_columns(
       col_widths = c(7,5),
       div(class = "figure-block",
           h5("SINASC — casos e taxa por 10.000 nascidos vivos"),
-          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sinasc_plot"), height = "100%"))),
+          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sinasc_plot"), height = "100%")),
+          source_note("Fonte: SINASC/DATASUS. Casos = CID-10 Q20–Q28; 2023–2024 via TabNet; ver docs/07 e docs/09.")),
       div(class = "figure-block",
           h5("SIH/SUS — internações e óbitos"),
-          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sih_plot"), height = "100%")))
+          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sih_plot"), height = "100%")),
+          source_note("Fonte: SIH/SUS. AIH não são pessoas; ver docs/07 e docs/09."))
     ),
     layout_columns(
       col_widths = c(6,6),
       div(class = "figure-block",
           h5("Clima — temperatura máxima mensal (ERA5-Land)"),
-          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("climate_plot"), height = "100%"))),
+          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("climate_plot"), height = "100%")),
+          source_note("Fonte: ERA5-Land via Open-Meteo, célula −21,757/−41,354; ver docs/03.")),
       div(class = "figure-block",
           h5("Dias de calor e ondas de calor por ano"),
-          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("heat_plot"), height = "100%")))
+          div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("heat_plot"), height = "100%")),
+          source_note("Fonte: ERA5-Land via Open-Meteo; limiar P90 34,2 °C; ver docs/07."))
     ),
     br(),
     div(
@@ -42,7 +46,8 @@ mod_epi_ui <- function(id) {
       card(card_header("Cobertura e status dos dados SINASC"),
            card_body(DTOutput(ns("coverage")))),
       card(card_header("Perfil materno-neonatal"),
-           card_body(DTOutput(ns("maternal"))))
+           card_body(DTOutput(ns("maternal")),
+                     source_note("Fonte: SINASC/DATASUS; 98.598 nascimentos; ver docs/05.")))
     ),
     br(),
     card(card_header("Modelos exploratórios de exposição no período de organogênese"),
@@ -50,13 +55,15 @@ mod_epi_ui <- function(id) {
            DTOutput(ns("models")),
            h6("Ajuste mútuo PM2,5 + temperatura", style = "margin-top:1rem;"),
            DTOutput(ns("models_two")),
+           source_note("Fonte: outputs/tables/exploratory_models.csv; p e q (BH-FDR); ver docs/07."),
            note_box("<b>Não é um achado causal; todos os p-valores são ajustados por FDR (BH).</b> Há 56–59 eventos, exposição de área, ",
                     "idade gestacional estimada e modelos que discordam entre si (logístico vs. contagem mensal). ",
                     "Ver <i>docs/07_EPI_ENV_METHODS.md</i> e a análise de sensibilidade.", "danger")
          )),
     br(),
     card(card_header("Distribuição dos códigos CID-10 registrados"),
-         card_body(DTOutput(ns("codes"))))
+         card_body(DTOutput(ns("codes")),
+                   source_note("Fonte: SINASC/DATASUS; CODANOMAL (Q20–Q28).")))
   )
 }
 

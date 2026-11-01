@@ -3,7 +3,7 @@ ifeq ($(OS),)
 PY := .venv/bin/python
 endif
 
-.PHONY: setup literature databases epi env graph analysis validate schema test all clean lock
+.PHONY: setup literature databases epi env graph analysis validate schema test all clean lock figures
 
 setup:
 	uv venv .venv --python 3.12
@@ -51,6 +51,9 @@ validate:
 
 schema:
 	$(PY) scripts/validation/02_schema.py
+
+figures:
+	$(PY) scripts/app/03_export_site_figures.py
 
 lock:
 	uv lock

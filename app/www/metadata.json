@@ -172,6 +172,14 @@
       "format": "csv",
       "byteSize": 176,
       "checksum": "sha256:9a9d0a085128ca2ed58c3aa7aaa78969c45c66a15957545864877b9284cef3f0"
+    },
+    {
+      "@type": "Distribution",
+      "name": "figuras_site",
+      "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/figures/site/manifest.json",
+      "format": "json",
+      "byteSize": 3220,
+      "checksum": "sha256:67d1dbd744ce5d9b137a945a48f6de6f069efd91b7c977874b3f4f78a9d04c78"
     }
   ],
   "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed.",

@@ -7,10 +7,10 @@ mod_methods_ui <- function(id) {
     ),
     layout_columns(
       col_widths = c(3,3,3,3),
-      kpi_card("Registros recuperados", textOutput(ns("n_records")), "PubMed + Europe PMC", "#0B3C5D"),
-      kpi_card("Registros únicos", "1.095", "após deduplicação", "#1D7874"),
-      kpi_card("Estudos-âncora", textOutput(ns("n_anchors")), "lidos manualmente", "#D95F02"),
-      kpi_card("Arestas curadas", textOutput(ns("n_curated")), "citações verificadas", "#E7298A")
+      kpi_card("Registros recuperados", textOutput(ns("n_records")), "PubMed + Europe PMC", "#0B3C5D", source = "Fonte: literature/searches/*.json."),
+      kpi_card("Registros únicos", "1.095", "após deduplicação", "#1D7874", source = "Fonte: deduplicação PMID → DOI → título; docs/02."),
+      kpi_card("Estudos-âncora", textOutput(ns("n_anchors")), "lidos manualmente", "#D95F02", source = "Fonte: literature/curated/anchor_studies.csv."),
+      kpi_card("Arestas curadas", textOutput(ns("n_curated")), "citações verificadas", "#E7298A", source = "Fonte: literature/curated/curated_edges.csv; verificação no PubMed.")
     ),
     br(),
     layout_columns(
@@ -26,6 +26,7 @@ mod_methods_ui <- function(id) {
             tags$li("integração de HPO, ClinVar, NCBI Gene, Reactome e Enrichr;"),
             tags$li("dados locais de SINASC, SIH/SUS e ERA5-Land (2010–2025).")
           ),
+          source_note("Referências: docs/00_PROTOCOL.md e docs/02_SEARCH_STRATEGY.md."),
           note_box("<b>Não é revisão sistemática.</b> Não houve triagem dupla de todos os registros, revisão de texto completo ou aplicação de instrumentos formais de risco de viés. É uma busca estruturada com curadoria dirigida.", "warning")
         )
       ),
@@ -39,7 +40,7 @@ mod_methods_ui <- function(id) {
             tags$li(tags$b("CAPES:"), " Catálogo de Teses e Dissertações (API pública); 552 teses para “cardiopatias congênitas”."),
             tags$li(tags$b("Portal de Periódicos CAPES:"), " acesso ao texto completo exige autenticação institucional; não foi utilizado.")
           ),
-          div(class = "small-muted", "Detalhes em docs/02_SEARCH_STRATEGY.md e docs/03_DATABASE_CATALOG.md.")
+          source_note("Fonte: literature/searches/*.json; detalhes em docs/02_SEARCH_STRATEGY.md e docs/03_DATABASE_CATALOG.md.")
         )
       )
     ),
@@ -56,7 +57,7 @@ mod_methods_ui <- function(id) {
             tags$li(tags$b("Não demonstrada:"), " evidência indireta, grau D/E, hipótese ou regra inferida."),
             tags$li(tags$b("Contextual:"), " variáveis ecológicas/indicadores, sem pretensão causal.")
           ),
-          div(class = "small-muted", "A confiança é heurística, não probabilidade. Ver docs/06_EVIDENCE_GRADING.md.")
+          source_note("Referência: docs/06_EVIDENCE_GRADING.md. A confiança é heurística, não probabilidade.")
         )
       ),
       card(
@@ -78,7 +79,8 @@ mod_methods_ui <- function(id) {
       card_header("Densidade da literatura por par exposição × fenótipo"),
       card_body(
         DTOutput(ns("feas")),
-        div(class = "small-muted", "A contagem é bibliométrica e não mede qualidade. Pares com zero registros são lacunas de busca, não ausência de risco.")
+        source_note("Fonte: reports/feasibility_pair_matrix.csv; contagens PubMed. A contagem é bibliométrica e não mede qualidade."),
+        div(class = "small-muted", "Pares com zero registros são lacunas de busca, não ausência de risco.")
       )
     ),
     br(),

@@ -45,7 +45,11 @@ python scripts/app/02_fair_metadata.py
 | **Métodos** | desenho, buscas, bases, gradação e limitações |
 | **FAIR e uso de IA** | princípios FAIR, metadados, licenças e declaração de IA (Portaria CNPq 2.664/2026) |
 
-## 3. Decisões de design
+## 3. Legendas de fonte e figuras exportadas
+
+Cada card com dado e cada figura exibe uma legenda de fonte, período e caminho do arquivo/documento de referência. As figuras também são exportadas para `outputs/figures/site/` (PNG, dados e `manifest.json` com SHA-256) por `scripts/app/03_export_site_figures.py`.
+
+## 4. Decisões de design
 
 - **Nada é escondido:** toda relação exibe nível, confiança, grau, referências e limitações.
 - **Hipóteses são visualmente distintas:** arestas tracejadas e aviso explícito; não entram nas análises.

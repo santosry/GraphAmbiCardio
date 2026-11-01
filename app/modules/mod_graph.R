@@ -40,12 +40,14 @@ mod_graph_ui <- function(id) {
         visNetworkOutput(ns("network"), height = "100%")
       ),
       div(class = "small-muted figure-note",
-          "Visualização interativa. Se o grafo não carregar ou para leitura por teclado, consulte a aba Evidências.")
+          "Visualização interativa. Se o grafo não carregar ou para leitura por teclado, consulte a aba Evidências."),
+      source_note("Fonte: outputs/graph/nodes.csv, relations.csv e evidence.csv. Camadas, confiança e gradação em docs/04_ONTOLOGY.md e docs/06_EVIDENCE_GRADING.md.")
     ),
     div(
       class = "section-block",
       h5("Detalhes do nó selecionado"),
-      uiOutput(ns("node_details"))
+      uiOutput(ns("node_details")),
+      source_note("Fonte: relations.csv e evidence.csv; referências PMID/DOI por aresta.")
     )
   )
 }

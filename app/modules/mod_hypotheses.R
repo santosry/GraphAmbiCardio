@@ -8,10 +8,10 @@ mod_hypotheses_ui <- function(id) {
              "Cada linha declara o elo ausente que precisaria ser testado.", "danger"),
     layout_columns(
       col_widths = c(3,3,3,3),
-      kpi_card("Caminhos candidatos", textOutput(ns("kpi_paths")), "com elo processo→fenótipo ausente", "#7570B3"),
-      kpi_card("Hipóteses por genes", textOutput(ns("kpi_cand")), "sobreposição gênica", "#E6A100"),
-      kpi_card("Lacunas explícitas", textOutput(ns("kpi_gaps")), "exposições, mecanismos e processos", "#B2182B"),
-      kpi_card("Regra de inclusão", "≥ 2 genes", "sobreposição mínima; prioridade por nº de genes", "#4A6FA5")
+      kpi_card("Caminhos candidatos", textOutput(ns("kpi_paths")), "com elo processo→fenótipo ausente", "#7570B3", source = "Fonte: outputs/tables/candidate_paths_missing_link.csv."),
+      kpi_card("Hipóteses por genes", textOutput(ns("kpi_cand")), "sobreposição gênica", "#E6A100", source = "Fonte: outputs/tables/hypothesis_candidates.csv."),
+      kpi_card("Lacunas explícitas", textOutput(ns("kpi_gaps")), "exposições, mecanismos e processos", "#B2182B", source = "Fonte: outputs/tables/gap_analysis.csv."),
+      kpi_card("Regra de inclusão", "≥ 2 genes", "sobreposição mínima; prioridade por nº de genes", "#4A6FA5", source = "Regra e teste hipergeométrico: docs/04_ONTOLOGY.md; q BH-FDR.")
     ),
     br(),
     card(
@@ -19,6 +19,7 @@ mod_hypotheses_ui <- function(id) {
       card_body(
         p("Cadeias documentadas até um processo de desenvolvimento que ainda não possui aresta curada para um fenótipo específico."),
         DTOutput(ns("paths")),
+        source_note("Fonte: outputs/tables/candidate_paths_missing_link.csv; hipóteses não são evidências."),
         div(style = "margin-top:.5rem;", downloadButton(ns("dl_paths"), "Baixar caminhos (CSV)", class = "btn-sm btn-outline-primary"))
       )
     ),
@@ -28,6 +29,7 @@ mod_hypotheses_ui <- function(id) {
       card_body(
         p("A sobreposição indica prioridade de investigação, não mecanismo. O elo entre o mecanismo e o processo/fenótipo permanece não demonstrado."),
         DTOutput(ns("cands")),
+        source_note("Fonte: outputs/tables/hypothesis_candidates.csv; p hipergeométrico e q BH-FDR."),
         div(style = "margin-top:.5rem;", downloadButton(ns("dl_cands"), "Baixar hipóteses (CSV)", class = "btn-sm btn-outline-primary"))
       )
     ),
@@ -36,7 +38,8 @@ mod_hypotheses_ui <- function(id) {
       card_header("Lacunas identificadas pelo grafo"),
       card_body(
         p("Entidades sem aresta curada de saída. As lacunas são resultados, não falhas de busca."),
-        DTOutput(ns("gaps"))
+        DTOutput(ns("gaps")),
+        source_note("Fonte: outputs/tables/gap_analysis.csv; lacunas são resultados da busca.")
       )
     )
   )

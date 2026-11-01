@@ -20,21 +20,21 @@ mod_query_ui <- function(id) {
     br(),
     layout_columns(
       col_widths = c(6,6),
-      card(card_header("Evidências diretas exposição → fenótipo"), card_body(DTOutput(ns("direct")))),
-      card(card_header("Mecanismos documentados"), card_body(DTOutput(ns("mech"))))
+      card(card_header("Evidências diretas exposição → fenótipo"), card_body(DTOutput(ns("direct")), source_note("Fonte: relations.csv + evidence.csv."))),
+      card(card_header("Mecanismos documentados"), card_body(DTOutput(ns("mech")), source_note("Fonte: relations.csv + evidence.csv.")))
     ),
     br(),
     layout_columns(
       col_widths = c(7,5),
-      card(card_header("Caminhos documentados até fenótipos"), card_body(DTOutput(ns("paths")))),
-      card(card_header("Hipóteses candidatas (não evidenciais)"), card_body(DTOutput(ns("hyp"))))
+      card(card_header("Caminhos documentados até fenótipos"), card_body(DTOutput(ns("paths")), source_note("Fonte: outputs/tables/paths_exposure_phenotype.csv."))),
+      card(card_header("Hipóteses candidatas (não evidenciais)"), card_body(DTOutput(ns("hyp")), source_note("Fonte: outputs/tables/hypothesis_candidates.csv; não são evidências.")))
     ),
     br(),
-    card(card_header("Genes anotados aos fenótipos relacionados"), card_body(DTOutput(ns("genes")))),
+    card(card_header("Genes anotados aos fenótipos relacionados"), card_body(DTOutput(ns("genes")), source_note("Fonte: HPO/ClinVar/NCBI Gene via outputs/graph/relations.csv."))),
     br(),
     card(card_header("Referências que sustentam as relações recuperadas"), card_body(uiOutput(ns("refs")))),
     br(),
-    card(card_header("Resultados da busca livre"), card_body(DTOutput(ns("search_results"))))
+    card(card_header("Resultados da busca livre"), card_body(DTOutput(ns("search_results")), source_note("Fonte: outputs/graph/nodes.csv, relations.csv e evidence.csv.")))
   )
 }
 
@@ -55,13 +55,13 @@ mod_query_server <- function(id) {
       hyp <- hyp_candidates %>% filter(exposure_id == input$exposure)
       layout_columns(
         col_widths = c(3,3,3,3),
-        kpi_card("Fenótipos com evidência direta", fmt_int(nrow(direct)), "arestas curadas", "#1B7837"),
-        kpi_card("Mecanismos documentados", fmt_int(nrow(mech)), "exposição → mecanismo", "#7570B3"),
-        kpi_card("Hipóteses candidatas", fmt_int(nrow(hyp)), "priorização por genes", "#E6A100"),
+        kpi_card("Fenótipos com evidência direta", fmt_int(nrow(direct)), "arestas curadas", "#1B7837", source = "Fonte: outputs/graph/relations.csv."),
+        kpi_card("Mecanismos documentados", fmt_int(nrow(mech)), "exposição → mecanismo", "#7570B3", source = "Fonte: outputs/graph/relations.csv."),
+        kpi_card("Hipóteses candidatas", fmt_int(nrow(hyp)), "priorização por genes", "#E6A100", source = "Fonte: outputs/tables/hypothesis_candidates.csv."),
         kpi_card("Nível máximo", {
           tiers <- direct$evidence_tier_label
           if (length(tiers) == 0) "—" else tiers[1]
-        }, "para este eixo", "#0B3C5D")
+        }, "para este eixo", "#0B3C5D", source = "Fonte: outputs/graph/relations.csv e evidence.csv.")
       )
     })
 

@@ -98,6 +98,8 @@ Publicação: `Rscript scripts/deploy/deploy_shinyapps.R` (requer conta configur
 
 Detalhes: `docs/14_APP.md`.
 
+**Figuras exportadas:** `outputs/figures/site/` contém PNGs de todas as figuras do site, os dados usados (`data/`), `manifest.json` com fonte/período/SHA-256 e `README.md` com as legendas.
+
 ---
 
 ## 4. Reprodutibilidade

@@ -134,16 +134,21 @@ node_type <- function(id) {
 fmt_int <- function(x) formatC(as.integer(x), big.mark = ".", decimal.mark = ",", format = "d")
 fmt_dec <- function(x, d = 1) formatC(as.numeric(x), big.mark = ".", decimal.mark = ",", format = "f", digits = d)
 
-kpi_card <- function(title, value, subtitle = NULL, color = "#0B3C5D") {
+kpi_card <- function(title, value, subtitle = NULL, color = "#0B3C5D", source = NULL) {
   bslib::card(
     class = "kpi-card",
     style = paste0("border-top: 4px solid ", color, ";"),
     bslib::card_body(
       div(class = "kpi-title", title),
       div(class = "kpi-value", style = paste0("color:", color, ";"), value),
-      if (!is.null(subtitle)) div(class = "kpi-sub", subtitle)
+      if (!is.null(subtitle)) div(class = "kpi-sub", subtitle),
+      if (!is.null(source)) div(class = "kpi-source", HTML(source))
     )
   )
+}
+
+source_note <- function(text) {
+  div(class = "source-note", HTML(text))
 }
 
 note_box <- function(..., type = "info") {

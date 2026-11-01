@@ -29,6 +29,7 @@ RESOURCES = [
     ("sensibilidade_loo", "outputs/tables/sensitivity_leave_one_year_out.csv", "Sensibilidade leave-one-year-out com p e q"),
     ("correlacao_exposicoes", "outputs/tables/exposure_correlation.csv", "Matriz de correlação das exposições de janela"),
     ("vif_exposicoes", "outputs/tables/exposure_vif.csv", "Fatores de inflação de variância das exposições de janela"),
+    ("figuras_site", "outputs/figures/site/manifest.json", "Manifesto das figuras do site com fonte, período, dados e SHA-256"),
 ]
 
 

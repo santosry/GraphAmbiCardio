@@ -17,13 +17,15 @@ mod_evidence_ui <- function(id) {
       card_header(textOutput(ns("caption"))),
       card_body(
         DTOutput(ns("table")),
+        source_note("Fonte: outputs/graph/relations.csv; 54 arestas curadas + bases estruturadas. Confiança e gradação em docs/06."),
         div(style = "margin-top:.6rem;", downloadButton(ns("download"), "Baixar relações filtradas (CSV)", class = "btn-sm btn-outline-primary"))
       )
     ),
     br(),
     card(
       card_header("Evidências da relação selecionada"),
-      card_body(uiOutput(ns("detail")))
+      card_body(uiOutput(ns("detail")),
+                source_note("Fonte: outputs/graph/evidence.csv; trechos verificados contra o PubMed."))
     )
   )
 }
