@@ -46,6 +46,26 @@ RESOURCES = [
     ("inmet_relatorio", "reports/inmet_comparison.json", "Relatório legível por máquina da comparação INMET A607 vs ERA5-Land"),
     ("sinasc_outras_circulatorias", "outputs/tables/sinasc_other_circulatory_by_code.csv", "SINASC: códigos Q27-Q28 mantidos separados do CHD core"),
     ("dicionario_dados", "data_dictionary/data_dictionary.csv", "Dicionário de dados legível por máquina (variáveis, tipos, fontes e unidades)"),
+    ("capes_cardiopatias", "literature/searches/capes_cardiopatias_congenitas.json", "CAPES Catálogo de Teses: consulta 'cardiopatias congênitas' (552 hits; 552 registros recuperados em todas as páginas)"),
+    ("capes_poluicao_ar", "literature/searches/capes_poluicao_ar.json", "CAPES Catálogo de Teses: consulta 'poluição do ar cardiopatia' (0 hits)"),
+    ("capes_agrotoxicos", "literature/searches/capes_agrotoxicos.json", "CAPES Catálogo de Teses: consulta 'agrotóxicos cardiopatia' (1 hit; 1 registro)"),
+    ("capes_temperatura", "literature/searches/capes_temperatura.json", "CAPES Catálogo de Teses: consulta 'temperatura cardiopatia congênita' (7 hits; 7 registros)"),
+    ("prisma_fluxo", "reports/prisma_flow.csv", "Fluxo PRISMA-ScR com contagens por fonte, incluindo CAPES Teses; não é revisão sistemática"),
+    ("cobertura_recuperacao", "reports/retrieval_coverage.csv", "Hits totais, registros recuperados e escopo de recuperação por busca e por base"),
+    ("triagem_todas_bases", "literature/screening/all_records_triage.csv", "Registro unificado dos 2.510 registros recuperados: triagem automática, status de âncora e decisão CAPES"),
+    ("recuperacao_exaustiva", "reports/exhaustive_retrieval.csv", "Recuperação exaustiva por busca: hits, recuperados, candidatos, arquivo bruto e SHA-256"),
+    ("candidatos_exaustivos", "literature/screening/exhaustive_candidates.csv", "Estudos candidatos após deduplicação; triagem automática, não evidência"),
+    ("estudos_triados_nos", "outputs/graph/screened_study_nodes.csv", "Nós Study da camada de estudos triados"),
+    ("estudos_triados_relacoes", "outputs/graph/screened_study_relations.csv", "Relações Study → conceito da camada de estudos triados"),
+    ("relatorio_estudos_triados", "reports/screened_studies.json", "Resumo da camada de estudos triados e contagens por base"),
+    ("capes_triagem", "literature/screening/capes_triage.csv", "Triagem dos 552 registros CAPES: decisão, nível de triagem e motivo; 1 incluído, 551 excluídos"),
+    ("capes_resumo_tese", "literature/curated/capes_abstracts/7850222.json", "Resumo arquivado da tese CAPES incluída (ID 7850222), com URL Sucupira e data de recuperação"),
+    ("estudos_ancora", "literature/curated/anchor_studies.csv", "Estudos-âncora curados: 58 PMIDs + 1 tese CAPES, com referência, DOI/URL e fonte"),
+    ("evidencias_curadas", "literature/curated/curated_edges.csv", "Uma linha por aresta curada (84 linhas), com trecho verbatim, referência, tipo de referência e fonte"),
+    ("fila_curadoria_lote", "literature/curated/batch_chd_queue.csv", "635 candidatos CHD com PMID; fila automática, não evidência"),
+    ("revisao_curadoria_lote", "literature/curated/batch_chd_review.csv", "34 linhas de revisão (29 verificadas, 5 recusadas) com citação, efeito, população, janela e desenho"),
+    ("propostas_segunda_passagem", "literature/curated/batch_chd_proposals.csv", "Propostas de atribuição por proximidade fenótipo-efeito; não evidência até revisão"),
+    ("triagem_fila", "literature/curated/batch_chd_triage.csv", "Triagem heurística de prioridade dos registros restantes da fila de curadoria"),
 ]
 
 
@@ -77,7 +97,7 @@ for name, rel, desc in RESOURCES:
 
 datapackage = {
     "name": "graphambicardio-graphambicardio",
-    "title": "GraphAmbiCardio — grafo de conhecimento e dados derivados",
+    "title": "GraphAmbiCardio: grafo de conhecimento e dados derivados",
     "description": "Grafo de conhecimento sobre exposições ambientais, mecanismos moleculares, cardiogênese e cardiopatias congênitas, com dados locais de Campos dos Goytacazes (RJ) e proveniência por evidência.",
     "version": "0.4.0",
     "created": "2026-11-01",
@@ -131,7 +151,7 @@ dcat = {
         for r in resources
     ],
     "conformsTo": "https://specs.frictionlessdata.io/data-package/",
-    "provenance": "Cada aresta carrega referência (PMID/DOI/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed. A validação climática usa a estação INMET A607 (latitude -21,7167; longitude -41,3500; altitude 25 m) e ERA5-Land.",
+    "provenance": "Cada aresta carrega referência (PMID/DOI/CAPES/HPO/ClinVar/Reactome), tipo de evidência, espécie, desenho, janela de exposição, direção do efeito e limitações. Citações curadas foram verificadas contra o resumo indexado no PubMed ou contra o resumo arquivado da tese CAPES (ID 7850222). A camada curada tem 59 estudos-âncora: 58 PMIDs + 1 tese CAPES; 29 linhas vieram de curadoria em lote revisada. A validação climática usa a estação INMET A607 (latitude -21,7167; longitude -41,3500; altitude 25 m) e ERA5-Land.",
     "note": "Busca estruturada não sistemática. Hipóteses são explicitamente separadas das evidências.",
 }
 (FAIR / "metadata.json").write_text(json.dumps(dcat, ensure_ascii=False, indent=2), encoding="utf-8")
