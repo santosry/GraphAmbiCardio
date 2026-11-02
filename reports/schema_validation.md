@@ -1,6 +1,6 @@
 # Schema validation
 
-Generated: 2026-11-01T21:08:05Z
+Generated: 2026-11-02T13:36:51Z
 
 **Result: PASSED**
 
@@ -43,8 +43,8 @@ Generated: 2026-11-01T21:08:05Z
 - OK | `pm25:monthly_range` | 0-500 µg/m3
 - OK | `pm25:monthly_complete` | 0 missing
 - OK | `pm25:annual_years` | 16 rows
-- OK | `case_definition:no_q27_q28_in_chd` | ok
-- OK | `case_definition:2023_2024_core_missing` | core CHD not imputed from TabNet
+- OK | `case_definition:q27_q28_in_primary_outcome` | ok
+- OK | `case_definition:2023_2024_microdata_missing` | birth-level series not imputed from the TabNet aggregate
 - OK | `case_definition:tabnet_separate` | TabNet kept in its own columns
 - OK | `climate:model_fixed` | era5_land
 - OK | `climate:returned_cell` | -21.799995,-41.300003

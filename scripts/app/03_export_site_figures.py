@@ -45,7 +45,7 @@ FIGURES = [
         "title": "SINASC: casos e taxa por 1.000 nascidos vivos",
         "source": "SINASC/DATASUS (microdados 2010–2022 e 2025; TabNet 2023–2024 em série separada)",
         "period": "2010–2025",
-        "note": "Casos = Q20–Q26 (malformações cardíacas e dos grandes vasos); TabNet Q20–Q28 em colunas separadas; ver docs/07_EPI_ENV_METHODS.md.",
+        "note": "Casos = Q20–Q28 (malformações congênitas do aparelho circulatório, incluindo Q27–Q28); TabNet Q20–Q28 em colunas separadas; ver docs/07_EPI_ENV_METHODS.md.",
         "data": ["sinasc_annual.csv"],
     },
     {
@@ -53,7 +53,7 @@ FIGURES = [
         "tab": "Painel epidemiológico",
         "selector": "[id$='sih_plot']",
         "title": "SIH/SUS: internações e óbitos",
-        "source": "SIH/SUS (AIH com diagnóstico principal Q20–Q26)",
+        "source": "SIH/SUS (AIH com diagnóstico principal Q20–Q28)",
         "period": "2010–2025",
         "note": "AIH não são pessoas; ver docs/07 e docs/09.",
         "data": ["sih_annual.csv"],

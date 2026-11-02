@@ -4,12 +4,12 @@ mod_epi_ui <- function(id) {
     note_box("<b>Leia antes de interpretar.</b> Os dados locais são apresentados como contexto ecológico. ",
              "SINASC não é incidência (há subnotificação importante); SIH não representa indivíduos únicos; ",
              "a exposição climática é de área (ERA5-Land), não individual. ",
-             "Grupo principal: malformações congênitas das câmaras cardíacas e conexões, septos, válvulas e grandes vasos (CID-10 Q20–Q26). Q27–Q28 (outras malformações do aparelho circulatório) são analisadas separadamente e não entram no numerador principal. ", "warning"),
+             "Grupo principal: malformações congênitas do aparelho circulatório (CID-10 Q20–Q28). Q27–Q28 são parte do numerador e também apresentadas como subgrupo descritivo. ", "warning"),
     layout_columns(
       col_widths = c(4,4,4),
       kpi_card("Nascidos vivos (SINASC)", textOutput(ns("kpi_births")), "microdados 2010–2022 e 2025", "#0B3C5D", source = "Fonte: SINASC/DATASUS (microdados 2010–2022 e 2025; TabNet 2023–2024)."),
-      kpi_card("Casos Q20–Q26", textOutput(ns("kpi_cases")), "malformações cardíacas e grandes vasos", "#E7298A", source = "Fonte: SINASC/DATASUS; CID-10 Q20–Q26. Q27–Q28 são reportadas à parte."),
-      kpi_card("Internações (SIH)", textOutput(ns("kpi_sih")), "diagnóstico principal Q20–Q26", "#1D7874", source = "Fonte: SIH/SUS; AIH com diagnóstico principal Q20–Q26.")
+      kpi_card("Casos Q20–Q28", textOutput(ns("kpi_cases")), "malformações congênitas do aparelho circulatório", "#E7298A", source = "Fonte: SINASC/DATASUS; CID-10 Q20–Q28, incluindo Q27–Q28."),
+      kpi_card("Internações (SIH)", textOutput(ns("kpi_sih")), "diagnóstico principal Q20–Q28", "#1D7874", source = "Fonte: SIH/SUS; AIH com diagnóstico principal Q20–Q28.")
     ),
     br(),
     layout_columns(
@@ -17,11 +17,11 @@ mod_epi_ui <- function(id) {
       div(class = "figure-block",
           h5("SINASC: casos e taxa por 1.000 nascidos vivos"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sinasc_plot"), height = "100%")),
-          source_note("Fonte: SINASC/DATASUS. Casos = Q20–Q26; 2023–2024 sem microdados (TabNet Q20–Q28 mostrado separadamente); ver docs/07 e docs/09.")),
+          source_note("Fonte: SINASC/DATASUS. Casos = Q20–Q28; 2023–2024 sem microdados (TabNet Q20–Q28 mostrado separadamente); ver docs/07 e docs/09.")),
       div(class = "figure-block",
           h5("SIH/SUS: internações e óbitos"),
           div(class = "figure-canvas html-fill-container chart-canvas", plotlyOutput(ns("sih_plot"), height = "100%")),
-          source_note("Fonte: SIH/SUS. AIH não são pessoas; Q20–Q26 no diagnóstico principal; Q27–Q28 em tabela separada."))
+          source_note("Fonte: SIH/SUS. AIH não são pessoas; Q20–Q28 no diagnóstico principal; Q27–Q28 também mostrados como subgrupo."))
     ),
     layout_columns(
       col_widths = c(6,6),
@@ -71,7 +71,7 @@ mod_epi_ui <- function(id) {
            h6("Sensibilidade à incerteza da idade gestacional (±7 dias)", style = "margin-top:1rem;"),
            DTOutput(ns("ga_sensitivity")),
            source_note("Fonte: outputs/tables/exploratory_models.csv e gestational_window_sensitivity.csv; p e q (BH-FDR); ver docs/07."),
-           note_box("<b>Não é um achado causal; todos os p-valores são ajustados por FDR (BH).</b> Há 47 eventos nos modelos completos, exposição de área, ",
+           note_box("<b>Não é um achado causal; todos os p-valores são ajustados por FDR (BH).</b> Há 53 eventos nos modelos completos, exposição de área, ",
                     "idade gestacional estimada e modelos que discordam entre si (logístico vs. contagem mensal). ",
                     "Ver <i>docs/07_EPI_ENV_METHODS.md</i> e a análise de sensibilidade.", "danger")
          )),
@@ -83,17 +83,17 @@ mod_epi_ui <- function(id) {
            source_note("Fonte: julia/gestational_window_simulation.jl; simulação Monte Carlo, não modelo bayesiano completo; ver docs/07.")
          )),
     br(),
-    card(card_header("Malformações circulatórias Q27–Q28 (não CHD)"),
+    card(card_header("Subgrupo Q27–Q28 (incluído no total Q20–Q28)"),
          card_body(
            DTOutput(ns("other_circulatory")),
-           source_note("Fonte: SINASC/DATASUS (microdados) e SIH/SUS; Q27–Q28 são mantidas fora do numerador de CHD.")
+           source_note("Fonte: SINASC/DATASUS (microdados) e SIH/SUS; Q27–Q28 compõem o desfecho Q20–Q28 e são detalhados aqui.")
          )),
     br(),
     card(card_header("Distribuição dos códigos CID-10 registrados"),
          card_body(
-           h6("Grupo Q20–Q26"),
+           h6("Grupo Q20–Q28"),
            DTOutput(ns("codes")),
-           h6("Q27–Q28 (outras malformações do aparelho circulatório)", style = "margin-top:1rem;"),
+           h6("Subgrupo Q27–Q28 (dentro do grupo Q20–Q28)", style = "margin-top:1rem;"),
            DTOutput(ns("other_codes")),
            source_note("Fonte: SINASC/DATASUS; CODANOMAL.")
          ))
@@ -109,15 +109,15 @@ mod_epi_server <- function(id) {
     output$sinasc_plot <- renderPlotly({
       d <- sinasc %>% mutate(ano = as.integer(year))
       plot_ly(d, x = ~ano) %>%
-        add_bars(y = ~chd_cases, name = "Q20–Q26",
+        add_bars(y = ~chd_cases, name = "Q20–Q28",
                  marker = list(color = "#E7298A"),
-                 hovertemplate = "Ano %{x}<br>Q20–Q26: %{y}<extra></extra>") %>%
-        add_bars(y = ~tabnet_circulatory_cases, name = "TabNet Q20–Q28 (amplo)",
+                 hovertemplate = "Ano %{x}<br>Q20–Q28: %{y}<extra></extra>") %>%
+        add_bars(y = ~tabnet_circulatory_cases, name = "TabNet Q20–Q28 (agregado)",
                  marker = list(color = "#BDBDBD"),
                  hovertemplate = "Ano %{x}<br>TabNet Q20–Q28: %{y}<extra></extra>") %>%
-        add_trace(y = ~chd_per_1000_lb, name = "Q20–Q26 por 1.000 NV", yaxis = "y2",
+        add_trace(y = ~chd_per_1000_lb, name = "Q20–Q28 por 1.000 NV", yaxis = "y2",
                   type = "scatter", mode = "lines+markers", line = list(color = "#0B3C5D"),
-                  hovertemplate = "Ano %{x}<br>Taxa Q20–Q26: %{y:.2f}/1.000<extra></extra>") %>%
+                  hovertemplate = "Ano %{x}<br>Taxa Q20–Q28: %{y:.2f}/1.000<extra></extra>") %>%
         layout(barmode = "group",
                yaxis = list(title = "Casos"), yaxis2 = list(title = "Por 1.000 NV", overlaying = "y", side = "right"),
                legend = list(orientation = "h", y = -0.28), margin = list(l = 60, r = 60, t = 20, b = 70),
@@ -268,8 +268,8 @@ mod_epi_server <- function(id) {
     output$coverage <- renderDT({
       datatable(sinasc %>% select(
         Ano = year, Nascidos = live_births,
-        `Q20–Q26` = chd_cases, `Q20–Q26/1.000` = chd_per_1000_lb,
-        `Q27–Q28` = other_circulatory_cases, `Q27–Q28/1.000` = other_circulatory_per_1000_lb,
+        `Q20–Q28` = chd_cases, `Q20–Q28/1.000` = chd_per_1000_lb,
+        `Q27–Q28 (subgrupo)` = other_circulatory_cases, `Q27–Q28/1.000` = other_circulatory_per_1000_lb,
         `TabNet Q20–Q28` = tabnet_circulatory_cases,
         Status = data_status, Fonte = source
       ), rownames = FALSE, options = list(pageLength = 8, dom = "tp", scrollX = TRUE))
@@ -292,9 +292,9 @@ mod_epi_server <- function(id) {
       b <- sih_other %>% select(year, admissions_primary_other_circulatory)
       d <- full_join(a, b, by = "year") %>% arrange(year)
       out <- d %>% transmute(
-        Ano = year, `SINASC Q27–Q28` = other_circulatory_cases,
+        Ano = year, `SINASC Q27–Q28 (subgrupo)` = other_circulatory_cases,
         `SINASC/1.000` = other_circulatory_per_1000_lb,
-        `SIH Q27–Q28` = admissions_primary_other_circulatory
+        `SIH Q27–Q28 (subgrupo)` = admissions_primary_other_circulatory
       )
       datatable(out, rownames = FALSE, options = list(pageLength = 8, dom = "tp"))
     }, server = FALSE)

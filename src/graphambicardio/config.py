@@ -186,14 +186,20 @@ PHENOTYPES = [
     },
 ]
 
-# Local case group: congenital malformations of cardiac chambers and
-# connections, septa, valves and great vessels (Q20-Q26). Q27 and Q28 are
-# other circulatory malformations and are kept as a separate group.
-CID10_CHAPTER_CHD = [f"Q2{i}" for i in range(0, 7)]  # Q20 .. Q26
-CASE_GROUP_NAME = "Malformações congênitas das câmaras cardíacas e conexões, septos, válvulas e grandes vasos"
-CASE_GROUP_CID10 = "Q20–Q26"
-CID10_OTHER_CIRCULATORY = ["Q27", "Q28"]
-CID10_CIRCULATORY_ALL = CID10_CHAPTER_CHD + CID10_OTHER_CIRCULATORY
+# Local case group: all congenital malformations of the circulatory system
+# (CID-10 Q20-Q28). Q20-Q26 cover the heart and great vessels; Q27-Q28 cover
+# the peripheral vascular system and other circulatory malformations. Q27-Q28
+# are also kept as a descriptive subgroup, but they are part of the primary
+# outcome and are never excluded from the numerator.
+CID10_CASE_GROUP = [f"Q2{i}" for i in range(0, 9)]  # Q20 .. Q28
+CID10_Q20_Q26 = [f"Q2{i}" for i in range(0, 7)]  # Q20 .. Q26
+CID10_Q27_Q28 = ["Q27", "Q28"]
+CASE_GROUP_NAME = "Malformações congênitas do aparelho circulatório"
+CASE_GROUP_CID10 = "Q20–Q28"
+# Legacy aliases kept for code that still uses the CHD terminology.
+CID10_CHAPTER_CHD = CID10_CASE_GROUP
+CID10_OTHER_CIRCULATORY = CID10_Q27_Q28
+CID10_CIRCULATORY_ALL = CID10_CASE_GROUP
 
 # --------------------------------------------------------------------------
 # Environmental / chemical exposures considered in the feasibility phase.

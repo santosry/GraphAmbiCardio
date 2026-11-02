@@ -3,10 +3,10 @@
   "@type": "Dataset",
   "identifier": "https://github.com/santosry/GraphAmbiCardio#v0.4.0",
   "name": "GraphAmbiCardio",
-  "description": "Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e fenótipos de malformações congênitas do aparelho circulatório (Q20–Q26), integrando literatura, bases biológicas curadas e dados ecológicos de Campos dos Goytacazes (2010-2025).",
+  "description": "Grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, processos do desenvolvimento cardíaco e fenótipos de malformações congênitas do aparelho circulatório (Q20–Q28), integrando literatura, bases biológicas curadas e dados ecológicos de Campos dos Goytacazes (2010-2025).",
   "version": "0.4.0",
-  "issued": "2026-11-01",
-  "modified": "2026-11-01",
+  "issued": "2026-11-02",
+  "modified": "2026-11-02",
   "creator": [
     {
       "@type": "Person",
@@ -58,8 +58,8 @@
       "name": "nos_grafo",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/graph/nodes.csv",
       "format": "csv",
-      "byteSize": 156187,
-      "checksum": "sha256:f088e7ba95d54539af96e8b8b40cbc62a1e14cce295d4d86c4de36c16b652420"
+      "byteSize": 156199,
+      "checksum": "sha256:8f8fba63fa3bdb5afe90d42ca40325a74062ad893b0a6042f44be8f85a4285ec"
     },
     {
       "@type": "Distribution",
@@ -90,16 +90,16 @@
       "name": "sinasc_anual",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sinasc_annual_complete.csv",
       "format": "csv",
-      "byteSize": 3224,
-      "checksum": "sha256:f0c55e7c24c16a9132669021b9cd9f0bbb0d753a1ffd8b22cb652cd0c9e10462"
+      "byteSize": 3250,
+      "checksum": "sha256:06de1d58cec6219dc3f6a23aafd8b2c8db693b239b250e647dd44e2af240cbda"
     },
     {
       "@type": "Distribution",
       "name": "sih_anual",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sih_annual.csv",
       "format": "csv",
-      "byteSize": 894,
-      "checksum": "sha256:ddce5efd69b88462f634ddacd8988f8e7ca3598d347f0f2f6e701a07080fd2b6"
+      "byteSize": 891,
+      "checksum": "sha256:003aa28b83ef6788699156780e3e20129c2ee838e040fcd4151177ba98076c43"
     },
     {
       "@type": "Distribution",
@@ -170,40 +170,40 @@
       "name": "modelos_exploratorios",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/exploratory_models.csv",
       "format": "csv",
-      "byteSize": 5286,
-      "checksum": "sha256:342833751c6f1a9d984ef5d534aa9387b4c500ed5345c44dc57ca174b95e2f08"
+      "byteSize": 5291,
+      "checksum": "sha256:8235abf158e84a412b12ba99ad0d5f529ff7b43ba5019c4c00bce9304b130433"
     },
     {
       "@type": "Distribution",
       "name": "sensibilidade_loo",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/sensitivity_leave_one_year_out.csv",
       "format": "csv",
-      "byteSize": 642,
-      "checksum": "sha256:5def9ec1d3b0d6864312688314ba3520a6036966c4c2744cb301b2816c03386a"
+      "byteSize": 644,
+      "checksum": "sha256:482da1a1d568e791edf64c309ed11efeded8bdc460b539387dbebcae0c8adb2b"
     },
     {
       "@type": "Distribution",
       "name": "sensibilidade_gestacional",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/gestational_window_sensitivity.csv",
       "format": "csv",
-      "byteSize": 289,
-      "checksum": "sha256:ac85b485185404dc9709afd8005c9cb9254c2a3cffc5b42d4ac9f7ee4b5c64bb"
+      "byteSize": 290,
+      "checksum": "sha256:560af38cce3ec1f97c91d93665d86b68ca3b930d437fb4201b9e862cb3c713d0"
     },
     {
       "@type": "Distribution",
       "name": "julia_simulacao",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/tables/julia_gestational_window_simulation.csv",
       "format": "csv",
-      "byteSize": 26043,
-      "checksum": "sha256:a4ef0e0e3b384e30989533fa35089ae1bb4ac8750e744f4785891794922c9ec3"
+      "byteSize": 26060,
+      "checksum": "sha256:84f10704b48e36d1e39e01240bcdb9a3116ff51120dde74f33713a3ce1d58625"
     },
     {
       "@type": "Distribution",
       "name": "julia_relatorio",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/reports/julia_gestational_window_simulation.json",
       "format": "json",
-      "byteSize": 2050,
-      "checksum": "sha256:d243fa075da425380f6d94721f65c6233c176468e52ba729dc9df5c0f2171910"
+      "byteSize": 2047,
+      "checksum": "sha256:275c46e0cbf4040240c92ccecca1d2980d959cb29b6c4f9f37257fb460250ce6"
     },
     {
       "@type": "Distribution",
@@ -266,8 +266,8 @@
       "name": "figuras_site",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/outputs/figures/site/manifest.json",
       "format": "json",
-      "byteSize": 4059,
-      "checksum": "sha256:2b8a6818604b78d4d92633f87eb13059d922ac6c4f2bd568062d6f91a4442abc"
+      "byteSize": 4087,
+      "checksum": "sha256:4f8398c193a635779d67b674d9ef9451fe7c133242439410f6c2e166d26e0cdd"
     },
     {
       "@type": "Distribution",
@@ -314,8 +314,8 @@
       "name": "dicionario_dados",
       "downloadURL": "https://github.com/santosry/GraphAmbiCardio/blob/main/data_dictionary/data_dictionary.csv",
       "format": "csv",
-      "byteSize": 14093,
-      "checksum": "sha256:3a6d158606b91e6f0f60148fda7c3f235224c42044e16fc4b8fe3ce60b1767f9"
+      "byteSize": 14163,
+      "checksum": "sha256:07eccb1a63049ab3f35ad7f9af9cad175bf56a02dd084accaf637d5b39382fd5"
     },
     {
       "@type": "Distribution",

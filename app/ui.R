@@ -6,7 +6,7 @@ ui <- bslib::page_navbar(
     span(class = "brand-mark", "GAC"),
     span(class = "brand-text", "GraphAmbiCardio")
   ),
-  window_title = "GraphAmbiCardio: exposições, mecanismos e malformações congênitas do aparelho circulatório (Q20–Q26)",
+  window_title = "GraphAmbiCardio: exposições, mecanismos e malformações congênitas do aparelho circulatório (Q20–Q28)",
   theme = bslib::bs_theme(
     version = 5,
     primary = "#440154",
@@ -34,7 +34,7 @@ ui <- bslib::page_navbar(
   footer = div(
     class = "graphambicardio-footer",
     div(class = "container",
-        HTML("GraphAmbiCardio v0.4.0 · Dados de 2026-11-01 · Código MIT · Dados de terceiros mantêm suas licenças · "),
+        HTML("GraphAmbiCardio v0.4.0 · Dados de 2026-11-02 · Código MIT · Dados de terceiros mantêm suas licenças · "),
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio", target = "_blank", "Repositório"),
         " · ",
         tags$a(href = "https://github.com/santosry/GraphAmbiCardio/tree/main/docs", target = "_blank", "Documentação"),

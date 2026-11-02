@@ -1,6 +1,6 @@
 # Validation report
 
-Generated: 2026-11-01
+Generated: 2026-11-02
 
 ## graph
 
@@ -37,8 +37,8 @@ Passed: **True**
 
 Passed: **True**
 - sinasc_births: 98598
-- sinasc_chd_core: 52
-- sinasc_other_circulatory: 8
+- sinasc_circulatory_q20_q28: 59
+- sinasc_q27_q28_subgroup: 8
 - sinasc_years: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2025]
 - climate_model: era5_land
 - sih_admissions: 561

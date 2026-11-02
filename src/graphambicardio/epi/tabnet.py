@@ -3,9 +3,10 @@
 The DBC microdata for 2023 and 2024 are not exposed in the SINASC FTP tree,
 but TabNet serves the consolidated files (`nvrj23.dbf`, `nvrj24.dbf`).  TabNet
 counts records in the "malformações congênitas do aparelho circulatório" group
-(Q20-Q28), which is broader than this study's core CHD definition (Q20-Q26).
-The aggregate is therefore stored separately and is never imputed into the core
-CHD series.
+(Q20-Q28), which matches the study's case definition.  The aggregate is still
+stored separately because it comes from a different extraction route
+(TabNet aggregate vs. the birth-level CODANOMAL parser) and is never imputed
+into the microdata series.
 
 TabNet requires Latin-1 form encoding and a session handshake; both are
 handled here.
@@ -71,7 +72,7 @@ def fetch_year(year: int) -> dict[str, Any]:
         "source": "DATASUS TabNet (SINASC, nvRJ)",
         "data_status": status,
         "case_definition": "anomaly group 'malformações congênitas do aparelho circulatório' (Q20-Q28)",
-        "note": "Aggregate only; microdata not available on the DATASUS FTP. Different case definition from the any-code microdata parser.",
+        "note": "Aggregate only; microdata not available on the DATASUS FTP. Same Q20-Q28 group but a different extraction route from the birth-level parser, so it is kept separate and not imputed.",
         "retrieved_at": today(),
     }
     log.info("TabNet %s: %s births, %s circulatory cases", year, births, cases)

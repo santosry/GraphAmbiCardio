@@ -45,7 +45,7 @@ Live births and hospital admissions of residents of Campos dos Goytacazes (IBGE 
 
 ### 4.2 Phenotypes
 
-Local case group: CID-10 **Q20–Q26** (malformations of cardiac chambers and connections, septa, valves and great vessels); Q27–Q28 are kept as a separate group of other circulatory malformations. Fourteen sentinel phenotypes are represented with HPO cross-references: VSD (Q21.0), ASD (Q21.1), AVSD (Q21.2), TOF (Q21.3), DORV (Q20.1), TGA (Q20.3), HLHS (Q23.4), coarctation (Q25.1), PDA (Q25.0), pulmonary stenosis (Q25.6), aortic stenosis (Q23.0), TAPVC (Q26.2), truncus arteriosus (Q20.0), Ebstein anomaly (Q22.5). An aggregate node `CHD:ALL` is used when a study reports overall CHD.
+Local case group: CID-10 **Q20–Q28** (congenital malformations of the circulatory system): Q20–Q26 cover the heart and great vessels, and Q27–Q28 cover peripheral vascular and other circulatory malformations. Q27–Q28 are part of the primary outcome and are also reported as a descriptive subgroup. Fourteen sentinel phenotypes are represented with HPO cross-references: VSD (Q21.0), ASD (Q21.1), AVSD (Q21.2), TOF (Q21.3), DORV (Q20.1), TGA (Q20.3), HLHS (Q23.4), coarctation (Q25.1), PDA (Q25.0), pulmonary stenosis (Q25.6), aortic stenosis (Q23.0), TAPVC (Q26.2), truncus arteriosus (Q20.0), Ebstein anomaly (Q22.5). An aggregate node `CHD:ALL` is used when a study reports overall CHD.
 
 ### 4.3 Exposures
 
@@ -156,7 +156,7 @@ Full weights and rationale: `docs/06_EVIDENCE_GRADING.md`.
 
 ## 10. Local epidemiological methods
 
-- Case = any CID-10 code **Q20–Q26** in `CODANOMAL`, parsed as blocks of four characters (multiple codes per record are preserved). Q27–Q28 are classified separately and never added to the CHD count.
+- Case = any CID-10 code **Q20–Q28** in `CODANOMAL`, parsed as blocks of four characters (multiple codes per record are preserved). Q27–Q28 are part of the outcome and are also flagged as a descriptive subgroup.
 - Denominator = live births to resident mothers (SINASC).
 - Indicators: annual counts, rate per 1,000 live births, phenotype distribution, maternal/neonatal characteristics, completeness indicators.
 - SIH: AIH counts, never individuals; residence (MUNIC_RES) and admission municipality (MUNIC_MOV) kept separate; primary and secondary diagnoses kept separate.

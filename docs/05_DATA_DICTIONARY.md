@@ -1,6 +1,6 @@
 # 05: Data dictionary
 
-The machine-readable dictionary is `data_dictionary/data_dictionary.csv` (includes the Q20–Q26/other-circulatory split, gestational sensitivity columns, INMET A607 and the INMET/ERA5 comparison). This document summarises the datasets, their provenance and the graph tables.
+The machine-readable dictionary is `data_dictionary/data_dictionary.csv` (includes the Q20–Q28 outcome, the Q27–Q28 descriptive subgroup, gestational sensitivity columns, INMET A607 and the INMET/ERA5 comparison). This document summarises the datasets, their provenance and the graph tables.
 
 ---
 
@@ -8,17 +8,17 @@ The machine-readable dictionary is `data_dictionary/data_dictionary.csv` (includ
 
 ### 1.1 `data_processed/sinasc_campos_births.csv`
 One row per live birth to a resident mother (municipality 330100), 2010–2022 and 2025.
-- **Rows:** 98,598 (**52 with a Q20–Q26 code (cardiac chambers/connections, septa, valves and great vessels); 8 with Q27–Q28**; 1 record has both).
+- **Rows:** 98,598. **59 records meet the Q20–Q28 case definition**: 51 have Q20–Q26 codes without Q27–Q28, and 8 have Q27–Q28; 1 record has both components.
 - **Source:** DATASUS SINASC `DNRJ{year}.dbc` (state file), converted with `pyreaddbc`.
 - **Key fields:** `codmunres`, `dtnasc`, `is_chd`, `chd_codes`, `codanomal`, `idanomal`, `semagestac`, `peso`, `idademae`, `sexo`, `parto`, `tipo_gravidez`.
 - **Derived:** `n_icd_codes`, `conception_date_est`, `organogenesis_start_est`, `organogenesis_end_est`, `conception_date_early/late`, `organogenesis_start_early/late`, `organogenesis_end_early/late`, `gestation_weeks_used`, `gestation_source`.
-- **Case definition:** `is_chd = TRUE` when at least one parsed code in `CODANOMAL` is in **Q20–Q26**. `is_other_circulatory = TRUE` for **Q27–Q28**, kept separate and never added to `chd_cases`. `CODANOMAL` is parsed in blocks of four characters (e.g. `Q339Q211` → `Q339`, `Q211`).
+- **Case definition:** `is_chd = TRUE` when at least one parsed code in `CODANOMAL` is in **Q20–Q28**. `is_other_circulatory = TRUE` for **Q27–Q28**, a descriptive subgroup that is also part of the primary outcome. `CODANOMAL` is parsed in blocks of four characters (e.g. `Q339Q211` → `Q339`, `Q211`).
 - **Gestational age:** conception = birth date minus (`SEMAGESTAC` × 7 − 14) days; category midpoint used when `SEMAGESTAC` is missing; ±7-day windows stored for sensitivity.
 - **Missing years:** 2023, 2024 (not available at DATASUS on the extraction date).
 
 ### 1.2 `data_processed/sih_campos_chd_admissions.csv`
 One row per AIH of a resident with a primary diagnosis in Q20–Q28 (secondary-only records are retained in the raw extraction but not used in the main tables).
-- **Rows:** 561 total: **474 primary Q20–Q26 admissions**, **75 primary Q27–Q28**, and 12 with Q20–Q26 only as secondary/associated diagnosis.
+- **Rows:** 561 total: **549 primary Q20–Q28 admissions**, of which **75 have primary Q27–Q28**, and 12 with Q20–Q28 only as secondary/associated diagnosis.
 - **Source:** 192 monthly `RDRJ{yy}{mm}.dbc` files (2010–2025).
 - **Key fields:** `N_AIH`, `MUNIC_RES`, `MUNIC_MOV`, `DIAG_PRINC`, `DIAG_SECUN`, `DIAS_PERM`, `MORTE`, `VAL_TOT`, `CAR_INT`, `IDADE`, `COD_IDADE`, `age_years`, `age_group`, `diag_princ_chd`, `diag_princ_other_circulatory`.
 - **Warning:** AIH ≠ person; no stable patient identifier exists, so readmissions and unique individuals cannot be derived.
@@ -33,8 +33,8 @@ Daily ERA5-Land series, 2010-01-01 to 2025-12-31 (5,844 rows, no missing Tmax).
 ### 1.3b `data_processed/sinasc_tabnet_aggregates.csv`
 Agregados do TabNet para 2022–2025 (nascidos vivos e casos do grupo “malformações congênitas do aparelho circulatório”).
 - **Fonte:** DATASUS TabNet (`nvrj22.dbf` … `nvrj25.dbf`).
-- **Uso:** 2023–2024 não têm microdados; os valores TabNet do grupo **amplo Q20–Q28** ficam em colunas próprias e **não preenchem** o grupo Q20–Q26. 2025 serve como comparação descritiva.
-- **Aviso:** definição de caso distinta do grupo Q20–Q26; nunca misturar as séries.
+- **Uso:** 2023–2024 não têm microdados; os valores TabNet do grupo **Q20–Q28** (mesma definição do desfecho) ficam em colunas próprias e **não preenchem** a série de microdados por diferença de rota de extração. 2025 serve como comparação descritiva.
+- **Aviso:** mesma definição CID-10, mas extração agregada distinta; nunca misturar as séries.
 
 ### 1.4 `data_processed/sinasc_campos_with_exposure.csv`
 The birth-level file plus gestational-window area-level exposure:
@@ -109,7 +109,7 @@ Interoperable exports of the aggregated graph; edge attributes include `relation
 Hipóteses (`HYPOTHESIS_LINK` e `HYPOTHESIS_CANDIDATE`) no mesmo esquema de evidência, com `layer = hypothesis` e `evidence_type = hypothesis`. Nunca usadas em caminhos ou centralidade.
 
 ### `app/data/`
-Bundle autocontido do aplicativo Shiny (49 arquivos, ~5 MB), gerado por `scripts/app/01_prepare_data.py`.
+Bundle autocontido do aplicativo Shiny (48 arquivos, ~5 MB), gerado por `scripts/app/01_prepare_data.py`.
 
 ### `outputs/tables/exploratory_models.csv` / `.json`
 Modelos exploratórios ao nível do nascimento (logístico, Firth, cluster-robusto, ajuste socioeconômico), de contagem mensal, de ajuste mútuo e de sensibilidade. Colunas `p_value`, `exposure_1_p` e `exposure_2_p` trazem o p nominal; `q_value`, `exposure_1_q` e `exposure_2_q` trazem o valor ajustado por Benjamini–Hochberg. `sensitivity_leave_one_year_out.csv` contém p e q por ano excluído.

@@ -3,60 +3,60 @@
     -7.0,
     7.0
   ],
-  "events": 47,
+  "events": 53,
   "fixed_scenarios": {
     "fixed_main": {
-      "ci_high": 1.544780569472984,
-      "ci_low": 0.8698587174345425,
+      "ci_high": 1.5163252414476278,
+      "ci_low": 0.8758527431313283,
       "delta_days": 0.0,
-      "events": 47,
+      "events": 53,
       "n": 82911,
-      "or_per_sd": 1.1591983630421379
+      "or_per_sd": 1.1524225016031138
     },
     "fixed_minus_3.5d": {
-      "ci_high": 1.5885436821209953,
-      "ci_low": 0.8964269106217622,
+      "ci_high": 1.5623489928221757,
+      "ci_low": 0.9043060797654068,
       "delta_days": -3.5,
-      "events": 47,
+      "events": 53,
       "n": 82911,
-      "or_per_sd": 1.193320286156002
+      "or_per_sd": 1.18863017500165
     },
     "fixed_minus_7d": {
-      "ci_high": 1.627784051907638,
-      "ci_low": 0.920612886390117,
+      "ci_high": 1.6038232878652554,
+      "ci_low": 0.9304718825875516,
       "delta_days": -7.0,
-      "events": 47,
+      "events": 53,
       "n": 82911,
-      "or_per_sd": 1.2241564338132978
+      "or_per_sd": 1.2216024205926168
     },
     "fixed_plus_3.5d": {
-      "ci_high": 1.4925107238968898,
-      "ci_low": 0.8373027435437622,
+      "ci_high": 1.446648678217766,
+      "ci_low": 0.8315297584839342,
       "delta_days": 3.5,
-      "events": 47,
+      "events": 53,
       "n": 82911,
-      "or_per_sd": 1.1178923579161602
+      "or_per_sd": 1.096782305660299
     },
     "fixed_plus_7d": {
-      "ci_high": 1.4383523798663376,
-      "ci_low": 0.8038326897160021,
+      "ci_high": 1.3765257261845716,
+      "ci_low": 0.787245470619132,
       "delta_days": 7.0,
-      "events": 47,
+      "events": 53,
       "n": 82911,
-      "or_per_sd": 1.0752649265494392
+      "or_per_sd": 1.0409916633333407
     }
   },
-  "generated_at": "2026-11-01T15:20:31.690",
+  "generated_at": "2026-11-02T13:25:17.785",
   "input": "data_processed/sinasc_campos_with_exposure.csv",
   "julia_version": "1.13.2",
   "language": "Julia",
   "module": "gestational-window Monte Carlo measurement-error simulation",
   "monte_carlo": {
     "n_replicates": 500,
-    "or_mean": 1.1567064946452865,
-    "or_median": 1.1566727214023316,
-    "or_q025": 1.1160686563564193,
-    "or_q975": 1.2019315759504945,
+    "or_mean": 1.144847233666549,
+    "or_median": 1.1443824849050657,
+    "or_q025": 1.1061590469335953,
+    "or_q975": 1.184541284153657,
     "proportion_ci_excludes_null": 0.0,
     "proportion_or_gt_1": 1.0
   },

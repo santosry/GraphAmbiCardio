@@ -477,8 +477,8 @@ PATH:R-HSA-2173791,TGF-beta receptor signaling in EMT (epithelial to mesenchymal
 PATH:R-HSA-3642279,TGFBR2 MSI Frameshift Mutants in Cancer,Pathway,Reactome,Reactome:R-HSA-3642279,,Reactome
 POP:CAMPOS,"Resident population, Campos dos Goytacazes",Population,,IBGE:330100,Municipality of residence; ecological exposure assignment.,study
 PERIOD:2010-2025,2010-2025,Period,,,Epidemiological study period.,study
-IND:SINASC_CHD,"SINASC Q20–Q26 cases / 1,000 live births",Indicator,prevalence_at_birth,,Annual CHD cases reported in SINASC for resident live births; severe under-ascertainment documented.,SINASC
-IND:SIH_CHD,SIH CHD admissions (primary diagnosis),Indicator,hospital_admissions,,AIHs of residents with primary diagnosis Q20-Q28; not incidence and not unique individuals.,SIH/SUS
+IND:SINASC_CHD,"SINASC Q20–Q28 cases / 1,000 live births",Indicator,prevalence_at_birth,,Annual Q20–Q28 cases reported in SINASC for resident live births; severe under-ascertainment documented.,SINASC
+IND:SIH_CHD,SIH Q20–Q28 admissions (primary diagnosis),Indicator,hospital_admissions,,AIHs of residents with primary diagnosis Q20-Q28; not incidence and not unique individuals.,SIH/SUS
 IND:PM25_VIGIAR,PM2.5 anual (VIGIAR/MS),Indicator,area_level_air_quality,,Série anual de PM2.5 para Campos dos Goytacazes obtida do VIGIAR (Ministério da Saúde) via pacote vigiar; 2010-2025.,VIGIAR / vigiar
 IND:ERA5_TMAX,ERA5-Land daily maximum temperature (Campos),Indicator,area_level_climate,,"Gridded reanalysis for the municipality, 2010-2025.",Open-Meteo / ERA5-Land
 GENE:-,-,Gene,,NCBI:7467,,HPO genes_to_phenotype.txt

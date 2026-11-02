@@ -8,9 +8,9 @@ Important interpretative limits (enforced here and in the reports):
   diagnostic coding.
 * Residence (``MUNIC_RES``) and place of admission (``MUNIC_MOV``) are kept
   separately so that referral flow can be described.
-* Primary CHD is defined as Q20-Q26.  Q27 (peripheral vascular malformations)
-  and Q28 (other circulatory malformations) are extracted and reported as a
-  separate group, never added to the CHD count.
+* The primary study outcome is Q20-Q28.  Q27 (peripheral vascular
+  malformations) and Q28 (other circulatory malformations) are part of that
+  outcome and are also reported as a descriptive subgroup.
 """
 
 from __future__ import annotations
@@ -246,11 +246,13 @@ def summarise(df: pd.DataFrame) -> dict[str, Any]:
 
     outside = prim[prim["MUNIC_MOV"].astype(str).str[:6] != config.MUNICIPALITY["ibge6"]]
     qa = {
-        "chd_definition": "primary diagnosis Q20-Q26 (core CHD)",
-        "other_circulatory_definition": "primary diagnosis Q27-Q28 (not CHD)",
+        "chd_definition": "primary diagnosis Q20-Q28 (full study outcome)",
+        "q27_q28_definition": "primary diagnosis Q27-Q28 (descriptive subgroup within Q20-Q28)",
         "n_admissions_with_primary_chd": int(len(prim)),
         "n_admissions_primary_other_circulatory": int(len(other)),
-        "n_admissions_secondary_only_chd": int(len(df) - len(prim) - len(other)),
+        "n_admissions_secondary_only_chd": int(
+            (~df["diag_princ_chd"] & df["diag_sec_chd"]).sum()
+        ),
         "n_unique_hospitals": int(prim["CNES"].nunique()),
         "years": sorted(int(y) for y in prim["year"].unique()),
         "pct_admitted_outside_residence": round(100 * len(outside) / len(prim), 2) if len(prim) else "",

@@ -122,19 +122,21 @@ def main() -> None:
         add(checks, "pm25:annual_years", len(df) == 16 and set(df["ano"]) == set(range(2010, 2026)),
             f"{len(df)} rows")
 
-    # Case-definition separation: Q27/Q28 must not enter the core CHD table.
+    # Case definition: Q27/Q28 are part of the Q20-Q28 primary outcome.
     chd_codes_path = ROOT / "outputs/tables/sinasc_chd_by_code.csv"
     if chd_codes_path.exists():
         df = pd.read_csv(chd_codes_path)
-        bad = df["chd_code"].astype(str).str[:3].isin(["Q27", "Q28"]).any() if "chd_code" in df.columns else False
-        add(checks, "case_definition:no_q27_q28_in_chd", not bad, "Q27/Q28 found" if bad else "ok")
+        has_q27_q28 = df["chd_code"].astype(str).str[:3].isin(["Q27", "Q28"]).any() if "chd_code" in df.columns else False
+        add(checks, "case_definition:q27_q28_in_primary_outcome", has_q27_q28,
+            "ok" if has_q27_q28 else "Q27/Q28 absent from the Q20-Q28 case table")
 
     annual_complete = ROOT / "outputs/tables/sinasc_annual_complete.csv"
     if annual_complete.exists():
         df = pd.read_csv(annual_complete)
         miss = df[df["year"].isin([2023, 2024])]
         ok = bool(miss["chd_cases"].isna().all())
-        add(checks, "case_definition:2023_2024_core_missing", ok, "core CHD not imputed from TabNet" if ok else "core CHD filled with non-comparable TabNet")
+        add(checks, "case_definition:2023_2024_microdata_missing", ok,
+            "birth-level series not imputed from the TabNet aggregate" if ok else "birth-level series filled from the aggregate")
         if "tabnet_circulatory_cases" in df.columns:
             ok2 = bool(miss["tabnet_circulatory_cases"].notna().all())
             add(checks, "case_definition:tabnet_separate", ok2, "TabNet kept in its own columns" if ok2 else "TabNet missing")

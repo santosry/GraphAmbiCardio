@@ -477,7 +477,7 @@ PATH:R-HSA-2173791,Pathway,TGF-beta receptor signaling in EMT (epithelial to mes
 PATH:R-HSA-3642279,Pathway,TGFBR2 MSI Frameshift Mutants in Cancer,True,Reactome:R-HSA-3642279,
 POP:CAMPOS,Population,"Resident population, Campos dos Goytacazes",True,IBGE:330100,
 PERIOD:2010-2025,Period,2010-2025,False,,
-IND:SINASC_CHD,Indicator,"SINASC Q20–Q26 cases / 1,000 live births",False,,
+IND:SINASC_CHD,Indicator,"SINASC Q20–Q28 cases / 1,000 live births",False,,
 IND:SIH_CHD,Indicator,SIH CHD admissions (primary diagnosis),False,,
 IND:PM25_VIGIAR,Indicator,PM2.5 anual (VIGIAR/MS),False,,
 IND:ERA5_TMAX,Indicator,ERA5-Land daily maximum temperature (Campos),False,,

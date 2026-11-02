@@ -58,6 +58,8 @@ All work was executed on **2026-10-31** (America/Sao_Paulo), with the CAPES tria
 
 ## Phase E: Local epidemiological and environmental data
 
+> Resultados desta fase usaram a definição inicial Q20–Q26; foram substituídos pela Fase Q (Q20–Q28).
+
 **Done.** SINASC 2010–2022 + 2025; SIH 2010–2025 (192 monthly files); ERA5-Land 2010–2025; gestational-window linkage; descriptive indicators; exploratory models; leave-one-year-out sensitivity.
 
 **Obtained.**
@@ -163,6 +165,8 @@ Every deviation is reflected in the manuscript’s limitations section.
 
 ## Phase L: Methodological correction and v0.4.0
 
+> Resultados desta fase usaram a definição Q20–Q26; foram substituídos pela Fase Q (Q20–Q28).
+
 **Done.** Corrected the obstetric conception estimate (LMP-to-conception lag of 14 days; 40 weeks = 266 days before birth) and added ±7-day gestational-window sensitivity. Split the local case definition into Q20–Q26 group and separate Q27–Q28. Fixed the Open-Meteo request to `models=era5_land` and recorded model, resolution, returned grid cell, elevation, units and retrieval timestamp. Rebuilt the gene-overlap hypothesis family before selection, applied BH-FDR across all 89 tests, added a size-matched permutation sensitivity and documented mechanism gene-set provenance. Corrected the sex recoding so unknown codes are missing rather than female.
 
 **Obtained.** SINASC: 52 Q20–Q26 cases and 8 Q27–Q28 among 98,598 births. SIH: 474 primary Q20–Q26 admissions and 75 Q27–Q28. Climate: P90 33.3 °C; 68 heat waves. Models: Tmax OR 1.155 (0.87–1.54; p=0.318); no result survives FDR. Hypotheses: 89 tests, 5 with overlap ≥2, none significant after BH-FDR; permutation also non-significant. INMET comparison against the fixed ERA5-Land series: Tmax r=0.937; RH r=0.787.
@@ -214,3 +218,15 @@ Every deviation is reflected in the manuscript’s limitations section.
 **Problems.** A maioria dos estudos clássicos é paywalled e ficou no resumo. Tabelas e figuras não foram extraídas, apenas frases com efeito explícito. A leitura e a revisão foram assistidas por IA; a confirmação humana independente continua recomendada.
 
 **Decision.** Manter a leitura em lotes, sem reter artigos completos: a proveniência fica nos metadados e nos trechos arquivados. **Apt to advance: yes, as reviewed auxiliary curation; human confirmation remains the final gate.**
+
+---
+
+## Phase Q: Correção do escopo CID-10 para Q20–Q28 (2026-11-02)
+
+**Done.** O desfecho local foi ampliado de Q20–Q26 para todo o capítulo **Q20–Q28** de malformações congênitas do aparelho circulatório. Q27–Q28 passaram a integrar o numerador principal e continuam disponíveis como subgrupo descritivo. Foram atualizados o parser do SINASC, a extração do SIH, os modelos exploratórios, a simulação Julia, as tabelas, o app, os metadados FAIR e a documentação. A série TabNet 2023–2024 usa a mesma definição Q20–Q28, mas permanece em colunas separadas por diferença de rota de extração.
+
+**Obtained.** SINASC: **59 casos Q20–Q28** (8 com Q27–Q28) entre 98.598 nascimentos, **0,60/1.000**. SIH: **549 internações** com diagnóstico principal Q20–Q28, incluindo 75 com Q27–Q28, 33 óbitos, 55,0% fora do município e 18 hospitais. Modelos: Tmax OR 1,149 (0,876–1,507; p=0,315); modelo mensal RR 1,187 (0,909–1,549; p=0,208); nenhum resultado sobrevive ao FDR. Julia: mediana do OR 1,144; intervalo de simulação 1,106–1,185.
+
+**Problems.** A ampliação aumenta os eventos e altera as estimativas descritivas, mas não resolve a subnotificação do SINASC nem a natureza ecológica da exposição.
+
+**Decision.** Manter Q20–Q28 como definição principal e Q27–Q28 como subgrupo; não imputar TabNet na série de microdados. **Apt to advance: yes, with the same conservative interpretation.**

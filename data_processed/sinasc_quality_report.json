@@ -1,12 +1,12 @@
 {
   "n_births": 98598,
-  "n_chd_core_q20_q26": 52,
-  "n_other_circulatory_q27_q28": 8,
-  "n_circulatory_total_q20_q28": 59,
-  "n_records_in_both_groups": 1,
+  "n_circulatory_q20_q28": 59,
+  "n_q20_q26_only": 51,
+  "n_q27_q28_subgroup": 8,
+  "n_records_with_q27_q28_and_q20_q26": 1,
   "n_non_circulatory": 98539,
   "n_records_with_any_icd_code": 697,
-  "n_chd_with_multiple_chd_codes": 7,
+  "n_chd_with_multiple_chd_codes": 8,
   "idanomal_1_but_no_code": 3,
   "chd_with_idanomal_not_1": 0,
   "conception_estimated_pct": 95.45,
@@ -37,5 +37,5 @@
     2023,
     2024
   ],
-  "retrieved_at": "2026-11-01"
+  "retrieved_at": "2026-11-02"
 }

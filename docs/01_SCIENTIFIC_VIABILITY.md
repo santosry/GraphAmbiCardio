@@ -160,8 +160,8 @@ A revisão do protocolo acrescentou três variáveis e fortaleceu o eixo princip
 | # | Incompatibility | Resolution adopted |
 |---|---|---|
 | 1 | CID-10 and HPO are not isomorphic (HLHS has no dedicated HPO term) | Mapped HLHS to HP:0004383 (hypoplastic left ventricle) with OMIM 241550 and an explicit note |
-| 2 | `CODANOMAL` concatenates multiple 4-character ICD codes | Parsed in blocks of four; Q20–Q26 retained, Q27–Q28 kept separate |
-| 3 | SINASC records 52 Q20–Q26 cases plus 8 Q27–Q28 cases in 98,598 births | Reported as **under-ascertainment**, not prevalence; not used to estimate risk |
+| 2 | `CODANOMAL` concatenates multiple 4-character ICD codes | Parsed in blocks of four; all Q20–Q28 codes retained, with Q27–Q28 also flagged as a subgroup |
+| 3 | SINASC records 59 Q20–Q28 cases (8 with Q27–Q28) in 98,598 births | Reported as **under-ascertainment**, not prevalence; not used to estimate risk |
 | 4 | SIH AIHs are not individuals and 55% occur outside the municipality | Reported as admissions, never incidence; residence and admission municipality separated |
 | 5 | Birth month ≠ exposure month | Exposure assigned to an estimated gestational window (weeks 3–8 post-conception) |
 | 6 | Area-level climate ≠ personal exposure | All local analyses labelled ecological-exposure designs |

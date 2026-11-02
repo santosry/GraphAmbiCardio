@@ -89,13 +89,13 @@ def fig_local():
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.2))
     axes[0].boxplot([d.loc[~d["is_chd"], "win_temperature_2m_max_mean"].dropna(),
                      d.loc[d["is_chd"], "win_temperature_2m_max_mean"].dropna()],
-                    tick_labels=["non-CHD", "CHD"])
+                    tick_labels=["other births", "Q20–Q28"])
     axes[0].set_ylabel("mean Tmax in organogenesis window (C)")
-    axes[0].set_title("Area-level heat exposure by CHD status")
+    axes[0].set_title("Area-level heat exposure by Q20–Q28 status")
     ann = pd.read_csv(config.TABLES / "sinasc_annual.csv")
     axes[1].bar(ann["year"].astype(str), ann["chd_cases"], color=COLORS["Phenotype"])
-    axes[1].set_ylabel("CHD cases (SINASC)")
-    axes[1].set_title("Reported CHD cases, Campos dos Goytacazes")
+    axes[1].set_ylabel("Q20–Q28 cases (SINASC)")
+    axes[1].set_title("Reported Q20–Q28 cases, Campos dos Goytacazes")
     axes[1].tick_params(axis="x", rotation=90)
     plt.tight_layout()
     plt.savefig(config.FIGURES / "fig4_local_data.png", dpi=300)

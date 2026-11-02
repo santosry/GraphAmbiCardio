@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01",
+  "generated_at": "2026-11-02",
   "graph": {
     "n_nodes": 2238,
     "n_relations": 4146,
@@ -32,8 +32,8 @@
   },
   "local_data": {
     "sinasc_births": 98598,
-    "sinasc_chd_core": 52,
-    "sinasc_other_circulatory": 8,
+    "sinasc_circulatory_q20_q28": 59,
+    "sinasc_q27_q28_subgroup": 8,
     "sinasc_years": [
       2010,
       2011,

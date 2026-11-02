@@ -1,11 +1,11 @@
 """Supplement the core SINASC series with TabNet aggregates without mixing definitions.
 
-TabNet reports the broad group "malformações congênitas do aparelho
-circulatório" (Q20-Q28).  The microdata case definition used here is the core
-CHD group Q20-Q26; Q27-Q28 are analysed separately.  Therefore TabNet values
-are stored in dedicated columns and are **never** copied into ``chd_cases``.
-For 2023-2024, where microdata are unavailable, the core CHD series is left
-missing rather than filled with a non-comparable aggregate.
+TabNet reports the group "malformações congênitas do aparelho circulatório"
+(Q20-Q28), which matches the microdata case definition.  TabNet values are
+still stored in dedicated columns and are **never** copied into ``chd_cases``
+because the extraction route differs (aggregate TabNet vs. birth-level
+CODANOMAL parsing).  For 2023-2024, where microdata are unavailable, the
+birth-level series is left missing rather than filled with the aggregate.
 """
 import sys
 from pathlib import Path
@@ -32,15 +32,15 @@ def main() -> None:
         }
     )
     annual = pd.read_csv(config.TABLES / "sinasc_annual.csv")
-    annual["source"] = "SINASC microdata (core CHD Q20-Q26)"
+    annual["source"] = "SINASC microdata (Q20-Q28)"
     out = annual.merge(agg, on="year", how="outer").sort_values("year")
 
-    # Years without microdata: keep the core CHD outcome missing and expose the
-    # broad TabNet aggregate only in its own columns.
+    # Years without microdata: keep the birth-level outcome missing and expose
+    # the TabNet aggregate only in its own columns.
     missing_microdata = out["chd_cases"].isna()
     out.loc[missing_microdata, "live_births"] = out.loc[missing_microdata, "live_births_tabnet"]
-    out.loc[missing_microdata, "data_status"] = "aggregate only (broad Q20-Q28)"
-    out.loc[missing_microdata, "source"] = "SINASC via TabNet (broad Q20-Q28; not CHD core)"
+    out.loc[missing_microdata, "data_status"] = "aggregate only (Q20-Q28)"
+    out.loc[missing_microdata, "source"] = "SINASC via TabNet (Q20-Q28; aggregate only)"
     out.loc[missing_microdata, "chd_cases"] = pd.NA
     out.loc[missing_microdata, "chd_per_1000_lb"] = pd.NA
     out.loc[missing_microdata, "other_circulatory_cases"] = pd.NA

@@ -1,4 +1,4 @@
 window,exposure_column,n,n_events,or_per_sd,ci_low,ci_high,p_value
-main,win_temperature_2m_max_mean,83040,47,1.155,0.87,1.535,0.3181
-early_7d,win_temperature_2m_max_mean_early,82911,47,1.221,0.922,1.618,0.1642
-late_7d,win_temperature_2m_max_mean_late,83172,47,1.071,0.803,1.428,0.6407
+main,win_temperature_2m_max_mean,83040,53,1.149,0.876,1.507,0.3151
+early_7d,win_temperature_2m_max_mean_early,82911,53,1.219,0.931,1.595,0.1495
+late_7d,win_temperature_2m_max_mean_late,83172,53,1.038,0.787,1.368,0.7928

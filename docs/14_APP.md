@@ -44,7 +44,7 @@ python scripts/app/02_fair_metadata.py
 Sub-abas de **Grafo e painel**:
 
 - **Grafo interativo:** exploração por tipo de nó, nível de evidência, exposição e fenótipo; clique para ver evidências.
-- **Painel epidemiológico:** grupo Q20–Q26 (malformações cardíacas e dos grandes vasos; Q27–Q28 à parte); SINASC (microdados + TabNet 2023–2024 em série separada), SIH/SUS, clima ERA5-Land com modelo fixado, validação INMET A607, PM2,5 VIGIAR, modelos exploratórios com p e q (BH-FDR) e simulação Julia de erro de medida da janela gestacional.
+- **Painel epidemiológico:** grupo Q20–Q28 (malformações congênitas do aparelho circulatório; Q27–Q28 incluídos e detalhados como subgrupo); SINASC (microdados + TabNet 2023–2024 em série separada), SIH/SUS, clima ERA5-Land com modelo fixado, validação INMET A607, PM2,5 VIGIAR, modelos exploratórios com p e q (BH-FDR) e simulação Julia de erro de medida da janela gestacional.
 
 Sub-abas de **Evidências e métodos**:
 

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-01T21:06:49Z",
-  "app_url": "http://127.0.0.1:3852/",
+  "generated_at": "2026-11-02T13:36:02Z",
+  "app_url": "http://127.0.0.1:3850/",
   "viewport": [
     1600,
     1200
@@ -18,31 +18,31 @@
         "evidence.csv"
       ],
       "path": "outputs\\figures\\site\\01_grafo_interativo.png",
-      "sha256": "adc6c3dabe776980441cc3d77bb2840155b26992440d2961178ce0c4a4c5e514"
+      "sha256": "f9b7ec0b2185ada3e786b7b907476ae27cbf0db3ee29a841be7040f18d829ee6"
     },
     {
       "file": "02_sinasc.png",
       "title": "SINASC: casos e taxa por 1.000 nascidos vivos",
       "source": "SINASC/DATASUS (microdados 2010–2022 e 2025; TabNet 2023–2024 em série separada)",
       "period": "2010–2025",
-      "note": "Casos = Q20–Q26 (malformações cardíacas e dos grandes vasos); TabNet Q20–Q28 em colunas separadas; ver docs/07_EPI_ENV_METHODS.md.",
+      "note": "Casos = Q20–Q28 (malformações congênitas do aparelho circulatório, incluindo Q27–Q28); TabNet Q20–Q28 em colunas separadas; ver docs/07_EPI_ENV_METHODS.md.",
       "data": [
         "sinasc_annual.csv"
       ],
       "path": "outputs\\figures\\site\\02_sinasc.png",
-      "sha256": "9dc793dfd3b33ca4b847c4bea0d12e79a5bbade6cf00749cfb1a2226be61cf3f"
+      "sha256": "0166642d0f120b2643f29faf4fa541881be7414c0323350d3f9adf5f95fca61c"
     },
     {
       "file": "03_sih.png",
       "title": "SIH/SUS: internações e óbitos",
-      "source": "SIH/SUS (AIH com diagnóstico principal Q20–Q26)",
+      "source": "SIH/SUS (AIH com diagnóstico principal Q20–Q28)",
       "period": "2010–2025",
       "note": "AIH não são pessoas; ver docs/07 e docs/09.",
       "data": [
         "sih_annual.csv"
       ],
       "path": "outputs\\figures\\site\\03_sih.png",
-      "sha256": "1d1a7fc0a779d9e551b2239ba401793bbe30819ab0121a13a6a425e6c9b37ba6"
+      "sha256": "45c4dbde3062ff515839f427787bc4265d08d1f3018662990b4fbf0b2c07e115"
     },
     {
       "file": "04_clima.png",
@@ -54,7 +54,7 @@
         "climate_monthly.csv"
       ],
       "path": "outputs\\figures\\site\\04_clima.png",
-      "sha256": "71695528b307f12f386329481c02070fd295d9878e9b0d4f54fd640a4bbdfd26"
+      "sha256": "face042638454d2366ec5442e5896e73e1011f8213afb7fe7a21408936bddc96"
     },
     {
       "file": "05_calor.png",
@@ -66,7 +66,7 @@
         "climate_annual.csv"
       ],
       "path": "outputs\\figures\\site\\05_calor.png",
-      "sha256": "6b0daf03e01f92ba5075295c92a271254e58c79502cf8b0927c4d97ed17d116e"
+      "sha256": "f86aa53fa0ef98aadb2989c5eba13c1545a2d44a09fb01fc5bc92f6576d0c404"
     },
     {
       "file": "06_pm25.png",
@@ -79,7 +79,7 @@
         "pm25_annual.csv"
       ],
       "path": "outputs\\figures\\site\\06_pm25.png",
-      "sha256": "5c6be91c45eca46b0c5b2b46d40869c0b6e1ae522148129cfec636b73d7d65f2"
+      "sha256": "1e5e497667f3678952b04e9b5a14ed7afd8dff22edbf20df7f1cdd2fd6f3d4c1"
     },
     {
       "file": "07_inmet_validacao.png",
@@ -93,7 +93,7 @@
         "inmet_comparison.csv"
       ],
       "path": "outputs\\figures\\site\\07_inmet_validacao.png",
-      "sha256": "49c82304e2c5ade13c17dfeab94ed6cb051da068ff3635efc1eb6195e1535603"
+      "sha256": "45455fb8429f13e467dab7a52b13d53407ea5cd123d18311a2d637a12241661a"
     }
   ]
 }

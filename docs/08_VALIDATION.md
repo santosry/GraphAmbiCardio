@@ -58,8 +58,8 @@ Specific corrections made during validation:
 
 ## 4. Data validation details
 
-- SINASC: 98,598 births; all `CODMUNRES` = 330100; years 2010–2022 + 2025; 2023–2024 explicitly absent; 52 Q20–Q26 cases and 8 Q27–Q28 records; 7 with multiple Q20–Q26 codes; 3 records with `IDANOMAL=1` and no code.
-- SIH: 474 primary Q20–Q26 admissions (Q20–Q26), 75 primary Q27–Q28; all `MUNIC_RES` = 330100; years 2010–2025; 16 hospitals; 51.9% outside municipality; 30 deaths.
+- SINASC: 98,598 births; all `CODMUNRES` = 330100; years 2010–2022 + 2025; 2023–2024 explicitly absent; 59 Q20–Q28 cases, including 8 records with Q27–Q28; 8 records with multiple Q20–Q28 codes; 3 records with `IDANOMAL=1` and no code.
+- SIH: 549 primary Q20–Q28 admissions, including 75 with primary Q27–Q28; all `MUNIC_RES` = 330100; years 2010–2025; 18 hospitals; 55.0% outside municipality; 33 deaths.
 - Climate: 5,844 days; zero missing Tmax; model fixed to `era5_land`; P90 threshold 33.3 °C; 68 heat waves.
 - Exposure linkage: 90,258/98,598 births with a complete main organogenesis window (91.5%); completeness 100% among linked births; ±7-day windows stored.
 - Cross-checks: counts in `outputs/tables/*` reconcile with the processed CSVs (no manual edits).
@@ -82,7 +82,7 @@ The qualitative conclusion “few direct human links, many mechanism-level gaps�
 
 ### Local model
 
-After correcting the conception window, the main birth-level model had OR 1.155 per SD (p = 0.318, q = 0.509). Firth regression gave OR 1.159 (p = 0.304), cluster-robust SE by month of conception gave OR 1.155 (0.829–1.611; p = 0.394), and the socio-economic Firth model gave OR 1.187 (0.889–1.571; p = 0.236). The ±7-day gestational-window sensitivity gave ORs of 1.071–1.221. Leave-one-year-out OR per SD was 1.136–1.608; p ranged 0.024–0.546. No model survives FDR in the primary family. The monthly model was null (RR 1.211; p = 0.176). The local heat finding is therefore **not robust enough for a causal claim**.
+After correcting the conception window and extending the outcome to Q20–Q28, the main birth-level model had OR 1.149 per SD (p = 0.315, q = 0.501). Firth regression gave OR 1.153 (p = 0.301), cluster-robust SE by month of conception gave OR 1.149 (0.849–1.555; p = 0.368), and the socio-economic Firth model gave OR 1.179 (0.896–1.542; p = 0.231). The ±7-day gestational-window sensitivity gave ORs of 1.038–1.219. Leave-one-year-out OR per SD was 1.188–1.598; p ranged 0.019–0.397. No model survives FDR in the primary family. The monthly model was null (RR 1.187; p = 0.208). The local heat finding is therefore **not robust enough for a causal claim**.
 
 ---
 

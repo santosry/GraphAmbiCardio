@@ -1,6 +1,6 @@
 # GraphAmbiCardio
 
-**Um grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e malformações congênitas do aparelho circulatório (CID-10 Q20–Q26).**
+**Um grafo de conhecimento com proveniência sobre exposições ambientais, mecanismos moleculares, cardiogênese e malformações congênitas do aparelho circulatório (CID-10 Q20–Q28).**
 Campos dos Goytacazes, RJ, 2010 a 2025.
 
 [![Versão](https://img.shields.io/badge/vers%C3%A3o-0.4.0-1f6feb)](CHANGELOG.md)
@@ -250,7 +250,7 @@ flowchart TB
 
 ## 5. Dados locais e modelos exploratórios
 
-> **Grupo de doenças analisado.** O desfecho local principal é o grupo CID-10 **Q20–Q26**: malformações congênitas das câmaras cardíacas e conexões (Q20), dos septos (Q21), das válvulas pulmonar e tricúspide (Q22), das válvulas aórtica e mitral (Q23), outras malformações do coração (Q24), grandes artérias (Q25) e grandes veias (Q26). Q27–Q28 (outras malformações congênitas do aparelho circulatório) são reportadas separadamente e não entram no numerador principal. O termo "cardiopatia congênita" é usado apenas quando o estudo de origem trata do coração; o grupo local é mais amplo porque inclui os grandes vasos.
+> **Grupo de doenças analisado.** O desfecho local principal é o capítulo CID-10 **Q20–Q28** de malformações congênitas do aparelho circulatório: câmaras cardíacas e conexões (Q20), septos (Q21), válvulas pulmonar e tricúspide (Q22), válvulas aórtica e mitral (Q23), outras malformações do coração (Q24), grandes artérias (Q25), grandes veias (Q26), sistema vascular periférico (Q27) e outras malformações circulatórias (Q28). Q27–Q28 integram o numerador principal e também são reportados como subgrupo descritivo. O termo "cardiopatia congênita" é usado apenas quando o estudo de origem trata do coração; o grupo local é mais amplo porque inclui os grandes vasos e as demais malformações circulatórias.
 >
 > Fenótipos sentinela no grafo: comunicação interventricular (VSD), comunicação interatrial (ASD), defeito do septo atrioventricular (AVSD), tetralogia de Fallot (TOF), dupla via de saída do ventrículo direito (DORV), transposição das grandes artérias (TGA), síndrome do coração esquerdo hipoplásico (HLHS), coarctação da aorta (CoA), persistência do canal arterial (PDA), estenose valvar pulmonar (PS), estenose valvar aórtica (AS), drenagem anômala total de veias pulmonares (TAPVC), tronco arterial comum (truncus) e anomalia de Ebstein. Quando um estudo relata o conjunto, usa-se o nó agregado `CHD:ALL`.
 
@@ -258,15 +258,15 @@ flowchart TB
 ### SINASC
 
 - **98.598 nascimentos** (microdados de 2010 a 2022 e 2025; 2023 e 2024 apenas agregados do TabNet).
-- **52 casos do grupo Q20–Q26**, **0,53 por 1.000** nascidos vivos, o que indica subnotificação grave.
-- **8 registros Q27 a Q28** (não pertencem ao grupo principal Q20–Q26; 1 também tinha código Q20 a Q26).
-- TabNet 2023 e 2024: **5 e 5 casos** no grupo amplo Q20 a Q28, mantidos em colunas separadas e **não imputados** no grupo Q20–Q26.
+- **59 casos do grupo Q20–Q28**, **0,60 por 1.000** nascidos vivos, o que indica subnotificação grave.
+- **8 registros com códigos Q27 a Q28** (incluídos no total Q20–Q28; 1 também tinha código Q20 a Q26).
+- TabNet 2023 e 2024: **5 e 5 casos** no mesmo grupo Q20 a Q28, mantidos em colunas separadas e **não imputados** na série de microdados.
 
 ### SIH/SUS
 
-- **474 internações** com diagnóstico principal Q20 a Q26.
-- **75 internações** com Q27 a Q28 em série separada e **12** apenas com diagnóstico secundário.
-- **30 óbitos**, **51,9%** das internações ocorreram fora do município de residência e **16 hospitais**.
+- **549 internações** com diagnóstico principal Q20 a Q28.
+- **75 internações** com Q27 a Q28 como subgrupo do total e **12** apenas com diagnóstico secundário.
+- **33 óbitos**, **55,0%** das internações ocorreram fora do município de residência e **18 hospitais**.
 - AIH não são pessoas; não há identificador estável para readmissão.
 
 ### Clima e poluição do ar
@@ -278,21 +278,21 @@ flowchart TB
 
 ### Modelos exploratórios
 
-Com **52 casos core** e **47 eventos** nos modelos completos:
+Com **59 casos Q20–Q28** e **53 eventos** nos modelos completos:
 
 | Modelo | Estimativa | IC 95% | p | q |
 |---|---|---:|---:|---:|
-| Temperatura (logístico) | OR 1,155 por DP | 0,87 a 1,535 | 0,318 | 0,509 |
-| Firth | OR 1,159 | 0,869 a 1,532 | 0,304 | 0,509 |
-| Cluster mensal | OR 1,155 | 0,829 a 1,611 | 0,394 | 0,524 |
-| Ajuste socioeconômico (Firth) | OR 1,187 | 0,889 a 1,571 | 0,236 | 0,509 |
-| Ajuste sazonal | OR 1,357 | 0,914 a 2,013 | 0,130 | 0,509 |
-| Modelo mensal (Poisson) | RR 1,211 | 0,918 a 1,599 | 0,176 | 0,509 |
-| Janela principal | OR 1,155 | 0,870 a 1,535 | 0,318 | 0,509 |
-| Janela -7 dias | OR 1,221 | 0,922 a 1,618 | 0,164 | 0,509 |
-| Janela +7 dias | OR 1,071 | 0,803 a 1,428 | 0,641 | 0,641 |
-| PM2,5 municipal | OR 0,842 | 0,625 a 1,134 | 0,257 | 0,509 |
-| PM2,5 e temperatura juntos | OR 0,872 e 1,106 | 0,640 a 1,189 e 0,822 a 1,487 | 0,386 e 0,506 | 0,524 e 0,578 |
+| Temperatura (logístico) | OR 1,149 por DP | 0,876 a 1,507 | 0,315 | 0,501 |
+| Firth | OR 1,153 | 0,876 a 1,505 | 0,301 | 0,501 |
+| Cluster mensal | OR 1,149 | 0,849 a 1,555 | 0,368 | 0,501 |
+| Ajuste socioeconômico (Firth) | OR 1,179 | 0,896 a 1,542 | 0,231 | 0,501 |
+| Ajuste sazonal | OR 1,389 | 0,954 a 2,023 | 0,087 | 0,501 |
+| Modelo mensal (Poisson) | RR 1,187 | 0,909 a 1,549 | 0,208 | 0,501 |
+| Janela principal | OR 1,149 | 0,876 a 1,507 | 0,315 | 0,501 |
+| Janela -7 dias | OR 1,219 | 0,931 a 1,595 | 0,150 | 0,501 |
+| Janela +7 dias | OR 1,038 | 0,787 a 1,368 | 0,793 | 0,793 |
+| PM2,5 municipal | OR 0,857 | 0,650 a 1,129 | 0,272 | 0,501 |
+| PM2,5 e temperatura juntos | OR 0,886 e 1,104 | 0,666 a 1,179 e 0,832 a 1,466 | 0,407 e 0,492 | 0,501 e 0,562 |
 
 **Nenhum modelo sobrevive ao FDR (q < 0,05). Isso não é um achado causal.**
 
@@ -300,9 +300,9 @@ Com **52 casos core** e **47 eventos** nos modelos completos:
 
 O módulo Julia faz uma simulação Monte Carlo do erro de medida da janela gestacional (500 réplicas):
 
-- mediana do OR: **1,157**;
-- intervalo de simulação de 95%: **1,116 a 1,202**;
-- cenários fixos de -7 a +7 dias: **1,075 a 1,224**.
+- mediana do OR: **1,144**;
+- intervalo de simulação de 95%: **1,106 a 1,185**;
+- cenários fixos de -7 a +7 dias: **1,041 a 1,222**.
 
 O erro individual médio tende a se cancelar; o deslocamento sistemático da janela é o que mais altera a estimativa. Não é um modelo bayesiano completo: é análise de sensibilidade.
 
@@ -503,13 +503,13 @@ O workflow `.github/workflows/ci.yml` roda em cada push e pull request:
 - **SciELO** foi acessado por metadados Crossref, porque a interface de busca bloqueou automação.
 - **CAPES** cobre o Catálogo de Teses, não o Portal de Periódicos.
 - **SINASC** tem subnotificação grave; 2023 e 2024 não têm microdados, e 2025 é preliminar.
-- **Grupo Q20–Q26** é definido como malformações das câmaras cardíacas e conexões, septos, válvulas e grandes vasos; Q27 e Q28 são reportados separadamente e não entram no numerador principal.
+- **Grupo Q20–Q28** é definido como todas as malformações congênitas do aparelho circulatório; Q27 e Q28 integram o numerador principal e são detalhados como subgrupo.
 - **SIH**: AIH não são pessoas e a maioria das internações ocorre fora do município.
 - **Exposição de área.** Clima e PM2,5 são séries de área, não exposição individual. A estação INMET A607 serve para validar a reanálise, não para representar exposição pessoal.
 - **Idade gestacional.** A concepção é estimada como 40 semanas obstétricas menos 14 dias; janelas de ±7 dias são analisadas como sensibilidade.
 - **Mecanismos** são majoritariamente experimentais, em doses não equivalentes às humanas.
 - **HPO e ClinVar** são orientados a doenças mendelianas e sindrômicas.
-- **Nenhum achado causal.** Os modelos locais são exploratórios, com 52 casos, e nenhum sobrevive ao FDR.
+- **Nenhum achado causal.** Os modelos locais são exploratórios, com 59 casos, e nenhum sobrevive ao FDR.
 
 Ver `docs/09_LIMITATIONS_AND_GAPS.md`.
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased: 2026-11-02
+
+### Correção de escopo: CID-10 Q20–Q28
+- O desfecho local passou de Q20–Q26 para o capítulo completo **Q20–Q28** (malformações congênitas do aparelho circulatório). Q27–Q28 agora integram o numerador principal e continuam disponíveis como subgrupo descritivo.
+- Atualizados o parser do SINASC, a extração do SIH, os modelos exploratórios, a simulação Julia, as tabelas, o app, os metadados FAIR e a documentação.
+- A série TabNet 2023–2024 usa a mesma definição Q20–Q28, mas permanece em colunas separadas por diferença de rota de extração e não é imputada na série de microdados.
+- SINASC: **59 casos Q20–Q28** (8 com Q27–Q28) em 98.598 nascimentos, **0,60/1.000**.
+- SIH: **549 internações** com diagnóstico principal Q20–Q28, incluindo 75 com Q27–Q28; **33 óbitos**, **55,0%** fora do município e **18 hospitais**.
+- Modelos: Tmax OR 1,149 (0,876–1,507; p=0,315); Poisson mensal RR 1,187 (0,909–1,549; p=0,208); nenhum resultado sobrevive ao FDR. Julia: mediana do OR 1,144; intervalo de simulação 1,106–1,185.
+
 ## v0.4.0: 2026-11-01
 
 ### Revisão da CAPES (2026-11-01)

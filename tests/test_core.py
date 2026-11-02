@@ -27,14 +27,16 @@ def test_parse_multiple_icd_codes():
     assert sinasc.chd_codes("Q02X") == []
 
 
-def test_q27_q28_are_not_core_chd():
-    assert sinasc.chd_codes("Q270") == []
-    assert sinasc.chd_codes("Q282") == []
+def test_q20_q28_are_in_scope():
+    assert sinasc.chd_codes("Q270") == ["Q270"]
+    assert sinasc.chd_codes("Q282") == ["Q282"]
     assert sinasc.other_circulatory_codes("Q270") == ["Q270"]
     assert sinasc.other_circulatory_codes("Q251Q279") == ["Q279"]
-    assert sinasc.chd_codes("Q251Q279") == ["Q251"]
+    assert sinasc.chd_codes("Q251Q279") == ["Q251", "Q279"]
     assert sinasc.is_chd_code("Q261")
-    assert not sinasc.is_chd_code("Q271")
+    assert sinasc.is_chd_code("Q271")
+    assert sinasc.is_chd_code("Q282")
+    assert not sinasc.is_chd_code("Q290")
 
 
 def test_estimate_conception():

@@ -4319,16 +4319,16 @@
     </node>
     <node id="IND:SINASC_CHD">
       <data key="d0">IND:SINASC_CHD</data>
-      <data key="d1">SINASC Q20–Q26 cases / 1,000 live births</data>
+      <data key="d1">SINASC Q20–Q28 cases / 1,000 live births</data>
       <data key="d2">Indicator</data>
       <data key="d3">prevalence_at_birth</data>
       <data key="d4" />
-      <data key="d5">Annual CHD cases reported in SINASC for resident live births; severe under-ascertainment documented.</data>
+      <data key="d5">Annual Q20–Q28 cases reported in SINASC for resident live births; severe under-ascertainment documented.</data>
       <data key="d6">SINASC</data>
     </node>
     <node id="IND:SIH_CHD">
       <data key="d0">IND:SIH_CHD</data>
-      <data key="d1">SIH CHD admissions (primary diagnosis)</data>
+      <data key="d1">SIH Q20–Q28 admissions (primary diagnosis)</data>
       <data key="d2">Indicator</data>
       <data key="d3">hospital_admissions</data>
       <data key="d4" />

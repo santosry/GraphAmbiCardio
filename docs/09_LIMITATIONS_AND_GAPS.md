@@ -29,15 +29,15 @@ This document lists limitations that materially affect interpretation. They are 
 
 ## 3. Local epidemiological data
 
-1. **SINASC under-ascertainment is severe.** 52 Q20–Q26 cases plus 8 Q27–Q28 in 98,598 births (0.53 per 1,000) versus an expected 6–9 per 1,000. Diagnoses made after the birth record are not captured. The SINASC count is a **reported** count, not prevalence.
-2. **Missing microdata.** 2023 and 2024 microdata were absent from the DATASUS FTP; aggregate counts were obtained from TabNet and are kept in a separate series because the case definition differs. 2025 is preliminary. No imputation was performed.
+1. **SINASC under-ascertainment is severe.** 59 Q20–Q28 cases (8 with a Q27–Q28 code) in 98,598 births (0.60 per 1,000) versus an expected 6–9 per 1,000. Diagnoses made after the birth record are not captured. The SINASC count is a **reported** count, not prevalence.
+2. **Missing microdata.** 2023 and 2024 microdata were absent from the DATASUS FTP; aggregate Q20–Q28 counts were obtained from TabNet and are kept in a separate series because the extraction route differs from the birth-level parser. 2025 is preliminary. No imputation was performed.
 3. **Unspecified codes.** Q249/Q248/Q219 dominate; phenotype-specific analyses are underpowered.
 4. **SIH is not incidence and not people.** AIH counts depend on access, referral and coding; 55% of admissions occur outside the municipality; there is no patient identifier, so readmissions cannot be measured.
-5. **Adult admissions.** 88/474 Q20–Q26 admissions are in adults (≥18 years), reflecting adult CHD, not incident childhood disease.
+5. **Adult admissions.** 138/549 Q20–Q28 admissions are in adults (≥18 years), reflecting adults with congenital circulatory malformations, not incident childhood disease.
 6. **Costs are nominal.** No deflation or purchasing-power adjustment was applied.
 7. **Denominators.** Birth-level models use SINASC live births; SIH indicators lack age-specific population denominators.
 8. **Residence at birth ≠ residence at conception.** Migration during pregnancy is not captured.
-9. **Small numbers.** 47 events in the complete models make all estimates imprecise; the season-adjusted estimate is fragile under leave-one-year-out. Firth and cluster-robust models reduce, but do not remove, this instability, and no model survives BH-FDR in the primary family.
+9. **Small numbers.** 53 events in the complete models make all estimates imprecise; the season-adjusted estimate is fragile under leave-one-year-out. Firth and cluster-robust models reduce, but do not remove, this instability, and no model survives BH-FDR in the primary family.
 
 ---
 
@@ -47,7 +47,7 @@ This document lists limitations that materially affect interpretation. They are 
 2. **Reanalysis ≠ station.** ERA5-Land is a ~9 km grid cell; it does not represent street-level or indoor exposure, urban heat islands, or the full municipality. INMET station A607 was used to validate the reanalysis (Tmax r=0.937; RH r=0.787), but a single station also cannot represent the whole municipality. The Open-Meteo model is explicitly fixed to `era5_land`.
 3. **Ecological exposure.** All births in the same window receive the same exposure value; this is not personal exposure and cannot support individual risk statements.
 3b. **Gestational-age misclassification.** Conception is estimated as birth date minus (gestational age × 7 − 14 days); ±7-day window sensitivity is reported. Even so, the temporal assignment remains uncertain.
-3c. **Case definition.** The main group is Q20–Q26 (cardiac chambers and connections, septa, valves and great vessels); Q27–Q28 are analysed separately. TabNet 2023–2024 reports only the broad Q20–Q28 group and is not imputed into the core series.
+3c. **Case definition.** The outcome is the full Q20–Q28 group (congenital malformations of the circulatory system); Q27–Q28 are part of the numerator and are also described as a subgroup. TabNet 2023–2024 reports the same Q20–Q28 group but is not imputed into the birth-level series because the extraction route differs.
 4. **Gestational age misclassification.** Conception dates are estimated from gestational age at birth (and from category midpoints when missing), producing window misclassification.
 5. **No exposure mixture analysis.** Real exposures are correlated (heat, ozone, PM2.5, season); single-exposure models cannot separate them.
 6. **No air-quality covariates.** The local models cannot adjust for pollution or humidity interactions.

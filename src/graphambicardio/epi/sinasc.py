@@ -4,9 +4,10 @@ Design notes
 ------------
 * Unit of analysis: live birth record of a mother residing in the municipality
   (``CODMUNRES`` 330100).  Place of birth is kept separately.
-* Core CHD case: at least one CID-10 code in Q20-Q26 in ``CODANOMAL``.
-  Q27 (peripheral vascular malformations) and Q28 (other circulatory
-  malformations) are classified separately and are **not** counted as CHD.
+* Study case: at least one CID-10 code in Q20-Q28 in ``CODANOMAL``.
+  Q20-Q26 cover the heart and great vessels; Q27 (peripheral vascular
+  malformations) and Q28 (other circulatory malformations) are part of the
+  same Q20-Q28 outcome and are also flagged as a descriptive subgroup.
   ``CODANOMAL`` is a concatenation of 4-character codes (e.g. ``Q339Q652``);
   codes are parsed in blocks of four and never truncated to the first code.
 * ``IDANOMAL`` is kept for data-quality assessment but is **not** used as the
@@ -60,12 +61,12 @@ def parse_icd_codes(value: str) -> list[str]:
 
 
 def is_chd_code(code: str) -> bool:
-    """True only for the core CHD group Q20-Q26."""
+    """True for any study code in the Q20-Q28 circulatory group."""
     return code[:3] in CHD_PREFIXES
 
 
 def is_other_circulatory_code(code: str) -> bool:
-    """True for Q27/Q28, kept separate from the CHD case definition."""
+    """True for the Q27/Q28 descriptive subgroup within Q20-Q28."""
     return code[:3] in OTHER_CIRCULATORY_PREFIXES
 
 
@@ -229,7 +230,7 @@ def extract_year(year: int, keep_all_births: bool = True) -> pd.DataFrame:
             }
         )
     df = pd.DataFrame(rows)
-    log.info("SINASC %s: %s records for Campos (%s core CHD; %s Q27-Q28)", year, len(df),
+    log.info("SINASC %s: %s records for Campos (%s Q20-Q28 cases; %s Q27-Q28 subgroup)", year, len(df),
                  int(df["is_chd"].sum()) if len(df) else 0,
                  int(df["is_other_circulatory"].sum()) if len(df) else 0)
     return df
@@ -251,8 +252,8 @@ def build_dataset() -> pd.DataFrame:
 def summarise(df: pd.DataFrame) -> dict[str, Any]:
     """Annual indicators, phenotype distributions and data quality.
 
-    The primary CHD indicator uses the core Q20-Q26 definition.  Q27/Q28 are
-    summarised in separate tables and are never added to the CHD count.
+    The primary outcome is the full Q20-Q28 group. Q27/Q28 are summarised in
+    separate tables as a descriptive subgroup *within* the primary outcome.
     """
     if df.empty:
         return {}
@@ -274,7 +275,7 @@ def summarise(df: pd.DataFrame) -> dict[str, Any]:
         n = len(sub)
         cases = int(sub["is_chd"].sum())
         other = int(sub["is_other_circulatory"].sum())
-        total = int((sub["is_chd"] | sub["is_other_circulatory"]).sum())
+        total = cases
         rows.append(
             {
                 "year": int(y),
@@ -326,12 +327,14 @@ def summarise(df: pd.DataFrame) -> dict[str, Any]:
         )
         other_overall.to_csv(config.TABLES / "sinasc_other_circulatory_by_code.csv", index=False)
 
-    # Maternal / neonatal characteristics: core CHD, Q27-Q28, and neither.
+    # Maternal / neonatal characteristics: full Q20-Q28 outcome, the Q20-Q26
+    # component, the Q27-Q28 subgroup, and births outside the study group.
     char_rows = []
     groups = [
-        ("chd_core", cases),
-        ("other_circulatory", other_cases),
-        ("non_circulatory", df[~df["is_chd"] & ~df["is_other_circulatory"]]),
+        ("circulatory_q20_q28", cases),
+        ("q20_q26_only", cases[~cases["is_other_circulatory"]]),
+        ("q27_q28_subgroup", other_cases),
+        ("non_circulatory", df[~df["is_chd"]]),
     ]
     for label, sub in groups:
         char_rows.append(
@@ -358,11 +361,18 @@ def summarise(df: pd.DataFrame) -> dict[str, Any]:
 
     qa = {
         "n_births": int(len(df)),
-        "n_chd_core_q20_q26": int(df["is_chd"].sum()),
-        "n_other_circulatory_q27_q28": int(df["is_other_circulatory"].sum()),
-        "n_circulatory_total_q20_q28": int((df["is_chd"] | df["is_other_circulatory"]).sum()),
-        "n_records_in_both_groups": int((df["is_chd"] & df["is_other_circulatory"]).sum()),
-        "n_non_circulatory": int((~df["is_chd"] & ~df["is_other_circulatory"]).sum()),
+        "n_circulatory_q20_q28": int(df["is_chd"].sum()),
+        "n_q20_q26_only": int((df["is_chd"] & ~df["is_other_circulatory"]).sum()),
+        "n_q27_q28_subgroup": int(df["is_other_circulatory"].sum()),
+        "n_records_with_q27_q28_and_q20_q26": int(
+            (
+                df["is_other_circulatory"]
+                & df["chd_codes"].fillna("").str.split(";").map(
+                    lambda codes: any(c and c[:3] not in config.CID10_Q27_Q28 for c in codes)
+                )
+            ).sum()
+        ),
+        "n_non_circulatory": int((~df["is_chd"]).sum()),
         "n_records_with_any_icd_code": int((df["n_icd_codes"] > 0).sum()),
         "n_chd_with_multiple_chd_codes": int((df["chd_codes"].str.count(";") >= 1).sum()),
         "idanomal_1_but_no_code": int(((df["idanomal"] == "1") & (df["n_icd_codes"] == 0)).sum()),

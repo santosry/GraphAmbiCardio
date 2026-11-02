@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T21:08:05Z",
+  "generated_at": "2026-11-02T13:36:51Z",
   "passed": true,
   "checks": [
     {
@@ -198,14 +198,14 @@
       "detail": "16 rows"
     },
     {
-      "check": "case_definition:no_q27_q28_in_chd",
+      "check": "case_definition:q27_q28_in_primary_outcome",
       "ok": true,
       "detail": "ok"
     },
     {
-      "check": "case_definition:2023_2024_core_missing",
+      "check": "case_definition:2023_2024_microdata_missing",
       "ok": true,
-      "detail": "core CHD not imputed from TabNet"
+      "detail": "birth-level series not imputed from the TabNet aggregate"
     },
     {
       "check": "case_definition:tabnet_separate",
