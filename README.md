@@ -76,7 +76,7 @@ flowchart TD
 | Faz | Não faz |
 |---|---|
 | Organiza estudos, genes, fenótipos e dados locais em um grafo navegável | Não afirma que uma exposição "causa" cardiopatia em uma pessoa |
-| Mostra a fonte, o trecho e o nível de evidência de cada ligação | Não substitui avaliação médica |
+| Mostra a fonte, o trecho e o nível de evidência de cada ligação | Não substitui avaliação clínica |
 | Separa evidência observada, anotação estruturada, inferência, hipótese e contexto ecológico | Não usa dados individuais no site |
 | Mede cobertura de busca, lacunas e robustez dos modelos | Não se apresenta como revisão sistemática |
 
